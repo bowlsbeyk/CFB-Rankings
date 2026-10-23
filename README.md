@@ -14,6 +14,7 @@ A pre-registered study of week-to-week AP poll movement, testing whether SEC tea
 | Data checks and deviations logged | Done |
 | Team-week feature table and leakage tests | Done |
 | Models trained on 2014–2023 (no 2020), selection rule frozen | Done |
+| Season replay checked on training seasons (`results/replay_training.json`) | Done |
 | Holdout (2024–2025) scored once | Not yet |
 | Hypothesis test | Not yet |
 | 2026 counterfactual | Not yet |

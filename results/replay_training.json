@@ -1,0 +1,731 @@
+{
+  "gbt_zero": {
+    "2014": {
+      "final_regular": {
+        "spearman": 0.7951529287308557,
+        "overlap": 16,
+        "mean_abs_rank_error": 11.56,
+        "within_3": 0.6
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4308186871188144,
+        "overlap": 18,
+        "mean_abs_rank_error": 21.0,
+        "within_3": 0.36
+      },
+      "post_bowl_final": {
+        "spearman": 0.7480270737159207,
+        "overlap": 14,
+        "mean_abs_rank_error": 15.88,
+        "within_3": 0.36
+      }
+    },
+    "2015": {
+      "final_regular": {
+        "spearman": 0.840849345024197,
+        "overlap": 18,
+        "mean_abs_rank_error": 15.44,
+        "within_3": 0.52
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4470227590665432,
+        "overlap": 14,
+        "mean_abs_rank_error": 30.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.6651272178715422,
+        "overlap": 19,
+        "mean_abs_rank_error": 14.3,
+        "within_3": 0.44
+      }
+    },
+    "2016": {
+      "final_regular": {
+        "spearman": 0.6943643136715988,
+        "overlap": 17,
+        "mean_abs_rank_error": 13.68,
+        "within_3": 0.56
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.5370705090943361,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.92,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.8281325584129234,
+        "overlap": 14,
+        "mean_abs_rank_error": 18.76,
+        "within_3": 0.48
+      }
+    },
+    "2017": {
+      "final_regular": {
+        "spearman": 0.8606623027550743,
+        "overlap": 19,
+        "mean_abs_rank_error": 12.06,
+        "within_3": 0.56
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7088523961002132,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.12,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.8006160955861155,
+        "overlap": 20,
+        "mean_abs_rank_error": 12.1,
+        "within_3": 0.52
+      }
+    },
+    "2018": {
+      "final_regular": {
+        "spearman": 0.7983066260796172,
+        "overlap": 16,
+        "mean_abs_rank_error": 14.84,
+        "within_3": 0.52
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7781736675263846,
+        "overlap": 15,
+        "mean_abs_rank_error": 26.44,
+        "within_3": 0.4
+      },
+      "post_bowl_final": {
+        "spearman": 0.7673937154540391,
+        "overlap": 15,
+        "mean_abs_rank_error": 18.56,
+        "within_3": 0.36
+      }
+    },
+    "2019": {
+      "final_regular": {
+        "spearman": 0.8857211241152095,
+        "overlap": 17,
+        "mean_abs_rank_error": 15.96,
+        "within_3": 0.48
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7898511314133527,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.92,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.8693657756070525,
+        "overlap": 17,
+        "mean_abs_rank_error": 16.8,
+        "within_3": 0.44
+      }
+    },
+    "2021": {
+      "final_regular": {
+        "spearman": 0.7213243091963368,
+        "overlap": 14,
+        "mean_abs_rank_error": 19.66,
+        "within_3": 0.28
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.28202417607053126,
+        "overlap": 12,
+        "mean_abs_rank_error": 36.28,
+        "within_3": 0.16
+      },
+      "post_bowl_final": {
+        "spearman": 0.6524331722919842,
+        "overlap": 14,
+        "mean_abs_rank_error": 18.0,
+        "within_3": 0.24
+      }
+    },
+    "2022": {
+      "final_regular": {
+        "spearman": 0.5927638400012586,
+        "overlap": 16,
+        "mean_abs_rank_error": 18.22,
+        "within_3": 0.4
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4593925098755022,
+        "overlap": 10,
+        "mean_abs_rank_error": 40.18,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.5437389669244463,
+        "overlap": 16,
+        "mean_abs_rank_error": 20.8,
+        "within_3": 0.28
+      }
+    },
+    "2023": {
+      "final_regular": {
+        "spearman": 0.8552735405732446,
+        "overlap": 18,
+        "mean_abs_rank_error": 14.06,
+        "within_3": 0.6
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.6517688606172396,
+        "overlap": 17,
+        "mean_abs_rank_error": 23.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.8136454712825096,
+        "overlap": 16,
+        "mean_abs_rank_error": 17.4,
+        "within_3": 0.52
+      }
+    }
+  },
+  "linear_zero": {
+    "2014": {
+      "final_regular": {
+        "spearman": 0.5367015772251387,
+        "overlap": 19,
+        "mean_abs_rank_error": 18.56,
+        "within_3": 0.36
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4308186871188144,
+        "overlap": 18,
+        "mean_abs_rank_error": 21.0,
+        "within_3": 0.36
+      },
+      "post_bowl_final": {
+        "spearman": 0.664017045195776,
+        "overlap": 17,
+        "mean_abs_rank_error": 21.68,
+        "within_3": 0.44
+      }
+    },
+    "2015": {
+      "final_regular": {
+        "spearman": 0.5718131017430976,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.48,
+        "within_3": 0.2
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4470227590665432,
+        "overlap": 14,
+        "mean_abs_rank_error": 30.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.577873050985171,
+        "overlap": 15,
+        "mean_abs_rank_error": 22.88,
+        "within_3": 0.36
+      }
+    },
+    "2016": {
+      "final_regular": {
+        "spearman": 0.5933503528617067,
+        "overlap": 14,
+        "mean_abs_rank_error": 28.68,
+        "within_3": 0.32
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.5370705090943361,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.92,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.6793781140489731,
+        "overlap": 14,
+        "mean_abs_rank_error": 28.8,
+        "within_3": 0.24
+      }
+    },
+    "2017": {
+      "final_regular": {
+        "spearman": 0.7706522002432222,
+        "overlap": 18,
+        "mean_abs_rank_error": 19.6,
+        "within_3": 0.48
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7088523961002132,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.12,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.6396483839051014,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.64,
+        "within_3": 0.4
+      }
+    },
+    "2018": {
+      "final_regular": {
+        "spearman": 0.8075837039906095,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.52,
+        "within_3": 0.36
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7781736675263846,
+        "overlap": 15,
+        "mean_abs_rank_error": 26.44,
+        "within_3": 0.4
+      },
+      "post_bowl_final": {
+        "spearman": 0.6565904571970181,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.16,
+        "within_3": 0.32
+      }
+    },
+    "2019": {
+      "final_regular": {
+        "spearman": 0.8559696166618201,
+        "overlap": 16,
+        "mean_abs_rank_error": 20.02,
+        "within_3": 0.44
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7898511314133527,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.92,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.7783334561490105,
+        "overlap": 18,
+        "mean_abs_rank_error": 18.52,
+        "within_3": 0.36
+      }
+    },
+    "2021": {
+      "final_regular": {
+        "spearman": 0.4423452691565002,
+        "overlap": 13,
+        "mean_abs_rank_error": 33.36,
+        "within_3": 0.24
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.28202417607053126,
+        "overlap": 12,
+        "mean_abs_rank_error": 36.28,
+        "within_3": 0.16
+      },
+      "post_bowl_final": {
+        "spearman": 0.5043255854437736,
+        "overlap": 12,
+        "mean_abs_rank_error": 35.3,
+        "within_3": 0.24
+      }
+    },
+    "2022": {
+      "final_regular": {
+        "spearman": 0.5236553562475006,
+        "overlap": 10,
+        "mean_abs_rank_error": 39.7,
+        "within_3": 0.24
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4593925098755022,
+        "overlap": 10,
+        "mean_abs_rank_error": 40.18,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.4420241730182053,
+        "overlap": 10,
+        "mean_abs_rank_error": 40.1,
+        "within_3": 0.16
+      }
+    },
+    "2023": {
+      "final_regular": {
+        "spearman": 0.7252736871295618,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.32,
+        "within_3": 0.4
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.6517688606172396,
+        "overlap": 17,
+        "mean_abs_rank_error": 23.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.6849685031732923,
+        "overlap": 16,
+        "mean_abs_rank_error": 24.66,
+        "within_3": 0.36
+      }
+    }
+  },
+  "gbt_floor": {
+    "2014": {
+      "final_regular": {
+        "spearman": 0.6153846153846153,
+        "overlap": 16,
+        "mean_abs_rank_error": 10.52,
+        "within_3": 0.4
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4308186871188144,
+        "overlap": 18,
+        "mean_abs_rank_error": 21.0,
+        "within_3": 0.36
+      },
+      "post_bowl_final": {
+        "spearman": 0.5000961815917332,
+        "overlap": 17,
+        "mean_abs_rank_error": 10.36,
+        "within_3": 0.32
+      }
+    },
+    "2015": {
+      "final_regular": {
+        "spearman": 0.8066936098445112,
+        "overlap": 13,
+        "mean_abs_rank_error": 17.52,
+        "within_3": 0.32
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4470227590665432,
+        "overlap": 14,
+        "mean_abs_rank_error": 30.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.6915384615384614,
+        "overlap": 14,
+        "mean_abs_rank_error": 15.06,
+        "within_3": 0.44
+      }
+    },
+    "2016": {
+      "final_regular": {
+        "spearman": 0.6823076923076923,
+        "overlap": 17,
+        "mean_abs_rank_error": 13.3,
+        "within_3": 0.36
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.5370705090943361,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.92,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.7667438761574723,
+        "overlap": 16,
+        "mean_abs_rank_error": 19.12,
+        "within_3": 0.36
+      }
+    },
+    "2017": {
+      "final_regular": {
+        "spearman": 0.819388359069532,
+        "overlap": 18,
+        "mean_abs_rank_error": 14.48,
+        "within_3": 0.56
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7088523961002132,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.12,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.7789959751717382,
+        "overlap": 18,
+        "mean_abs_rank_error": 14.32,
+        "within_3": 0.4
+      }
+    },
+    "2018": {
+      "final_regular": {
+        "spearman": 0.7425832666643573,
+        "overlap": 15,
+        "mean_abs_rank_error": 20.2,
+        "within_3": 0.4
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7781736675263846,
+        "overlap": 15,
+        "mean_abs_rank_error": 26.44,
+        "within_3": 0.4
+      },
+      "post_bowl_final": {
+        "spearman": 0.614408459859567,
+        "overlap": 16,
+        "mean_abs_rank_error": 22.44,
+        "within_3": 0.32
+      }
+    },
+    "2019": {
+      "final_regular": {
+        "spearman": 0.9184827844937093,
+        "overlap": 16,
+        "mean_abs_rank_error": 22.28,
+        "within_3": 0.48
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7898511314133527,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.92,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.8578050605058948,
+        "overlap": 17,
+        "mean_abs_rank_error": 15.68,
+        "within_3": 0.52
+      }
+    },
+    "2021": {
+      "final_regular": {
+        "spearman": 0.5903671844991154,
+        "overlap": 13,
+        "mean_abs_rank_error": 21.64,
+        "within_3": 0.2
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.28202417607053126,
+        "overlap": 12,
+        "mean_abs_rank_error": 36.28,
+        "within_3": 0.16
+      },
+      "post_bowl_final": {
+        "spearman": 0.5858354314817634,
+        "overlap": 13,
+        "mean_abs_rank_error": 20.82,
+        "within_3": 0.28
+      }
+    },
+    "2022": {
+      "final_regular": {
+        "spearman": 0.7513474127808162,
+        "overlap": 17,
+        "mean_abs_rank_error": 15.68,
+        "within_3": 0.44
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4593925098755022,
+        "overlap": 10,
+        "mean_abs_rank_error": 40.18,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.7090071384950121,
+        "overlap": 17,
+        "mean_abs_rank_error": 16.64,
+        "within_3": 0.4
+      }
+    },
+    "2023": {
+      "final_regular": {
+        "spearman": 0.8290055933309114,
+        "overlap": 19,
+        "mean_abs_rank_error": 18.12,
+        "within_3": 0.6
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.6517688606172396,
+        "overlap": 17,
+        "mean_abs_rank_error": 23.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.8265641416716838,
+        "overlap": 16,
+        "mean_abs_rank_error": 20.96,
+        "within_3": 0.48
+      }
+    }
+  },
+  "linear_floor": {
+    "2014": {
+      "final_regular": {
+        "spearman": 0.5379586093738675,
+        "overlap": 19,
+        "mean_abs_rank_error": 15.08,
+        "within_3": 0.32
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4308186871188144,
+        "overlap": 18,
+        "mean_abs_rank_error": 21.0,
+        "within_3": 0.36
+      },
+      "post_bowl_final": {
+        "spearman": 0.6851426584012026,
+        "overlap": 17,
+        "mean_abs_rank_error": 18.36,
+        "within_3": 0.44
+      }
+    },
+    "2015": {
+      "final_regular": {
+        "spearman": 0.5395206263003055,
+        "overlap": 16,
+        "mean_abs_rank_error": 26.06,
+        "within_3": 0.24
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4470227590665432,
+        "overlap": 14,
+        "mean_abs_rank_error": 30.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.5946853251342661,
+        "overlap": 16,
+        "mean_abs_rank_error": 23.32,
+        "within_3": 0.36
+      }
+    },
+    "2016": {
+      "final_regular": {
+        "spearman": 0.6478156680633335,
+        "overlap": 15,
+        "mean_abs_rank_error": 26.88,
+        "within_3": 0.32
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.5370705090943361,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.92,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.723327923849857,
+        "overlap": 15,
+        "mean_abs_rank_error": 27.0,
+        "within_3": 0.24
+      }
+    },
+    "2017": {
+      "final_regular": {
+        "spearman": 0.7590790170230467,
+        "overlap": 17,
+        "mean_abs_rank_error": 16.54,
+        "within_3": 0.48
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7088523961002132,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.12,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.5745216568312786,
+        "overlap": 17,
+        "mean_abs_rank_error": 17.38,
+        "within_3": 0.48
+      }
+    },
+    "2018": {
+      "final_regular": {
+        "spearman": 0.8099683015417629,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.52,
+        "within_3": 0.36
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7781736675263846,
+        "overlap": 15,
+        "mean_abs_rank_error": 26.44,
+        "within_3": 0.4
+      },
+      "post_bowl_final": {
+        "spearman": 0.6565904571970181,
+        "overlap": 14,
+        "mean_abs_rank_error": 29.28,
+        "within_3": 0.28
+      }
+    },
+    "2019": {
+      "final_regular": {
+        "spearman": 0.8568088021342433,
+        "overlap": 15,
+        "mean_abs_rank_error": 23.68,
+        "within_3": 0.44
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.7898511314133527,
+        "overlap": 15,
+        "mean_abs_rank_error": 25.92,
+        "within_3": 0.32
+      },
+      "post_bowl_final": {
+        "spearman": 0.7736866892466284,
+        "overlap": 17,
+        "mean_abs_rank_error": 20.0,
+        "within_3": 0.32
+      }
+    },
+    "2021": {
+      "final_regular": {
+        "spearman": 0.4832784370337506,
+        "overlap": 13,
+        "mean_abs_rank_error": 29.8,
+        "within_3": 0.2
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.28202417607053126,
+        "overlap": 12,
+        "mean_abs_rank_error": 36.28,
+        "within_3": 0.16
+      },
+      "post_bowl_final": {
+        "spearman": 0.5732504086590744,
+        "overlap": 12,
+        "mean_abs_rank_error": 31.78,
+        "within_3": 0.2
+      }
+    },
+    "2022": {
+      "final_regular": {
+        "spearman": 0.510961448410139,
+        "overlap": 11,
+        "mean_abs_rank_error": 35.7,
+        "within_3": 0.28
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.4593925098755022,
+        "overlap": 10,
+        "mean_abs_rank_error": 40.18,
+        "within_3": 0.12
+      },
+      "post_bowl_final": {
+        "spearman": 0.4504091988420544,
+        "overlap": 11,
+        "mean_abs_rank_error": 36.02,
+        "within_3": 0.16
+      }
+    },
+    "2023": {
+      "final_regular": {
+        "spearman": 0.7244917208900691,
+        "overlap": 17,
+        "mean_abs_rank_error": 22.28,
+        "within_3": 0.36
+      },
+      "preseason_unchanged_vs_final_regular": {
+        "spearman": 0.6517688606172396,
+        "overlap": 17,
+        "mean_abs_rank_error": 23.56,
+        "within_3": 0.24
+      },
+      "post_bowl_final": {
+        "spearman": 0.6857562760349062,
+        "overlap": 16,
+        "mean_abs_rank_error": 24.62,
+        "within_3": 0.36
+      }
+    }
+  },
+  "note": "Training seasons only; each season replayed by a model fit without it. Pass threshold for the holdout: Spearman >= 0.7."
+}

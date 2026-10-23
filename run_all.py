@@ -12,6 +12,7 @@ STEPS = [
     ["src/build_features.py"],
     ["-m", "pytest", "-q", "tests"],
     ["src/train.py"],
+    ["src/replay.py"],
     ["src/team_bias.py", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--model", "gbt", "--treatment", "floor"],
 ]
