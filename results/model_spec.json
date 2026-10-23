@@ -14,39 +14,87 @@
     2024,
     2025
   ],
-  "target": "target_<treatment> (change in AP points, poll w to w+1)",
-  "features": {
-    "zero": [
-      "prior_points_zero",
-      "opp_points_zero",
-      "wins",
-      "losses",
-      "bye",
-      "points_for",
-      "points_against",
-      "margin",
-      "home",
-      "away",
-      "neutral",
-      "losses_above",
-      "week"
-    ],
-    "floor": [
-      "prior_points_floor",
-      "opp_points_floor",
-      "wins",
-      "losses",
-      "bye",
-      "points_for",
-      "points_against",
-      "margin",
-      "home",
-      "away",
-      "neutral",
-      "losses_above",
-      "week"
-    ]
+  "specs": {
+    "registered": {
+      "unit": "points",
+      "target": "target_points_<treatment> (change, poll w to w+1)",
+      "features": {
+        "zero": [
+          "prior_points_zero",
+          "opp_points_zero",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week"
+        ],
+        "floor": [
+          "prior_points_floor",
+          "opp_points_floor",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week"
+        ]
+      }
+    },
+    "revised": {
+      "unit": "ppv",
+      "target": "target_ppv_<treatment> (change, poll w to w+1)",
+      "features": {
+        "zero": [
+          "prior_ppv_zero",
+          "opp_ppv_zero",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week",
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date"
+        ],
+        "floor": [
+          "prior_ppv_floor",
+          "opp_ppv_floor",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week",
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date"
+        ]
+      }
+    }
   },
+  "downstream_spec": "revised (DEVIATIONS.md, 2026-10-23); registered reported alongside",
   "models": {
     "baseline": "predict 0 change",
     "linear": "sklearn LinearRegression, default settings",
@@ -59,7 +107,7 @@
       }
     }
   },
-  "selection_rule": "Use linear unless gbt holdout MAE < 0.9 x linear holdout MAE. Applied once, per treatment, when the holdout is scored.",
-  "pass_criteria": "Chosen model beats baseline on holdout MAE, and its predicted end-of-season top 25 has Spearman >= 0.7 with the real 2024 and 2025 final polls.",
+  "selection_rule": "Use linear unless gbt holdout MAE < 0.9 x linear holdout MAE. Applied once, per spec and treatment, when the holdout is scored.",
+  "pass_criteria": "Chosen model beats baseline on holdout MAE, and its replayed final regular-season top 25 has Spearman >= 0.7 with the real 2024 and 2025 polls (definition in DEVIATIONS.md).",
   "collinearity_note": "margin = points_for - points_against, home + away + neutral = wins + losses = games, bye = (games == 0). Predictions are unaffected; individual linear coefficients within these groups are not separately identifiable."
 }

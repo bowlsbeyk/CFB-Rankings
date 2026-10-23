@@ -15,6 +15,7 @@ A pre-registered study of week-to-week AP poll movement, testing whether SEC tea
 | Team-week feature table and leakage tests | Done |
 | Models trained on 2014–2023 (no 2020), selection rule frozen | Done |
 | Season replay checked on training seasons (`results/replay_training.json`) | Done |
+| Revised model (per-voter points, season record) logged and re-checked on training seasons | Done |
 | Holdout (2024–2025) scored once | Not yet |
 | Hypothesis test | Not yet |
 | 2026 counterfactual | Not yet |
@@ -33,7 +34,7 @@ python run_all.py          # rebuilds everything from the frozen files in data/r
 `src/team_bias.py` compares each team's actual poll movement with the model's prediction, using out-of-season predictions on the training seasons only. It was not part of the registered plan.
 
 ```bash
-python src/team_bias.py                 # leaderboard and conference summary
+python src/team_bias.py                 # leaderboard and conference summary (revised model)
 python src/team_bias.py --team Miami    # one team, week by week
 ```
 

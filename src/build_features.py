@@ -7,6 +7,8 @@ Week-1 AP poll is the preseason poll.
 Points are built under both unranked treatments (see DEVIATIONS.md):
   *_zero   registered rule: outside the top 25 = 0
   *_floor  sensitivity: outside the top 25 = half the lowest-ranked team's points
+and in two units: *_points_* (raw AP points, registered) and *_ppv_* (points per
+voter, revised; voters = total first-place votes in that poll).
 """
 
 import json
@@ -26,18 +28,19 @@ CONF_GROUPS = {"SEC": "SEC", "ACC": "ACC", "Big Ten": "Big Ten", "Big 12": "Big 
 
 
 def load_polls(season):
-    """{week: {school: (rank, points)}} for regular-season AP polls."""
+    """({week: {school: (rank, points)}}, {week: voters}) for regular-season AP polls."""
     data = json.loads((RAW / "polls" / f"rankings_{season}_regular.json").read_text())
-    polls = {}
+    polls, voters = {}, {}
     for week in data:
         for poll in week["polls"]:
             if poll["poll"] == "AP Top 25":
                 polls[week["week"]] = {r["school"]: (r["rank"], r["points"])
                                        for r in poll["ranks"]}
+                voters[week["week"]] = sum(r["firstPlaceVotes"] or 0 for r in poll["ranks"])
     weeks = sorted(polls)
     if weeks != list(range(1, len(weeks) + 1)):
         sys.exit(f"{season}: AP poll weeks not contiguous from 1: {weeks}")
-    return polls
+    return polls, voters
 
 
 def load_games(season):
@@ -55,28 +58,28 @@ def load_games(season):
     return s[~late]
 
 
-def poll_points(poll, treatment):
+def poll_points(poll, treatment, divisor=1):
     """Points lookup with the unranked value for this poll and treatment."""
     unranked = 0.0 if treatment == "zero" else 0.5 * min(p for _, p in poll.values())
-    return {t: float(p) for t, (_, p) in poll.items()}, unranked
+    return {t: p / divisor for t, (_, p) in poll.items()}, unranked / divisor
 
 
 def team_games(games):
     """Long format: one row per team per game, from that team's side."""
     cols = ["game_id", "week", "start_date", "neutral_site"]
     home = games[cols + ["home_team", "home_division", "home_conference", "home_points",
-                         "away_team", "away_points", "home_pregame_elo"]].copy()
-    home.columns = cols + ["team", "division", "conference", "pf", "opp", "pa", "elo"]
+                         "away_team", "away_points", "home_pregame_elo", "home_postgame_elo"]].copy()
+    home.columns = cols + ["team", "division", "conference", "pf", "opp", "pa", "elo", "elo_post"]
     home["venue"] = np.where(home.neutral_site, "neutral", "home")
     away = games[cols + ["away_team", "away_division", "away_conference", "away_points",
-                         "home_team", "home_points", "away_pregame_elo"]].copy()
-    away.columns = cols + ["team", "division", "conference", "pf", "opp", "pa", "elo"]
+                         "home_team", "home_points", "away_pregame_elo", "away_postgame_elo"]].copy()
+    away.columns = cols + ["team", "division", "conference", "pf", "opp", "pa", "elo", "elo_post"]
     away["venue"] = np.where(away.neutral_site, "neutral", "away")
     return pd.concat([home, away], ignore_index=True)
 
 
 def build_season(season):
-    polls = load_polls(season)
+    polls, voters = load_polls(season)
     games = load_games(season)
     tg = team_games(games)
     fbs = tg[tg.division == "fbs"]
@@ -94,9 +97,13 @@ def build_season(season):
         wk = tg[tg.week == w]
         lost = set(wk.team[wk.pf < wk.pa])
         rank_of = {t: r for t, (r, _) in prior.items()}
-        pts = {tr: (poll_points(prior, tr), poll_points(nxt, tr)) for tr in TREATMENTS}
+        pts = {(unit, tr): (poll_points(prior, tr, div[0]), poll_points(nxt, tr, div[1]))
+               for tr in TREATMENTS
+               for unit, div in (("points", (1, 1)), ("ppv", (voters[w], voters[w + 1])))}
+        to_date = tg[tg.week <= w]
         for team in teams:
             g = wk[wk.team == team]
+            td = to_date[to_date.team == team]
             rank = rank_of.get(team, 26)
             row = {
                 "season": season, "week": w, "team": team,
@@ -116,16 +123,24 @@ def build_season(season):
                 "neutral": int((g.venue == "neutral").sum()),
                 "losses_above": sum(1 for t, r in rank_of.items() if r < rank and t in lost),
                 "opponents": ";".join(g.opp),
+                "wins_to_date": int((td.pf > td.pa).sum()),
+                "losses_to_date": int((td.pf < td.pa).sum()),
+                "margin_to_date": float((td.pf - td.pa).mean()) if len(td) else 0.0,
+                "voters_prior": voters[w],
+                "voters_next": voters[w + 1],
                 "elo": float(g.elo.mean()) if len(g) and g.elo.notna().all() else None,
+                "elo_post": (float(td.sort_values("start_date").elo_post.iloc[-1])
+                             if len(td) and pd.notna(td.sort_values("start_date").elo_post.iloc[-1])
+                             else None),
                 "last_game_date": g.start_date.max() if len(g) else None,
             }
-            for tr, ((p_prior, u_prior), (p_next, u_next)) in pts.items():
+            for (unit, tr), ((p_prior, u_prior), (p_next, u_next)) in pts.items():
                 before = p_prior.get(team, u_prior)
                 after = p_next.get(team, u_next)
-                row[f"prior_points_{tr}"] = before
-                row[f"next_points_{tr}"] = after
-                row[f"target_{tr}"] = after - before
-                row[f"opp_points_{tr}"] = float(sum(p_prior.get(o, u_prior) for o in g.opp))
+                row[f"prior_{unit}_{tr}"] = before
+                row[f"next_{unit}_{tr}"] = after
+                row[f"target_{unit}_{tr}"] = after - before
+                row[f"opp_{unit}_{tr}"] = float(sum(p_prior.get(o, u_prior) for o in g.opp))
             rows.append(row)
     return pd.DataFrame(rows)
 

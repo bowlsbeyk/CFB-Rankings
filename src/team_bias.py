@@ -6,7 +6,8 @@ predicted, using out-of-season predictions on the 2014-2023 training seasons
 conference input, so a team that is consistently over- or under-predicted is
 treated differently by voters than its results alone would suggest.
 
-Residual = actual change - predicted change, in AP poll points.
+Residual = actual change - predicted change, in AP points per voter (revised
+spec, default) or raw AP points (registered spec).
   Negative after a loss while ranked: the team fell further than predicted.
   Positive after a win while ranked: the team rose more than predicted.
 
@@ -15,7 +16,7 @@ Residual = actual change - predicted change, in AP poll points.
 Usage:
   python src/team_bias.py                       # leaderboard + conference summary
   python src/team_bias.py --team Miami          # one team, season by season
-  python src/team_bias.py --model linear --treatment floor
+  python src/team_bias.py --model linear --treatment floor --spec registered
 """
 
 import argparse
@@ -37,9 +38,9 @@ MIN_WEEKS = 20
 N_BOOT = 2000
 
 
-def load(model, treatment):
+def load(model, treatment, spec):
     d = pd.read_csv(OOF)
-    d = d[d.treatment == treatment].copy()
+    d = d[(d.treatment == treatment) & (d.spec == spec)].copy()
     d["residual"] = d.target - d[f"pred_{model}"]
     return d
 
@@ -81,12 +82,12 @@ def fmt(mean, lo, hi):
     if np.isnan(mean):
         return "      n/a"
     flag = "*" if (lo > 0 or hi < 0) else " "
-    return f"{mean:+7.1f}{flag} [{lo:+.0f}, {hi:+.0f}]"
+    return f"{mean:+7.2f}{flag} [{lo:+.2f}, {hi:+.2f}]"
 
 
-def print_board(table, label_col, title, gap):
+def print_board(table, label_col, title, gap, unit):
     print(f"\n{title}")
-    print(f"(AP points; one rank spot is about {gap:.0f} points; * = 95% interval excludes 0)")
+    print(f"({unit}; one rank spot is about {gap:.2f}; * = 95% interval excludes 0)")
     print(f"{'':24}{'weeks':>6}  {'ranked, any':>22}  {'after a win':>22}  {'after a loss':>22}")
     for _, r in table.iterrows():
         print(f"{str(r[label_col])[:24]:24}{int(r.ranked_all_weeks):6}  "
@@ -95,63 +96,65 @@ def print_board(table, label_col, title, gap):
               f"{fmt(r.ranked_loss_mean, r.ranked_loss_lo, r.ranked_loss_hi):>22}")
 
 
-def team_detail(d, team, gap):
+def team_detail(d, team, gap, unit):
     t = d[(d.team == team) & d.prior_rank.notna()]
     if t.empty:
         raise SystemExit(f"No ranked weeks for {team!r} in training seasons")
     print(f"\n{team}: ranked weeks in 2014-2023 training seasons "
-          f"(one rank spot is about {gap:.0f} points)")
+          f"({unit}; one rank spot is about {gap:.2f})")
     print(f"{'season':>6} {'week':>4} {'rank':>4} {'result':>6} {'opponents':24} "
           f"{'actual':>7} {'predicted':>9} {'residual':>8}")
     for _, r in t.sort_values(["season", "week"]).iterrows():
         res = "bye" if r.bye else ("L" if r.losses else "W")
         print(f"{r.season:6} {r.week:4} {int(r.prior_rank):4} {res:>6} "
               f"{str(r.opponents if isinstance(r.opponents, str) else '')[:24]:24} "
-              f"{r.target:7.0f} {r.prediction:9.0f} {r.residual:+8.0f}")
+              f"{r.target:7.2f} {r.prediction:9.2f} {r.residual:+8.2f}")
 
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--model", default="gbt", choices=["gbt", "linear"])
     ap.add_argument("--treatment", default="zero", choices=["zero", "floor"])
+    ap.add_argument("--spec", default="revised", choices=["revised", "registered"])
     ap.add_argument("--team")
     ap.add_argument("--top", type=int, default=10)
     args = ap.parse_args()
 
-    d = load(args.model, args.treatment)
+    d = load(args.model, args.treatment, args.spec)
     gap = rank_gap(d)
+    unit = "AP points per voter" if args.spec == "revised" else "AP points"
     if args.team:
         tw = pd.read_csv(ROOT / "data" / "processed" / "team_weeks.csv",
                          usecols=["season", "week", "team", "opponents"])
         d = d.merge(tw, on=["season", "week", "team"], how="left")
         d["prediction"] = d[f"pred_{args.model}"]
-        team_detail(d, args.team, gap)
+        team_detail(d, args.team, gap, unit)
         return
 
     rng = np.random.default_rng(0)
     teams = summarize(d, "team", rng)
     confs = summarize(d, "conf_group", rng)
-    tag = f"{args.model}_{args.treatment}"
+    tag = f"{args.spec}_{args.model}_{args.treatment}"
     RESULTS.mkdir(exist_ok=True)
     teams.round(2).to_csv(RESULTS / f"team_bias_{tag}.csv", index=False)
     confs.round(2).to_csv(RESULTS / f"conference_bias_{tag}.csv", index=False)
 
-    print(f"Exploratory, training seasons 2014-2023 only. Model {args.model}, "
-          f"unranked rule {args.treatment}.")
+    print(f"Exploratory, training seasons 2014-2023 only. Spec {args.spec}, model "
+          f"{args.model}, unranked rule {args.treatment}.")
     print("Read with care: about 70 teams x 3 situations are tested, so some * appear by "
           "chance;\nteams that sit near #1 cannot rise much, so they can look under-rewarded.")
     print_board(confs.sort_values("ranked_all_mean"), "conf_group",
-                "By conference group", gap)
+                "By conference group", gap, unit)
     eligible = teams[teams.ranked_all_weeks >= MIN_WEEKS]
     board = eligible.sort_values("ranked_loss_mean")
     print_board(board.head(args.top), "team",
-                f"Fell furthest beyond prediction after losses (>= {MIN_WEEKS} ranked weeks)", gap)
+                f"Fell furthest beyond prediction after losses (>= {MIN_WEEKS} ranked weeks)", gap, unit)
     print_board(board.dropna(subset=["ranked_loss_mean"]).tail(args.top).iloc[::-1], "team",
-                "Most protected after losses", gap)
+                "Most protected after losses", gap, unit)
     print_board(eligible.sort_values("ranked_all_mean", ascending=False).head(args.top), "team",
-                "Most over-rewarded while ranked, all weeks", gap)
+                "Most over-rewarded while ranked, all weeks", gap, unit)
     print_board(eligible.sort_values("ranked_all_mean").head(args.top), "team",
-                "Most under-rewarded while ranked, all weeks", gap)
+                "Most under-rewarded while ranked, all weeks", gap, unit)
 
 
 if __name__ == "__main__":

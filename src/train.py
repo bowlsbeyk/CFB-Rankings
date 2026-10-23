@@ -1,12 +1,15 @@
 """Fit the baseline, linear and challenger models on the training seasons only.
 
 Training seasons: 2014-2023, no 2020. The 2024-2025 holdout is never loaded here.
-Every model is fit under both unranked treatments (zero = registered, floor =
-sensitivity; see DEVIATIONS.md).
+
+Two specifications (DEVIATIONS.md, 2026-10-23):
+  registered  raw AP points, the features in METHODOLOGY.md
+  revised     points per voter, plus season-to-date record (used downstream)
+Each is fit under both unranked treatments (zero = registered, floor = sensitivity).
 
 Outputs:
   results/train_metrics.json        leave-one-season-out MAE on training seasons
-  results/linear_coefficients.csv   linear model fit on all training seasons
+  results/linear_coefficients.csv   linear models fit on all training seasons
   results/model_spec.json           frozen spec + selection rule, fixed before holdout
   results/models/*.joblib           fitted models (rebuilt, not committed)
   data/processed/oof_predictions.csv  out-of-season predictions for team_bias.py
@@ -31,13 +34,22 @@ RESULTS = ROOT / "results"
 
 TRAIN_SEASONS = [s for s in range(2014, 2024) if s != 2020]
 TREATMENTS = ("zero", "floor")
+SPECS = ("registered", "revised")
+UNIT = {"registered": "points", "revised": "ppv"}
 BASE_FEATURES = ["wins", "losses", "bye", "points_for", "points_against", "margin",
                  "home", "away", "neutral", "losses_above", "week"]
+RECORD_FEATURES = ["wins_to_date", "losses_to_date", "margin_to_date"]
 GBT_PARAMS = {"max_iter": 300, "learning_rate": 0.05, "random_state": 0}
 
 
-def features(treatment):
-    return [f"prior_points_{treatment}", f"opp_points_{treatment}"] + BASE_FEATURES
+def features(treatment, spec="revised"):
+    u = UNIT[spec]
+    extra = RECORD_FEATURES if spec == "revised" else []
+    return [f"prior_{u}_{treatment}", f"opp_{u}_{treatment}"] + BASE_FEATURES + extra
+
+
+def target(treatment, spec="revised"):
+    return f"target_{UNIT[spec]}_{treatment}"
 
 
 def make_models():
@@ -58,8 +70,8 @@ def mae(y, p):
     return float(np.mean(np.abs(y - p)))
 
 
-def leave_one_season_out(train, treatment):
-    X, y = train[features(treatment)], train[f"target_{treatment}"]
+def leave_one_season_out(train, treatment, spec):
+    X, y = train[features(treatment, spec)], train[target(treatment, spec)]
     oof = pd.DataFrame(index=train.index)
     oof["baseline"] = 0.0
     for name in make_models():
@@ -76,7 +88,8 @@ def leave_one_season_out(train, treatment):
     overall = {m: mae(y, oof[m]) for m in oof}
     ranked = train.prior_rank.notna()
     ranked_mae = {m: mae(y[ranked], oof.loc[ranked, m]) for m in oof}
-    return oof, {"overall": overall, "ranked_teams_only": ranked_mae, "by_season": by_season}
+    return oof, {"unit": UNIT[spec], "overall": overall, "ranked_teams_only": ranked_mae,
+                 "by_season": by_season}
 
 
 def main():
@@ -84,61 +97,73 @@ def main():
     (RESULTS / "models").mkdir(parents=True, exist_ok=True)
     metrics, coefs, oof_all = {}, [], []
 
-    for tr in TREATMENTS:
-        oof, m = leave_one_season_out(train, tr)
-        metrics[tr] = m
-        keep = ["season", "week", "team", "conference", "conf_group", "prior_rank",
-                "next_rank", "wins", "losses", "bye", "margin", f"opp_points_{tr}",
-                f"prior_points_{tr}", f"target_{tr}"]
-        o = train[keep].rename(columns=lambda c: c.replace(f"_{tr}", ""))
-        o["treatment"] = tr
-        for name in ("linear", "gbt"):
-            o[f"pred_{name}"] = oof[name]
-        oof_all.append(o)
+    for spec in SPECS:
+        u = UNIT[spec]
+        metrics[spec] = {}
+        for tr in TREATMENTS:
+            oof, m = leave_one_season_out(train, tr, spec)
+            metrics[spec][tr] = m
+            o = train[["season", "week", "team", "conference", "conf_group", "prior_rank",
+                       "next_rank", "wins", "losses", "bye", "margin"]].copy()
+            o["prior_points"] = train[f"prior_{u}_{tr}"]
+            o["opp_points"] = train[f"opp_{u}_{tr}"]
+            o["target"] = train[target(tr, spec)]
+            o["spec"], o["treatment"], o["unit"] = spec, tr, u
+            for name in ("linear", "gbt"):
+                o[f"pred_{name}"] = oof[name]
+            oof_all.append(o)
 
-        X, y = train[features(tr)], train[f"target_{tr}"]
-        for name, model in make_models().items():
-            model.fit(X, y)
-            joblib.dump(model, RESULTS / "models" / f"{name}_{tr}.joblib")
-            if name == "linear":
-                coefs.append(pd.DataFrame({
-                    "treatment": tr,
-                    "term": ["intercept"] + [f.replace(f"_{tr}", "") for f in features(tr)],
-                    "coefficient": np.r_[model.intercept_, model.coef_].round(4)}))
+            X, y = train[features(tr, spec)], train[target(tr, spec)]
+            for name, model in make_models().items():
+                model.fit(X, y)
+                joblib.dump(model, RESULTS / "models" / f"{name}_{spec}_{tr}.joblib")
+                if name == "linear":
+                    coefs.append(pd.DataFrame({
+                        "spec": spec, "treatment": tr,
+                        "term": ["intercept"] + [f.replace(f"_{tr}", "")
+                                                 for f in features(tr, spec)],
+                        "coefficient": np.r_[model.intercept_, model.coef_].round(4)}))
 
-    metrics["note"] = ("Leave-one-season-out MAE on training seasons only "
-                       "(poll points per team-week). Holdout not used.")
+    metrics["note"] = ("Leave-one-season-out MAE on training seasons only, per team-week, "
+                       "in each spec's unit (registered: AP points; revised: points per "
+                       "voter). Holdout not used.")
     (RESULTS / "train_metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
     pd.concat(coefs).to_csv(RESULTS / "linear_coefficients.csv", index=False)
     pd.concat(oof_all).to_csv(ROOT / "data" / "processed" / "oof_predictions.csv", index=False)
 
-    spec = {
+    spec_doc = {
         "train_seasons": TRAIN_SEASONS,
         "holdout_seasons": [2024, 2025],
-        "target": "target_<treatment> (change in AP points, poll w to w+1)",
-        "features": {tr: features(tr) for tr in TREATMENTS},
+        "specs": {
+            s: {"unit": UNIT[s],
+                "target": f"target_{UNIT[s]}_<treatment> (change, poll w to w+1)",
+                "features": {tr: features(tr, s) for tr in TREATMENTS}}
+            for s in SPECS},
+        "downstream_spec": "revised (DEVIATIONS.md, 2026-10-23); registered reported alongside",
         "models": {
             "baseline": "predict 0 change",
             "linear": "sklearn LinearRegression, default settings",
             "gbt": {"class": "sklearn HistGradientBoostingRegressor", "params": GBT_PARAMS},
         },
         "selection_rule": ("Use linear unless gbt holdout MAE < 0.9 x linear holdout MAE. "
-                           "Applied once, per treatment, when the holdout is scored."),
-        "pass_criteria": ("Chosen model beats baseline on holdout MAE, and its predicted "
-                          "end-of-season top 25 has Spearman >= 0.7 with the real 2024 "
-                          "and 2025 final polls."),
+                           "Applied once, per spec and treatment, when the holdout is scored."),
+        "pass_criteria": ("Chosen model beats baseline on holdout MAE, and its replayed "
+                          "final regular-season top 25 has Spearman >= 0.7 with the real "
+                          "2024 and 2025 polls (definition in DEVIATIONS.md)."),
         "collinearity_note": ("margin = points_for - points_against, home + away + neutral = "
                               "wins + losses = games, bye = (games == 0). Predictions are "
                               "unaffected; individual linear coefficients within these "
                               "groups are not separately identifiable."),
     }
-    (RESULTS / "model_spec.json").write_text(json.dumps(spec, indent=2) + "\n")
+    (RESULTS / "model_spec.json").write_text(json.dumps(spec_doc, indent=2) + "\n")
 
-    for tr in TREATMENTS:
-        o = metrics[tr]["overall"]
-        r = metrics[tr]["ranked_teams_only"]
-        print(f"[{tr}] LOSO MAE all: " + ", ".join(f"{k} {v:.1f}" for k, v in o.items())
-              + " | ranked only: " + ", ".join(f"{k} {v:.1f}" for k, v in r.items()))
+    for spec in SPECS:
+        for tr in TREATMENTS:
+            o = metrics[spec][tr]["overall"]
+            r = metrics[spec][tr]["ranked_teams_only"]
+            print(f"[{spec}/{tr}, {UNIT[spec]}] LOSO MAE all: "
+                  + ", ".join(f"{k} {v:.2f}" for k, v in o.items())
+                  + " | ranked only: " + ", ".join(f"{k} {v:.2f}" for k, v in r.items()))
 
 
 if __name__ == "__main__":

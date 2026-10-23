@@ -13,8 +13,8 @@ STEPS = [
     ["-m", "pytest", "-q", "tests"],
     ["src/train.py"],
     ["src/replay.py"],
-    ["src/team_bias.py", "--model", "gbt", "--treatment", "zero"],
-    ["src/team_bias.py", "--model", "gbt", "--treatment", "floor"],
+    ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
+    ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
 ]
 
 for step in STEPS:
