@@ -1,0 +1,254 @@
+{
+  "T1_preseason_vs_results": {
+    "team_seasons": 275,
+    "expected_shortfall_fit": {
+      "intercept": 7.843636363636363,
+      "slope": -0.28391608391608397
+    },
+    "SEC": {
+      "preseason_ranked_team_seasons": 75,
+      "adjusted_shortfall": 0.09340792540792692,
+      "adjusted_ci": [
+        -1.6333720279720263,
+        1.8854051282051294
+      ],
+      "raw_shortfall": 4.613333333333333,
+      "share_finished_outside_results_top25": 0.36,
+      "mean_preseason_rank": 11.706666666666667
+    },
+    "ACC": {
+      "preseason_ranked_team_seasons": 39,
+      "adjusted_shortfall": 1.5987878787878804,
+      "adjusted_ci": [
+        -0.7093311816388721,
+        3.955610543302851
+      ],
+      "raw_shortfall": 5.846153846153846,
+      "share_finished_outside_results_top25": 0.5384615384615384,
+      "mean_preseason_rank": 12.666666666666666
+    },
+    "Big Ten": {
+      "preseason_ranked_team_seasons": 53,
+      "adjusted_shortfall": -2.4163504420108177,
+      "adjusted_ci": [
+        -4.339677398073622,
+        -0.3203773584905665
+      ],
+      "raw_shortfall": 2.2452830188679247,
+      "share_finished_outside_results_top25": 0.2830188679245283,
+      "mean_preseason_rank": 11.20754716981132
+    },
+    "Big 12": {
+      "preseason_ranked_team_seasons": 41,
+      "adjusted_shortfall": 1.7821865938939125,
+      "adjusted_ci": [
+        -0.7827869691284307,
+        4.206397748592871
+      ],
+      "raw_shortfall": 5.560975609756097,
+      "share_finished_outside_results_top25": 0.5609756097560976,
+      "mean_preseason_rank": 14.317073170731707
+    },
+    "Other": {
+      "preseason_ranked_team_seasons": 67,
+      "adjusted_shortfall": -0.21434923285669372,
+      "adjusted_ci": [
+        -2.0119643043523627,
+        1.47935132032147
+      ],
+      "raw_shortfall": 3.298507462686567,
+      "share_finished_outside_results_top25": 0.47761194029850745,
+      "mean_preseason_rank": 15.253731343283581
+    },
+    "sec_minus_acc": -1.5053799533799535,
+    "sec_minus_acc_ci": [
+      -4.343825712748789,
+      1.4506272547964851
+    ],
+    "reading": "inconclusive",
+    "note": "Shortfall = final season-only rank (capped at 26) - preseason AP rank; adjusted = shortfall minus the all-conference straight-line expectation at that preseason rank. Positive = finished below where the preseason poll put the team."
+  },
+  "T2_schedule_boost_by_week": {
+    "games": 17424,
+    "note": "Per game: opponent's AP rank points in the poll before the game minus its final season-only rank points (26 - rank inside the top 25, else 0). Positive = the opponent looked better on game day than its season ended up.",
+    "SEC": {
+      "early (weeks 1-4)": {
+        "mean_gap": 0.6585365853658537,
+        "ci": [
+          0.2365364188561867,
+          1.1313778580818186
+        ],
+        "games": 615
+      },
+      "middle (weeks 5-8)": {
+        "mean_gap": 1.1554702495201536,
+        "ci": [
+          0.7009485519353941,
+          1.6236830174330172
+        ],
+        "games": 521
+      },
+      "late (weeks 9+)": {
+        "mean_gap": 0.640926640926641,
+        "ci": [
+          0.36705250404689366,
+          0.9288627197321361
+        ],
+        "games": 777
+      },
+      "early_minus_late": 0.01760994443921271,
+      "early_minus_late_ci": [
+        -0.4837754058449948,
+        0.5317342888931061
+      ]
+    },
+    "ACC": {
+      "early (weeks 1-4)": {
+        "mean_gap": 0.09836065573770492,
+        "ci": [
+          -0.2046452828780415,
+          0.3909609533468559
+        ],
+        "games": 610
+      },
+      "middle (weeks 5-8)": {
+        "mean_gap": 0.15637065637065636,
+        "ci": [
+          -0.20700533369206384,
+          0.520742811562419
+        ],
+        "games": 518
+      },
+      "late (weeks 9+)": {
+        "mean_gap": 0.055693069306930694,
+        "ci": [
+          -0.18789610491694128,
+          0.28895570089645756
+        ],
+        "games": 808
+      },
+      "early_minus_late": 0.04266758643077422,
+      "early_minus_late_ci": [
+        -0.34117905739203824,
+        0.4253036423954561
+      ]
+    },
+    "Big Ten": {
+      "early (weeks 1-4)": {
+        "mean_gap": -0.24172185430463577,
+        "ci": [
+          -0.6372138640944428,
+          0.1316062232696168
+        ],
+        "games": 604
+      },
+      "middle (weeks 5-8)": {
+        "mean_gap": -0.3594890510948905,
+        "ci": [
+          -0.7299836551696219,
+          -0.0053520322428189234
+        ],
+        "games": 548
+      },
+      "late (weeks 9+)": {
+        "mean_gap": -0.4484029484029484,
+        "ci": [
+          -0.6810849764939366,
+          -0.23477203025042578
+        ],
+        "games": 814
+      },
+      "early_minus_late": 0.20668109409831265,
+      "early_minus_late_ci": [
+        -0.2449717370693653,
+        0.629876662587803
+      ]
+    },
+    "Big 12": {
+      "early (weeks 1-4)": {
+        "mean_gap": 0.2423580786026201,
+        "ci": [
+          -0.10138033891209407,
+          0.6135542934046078
+        ],
+        "games": 458
+      },
+      "middle (weeks 5-8)": {
+        "mean_gap": 0.17061611374407584,
+        "ci": [
+          -0.353970556331251,
+          0.7028784815813117
+        ],
+        "games": 422
+      },
+      "late (weeks 9+)": {
+        "mean_gap": 0.5131375579598145,
+        "ci": [
+          0.16837673816550186,
+          0.9012927781408009
+        ],
+        "games": 647
+      },
+      "early_minus_late": -0.27077947935719443,
+      "early_minus_late_ci": [
+        -0.7857782575691334,
+        0.23570636621735183
+      ]
+    },
+    "Other": {
+      "early (weeks 1-4)": {
+        "mean_gap": -0.05346409364125277,
+        "ci": [
+          -0.20681831163638442,
+          0.09585265511494469
+        ],
+        "games": 3161
+      },
+      "middle (weeks 5-8)": {
+        "mean_gap": -0.22604684173172462,
+        "ci": [
+          -0.3491539895738641,
+          -0.10609158691962116
+        ],
+        "games": 2818
+      },
+      "late (weeks 9+)": {
+        "mean_gap": -0.07823543748476725,
+        "ci": [
+          -0.15437617385875804,
+          -0.004156813915168835
+        ],
+        "games": 4103
+      },
+      "early_minus_late": 0.024771343843514475,
+      "early_minus_late_ci": [
+        -0.14177920200795285,
+        0.19902914539107325
+      ]
+    },
+    "sec_minus_acc": {
+      "early (weeks 1-4)": {
+        "diff": 0.5601759296281488,
+        "ci": [
+          0.060342338900755105,
+          1.1378569496602917
+        ]
+      },
+      "middle (weeks 5-8)": {
+        "diff": 0.9990995931494973,
+        "ci": [
+          0.46224085615452626,
+          1.5854258455476067
+        ]
+      },
+      "late (weeks 9+)": {
+        "diff": 0.5852335716197102,
+        "ci": [
+          0.2241427706880111,
+          0.9454356475448819
+        ]
+      }
+    },
+    "reading": "no link shown"
+  }
+}
