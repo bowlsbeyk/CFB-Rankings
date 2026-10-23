@@ -1,0 +1,210 @@
+{
+  "pulled_at_utc": "2026-10-23T17:18:20+00:00",
+  "sources": {
+    "cfbfastR-data": {
+      "repo": "https://github.com/sportsdataverse/cfbfastR-data",
+      "commit": "09f2595e1b23d485691577611d0d1f9cccbb4331"
+    },
+    "cfbd": {
+      "base_url": "https://api.collegefootballdata.com",
+      "endpoint": "/rankings"
+    }
+  },
+  "files": {
+    "data/raw/polls/rankings_2014_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2014&seasonType=postseason",
+      "sha256": "5be43be3efbf4185370bf3387e83b49e8209f82372cf33e058cc2373c822ea44",
+      "bytes": 13153
+    },
+    "data/raw/polls/rankings_2014_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2014&seasonType=regular",
+      "sha256": "8c8f06ed18a4ba0af0372522f44d4c2c03c136f36338ea6e417cd4f8a2855e96",
+      "bytes": 176965
+    },
+    "data/raw/polls/rankings_2015_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2015&seasonType=postseason",
+      "sha256": "6ce7f27e96b12616d23d49765cae9dcd38065f015bcddfb4b1d1913d3b66e8c1",
+      "bytes": 10710
+    },
+    "data/raw/polls/rankings_2015_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2015&seasonType=regular",
+      "sha256": "b36f58e2657f72ebf07bc172e7a18977b054e766788850c675e4ad87625b0ccd",
+      "bytes": 156059
+    },
+    "data/raw/polls/rankings_2016_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2016&seasonType=postseason",
+      "sha256": "555e1a56bae0e8861b76d08419d6952fa189ec2ed67f7f7266a3c90e6454ed9d",
+      "bytes": 10737
+    },
+    "data/raw/polls/rankings_2016_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2016&seasonType=regular",
+      "sha256": "0faf40bcbf224671e0f13bd79dd9809aae1756abcaeb739e50ec7135548767c6",
+      "bytes": 159029
+    },
+    "data/raw/polls/rankings_2017_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2017&seasonType=postseason",
+      "sha256": "1c2a29de4d1f70cda47cd9dc8522c8df3ec9cb354d9899ba01f10d4ef367d2bd",
+      "bytes": 10711
+    },
+    "data/raw/polls/rankings_2017_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2017&seasonType=regular",
+      "sha256": "0461383fdac3a239eebb3c8d923541a266ebed9aedef128635b38e0655c65533",
+      "bytes": 159387
+    },
+    "data/raw/polls/rankings_2018_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2018&seasonType=postseason",
+      "sha256": "aa7106d241b827b08bcf3938df8f389472c6e780e84e9cdaae7d8747af461130",
+      "bytes": 10768
+    },
+    "data/raw/polls/rankings_2018_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2018&seasonType=regular",
+      "sha256": "0ccfed730b753172fe9ecf2848ce0bcc37d91af6d08deb3f72196bc98e721566",
+      "bytes": 159513
+    },
+    "data/raw/polls/rankings_2019_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2019&seasonType=postseason",
+      "sha256": "f0affb813ed63b7119385681045244cf8f773909350c8955261f7a26663e835e",
+      "bytes": 13595
+    },
+    "data/raw/polls/rankings_2019_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2019&seasonType=regular",
+      "sha256": "2f912e51194df05a124576f932fd84eac4c0525e14a408d28383159f226c022b",
+      "bytes": 167543
+    },
+    "data/raw/polls/rankings_2020_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2020&seasonType=postseason",
+      "sha256": "0896eb29f509419b10f536e7779a21ee0efc0621193f2123d8b4e22d0b04f196",
+      "bytes": 7782
+    },
+    "data/raw/polls/rankings_2020_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2020&seasonType=regular",
+      "sha256": "466a0fa2c036f01dd382dcfebb4efe23ab167e4bcdf717dda232694fa724ea45",
+      "bytes": 88215
+    },
+    "data/raw/polls/rankings_2021_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2021&seasonType=postseason",
+      "sha256": "2d74235113fff3beb997365057364515990f2ab60cb63c686a5e7844aa8a455c",
+      "bytes": 13608
+    },
+    "data/raw/polls/rankings_2021_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2021&seasonType=regular",
+      "sha256": "ccbfd7250e1fac11140220b3cf8307e1849e388be0f37fb23350cc1421acc72f",
+      "bytes": 133862
+    },
+    "data/raw/polls/rankings_2022_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2022&seasonType=postseason",
+      "sha256": "e8d14ad59b5b8890eda2bd6fb9fd81fb0fccbd838b72f34b2c5e4f013e0e837e",
+      "bytes": 13474
+    },
+    "data/raw/polls/rankings_2022_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2022&seasonType=regular",
+      "sha256": "ac262fb73927f74639828a65bc67aa0f50feee2a120b3b0d470754a032dc1937",
+      "bytes": 194911
+    },
+    "data/raw/polls/rankings_2023_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2023&seasonType=postseason",
+      "sha256": "123db29c69800c6e34e85bc173c0df0764f27e997b5d65cc6d2491b88e53596c",
+      "bytes": 15999
+    },
+    "data/raw/polls/rankings_2023_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2023&seasonType=regular",
+      "sha256": "f852aa8ba6b6f669ff2064ac67fe3715f1a9f6cb330cb0370ad106320776e52a",
+      "bytes": 186867
+    },
+    "data/raw/polls/rankings_2024_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2024&seasonType=postseason",
+      "sha256": "4c66f168697bb922871deb500cc24800304bcd95aa7dd132bfab2b6e61f616b4",
+      "bytes": 13556
+    },
+    "data/raw/polls/rankings_2024_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2024&seasonType=regular",
+      "sha256": "a0f25628ef5664b360fb28d0f43499be67ae6d15c0ec0d893f0ed17786cb9cc6",
+      "bytes": 203663
+    },
+    "data/raw/polls/rankings_2025_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2025&seasonType=postseason",
+      "sha256": "da99b7e2d94c445084c5e8b921ee4841fde9726ee90fcfe88647cf216599bdbe",
+      "bytes": 13502
+    },
+    "data/raw/polls/rankings_2025_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2025&seasonType=regular",
+      "sha256": "7e06488320e227a44b88e914706d519384efc405f5f8908fca170bc4bad7c42b",
+      "bytes": 205812
+    },
+    "data/raw/polls/rankings_2026_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2026&seasonType=postseason",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "bytes": 2
+    },
+    "data/raw/polls/rankings_2026_regular.json": {
+      "source_url": "https://api.collegefootballdata.com/rankings?year=2026&seasonType=regular",
+      "sha256": "02c1bae4c4f387186d79cdfea2855fcc43cc04567a1d722d68eeeeff004aea12",
+      "bytes": 107686
+    },
+    "data/raw/schedules/cfb_schedules_2014.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2014.parquet",
+      "sha256": "375fd3add14e66bdb7e83bb158fc6637c1f90c8938cac477f65a8b7348018aba",
+      "bytes": 94966
+    },
+    "data/raw/schedules/cfb_schedules_2015.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2015.parquet",
+      "sha256": "b2d7f8295ad2683107d3ff8d5756cf37a8d7b5b67ab7b5083c5cd440eed98019",
+      "bytes": 93922
+    },
+    "data/raw/schedules/cfb_schedules_2016.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2016.parquet",
+      "sha256": "77c1e6f0f19164644cfacea6aa32b866e11bc8b72aae8259e14692ce369547d3",
+      "bytes": 103432
+    },
+    "data/raw/schedules/cfb_schedules_2017.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2017.parquet",
+      "sha256": "6662313b163fbe2bfe4187422051c415934ebddddffd2c24d5b4301d3eafe621",
+      "bytes": 105727
+    },
+    "data/raw/schedules/cfb_schedules_2018.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2018.parquet",
+      "sha256": "384c53865c1e12cab7115e1ea9646f622bd07182668d0815d4763bb15bb5242a",
+      "bytes": 107218
+    },
+    "data/raw/schedules/cfb_schedules_2019.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2019.parquet",
+      "sha256": "7ab3e13313ad8c6d37b8f6f64859107eded64992c281e934b463bacd1076ff7f",
+      "bytes": 108775
+    },
+    "data/raw/schedules/cfb_schedules_2020.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2020.parquet",
+      "sha256": "b5f1f74681f0eb275d3b3a4335a1ed21b35edf548713aee5721cebb53c369c11",
+      "bytes": 63376
+    },
+    "data/raw/schedules/cfb_schedules_2021.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2021.parquet",
+      "sha256": "8b2d1306c92de0c12930e30156af35c3ae4441e97a4ac5226eac60765fb97585",
+      "bytes": 119714
+    },
+    "data/raw/schedules/cfb_schedules_2022.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2022.parquet",
+      "sha256": "b9dcbee1e823edf54c811941190e4b678e6774d86156396888c3ee38e0dc9034",
+      "bytes": 175367
+    },
+    "data/raw/schedules/cfb_schedules_2023.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2023.parquet",
+      "sha256": "6bf45f7ade2353fc6f511162eb9fe67f999d2fc7eb0bfaca660554a9c84c5246",
+      "bytes": 181534
+    },
+    "data/raw/schedules/cfb_schedules_2024.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2024.parquet",
+      "sha256": "c6b9b210c0771155c5805657747814a0d9197a4f236c286c4cc56964bbf86bbf",
+      "bytes": 191897
+    },
+    "data/raw/schedules/cfb_schedules_2025.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2025.parquet",
+      "sha256": "7c172a3bdc48dc1965606ba594ea856c70193d5f84ef58138f0b774f878eba29",
+      "bytes": 174631
+    },
+    "data/raw/schedules/cfb_schedules_2026.parquet": {
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2026.parquet",
+      "sha256": "fea988941124285c13534966fdf5aa6a1bd566e811f5405f87daef4726843473",
+      "bytes": 56904
+    }
+  }
+}
