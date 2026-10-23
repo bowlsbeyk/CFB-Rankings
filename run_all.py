@@ -14,6 +14,8 @@ STEPS = [
     ["src/train.py"],
     ["src/replay.py"],
     ["src/score_holdout.py"],
+    ["src/counterfactual.py"],
+    ["src/base_rates.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
 ]

@@ -1,0 +1,30 @@
+{
+  "P4, started unranked, 6-1 or better": {
+    "team_seasons": 30,
+    "ranked_in_poll_8": 1.0
+  },
+  "P4, started ranked, 6-1 or better": {
+    "team_seasons": 65,
+    "ranked_in_poll_8": 1.0
+  },
+  "P4, started unranked, 5-1 or better": {
+    "team_seasons": 73,
+    "ranked_in_poll_8": 0.7534246575342466
+  },
+  "P4, started ranked, 5-1 or better": {
+    "team_seasons": 107,
+    "ranked_in_poll_8": 1.0
+  },
+  "Started top 12, 3+ losses": {
+    "team_seasons": 18,
+    "ranked_in_poll_8": 0.05555555555555555
+  },
+  "Started 13-25, 3+ losses": {
+    "team_seasons": 45,
+    "ranked_in_poll_8": 0.0
+  },
+  "Started unranked, 3+ losses": {
+    "team_seasons": 753,
+    "ranked_in_poll_8": 0.0
+  }
+}

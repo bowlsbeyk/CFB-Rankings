@@ -74,3 +74,7 @@ A paired team's swap gain (its rank with the swap versus without, both simulated
 - **Extension (logged, reported alongside):** all 9 ranked SEC slots go to ACC teams. Unranked teams in each conference are ordered by preseason Elo (pregame Elo for their first 2026 game), used only to form pairs, never as a model input.
 
 **Model.** The chosen model from the holdout (revised spec, challenger), as fit on 2014–2023. It is not refit on 2024–2025. Both unranked rules are run; the 0 rule is primary.
+
+## 2026-10-23 — Post-hoc plausibility check on the counterfactual (added after seeing its results)
+
+The counterfactual was run exactly as logged (`results/counterfactual_2026.json`). Its biggest moves came from teams the swap pushed far from their record: in the 9-slot extension, 6-1 Tennessee (average margin +18.7) never re-enters the top 25 through poll 8, while 4-3 Virginia and Louisville sit near #15. To judge whether voters would do that, `src/base_rates.py` counts what real AP voters did at poll 8 in 2014–2025 for those situations. This check was not planned in advance; it was added because the results looked implausible, and it is reported as such.
