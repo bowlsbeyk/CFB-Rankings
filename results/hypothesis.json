@@ -169,7 +169,7 @@
       -2.7218251694633557,
       0.5746642740175973
     ],
-    "note": "gap = Elo rank - AP rank, capped at 26; positive = poll rates team above Elo",
+    "note": "gap = strength rank (elo_after) - AP rank, capped at 26; positive = poll rates team above the strength measure",
     "biggest_snubs": [
       {
         "season": 2014,
@@ -292,6 +292,236 @@
         "record": "3-2"
       }
     ]
+  },
+  "season_rating": {
+    "poll_vs_rating": {
+      "SEC": {
+        "team_weeks": 746,
+        "mean_gap": 1.1072386058981234,
+        "ci": [
+          0.3370273389555075,
+          1.8840704944639723
+        ],
+        "elo_top25_ap_unranked": 38,
+        "ap_ranked_outside_elo_top25": 77
+      },
+      "ACC": {
+        "team_weeks": 429,
+        "mean_gap": 0.351981351981352,
+        "ci": [
+          -0.527170421896265,
+          1.1613218272013222
+        ],
+        "elo_top25_ap_unranked": 50,
+        "ap_ranked_outside_elo_top25": 60
+      },
+      "Big Ten": {
+        "team_weeks": 593,
+        "mean_gap": -0.8650927487352446,
+        "ci": [
+          -1.7545468783181144,
+          0.01006850506550524
+        ],
+        "elo_top25_ap_unranked": 63,
+        "ap_ranked_outside_elo_top25": 39
+      },
+      "Big 12": {
+        "team_weeks": 432,
+        "mean_gap": 1.1527777777777777,
+        "ci": [
+          -0.18838888375707058,
+          2.5026315708254114
+        ],
+        "elo_top25_ap_unranked": 22,
+        "ap_ranked_outside_elo_top25": 55
+      },
+      "Other": {
+        "team_weeks": 1019,
+        "mean_gap": -0.9214916584887144,
+        "ci": [
+          -1.778488294364063,
+          -0.12047659630260935
+        ],
+        "elo_top25_ap_unranked": 194,
+        "ap_ranked_outside_elo_top25": 138
+      },
+      "sec_minus_acc": 0.7552572539167715,
+      "sec_minus_acc_ci": [
+        -0.42597416526390197,
+        1.9281774229301367
+      ],
+      "note": "gap = strength rank (season_rating) - AP rank, capped at 26; positive = poll rates team above the strength measure",
+      "biggest_snubs": [
+        {
+          "season": 2015,
+          "poll_week": 7,
+          "team": "Temple",
+          "conference": "Other",
+          "elo_rank": 8,
+          "record": "5-0"
+        },
+        {
+          "season": 2014,
+          "poll_week": 7,
+          "team": "Marshall",
+          "conference": "Other",
+          "elo_rank": 10,
+          "record": "5-0"
+        },
+        {
+          "season": 2015,
+          "poll_week": 6,
+          "team": "Temple",
+          "conference": "Other",
+          "elo_rank": 10,
+          "record": "4-0"
+        },
+        {
+          "season": 2016,
+          "poll_week": 6,
+          "team": "Western Michigan",
+          "conference": "Other",
+          "elo_rank": 10,
+          "record": "5-0"
+        },
+        {
+          "season": 2025,
+          "poll_week": 6,
+          "team": "USC",
+          "conference": "Big Ten",
+          "elo_rank": 10,
+          "record": "4-1"
+        },
+        {
+          "season": 2021,
+          "poll_week": 14,
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "elo_rank": 11,
+          "record": "8-4"
+        },
+        {
+          "season": 2018,
+          "poll_week": 14,
+          "team": "Missouri",
+          "conference": "SEC",
+          "elo_rank": 11,
+          "record": "8-4"
+        },
+        {
+          "season": 2022,
+          "poll_week": 6,
+          "team": "James Madison",
+          "conference": "Other",
+          "elo_rank": 11,
+          "record": "4-0"
+        },
+        {
+          "season": 2021,
+          "poll_week": 15,
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "elo_rank": 12,
+          "record": "8-4"
+        },
+        {
+          "season": 2025,
+          "poll_week": 6,
+          "team": "Memphis",
+          "conference": "Other",
+          "elo_rank": 12,
+          "record": "5-0"
+        },
+        {
+          "season": 2024,
+          "poll_week": 7,
+          "team": "Army",
+          "conference": "Other",
+          "elo_rank": 12,
+          "record": "5-0"
+        },
+        {
+          "season": 2025,
+          "poll_week": 7,
+          "team": "USC",
+          "conference": "Big Ten",
+          "elo_rank": 12,
+          "record": "4-1"
+        },
+        {
+          "season": 2024,
+          "poll_week": 6,
+          "team": "Navy",
+          "conference": "Other",
+          "elo_rank": 12,
+          "record": "4-0"
+        },
+        {
+          "season": 2021,
+          "poll_week": 10,
+          "team": "Wisconsin",
+          "conference": "Big Ten",
+          "elo_rank": 12,
+          "record": "5-3"
+        },
+        {
+          "season": 2023,
+          "poll_week": 10,
+          "team": "Liberty",
+          "conference": "Other",
+          "elo_rank": 13,
+          "record": "8-0"
+        }
+      ]
+    },
+    "preseason_carryover": {
+      "zero": {
+        "preseason_coef": 0.4789059972737079,
+        "preseason_coef_ci": [
+          0.42010874722275554,
+          0.5391164988461905
+        ],
+        "controls": [
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date",
+          "season_rating",
+          "week"
+        ],
+        "extra_carryover_sec": 0.00671931570858715,
+        "extra_carryover_acc": -0.034571439168029176,
+        "sec_minus_acc": 0.04129075487661633,
+        "sec_minus_acc_ci": [
+          -0.15629238387527225,
+          0.2379089848442578
+        ],
+        "team_weeks": 14908,
+        "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
+      },
+      "floor": {
+        "preseason_coef": 0.49484383859950154,
+        "preseason_coef_ci": [
+          0.43398803564805055,
+          0.5583265699253703
+        ],
+        "controls": [
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date",
+          "season_rating",
+          "week"
+        ],
+        "extra_carryover_sec": 0.0028191666434350545,
+        "extra_carryover_acc": -0.034017699931143563,
+        "sec_minus_acc": 0.03683686657457862,
+        "sec_minus_acc_ci": [
+          -0.17252005532309983,
+          0.236303688211786
+        ],
+        "team_weeks": 14908,
+        "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
+      }
+    }
   },
   "note": "Real data 2014-2025 (no 2020); primary unranked rule: zero."
 }

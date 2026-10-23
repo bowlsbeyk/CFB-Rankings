@@ -22,6 +22,7 @@ from train import features, target
 ROOT = Path(__file__).resolve().parent.parent
 TABLE = ROOT / "data" / "processed" / "team_weeks.csv"
 OUT = ROOT / "results" / "hypothesis.json"
+RATINGS = ROOT / "data" / "processed" / "season_ratings.csv"
 SEASONS = [s for s in range(2014, 2026) if s != 2020]
 CONFS = ["SEC", "ACC", "Big Ten", "Big 12"]
 N_BOOT = 1000
@@ -75,9 +76,10 @@ def conference_effect(tw, treatment, spec, rng):
             "reference": "Other (Pac-12, Group of 5, independents)"}
 
 
-def poll_vs_elo(tw, rng):
-    d = tw.dropna(subset=["elo_after"]).copy()
-    d["elo_rank"] = d.groupby(["season", "week"]).elo_after.rank(ascending=False, method="min")
+def poll_vs_elo(tw, rng, col="elo_after", min_week=1):
+    """Poll versus a strength measure (Elo, or the season-only rating)."""
+    d = tw[tw.week >= min_week].dropna(subset=[col]).copy()
+    d["elo_rank"] = d.groupby(["season", "week"])[col].rank(ascending=False, method="min")
     d["ap_rank"] = d.next_rank.fillna(26).clip(upper=26)
     d["elo_rank_c"] = d.elo_rank.clip(upper=26)
     u = d[(d.ap_rank <= 25) | (d.elo_rank_c <= 25)].copy()
@@ -97,7 +99,8 @@ def poll_vs_elo(tw, rng):
                                                       & (u.elo_rank_c > 25)).sum())}
     out["sec_minus_acc"] = float(out["SEC"]["mean_gap"] - out["ACC"]["mean_gap"])
     out["sec_minus_acc_ci"] = ci(means["SEC"] - means["ACC"])
-    out["note"] = "gap = Elo rank - AP rank, capped at 26; positive = poll rates team above Elo"
+    out["note"] = (f"gap = strength rank ({col}) - AP rank, capped at 26; positive = poll "
+                   "rates team above the strength measure")
     snubs = u[(u.elo_rank_c <= 15) & (u.ap_rank > 25)].sort_values("elo_rank")
     out["biggest_snubs"] = [
         {"season": int(r.season), "poll_week": int(r.week) + 1, "team": r.team,
@@ -107,11 +110,11 @@ def poll_vs_elo(tw, rng):
     return out
 
 
-def preseason_carryover(tw, treatment, rng):
+def preseason_carryover(tw, treatment, rng, col="elo_after", min_week=4):
     pre = tw[tw.week == 1].set_index(["season", "team"])[f"prior_ppv_{treatment}"]
-    d = tw[tw.week >= 4].dropna(subset=["elo_after"]).copy()
+    d = tw[tw.week >= min_week].dropna(subset=[col]).copy()
     d["pre"] = d.set_index(["season", "team"]).index.map(pre)
-    controls = ["wins_to_date", "losses_to_date", "margin_to_date", "elo_after", "week"]
+    controls = ["wins_to_date", "losses_to_date", "margin_to_date", col, "week"]
     y = d[f"next_ppv_{treatment}"].to_numpy(float)
     groups = d.season.astype(str) + "|" + d.team
     W = boot_weights(groups, rng)
@@ -153,6 +156,18 @@ def main():
             "preseason_carryover": preseason_carryover(tw, tr, rng),
         }
     report["poll_vs_elo"] = poll_vs_elo(tw, np.random.default_rng(0))
+
+    # Primary yardstick since 2026-10-23: the season-only rating (DEVIATIONS.md),
+    # polls 6+ (rating after at least five weeks of games).
+    sr = pd.read_csv(RATINGS)[["season", "week", "team", "combined"]]
+    tws = tw.merge(sr.rename(columns={"combined": "season_rating"}),
+                   on=["season", "week", "team"], how="left")
+    report["season_rating"] = {
+        "poll_vs_rating": poll_vs_elo(tws, np.random.default_rng(0), "season_rating", 5),
+        "preseason_carryover": {
+            tr: preseason_carryover(tws, tr, np.random.default_rng(0), "season_rating", 5)
+            for tr in ("zero", "floor")},
+    }
     report["note"] = "Real data 2014-2025 (no 2020); primary unranked rule: zero."
     OUT.write_text(json.dumps(report, indent=2) + "\n")
 
@@ -174,6 +189,21 @@ def main():
               f"AP-ranked/outside-Elo-top25 {x['ap_ranked_outside_elo_top25']}")
     print(f"   SEC-ACC {pe['sec_minus_acc']:+.2f} CI {pe['sec_minus_acc_ci'][0]:+.2f} "
           f"to {pe['sec_minus_acc_ci'][1]:+.2f}")
+    sr = report["season_rating"]
+    print("SEASON-ONLY RATING (primary yardstick), polls 6+:")
+    for c in CONFS + ["Other"]:
+        x = sr["poll_vs_rating"][c]
+        print(f"   {c:8} {x['mean_gap']:+.2f} CI {x['ci'][0]:+.2f} to {x['ci'][1]:+.2f}  "
+              f"n={x['team_weeks']}  rated-top25/AP-unranked {x['elo_top25_ap_unranked']}  "
+              f"AP-ranked/outside-rated-top25 {x['ap_ranked_outside_elo_top25']}")
+    pv = sr["poll_vs_rating"]
+    print(f"   SEC-ACC {pv['sec_minus_acc']:+.2f} CI {pv['sec_minus_acc_ci'][0]:+.2f} "
+          f"to {pv['sec_minus_acc_ci'][1]:+.2f}")
+    for tr in ("zero", "floor"):
+        pc = sr["preseason_carryover"][tr]
+        print(f"   [{tr}] carry-over {pc['preseason_coef']:.3f} CI {pc['preseason_coef_ci'][0]:.3f}-"
+              f"{pc['preseason_coef_ci'][1]:.3f}; SEC-ACC extra {pc['sec_minus_acc']:+.3f} "
+              f"CI {pc['sec_minus_acc_ci'][0]:+.3f} to {pc['sec_minus_acc_ci'][1]:+.3f}")
 
 
 if __name__ == "__main__":

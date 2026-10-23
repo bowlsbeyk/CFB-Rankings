@@ -1,0 +1,18 @@
+{
+  "games_all": 5320,
+  "accuracy_all_games": {
+    "combined": 0.6996240601503759,
+    "results": 0.6838345864661655,
+    "performance": 0.712218045112782,
+    "elo": 0.7024436090225564
+  },
+  "games_with_a_ranked_team": 1769,
+  "accuracy_games_with_a_ranked_team": {
+    "combined": 0.752967778405879,
+    "results": 0.7422272470322216,
+    "performance": 0.7637083097795364,
+    "elo": 0.7591859807801018,
+    "ap": 0.7524024872809497
+  },
+  "note": "Winners of FBS-vs-FBS games in week 6+ of 2014-2025 regular seasons, picked from ratings through the previous week (Elo: pregame Elo; AP: better-ranked team in the poll before the game)."
+}
