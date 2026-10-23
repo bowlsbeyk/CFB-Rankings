@@ -42,7 +42,8 @@ The full write-up, with 25 figures covering every step from data to counterfactu
 6. **SEC preseason rankings are not unjustified** (added last, T1). SEC preseason-ranked teams finish almost exactly where their preseason rank predicts (+0.09 places, 95% CI −1.63 to +1.89); ACC preseason picks hold up no better.
 7. **The SEC's schedule boost is season-long, shows no preseason link, and is bigger than the ACC's** (added last, T2). Per game, SEC opponents look 0.6 to 1.2 places better on game day than their seasons end up, in every part of the season; the ACC's are about even. Measured per game, the SEC-minus-ACC difference is clear in every part of the season (the coarser schedule-rank version in point 3 is not).
 8. **It is not an in-season voter loop either** (added last, T3). SEC teams that lose to ranked SEC rivals end up ranked about where their seasons finish (+0.44 places, 95% CI −0.67 to +1.43), no differently from ACC teams. The SEC plays four times as many of these games, but each is judged like anyone else's. Every qualifying game is in [`results/t3_loop_games.csv`](results/t3_loop_games.csv).
-9. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
+9. **The results rating does not overrate the SEC** (added last, T4). Against outsiders, including bowls the rating never saw, SEC teams beat its predictions by 3.4 points a game (95% CI +1.7 to +5.0), and match them against power-conference opponents. So "SEC schedules are tougher by results" is not a quirk of the rating. Raw head-to-head, the SEC went 58–46 against the ACC over 2014–2025.
+10. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
 
 ## 2026 so far: who is over- and underrated (exploratory)
 

@@ -491,6 +491,22 @@ T2 left two explanations. This test checks the one about voters, a self-reinforc
 
 So the season-long SEC schedule boost in T2 is not explained by a voter loop in ranked conference games. Of the two explanations T2 left, the one that remains is that the season-only rating undervalues teams in a deep conference. In that case part of the boost is in our yardstick, not in the voters. The data here cannot confirm that either; it is what is left, not something shown.
 
+### 5.11 Does the rating itself overrate the SEC? (added last)
+
+Kyle objected that the finding "SEC schedules are tougher by results" may itself be biased. SEC teams mostly play each other, so the SEC's overall strength in any rating rests on its games against outsiders. This test referees the rating with those games: every FBS game between a conference's team and an outsider, from week 4 on plus all bowls and playoff games, which the rating never saw. It compares the actual margin (capped at ±28) with the margin the rating predicted before the game. Logged first (`DEVIATIONS.md`, deviation 18); every game is in `results/t4_referee_games.csv`.
+
+| Conference vs outsiders | Games | Actual minus predicted margin (points) | Won (predicted) |
+| --- | --- | --- | --- |
+| **SEC, all** | 235 | **+3.35 (+1.68, +4.97)** | 177 (175) |
+| SEC, bowls and playoff only | 34 | +1.74 (−2.46, +6.53) | 15 (19) |
+| SEC, vs power-conference opponents | 86 | −0.22 (−3.07, +2.58) | 41 (45) |
+| **ACC, all** | 257 | +0.13 (−1.70, +1.87) | 133 (142) |
+| ACC, bowls and playoff only | 38 | −2.49 (−6.98, +1.87) | 16 (18) |
+| ACC, vs power-conference opponents | 137 | **−3.10 (−5.39, −0.97)** | 48 (58) |
+| Big Ten, all | 128 | +3.49 (+1.05, +5.97) | 95 (83) |
+
+**Result: the objection is refuted.** Against outsiders, SEC teams do slightly better than the rating predicts, not worse. Against power-conference opponents they do almost exactly as predicted. So the rating does not overrate the SEC, and the finding that SEC schedules are tougher by results is not an artifact of how the rating calibrates conference strength. Against power-conference opponents it is the ACC that falls short of its rating, by about three points a game. In raw head-to-head games, with no model, the SEC went 58–46 against the ACC over 2014–2025, winning by 4.1 points on average; in bowls the two split, SEC 4 of 9.
+
 ---
 
 ## 6. Deviations from the pre-registered plan
@@ -516,8 +532,9 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 15 | Exploratory 2026 over/underrated board (§5.8) | Kyle's request for a current-season view | All results |
 | 16 | T1 and T2: tests of the preseason link (§5.9) | Close the two gaps between the claim and the evidence | All results, including §5.8 |
 | 17 | T3: in-season ranked loop (§5.10) | Test the explanation proposed for T2 | All results, including T1 and T2 |
+| 18 | T4: does the rating overrate the SEC? (§5.11) | Kyle's objection that the results yardstick is biased | All results, including T3 |
 
-Deviations 5, 6, 8, 10, 11, 12, 15, 16 and 17 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
+Deviations 5, 6, 8, 10, 11, 12, 15, 16, 17 and 18 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
 ---
 
@@ -607,4 +624,5 @@ python run_all.py
 | 2026 over/underrated (exploratory) | `results/rankings_2026.csv` | `src/rankings_2026.py` |
 | T1 and T2 (preseason link) | `results/preseason_tests.json` | `src/preseason_tests.py` |
 | T3 (ranked loop), every qualifying game | `results/t3_loop.json`, `results/t3_loop_games.csv` | `src/loop_test.py` |
+| T4 (rating referee), every game | `results/t4_referee.json`, `results/t4_referee_games.csv` | `src/referee_test.py` |
 | Figures 1–25 | `results/figures/*.png` | `src/figures.py` |

@@ -1,0 +1,188 @@
+{
+  "SEC": {
+    "all": {
+      "games": 235,
+      "mean_residual": 3.348042553191489,
+      "ci": [
+        1.6778720888355343,
+        4.965248655110579
+      ],
+      "wins": 177,
+      "predicted_wins": 175,
+      "win_share": 0.7531914893617021
+    },
+    "postseason_only": {
+      "games": 34,
+      "mean_residual": 1.7394117647058822,
+      "ci": [
+        -2.456850806451613,
+        6.525005733005731
+      ],
+      "wins": 15,
+      "predicted_wins": 19,
+      "win_share": 0.4411764705882353
+    },
+    "vs_power_opponents": {
+      "games": 86,
+      "mean_residual": -0.21581395348837196,
+      "ci": [
+        -3.068647242647059,
+        2.5762894570707067
+      ],
+      "wins": 41,
+      "predicted_wins": 45,
+      "win_share": 0.47674418604651164
+    }
+  },
+  "ACC": {
+    "all": {
+      "games": 257,
+      "mean_residual": 0.12828793774319067,
+      "ci": [
+        -1.7045692307692304,
+        1.874625227778176
+      ],
+      "wins": 133,
+      "predicted_wins": 142,
+      "win_share": 0.5175097276264592
+    },
+    "postseason_only": {
+      "games": 38,
+      "mean_residual": -2.4915789473684216,
+      "ci": [
+        -6.976835714285715,
+        1.871463217703349
+      ],
+      "wins": 16,
+      "predicted_wins": 18,
+      "win_share": 0.42105263157894735
+    },
+    "vs_power_opponents": {
+      "games": 137,
+      "mean_residual": -3.095109489051095,
+      "ci": [
+        -5.390428733766234,
+        -0.9741042706766926
+      ],
+      "wins": 48,
+      "predicted_wins": 58,
+      "win_share": 0.35036496350364965
+    }
+  },
+  "Big Ten": {
+    "all": {
+      "games": 128,
+      "mean_residual": 3.4890625,
+      "ci": [
+        1.0480753170731711,
+        5.974923717609729
+      ],
+      "wins": 95,
+      "predicted_wins": 83,
+      "win_share": 0.7421875
+    },
+    "postseason_only": {
+      "games": 39,
+      "mean_residual": 5.773589743589743,
+      "ci": [
+        1.5982693050193053,
+        9.279821428571424
+      ],
+      "wins": 26,
+      "predicted_wins": 19,
+      "win_share": 0.6666666666666666
+    },
+    "vs_power_opponents": {
+      "games": 56,
+      "mean_residual": 3.051428571428571,
+      "ci": [
+        -1.0672933811802232,
+        6.791521955403087
+      ],
+      "wins": 31,
+      "predicted_wins": 21,
+      "win_share": 0.5535714285714286
+    }
+  },
+  "Big 12": {
+    "all": {
+      "games": 58,
+      "mean_residual": 4.174827586206896,
+      "ci": [
+        0.5918640350877193,
+        7.711923675115207
+      ],
+      "wins": 38,
+      "predicted_wins": 35,
+      "win_share": 0.6551724137931034
+    },
+    "postseason_only": {
+      "games": 24,
+      "mean_residual": -1.486666666666667,
+      "ci": [
+        -6.713458333333333,
+        3.8629583333333315
+      ],
+      "wins": 12,
+      "predicted_wins": 14,
+      "win_share": 0.5
+    },
+    "vs_power_opponents": {
+      "games": 29,
+      "mean_residual": -0.3082758620689655,
+      "ci": [
+        -5.544537154377881,
+        4.785608333333333
+      ],
+      "wins": 15,
+      "predicted_wins": 16,
+      "win_share": 0.5172413793103449
+    }
+  },
+  "Pac-12": {
+    "all": {
+      "games": 74,
+      "mean_residual": 0.8025675675675674,
+      "ci": [
+        -2.9816159909909916,
+        5.569131104328523
+      ],
+      "wins": 34,
+      "predicted_wins": 30,
+      "win_share": 0.4594594594594595
+    },
+    "postseason_only": {
+      "games": 11,
+      "mean_residual": 1.1900000000000002,
+      "ci": [
+        -7.52284090909091,
+        9.51395
+      ],
+      "wins": 6,
+      "predicted_wins": 3,
+      "win_share": 0.5454545454545454
+    },
+    "vs_power_opponents": {
+      "games": 37,
+      "mean_residual": 0.6462162162162162,
+      "ci": [
+        -3.0995751192368837,
+        4.896343973214284
+      ],
+      "wins": 14,
+      "predicted_wins": 7,
+      "win_share": 0.3783783783783784
+    }
+  },
+  "reading": "refutes it (rating does not overrate SEC)",
+  "head_to_head_SEC_vs_ACC": {
+    "games": 104,
+    "sec_wins": 58,
+    "acc_wins": 46,
+    "mean_sec_margin": 4.125,
+    "postseason_games": 9,
+    "postseason_sec_wins": 4,
+    "note": "Raw results, no model; regular season (all weeks) plus postseason, 2014-2025 (no 2020)."
+  },
+  "note": "residual = actual margin (capped at +/-28) - margin predicted before the game by the season-only rating's performance component. Negative = the conference does worse against outsiders than the rating expects (the rating overrates it)."
+}
