@@ -138,6 +138,7 @@ def main():
         all_ratings.append(ratings)
         if season <= 2025:
             all_picks.append(validate(games, ratings, season))
+    OUT.parent.mkdir(parents=True, exist_ok=True)
     pd.concat(all_ratings).to_csv(OUT, index=False)
 
     p = pd.concat(all_picks, ignore_index=True)
