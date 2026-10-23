@@ -2,6 +2,8 @@
 
 Runs (each under both unranked rules; 0 rule is primary):
   sanity   no swap; its drift from the real poll is the model's error bar
+
+Usage: python src/counterfactual.py [revised|rated]   (default revised)
   swap3    primary: the 3 ranked ACC teams swap with the top 3 SEC teams
   swap9    extension: all 9 ranked SEC slots go to ACC teams, unranked teams
            ordered by preseason Elo (pairing only; DEVIATIONS.md)
@@ -14,6 +16,7 @@ from model inertia.
 """
 
 import json
+import sys
 from pathlib import Path
 
 import joblib
@@ -26,8 +29,32 @@ ROOT = Path(__file__).resolve().parent.parent
 TABLE = ROOT / "data" / "processed" / "team_weeks.csv"
 RESULTS = ROOT / "results"
 SEASON = 2026
-SPEC = "revised"
-YARDSTICK = {"zero": 1.94, "floor": 0.44}
+P4 = ["SEC", "ACC", "Big Ten", "Big 12"]
+
+
+def yardstick(spec, treatment):
+    """Larger of training-replay stickiness and holdout mean (DEVIATIONS.md)."""
+    train = json.loads((RESULTS / "replay_training.json").read_text())
+    tr_val = train[f"{spec}_gbt_{treatment}"]["summary"]["stickiness_spots_mean"]
+    hold_file = "holdout.json" if spec != "rated" else "holdout_reuse_rated.json"
+    hold = json.loads((RESULTS / hold_file).read_text())[f"{spec}_{treatment}"]["replay"]
+    hold_val = np.mean([hold[s]["stickiness"]["spots_kept_above_real"] for s in hold])
+    return round(float(max(tr_val, hold_val)), 2)
+
+
+def plausibility(sim_rank, last_rows, conf_of):
+    """Pre-set check against real voters (DEVIATIONS.md): strong P4 records left
+    unranked, and teams with 3+ losses ranked, in the simulated poll."""
+    top = set(sim_rank.nsmallest(25).index)
+    r = last_rows.set_index("team")
+    strong = r[r.conf_group.isin(P4) & (((r.losses_to_date == 0) & (r.wins_to_date >= 5))
+                                        | ((r.losses_to_date == 1) & (r.wins_to_date >= 6)))]
+    weak = r[r.losses_to_date >= 3]
+    left_out = sorted(t for t in strong.index if t not in top)
+    ranked_weak = sorted(t for t in weak.index if t in top)
+    return {"strong_p4_records": int(len(strong)), "strong_left_unranked": left_out,
+            "three_plus_losses": int(len(weak)), "three_plus_losses_ranked": ranked_weak,
+            "plausible": not left_out and not ranked_weak}
 
 
 def preseason_elo(rows):
@@ -58,18 +85,21 @@ def conf_slots(teams_top25, conf_of):
     return {c: int(s.get(c, 0)) for c in ("SEC", "ACC", "Big Ten", "Big 12", "Other")}
 
 
-def run(treatment):
+def run(treatment, spec):
     tw = pd.read_csv(TABLE)
     rows = tw[tw.season == SEASON]
     conf_of = rows.drop_duplicates("team").set_index("team").conf_group
-    model = joblib.load(RESULTS / "models" / f"gbt_{SPEC}_{treatment}.joblib")
-    start = start_values(SEASON, SPEC)
+    model = joblib.load(RESULTS / "models" / f"gbt_{spec}_{treatment}.joblib")
+    start = start_values(SEASON, spec)
+    last_rows = rows[rows.week == rows.week.max()]
+    ystick = yardstick(spec, treatment)
     elo = preseason_elo(rows)
 
-    base = replay(rows, model, treatment, start, SPEC)
+    base = replay(rows, model, treatment, start, spec)
     weeks = sorted(base)
     real = {w: real_poll(SEASON, w) for w in weeks}
-    out = {"yardstick_spots": YARDSTICK[treatment],
+    out = {"spec": spec, "yardstick_spots": ystick,
+           "plausibility_no_swap": plausibility(base[weeks[-1]].sim_rank, last_rows, conf_of),
            "sanity": {str(w): compare(base[w].sim_rank, real[w]) for w in weeks},
            "conference_slots": {"real": {str(w): conf_slots(real[w], conf_of) for w in weeks},
                                 "no_swap": {str(w): conf_slots(base[w].sim_rank.nsmallest(25).index,
@@ -81,7 +111,7 @@ def run(treatment):
         for s, a in pairs:
             swapped[s], swapped[a] = start.get(a, 0.0), start.get(s, 0.0)
         swapped = {t: p for t, p in swapped.items() if p > 0}
-        sim = replay(rows, model, treatment, swapped, SPEC)
+        sim = replay(rows, model, treatment, swapped, spec)
         teams = []
         for s, a in pairs:
             for team, partner in ((s, a), (a, s)):
@@ -97,22 +127,25 @@ def run(treatment):
                     "preseason_points_real": start.get(team, 0.0),
                     "preseason_points_swapped": swapped.get(team, 0.0),
                     "final_gain": final["gain"],
-                    "beyond_yardstick": abs(final["gain"]) > YARDSTICK[treatment],
+                    "beyond_yardstick": abs(final["gain"]) > ystick,
                     "weekly": weekly})
         out[mode] = {
             "pairs": pairs,
             "teams": teams,
             "conference_slots": {str(w): conf_slots(sim[w].sim_rank.nsmallest(25).index, conf_of)
                                  for w in weeks},
+            "plausibility": plausibility(sim[weeks[-1]].sim_rank, last_rows, conf_of),
         }
     return out
 
 
 def main():
-    report = {tr: run(tr) for tr in ("zero", "floor")}
+    spec = sys.argv[1] if len(sys.argv) > 1 else "revised"
+    report = {tr: run(tr, spec) for tr in ("zero", "floor")}
     report["note"] = ("2026 regular season through the latest completed poll. Primary: 0 rule, "
                       "swap3. Ranks capped at 26 (= unranked).")
-    (RESULTS / "counterfactual_2026.json").write_text(json.dumps(report, indent=2) + "\n")
+    name = "counterfactual_2026.json" if spec == "revised" else f"counterfactual_2026_{spec}.json"
+    (RESULTS / name).write_text(json.dumps(report, indent=2) + "\n")
 
     for tr in ("zero", "floor"):
         r = report[tr]
@@ -123,8 +156,14 @@ def main():
               f"yardstick {r['yardstick_spots']} spots")
         print(f"  top-25 slots poll {last}: real {r['conference_slots']['real'][last]} | "
               f"no swap {r['conference_slots']['no_swap'][last]}")
+        p = r["plausibility_no_swap"]
+        print(f"  plausibility (no swap): strong left out {p['strong_left_unranked']}, "
+              f"3+ losses ranked {p['three_plus_losses_ranked']}")
         for mode in ("swap3", "swap9"):
-            print(f"  {mode}: slots {r[mode]['conference_slots'][last]}")
+            p = r[mode]["plausibility"]
+            print(f"  {mode}: slots {r[mode]['conference_slots'][last]} | plausible: {p['plausible']}"
+                  f" (strong left out {p['strong_left_unranked']}, "
+                  f"3+ losses ranked {p['three_plus_losses_ranked']})")
             for t in r[mode]["teams"]:
                 f = t["weekly"][-1]
                 print(f"    {t['team']:18} {t['conference']:4} (pair {t['partner']:16}) "

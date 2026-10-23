@@ -1,6 +1,20 @@
 {
   "zero": {
+    "spec": "revised",
     "yardstick_spots": 1.94,
+    "plausibility_no_swap": {
+      "strong_p4_records": 13,
+      "strong_left_unranked": [
+        "Houston",
+        "Wake Forest"
+      ],
+      "three_plus_losses": 76,
+      "three_plus_losses_ranked": [
+        "Texas A&M",
+        "Washington"
+      ],
+      "plausible": false
+    },
     "sanity": {
       "2": {
         "spearman": 0.9907692307692307,
@@ -576,6 +590,18 @@
           "Big 12": 4,
           "Other": 1
         }
+      },
+      "plausibility": {
+        "strong_p4_records": 13,
+        "strong_left_unranked": [
+          "Wake Forest"
+        ],
+        "three_plus_losses": 76,
+        "three_plus_losses_ranked": [
+          "Oklahoma",
+          "Washington"
+        ],
+        "plausible": false
       }
     },
     "swap9": {
@@ -1749,11 +1775,41 @@
           "Big 12": 5,
           "Other": 1
         }
+      },
+      "plausibility": {
+        "strong_p4_records": 13,
+        "strong_left_unranked": [
+          "Kentucky",
+          "Tennessee",
+          "Wake Forest"
+        ],
+        "three_plus_losses": 76,
+        "three_plus_losses_ranked": [
+          "Louisville",
+          "Virginia",
+          "Washington",
+          "West Virginia"
+        ],
+        "plausible": false
       }
     }
   },
   "floor": {
+    "spec": "revised",
     "yardstick_spots": 0.44,
+    "plausibility_no_swap": {
+      "strong_p4_records": 13,
+      "strong_left_unranked": [
+        "Houston",
+        "Wake Forest"
+      ],
+      "three_plus_losses": 76,
+      "three_plus_losses_ranked": [
+        "Texas A&M",
+        "Washington"
+      ],
+      "plausible": false
+    },
     "sanity": {
       "2": {
         "spearman": 0.9900000000000001,
@@ -2329,6 +2385,19 @@
           "Big 12": 4,
           "Other": 1
         }
+      },
+      "plausibility": {
+        "strong_p4_records": 13,
+        "strong_left_unranked": [
+          "Wake Forest"
+        ],
+        "three_plus_losses": 76,
+        "three_plus_losses_ranked": [
+          "Louisville",
+          "Oklahoma",
+          "Washington"
+        ],
+        "plausible": false
       }
     },
     "swap9": {
@@ -3502,6 +3571,21 @@
           "Big 12": 7,
           "Other": 4
         }
+      },
+      "plausibility": {
+        "strong_p4_records": 13,
+        "strong_left_unranked": [
+          "Kentucky",
+          "Tennessee"
+        ],
+        "three_plus_losses": 76,
+        "three_plus_losses_ranked": [
+          "Louisville",
+          "Penn State",
+          "Virginia",
+          "West Virginia"
+        ],
+        "plausible": false
       }
     }
   },
