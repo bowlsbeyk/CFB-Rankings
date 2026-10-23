@@ -742,13 +742,66 @@ def fig_2026_board():
          "Seven weeks of games: ratings are noisy and see only scores, not injuries or quarterback changes.")
 
 
+def fig_t1():
+    t = load("preseason_tests.json")["T1_preseason_vs_results"]
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11.5, 3.8), gridspec_kw={"width_ratios": [1.3, 1]})
+    fig.subplots_adjust(wspace=0.55)
+    rows = [(f"{CONF_LABEL.get(c, c)} (n={t[c]['preseason_ranked_team_seasons']})",
+             t[c]["adjusted_shortfall"], *t[c]["adjusted_ci"], CONF_COLOR[c]) for c in CONFS]
+    rows.append(("SEC minus ACC", t["sec_minus_acc"], *t["sec_minus_acc_ci"], INK))
+    forest(a1, rows, "Finished below their preseason rank, vs typical",
+           "Places below expectation for that preseason rank")
+    y = np.arange(len(CONFS))
+    vals = [t[c]["share_finished_outside_results_top25"] * 100 for c in CONFS]
+    a2.barh(y, vals, height=0.5, color=[CONF_COLOR[c] for c in CONFS])
+    for i, v in enumerate(vals):
+        a2.annotate(f"{v:.0f}%", (v, i), xytext=(4, 0), textcoords="offset points", va="center", fontsize=9)
+    a2.set_yticks(y)
+    a2.set_yticklabels([CONF_LABEL.get(c, c) for c in CONFS])
+    a2.invert_yaxis()
+    a2.set_xlim(0, 75)
+    a2.grid(axis="y", visible=False)
+    a2.set_xlabel("Preseason-ranked teams outside the results top 25 at season's end (%)")
+    a2.set_title("Preseason picks that did not hold up")
+    save(fig, "fig23_t1_preseason_vs_results.png",
+         "T1, 2014-2025. Adjusted for what is typical at each preseason rank (higher-ranked teams have further to fall). "
+         "SEC preseason rankings hold up as well as anyone's.")
+
+
+def fig_t2():
+    t = load("preseason_tests.json")["T2_schedule_boost_by_week"]
+    bands = ["early (weeks 1-4)", "middle (weeks 5-8)", "late (weeks 9+)"]
+    fig, ax = plt.subplots(figsize=(8.5, 4))
+    x = np.arange(len(bands))
+    for c, off in (("SEC", -0.12), ("ACC", 0.0), ("Big Ten", 0.12)):
+        color = CONF_COLOR[c] if c != "Big Ten" else GRAY_MID
+        m = [t[c][b]["mean_gap"] for b in bands]
+        lo = [t[c][b]["ci"][0] for b in bands]
+        hi = [t[c][b]["ci"][1] for b in bands]
+        for xi, mi, l, h in zip(x + off, m, lo, hi):
+            ax.plot([xi, xi], [l, h], color=color, lw=2)
+            dot(ax, xi, mi, color, size=8, zorder=3)
+        ax.plot(x + off, m, color=color, lw=1, alpha=0.5)
+        ax.plot([], [], "o", color=color, label=c)
+    ax.axhline(0, color=AXIS, lw=1)
+    ax.set_xticks(x)
+    ax.set_xticklabels(["Weeks 1-4", "Weeks 5-8", "Weeks 9+"])
+    ax.set_ylabel("Opponent's game-day rank points\nminus final rank points, per game")
+    ax.legend(loc="upper right", ncol=3)
+    ax.grid(axis="x", visible=False)
+    ax.set_title("SEC opponents look better than they finish, all season long")
+    save(fig, "fig24_t2_schedule_boost_by_week.png",
+         "T2, 2014-2025, 95% intervals. One rank point = one place inside the top 25. "
+         "The SEC gap is not concentrated early, so no preseason link is shown; it exceeds the ACC's in every band.")
+
+
 def main():
     for f in (fig_timeline, fig_data_overview, fig_training_mae, fig_replay_training, fig_climbers,
               fig_holdout, fig_holdout_scatter, fig_rating_validation, fig_elo_carryover,
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
               fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity,
-              fig_2026_board):
+              fig_2026_board, fig_t1, fig_t2):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 

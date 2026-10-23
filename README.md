@@ -32,14 +32,16 @@ A study of week-to-week AP poll movement, testing whether SEC teams look tougher
 
 ## Findings
 
-The full write-up, with 22 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
+The full write-up, with 24 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
 
 1. **Preseason standing persists for everyone** (registered, as defined in deviation 9). About half of a team's preseason standing still shows up after week five at the same record, margin and strength. It persists no more for the SEC than for the ACC.
 2. **Voters do not score SEC games more generously** (added). For the same result against the same quality of opponent, SEC and ACC teams move alike after wins and after losses.
 3. **SEC opponents are ranked higher on game day than their season results justify** (added). On a matched top-25 scale, SEC schedules look about 6 places tougher (of ~130) by opponents' game-day rank than by their final results (95% CI +2.9 to +8.9). The ACC shows no such effect, and the SEC-minus-ACC gap (+3.5, 95% CI −0.8 to +8.0) is not statistically clear. The first version reported a 13.7-place gap and said ACC schedules were undersold; most of that was a measurement artifact.
 4. **Net effect:** SEC teams rank about one place above their current-season results (95% CI +0.3 to +1.9; added), similar to the Big 12. The ACC is not distinguishable from zero, and neither is the SEC-minus-ACC difference (+0.76, 95% CI −0.43 to +1.93).
 5. **The registered tests on their own point slightly the other way.** The linear conference test (H1) favors the SEC only in a model that fits worse than predicting no change, and against Elo (H2) the poll rates ACC teams above Elo and SEC teams in line with it. The season-only yardstick replaced Elo after those results were seen, because preseason Elo carries two-thirds of last season.
-6. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
+6. **SEC preseason rankings are not unjustified** (added last, T1). SEC preseason-ranked teams finish almost exactly where their preseason rank predicts (+0.09 places, 95% CI −1.63 to +1.89); ACC preseason picks hold up no better.
+7. **The SEC's schedule boost is season-long, not a preseason effect, and bigger than the ACC's** (added last, T2). Per game, SEC opponents look 0.6 to 1.2 places better on game day than their seasons end up, in every part of the season; the ACC's are about even. Measured per game, the SEC-minus-ACC difference is clear in every part of the season (the coarser schedule-rank version in point 3 is not).
+8. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
 
 ## 2026 so far: who is over- and underrated (exploratory)
 
