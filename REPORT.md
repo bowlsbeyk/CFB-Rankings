@@ -1,7 +1,9 @@
 # Preseason Rank, Schedule Strength and the AP Poll: Does the SEC Benefit from Voter Bias?
 
 **Kyle Bowlsbey** · October 23, 2026
-Pre-registered study. Code, frozen data and every result: this repository. Analysis code written with Claude Code.
+Pre-registered plan with logged deviations. The main findings come from follow-up tests added during the analysis (§6). Code, data checksums and every result: this repository.
+
+**About this study.** Kyle is a Miami (ACC) fan, and the claim tested here is one he believed going in. The code and this report were written with Claude Code under his direction. Several analysis choices changed during the work after earlier results had been seen; each is dated in `DEVIATIONS.md` and listed in §6 with what had been seen at the time. An outside review of the first version found that the schedule result (H5) mixed a real effect with a measurement artifact; §5.4 reports the corrected analysis next to the original. Data provided by [CollegeFootballData.com](https://collegefootballdata.com) and [sportsdataverse/cfbfastR-data](https://github.com/sportsdataverse/cfbfastR-data).
 
 ---
 
@@ -9,16 +11,18 @@ Pre-registered study. Code, frozen data and every result: this repository. Analy
 
 We test the claim that the Southeastern Conference (SEC) appears stronger than it is because its teams start the season ranked, and that wins over ranked opponents then inflate the conference's standing. Using every regular-season AP Top 25 poll from 2014 to 2026 (2020 excluded) and every FBS game result, we (i) trained models that predict week-to-week AP poll movement from results alone, without team names or conferences; (ii) built a strength rating that uses only the current season's games; and (iii) tested conference-level differences against that rating, with 95% bootstrap intervals over team-seasons.
 
-The model passed its pre-registered out-of-sample test. For the 2024 and 2025 seasons, a full replay from the preseason poll reached a rank correlation of 0.80 and 0.92 with the real final regular-season poll; the bar was 0.70. Four findings follow.
+The model passed its pre-registered out-of-sample test. For the 2024 and 2025 seasons, a full replay from the preseason poll reached a rank correlation of 0.80 and 0.92 with the real final regular-season poll; the bar was 0.70.
 
-1. **Preseason standing persists for every conference.** About half of it (coefficient 0.48, 95% CI 0.42–0.54) is still visible after week five, holding record, scoring margin and strength fixed. The SEC does not carry over more than the ACC: difference +0.04, 95% CI −0.16 to +0.24.
-2. **For the same result against the same quality of opponent, voters do not reward SEC wins more or punish SEC losses less than ACC ones.**
-3. **The poll distorts schedule strength, and that is the clearest effect we found.** Ranked by opponents' poll standing, SEC schedules look 6.7 places tougher among about 130 FBS teams than they look ranked by opponents' actual results, and ACC schedules look 7.0 places easier. The SEC-minus-ACC gap is 13.7 places (95% CI 9.1–17.9).
-4. **SEC teams sit about one poll position above what their current-season results support** (+1.1, 95% CI +0.3 to +1.9). The ACC's +0.4 is not distinguishable from zero, and the Big 12 is similar to the SEC at +1.2.
+**The registered tests gave mixed signals.** H1 (linear model) found SEC teams gain slightly more than ACC teams for the same result, but that model fits worse than predicting no change. H2 against Elo found the poll rates ACC teams above Elo and SEC teams in line with it. After seeing those Elo results we replaced Elo with a season-only rating (deviation 10), because preseason Elo is 0.67 × last season's final Elo and so carries the very head start being tested. The findings below come mostly from follow-up tests added during the analysis.
+
+1. **Preseason standing persists for every conference** (H3, registered as defined in deviation 9). About half of it (coefficient 0.48, 95% CI 0.42–0.54) is still visible after week five, holding record, scoring margin and strength fixed. The SEC does not carry over more than the ACC: difference +0.04, 95% CI −0.16 to +0.24.
+2. **For the same result against the same quality of opponent, voters do not reward SEC wins more or punish SEC losses less than ACC ones** (H4, added).
+3. **SEC opponents are ranked higher on game day than their season results end up justifying** (H5 sensitivity, added). On a matched top-25 scale, SEC schedules look 5.7 places tougher among about 130 FBS teams by opponents' game-day poll rank than by opponents' final results (95% CI +2.9 to +8.9). The ACC shows no such effect (+2.1, CI −1.1 to +5.5), and the SEC-minus-ACC gap (+3.5, CI −0.8 to +8.0) is not statistically clear. As originally computed, H5 reported an ACC effect of −7.0 and a gap of 13.7 places; most of that came from scoring good-but-unranked opponents as zero on one side only.
+4. **SEC teams sit about one poll position above what their current-season results support** (+1.1, 95% CI +0.3 to +1.9; H2 against the season-only rating, added). The SEC-minus-ACC difference (+0.76, CI −0.43 to +1.93) is not distinguishable from zero, and the Big 12 is similar to the SEC at +1.2.
 
 A direct counterfactual, swapping SEC and ACC preseason positions in 2026, could not be answered reliably. Even our best model holds on to preseason rank more firmly than real voters do: it failed a plausibility check fixed in advance, which the real 2026 poll passes.
 
-In short, the SEC's poll advantage runs mainly through the reputation of its schedule, not through voters scoring its games differently. The ACC's own rankings are not depressed, but its schedules are systematically undersold.
+In short, the evidence supports one part of the claim: SEC opponents carry game-day rankings their results do not fully justify, and preseason standing persists for everyone. It does not support the stronger versions. Voters do not grade SEC games more generously, ACC schedules are not shown to be undersold, and the SEC-versus-ACC differences in schedule credit and in poll standing relative to results are not statistically clear.
 
 ---
 
@@ -77,7 +81,7 @@ Section 6 lists every deviation and, importantly, which results had been seen wh
 | Game results, venue, conference, Elo | [sportsdataverse/cfbfastR-data](https://github.com/sportsdataverse/cfbfastR-data), `schedules/parquet`, commit `09f2595e` | 2014–2026 | Elo used only as a comparison, never as a model input |
 | AP Top 25, weekly, with points and first-place votes | [CollegeFootballData.com](https://collegefootballdata.com) API, `/rankings` | 2014–2026 | Regular season and postseason |
 
-All 39 raw files were pulled once (2026-10-23 17:18 UTC), saved unmodified, and checksummed in `data/MANIFEST.json`. No file was re-pulled.
+All 39 raw files were pulled once (2026-10-23 17:18 UTC), saved unmodified, and checksummed in `data/MANIFEST.json`. They are not committed: CollegeFootballData.com's terms do not allow publishing stored raw API responses. `src/fetch_data.py` rebuilds them byte for byte from the sources and checks every checksum.
 
 ### 3.2 Scope and construction
 
@@ -143,14 +147,16 @@ The weights, the cap and the shrinkage were fixed before any rating was computed
 
 All on real 2014–2025 data. The 95% intervals come from 1,000 bootstrap resamples of whole team-seasons (seed 0).
 
-| Test | Question | Measure |
-| --- | --- | --- |
-| H1 Conference effect (registered) | Same result, more points for the SEC? | SEC − ACC coefficient in the linear model with conference flags |
-| H2 Poll vs strength (registered) | Is the SEC ranked above its strength? | Strength rank − AP rank, by conference (Elo, then the season-only rating, polls 6+) |
-| H3 Preseason carry-over | Does preseason standing persist at equal performance? | Coefficient on preseason points, controlling record, margin, strength and week; SEC/ACC interactions |
-| H4 Rewards and punishments | Are SEC wins rewarded more, losses punished less? | Out-of-season residuals of the name-blind rated model, ranked teams, after wins and after losses |
-| H5 Schedule inflation | Does the poll overstate SEC schedules? | Schedule rank by opponents' poll points vs by opponents' season-only rating |
-| H6 Elo head start | Does Elo carry an SEC advantage? | Season-only rank − Elo rank, by conference |
+| Test | Status | Question | Measure |
+| --- | --- | --- | --- |
+| H1 Conference effect | Registered | Same result, more points for the SEC? | SEC − ACC coefficient in the linear model with conference flags |
+| H2 Poll vs Elo | Registered | Is the SEC ranked above its strength? | Elo rank − AP rank, by conference |
+| H2 Poll vs season-only rating | Added (deviation 10) | Same question, current-season yardstick | Rating rank − AP rank, by conference, polls 6+ |
+| H3 Preseason carry-over | Registered (as defined in deviation 9) | Does preseason standing persist at equal performance? | Coefficient on preseason points, controlling record, margin, strength and week; SEC/ACC interactions |
+| H4 Rewards and punishments | Added (deviation 11) | Are SEC wins rewarded more, losses punished less? | Out-of-season residuals of the name-blind rated model, ranked teams, after wins and after losses |
+| H5 Schedule inflation | Added (deviation 11) | Does the poll overstate SEC schedules? | Schedule rank by opponents' poll points vs by opponents' season-only rating |
+| H5 sensitivity | Added (deviation 12, after outside review) | Is H5 a real effect or a measurement artifact? | H5 with shape and timing of the two measures matched (§5.4) |
+| H6 Elo head start | Added (deviation 11) | Does Elo carry an SEC advantage? | Season-only rank − Elo rank, by conference |
 
 ### 4.6 Counterfactual
 
@@ -241,15 +247,15 @@ The rating matches Elo and the AP poll while using no prior-season information. 
 
 ### 5.4 Hypothesis tests
 
-**H1 — Conference effect, same result.** In the linear model, SEC teams gain 0.12 points per voter more than ACC teams for an identical result (95% CI 0.0001 to 0.24). The registered specification gives +7.3 AP points (CI 0.6–14.8). The SEC, Big Ten and Big 12 coefficients are nearly equal; the ACC's is lower. This rests on the linear model, which fits poorly (§5.1), and H4, using the far better model, does not reproduce it.
+**H1 — Conference effect, same result (registered).** In the linear model, SEC teams gain 0.12 points per voter more than ACC teams for an identical result (95% CI 0.0001 to 0.24). The registered specification gives +7.3 AP points (CI 0.6–14.8). The SEC, Big Ten and Big 12 coefficients are nearly equal; the ACC's is lower. This rests on the linear model, which fits poorly (§5.1), and H4, using the far better model, does not reproduce it.
 
 ![Figure 10. H1: conference coefficients in the linear model, relative to other conferences.](results/figures/fig13_conference_effect.png)
 
 *Figure 10. H1: conference coefficients in the linear model, relative to other conferences.*
 
-**H2 — Poll rank versus strength rank** (positive = the poll ranks a team above its strength):
+**H2 — Poll rank versus strength rank** (positive = the poll ranks a team above its strength). The Elo column is registered; the season-only column was added after the Elo results were seen (deviation 10):
 
-| Conference | vs Elo, all polls | vs season-only rating, polls 6+ | AP-ranked but outside rating top 25 | In rating top 25 but AP-unranked |
+| Conference | vs Elo, all polls (registered) | vs season-only rating, polls 6+ (added) | AP-ranked but outside rating top 25 | In rating top 25 but AP-unranked |
 | --- | --- | --- | --- | --- |
 | **SEC** | +0.20 (−0.79, +1.27) | **+1.11 (+0.34, +1.88)** | 77 | 38 |
 | **ACC** | **+1.38 (+0.06, +2.56)** | +0.35 (−0.53, +1.16) | 60 | 50 |
@@ -258,7 +264,7 @@ The rating matches Elo and the AP poll while using no prior-season information. 
 | Other | +0.02 (−1.00, +1.11) | **−0.92 (−1.78, −0.12)** | 138 | 194 |
 | **SEC − ACC** | −1.18 (−2.72, +0.57) | +0.76 (−0.43, +1.93) | | |
 
-Counts are team-weeks. The two yardsticks disagree, and the disagreement is informative (see H6). Against current-season results, the SEC is ranked about one position too high, clearly different from zero. The ACC is not distinguishable from zero. The SEC-minus-ACC difference is positive but its interval includes zero.
+Counts are team-weeks. The two yardsticks disagree, and the disagreement is informative (see H6). Against current-season results, the SEC is ranked about one position too high, clearly different from zero. The ACC is not distinguishable from zero. The SEC-minus-ACC difference is +0.76 (CI −0.43 to +1.93), not distinguishable from zero, and the Big 12 (+1.15) is similar to the SEC.
 
 ![Figure 11. H2: poll rank minus strength rank by conference, against Elo (left) and against the season-only rating (right), with 95% intervals.](results/figures/fig10_poll_vs_strength.png)
 
@@ -268,13 +274,13 @@ Counts are team-weeks. The two yardsticks disagree, and the disagreement is info
 
 *Figure 12. H2: team-weeks ranked by the AP but outside the season-only top 25 (right), and the reverse (left).*
 
-**H3 — Preseason carry-over.** Holding record, margin, strength and week fixed, a team's points per voter in polls 6 and later rise by 0.48 for each point per voter it held in the preseason poll (CI 0.42–0.54; with Elo as the control, 0.52, CI 0.45–0.58). Extra carry-over for the SEC relative to the ACC is +0.04 (CI −0.16 to +0.24). Preseason standing is sticky, equally so for both conferences.
+**H3 — Preseason carry-over (registered, as defined in deviation 9).** Holding record, margin, strength and week fixed, a team's points per voter in polls 6 and later rise by 0.48 for each point per voter it held in the preseason poll (CI 0.42–0.54; with Elo as the control, 0.52, CI 0.45–0.58). Extra carry-over for the SEC relative to the ACC is +0.04 (CI −0.16 to +0.24). Preseason standing is sticky, equally so for both conferences.
 
 ![Figure 13. H3: preseason carry-over at equal record, margin, strength and week (left), and the SEC-minus-ACC difference (right).](results/figures/fig12_preseason_carryover.png)
 
 *Figure 13. H3: preseason carry-over at equal record, margin, strength and week (left), and the SEC-minus-ACC difference (right).*
 
-**H4 — Rewards and punishments.** Residuals of the name-blind rated model for ranked teams, in points per voter (positive = rose more, or fell less, than results explain):
+**H4 — Rewards and punishments (added).** Residuals of the name-blind rated model for ranked teams, in points per voter (positive = rose more, or fell less, than results explain):
 
 | Conference | After a win | After a loss | All weeks |
 | --- | --- | --- | --- |
@@ -291,7 +297,7 @@ Once opponent quality is measured by results rather than by poll standing, voter
 
 *Figure 14. H4: how far ranked teams beat the name-blind model after wins (left) and losses (right), by conference.*
 
-**H5 — Schedule inflation.** Each team-season's schedule is ranked among FBS teams (1 = toughest) by opponents' poll points and by opponents' season-only rating:
+**H5 — Schedule inflation (added), as originally computed.** Each team-season's schedule is ranked among FBS teams (1 = toughest) by opponents' poll points before each game and by opponents' final season-only rating:
 
 | Conference | Mean rank by poll | Mean rank by results | Inflation (rating rank − poll rank) |
 | --- | --- | --- | --- |
@@ -304,13 +310,33 @@ Once opponent quality is measured by results rather than by poll standing, voter
 
 \*The Other figure is sensitive to ties at zero (teams that faced no ranked opponent); with average ranks it is +1.3. The SEC (+6.7) and ACC (−7.2) figures are not sensitive to this.
 
-This is the largest and most precisely estimated effect in the study. The poll makes SEC schedules look about seven places tougher, and ACC schedules about seven places easier, than opponents' actual results justify. In 2026 to date the direction is the same but the estimate is imprecise: SEC +2.7 (−3.2, +9.3), ACC −4.9 (−14.9, +4.0), SEC − ACC +7.6 (−3.6, +19.7).
+The first version of this report called this the clearest effect in the study. An outside review showed that it compares two measures that differ in two ways at once. **Shape:** the poll side scores every unranked opponent as zero, while the rating side gives every opponent credit. **Timing:** the poll side uses each opponent's standing on game day, the rating side its final rating. The timing gap is the effect under test; the shape gap is a measurement artifact. In 2026 to date the original measure gives SEC +2.7 (−3.2, +9.3), ACC −4.9 (−14.9, +4.0), SEC − ACC +7.6 (−3.6, +19.7).
 
 ![Figure 15. H5: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right.](results/figures/fig15_schedule_inflation.png)
 
-*Figure 15. H5: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right.*
+*Figure 15. H5 as originally computed: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right. The ACC figure is mostly a measurement artifact (Figure 21).*
 
-**H6 — Elo's head start.** Relative to the season-only rating (polls 6+), Elo ranks SEC teams 0.91 places higher (−0.48, +2.18) and ACC teams 1.07 places lower (−2.55, +0.48). The SEC − ACC difference is **+1.98 (+0.03, +3.86)**. Elo carries roughly two positions more prior-season advantage for the SEC than for the ACC. That explains why the Elo-based version of H2 showed no SEC overrating: Elo shares part of the head start the test was looking for.
+**H5 sensitivity (added after an outside review; deviation 12).** The same comparison four ways (average ranks for ties; rank places; 95% intervals):
+
+| Variant | Poll side | Rating side | SEC | ACC | SEC − ACC |
+| --- | --- | --- | --- | --- | --- |
+| A. As originally computed | Points per voter, game day | Final rating | +6.7 (+3.9, +9.4) | −7.2 (−10.6, −3.9) | +14.0 (+9.3, +18.2) |
+| **B. Shape matched** | **Top-25 rank points, game day** | **Final top-25 rank points** | **+5.7 (+2.9, +8.9)** | **+2.1 (−1.1, +5.5)** | **+3.5 (−0.8, +8.0)** |
+| C. Timing matched | Points per voter, final poll | Final rating | +1.9 (−1.5, +5.1) | −9.4 (−13.0, −6.0) | +11.4 (+6.6, +16.3) |
+| D. Shape and timing matched | Top-25 rank points, final poll | Final top-25 rank points | +1.1 (−0.4, +2.4) | +0.5 (−1.1, +2.3) | +0.6 (−1.7, +2.7) |
+
+Variant B is the fairest test of the claim: the same scale on both sides, game-day poll against final results. Under B:
+- **The SEC effect survives.** SEC opponents are ranked about 5.7 places higher on game day than their final results justify, with an interval clear of zero. That is the preseason-rank mechanism the study set out to test.
+- **The ACC effect disappears** (+2.1, interval includes zero). The original −7 came from ACC opponents that are often decent teams just outside the top 25: zero on the poll side, credit on the rating side.
+- **The SEC-minus-ACC gap is not statistically clear** (+3.5, interval −0.8 to +8.0).
+
+Variant D removes the game-day effect by design, so it is expected to show nothing; it is reported for completeness. The final regular-season poll is the poll after each season's last schedule week. The outside review used the poll one week earlier; with that choice C and D come out at SEC +1.2 and +0.2, ACC −9.7 and +0.1, and A and B are unchanged (`results/h5_sensitivity.json` holds both).
+
+![Figure 21. H5 sensitivity: schedule inflation for the SEC, the ACC and SEC minus ACC under four ways of matching the two measures.](results/figures/fig21_h5_sensitivity.png)
+
+*Figure 21. H5 sensitivity: schedule inflation for the SEC, the ACC and SEC minus ACC under four ways of matching the two measures. B is the fairest test.*
+
+**H6 — Elo's head start (added).** Relative to the season-only rating (polls 6+), Elo ranks SEC teams 0.91 places higher (−0.48, +2.18) and ACC teams 1.07 places lower (−2.55, +0.48). The SEC − ACC difference is **+1.98 (+0.03, +3.86)**. Elo carries roughly two positions more prior-season advantage for the SEC than for the ACC. That explains why the Elo-based version of H2 showed no SEC overrating: Elo shares part of the head start the test was looking for.
 
 ![Figure 16. H6: places Elo ranks teams above the season-only rating, by conference.](results/figures/fig16_elo_head_start.png)
 
@@ -357,11 +383,11 @@ These swap results reflect the model's attachment to starting position more than
 
 ![Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs.](results/figures/fig18_counterfactual_slots.png)
 
-*Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs.*
+*Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs. Not evidence: every run, including the no-swap run, fails the plausibility check.*
 
 ![Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap.](results/figures/fig19_counterfactual_teams.png)
 
-*Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap.*
+*Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap. Not evidence: every run, including the no-swap run, fails the plausibility check.*
 
 ![Figure 20. 2026 to date: AP rank in poll 8 against the season-only rating after week 7.](results/figures/fig20_2026_poll_vs_rating.png)
 
@@ -390,8 +416,10 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 9 | Hypothesis test definitions, including H3 | Methodology left details open | Base rates |
 | 10 | Season-only rating replaces Elo as the primary yardstick; Elo kept for comparison | Elo carries 67% of the prior season | Elo-based hypothesis results |
 | 11 | Rated model; H4–H6; swap re-run with a pre-set plausibility check | Opponent strength measured by poll standing alone carries the effect under test | Season-rating results |
+| 12 | H5 sensitivity: shape and timing matched | Outside review found H5 mixed a real effect with a measurement artifact | All results, including the published report |
+| 13 | Raw data no longer committed; fetched and checksum-verified | CollegeFootballData.com terms do not allow publishing stored raw API responses | All results (no number changes) |
 
-Deviations 5, 6, 8, 10 and 11 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
+Deviations 5, 6, 8, 10, 11 and 12 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
 ---
 
@@ -405,7 +433,7 @@ Deviations 5, 6, 8, 10 and 11 were made after some results were known. None chan
 | SEC poll standing above independent strength | Above the season-only rating (+1.1, CI excludes zero); not above Elo, which shares the head start (H6) | Supported, with caveats |
 | SEC poll standing matches strength (refutation) | Matches Elo; does not match current-season results | Not met |
 
-By the letter of the pre-registration, the claim is neither confirmed (the swap evidence is unusable) nor refuted (the SEC is ranked above its current-season strength).
+By the letter of the pre-registration, the claim is neither confirmed (the swap evidence is unusable) nor refuted (the SEC is ranked above its current-season strength). The registered tests on their own point slightly against it. H1 favors the SEC only in a model that fits worse than predicting no change, and H2 against Elo shows the poll rating ACC teams above Elo and SEC teams in line with it. The season-only yardstick that shows SEC overrating replaced Elo after those results were seen (deviation 10), because preseason Elo is 0.67 × last season's final Elo and so carries the head start being tested.
 
 ### 7.2 What the evidence shows
 
@@ -413,13 +441,13 @@ The study distinguishes three mechanisms by which the SEC could benefit:
 
 1. **Voters score SEC games more generously.** Not supported. For the same result against the same quality of opponent, SEC and ACC teams move alike (H4). The H1 result pointing the other way comes from a model that fits worse than predicting no change.
 2. **Preseason standing persists, and the SEC starts with more of it.** Supported, but the effect is general. About half of preseason standing persists into mid-season at equal performance, for every conference alike (H3). The SEC benefits because it begins with more ranked teams, not because its rankings are stickier.
-3. **The poll inflates the perceived strength of SEC schedules.** Strongly supported. SEC opponents are ranked well above what their results justify, so SEC schedules look about seven places tougher than they are, while ACC schedules look about seven places easier (H5). This is the mechanism in the original claim, and it is the clearest and most precisely measured effect in the study.
+3. **The poll inflates the perceived strength of SEC schedules.** Supported for the SEC, not as an SEC-versus-ACC difference. On a matched scale, SEC opponents are ranked about 5.7 places higher on game day than their final results justify (H5 sensitivity, variant B). That is the mechanism in the original claim. The ACC shows no comparable effect, but the SEC-minus-ACC gap (+3.5 places) is not statistically clear. The original H5 figures (+6.7 SEC, −7.0 ACC, gap 13.7) overstated the contrast through a measurement artifact.
 
-The net result is that SEC teams sit about one position above what their current-season results support (H2). The Big 12 shows a similar overrating, and Group of 5 teams are underrated by about the same amount, so this is not unique to the SEC.
+The net result is that SEC teams sit about one position above what their current-season results support (H2). The SEC-minus-ACC difference (+0.76) is not distinguishable from zero. The Big 12 shows a similar overrating, and Group of 5 teams are underrated by about the same amount, so this is not unique to the SEC.
 
 ### 7.3 On the ACC
 
-The ACC's own teams are not ranked below their current-season strength (H2: +0.35, not distinguishable from zero), and voters do not punish ACC results more (H4). The ACC's disadvantage is indirect: its opponents are ranked below their results, so ACC teams receive less credit for whom they played. Whether ACC teams with SEC-like preseason positions would be ranked as highly could not be answered reliably (§5.6).
+The ACC's own teams are not ranked below their current-season strength (H2: +0.35, not distinguishable from zero), and voters do not punish ACC results more (H4). The first version of this report also said ACC schedules are undersold. That does not survive the shape-matched check: ACC schedule inflation is +2.1 (CI −1.1 to +5.5). The apparent undercount came from ACC opponents just outside the top 25, which the poll side scored as zero. Whether ACC teams with SEC-like preseason positions would be ranked as highly could not be answered reliably (§5.6).
 
 ### 7.4 On Elo
 
@@ -435,15 +463,16 @@ Elo is independent of voters but not of the previous season. Its season-to-seaso
 4. **The counterfactual is not credible.** Even the best model is stickier than real voters, and every swap run fails a plausibility check that the real poll passes. The counterfactual also assumes games would end with the same scores regardless of rankings.
 5. **The holdout was used once for the registered and revised models.** The rated model was defined afterwards, and its 2024–2025 numbers are labelled as a re-used holdout.
 6. **Several analyses were added after earlier results were seen** (§6). Each was logged before it was run, and its timing is disclosed. Readers should weigh these as less confirmatory than the pre-registered tests.
-7. **Multiple comparisons.** Five conference groups, several situations and two unranked rules produce many intervals; a few are expected to exclude zero by chance. The headline results (H3 and H5) have intervals well clear of zero.
+7. **Multiple comparisons.** Five conference groups, several situations and two unranked rules produce many intervals; a few are expected to exclude zero by chance. H3 and the SEC schedule effect under the matched H5 check have intervals clear of zero. Of the SEC-versus-ACC contrasts, only H1 (in a model that fits poorly) and H6 (Elo's head start) exclude zero, both barely; none of those that measure how voters treat the two conferences does.
 8. **Observational design.** Preseason rank is not randomly assigned. Controls for record, margin and strength reduce but cannot remove confounding.
 9. **Single source per data type.** Results depend on the accuracy of the CFBD poll data and the cfbfastR-data schedules.
+10. **Measurement choices matter.** The original H5 result changed substantially once the two schedule measures were put on the same scale. Other comparisons between a top-25 poll and a continuous rating (H2, H6) use ranks capped at 26 on both sides, which limits but may not remove the same problem.
 
 ---
 
 ## 9. Conclusion
 
-The SEC does benefit in the AP poll, but not in the way the claim most often implies. Voters do not grade SEC games more generously. Instead, preseason standing persists for every team, the SEC starts with the most of it, and the resulting rankings make SEC schedules look markedly tougher than opponents' results support. That inflated schedule strength is the clearest effect we found: about seven places for the SEC and about seven places in the opposite direction for the ACC. Its net effect is that SEC teams are ranked about one position above their current-season results, a margin shared with the Big 12. Whether ACC teams would rise to SEC-like rankings given SEC-like starting positions cannot be determined with these models, and we do not claim it.
+The SEC benefits in the AP poll in a narrower way than the claim implies. Voters do not grade SEC games more generously. Preseason standing persists for every team, the SEC starts with the most of it, and SEC opponents carry game-day rankings about six places higher than their final results justify. SEC teams end up about one position above their current-season results, a margin shared with the Big 12. What the data do not show is a clear SEC-versus-ACC difference: neither in schedule credit once the two measures are matched, nor in poll standing relative to results. The first version of this report claimed ACC schedules are undersold; that was a measurement artifact and is withdrawn. Whether ACC teams would rise to SEC-like rankings given SEC-like starting positions cannot be determined with these models, and we do not claim it.
 
 ---
 
@@ -460,7 +489,7 @@ python run_all.py
 
 | Result | File | Script |
 | --- | --- | --- |
-| Data checksums | `data/MANIFEST.json` | `src/pull_data.py`, `src/verify_data.py` |
+| Data checksums; raw data download | `data/MANIFEST.json` | `src/pull_data.py` (original pull), `src/fetch_data.py` (rebuild), `src/verify_data.py` |
 | Training metrics, model specs | `results/train_metrics.json`, `results/model_spec.json` | `src/train.py` |
 | Training-season replay | `results/replay_training.json` | `src/replay.py` |
 | Holdout (once) | `results/holdout.json` | `src/score_holdout.py` |
@@ -468,7 +497,8 @@ python run_all.py
 | Season-only rating validation | `results/season_rating_validation.json` | `src/season_rating.py` |
 | H1–H3 | `results/hypothesis.json` | `src/hypothesis.py` |
 | H4–H6 | `results/bias_tests.json`, `results/schedule_strength_2026.csv` | `src/bias_tests.py` |
+| H5 sensitivity | `results/h5_sensitivity.json` | `src/h5_sensitivity.py` |
 | Real-voter base rates | `results/base_rates_poll8.json` | `src/base_rates.py` |
 | Counterfactual | `results/counterfactual_2026.json`, `results/counterfactual_2026_rated.json` | `src/counterfactual.py` |
 | Exploratory team residuals | `results/team_bias_*.csv`, `results/conference_bias_*.csv` | `src/team_bias.py` |
-| Figures 1–20 | `results/figures/*.png` | `src/figures.py` |
+| Figures 1–21 | `results/figures/*.png` | `src/figures.py` |

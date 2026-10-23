@@ -533,10 +533,11 @@ def fig_schedule_inflation():
     a1.invert_xaxis()
     a1.grid(axis="y", visible=False)
     a1.set_xlabel("Average schedule-strength rank among FBS teams (1 = toughest)")
-    a1.set_title("The poll makes SEC schedules look tougher")
+    a1.set_title("H5 as originally computed")
     rows = conf_rows(b) + [("SEC minus ACC", b["sec_minus_acc"], *b["sec_minus_acc_ci"], INK)]
     forest(a2, rows, "Inflation, with 95% interval", "Rating rank minus poll rank (places)")
     save(fig, "fig15_schedule_inflation.png",
+         "As originally computed. The ACC figure is mostly a measurement artifact: see the shape-matched check (Fig. 21).\n"
          "2014-2025 team-seasons. Positive inflation = schedule looks tougher by poll than by results. "
          "Other is sensitive to ties (+1.3 with average ranks).")
 
