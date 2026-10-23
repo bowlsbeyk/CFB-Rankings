@@ -111,27 +111,33 @@ def fig_timeline():
         ("18:48", "Hypothesis tests run (Elo yardstick)"),
         ("18:56", "Season-only rating logged to replace Elo"),
         ("19:06", "Rated model and bias tests logged"),
-        ("19:18", "Final results committed"),
+        ("19:18", "First full set of results committed"),
+        ("20:27", "Outside review: H5 sensitivity logged"),
+        ("20:30", "Raw-data removal logged (CFBD terms)"),
+        ("20:34", "Findings rewritten after review"),
+        ("20:37", "Single-threaded training logged"),
     ]
     t = [int(h) * 60 + int(m) for h, m in (e[0].split(":") for e in events)]
-    fig, ax = plt.subplots(figsize=(9, 4.6))
+    fig, ax = plt.subplots(figsize=(9, 5.8))
     ax.plot(t, range(len(t))[::-1], color=GRID, lw=2, zorder=1)
     for i, (ti, (clock, label)) in enumerate(zip(t, events)):
         y = len(t) - 1 - i
-        color = FINAL if "holdout" in label else (SEC if "Methodology" in label else GRAY_DARK)
+        color = (FINAL if "holdout" in label else SEC if "Methodology" in label
+                 else ACC if t[i] >= 20 * 60 + 27 else GRAY_DARK)
         dot(ax, ti, y, color, size=9, zorder=3)
         ax.annotate(f"{clock}  {label}", (ti, y), xytext=(10, 0), textcoords="offset points",
                     va="center", fontsize=9, color=INK)
     ax.set_yticks([])
     ax.grid(axis="y", visible=False)
     ax.set_xlim(t[0] - 10, t[-1] + 150)
-    ticks = list(range(17 * 60, 20 * 60 + 1, 30))
+    ticks = list(range(17 * 60, 21 * 60 + 1, 30))
     ax.set_xticks(ticks)
     ax.set_xticklabels([f"{x // 60}:{x % 60:02d}" for x in ticks])
     ax.set_xlabel("Commit time, 2026-10-23 (UTC)")
     ax.set_title("Audit trail: the plan was committed before any data or result")
     ax.spines["left"].set_visible(False)
-    save(fig, "fig01_timeline.png", "Every change to the plan is dated in DEVIATIONS.md and was committed before use.")
+    save(fig, "fig01_timeline.png", "Every change to the plan is dated in DEVIATIONS.md and was committed before use. "
+         "Orange: fixes after an outside review.")
 
 
 def fig_data_overview():

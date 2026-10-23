@@ -8,8 +8,12 @@ To re-pull and re-freeze raw data, run src/pull_data.py separately. That changes
 frozen files and must be logged in DEVIATIONS.md.
 """
 
+import os
 import subprocess
 import sys
+
+# One thread everywhere, so results do not depend on the machine (DEVIATIONS.md).
+ENV = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1", MKL_NUM_THREADS="1")
 
 STEPS = [
     ["src/fetch_data.py"],
@@ -34,4 +38,4 @@ STEPS = [
 
 for step in STEPS:
     print(f"\n== {' '.join(step)}", flush=True)
-    subprocess.run([sys.executable, *step], check=True)
+    subprocess.run([sys.executable, *step], check=True, env=ENV)

@@ -28,6 +28,11 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor
 from sklearn.linear_model import LinearRegression
+from threadpoolctl import threadpool_limits
+
+# One OpenMP thread: parallel tree training sums in a thread-count-dependent order,
+# which made results differ across machines (DEVIATIONS.md, 2026-10-23).
+threadpool_limits(limits=1, user_api="openmp")
 
 ROOT = Path(__file__).resolve().parent.parent
 TABLE = ROOT / "data" / "processed" / "team_weeks.csv"

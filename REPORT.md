@@ -62,7 +62,13 @@ All work was done on October 23, 2026. The plan was committed before any data wa
 | `4c6923a` | 18:48 | Hypothesis test run (Elo yardstick) |
 | `9ab4c04` | 18:56 | Season-only rating logged as replacement yardstick |
 | `595dfc5` | 19:06 | Rating-aware model, voter-bias and schedule-inflation tests logged |
-| `ccf8b45` | 19:18 | Final results committed |
+| `ccf8b45` | 19:18 | First full set of results committed |
+| `00df744` | 19:49 | First version of this report, with figures |
+| `f016679` | 20:27 | Outside review: H5 sensitivity logged before its code |
+| `3cfcd87` | 20:28 | H5 sensitivity results committed |
+| `7a36795` | 20:30 | Raw-data removal logged (CFBD terms) |
+| `ca87285` | 20:34 | Findings rewritten after the H5 sensitivity check |
+| `6fcd9c5` | 20:37 | Single-threaded training logged (cross-machine reproducibility) |
 
 Section 6 lists every deviation and, importantly, which results had been seen when each was decided.
 
@@ -418,6 +424,7 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 11 | Rated model; H4–H6; swap re-run with a pre-set plausibility check | Opponent strength measured by poll standing alone carries the effect under test | Season-rating results |
 | 12 | H5 sensitivity: shape and timing matched | Outside review found H5 mixed a real effect with a measurement artifact | All results, including the published report |
 | 13 | Raw data no longer committed; fetched and checksum-verified | CollegeFootballData.com terms do not allow publishing stored raw API responses | All results (no number changes) |
+| 14 | Model training forced to one thread | Results differed across machines with different thread counts | All results; only rated-model floor-rule figures move, none cited here |
 
 Deviations 5, 6, 8, 10, 11 and 12 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
