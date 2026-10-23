@@ -1,0 +1,391 @@
+{
+  "final_poll_corrected": {
+    "A": {
+      "description": "As published: poll before game (points per voter) vs final rating",
+      "SEC": {
+        "mean": 6.7025316455696204,
+        "ci": [
+          3.904746835443038,
+          9.4126582278481
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": -7.25,
+        "ci": [
+          -10.609453125,
+          -3.8886718750000018
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -4.546296296296297,
+        "ci": [
+          -7.31195987654321,
+          -1.7091049382716057
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": -1.7777777777777777,
+        "ci": [
+          -6.668055555555556,
+          3.613690476190474
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": 1.2758413461538463,
+        "ci": [
+          -0.3624399038461538,
+          2.8396183894230766
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 13.952531645569621,
+      "sec_minus_acc_ci": [
+        9.325528085443038,
+        18.224032832278482
+      ]
+    },
+    "B": {
+      "description": "Shape matched: poll before game vs final rating, both as top-25 rank points",
+      "SEC": {
+        "mean": 5.693037974683544,
+        "ci": [
+          2.891139240506329,
+          8.918117088607595
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": 2.15,
+        "ci": [
+          -1.119140625,
+          5.537890624999999
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -5.166666666666667,
+        "ci": [
+          -7.5162808641975305,
+          -2.619135802469137
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 3.2976190476190474,
+        "ci": [
+          -0.7706349206349207,
+          7.834821428571427
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": -0.9879807692307693,
+        "ci": [
+          -2.3756009615384617,
+          0.4456580528846145
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 3.543037974683544,
+      "sec_minus_acc_ci": [
+        -0.7741950158227847,
+        7.9573150712025305
+      ]
+    },
+    "C": {
+      "description": "Timing matched: final poll (points per voter) vs final rating",
+      "SEC": {
+        "mean": 1.9462025316455696,
+        "ci": [
+          -1.4557753164556961,
+          5.079825949367088
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": -9.409375,
+        "ci": [
+          -12.950078125,
+          -6.03390625
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -2.1944444444444446,
+        "ci": [
+          -5.235956790123457,
+          0.7533950617283948
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 0.6388888888888888,
+        "ci": [
+          -3.612896825396825,
+          4.59722222222222
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": 1.7704326923076923,
+        "ci": [
+          0.3199068509615385,
+          3.1859074519230766
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 11.35557753164557,
+      "sec_minus_acc_ci": [
+        6.592712618670887,
+        16.256487341772154
+      ]
+    },
+    "D": {
+      "description": "Shape and timing matched: final poll vs final rating, both as top-25 rank points",
+      "SEC": {
+        "mean": 1.1012658227848102,
+        "ci": [
+          -0.3545094936708861,
+          2.402294303797468
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": 0.540625,
+        "ci": [
+          -1.056484375,
+          2.3193749999999995
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -2.8858024691358026,
+        "ci": [
+          -4.815663580246913,
+          -1.033641975308642
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 5.027777777777778,
+        "ci": [
+          2.63015873015873,
+          7.408829365079366
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": -0.5126201923076923,
+        "ci": [
+          -1.2989483173076923,
+          0.27408353365384613
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 0.5606408227848102,
+      "sec_minus_acc_ci": [
+        -1.6962124208860758,
+        2.7492405063291123
+      ]
+    }
+  },
+  "final_poll_review_lookup": {
+    "A": {
+      "description": "As published: poll before game (points per voter) vs final rating",
+      "SEC": {
+        "mean": 6.7025316455696204,
+        "ci": [
+          3.904746835443038,
+          9.4126582278481
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": -7.25,
+        "ci": [
+          -10.609453125,
+          -3.8886718750000018
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -4.546296296296297,
+        "ci": [
+          -7.31195987654321,
+          -1.7091049382716057
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": -1.7777777777777777,
+        "ci": [
+          -6.668055555555556,
+          3.613690476190474
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": 1.2758413461538463,
+        "ci": [
+          -0.3624399038461538,
+          2.8396183894230766
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 13.952531645569621,
+      "sec_minus_acc_ci": [
+        9.325528085443038,
+        18.224032832278482
+      ]
+    },
+    "B": {
+      "description": "Shape matched: poll before game vs final rating, both as top-25 rank points",
+      "SEC": {
+        "mean": 5.693037974683544,
+        "ci": [
+          2.891139240506329,
+          8.918117088607595
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": 2.15,
+        "ci": [
+          -1.119140625,
+          5.537890624999999
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -5.166666666666667,
+        "ci": [
+          -7.5162808641975305,
+          -2.619135802469137
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 3.2976190476190474,
+        "ci": [
+          -0.7706349206349207,
+          7.834821428571427
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": -0.9879807692307693,
+        "ci": [
+          -2.3756009615384617,
+          0.4456580528846145
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 3.543037974683544,
+      "sec_minus_acc_ci": [
+        -0.7741950158227847,
+        7.9573150712025305
+      ]
+    },
+    "C": {
+      "description": "Timing matched: final poll (points per voter) vs final rating",
+      "SEC": {
+        "mean": 1.1930379746835442,
+        "ci": [
+          -2.1029272151898732,
+          4.411550632911393
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": -9.68125,
+        "ci": [
+          -13.044374999999999,
+          -6.498671875000001
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -1.4074074074074074,
+        "ci": [
+          -4.466743827160493,
+          1.6456790123456784
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 1.8333333333333333,
+        "ci": [
+          -2.6984126984126986,
+          6.030357142857141
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": 1.6316105769230769,
+        "ci": [
+          0.09411057692307694,
+          3.084104567307692
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 10.874287974683545,
+      "sec_minus_acc_ci": [
+        6.076373615506329,
+        15.649652887658226
+      ]
+    },
+    "D": {
+      "description": "Shape and timing matched: final poll vs final rating, both as top-25 rank points",
+      "SEC": {
+        "mean": 0.23417721518987342,
+        "ci": [
+          -1.4367879746835444,
+          1.8735759493670885
+        ],
+        "team_seasons": 158
+      },
+      "ACC": {
+        "mean": 0.125,
+        "ci": [
+          -1.675390625,
+          2.0504687499999994
+        ],
+        "team_seasons": 160
+      },
+      "Big Ten": {
+        "mean": -2.234567901234568,
+        "ci": [
+          -4.253395061728395,
+          -0.3854938271604941
+        ],
+        "team_seasons": 162
+      },
+      "Big 12": {
+        "mean": 6.488095238095238,
+        "ci": [
+          3.6207341269841273,
+          9.294543650793651
+        ],
+        "team_seasons": 126
+      },
+      "Other": {
+        "mean": -0.6159855769230769,
+        "ci": [
+          -1.4862379807692307,
+          0.29573317307692304
+        ],
+        "team_seasons": 832
+      },
+      "sec_minus_acc": 0.10917721518987342,
+      "sec_minus_acc_ci": [
+        -2.471273734177215,
+        2.4651809731012655
+      ]
+    }
+  },
+  "note": "Rank places among FBS teams, 2014-2025 (no 2020); positive = the poll makes the schedule look tougher than results. Reported result: final_poll_corrected (final poll = poll after the last schedule week). final_poll_review_lookup uses the review's approximation (one poll earlier) to check its table. A and B do not use the final poll, so they are identical in both."
+}
