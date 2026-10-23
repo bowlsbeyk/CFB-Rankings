@@ -158,3 +158,13 @@ The original H5 numbers stay in `results/bias_tests.json` and the report as orig
 **What moves** (single-threaded vs the committed multi-threaded run): only the rated model under the floor rule, through its 2014 training fold. That is the training-season replay for rated/floor (2014 mean rank error 3.68 → 6.20; climbers 79 → 77; mean ρ 0.8804 → 0.8800; stickiness +0.42 → +0.46), its training error (third decimal), and the 2026 counterfactual yardstick for rated/floor (0.42 → 0.46). Every other difference is below 1e-15. `results/holdout.json` is identical. No number cited in `REPORT.md` changes.
 
 **Change.** `run_all.py` forces one thread for every step, and `src/train.py` does the same when run directly. `numpy` and `scipy` are pinned in `requirements.txt`; every model and bootstrap already used a fixed seed. Committed results are regenerated single-threaded. The multi-threaded values above are recorded here and in git history.
+
+## 2026-10-23 — Exploratory: who is over- and underrated in 2026 so far (Kyle's request)
+
+Not a hypothesis test; a current-season description, fixed before it is run. Teams in the AP top 25 of poll 8 or in the season-only top 25 after week 7.
+- **Results lens:** season-only rating rank after week 7 minus AP rank in poll 8 (positive = the AP ranks the team above its results).
+- **Voter lens:** for every 2026 team-week, actual change in AP points per voter minus the change the name-blind rated model (fit on 2014–2023, 0 rule) predicts from that week's real prior poll and results, summed over weeks 1–7 and divided by 0.80 points per voter per rank place (positive = voters lifted the team more than results usually earn).
+- **Schedules:** schedule rank among FBS teams by opponents' game-day AP rank points versus by opponents' current season-only rank points (the shape-matched scale of H5 variant B).
+- A team is called clearly over- or underrated only when both lenses agree in sign and the results lens is at least 5 places.
+
+Limits stated with the output: seven weeks of games make ratings noisy; the rating sees only scores, not injuries or quarterback changes.
