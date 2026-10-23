@@ -34,3 +34,9 @@ The same rule feeds every points-based quantity (target, prior poll points, oppo
 ## 2026-10-23 — Exploratory addition: team bias finder (not pre-registered)
 
 `src/team_bias.py` lists which teams the model consistently over- or under-predicts (for example, ranked teams that fall further than predicted after a loss). It uses out-of-season predictions on the 2014–2023 training seasons only. It is exploratory: it was not in the registered plan, its results are labeled as such, and nothing in it feeds the model choice, the holdout or the counterfactual.
+
+## 2026-10-23 — Games played after the poll they would feed are dropped
+
+The leakage test found that cfbfastR-data labels the 2019 Army–Navy game (Dec 14) as week 15. The last regular-season AP poll came out Dec 8, so that game cannot have moved it.
+
+**Rule:** a game counts toward schedule week w only if it kicked off by Tuesday 12:00 US Eastern after week w's busiest game day. That keeps Monday-night Labor Day games and Tuesday MAC games in their week and drops anything played after the next poll. `build_features.py` prints every dropped game.
