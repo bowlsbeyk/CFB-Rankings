@@ -19,6 +19,7 @@ STEPS = [
     ["src/counterfactual.py"],
     ["src/base_rates.py"],
     ["src/hypothesis.py"],
+    ["src/bias_tests.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
 ]
