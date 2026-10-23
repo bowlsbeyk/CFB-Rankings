@@ -168,3 +168,20 @@ Not a hypothesis test; a current-season description, fixed before it is run. Tea
 - A team is called clearly over- or underrated only when both lenses agree in sign and the results lens is at least 5 places.
 
 Limits stated with the output: seven weeks of games make ratings noisy; the rating sees only scores, not injuries or quarterback changes.
+
+## 2026-10-23 — Two tests of the preseason link (Kyle's request; added after all earlier results)
+
+Added to close two gaps in the claim, after every earlier result (including the H5 sensitivity and the 2026 board) had been seen. Definitions and the reading of each result are fixed here, before either is run. Both use 2014–2025 (no 2020), the 0 rule, and 95% intervals from 1,000 resamples of team-seasons (seed 0). Results are reported whichever way they point.
+
+**T1. Are SEC preseason rankings unjustified?**
+- Unit: every team ranked in a preseason (week-1) AP poll.
+- Final standing: the team's season-only rating rank after the last regular-season week, capped at 26 (26 = outside the results top 25).
+- Shortfall = capped final rank − preseason AP rank (positive = finished below where it started).
+- Fairness adjustment: higher-ranked teams have further to fall, and conferences differ in how many top-10 teams they have. The expected shortfall for each preseason rank comes from a straight-line fit of shortfall on preseason rank across all conferences. **Primary measure:** mean of (shortfall − expected) by conference, and SEC minus ACC. Also reported: raw mean shortfall, and the share of preseason-ranked teams that finished outside the results top 25.
+- **Supports the claim** if the SEC's adjusted shortfall is above zero with an interval excluding zero, and SEC minus ACC is above zero with an interval excluding zero. **Partial** if only the first holds. **Refutes** if the SEC's adjusted shortfall is at or below zero.
+
+**T2. Does the SEC's schedule boost come from early-season rankings?**
+- Unit: every regular-season game of an FBS team. Per game: opponent's AP rank points in the poll before the game minus opponent's final season-only rank points (26 − rank inside the top 25, else 0; FCS opponents 0 on both sides). This is the per-game version of H5 variant B, in rank points (one point = one place inside the top 25).
+- Bands by schedule week: early 1–4, middle 5–8, late 9 and later.
+- **Primary measure:** mean per-game gap by conference and band; SEC early minus SEC late; SEC minus ACC in each band.
+- **Supports a preseason link** if the SEC early-band gap is above zero with an interval excluding zero, and SEC early minus late is above zero with an interval excluding zero. **No link shown** if the SEC gap is flat across the season or larger late.
