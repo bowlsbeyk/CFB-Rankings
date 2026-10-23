@@ -21,6 +21,8 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parent.parent
 RAW = ROOT / "data" / "raw"
 OUT = ROOT / "data" / "processed" / "team_weeks.csv"
+RATINGS = ROOT / "data" / "processed" / "season_ratings.csv"
+FCS = "FCS (pooled)"
 
 SEASONS = [s for s in range(2014, 2027) if s != 2020]
 TREATMENTS = ("zero", "floor")
@@ -145,8 +147,28 @@ def build_season(season):
     return pd.DataFrame(rows)
 
 
+def add_ratings(table):
+    """Team's and opponents' season-only rating after week w (DEVIATIONS.md)."""
+    r = pd.read_csv(RATINGS)
+    lookup = r.set_index(["season", "week", "team"]).combined
+    fcs = r[r.team == FCS].set_index(["season", "week"]).combined
+    table["team_rating"] = table.set_index(["season", "week", "team"]).index.map(lookup)
+
+    def opp_rating(row):
+        if not isinstance(row.opponents, str) or not row.opponents:
+            return 0.0
+        vals = [lookup.get((row.season, row.week, o), fcs[(row.season, row.week)])
+                for o in row.opponents.split(";")]
+        return float(np.mean(vals))
+
+    table["opp_rating"] = table.apply(opp_rating, axis=1)
+    if table.team_rating.isna().any():
+        sys.exit("Missing season rating for some team-weeks")
+    return table
+
+
 def main():
-    table = pd.concat([build_season(s) for s in SEASONS], ignore_index=True)
+    table = add_ratings(pd.concat([build_season(s) for s in SEASONS], ignore_index=True))
     OUT.parent.mkdir(parents=True, exist_ok=True)
     table.to_csv(OUT, index=False)
     counts = table.groupby("season").size()

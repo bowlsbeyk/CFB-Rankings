@@ -1,0 +1,397 @@
+{
+  "rated_zero": {
+    "unit": "ppv",
+    "mae": {
+      "baseline": 0.5086551000378292,
+      "linear": 0.9168243033667188,
+      "gbt": 0.21823484443762498
+    },
+    "mae_ranked_teams": {
+      "baseline": 2.4665055302355405,
+      "linear": 2.2659043041032954,
+      "gbt": 0.7567942217991941
+    },
+    "mae_by_season": {
+      "2024": {
+        "baseline": 0.4846746495502977,
+        "linear": 0.8952178971647536,
+        "gbt": 0.21917388522477713
+      },
+      "2025": {
+        "baseline": 0.5322828968417204,
+        "linear": 0.9381129683010082,
+        "gbt": 0.21730961307381333
+      }
+    },
+    "chosen_model": "gbt",
+    "replay": {
+      "2024": {
+        "final_regular": {
+          "spearman": 0.9474899194311068,
+          "overlap": 18,
+          "mean_abs_rank_error": 10.28,
+          "within_3": 0.64
+        },
+        "preseason_unchanged_vs_final_regular": {
+          "spearman": 0.6428492248666521,
+          "overlap": 12,
+          "mean_abs_rank_error": 35.04,
+          "within_3": 0.2
+        },
+        "post_bowl_final": {
+          "spearman": 0.8528563342991327,
+          "overlap": 18,
+          "mean_abs_rank_error": 11.4,
+          "within_3": 0.44
+        },
+        "stickiness": {
+          "spots_kept_above_real": 0.92,
+          "preseason_ranked_still_ranked_real": 12,
+          "preseason_ranked_still_ranked_sim": 16,
+          "climbers_real": 13,
+          "climbers_sim": 9,
+          "climbers_caught": 6
+        },
+        "sim_top25": [
+          "Oregon",
+          "Georgia",
+          "Notre Dame",
+          "Texas",
+          "Ohio State",
+          "Penn State",
+          "South Carolina",
+          "Boise State",
+          "Tennessee",
+          "Florida State",
+          "Indiana",
+          "Arizona State",
+          "Alabama",
+          "Ole Miss",
+          "Clemson",
+          "Miami",
+          "USC",
+          "SMU",
+          "BYU",
+          "Boston College",
+          "Northern Illinois",
+          "Tulane",
+          "Oklahoma State",
+          "Utah",
+          "Missouri"
+        ],
+        "real_top25": [
+          "Oregon",
+          "Georgia",
+          "Notre Dame",
+          "Texas",
+          "Penn State",
+          "Ohio State",
+          "Tennessee",
+          "Boise State",
+          "Indiana",
+          "Arizona State",
+          "Alabama",
+          "SMU",
+          "Clemson",
+          "South Carolina",
+          "Miami",
+          "Ole Miss",
+          "BYU",
+          "Iowa State",
+          "Army",
+          "Colorado",
+          "Illinois",
+          "Syracuse",
+          "Missouri",
+          "UNLV",
+          "Memphis"
+        ]
+      },
+      "2025": {
+        "final_regular": {
+          "spearman": 0.9238461538461539,
+          "overlap": 21,
+          "mean_abs_rank_error": 6.3,
+          "within_3": 0.68
+        },
+        "preseason_unchanged_vs_final_regular": {
+          "spearman": 0.6894063134964441,
+          "overlap": 13,
+          "mean_abs_rank_error": 33.92,
+          "within_3": 0.24
+        },
+        "post_bowl_final": {
+          "spearman": 0.8475753088849166,
+          "overlap": 19,
+          "mean_abs_rank_error": 12.7,
+          "within_3": 0.36
+        },
+        "stickiness": {
+          "spots_kept_above_real": 1.12,
+          "preseason_ranked_still_ranked_real": 13,
+          "preseason_ranked_still_ranked_sim": 16,
+          "climbers_real": 12,
+          "climbers_sim": 9,
+          "climbers_caught": 8
+        },
+        "sim_top25": [
+          "Indiana",
+          "Georgia",
+          "Oregon",
+          "Ohio State",
+          "Texas Tech",
+          "Notre Dame",
+          "Ole Miss",
+          "Texas A&M",
+          "Oklahoma",
+          "Texas",
+          "Vanderbilt",
+          "Miami",
+          "Alabama",
+          "Utah",
+          "Michigan",
+          "SMU",
+          "Tulane",
+          "Penn State",
+          "Iowa State",
+          "USC",
+          "Arizona",
+          "Missouri",
+          "James Madison",
+          "Memphis",
+          "BYU"
+        ],
+        "real_top25": [
+          "Indiana",
+          "Georgia",
+          "Ohio State",
+          "Texas Tech",
+          "Oregon",
+          "Ole Miss",
+          "Texas A&M",
+          "Oklahoma",
+          "Notre Dame",
+          "Miami",
+          "Alabama",
+          "BYU",
+          "Vanderbilt",
+          "Texas",
+          "Utah",
+          "USC",
+          "Tulane",
+          "Michigan",
+          "James Madison",
+          "Virginia",
+          "Arizona",
+          "Navy",
+          "North Texas",
+          "Georgia Tech",
+          "Missouri"
+        ]
+      }
+    },
+    "pass": {
+      "beats_baseline_mae": true,
+      "spearman_ge_0.7_both_seasons": true,
+      "passed": true
+    }
+  },
+  "rated_floor": {
+    "unit": "ppv",
+    "mae": {
+      "baseline": 0.6868889879107478,
+      "linear": 0.8719202522100556,
+      "gbt": 0.3563397976107275
+    },
+    "mae_ranked_teams": {
+      "baseline": 2.3837366492373286,
+      "linear": 2.1975538667802086,
+      "gbt": 0.7493308886510351
+    },
+    "mae_by_season": {
+      "2024": {
+        "baseline": 0.6891493256857076,
+        "linear": 0.8567154276120157,
+        "gbt": 0.36759533535467653
+      },
+      "2025": {
+        "baseline": 0.6846618903971846,
+        "linear": 0.8869014764463597,
+        "gbt": 0.34524978248066013
+      }
+    },
+    "chosen_model": "gbt",
+    "replay": {
+      "2024": {
+        "final_regular": {
+          "spearman": 0.943076923076923,
+          "overlap": 18,
+          "mean_abs_rank_error": 6.6,
+          "within_3": 0.52
+        },
+        "preseason_unchanged_vs_final_regular": {
+          "spearman": 0.6428492248666521,
+          "overlap": 12,
+          "mean_abs_rank_error": 35.04,
+          "within_3": 0.2
+        },
+        "post_bowl_final": {
+          "spearman": 0.8592307692307692,
+          "overlap": 18,
+          "mean_abs_rank_error": 7.88,
+          "within_3": 0.44
+        },
+        "stickiness": {
+          "spots_kept_above_real": 0.44,
+          "preseason_ranked_still_ranked_real": 12,
+          "preseason_ranked_still_ranked_sim": 14,
+          "climbers_real": 13,
+          "climbers_sim": 11,
+          "climbers_caught": 6
+        },
+        "sim_top25": [
+          "Oregon",
+          "Georgia",
+          "Notre Dame",
+          "Texas",
+          "Ohio State",
+          "Penn State",
+          "Boise State",
+          "Tennessee",
+          "South Carolina",
+          "Arizona State",
+          "Alabama",
+          "Ole Miss",
+          "Indiana",
+          "Miami",
+          "Clemson",
+          "Northern Illinois",
+          "SMU",
+          "Georgia Tech",
+          "USC",
+          "Boston College",
+          "BYU",
+          "Oklahoma State",
+          "Pittsburgh",
+          "Tulane",
+          "Missouri"
+        ],
+        "real_top25": [
+          "Oregon",
+          "Georgia",
+          "Notre Dame",
+          "Texas",
+          "Penn State",
+          "Ohio State",
+          "Tennessee",
+          "Boise State",
+          "Indiana",
+          "Arizona State",
+          "Alabama",
+          "SMU",
+          "Clemson",
+          "South Carolina",
+          "Miami",
+          "Ole Miss",
+          "BYU",
+          "Iowa State",
+          "Army",
+          "Colorado",
+          "Illinois",
+          "Syracuse",
+          "Missouri",
+          "UNLV",
+          "Memphis"
+        ]
+      },
+      "2025": {
+        "final_regular": {
+          "spearman": 0.8815384615384615,
+          "overlap": 19,
+          "mean_abs_rank_error": 6.98,
+          "within_3": 0.48
+        },
+        "preseason_unchanged_vs_final_regular": {
+          "spearman": 0.6894063134964441,
+          "overlap": 13,
+          "mean_abs_rank_error": 33.92,
+          "within_3": 0.24
+        },
+        "post_bowl_final": {
+          "spearman": 0.7884615384615384,
+          "overlap": 19,
+          "mean_abs_rank_error": 8.9,
+          "within_3": 0.44
+        },
+        "stickiness": {
+          "spots_kept_above_real": 0.12,
+          "preseason_ranked_still_ranked_real": 13,
+          "preseason_ranked_still_ranked_sim": 15,
+          "climbers_real": 12,
+          "climbers_sim": 10,
+          "climbers_caught": 6
+        },
+        "sim_top25": [
+          "Indiana",
+          "Georgia",
+          "Ohio State",
+          "Texas Tech",
+          "Notre Dame",
+          "Ole Miss",
+          "Oregon",
+          "James Madison",
+          "Oklahoma",
+          "Utah",
+          "Texas A&M",
+          "Texas",
+          "Vanderbilt",
+          "Miami",
+          "Tulane",
+          "Alabama",
+          "BYU",
+          "Michigan",
+          "Clemson",
+          "Tennessee",
+          "Florida State",
+          "Arizona",
+          "Mississippi State",
+          "Houston",
+          "Memphis"
+        ],
+        "real_top25": [
+          "Indiana",
+          "Georgia",
+          "Ohio State",
+          "Texas Tech",
+          "Oregon",
+          "Ole Miss",
+          "Texas A&M",
+          "Oklahoma",
+          "Notre Dame",
+          "Miami",
+          "Alabama",
+          "BYU",
+          "Vanderbilt",
+          "Texas",
+          "Utah",
+          "USC",
+          "Tulane",
+          "Michigan",
+          "James Madison",
+          "Virginia",
+          "Arizona",
+          "Navy",
+          "North Texas",
+          "Georgia Tech",
+          "Missouri"
+        ]
+      }
+    },
+    "pass": {
+      "beats_baseline_mae": true,
+      "spearman_ge_0.7_both_seasons": true,
+      "passed": true
+    }
+  },
+  "note": "Holdout re-used: 2024-2025 had already been scored for other specs before this spec was defined. Not a clean out-of-sample test."
+}

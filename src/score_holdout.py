@@ -20,7 +20,7 @@ import numpy as np
 import pandas as pd
 
 from replay import compare, preseason_ranks, real_poll, replay, start_values, stickiness
-from train import SPECS, TREATMENTS, UNIT, features, target
+from train import TREATMENTS, UNIT, features, target
 
 ROOT = Path(__file__).resolve().parent.parent
 TABLE = ROOT / "data" / "processed" / "team_weeks.csv"
@@ -28,6 +28,9 @@ RESULTS = ROOT / "results"
 OUT = RESULTS / "holdout.json"
 HOLDOUT = [2024, 2025]
 PRIMARY = ("revised", "zero")
+# The specs scored on the clean holdout. The rated spec came later; its 2024-2025
+# numbers are a re-used holdout and live in evaluate_rated.py (DEVIATIONS.md).
+SCORED_SPECS = ("registered", "revised")
 
 
 def mae(y, p):
@@ -81,7 +84,7 @@ def score(tw, spec, tr):
 
 def main():
     tw = pd.read_csv(TABLE)
-    report = {f"{s}_{t}": score(tw, s, t) for s in SPECS for t in TREATMENTS}
+    report = {f"{s}_{t}": score(tw, s, t) for s in SCORED_SPECS for t in TREATMENTS}
     report["primary"] = "_".join(PRIMARY)
     report["note"] = ("Holdout 2024-2025 scored once with models fit on 2014-2023 "
                       "(no 2020). MAE per team-week in each spec's unit.")
@@ -95,7 +98,7 @@ def main():
         OUT.write_text(text)
         print("Holdout scored and recorded in results/holdout.json")
 
-    for key in (f"{s}_{t}" for s in SPECS for t in TREATMENTS):
+    for key in (f"{s}_{t}" for s in SCORED_SPECS for t in TREATMENTS):
         r = report[key]
         m = r["mae"]
         sp = {s: round(r["replay"][s]["final_regular"]["spearman"], 2) for s in r["replay"]}

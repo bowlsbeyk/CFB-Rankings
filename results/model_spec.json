@@ -92,9 +92,55 @@
           "margin_to_date"
         ]
       }
+    },
+    "rated": {
+      "unit": "ppv",
+      "target": "target_ppv_<treatment> (change, poll w to w+1)",
+      "features": {
+        "zero": [
+          "prior_ppv_zero",
+          "opp_ppv_zero",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week",
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date",
+          "team_rating",
+          "opp_rating"
+        ],
+        "floor": [
+          "prior_ppv_floor",
+          "opp_ppv_floor",
+          "wins",
+          "losses",
+          "bye",
+          "points_for",
+          "points_against",
+          "margin",
+          "home",
+          "away",
+          "neutral",
+          "losses_above",
+          "week",
+          "wins_to_date",
+          "losses_to_date",
+          "margin_to_date",
+          "team_rating",
+          "opp_rating"
+        ]
+      }
     }
   },
-  "downstream_spec": "revised (DEVIATIONS.md, 2026-10-23); registered reported alongside",
+  "downstream_spec": "revised for the scored holdout; rated for the voter-bias test and swap re-run (DEVIATIONS.md, 2026-10-23)",
   "models": {
     "baseline": "predict 0 change",
     "linear": "sklearn LinearRegression, default settings",

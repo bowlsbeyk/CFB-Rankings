@@ -107,3 +107,8 @@ def test_game_encoding(tw):
     assert ((tw.home + tw.away + tw.neutral) == tw.games).all()
     assert (tw.bye == (tw.games == 0)).all()
     assert (tw.margin == tw.points_for - tw.points_against).all()
+
+
+def test_rating_features(tw):
+    assert tw.team_rating.notna().all() and tw.opp_rating.notna().all()
+    assert (tw.loc[tw.bye == 1, "opp_rating"] == 0).all()

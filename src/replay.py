@@ -90,7 +90,7 @@ def start_values(season, spec):
     """Real preseason values in the spec's unit."""
     poll = real_poll(season, 1)
     voters = sum(r["firstPlaceVotes"] or 0 for r in poll.values())
-    div = voters if spec == "revised" else 1
+    div = voters if UNIT[spec] == "ppv" else 1
     return {t: r["points"] / div for t, r in poll.items()}
 
 

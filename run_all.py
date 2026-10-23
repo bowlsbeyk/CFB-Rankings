@@ -9,14 +9,15 @@ import sys
 
 STEPS = [
     ["src/verify_data.py"],
+    ["src/season_rating.py"],
     ["src/build_features.py"],
     ["-m", "pytest", "-q", "tests"],
     ["src/train.py"],
     ["src/replay.py"],
     ["src/score_holdout.py"],
+    ["src/evaluate_rated.py"],
     ["src/counterfactual.py"],
     ["src/base_rates.py"],
-    ["src/season_rating.py"],
     ["src/hypothesis.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],

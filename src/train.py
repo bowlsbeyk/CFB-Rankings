@@ -2,9 +2,10 @@
 
 Training seasons: 2014-2023, no 2020. The 2024-2025 holdout is never loaded here.
 
-Two specifications (DEVIATIONS.md, 2026-10-23):
+Three specifications (DEVIATIONS.md, 2026-10-23):
   registered  raw AP points, the features in METHODOLOGY.md
-  revised     points per voter, plus season-to-date record (used downstream)
+  revised     points per voter, plus season-to-date record
+  rated       revised, plus the team's and opponents' season-only rating
 Each is fit under both unranked treatments (zero = registered, floor = sensitivity).
 
 Outputs:
@@ -34,17 +35,19 @@ RESULTS = ROOT / "results"
 
 TRAIN_SEASONS = [s for s in range(2014, 2024) if s != 2020]
 TREATMENTS = ("zero", "floor")
-SPECS = ("registered", "revised")
-UNIT = {"registered": "points", "revised": "ppv"}
+SPECS = ("registered", "revised", "rated")
+UNIT = {"registered": "points", "revised": "ppv", "rated": "ppv"}
 BASE_FEATURES = ["wins", "losses", "bye", "points_for", "points_against", "margin",
                  "home", "away", "neutral", "losses_above", "week"]
 RECORD_FEATURES = ["wins_to_date", "losses_to_date", "margin_to_date"]
+RATING_FEATURES = ["team_rating", "opp_rating"]
 GBT_PARAMS = {"max_iter": 300, "learning_rate": 0.05, "random_state": 0}
 
 
 def features(treatment, spec="revised"):
     u = UNIT[spec]
-    extra = RECORD_FEATURES if spec == "revised" else []
+    extra = {"registered": [], "revised": RECORD_FEATURES,
+             "rated": RECORD_FEATURES + RATING_FEATURES}[spec]
     return [f"prior_{u}_{treatment}", f"opp_{u}_{treatment}"] + BASE_FEATURES + extra
 
 
@@ -139,7 +142,8 @@ def main():
                 "target": f"target_{UNIT[s]}_<treatment> (change, poll w to w+1)",
                 "features": {tr: features(tr, s) for tr in TREATMENTS}}
             for s in SPECS},
-        "downstream_spec": "revised (DEVIATIONS.md, 2026-10-23); registered reported alongside",
+        "downstream_spec": ("revised for the scored holdout; rated for the voter-bias test and "
+                            "swap re-run (DEVIATIONS.md, 2026-10-23)"),
         "models": {
             "baseline": "predict 0 change",
             "linear": "sklearn LinearRegression, default settings",

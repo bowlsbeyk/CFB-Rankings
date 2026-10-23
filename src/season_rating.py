@@ -8,7 +8,7 @@ Each week, from that season's games only (every team starts equal):
   combined    50/50 average of the two, each standardized across FBS teams
 
 Writes data/processed/season_ratings.csv (rating after week w's games, one row per
-FBS team per week) and results/season_rating_validation.json (next-week winner
+FBS team per week, plus the pooled FCS team on the FBS scale) and results/season_rating_validation.json (next-week winner
 picks vs Elo and the AP poll).
 """
 
@@ -80,25 +80,23 @@ def performance(games, teams):
     return pd.Series(sol[:n], index=teams), float(sol[n])
 
 
-def zscore(s):
-    return (s - s.mean()) / s.std()
-
-
 def ratings_for_season(season):
     games, fbs = season_games(season)
     teams = fbs + [FCS]
     out = []
     for w in sorted(games.week.unique()):
         played = games[games.week <= w]
-        res = colley(played, teams)[fbs]
+        res = colley(played, teams)
         perf, home_edge = performance(played, teams)
-        perf = perf[fbs]
-        combined = 0.5 * zscore(res) + 0.5 * zscore(perf)
+        # Standardize with FBS teams only; the pooled FCS team is scored on the same scale.
+        combined = (0.5 * (res - res[fbs].mean()) / res[fbs].std()
+                    + 0.5 * (perf - perf[fbs].mean()) / perf[fbs].std())
+        rank = combined[fbs].rank(ascending=False, method="min").reindex(teams)
         out.append(pd.DataFrame({
-            "season": season, "week": w, "team": fbs,
+            "season": season, "week": w, "team": teams,
             "results_rating": res.values, "performance_rating": perf.values,
             "home_edge": home_edge, "combined": combined.values,
-            "strength_rank": combined.rank(ascending=False, method="min").values}))
+            "strength_rank": rank.values}))
     return games, pd.concat(out, ignore_index=True)
 
 
