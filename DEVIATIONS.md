@@ -40,3 +40,12 @@ The same rule feeds every points-based quantity (target, prior poll points, oppo
 The leakage test found that cfbfastR-data labels the 2019 Army–Navy game (Dec 14) as week 15. The last regular-season AP poll came out Dec 8, so that game cannot have moved it.
 
 **Rule:** a game counts toward schedule week w only if it kicked off by Tuesday 12:00 US Eastern after week w's busiest game day. That keeps Monday-night Labor Day games and Tuesday MAC games in their week and drops anything played after the next poll. `build_features.py` prints every dropped game.
+
+## 2026-10-23 — Replay details and the end-of-season pass test (clarification, before any holdout use)
+
+The methodology says the replayed end-of-season top 25 must match the real final poll with Spearman ≥ 0.7. It leaves three details open. They are fixed here, from training seasons only, before 2024–2025 is touched.
+
+- **Replay mechanics.** Start from the real preseason (week 1) AP points. Each week, every team plays its real games; prior points, opponent points and losses-above come from the simulated poll. New points = prior + predicted change, floored at 0. After each week, teams are re-ranked by simulated points and teams outside the top 25 get the unranked value (0, or half the simulated #25 under the floor rule), matching how the training data treat unranked teams.
+- **Which final poll.** The replay covers the regular season only (bowls are not modeled), so the pass test uses the last regular-season AP poll. The post-bowl final poll is reported alongside as a secondary check.
+- **How Spearman is computed.** Over the real final top 25: each team's real rank versus its rank in the simulated poll among all FBS teams (by simulated points; teams the replay drops from the top 25 are ranked by their last ranked points). Top-25 overlap is reported alongside.
+- **Reference.** The same numbers for "the preseason poll never changes" are reported, so readers can see how much the model adds.
