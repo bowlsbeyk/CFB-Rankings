@@ -601,7 +601,8 @@ def fig_counterfactual_slots():
     ax.legend(loc="upper right")
     ax.set_title("2026 swap (rated model): every model run fails the reality check")
     save(fig, "fig18_counterfactual_slots.png",
-         "Model runs leave 6-1 Wake Forest unranked and keep 3-3 Oklahoma ranked; the real poll does neither. Not used as evidence.")
+         "Not evidence: every run, including the no-swap run, fails the plausibility check.\n"
+         "Model runs leave 6-1 Wake Forest unranked and keep 3-3 Oklahoma ranked; the real poll does neither.")
 
 
 def fig_counterfactual_teams():
@@ -627,7 +628,9 @@ def fig_counterfactual_teams():
     ax.grid(axis="y", visible=False)
     ax.set_xlabel("Rank at poll 8 (right = better)")
     ax.set_title("Nine-slot swap: who moves (model output, failed plausibility)")
-    save(fig, "fig19_counterfactual_teams.png", "Rated model, unranked = 0. Shown for transparency; see REPORT.md 5.6.")
+    save(fig, "fig19_counterfactual_teams.png",
+         "Not evidence: every run, including the no-swap run, fails the plausibility check.\n"
+         "Rated model, unranked = 0. Shown for transparency; see REPORT.md 5.6.")
 
 
 def fig_2026_now():
@@ -664,12 +667,45 @@ def fig_2026_now():
          "Early-season ratings are noisy.")
 
 
+def fig_h5_sensitivity():
+    h = load("h5_sensitivity.json")["final_poll_corrected"]
+    labels = {"A": "A. As published", "B": "B. Shape matched (fairest test)",
+              "C": "C. Timing matched", "D": "D. Shape and timing matched"}
+    series = [("SEC", SEC, -0.22), ("ACC", ACC, 0.0), ("SEC minus ACC", INK, 0.22)]
+    fig, ax = plt.subplots(figsize=(9, 4.4))
+    for i, v in enumerate("ABCD"):
+        for name, color, off in series:
+            if name == "SEC minus ACC":
+                m, (lo, hi) = h[v]["sec_minus_acc"], h[v]["sec_minus_acc_ci"]
+            else:
+                m, (lo, hi) = h[v][name]["mean"], h[v][name]["ci"]
+            y = i + off
+            ax.plot([lo, hi], [y, y], color=color, lw=2)
+            dot(ax, m, y, color, size=8, zorder=3)
+            ax.annotate(f"{m:+.1f}", (hi, y), xytext=(5, 0), textcoords="offset points",
+                        va="center", fontsize=8, color=INK2)
+    ax.axvline(0, color=AXIS, lw=1)
+    ax.axhspan(0.6, 1.4, color="#f0efec", lw=0, zorder=0)
+    ax.set_yticks(range(4))
+    ax.set_yticklabels([labels[v] for v in "ABCD"])
+    ax.set_ylim(3.6, -0.6)
+    ax.grid(axis="y", visible=False)
+    for name, color, _ in series:
+        ax.plot([], [], "o", color=color, label=name)
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.14), ncol=3)
+    ax.set_xlabel("Schedule inflation (rank places; + = poll makes schedules look tougher)")
+    ax.set_title("H5 sensitivity: most of the SEC-ACC gap is a measurement artifact")
+    save(fig, "fig21_h5_sensitivity.png",
+         "2014-2025, 95% intervals. B compares game-day poll standing with final results on the same "
+         "top-25 scale: the SEC effect (+5.7) remains, the ACC effect and the SEC-ACC gap do not.")
+
+
 def main():
     for f in (fig_timeline, fig_data_overview, fig_training_mae, fig_replay_training, fig_climbers,
               fig_holdout, fig_holdout_scatter, fig_rating_validation, fig_elo_carryover,
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
-              fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now):
+              fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 

@@ -5,3 +5,5 @@ __pycache__/
 data/raw/cfbfastR-data/
 data/processed/
 results/models/
+data/raw/polls/
+data/raw/schedules/

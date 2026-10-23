@@ -1,13 +1,18 @@
-"""Rebuild every number from the frozen raw files. Offline; does not re-pull data.
+"""Rebuild every number from the frozen raw files.
 
-To re-pull and re-freeze raw data (network + CFBD_API_KEY), run src/pull_data.py
-separately. That changes the frozen files and must be logged in DEVIATIONS.md.
+The first step, src/fetch_data.py, downloads any raw file that is missing and checks
+every file against data/MANIFEST.json (polls need a free CFBD_API_KEY). With the files
+already present, the whole run is offline.
+
+To re-pull and re-freeze raw data, run src/pull_data.py separately. That changes the
+frozen files and must be logged in DEVIATIONS.md.
 """
 
 import subprocess
 import sys
 
 STEPS = [
+    ["src/fetch_data.py"],
     ["src/verify_data.py"],
     ["src/season_rating.py"],
     ["src/build_features.py"],
