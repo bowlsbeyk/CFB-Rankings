@@ -1,0 +1,6 @@
+conf_group,seasons_ranked,ranked_all_weeks,ranked_all_mean,ranked_all_lo,ranked_all_hi,ranked_win_weeks,ranked_win_mean,ranked_win_lo,ranked_win_hi,ranked_loss_weeks,ranked_loss_mean,ranked_loss_lo,ranked_loss_hi
+ACC,9,426,2.77,-0.35,6.12,264,4.51,-0.46,8.2,110,-4.48,-19.9,11.54
+Big 12,9,450,3.23,-2.12,9.6,281,14.19,8.3,20.81,118,-16.44,-30.32,-4.07
+Big Ten,9,577,-3.29,-10.85,4.26,393,-1.12,-11.03,8.43,109,-10.89,-33.39,9.32
+Other,9,978,-4.02,-6.31,-1.7,610,-3.44,-9.91,3.75,249,-7.71,-17.26,2.44
+SEC,9,771,0.68,-6.92,8.55,484,1.0,-6.33,8.38,189,-6.46,-29.22,17.64
