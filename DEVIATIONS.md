@@ -115,3 +115,26 @@ These settings are fixed now and not tuned.
 **Schedule-inflation test.** For each FBS team-season, 2014–2025 and 2026 to date, two schedule-strength measures over its regular-season FBS-or-FCS games: poll-based = mean of opponents' AP points per voter in the poll before each game (0 rule); rating-based = mean of opponents' season-only rating after the last completed week. Each is ranked among FBS teams that season. Inflation = rating-based rank − poll-based rank (positive = the poll makes the schedule look tougher than results do). Reported by conference, with intervals from resampling team-seasons, plus SEC minus ACC.
 
 **Swap re-run.** The 2026 counterfactual (swap3 primary, swap9 extension, sanity run, yardstick) is re-run with the rated model if it passes the training replay bar, into a separate file. Plausibility is checked against real voters, fixed now: in each simulated final poll, count Power-4 teams at 6-1 or better (or 5-0 and better at that point) left unranked, and teams with 3+ losses ranked. Real voters, 2014–2025 at poll 8: 0 of 95 such 6-1 teams left unranked; 1 of 816 teams with 3+ losses ranked (`results/base_rates_poll8.json`). A run that breaks these is reported as implausible.
+
+## 2026-10-23 — H5 sensitivity: shape and timing matched (added after seeing H5 results)
+
+**Prompted by an outside review** of the repository at commit `00df744`, after H5 (schedule inflation) had been published in `REPORT.md`. The reviewer had already run this check and seen its numbers before this entry was written. Those numbers are reproduced below and checked by the new script.
+
+**The problem.** H5 compares two schedule-strength measures that differ in two ways at once:
+- **Shape.** The poll side gives every unranked opponent 0; the rating side gives every opponent a continuous rating.
+- **Timing.** The poll side uses the opponent's standing in the poll before the game; the rating side uses the opponent's final season-only rating.
+
+"Inflation" therefore mixes a real effect (timing: opponents ranked on game day versus how they finished) with a measurement artifact (shape: good-but-unranked opponents count only on the rating side).
+
+**Four variants** (2014–2025 team-seasons; schedule ranks among FBS teams with average ranks for ties; 1,000 team-season resamples, seed 0; positive = the poll makes a schedule look tougher):
+- **A. As published:** opponents' AP points per voter in the poll before each game vs opponents' final season-only rating.
+- **B. Shape matched:** both sides as top-25 rank points (26 − rank inside the top 25, else 0). Poll side: opponent's AP rank in the poll before the game. Rating side: opponent's final season-only rank. **This is the fairest test of the claim**: same shape, game-day poll versus final results.
+- **C. Timing matched:** opponents' final regular-season AP points per voter vs final season-only rating.
+- **D. Shape and timing matched:** final AP rank points vs final season-only rank points. Reported for completeness; it removes the game-day effect by design.
+
+**Final regular-season poll.** Taken as the poll after each season's last schedule week (the `next_*` columns of the last transition in `team_weeks.csv`). The review's script used the `prior_*` columns of each team's last schedule week, which is one poll earlier. Both are computed: the review's version to check its table, the corrected one as the reported result.
+
+**Review's numbers** (its final-poll lookup), SEC / ACC / SEC − ACC, rank places:
+A +6.7 / −7.2 / +14.0; B +5.7 / +2.1 / +3.5 (CI −0.8, +8.0); C +1.2 / −9.7 / +10.9; D +0.2 / +0.1 / +0.1.
+
+The original H5 numbers stay in `results/bias_tests.json` and the report as originally computed.
