@@ -185,3 +185,22 @@ Added to close two gaps in the claim, after every earlier result (including the 
 - Bands by schedule week: early 1–4, middle 5–8, late 9 and later.
 - **Primary measure:** mean per-game gap by conference and band; SEC early minus SEC late; SEC minus ACC in each band.
 - **Supports a preseason link** if the SEC early-band gap is above zero with an interval excluding zero, and SEC early minus late is above zero with an interval excluding zero. **No link shown** if the SEC gap is flat across the season or larger late.
+
+## 2026-10-23 — T3: the in-season "ranked loop" (Kyle's request; added after all earlier results)
+
+Proposed after T1 and T2 to explain them. Hypothesis: when ranked teams in the same conference play each other, the loser falls less than its season justifies ("good loss") and the winner gains credit for beating a ranked team, so the conference keeps its teams ranked above their results all season. Definitions and readings are fixed here, before it is run. Data: 2014–2025 (no 2020), regular season, rows with exactly one game that week. Intervals: 1,000 resamples of team-seasons, seed 0. Results are reported whichever way they point.
+
+- **Post-game overrating** = the team's final season-only rank after the last regular-season week (capped at 26) minus its AP rank in the poll right after the game (26 if unranked). Positive = after that game, the poll ranked the team above where its season ended up.
+- **Adjustment:** a team's starting point matters (higher-ranked teams have further to fall), so for each group of games the expectation comes from a straight-line fit of post-game overrating on the pre-game AP rank across all conferences. Means of (actual − expected) are reported by the team's conference.
+
+**Primary (the loop's losing side):** ranked teams that lose to a ranked opponent from their own conference. **Supports the loop** if the SEC's adjusted value is above zero with an interval excluding zero and SEC minus ACC is above zero with an interval excluding zero. **Partial** if only the SEC is above zero. **Not supported** otherwise.
+
+**Controls** (same measure; separate the loop from general SEC overrating):
+- C1: ranked teams that lose to a ranked opponent from another conference.
+- C2: ranked teams that lose to an unranked opponent.
+
+The loop is specific to the conference only if the SEC effect in the primary group is clearly larger than in C1 and C2 (reported as SEC primary minus SEC C1, with interval).
+
+**Secondary (the winning side):** ranked teams that beat a ranked opponent from their own conference, same measure.
+
+Also reported for each group: share still ranked in the next poll, and average places dropped (or gained). Every qualifying game is saved to `results/t3_loop_games.csv`.
