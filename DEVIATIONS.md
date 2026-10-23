@@ -60,3 +60,17 @@ The methodology says the replayed end-of-season top 25 must match the real final
 4. **"Elo says ranked, AP didn't" table in the hypothesis test.** Each week, list teams in the Elo top 25 (postgame Elo after that week's games) that are outside the next AP top 25, and AP-ranked teams outside the Elo top 25, counted by conference. This makes check 2 (poll versus strength) concrete. Elo stays out of the model.
 
 **Registered model kept for the record.** The original specification (raw points, no record features) is still trained, replayed and scored on the holdout, and its results are reported next to the revised model's. The revised model is the one used for the hypothesis test and the counterfactual, subject to the same selection rule and pass criteria.
+
+## 2026-10-23 — Stickiness yardstick and swap pairing (before the counterfactual is run)
+
+**Yardstick (Kyle's decision).** The holdout showed more stickiness than the training seasons: under the 0 rule the replay kept preseason-ranked teams +1.72 (2024) and +2.16 (2025) rank spots above their real final rank, against +0.75 on training seasons. The yardstick is the larger of the training figure and the holdout mean, per unranked rule, so it is always the cautious one:
+- 0 rule (primary): **1.94 spots** (holdout mean; training was 0.75).
+- Floor rule: **0.44 spots** (training; the holdout mean was −0.40).
+
+A paired team's swap gain (its rank with the swap versus without, both simulated) no larger than the yardstick is reported as indistinguishable from model inertia.
+
+**Pairing.** The 2026 preseason poll ranks 9 SEC teams and 3 ACC teams, so ordering by preseason points leaves SEC teams #4–9 without a partner, and the 14 unranked ACC teams cannot be ordered by points.
+- **Primary (literal reading of the methodology):** the 3 ranked ACC teams swap points with the top 3 SEC teams by points. Every other team keeps its real points.
+- **Extension (logged, reported alongside):** all 9 ranked SEC slots go to ACC teams. Unranked teams in each conference are ordered by preseason Elo (pregame Elo for their first 2026 game), used only to form pairs, never as a model input.
+
+**Model.** The chosen model from the holdout (revised spec, challenger), as fit on 2014–2023. It is not refit on 2024–2025. Both unranked rules are run; the 0 rule is primary.
