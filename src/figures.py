@@ -795,13 +795,30 @@ def fig_t2():
          "The SEC gap is not concentrated early, so no preseason link is shown; it exceeds the ACC's in every band.")
 
 
+def fig_t3():
+    t = load("t3_loop.json")
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(11.5, 3.8))
+    for ax, grp, title in ((a1, "primary_lost_to_ranked_same_conference", "Lost to a ranked conference rival"),
+                           (a2, "winners_beat_ranked_same_conference", "Beat a ranked conference rival")):
+        b = t[grp]
+        rows = [(f"{CONF_LABEL.get(c, c)} (n={b[c]['games']})" if ax is a1 else CONF_LABEL.get(c, c),
+                 b[c]["adjusted_overrating"], *b[c]["ci"], CONF_COLOR[c]) for c in CONFS]
+        rows.append(("SEC minus ACC", b["sec_minus_acc"], *b["sec_minus_acc_ci"], INK))
+        forest(ax, rows, title, "Places ranked above season's end, vs typical")
+    a2.set_yticklabels([])
+    save(fig, "fig25_t3_ranked_loop.png",
+         "T3, 2014-2025. Right after the game, how far the poll ranked the team above where its season ended up, "
+         "beyond what is typical for its pre-game rank.\nSEC teams play the most ranked conference games, "
+         "but each one is judged like anyone else's: the loop is not supported.")
+
+
 def main():
     for f in (fig_timeline, fig_data_overview, fig_training_mae, fig_replay_training, fig_climbers,
               fig_holdout, fig_holdout_scatter, fig_rating_validation, fig_elo_carryover,
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
               fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity,
-              fig_2026_board, fig_t1, fig_t2):
+              fig_2026_board, fig_t1, fig_t2, fig_t3):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 

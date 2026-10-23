@@ -21,10 +21,11 @@ The model passed its pre-registered out-of-sample test. For the 2024 and 2025 se
 4. **SEC teams sit about one poll position above what their current-season results support** (+1.1, 95% CI +0.3 to +1.9; H2 against the season-only rating, added). The SEC-minus-ACC difference (+0.76, CI −0.43 to +1.93) is not distinguishable from zero, and the Big 12 is similar to the SEC at +1.2.
 5. **SEC preseason rankings are not unjustified** (T1, added last). SEC preseason-ranked teams finish almost exactly where their preseason rank predicts (+0.09 places, CI −1.63 to +1.89); ACC preseason picks hold up no better.
 6. **The SEC's schedule boost shows no preseason link, but it is bigger than the ACC's** (T2, added last). Per game, SEC opponents look 0.6 to 1.2 places better on game day than their seasons end up, steadily through the season rather than mainly early. Measured this way, per game, the SEC-minus-ACC difference is clear in every part of the season, although the coarser schedule-rank version in point 3 is not.
+7. **It is not an in-season voter loop either** (T3, added last). SEC teams that lose to ranked SEC rivals end up ranked about where their seasons finish (+0.44 places, CI −0.67 to +1.43), no differently from ACC teams. The SEC plays far more of these games, but each is judged like anyone else's. What remains possible is that our results rating undervalues teams in a deep conference.
 
 A direct counterfactual, swapping SEC and ACC preseason positions in 2026, could not be answered reliably. Even our best model holds on to preseason rank more firmly than real voters do: it failed a plausibility check fixed in advance, which the real 2026 poll passes.
 
-In short, SEC opponents carry rankings their results do not fully justify, all season long and more than ACC opponents do, so SEC schedules get extra credit. But the evidence does not trace that to unjustified preseason rankings: SEC preseason picks hold up as well as anyone's, and the boost is no larger early in the season. Voters do not grade SEC games more generously, and ACC schedules are not shown to be undersold in schedule-rank terms.
+In short, SEC opponents carry rankings their results do not fully justify, all season long and more than ACC opponents do, so SEC schedules get extra credit. But the evidence does not trace that to unjustified preseason rankings: SEC preseason picks hold up as well as anyone's, and the boost is no larger early in the season. Nor is it a voter loop in ranked conference games. Part of it may sit in our own yardstick rather than in the voters. Voters do not grade SEC games more generously, and ACC schedules are not shown to be undersold in schedule-rank terms.
 
 ---
 
@@ -471,6 +472,25 @@ Two readings fit T2. Voters may keep SEC teams ranked above their results all se
 
 *Figure 24. T2: how much better opponents looked on game day than they finished, by part of the season, 2014–2025.*
 
+### 5.10 Test of the in-season "ranked loop" (added last)
+
+T2 left two explanations. This test checks the one about voters, a self-reinforcing loop: when two ranked teams from the same conference meet, the loser falls less than its season justifies (a "good loss"), and the winner collects credit for beating a ranked team. That would keep a conference with many ranked teams ranked above its results all season. Definitions and readings were logged first (`DEVIATIONS.md`, deviation 17). The measure is how far the poll ranked the team right after the game above where its season ended up by the season-only rating, beyond what is typical for its pre-game rank. All 1,359 qualifying team-games (each same-conference game appears once for each side) are in `results/t3_loop_games.csv`.
+
+| Group | SEC | ACC | SEC − ACC |
+| --- | --- | --- | --- |
+| **Lost to a ranked conference rival** (primary) | **+0.44 (−0.67, +1.43)**, n = 152 | +0.96 (−0.77, +2.52), n = 38 | −0.52 (−2.55, +1.53) |
+| Beat a ranked conference rival | +0.84 (−0.25, +2.16), n = 152 | +0.41 (−1.05, +2.02), n = 38 | +0.43 (−1.56, +2.49) |
+| Lost to a ranked team from another conference (control) | +1.91 (−1.14, +4.68), n = 14 | +3.39 (+1.01, +5.64), n = 22 | −1.49 (−5.24, +2.27) |
+| Lost to an unranked team (control) | +0.09 (−1.32, +1.37), n = 77 | +0.46 (−0.82, +1.53), n = 82 | −0.36 (−2.22, +1.46) |
+
+**Result: not supported.** SEC teams that lose to a ranked SEC rival end up ranked about where their seasons finish. They drop a little further after such losses than ACC teams do (5.1 places against 4.4), and SEC winners gain no clear extra credit. What differs is volume: SEC teams played four times as many ranked-versus-ranked conference games as ACC teams (152 against 38). But each game is judged like anyone else's. The Big Ten is the outlier: after these games its teams sit about two places *below* where their seasons end.
+
+![Figure 25. T3: after losing to (left) or beating (right) a ranked conference rival, how far the poll ranked each team above where its season ended up, by conference.](results/figures/fig25_t3_ranked_loop.png)
+
+*Figure 25. T3: no in-season loop. SEC teams are judged after ranked conference games like everyone else.*
+
+So the season-long SEC schedule boost in T2 is not explained by a voter loop in ranked conference games. Of the two explanations T2 left, the one that remains is that the season-only rating undervalues teams in a deep conference. In that case part of the boost is in our yardstick, not in the voters. The data here cannot confirm that either; it is what is left, not something shown.
+
 ---
 
 ## 6. Deviations from the pre-registered plan
@@ -495,8 +515,9 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 14 | Model training forced to one thread | Results differed across machines with different thread counts | All results; only rated-model floor-rule figures move, none cited here |
 | 15 | Exploratory 2026 over/underrated board (§5.8) | Kyle's request for a current-season view | All results |
 | 16 | T1 and T2: tests of the preseason link (§5.9) | Close the two gaps between the claim and the evidence | All results, including §5.8 |
+| 17 | T3: in-season ranked loop (§5.10) | Test the explanation proposed for T2 | All results, including T1 and T2 |
 
-Deviations 5, 6, 8, 10, 11, 12, 15 and 16 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
+Deviations 5, 6, 8, 10, 11, 12, 15, 16 and 17 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
 ---
 
@@ -518,7 +539,7 @@ The study distinguishes three mechanisms by which the SEC could benefit:
 
 1. **Voters score SEC games more generously.** Not supported. For the same result against the same quality of opponent, SEC and ACC teams move alike (H4). The H1 result pointing the other way comes from a model that fits worse than predicting no change.
 2. **Preseason standing persists, and the SEC starts with more of it.** Supported, but the effect is general. About half of preseason standing persists into mid-season at equal performance, for every conference alike (H3). The SEC benefits because it begins with more ranked teams, not because its rankings are stickier.
-3. **The poll inflates the perceived strength of SEC schedules.** Supported for the SEC, not as an SEC-versus-ACC difference. On a matched scale, SEC opponents are ranked about 5.7 places higher on game day than their final results justify (H5 sensitivity, variant B). That is the mechanism in the original claim. The ACC shows no comparable effect, but the SEC-minus-ACC gap (+3.5 places) is not statistically clear. The original H5 figures (+6.7 SEC, −7.0 ACC, gap 13.7) overstated the contrast through a measurement artifact. Measured per game (T2), the SEC-minus-ACC difference is clear in every part of the season. It does not fade as preseason rankings wash out, and SEC preseason rankings themselves hold up as well as anyone's (T1). So the mechanism is not "unjustified preseason rankings". SEC teams, or our rating's view of them, stay ranked above their results throughout the season.
+3. **The poll inflates the perceived strength of SEC schedules.** Supported for the SEC, not as an SEC-versus-ACC difference. On a matched scale, SEC opponents are ranked about 5.7 places higher on game day than their final results justify (H5 sensitivity, variant B). That is the mechanism in the original claim. The ACC shows no comparable effect, but the SEC-minus-ACC gap (+3.5 places) is not statistically clear. The original H5 figures (+6.7 SEC, −7.0 ACC, gap 13.7) overstated the contrast through a measurement artifact. Measured per game (T2), the SEC-minus-ACC difference is clear in every part of the season. It does not fade as preseason rankings wash out, and SEC preseason rankings themselves hold up as well as anyone's (T1). So the mechanism is not "unjustified preseason rankings". Nor is it an in-season loop in which ranked SEC teams soften each other's losses (T3): SEC teams are judged after ranked conference games like anyone else. What remains is that SEC opponents stay ranked above our rating's view of them all season. That may be voters, or a rating that undervalues teams in a deep conference.
 
 The net result is that SEC teams sit about one position above what their current-season results support (H2). The SEC-minus-ACC difference (+0.76) is not distinguishable from zero. The Big 12 shows a similar overrating, and Group of 5 teams are underrated by about the same amount, so this is not unique to the SEC.
 
@@ -551,7 +572,7 @@ Elo is independent of voters but not of the previous season. Its season-to-seaso
 
 The SEC benefits in the AP poll in a narrower and different way than the claim implies. SEC schedules get extra credit: SEC opponents are ranked above what their seasons end up justifying, about six places by schedule rank and 0.6 to 1.2 places per game. Per game, that is more than ACC schedules get, and it holds all season. SEC teams end up about one position above their current-season results, a margin shared with the Big 12.
 
-What the data do not support is the mechanism in the original claim. SEC preseason rankings are not unjustified: SEC preseason picks finish where their rank predicts, and hold up better than ACC picks. The schedule boost is no larger early in the season, when rankings are mostly preseason carry-over. Voters do not grade SEC results more generously. Preseason standing does persist, but equally for every conference. The first version of this report claimed ACC schedules are undersold; that was a measurement artifact and is withdrawn. Whether ACC teams would rise to SEC-like rankings given SEC-like starting positions cannot be determined with these models, and we do not claim it.
+What the data do not support is the mechanism in the original claim. SEC preseason rankings are not unjustified: SEC preseason picks finish where their rank predicts, and hold up better than ACC picks. The schedule boost is no larger early in the season, when rankings are mostly preseason carry-over. It does not come from a voter loop in ranked conference games either, and voters do not grade SEC results more generously. Part of the boost may be in the yardstick rather than the voters: a rating built only from scores may undervalue teams that play many strong conference opponents. Preseason standing does persist, but equally for every conference. The first version of this report claimed ACC schedules are undersold; that was a measurement artifact and is withdrawn. Whether ACC teams would rise to SEC-like rankings given SEC-like starting positions cannot be determined with these models, and we do not claim it.
 
 ---
 
@@ -585,4 +606,5 @@ python run_all.py
 | Exploratory team residuals | `results/team_bias_*.csv`, `results/conference_bias_*.csv` | `src/team_bias.py` |
 | 2026 over/underrated (exploratory) | `results/rankings_2026.csv` | `src/rankings_2026.py` |
 | T1 and T2 (preseason link) | `results/preseason_tests.json` | `src/preseason_tests.py` |
-| Figures 1–24 | `results/figures/*.png` | `src/figures.py` |
+| T3 (ranked loop), every qualifying game | `results/t3_loop.json`, `results/t3_loop_games.csv` | `src/loop_test.py` |
+| Figures 1–25 | `results/figures/*.png` | `src/figures.py` |
