@@ -204,3 +204,23 @@ The loop is specific to the conference only if the SEC effect in the primary gro
 **Secondary (the winning side):** ranked teams that beat a ranked opponent from their own conference, same measure.
 
 Also reported for each group: share still ranked in the next poll, and average places dropped (or gained). Every qualifying game is saved to `results/t3_loop_games.csv`.
+
+## 2026-10-23 — T4: does the season-only rating overrate the SEC? (Kyle's request; added after all earlier results)
+
+Kyle's objection: the finding that SEC schedules are tougher by results may itself be biased. SEC teams mostly play each other, so how strong the SEC looks to any rating rests on its games against outsiders. If those games flatter the SEC, the rating overrates the whole conference and every SEC schedule looks harder than it is. This test referees that with games outside the conference, including bowls, which the rating never saw. Fixed here, before it is run; reported whichever way it points.
+
+- **Games:** every completed game, 2014–2025 (no 2020), between an SEC team and an FBS team from another conference. Regular-season games from week 4 on (earlier ratings rest on too few games), plus all postseason games (bowls and playoff). FCS opponents excluded.
+- **Prediction, made before each game:** the performance component of the season-only rating, which is on the scoring-margin scale. Predicted SEC margin = SEC team's rating − opponent's rating + home edge (+ if the SEC team is at home, − if away, 0 if neutral), from ratings through the previous week. Postseason games use the final regular-season ratings, so the rating has never seen them.
+- **Primary measure:** mean of (actual SEC margin − predicted margin), with actual margins capped at ±28 like the rating itself. 95% interval from 1,000 resamples of SEC team-seasons (seed 0).
+- **Reading:**
+  - **Supports Kyle's objection (the rating overrates the SEC)** if the mean is below zero with an interval excluding zero. SEC teams then do worse against outsiders than the rating expects.
+  - **Refutes it** if the mean is at or above zero with an interval excluding zero (the rating, if anything, underrates the SEC).
+  - **Inconclusive** if the interval includes zero.
+- **Also reported:**
+  - the same measure for every other conference against outsiders, for comparison;
+  - postseason games alone, which the rating never saw;
+  - games against power-conference opponents alone (ACC, Big Ten, Big 12, Pac-12 through 2023, Notre Dame), to address the "cupcakes" concern;
+  - the share of games the SEC team won against the number predicted;
+  - a raw, model-free head-to-head of SEC against ACC: record and average margin, regular season plus postseason.
+
+Every game used is saved to `results/t4_referee_games.csv`.
