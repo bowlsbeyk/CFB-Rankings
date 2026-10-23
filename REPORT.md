@@ -62,6 +62,10 @@ All work was done on October 23, 2026. The plan was committed before any data wa
 
 Section 6 lists every deviation and, importantly, which results had been seen when each was decided.
 
+![Figure 1. Audit trail. Commit times for the plan, data freeze, model training, the one-time holdout and every later analysis.](results/figures/fig01_timeline.png)
+
+*Figure 1. Audit trail. Commit times for the plan, data freeze, model training, the one-time holdout and every later analysis.*
+
 ---
 
 ## 3. Data
@@ -81,6 +85,10 @@ All 39 raw files were pulled once (2026-10-23 17:18 UTC), saved unmodified, and 
 - **Unit of analysis:** one row per FBS team per poll transition. Schedule week *w* links AP poll *w* (released before week *w*'s games; week 1 is the preseason poll) to poll *w*+1. That gives 21,626 team-weeks: 16,610 training, 4,050 holdout and 966 for 2026.
 - **Conferences:** each team is tagged with its conference in that season, so realignment is handled. Five groups are used: SEC, ACC, Big Ten, Big 12, and Other (Pac-12, Group of 5, independents).
 - **Checks:** every AP-ranked school in every season matched a schedule team. Tests confirm no feature uses information from after the poll it predicts (12 tests, all passing).
+
+![Figure 2. Team-weeks per season by role (left) and AP voters per poll (right). The growing panel is why points are scaled per voter.](results/figures/fig02_data_overview.png)
+
+*Figure 2. Team-weeks per season by role (left) and AP voters per poll (right). The growing panel is why points are scaled per voter.*
 
 ### 3.3 Data limitations found and handled
 
@@ -127,6 +135,10 @@ Elo carries a fixed share of the previous season. In this data a team's preseaso
 
 The weights, the cap and the shrinkage were fixed before any rating was computed.
 
+![Figure 3. Elo at the end of one season against Elo at the start of the next. Elo keeps two-thirds of last season's distance from average.](results/figures/fig09_elo_carryover.png)
+
+*Figure 3. Elo at the end of one season against Elo at the start of the next. Elo keeps two-thirds of last season's distance from average.*
+
 ### 4.5 Hypothesis tests
 
 All on real 2014–2025 data. The 95% intervals come from 1,000 bootstrap resamples of whole team-seasons (seed 0).
@@ -166,6 +178,10 @@ Mean absolute error per team-week, leave-one-season-out, unranked = 0:
 
 The linear model is worse than predicting no change in every specification. Voter response is strongly non-linear (a win matters far more to a ranked team than to an unranked one), and a linear model cannot represent that. One rank position is about 0.80 points per voter.
 
+![Figure 4. Out-of-season error on each training season (left) and error relative to predicting no change for ranked teams (right).](results/figures/fig03_training_error.png)
+
+*Figure 4. Out-of-season error on each training season (left) and error relative to predicting no change for ranked teams (right).*
+
 Season replay on training seasons (each season predicted by a model that never saw it):
 
 | Specification | Mean ρ | Min ρ | Seasons ≥ 0.70 | Final top-25 overlap | Stickiness (places) |
@@ -174,6 +190,14 @@ Season replay on training seasons (each season predicted by a model that never s
 | Registered | 0.78 | 0.59 | 7 / 9 | 16.8 | +1.24 |
 | Revised | 0.85 | 0.74 | 9 / 9 | 17.8 | +0.75 |
 | Rated | **0.88** | **0.77** | **9 / 9** | **19.0** | **+0.58** |
+
+![Figure 5. Season replay on training seasons: accuracy by poll week (left) and final-poll accuracy per season against the preseason poll held fixed (right).](results/figures/fig04_replay_training.png)
+
+*Figure 5. Season replay on training seasons: accuracy by poll week (left) and final-poll accuracy per season against the preseason poll held fixed (right).*
+
+![Figure 6. Teams correctly promoted into the final top 25 from outside the preseason poll (left) and stickiness to the preseason poll (right).](results/figures/fig05_climbers_stickiness.png)
+
+*Figure 6. Teams correctly promoted into the final top 25 from outside the preseason poll (left) and stickiness to the preseason poll (right).*
 
 ### 5.2 Holdout (2024–2025, scored once)
 
@@ -189,6 +213,14 @@ The pre-registered rule selected the boosted trees in every case. For reference,
 
 On the holdout, the primary model's typical weekly miss for a ranked team was 0.68 rank positions, and it called the direction of movement correctly 93% of the time. Its stickiness was higher than on training seasons (+1.72 and +2.16 places): it missed several risers from outside the preseason poll, such as Boise State, SMU and Army in 2024 and BYU, James Madison and North Texas in 2025.
 
+![Figure 7. Holdout replay accuracy for each specification and unranked rule, 2024 and 2025. The shaded region fails the pre-registered bar.](results/figures/fig06_holdout.png)
+
+*Figure 7. Holdout replay accuracy for each specification and unranked rule, 2024 and 2025. The shaded region fails the pre-registered bar.*
+
+![Figure 8. Primary model, holdout replay: real final rank against replayed rank. Orange teams were in the real top 25 but not the replay's.](results/figures/fig07_holdout_placement.png)
+
+*Figure 8. Primary model, holdout replay: real final rank against replayed rank. Orange teams were in the real top 25 but not the replay's.*
+
 ### 5.3 The season-only rating
 
 Accuracy at picking the winners of week-6-and-later FBS games, 2014–2025, from ratings through the previous week:
@@ -203,9 +235,17 @@ Accuracy at picking the winners of week-6-and-later FBS games, 2014–2025, from
 
 The rating matches Elo and the AP poll while using no prior-season information. The performance component alone predicts best, but the pre-set 50/50 blend was kept.
 
+![Figure 9. Next-week winner picks in games with a ranked team, 2014–2025, week 6 and later.](results/figures/fig08_rating_validation.png)
+
+*Figure 9. Next-week winner picks in games with a ranked team, 2014–2025, week 6 and later.*
+
 ### 5.4 Hypothesis tests
 
 **H1 — Conference effect, same result.** In the linear model, SEC teams gain 0.12 points per voter more than ACC teams for an identical result (95% CI 0.0001 to 0.24). The registered specification gives +7.3 AP points (CI 0.6–14.8). The SEC, Big Ten and Big 12 coefficients are nearly equal; the ACC's is lower. This rests on the linear model, which fits poorly (§5.1), and H4, using the far better model, does not reproduce it.
+
+![Figure 10. H1: conference coefficients in the linear model, relative to other conferences.](results/figures/fig13_conference_effect.png)
+
+*Figure 10. H1: conference coefficients in the linear model, relative to other conferences.*
 
 **H2 — Poll rank versus strength rank** (positive = the poll ranks a team above its strength):
 
@@ -220,7 +260,19 @@ The rating matches Elo and the AP poll while using no prior-season information. 
 
 Counts are team-weeks. The two yardsticks disagree, and the disagreement is informative (see H6). Against current-season results, the SEC is ranked about one position too high, clearly different from zero. The ACC is not distinguishable from zero. The SEC-minus-ACC difference is positive but its interval includes zero.
 
+![Figure 11. H2: poll rank minus strength rank by conference, against Elo (left) and against the season-only rating (right), with 95% intervals.](results/figures/fig10_poll_vs_strength.png)
+
+*Figure 11. H2: poll rank minus strength rank by conference, against Elo (left) and against the season-only rating (right), with 95% intervals.*
+
+![Figure 12. H2: team-weeks ranked by the AP but outside the season-only top 25 (right), and the reverse (left).](results/figures/fig11_snubs_and_gifts.png)
+
+*Figure 12. H2: team-weeks ranked by the AP but outside the season-only top 25 (right), and the reverse (left).*
+
 **H3 — Preseason carry-over.** Holding record, margin, strength and week fixed, a team's points per voter in polls 6 and later rise by 0.48 for each point per voter it held in the preseason poll (CI 0.42–0.54; with Elo as the control, 0.52, CI 0.45–0.58). Extra carry-over for the SEC relative to the ACC is +0.04 (CI −0.16 to +0.24). Preseason standing is sticky, equally so for both conferences.
+
+![Figure 13. H3: preseason carry-over at equal record, margin, strength and week (left), and the SEC-minus-ACC difference (right).](results/figures/fig12_preseason_carryover.png)
+
+*Figure 13. H3: preseason carry-over at equal record, margin, strength and week (left), and the SEC-minus-ACC difference (right).*
 
 **H4 — Rewards and punishments.** Residuals of the name-blind rated model for ranked teams, in points per voter (positive = rose more, or fell less, than results explain):
 
@@ -234,6 +286,10 @@ Counts are team-weeks. The two yardsticks disagree, and the disagreement is info
 | **SEC − ACC** | −0.07 (−0.23, +0.09) | +0.09 (−0.20, +0.37) | −0.01 (−0.13, +0.11) |
 
 Once opponent quality is measured by results rather than by poll standing, voters treat SEC and ACC results the same. The only clear conference effect is a reward for Big 12 wins.
+
+![Figure 14. H4: how far ranked teams beat the name-blind model after wins (left) and losses (right), by conference.](results/figures/fig14_rewards_punishments.png)
+
+*Figure 14. H4: how far ranked teams beat the name-blind model after wins (left) and losses (right), by conference.*
 
 **H5 — Schedule inflation.** Each team-season's schedule is ranked among FBS teams (1 = toughest) by opponents' poll points and by opponents' season-only rating:
 
@@ -250,7 +306,15 @@ Once opponent quality is measured by results rather than by poll standing, voter
 
 This is the largest and most precisely estimated effect in the study. The poll makes SEC schedules look about seven places tougher, and ACC schedules about seven places easier, than opponents' actual results justify. In 2026 to date the direction is the same but the estimate is imprecise: SEC +2.7 (−3.2, +9.3), ACC −4.9 (−14.9, +4.0), SEC − ACC +7.6 (−3.6, +19.7).
 
+![Figure 15. H5: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right.](results/figures/fig15_schedule_inflation.png)
+
+*Figure 15. H5: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right.*
+
 **H6 — Elo's head start.** Relative to the season-only rating (polls 6+), Elo ranks SEC teams 0.91 places higher (−0.48, +2.18) and ACC teams 1.07 places lower (−2.55, +0.48). The SEC − ACC difference is **+1.98 (+0.03, +3.86)**. Elo carries roughly two positions more prior-season advantage for the SEC than for the ACC. That explains why the Elo-based version of H2 showed no SEC overrating: Elo shares part of the head start the test was looking for.
+
+![Figure 16. H6: places Elo ranks teams above the season-only rating, by conference.](results/figures/fig16_elo_head_start.png)
+
+*Figure 16. H6: places Elo ranks teams above the season-only rating, by conference.*
 
 ### 5.5 What real voters do at poll 8 (2014–2025)
 
@@ -266,6 +330,10 @@ These counts use no model.
 | Started 13–25, three or more losses | 45 | 0% |
 
 A strong record overrides preseason rank. At 5-1, teams that started ranked are always ranked, while a quarter of unranked starters are not. That gap is consistent with H3. It is not by itself evidence of bias, because teams that start ranked are usually stronger.
+
+![Figure 17. Share of teams ranked in poll 8 by record and preseason status, real AP polls 2014–2025.](results/figures/fig17_base_rates.png)
+
+*Figure 17. Share of teams ranked in poll 8 by record and preseason status, real AP polls 2014–2025.*
 
 ### 5.6 The 2026 counterfactual
 
@@ -286,6 +354,18 @@ The 2026 preseason poll ranked nine SEC teams and three ACC teams (Miami #7, SMU
 - **Plausibility.** Every run fails, including the sanity run. The model leaves 6-1 Wake Forest unranked (real #17) and keeps 3-3 Oklahoma ranked (real: unranked). The nine-slot swaps add further violations: 6-1 Tennessee unranked, and 4-3 Virginia, Louisville and others ranked. The real 2026 poll passes the same check.
 
 These swap results reflect the model's attachment to starting position more than voter behavior, and are not used as evidence.
+
+![Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs.](results/figures/fig18_counterfactual_slots.png)
+
+*Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs.*
+
+![Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap.](results/figures/fig19_counterfactual_teams.png)
+
+*Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap.*
+
+![Figure 20. 2026 to date: AP rank in poll 8 against the season-only rating after week 7.](results/figures/fig20_2026_poll_vs_rating.png)
+
+*Figure 20. 2026 to date: AP rank in poll 8 against the season-only rating after week 7.*
 
 ### 5.7 Exploratory team-level residuals
 
@@ -391,3 +471,4 @@ python run_all.py
 | Real-voter base rates | `results/base_rates_poll8.json` | `src/base_rates.py` |
 | Counterfactual | `results/counterfactual_2026.json`, `results/counterfactual_2026_rated.json` | `src/counterfactual.py` |
 | Exploratory team residuals | `results/team_bias_*.csv`, `results/conference_bias_*.csv` | `src/team_bias.py` |
+| Figures 1–20 | `results/figures/*.png` | `src/figures.py` |

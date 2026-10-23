@@ -23,6 +23,7 @@ STEPS = [
     ["src/bias_tests.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
+    ["src/figures.py"],
 ]
 
 for step in STEPS:

@@ -24,7 +24,7 @@ A pre-registered study of week-to-week AP poll movement, testing whether SEC tea
 
 ## Findings
 
-The full write-up is in [`REPORT.md`](REPORT.md). In brief, on 2014–2025 AP polls:
+The full write-up, with 20 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls:
 
 1. **Preseason standing persists for everyone.** About half of a team's preseason standing still shows up after week five at the same record, margin and strength. It persists no more for the SEC than for the ACC.
 2. **Voters do not score SEC games more generously.** For the same result against the same quality of opponent, SEC and ACC teams move alike after wins and after losses.
