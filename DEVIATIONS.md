@@ -138,3 +138,15 @@ These settings are fixed now and not tuned.
 A +6.7 / −7.2 / +14.0; B +5.7 / +2.1 / +3.5 (CI −0.8, +8.0); C +1.2 / −9.7 / +10.9; D +0.2 / +0.1 / +0.1.
 
 The original H5 numbers stay in `results/bias_tests.json` and the report as originally computed.
+
+## 2026-10-23 — Raw data no longer committed; fetched and verified instead (redistribution terms)
+
+**Why.** CollegeFootballData.com's Terms of Use (effective 2026-08-12, https://collegefootballdata.com/terms) allow privately storing API responses and publishing analyses built from them, but not giving third parties "stored raw API responses" or publishing API data "as a standalone dataset or bulk download" (Sections 2, 4 and 5). The repository committed the raw `/rankings` responses. It also committed schedule files from sportsdataverse/cfbfastR-data, which carries no license and holds CFBD-derived fields (Elo, excitement index). Both are removed from the repository from this commit on.
+
+**What replaces them.** `data/MANIFEST.json` (source URLs, pull time, SHA-256 per file, upstream commit) stays. `src/fetch_data.py` re-downloads every file and fails unless each one matches its recorded checksum:
+- Schedules: from cfbfastR-data at the pinned commit `09f2595e`. No key needed.
+- Polls: from the CFBD API with a free key in `CFBD_API_KEY`. The 2026 regular-season response is cut back to the weeks that were frozen (1–8) before checking. The API's JSON re-serializes to identical bytes, so this reproduces the frozen file exactly. A test re-pull on 2026-10-23 of 8 of the 26 poll files matched their checksums byte for byte.
+
+`run_all.py` runs `fetch_data.py` first. It downloads only files that are missing or fail their checksum, so a machine that already has them stays offline. No data value, result or figure changes.
+
+**Not done: history.** Earlier commits, starting with `17c9e98`, still contain the files. Removing them would mean rewriting the repository's public history, which would also change every commit hash the audit trail cites. That decision is Kyle's.
