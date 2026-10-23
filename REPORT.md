@@ -487,10 +487,13 @@ The SEC benefits in the AP poll in a narrower way than the claim implies. Voters
 
 ```bash
 pip install -r requirements.txt
+export CFBD_API_KEY=...    # free key: https://collegefootballdata.com/key
 python run_all.py
 ```
 
-`run_all.py` rebuilds every number in this report from the frozen files in `data/raw`, offline. An independent rebuild from a fresh clone of commit `ccf8b45` reproduced all 29 committed result files byte for byte, with all 12 tests passing. The same check found that a clean clone lacked the `data/processed/` folder at the second step; that was fixed in the following commit. `src/score_holdout.py` fails if the recomputed holdout differs from the recorded `results/holdout.json`. `src/pull_data.py`, the only network step, re-pulls data and needs a CollegeFootballData.com key in `CFBD_API_KEY`; running it would change the frozen inputs and must be logged.
+`run_all.py` first runs `src/fetch_data.py`, which downloads the 39 raw files (they are not committed; §3.1) and fails unless every one matches its checksum in `data/MANIFEST.json`. It then rebuilds every number and figure in this report offline. `src/score_holdout.py` fails if the recomputed holdout differs from the recorded `results/holdout.json`. `src/pull_data.py` re-pulls and re-freezes the data; running it would change the frozen inputs and must be logged.
+
+**What independent rebuilds showed.** An outside review rebuilt the first version on a different machine. Every headline number reproduced, and most files matched to floating-point precision. One sensitivity run, the rated model under the floor rule, varied slightly, because gradient-boosted training sums in parallel and the order depends on the machine's thread count. Training is now forced to one thread (deviation 14). An independent rebuild from a fresh clone of commit `a423161`, deliberately run with four threads requested, then downloaded and verified all 39 raw files, passed all 12 tests and reproduced all 51 committed result files byte for byte.
 
 ### File map
 
