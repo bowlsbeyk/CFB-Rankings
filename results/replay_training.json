@@ -2701,26 +2701,26 @@
   },
   "rated_gbt_floor": {
     "summary": {
-      "spearman_mean": 0.880445666033024,
+      "spearman_mean": 0.8800183156056736,
       "spearman_min": 0.8515384615384616,
       "seasons_passing_0.7": 9,
       "seasons": 9,
       "overlap_mean": 18.555555555555557,
       "preseason_unchanged_spearman_mean": 0.5649971885425464,
-      "stickiness_spots_mean": 0.4222222222222222,
+      "stickiness_spots_mean": 0.4577777777777778,
       "climbers_real": 93,
-      "climbers_sim": 79,
-      "climbers_caught": 54,
+      "climbers_sim": 77,
+      "climbers_caught": 53,
       "preseason_still_ranked_real": 132,
-      "preseason_still_ranked_sim": 146
+      "preseason_still_ranked_sim": 148
     },
     "by_season": {
       "2014": {
         "final_regular": {
-          "spearman": 0.8623076923076922,
+          "spearman": 0.8584615384615385,
           "overlap": 21,
-          "mean_abs_rank_error": 3.68,
-          "within_3": 0.72
+          "mean_abs_rank_error": 6.2,
+          "within_3": 0.6
         },
         "preseason_unchanged_vs_final_regular": {
           "spearman": 0.4308186871188144,
@@ -2729,17 +2729,17 @@
           "within_3": 0.36
         },
         "stickiness": {
-          "spots_kept_above_real": -0.68,
+          "spots_kept_above_real": -0.36,
           "preseason_ranked_still_ranked_real": 18,
-          "preseason_ranked_still_ranked_sim": 16,
+          "preseason_ranked_still_ranked_sim": 18,
           "climbers_real": 7,
-          "climbers_sim": 9,
-          "climbers_caught": 5
+          "climbers_sim": 7,
+          "climbers_caught": 4
         },
         "post_bowl_final": {
-          "spearman": 0.8051548523626904,
+          "spearman": 0.8376298576375528,
           "overlap": 20,
-          "mean_abs_rank_error": 7.36,
+          "mean_abs_rank_error": 9.4,
           "within_3": 0.48
         }
       },

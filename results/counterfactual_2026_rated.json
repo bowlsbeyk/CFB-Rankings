@@ -1794,7 +1794,7 @@
   },
   "floor": {
     "spec": "rated",
-    "yardstick_spots": 0.42,
+    "yardstick_spots": 0.46,
     "plausibility_no_swap": {
       "strong_p4_records": 13,
       "strong_left_unranked": [

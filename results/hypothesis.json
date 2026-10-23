@@ -476,10 +476,10 @@
     },
     "preseason_carryover": {
       "zero": {
-        "preseason_coef": 0.4789059972737079,
+        "preseason_coef": 0.4789059972737081,
         "preseason_coef_ci": [
-          0.42010874722275554,
-          0.5391164988461905
+          0.4201087472227557,
+          0.5391164988461904
         ],
         "controls": [
           "wins_to_date",
@@ -489,20 +489,20 @@
           "week"
         ],
         "extra_carryover_sec": 0.00671931570858715,
-        "extra_carryover_acc": -0.034571439168029176,
-        "sec_minus_acc": 0.04129075487661633,
+        "extra_carryover_acc": -0.03457143916802927,
+        "sec_minus_acc": 0.04129075487661642,
         "sec_minus_acc_ci": [
-          -0.15629238387527225,
-          0.2379089848442578
+          -0.15629238387527214,
+          0.23790898484425815
         ],
         "team_weeks": 14908,
         "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
       },
       "floor": {
-        "preseason_coef": 0.49484383859950154,
+        "preseason_coef": 0.4948438385995014,
         "preseason_coef_ci": [
-          0.43398803564805055,
-          0.5583265699253703
+          0.4339880356480505,
+          0.5583265699253701
         ],
         "controls": [
           "wins_to_date",
@@ -511,12 +511,12 @@
           "season_rating",
           "week"
         ],
-        "extra_carryover_sec": 0.0028191666434350545,
-        "extra_carryover_acc": -0.034017699931143563,
-        "sec_minus_acc": 0.03683686657457862,
+        "extra_carryover_sec": 0.0028191666434352913,
+        "extra_carryover_acc": -0.034017699931143876,
+        "sec_minus_acc": 0.036836866574579165,
         "sec_minus_acc_ci": [
-          -0.17252005532309983,
-          0.236303688211786
+          -0.1725200553230998,
+          0.23630368821178618
         ],
         "team_weeks": 14908,
         "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
