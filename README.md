@@ -32,7 +32,7 @@ A study of week-to-week AP poll movement, testing whether SEC teams look tougher
 
 ## Findings
 
-The full write-up, with 21 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
+The full write-up, with 22 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
 
 1. **Preseason standing persists for everyone** (registered, as defined in deviation 9). About half of a team's preseason standing still shows up after week five at the same record, margin and strength. It persists no more for the SEC than for the ACC.
 2. **Voters do not score SEC games more generously** (added). For the same result against the same quality of opponent, SEC and ACC teams move alike after wins and after losses.
@@ -40,6 +40,16 @@ The full write-up, with 21 figures covering every step from data to counterfactu
 4. **Net effect:** SEC teams rank about one place above their current-season results (95% CI +0.3 to +1.9; added), similar to the Big 12. The ACC is not distinguishable from zero, and neither is the SEC-minus-ACC difference (+0.76, 95% CI −0.43 to +1.93).
 5. **The registered tests on their own point slightly the other way.** The linear conference test (H1) favors the SEC only in a model that fits worse than predicting no change, and against Elo (H2) the poll rates ACC teams above Elo and SEC teams in line with it. The season-only yardstick replaced Elo after those results were seen, because preseason Elo carries two-thirds of last season.
 6. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
+
+## 2026 so far: who is over- and underrated (exploratory)
+
+After week 7, comparing each team's AP rank with its rank by this season's results, and checking that voters have also moved it more (or less) than results usually earn. Not a hypothesis test; seven weeks of games make ratings noisy.
+
+- **Overrated:** SMU (AP #23, 39th by results), Iowa (#15, 28th), Utah (#10, 17th), Kentucky (#12, 18th), Georgia (#5, 10th), Missouri (#22, 27th).
+- **Underrated:** James Madison (unranked at 7-0, 13th by results), LSU (#18, 7th), Oregon (unranked, 21st).
+- Seven of the nine SEC teams on the board have schedules that look tougher by opponents' AP rank than by opponents' 2026 results.
+
+Chart: [`results/figures/fig22_2026_over_under.png`](results/figures/fig22_2026_over_under.png). Full table: [`results/rankings_2026.csv`](results/rankings_2026.csv).
 
 ## Reproduce
 

@@ -403,6 +403,32 @@ These swap results reflect the model's attachment to starting position more than
 
 `src/team_bias.py` (not pre-registered) lists teams the model consistently over- or under-predicts. With the revised model on training seasons, conference averages for ranked teams are SEC +0.06, ACC +0.05, Big Ten −0.05 and Big 12 +0.07 points per voter. The only clear conference result is the Big 12 after wins (+0.19), consistent with H4. Team-level lists involve about 70 teams × 3 situations, so some flagged results are expected by chance.
 
+### 5.8 Exploratory: who is over- and underrated in 2026 so far
+
+Not a hypothesis test (logged in `DEVIATIONS.md` before it was run). For teams in the AP top 25 of poll 8 or the season-only top 25 after week 7, two lenses:
+- **Results lens:** season-only rank minus AP rank.
+- **Voter lens:** how far voters have moved the team beyond what the name-blind model predicts from its results, summed over the season.
+
+A team is labelled only when both lenses agree and the gap is at least 5 places. Full table: `results/rankings_2026.csv`.
+
+| Verdict | Team (conference, record) | AP rank | Rank by 2026 results |
+| --- | --- | --- | --- |
+| Overrated | SMU (ACC, 5-1) | 23 | 39 |
+| Overrated | Iowa (Big Ten, 5-1) | 15 | 28 |
+| Overrated | Utah (Big 12, 6-0) | 10 | 17 |
+| Overrated | Kentucky (SEC, 6-1) | 12 | 18 |
+| Overrated | Georgia (SEC, 6-1) | 5 | 10 |
+| Overrated | Missouri (SEC, 5-2) | 22 | 27 |
+| Underrated | James Madison (Sun Belt, 7-0) | unranked | 13 |
+| Underrated | LSU (SEC, 5-2) | 18 | 7 |
+| Underrated | Oregon (Big Ten, 4-2) | unranked | 21 |
+
+Three of the six clearly overrated teams are from the SEC, and one of the three underrated. Of the nine SEC teams on the board, seven have schedules that rank tougher by opponents' game-day AP rank than by opponents' 2026 results (for example Missouri 20th vs 58th, Ole Miss 8th vs 38th). This matches the H5 mechanism, but it is one season after seven weeks: ratings are noisy, see only scores, and are not a test.
+
+![Figure 22. 2026 after week 7: AP rank and rank by this season's results for every team in either top 25.](results/figures/fig22_2026_over_under.png)
+
+*Figure 22. 2026 after week 7: AP rank (filled) and rank by this season's results (open). Exploratory.*
+
 ---
 
 ## 6. Deviations from the pre-registered plan
@@ -425,6 +451,7 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 12 | H5 sensitivity: shape and timing matched | Outside review found H5 mixed a real effect with a measurement artifact | All results, including the published report |
 | 13 | Raw data no longer committed; fetched and checksum-verified | CollegeFootballData.com terms do not allow publishing stored raw API responses | All results (no number changes) |
 | 14 | Model training forced to one thread | Results differed across machines with different thread counts | All results; only rated-model floor-rule figures move, none cited here |
+| 15 | Exploratory 2026 over/underrated board (§5.8) | Kyle's request for a current-season view | All results |
 
 Deviations 5, 6, 8, 10, 11 and 12 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
@@ -511,4 +538,5 @@ python run_all.py
 | Real-voter base rates | `results/base_rates_poll8.json` | `src/base_rates.py` |
 | Counterfactual | `results/counterfactual_2026.json`, `results/counterfactual_2026_rated.json` | `src/counterfactual.py` |
 | Exploratory team residuals | `results/team_bias_*.csv`, `results/conference_bias_*.csv` | `src/team_bias.py` |
-| Figures 1–21 | `results/figures/*.png` | `src/figures.py` |
+| 2026 over/underrated (exploratory) | `results/rankings_2026.csv` | `src/rankings_2026.py` |
+| Figures 1–22 | `results/figures/*.png` | `src/figures.py` |

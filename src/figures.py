@@ -707,12 +707,48 @@ def fig_h5_sensitivity():
          "top-25 scale: the SEC effect (+5.7) remains, the ACC effect and the SEC-ACC gap do not.")
 
 
+def fig_2026_board():
+    d = pd.read_csv(RES / "rankings_2026.csv")
+    d = d.sort_values(["ap_rank", "results_rank"], na_position="last").reset_index(drop=True)
+    fig, ax = plt.subplots(figsize=(9, 9))
+    for i, row in d.iterrows():
+        ap = row.ap_rank if pd.notna(row.ap_rank) else 26
+        res = min(row.results_rank, 41)
+        color = SEC if row.conference == "SEC" else ACC if row.conference == "ACC" else GRAY_MID
+        ax.plot([ap, res], [i, i], color=GRID, lw=3, zorder=1)
+        ax.plot(ap, i, "o", ms=9, color=color, mec=SURFACE, mew=1.5, zorder=3)
+        ax.plot(res, i, "o", ms=8, mfc=SURFACE, mec=color, mew=2, zorder=3)
+        if row.verdict in ("overrated", "underrated"):
+            ax.annotate(row.verdict, (max(ap, res), i), xytext=(10, 0), textcoords="offset points",
+                        va="center", fontsize=8, color=INK, fontweight="bold")
+    labels = [f"{t} ({r})" for t, r in zip(d.team, d.record)]
+    ax.set_yticks(range(len(d)))
+    ax.set_yticklabels(labels, fontsize=8)
+    ax.set_ylim(len(d) - 0.4, -0.6)
+    ax.set_xlim(0, 46)
+    ax.set_xticks([1, 5, 10, 15, 20, 26, 30, 35, 40])
+    ax.set_xticklabels(["1", "5", "10", "15", "20", "unranked", "30", "35", "40+"])
+    ax.grid(axis="y", visible=False)
+    ax.plot([], [], "o", color=GRAY_DARK, label="AP poll rank")
+    ax.plot([], [], "o", mfc=SURFACE, mec=GRAY_DARK, mew=2, label="rank by 2026 results")
+    ax.plot([], [], "s", color=SEC, label="SEC")
+    ax.plot([], [], "s", color=ACC, label="ACC")
+    ax.plot([], [], "s", color=GRAY_MID, label="other")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.06), ncol=5, fontsize=8)
+    ax.set_title("2026 after week 7: AP poll vs this season's results")
+    save(fig, "fig22_2026_over_under.png",
+         "Exploratory. Labelled only when the voter-model lens agrees and the gap is 5+ places. "
+         "Unranked teams shown at 26 (their true poll spot is 26 or lower).\n"
+         "Seven weeks of games: ratings are noisy and see only scores, not injuries or quarterback changes.")
+
+
 def main():
     for f in (fig_timeline, fig_data_overview, fig_training_mae, fig_replay_training, fig_climbers,
               fig_holdout, fig_holdout_scatter, fig_rating_validation, fig_elo_carryover,
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
-              fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity):
+              fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity,
+              fig_2026_board):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 
