@@ -150,3 +150,11 @@ The original H5 numbers stay in `results/bias_tests.json` and the report as orig
 `run_all.py` runs `fetch_data.py` first. It downloads only files that are missing or fail their checksum, so a machine that already has them stays offline. No data value, result or figure changes.
 
 **Not done: history.** Earlier commits, starting with `17c9e98`, still contain the files. Removing them would mean rewriting the repository's public history, which would also change every commit hash the audit trail cites. That decision is Kyle's.
+
+## 2026-10-23 — Single-threaded model training for machine-independent results
+
+**Found by the outside review** and confirmed here before this entry. A rebuild on another machine (same pinned packages) did not reproduce every committed number. Re-running here with training limited to one thread (`OMP_NUM_THREADS=1`) reproduced the review's numbers exactly. Gradient-boosted training sums in parallel, and the order of those floating-point sums depends on the thread count.
+
+**What moves** (single-threaded vs the committed multi-threaded run): only the rated model under the floor rule, through its 2014 training fold. That is the training-season replay for rated/floor (2014 mean rank error 3.68 → 6.20; climbers 79 → 77; mean ρ 0.8804 → 0.8800; stickiness +0.42 → +0.46), its training error (third decimal), and the 2026 counterfactual yardstick for rated/floor (0.42 → 0.46). Every other difference is below 1e-15. `results/holdout.json` is identical. No number cited in `REPORT.md` changes.
+
+**Change.** `run_all.py` forces one thread for every step, and `src/train.py` does the same when run directly. `numpy` and `scipy` are pinned in `requirements.txt`; every model and bootstrap already used a fixed seed. Committed results are regenerated single-threaded. The multi-threaded values above are recorded here and in git history.
