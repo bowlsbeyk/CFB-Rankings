@@ -33,6 +33,7 @@ STEPS = [
     ["src/h5_sensitivity.py"],
     ["src/rankings_2026.py"],
     ["src/preseason_tests.py"],
+    ["src/loop_test.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
     ["src/figures.py"],

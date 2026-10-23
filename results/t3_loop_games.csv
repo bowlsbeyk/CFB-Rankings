@@ -1,0 +1,1360 @@
+season,week,team,conference,opponent,opp_conference,result,points_for,points_against,rank_before,opp_rank_before,rank_after,final_results_rank,overrating,adjusted,group
+2014,1,Clemson,ACC,Georgia,SEC,L,21.0,45.0,16.0,12.0,23.0,26.0,3.0,3.609,C1_lost_to_ranked_other_conference
+2014,1,South Carolina,SEC,Texas A&M,SEC,L,28.0,52.0,9.0,21.0,21.0,53.0,5.0,3.586,primary_lost_to_ranked_same_conference
+2014,1,Texas A&M,SEC,South Carolina,SEC,W,52.0,28.0,21.0,9.0,9.0,31.0,17.0,13.676,winners_beat_ranked_same_conference
+2014,1,Wisconsin,Big Ten,LSU,SEC,L,24.0,28.0,14.0,13.0,18.0,19.0,1.0,0.974,C1_lost_to_ranked_other_conference
+2014,2,Michigan State,Big Ten,Oregon,Pac-12,L,27.0,46.0,7.0,3.0,13.0,9.0,-4.0,-6.246,C1_lost_to_ranked_other_conference
+2014,2,Ohio State,Big Ten,Virginia Tech,ACC,L,21.0,35.0,8.0,,22.0,3.0,-19.0,-18.474,C2_lost_to_unranked
+2014,2,Stanford,Pac-12,USC,Pac-12,L,10.0,13.0,13.0,14.0,15.0,29.0,11.0,10.329,primary_lost_to_ranked_same_conference
+2014,2,USC,Pac-12,Stanford,Pac-12,W,13.0,10.0,14.0,13.0,9.0,18.0,9.0,6.179,winners_beat_ranked_same_conference
+2014,3,Georgia,SEC,South Carolina,SEC,L,35.0,38.0,6.0,24.0,13.0,10.0,-3.0,-4.971,primary_lost_to_ranked_same_conference
+2014,3,Louisville,ACC,Virginia,ACC,L,21.0,23.0,21.0,,26.0,22.0,-4.0,-2.397,C2_lost_to_unranked
+2014,3,South Carolina,SEC,Georgia,SEC,W,38.0,35.0,24.0,6.0,14.0,53.0,12.0,8.46,winners_beat_ranked_same_conference
+2014,3,USC,Pac-12,Boston College,ACC,L,31.0,37.0,9.0,,17.0,18.0,1.0,1.609,C2_lost_to_unranked
+2014,3,Virginia Tech,ACC,East Carolina,American Athletic,L,21.0,28.0,17.0,,26.0,50.0,0.0,1.271,C2_lost_to_unranked
+2014,4,Clemson,ACC,Florida State,ACC,L,17.0,23.0,22.0,1.0,26.0,26.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2014,4,Florida State,ACC,Clemson,ACC,W,23.0,17.0,1.0,22.0,1.0,4.0,3.0,1.112,winners_beat_ranked_same_conference
+2014,4,Kansas State,Big 12,Auburn,SEC,L,14.0,20.0,20.0,5.0,25.0,17.0,-8.0,-6.122,C1_lost_to_ranked_other_conference
+2014,4,LSU,SEC,Mississippi State,SEC,L,29.0,34.0,8.0,,17.0,27.0,9.0,9.526,C2_lost_to_unranked
+2014,4,Missouri,SEC,Indiana,Big Ten,L,27.0,31.0,18.0,,26.0,21.0,-5.0,-3.646,C2_lost_to_unranked
+2014,5,Arizona State,Pac-12,UCLA,Pac-12,L,27.0,62.0,15.0,11.0,26.0,20.0,-6.0,-6.3,primary_lost_to_ranked_same_conference
+2014,5,South Carolina,SEC,Missouri,SEC,L,20.0,21.0,13.0,,26.0,53.0,0.0,0.94,C2_lost_to_unranked
+2014,5,UCLA,Pac-12,Arizona State,Pac-12,W,62.0,27.0,11.0,15.0,8.0,12.0,4.0,1.394,winners_beat_ranked_same_conference
+2014,6,Alabama,SEC,Ole Miss,SEC,L,17.0,23.0,3.0,11.0,7.0,2.0,-5.0,-7.529,primary_lost_to_ranked_same_conference
+2014,6,Auburn,SEC,LSU,SEC,W,41.0,7.0,5.0,15.0,2.0,13.0,11.0,8.825,winners_beat_ranked_same_conference
+2014,6,BYU,FBS Independents,Utah State,Mountain West,L,20.0,35.0,18.0,,26.0,43.0,0.0,1.354,C2_lost_to_unranked
+2014,6,LSU,SEC,Auburn,SEC,L,7.0,41.0,15.0,5.0,26.0,27.0,0.0,-0.3,primary_lost_to_ranked_same_conference
+2014,6,Michigan State,Big Ten,Nebraska,Big Ten,W,27.0,22.0,10.0,19.0,8.0,9.0,1.0,-1.534,winners_beat_ranked_same_conference
+2014,6,Mississippi State,SEC,Texas A&M,SEC,W,48.0,31.0,12.0,6.0,3.0,7.0,4.0,1.322,winners_beat_ranked_same_conference
+2014,6,Nebraska,Big Ten,Michigan State,Big Ten,L,22.0,27.0,19.0,10.0,21.0,24.0,3.0,3.443,primary_lost_to_ranked_same_conference
+2014,6,Oklahoma,Big 12,TCU,Big 12,L,33.0,37.0,4.0,25.0,11.0,23.0,12.0,9.657,primary_lost_to_ranked_same_conference
+2014,6,Ole Miss,SEC,Alabama,SEC,W,23.0,17.0,11.0,3.0,3.0,6.0,3.0,0.394,winners_beat_ranked_same_conference
+2014,6,Oregon,Pac-12,Arizona,Pac-12,L,24.0,31.0,2.0,,12.0,1.0,-11.0,-10.971,C2_lost_to_unranked
+2014,6,Stanford,Pac-12,Notre Dame,FBS Independents,L,14.0,17.0,14.0,9.0,25.0,29.0,1.0,0.974,C1_lost_to_ranked_other_conference
+2014,6,TCU,Big 12,Oklahoma,Big 12,W,37.0,33.0,25.0,4.0,9.0,5.0,-4.0,-7.612,winners_beat_ranked_same_conference
+2014,6,Texas A&M,SEC,Mississippi State,SEC,L,31.0,48.0,6.0,12.0,14.0,31.0,12.0,10.029,primary_lost_to_ranked_same_conference
+2014,6,UCLA,Pac-12,Utah,Pac-12,L,28.0,30.0,8.0,,18.0,12.0,-6.0,-5.474,C2_lost_to_unranked
+2014,6,USC,Pac-12,Arizona State,Pac-12,L,34.0,38.0,16.0,,26.0,18.0,-8.0,-6.811,C2_lost_to_unranked
+2014,6,Wisconsin,Big Ten,Northwestern,Big Ten,L,14.0,20.0,17.0,,26.0,19.0,-7.0,-5.729,C2_lost_to_unranked
+2014,7,Arizona,Pac-12,USC,Pac-12,L,26.0,28.0,10.0,,16.0,16.0,0.0,0.692,C2_lost_to_unranked
+2014,7,Auburn,SEC,Mississippi State,SEC,L,23.0,38.0,2.0,3.0,6.0,13.0,7.0,4.286,primary_lost_to_ranked_same_conference
+2014,7,Baylor,Big 12,TCU,Big 12,W,61.0,58.0,5.0,9.0,4.0,8.0,4.0,1.825,winners_beat_ranked_same_conference
+2014,7,Georgia,SEC,Missouri,SEC,W,34.0,0.0,13.0,23.0,10.0,10.0,0.0,-2.75,winners_beat_ranked_same_conference
+2014,7,Georgia Tech,ACC,Duke,ACC,L,25.0,31.0,22.0,,26.0,11.0,-15.0,-13.314,C2_lost_to_unranked
+2014,7,Mississippi State,SEC,Auburn,SEC,W,38.0,23.0,3.0,2.0,1.0,7.0,6.0,3.969,winners_beat_ranked_same_conference
+2014,7,Missouri,SEC,Georgia,SEC,L,0.0,34.0,23.0,13.0,26.0,21.0,-5.0,-3.814,primary_lost_to_ranked_same_conference
+2014,7,Ole Miss,SEC,Texas A&M,SEC,W,35.0,20.0,3.0,14.0,3.0,6.0,3.0,0.969,winners_beat_ranked_same_conference
+2014,7,Oregon,Pac-12,UCLA,Pac-12,W,42.0,30.0,12.0,18.0,9.0,1.0,-8.0,-10.678,winners_beat_ranked_same_conference
+2014,7,TCU,Big 12,Baylor,Big 12,L,58.0,61.0,9.0,5.0,12.0,5.0,-7.0,-8.414,primary_lost_to_ranked_same_conference
+2014,7,Texas A&M,SEC,Ole Miss,SEC,L,20.0,35.0,14.0,3.0,21.0,31.0,5.0,4.515,primary_lost_to_ranked_same_conference
+2014,7,UCLA,Pac-12,Oregon,Pac-12,L,30.0,42.0,18.0,12.0,26.0,12.0,-14.0,-13.742,primary_lost_to_ranked_same_conference
+2014,8,Alabama,SEC,Texas A&M,SEC,W,59.0,0.0,7.0,21.0,4.0,2.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2014,8,Arizona State,Pac-12,Stanford,Pac-12,W,26.0,10.0,17.0,23.0,14.0,20.0,6.0,2.963,winners_beat_ranked_same_conference
+2014,8,Baylor,Big 12,West Virginia,Big 12,L,27.0,41.0,4.0,,12.0,8.0,-4.0,-3.805,C2_lost_to_unranked
+2014,8,Kansas State,Big 12,Oklahoma,Big 12,W,31.0,30.0,14.0,11.0,11.0,17.0,6.0,3.179,winners_beat_ranked_same_conference
+2014,8,Notre Dame,FBS Independents,Florida State,ACC,L,27.0,31.0,5.0,2.0,7.0,35.0,19.0,16.12,C1_lost_to_ranked_other_conference
+2014,8,Oklahoma,Big 12,Kansas State,Big 12,L,30.0,31.0,11.0,14.0,17.0,23.0,6.0,4.957,primary_lost_to_ranked_same_conference
+2014,8,Oklahoma State,Big 12,TCU,Big 12,L,9.0,42.0,15.0,12.0,26.0,66.0,0.0,-0.3,primary_lost_to_ranked_same_conference
+2014,8,Stanford,Pac-12,Arizona State,Pac-12,L,10.0,26.0,23.0,17.0,26.0,29.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2014,8,TCU,Big 12,Oklahoma State,Big 12,W,42.0,9.0,12.0,15.0,10.0,5.0,-5.0,-7.678,winners_beat_ranked_same_conference
+2014,8,Texas A&M,SEC,Alabama,SEC,L,0.0,59.0,21.0,7.0,26.0,31.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2014,9,LSU,SEC,Ole Miss,SEC,W,10.0,7.0,24.0,3.0,16.0,27.0,10.0,6.46,winners_beat_ranked_same_conference
+2014,9,Ole Miss,SEC,LSU,SEC,L,7.0,10.0,3.0,24.0,7.0,6.0,-1.0,-3.529,primary_lost_to_ranked_same_conference
+2014,9,USC,Pac-12,Utah,Pac-12,L,21.0,24.0,20.0,19.0,26.0,18.0,-8.0,-7.371,primary_lost_to_ranked_same_conference
+2014,9,Utah,Pac-12,USC,Pac-12,W,24.0,21.0,19.0,20.0,18.0,30.0,8.0,4.819,winners_beat_ranked_same_conference
+2014,10,Arizona,Pac-12,UCLA,Pac-12,L,7.0,17.0,14.0,25.0,21.0,16.0,-5.0,-5.485,primary_lost_to_ranked_same_conference
+2014,10,Arizona State,Pac-12,Utah,Pac-12,W,19.0,16.0,15.0,18.0,11.0,20.0,9.0,6.107,winners_beat_ranked_same_conference
+2014,10,Auburn,SEC,Ole Miss,SEC,W,35.0,31.0,4.0,7.0,3.0,13.0,10.0,7.897,winners_beat_ranked_same_conference
+2014,10,East Carolina,American Athletic,Temple,American Athletic,L,10.0,20.0,21.0,,26.0,55.0,0.0,1.603,C2_lost_to_unranked
+2014,10,Georgia,SEC,Florida,SEC,L,20.0,38.0,9.0,,17.0,10.0,-7.0,-6.391,C2_lost_to_unranked
+2014,10,Ole Miss,SEC,Auburn,SEC,L,31.0,35.0,7.0,4.0,12.0,6.0,-6.0,-7.786,primary_lost_to_ranked_same_conference
+2014,10,TCU,Big 12,West Virginia,Big 12,W,31.0,30.0,10.0,20.0,6.0,5.0,-1.0,-3.534,winners_beat_ranked_same_conference
+2014,10,UCLA,Pac-12,Arizona,Pac-12,W,17.0,7.0,25.0,14.0,18.0,12.0,-6.0,-9.612,winners_beat_ranked_same_conference
+2014,10,Utah,Pac-12,Arizona State,Pac-12,L,16.0,19.0,18.0,15.0,20.0,30.0,6.0,6.258,primary_lost_to_ranked_same_conference
+2014,10,West Virginia,Big 12,TCU,Big 12,L,30.0,31.0,20.0,10.0,24.0,34.0,2.0,2.629,primary_lost_to_ranked_same_conference
+2014,11,Alabama,SEC,LSU,SEC,W,20.0,13.0,4.0,14.0,4.0,2.0,-2.0,-4.103,winners_beat_ranked_same_conference
+2014,11,Auburn,SEC,Texas A&M,SEC,L,38.0,41.0,3.0,,9.0,13.0,4.0,4.112,C2_lost_to_unranked
+2014,11,Baylor,Big 12,Oklahoma,Big 12,W,48.0,14.0,10.0,16.0,6.0,8.0,2.0,-0.534,winners_beat_ranked_same_conference
+2014,11,Kansas State,Big 12,TCU,Big 12,L,20.0,41.0,9.0,6.0,13.0,17.0,4.0,2.586,primary_lost_to_ranked_same_conference
+2014,11,LSU,SEC,Alabama,SEC,L,13.0,20.0,14.0,4.0,20.0,27.0,6.0,5.515,primary_lost_to_ranked_same_conference
+2014,11,Michigan State,Big Ten,Ohio State,Big Ten,L,37.0,49.0,7.0,13.0,12.0,9.0,-3.0,-4.786,primary_lost_to_ranked_same_conference
+2014,11,Notre Dame,FBS Independents,Arizona State,Pac-12,L,31.0,55.0,8.0,11.0,15.0,35.0,11.0,9.071,C1_lost_to_ranked_other_conference
+2014,11,Ohio State,Big Ten,Michigan State,Big Ten,W,49.0,37.0,13.0,7.0,8.0,3.0,-5.0,-7.75,winners_beat_ranked_same_conference
+2014,11,Oklahoma,Big 12,Baylor,Big 12,L,14.0,48.0,16.0,10.0,26.0,23.0,-3.0,-3.114,primary_lost_to_ranked_same_conference
+2014,11,Oregon,Pac-12,Utah,Pac-12,W,51.0,27.0,5.0,20.0,3.0,1.0,-2.0,-4.175,winners_beat_ranked_same_conference
+2014,11,TCU,Big 12,Kansas State,Big 12,W,41.0,20.0,6.0,9.0,5.0,5.0,0.0,-2.247,winners_beat_ranked_same_conference
+2014,11,Utah,Pac-12,Oregon,Pac-12,L,27.0,51.0,20.0,5.0,25.0,30.0,1.0,1.629,primary_lost_to_ranked_same_conference
+2014,11,West Virginia,Big 12,Texas,Big 12,L,16.0,33.0,24.0,,26.0,34.0,0.0,1.851,C2_lost_to_unranked
+2014,12,Alabama,SEC,Mississippi State,SEC,W,25.0,20.0,4.0,1.0,2.0,2.0,0.0,-2.103,winners_beat_ranked_same_conference
+2014,12,Arizona State,Pac-12,Oregon State,Pac-12,L,27.0,35.0,7.0,,13.0,20.0,7.0,7.443,C2_lost_to_unranked
+2014,12,Auburn,SEC,Georgia,SEC,L,7.0,34.0,9.0,16.0,16.0,13.0,-3.0,-4.414,primary_lost_to_ranked_same_conference
+2014,12,Clemson,ACC,Georgia Tech,ACC,L,6.0,28.0,18.0,24.0,26.0,26.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2014,12,Duke,ACC,Virginia Tech,ACC,L,16.0,17.0,19.0,,25.0,36.0,1.0,2.437,C2_lost_to_unranked
+2014,12,Georgia,SEC,Auburn,SEC,W,34.0,7.0,16.0,9.0,9.0,10.0,1.0,-1.965,winners_beat_ranked_same_conference
+2014,12,Georgia Tech,ACC,Clemson,ACC,W,28.0,6.0,24.0,18.0,17.0,11.0,-6.0,-9.54,winners_beat_ranked_same_conference
+2014,12,LSU,SEC,Arkansas,SEC,L,0.0,17.0,20.0,,26.0,27.0,0.0,1.52,C2_lost_to_unranked
+2014,12,Mississippi State,SEC,Alabama,SEC,L,20.0,25.0,1.0,4.0,4.0,7.0,3.0,0.1,primary_lost_to_ranked_same_conference
+2014,12,Nebraska,Big Ten,Wisconsin,Big Ten,L,24.0,59.0,11.0,22.0,21.0,24.0,3.0,1.957,primary_lost_to_ranked_same_conference
+2014,12,Notre Dame,FBS Independents,Northwestern,Big Ten,L,40.0,43.0,15.0,,26.0,35.0,0.0,1.106,C2_lost_to_unranked
+2014,12,Wisconsin,Big Ten,Nebraska,Big Ten,W,59.0,24.0,22.0,11.0,14.0,19.0,5.0,1.604,winners_beat_ranked_same_conference
+2014,13,Arizona,Pac-12,Utah,Pac-12,W,42.0,10.0,15.0,20.0,12.0,16.0,4.0,1.107,winners_beat_ranked_same_conference
+2014,13,Duke,ACC,North Carolina,ACC,L,20.0,45.0,25.0,,26.0,36.0,0.0,1.934,C2_lost_to_unranked
+2014,13,Nebraska,Big Ten,Minnesota,Big Ten,L,24.0,28.0,21.0,,26.0,24.0,-2.0,-0.397,C2_lost_to_unranked
+2014,13,Ole Miss,SEC,Arkansas,SEC,L,0.0,30.0,8.0,,18.0,6.0,-12.0,-11.474,C2_lost_to_unranked
+2014,13,UCLA,Pac-12,USC,Pac-12,W,38.0,20.0,11.0,24.0,9.0,12.0,3.0,0.394,winners_beat_ranked_same_conference
+2014,13,USC,Pac-12,UCLA,Pac-12,L,20.0,38.0,24.0,11.0,26.0,18.0,-8.0,-6.628,primary_lost_to_ranked_same_conference
+2014,13,Utah,Pac-12,Arizona,Pac-12,L,10.0,42.0,20.0,15.0,26.0,30.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2014,14,Alabama,SEC,Auburn,SEC,W,55.0,44.0,2.0,15.0,1.0,2.0,1.0,-0.959,winners_beat_ranked_same_conference
+2014,14,Arizona,Pac-12,Arizona State,Pac-12,W,42.0,35.0,12.0,13.0,8.0,16.0,8.0,5.322,winners_beat_ranked_same_conference
+2014,14,Arizona State,Pac-12,Arizona,Pac-12,L,35.0,42.0,13.0,12.0,17.0,20.0,3.0,2.329,primary_lost_to_ranked_same_conference
+2014,14,Auburn,SEC,Alabama,SEC,L,44.0,55.0,15.0,2.0,20.0,13.0,-7.0,-7.3,primary_lost_to_ranked_same_conference
+2014,14,Colorado State,Mountain West,Air Force,Mountain West,L,24.0,27.0,21.0,,26.0,28.0,0.0,1.603,C2_lost_to_unranked
+2014,14,Georgia,SEC,Georgia Tech,ACC,L,24.0,30.0,8.0,16.0,15.0,10.0,-5.0,-6.929,C1_lost_to_ranked_other_conference
+2014,14,Marshall,Conference USA,Western Kentucky,Conference USA,L,66.0,67.0,19.0,,26.0,15.0,-11.0,-9.563,C2_lost_to_unranked
+2014,14,Minnesota,Big Ten,Wisconsin,Big Ten,L,24.0,34.0,22.0,14.0,26.0,33.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2014,14,Mississippi State,SEC,Ole Miss,SEC,L,17.0,31.0,4.0,18.0,10.0,7.0,-3.0,-5.343,primary_lost_to_ranked_same_conference
+2014,14,Ole Miss,SEC,Mississippi State,SEC,W,31.0,17.0,18.0,4.0,13.0,6.0,-7.0,-10.109,winners_beat_ranked_same_conference
+2014,14,UCLA,Pac-12,Stanford,Pac-12,L,10.0,31.0,9.0,,16.0,12.0,-4.0,-3.391,C2_lost_to_unranked
+2014,14,Wisconsin,Big Ten,Minnesota,Big Ten,W,34.0,24.0,14.0,22.0,11.0,19.0,8.0,5.179,winners_beat_ranked_same_conference
+2014,15,Alabama,SEC,Missouri,SEC,W,42.0,13.0,1.0,14.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2014,15,Arizona,Pac-12,Oregon,Pac-12,L,13.0,51.0,8.0,3.0,12.0,16.0,4.0,2.4,primary_lost_to_ranked_same_conference
+2014,15,Baylor,Big 12,Kansas State,Big 12,W,38.0,27.0,5.0,9.0,4.0,8.0,4.0,1.825,winners_beat_ranked_same_conference
+2014,15,Florida State,ACC,Georgia Tech,ACC,W,37.0,35.0,2.0,12.0,2.0,4.0,2.0,0.041,winners_beat_ranked_same_conference
+2014,15,Georgia Tech,ACC,Florida State,ACC,L,35.0,37.0,12.0,2.0,10.0,11.0,1.0,0.143,primary_lost_to_ranked_same_conference
+2014,15,Kansas State,Big 12,Baylor,Big 12,L,27.0,38.0,9.0,5.0,11.0,17.0,6.0,4.586,primary_lost_to_ranked_same_conference
+2014,15,Missouri,SEC,Alabama,SEC,L,13.0,42.0,14.0,1.0,16.0,21.0,5.0,4.515,primary_lost_to_ranked_same_conference
+2014,15,Ohio State,Big Ten,Wisconsin,Big Ten,W,59.0,0.0,6.0,11.0,5.0,3.0,-2.0,-4.247,winners_beat_ranked_same_conference
+2014,15,Oklahoma,Big 12,Oklahoma State,Big 12,L,35.0,38.0,18.0,,26.0,23.0,-3.0,-1.646,C2_lost_to_unranked
+2014,15,Oregon,Pac-12,Arizona,Pac-12,W,51.0,13.0,3.0,8.0,3.0,1.0,-2.0,-4.031,winners_beat_ranked_same_conference
+2014,15,Wisconsin,Big Ten,Ohio State,Big Ten,L,0.0,59.0,11.0,6.0,17.0,19.0,2.0,0.957,primary_lost_to_ranked_same_conference
+2015,1,Arizona State,Pac-12,Texas A&M,SEC,L,17.0,38.0,15.0,,26.0,58.0,0.0,1.106,C2_lost_to_unranked
+2015,1,Stanford,Pac-12,Northwestern,Big Ten,L,6.0,16.0,21.0,,26.0,6.0,-20.0,-18.397,C2_lost_to_unranked
+2015,1,Wisconsin,Big Ten,Alabama,SEC,L,17.0,35.0,20.0,3.0,26.0,30.0,0.0,1.878,C1_lost_to_ranked_other_conference
+2015,2,Arkansas,SEC,Toledo,Mid-American,L,12.0,16.0,18.0,,26.0,32.0,0.0,1.354,C2_lost_to_unranked
+2015,2,Boise State,Mountain West,BYU,FBS Independents,L,24.0,35.0,20.0,,26.0,52.0,0.0,1.52,C2_lost_to_unranked
+2015,2,LSU,SEC,Mississippi State,SEC,W,21.0,19.0,14.0,25.0,13.0,15.0,2.0,-0.821,winners_beat_ranked_same_conference
+2015,2,Mississippi State,SEC,LSU,SEC,L,19.0,21.0,25.0,14.0,26.0,29.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2015,2,Oregon,Pac-12,Michigan State,Big Ten,L,28.0,31.0,7.0,5.0,12.0,20.0,8.0,5.754,C1_lost_to_ranked_other_conference
+2015,2,Tennessee,SEC,Oklahoma,Big 12,L,24.0,31.0,23.0,19.0,26.0,27.0,0.0,2.829,C1_lost_to_ranked_other_conference
+2015,3,Alabama,SEC,Ole Miss,SEC,L,37.0,43.0,2.0,15.0,12.0,1.0,-11.0,-13.714,primary_lost_to_ranked_same_conference
+2015,3,Auburn,SEC,LSU,SEC,L,21.0,45.0,18.0,13.0,26.0,61.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2015,3,BYU,FBS Independents,UCLA,Pac-12,L,23.0,24.0,19.0,10.0,22.0,34.0,4.0,5.56,C1_lost_to_ranked_other_conference
+2015,3,Georgia Tech,ACC,Notre Dame,FBS Independents,L,22.0,30.0,14.0,8.0,20.0,78.0,6.0,5.974,C1_lost_to_ranked_other_conference
+2015,3,LSU,SEC,Auburn,SEC,W,45.0,21.0,13.0,18.0,8.0,15.0,7.0,4.25,winners_beat_ranked_same_conference
+2015,3,Ole Miss,SEC,Alabama,SEC,W,43.0,37.0,15.0,2.0,3.0,14.0,11.0,8.107,winners_beat_ranked_same_conference
+2015,3,USC,Pac-12,Stanford,Pac-12,L,31.0,41.0,6.0,,19.0,23.0,4.0,4.36,C2_lost_to_unranked
+2015,4,Arizona,Pac-12,UCLA,Pac-12,L,30.0,56.0,16.0,9.0,26.0,71.0,0.0,-0.114,primary_lost_to_ranked_same_conference
+2015,4,BYU,FBS Independents,Michigan,Big Ten,L,0.0,31.0,22.0,,26.0,34.0,0.0,1.686,C2_lost_to_unranked
+2015,4,Georgia Tech,ACC,Duke,ACC,L,20.0,34.0,20.0,,26.0,78.0,0.0,1.52,C2_lost_to_unranked
+2015,4,Missouri,SEC,Kentucky,SEC,L,13.0,21.0,25.0,,26.0,76.0,0.0,1.934,C2_lost_to_unranked
+2015,4,Oregon,Pac-12,Utah,Pac-12,L,20.0,62.0,13.0,18.0,26.0,20.0,-6.0,-6.671,primary_lost_to_ranked_same_conference
+2015,4,UCLA,Pac-12,Arizona,Pac-12,W,56.0,30.0,9.0,16.0,7.0,33.0,19.0,16.538,winners_beat_ranked_same_conference
+2015,4,Utah,Pac-12,Oregon,Pac-12,W,62.0,20.0,18.0,13.0,10.0,22.0,12.0,8.891,winners_beat_ranked_same_conference
+2015,5,Alabama,SEC,Georgia,SEC,W,38.0,10.0,13.0,8.0,8.0,1.0,-7.0,-9.75,winners_beat_ranked_same_conference
+2015,5,Florida,SEC,Ole Miss,SEC,W,38.0,10.0,25.0,3.0,11.0,21.0,10.0,6.388,winners_beat_ranked_same_conference
+2015,5,Georgia,SEC,Alabama,SEC,L,10.0,38.0,8.0,13.0,19.0,36.0,7.0,5.4,primary_lost_to_ranked_same_conference
+2015,5,Mississippi State,SEC,Texas A&M,SEC,L,17.0,30.0,21.0,14.0,26.0,29.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2015,5,Notre Dame,FBS Independents,Clemson,ACC,L,22.0,24.0,6.0,12.0,15.0,7.0,-8.0,-10.563,C1_lost_to_ranked_other_conference
+2015,5,Oklahoma,Big 12,West Virginia,Big 12,W,44.0,24.0,15.0,23.0,10.0,2.0,-8.0,-10.893,winners_beat_ranked_same_conference
+2015,5,Ole Miss,SEC,Florida,SEC,L,10.0,38.0,3.0,25.0,14.0,14.0,0.0,-2.529,primary_lost_to_ranked_same_conference
+2015,5,Texas A&M,SEC,Mississippi State,SEC,W,30.0,17.0,14.0,21.0,9.0,35.0,17.0,14.179,winners_beat_ranked_same_conference
+2015,5,UCLA,Pac-12,Arizona State,Pac-12,L,23.0,38.0,7.0,,20.0,33.0,6.0,6.443,C2_lost_to_unranked
+2015,5,West Virginia,Big 12,Oklahoma,Big 12,L,24.0,44.0,23.0,15.0,26.0,42.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2015,5,Wisconsin,Big Ten,Iowa,Big Ten,L,6.0,10.0,19.0,,26.0,30.0,0.0,1.437,C2_lost_to_unranked
+2015,6,California,Pac-12,Utah,Pac-12,L,24.0,30.0,23.0,5.0,23.0,39.0,3.0,4.186,primary_lost_to_ranked_same_conference
+2015,6,Georgia,SEC,Tennessee,SEC,L,31.0,38.0,19.0,,26.0,36.0,0.0,1.437,C2_lost_to_unranked
+2015,6,Michigan,Big Ten,Northwestern,Big Ten,W,38.0,0.0,18.0,13.0,12.0,9.0,-3.0,-6.109,winners_beat_ranked_same_conference
+2015,6,Northwestern,Big Ten,Michigan,Big Ten,L,0.0,38.0,13.0,18.0,20.0,26.0,6.0,5.329,primary_lost_to_ranked_same_conference
+2015,6,Oklahoma,Big 12,Texas,Big 12,L,17.0,24.0,10.0,,19.0,2.0,-17.0,-16.308,C2_lost_to_unranked
+2015,6,USC,Pac-12,Washington,Pac-12,L,12.0,17.0,17.0,,26.0,23.0,-3.0,-1.729,C2_lost_to_unranked
+2015,6,Utah,Pac-12,California,Pac-12,W,30.0,24.0,5.0,23.0,4.0,22.0,18.0,15.825,winners_beat_ranked_same_conference
+2015,7,Alabama,SEC,Texas A&M,SEC,W,41.0,23.0,10.0,9.0,8.0,1.0,-7.0,-9.534,winners_beat_ranked_same_conference
+2015,7,Boise State,Mountain West,Utah State,Mountain West,L,26.0,52.0,21.0,,26.0,52.0,0.0,1.603,C2_lost_to_unranked
+2015,7,Florida,SEC,LSU,SEC,L,28.0,35.0,8.0,6.0,13.0,21.0,8.0,6.4,primary_lost_to_ranked_same_conference
+2015,7,Iowa,Big Ten,Northwestern,Big Ten,W,40.0,10.0,17.0,20.0,12.0,8.0,-4.0,-7.037,winners_beat_ranked_same_conference
+2015,7,LSU,SEC,Florida,SEC,W,35.0,28.0,6.0,8.0,5.0,15.0,10.0,7.753,winners_beat_ranked_same_conference
+2015,7,Michigan,Big Ten,Michigan State,Big Ten,L,23.0,27.0,12.0,7.0,15.0,9.0,-6.0,-6.857,primary_lost_to_ranked_same_conference
+2015,7,Michigan State,Big Ten,Michigan,Big Ten,W,27.0,23.0,7.0,12.0,7.0,5.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2015,7,Northwestern,Big Ten,Iowa,Big Ten,L,10.0,40.0,20.0,17.0,26.0,26.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2015,7,Ole Miss,SEC,Memphis,American Athletic,L,24.0,37.0,13.0,,24.0,14.0,-10.0,-9.06,C2_lost_to_unranked
+2015,7,Stanford,Pac-12,UCLA,Pac-12,W,56.0,35.0,15.0,18.0,10.0,6.0,-4.0,-6.893,winners_beat_ranked_same_conference
+2015,7,Texas A&M,SEC,Alabama,SEC,L,23.0,41.0,9.0,10.0,15.0,35.0,11.0,9.586,primary_lost_to_ranked_same_conference
+2015,7,UCLA,Pac-12,Stanford,Pac-12,L,35.0,56.0,18.0,15.0,26.0,33.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2015,8,California,Pac-12,UCLA,Pac-12,L,24.0,40.0,20.0,,26.0,39.0,0.0,1.52,C2_lost_to_unranked
+2015,8,Florida State,ACC,Georgia Tech,ACC,L,16.0,22.0,9.0,,17.0,10.0,-7.0,-6.391,C2_lost_to_unranked
+2015,8,Ole Miss,SEC,Texas A&M,SEC,W,23.0,3.0,24.0,15.0,19.0,14.0,-5.0,-8.54,winners_beat_ranked_same_conference
+2015,8,Texas A&M,SEC,Ole Miss,SEC,L,3.0,23.0,15.0,24.0,26.0,35.0,0.0,-0.3,primary_lost_to_ranked_same_conference
+2015,8,Utah,Pac-12,USC,Pac-12,L,24.0,42.0,3.0,,13.0,22.0,9.0,9.112,C2_lost_to_unranked
+2015,9,Duke,ACC,Miami,ACC,L,27.0,30.0,22.0,,26.0,66.0,0.0,1.686,C2_lost_to_unranked
+2015,9,Pittsburgh,ACC,North Carolina,ACC,L,19.0,26.0,23.0,,26.0,37.0,0.0,1.768,C2_lost_to_unranked
+2015,9,Temple,American Athletic,Notre Dame,FBS Independents,L,20.0,24.0,21.0,9.0,23.0,31.0,3.0,5.195,C1_lost_to_ranked_other_conference
+2015,10,Alabama,SEC,LSU,SEC,W,30.0,16.0,7.0,4.0,3.0,1.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2015,10,Clemson,ACC,Florida State,ACC,W,23.0,13.0,3.0,17.0,1.0,4.0,3.0,0.969,winners_beat_ranked_same_conference
+2015,10,Florida State,ACC,Clemson,ACC,L,13.0,23.0,17.0,3.0,19.0,10.0,-9.0,-8.928,primary_lost_to_ranked_same_conference
+2015,10,LSU,SEC,Alabama,SEC,L,16.0,30.0,4.0,7.0,9.0,15.0,6.0,3.657,primary_lost_to_ranked_same_conference
+2015,10,Memphis,American Athletic,Navy,American Athletic,L,20.0,45.0,15.0,,25.0,28.0,1.0,2.106,C2_lost_to_unranked
+2015,10,Michigan State,Big Ten,Nebraska,Big Ten,L,38.0,39.0,6.0,,14.0,5.0,-9.0,-8.64,C2_lost_to_unranked
+2015,10,Oklahoma State,Big 12,TCU,Big 12,W,49.0,29.0,12.0,5.0,5.0,18.0,13.0,10.322,winners_beat_ranked_same_conference
+2015,10,Ole Miss,SEC,Arkansas,SEC,L,52.0,53.0,19.0,,26.0,14.0,-12.0,-10.563,C2_lost_to_unranked
+2015,10,TCU,Big 12,Oklahoma State,Big 12,L,29.0,49.0,5.0,12.0,13.0,13.0,0.0,-2.157,primary_lost_to_ranked_same_conference
+2015,10,Texas A&M,SEC,Auburn,SEC,L,10.0,26.0,25.0,,26.0,35.0,0.0,1.934,C2_lost_to_unranked
+2015,10,Toledo,Mid-American,Northern Illinois,Mid-American,L,27.0,32.0,20.0,,26.0,24.0,-2.0,-0.48,C2_lost_to_unranked
+2015,11,Alabama,SEC,Mississippi State,SEC,W,31.0,6.0,3.0,20.0,3.0,1.0,-2.0,-4.031,winners_beat_ranked_same_conference
+2015,11,Baylor,Big 12,Oklahoma,Big 12,L,34.0,44.0,4.0,12.0,10.0,16.0,6.0,3.657,primary_lost_to_ranked_same_conference
+2015,11,Houston,American Athletic,Memphis,American Athletic,W,35.0,34.0,16.0,25.0,13.0,12.0,-1.0,-3.965,winners_beat_ranked_same_conference
+2015,11,LSU,SEC,Arkansas,SEC,L,14.0,31.0,9.0,,17.0,15.0,-2.0,-1.391,C2_lost_to_unranked
+2015,11,Memphis,American Athletic,Houston,American Athletic,L,34.0,35.0,25.0,16.0,26.0,28.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2015,11,Mississippi State,SEC,Alabama,SEC,L,6.0,31.0,20.0,3.0,26.0,29.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2015,11,Oklahoma,Big 12,Baylor,Big 12,W,44.0,34.0,12.0,4.0,7.0,2.0,-5.0,-7.678,winners_beat_ranked_same_conference
+2015,11,Stanford,Pac-12,Oregon,Pac-12,L,36.0,38.0,7.0,,15.0,6.0,-9.0,-8.557,C2_lost_to_unranked
+2015,11,Temple,American Athletic,South Florida,American Athletic,L,23.0,44.0,21.0,,26.0,31.0,0.0,1.603,C2_lost_to_unranked
+2015,11,UCLA,Pac-12,Washington State,Pac-12,L,27.0,31.0,18.0,,26.0,33.0,0.0,1.354,C2_lost_to_unranked
+2015,11,Utah,Pac-12,Arizona,Pac-12,L,30.0,37.0,10.0,,18.0,22.0,4.0,4.692,C2_lost_to_unranked
+2015,12,Baylor,Big 12,Oklahoma State,Big 12,W,45.0,35.0,10.0,4.0,7.0,16.0,9.0,6.466,winners_beat_ranked_same_conference
+2015,12,Houston,American Athletic,UConn,American Athletic,L,17.0,20.0,13.0,,21.0,12.0,-9.0,-8.06,C2_lost_to_unranked
+2015,12,LSU,SEC,Ole Miss,SEC,L,17.0,38.0,17.0,25.0,26.0,15.0,-11.0,-10.928,primary_lost_to_ranked_same_conference
+2015,12,Michigan State,Big Ten,Ohio State,Big Ten,W,17.0,14.0,9.0,2.0,6.0,5.0,-1.0,-3.462,winners_beat_ranked_same_conference
+2015,12,Northwestern,Big Ten,Wisconsin,Big Ten,W,13.0,7.0,20.0,21.0,17.0,26.0,9.0,5.747,winners_beat_ranked_same_conference
+2015,12,Ohio State,Big Ten,Michigan State,Big Ten,L,14.0,17.0,2.0,9.0,8.0,3.0,-5.0,-7.714,primary_lost_to_ranked_same_conference
+2015,12,Oklahoma,Big 12,TCU,Big 12,W,30.0,29.0,7.0,11.0,5.0,2.0,-3.0,-5.319,winners_beat_ranked_same_conference
+2015,12,Oklahoma State,Big 12,Baylor,Big 12,L,35.0,45.0,4.0,10.0,9.0,18.0,9.0,6.657,primary_lost_to_ranked_same_conference
+2015,12,Ole Miss,SEC,LSU,SEC,W,38.0,17.0,25.0,17.0,19.0,14.0,-5.0,-8.612,winners_beat_ranked_same_conference
+2015,12,Oregon,Pac-12,USC,Pac-12,W,48.0,28.0,23.0,22.0,18.0,20.0,2.0,-1.468,winners_beat_ranked_same_conference
+2015,12,TCU,Big 12,Oklahoma,Big 12,L,29.0,30.0,11.0,7.0,15.0,13.0,-2.0,-3.043,primary_lost_to_ranked_same_conference
+2015,12,USC,Pac-12,Oregon,Pac-12,L,28.0,48.0,22.0,23.0,26.0,23.0,-3.0,-1.999,primary_lost_to_ranked_same_conference
+2015,12,Utah,Pac-12,UCLA,Pac-12,L,9.0,17.0,18.0,,26.0,22.0,-4.0,-2.646,C2_lost_to_unranked
+2015,12,Wisconsin,Big Ten,Northwestern,Big Ten,L,7.0,13.0,21.0,20.0,26.0,30.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2015,13,Baylor,Big 12,TCU,Big 12,L,21.0,28.0,7.0,15.0,12.0,16.0,4.0,2.214,primary_lost_to_ranked_same_conference
+2015,13,Florida,SEC,Florida State,ACC,L,2.0,27.0,10.0,14.0,18.0,21.0,3.0,1.706,C1_lost_to_ranked_other_conference
+2015,13,Houston,American Athletic,Navy,American Athletic,W,52.0,31.0,21.0,16.0,17.0,12.0,-5.0,-8.324,winners_beat_ranked_same_conference
+2015,13,Michigan,Big Ten,Ohio State,Big Ten,L,13.0,42.0,12.0,8.0,19.0,9.0,-10.0,-10.857,primary_lost_to_ranked_same_conference
+2015,13,Mississippi State,SEC,Ole Miss,SEC,L,27.0,38.0,23.0,19.0,26.0,29.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2015,13,Navy,American Athletic,Houston,American Athletic,L,31.0,52.0,16.0,21.0,22.0,17.0,-5.0,-5.114,primary_lost_to_ranked_same_conference
+2015,13,Notre Dame,FBS Independents,Stanford,Pac-12,L,36.0,38.0,4.0,13.0,9.0,7.0,-2.0,-5.197,C1_lost_to_ranked_other_conference
+2015,13,Ohio State,Big Ten,Michigan,Big Ten,W,42.0,13.0,8.0,12.0,6.0,3.0,-3.0,-5.39,winners_beat_ranked_same_conference
+2015,13,Oklahoma,Big 12,Oklahoma State,Big 12,W,58.0,23.0,5.0,9.0,3.0,2.0,-1.0,-3.175,winners_beat_ranked_same_conference
+2015,13,Oklahoma State,Big 12,Oklahoma,Big 12,L,23.0,58.0,9.0,5.0,14.0,18.0,4.0,2.586,primary_lost_to_ranked_same_conference
+2015,13,Ole Miss,SEC,Mississippi State,SEC,W,38.0,27.0,19.0,23.0,16.0,14.0,-2.0,-5.181,winners_beat_ranked_same_conference
+2015,13,TCU,Big 12,Baylor,Big 12,W,28.0,21.0,15.0,7.0,11.0,13.0,2.0,-0.893,winners_beat_ranked_same_conference
+2015,13,Toledo,Mid-American,Western Michigan,Mid-American,L,30.0,35.0,24.0,,26.0,24.0,-2.0,-0.149,C2_lost_to_unranked
+2015,13,UCLA,Pac-12,USC,Pac-12,L,21.0,40.0,22.0,,26.0,33.0,0.0,1.686,C2_lost_to_unranked
+2015,13,Washington State,Pac-12,Washington,Pac-12,L,10.0,45.0,20.0,,26.0,46.0,0.0,1.52,C2_lost_to_unranked
+2015,14,Alabama,SEC,Florida,SEC,W,29.0,15.0,2.0,18.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2015,14,Baylor,Big 12,Texas,Big 12,L,17.0,23.0,12.0,,18.0,16.0,-2.0,-1.143,C2_lost_to_unranked
+2015,14,Clemson,ACC,North Carolina,ACC,W,45.0,37.0,1.0,8.0,1.0,4.0,3.0,1.112,winners_beat_ranked_same_conference
+2015,14,Florida,SEC,Alabama,SEC,L,15.0,29.0,18.0,2.0,19.0,21.0,2.0,2.258,primary_lost_to_ranked_same_conference
+2015,14,Houston,American Athletic,Temple,American Athletic,W,24.0,13.0,17.0,20.0,14.0,12.0,-2.0,-5.037,winners_beat_ranked_same_conference
+2015,14,Iowa,Big Ten,Michigan State,Big Ten,L,13.0,16.0,4.0,5.0,6.0,8.0,2.0,-0.343,primary_lost_to_ranked_same_conference
+2015,14,Michigan State,Big Ten,Iowa,Big Ten,W,16.0,13.0,5.0,4.0,3.0,5.0,2.0,-0.175,winners_beat_ranked_same_conference
+2015,14,North Carolina,ACC,Clemson,ACC,L,37.0,45.0,8.0,1.0,10.0,11.0,1.0,-0.6,primary_lost_to_ranked_same_conference
+2015,14,Stanford,Pac-12,USC,Pac-12,W,41.0,22.0,7.0,24.0,5.0,6.0,1.0,-1.319,winners_beat_ranked_same_conference
+2015,14,Temple,American Athletic,Houston,American Athletic,L,13.0,24.0,20.0,17.0,24.0,31.0,2.0,2.629,primary_lost_to_ranked_same_conference
+2015,14,USC,Pac-12,Stanford,Pac-12,L,22.0,41.0,24.0,7.0,26.0,23.0,-3.0,-1.628,primary_lost_to_ranked_same_conference
+2016,1,LSU,SEC,Wisconsin,Big Ten,L,14.0,16.0,5.0,,21.0,16.0,-5.0,-4.723,C2_lost_to_unranked
+2016,1,North Carolina,ACC,Georgia,SEC,L,24.0,33.0,22.0,18.0,26.0,38.0,0.0,2.512,C1_lost_to_ranked_other_conference
+2016,1,Notre Dame,FBS Independents,Texas,Big 12,L,47.0,50.0,10.0,,18.0,68.0,8.0,8.692,C2_lost_to_unranked
+2016,1,Oklahoma,Big 12,Houston,American Athletic,L,23.0,33.0,3.0,15.0,14.0,10.0,-4.0,-7.515,C1_lost_to_ranked_other_conference
+2016,1,Ole Miss,SEC,Florida State,ACC,L,34.0,45.0,11.0,4.0,19.0,57.0,7.0,6.023,C1_lost_to_ranked_other_conference
+2016,1,UCLA,Pac-12,Texas A&M,SEC,L,24.0,31.0,16.0,,26.0,69.0,0.0,1.189,C2_lost_to_unranked
+2016,1,USC,Pac-12,Alabama,SEC,L,6.0,52.0,20.0,1.0,26.0,7.0,-19.0,-17.122,C1_lost_to_ranked_other_conference
+2016,2,Oklahoma State,Big 12,Central Michigan,Mid-American,L,27.0,30.0,22.0,,26.0,30.0,0.0,1.686,C2_lost_to_unranked
+2016,2,TCU,Big 12,Arkansas,SEC,L,38.0,41.0,15.0,,26.0,62.0,0.0,1.106,C2_lost_to_unranked
+2016,3,Alabama,SEC,Ole Miss,SEC,W,48.0,43.0,1.0,19.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,3,Florida State,ACC,Louisville,ACC,L,20.0,63.0,2.0,10.0,13.0,12.0,-1.0,-3.714,primary_lost_to_ranked_same_conference
+2016,3,Iowa,Big Ten,North Dakota State,FCS,L,21.0,23.0,13.0,,26.0,32.0,0.0,0.94,C2_lost_to_unranked
+2016,3,Louisville,ACC,Florida State,ACC,W,63.0,20.0,10.0,2.0,3.0,13.0,10.0,7.466,winners_beat_ranked_same_conference
+2016,3,Notre Dame,FBS Independents,Michigan State,Big Ten,L,28.0,36.0,18.0,12.0,26.0,68.0,0.0,1.243,C1_lost_to_ranked_other_conference
+2016,3,Oklahoma,Big 12,Ohio State,Big Ten,L,24.0,45.0,14.0,3.0,25.0,10.0,-15.0,-15.026,C1_lost_to_ranked_other_conference
+2016,3,Ole Miss,SEC,Alabama,SEC,L,43.0,48.0,19.0,1.0,23.0,57.0,3.0,3.443,primary_lost_to_ranked_same_conference
+2016,3,Oregon,Pac-12,Nebraska,Big Ten,L,32.0,35.0,22.0,,26.0,75.0,0.0,1.686,C2_lost_to_unranked
+2016,3,Texas,Big 12,California,Pac-12,L,43.0,50.0,11.0,,21.0,76.0,5.0,5.774,C2_lost_to_unranked
+2016,4,Arkansas,SEC,Texas A&M,SEC,L,24.0,45.0,17.0,10.0,20.0,49.0,6.0,6.072,primary_lost_to_ranked_same_conference
+2016,4,Florida,SEC,Tennessee,SEC,L,28.0,38.0,19.0,14.0,23.0,24.0,1.0,1.443,primary_lost_to_ranked_same_conference
+2016,4,Georgia,SEC,Ole Miss,SEC,L,14.0,45.0,12.0,23.0,25.0,53.0,1.0,0.143,primary_lost_to_ranked_same_conference
+2016,4,LSU,SEC,Auburn,SEC,L,13.0,18.0,18.0,,26.0,16.0,-10.0,-8.646,C2_lost_to_unranked
+2016,4,Michigan State,Big Ten,Wisconsin,Big Ten,L,6.0,30.0,8.0,11.0,17.0,87.0,9.0,7.4,primary_lost_to_ranked_same_conference
+2016,4,Ole Miss,SEC,Georgia,SEC,W,45.0,14.0,23.0,12.0,16.0,57.0,10.0,6.532,winners_beat_ranked_same_conference
+2016,4,Tennessee,SEC,Florida,SEC,W,38.0,28.0,14.0,19.0,11.0,25.0,14.0,11.179,winners_beat_ranked_same_conference
+2016,4,Texas A&M,SEC,Arkansas,SEC,W,45.0,24.0,10.0,17.0,9.0,28.0,17.0,14.466,winners_beat_ranked_same_conference
+2016,4,Wisconsin,Big Ten,Michigan State,Big Ten,W,30.0,6.0,11.0,8.0,8.0,8.0,0.0,-2.606,winners_beat_ranked_same_conference
+2016,5,Clemson,ACC,Louisville,ACC,W,42.0,36.0,5.0,3.0,3.0,5.0,2.0,-0.175,winners_beat_ranked_same_conference
+2016,5,Florida State,ACC,North Carolina,ACC,L,35.0,37.0,12.0,,23.0,12.0,-11.0,-10.143,C2_lost_to_unranked
+2016,5,Georgia,SEC,Tennessee,SEC,L,31.0,34.0,25.0,11.0,26.0,53.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2016,5,Louisville,ACC,Clemson,ACC,L,36.0,42.0,3.0,5.0,7.0,13.0,6.0,3.471,primary_lost_to_ranked_same_conference
+2016,5,Michigan,Big Ten,Wisconsin,Big Ten,W,14.0,7.0,4.0,8.0,4.0,4.0,0.0,-2.103,winners_beat_ranked_same_conference
+2016,5,Michigan State,Big Ten,Indiana,Big Ten,L,21.0,24.0,17.0,,26.0,87.0,0.0,1.271,C2_lost_to_unranked
+2016,5,San Diego State,Mountain West,South Alabama,Sun Belt,L,24.0,42.0,19.0,,26.0,41.0,0.0,1.437,C2_lost_to_unranked
+2016,5,Stanford,Pac-12,Washington,Pac-12,L,6.0,44.0,7.0,10.0,15.0,15.0,0.0,-1.786,primary_lost_to_ranked_same_conference
+2016,5,TCU,Big 12,Oklahoma,Big 12,L,46.0,52.0,21.0,,26.0,62.0,0.0,1.603,C2_lost_to_unranked
+2016,5,Tennessee,SEC,Georgia,SEC,W,34.0,31.0,11.0,25.0,9.0,25.0,16.0,13.394,winners_beat_ranked_same_conference
+2016,5,Texas,Big 12,Oklahoma State,Big 12,L,31.0,49.0,22.0,,26.0,76.0,0.0,1.686,C2_lost_to_unranked
+2016,5,Utah,Pac-12,California,Pac-12,L,23.0,28.0,18.0,,24.0,35.0,2.0,3.354,C2_lost_to_unranked
+2016,5,Washington,Pac-12,Stanford,Pac-12,W,44.0,6.0,10.0,7.0,5.0,3.0,-2.0,-4.534,winners_beat_ranked_same_conference
+2016,5,Wisconsin,Big Ten,Michigan,Big Ten,L,7.0,14.0,8.0,4.0,11.0,8.0,-3.0,-4.6,primary_lost_to_ranked_same_conference
+2016,6,Alabama,SEC,Arkansas,SEC,W,49.0,30.0,1.0,16.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,6,Arkansas,SEC,Alabama,SEC,L,30.0,49.0,16.0,1.0,22.0,49.0,4.0,3.886,primary_lost_to_ranked_same_conference
+2016,6,Colorado,Pac-12,USC,Pac-12,L,17.0,21.0,21.0,,26.0,11.0,-15.0,-13.397,C2_lost_to_unranked
+2016,6,Florida State,ACC,Miami,ACC,W,20.0,19.0,23.0,10.0,14.0,12.0,-2.0,-5.468,winners_beat_ranked_same_conference
+2016,6,Houston,American Athletic,Navy,American Athletic,L,40.0,46.0,6.0,,13.0,26.0,13.0,13.36,C2_lost_to_unranked
+2016,6,Miami,ACC,Florida State,ACC,L,19.0,20.0,10.0,23.0,16.0,22.0,6.0,4.772,primary_lost_to_ranked_same_conference
+2016,6,North Carolina,ACC,Virginia Tech,ACC,L,3.0,34.0,17.0,25.0,26.0,38.0,0.0,0.072,primary_lost_to_ranked_same_conference
+2016,6,Stanford,Pac-12,Washington State,Pac-12,L,16.0,42.0,15.0,,26.0,15.0,-11.0,-9.894,C2_lost_to_unranked
+2016,6,Tennessee,SEC,Texas A&M,SEC,L,38.0,45.0,9.0,8.0,9.0,25.0,16.0,14.586,primary_lost_to_ranked_same_conference
+2016,6,Texas A&M,SEC,Tennessee,SEC,W,45.0,38.0,8.0,9.0,6.0,28.0,20.0,17.61,winners_beat_ranked_same_conference
+2016,6,Virginia Tech,ACC,North Carolina,ACC,W,34.0,3.0,25.0,17.0,17.0,29.0,9.0,5.388,winners_beat_ranked_same_conference
+2016,7,Alabama,SEC,Tennessee,SEC,W,49.0,10.0,1.0,9.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,7,Arkansas,SEC,Ole Miss,SEC,W,34.0,30.0,22.0,12.0,17.0,49.0,9.0,5.604,winners_beat_ranked_same_conference
+2016,7,Miami,ACC,North Carolina,ACC,L,13.0,20.0,16.0,,26.0,22.0,-4.0,-2.811,C2_lost_to_unranked
+2016,7,Ohio State,Big Ten,Wisconsin,Big Ten,W,30.0,23.0,2.0,8.0,2.0,2.0,0.0,-1.959,winners_beat_ranked_same_conference
+2016,7,Ole Miss,SEC,Arkansas,SEC,L,30.0,34.0,12.0,22.0,23.0,57.0,3.0,2.143,primary_lost_to_ranked_same_conference
+2016,7,Tennessee,SEC,Alabama,SEC,L,10.0,49.0,9.0,1.0,18.0,25.0,7.0,5.586,primary_lost_to_ranked_same_conference
+2016,7,Virginia Tech,ACC,Syracuse,ACC,L,17.0,31.0,17.0,,26.0,29.0,0.0,1.271,C2_lost_to_unranked
+2016,7,Wisconsin,Big Ten,Ohio State,Big Ten,L,23.0,30.0,8.0,2.0,10.0,8.0,-2.0,-3.6,primary_lost_to_ranked_same_conference
+2016,8,Alabama,SEC,Texas A&M,SEC,W,33.0,14.0,1.0,6.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,8,Arkansas,SEC,Auburn,SEC,L,3.0,56.0,17.0,21.0,26.0,49.0,0.0,0.072,primary_lost_to_ranked_same_conference
+2016,8,Auburn,SEC,Arkansas,SEC,W,56.0,3.0,21.0,17.0,15.0,17.0,2.0,-1.324,winners_beat_ranked_same_conference
+2016,8,Houston,American Athletic,SMU,American Athletic,L,16.0,38.0,11.0,,26.0,26.0,0.0,0.774,C2_lost_to_unranked
+2016,8,LSU,SEC,Ole Miss,SEC,W,38.0,21.0,25.0,23.0,19.0,16.0,-3.0,-6.612,winners_beat_ranked_same_conference
+2016,8,Ohio State,Big Ten,Penn State,Big Ten,L,21.0,24.0,2.0,,6.0,2.0,-4.0,-3.971,C2_lost_to_unranked
+2016,8,Ole Miss,SEC,LSU,SEC,L,21.0,38.0,23.0,25.0,26.0,57.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2016,8,Texas A&M,SEC,Alabama,SEC,L,14.0,33.0,6.0,1.0,9.0,28.0,17.0,15.029,primary_lost_to_ranked_same_conference
+2016,9,Baylor,Big 12,Texas,Big 12,L,34.0,35.0,8.0,,13.0,66.0,13.0,13.526,C2_lost_to_unranked
+2016,9,Boise State,Mountain West,Wyoming,Mountain West,L,28.0,30.0,13.0,,24.0,14.0,-10.0,-9.06,C2_lost_to_unranked
+2016,9,Clemson,ACC,Florida State,ACC,W,37.0,34.0,3.0,12.0,3.0,5.0,2.0,-0.031,winners_beat_ranked_same_conference
+2016,9,Florida State,ACC,Clemson,ACC,L,34.0,37.0,12.0,3.0,19.0,12.0,-7.0,-7.857,primary_lost_to_ranked_same_conference
+2016,9,Navy,American Athletic,South Florida,American Athletic,L,45.0,52.0,22.0,,26.0,42.0,0.0,1.686,C2_lost_to_unranked
+2016,9,Nebraska,Big Ten,Wisconsin,Big Ten,L,17.0,23.0,7.0,11.0,9.0,21.0,12.0,10.214,primary_lost_to_ranked_same_conference
+2016,9,Tennessee,SEC,South Carolina,SEC,L,21.0,24.0,18.0,,26.0,25.0,-1.0,0.354,C2_lost_to_unranked
+2016,9,Utah,Pac-12,Washington,Pac-12,L,24.0,31.0,17.0,4.0,16.0,35.0,10.0,10.072,primary_lost_to_ranked_same_conference
+2016,9,Washington,Pac-12,Utah,Pac-12,W,31.0,24.0,4.0,17.0,4.0,3.0,-1.0,-3.103,winners_beat_ranked_same_conference
+2016,9,West Virginia,Big 12,Oklahoma State,Big 12,L,20.0,37.0,10.0,,14.0,20.0,6.0,6.692,C2_lost_to_unranked
+2016,9,Wisconsin,Big Ten,Nebraska,Big Ten,W,23.0,17.0,11.0,7.0,8.0,8.0,0.0,-2.606,winners_beat_ranked_same_conference
+2016,10,Alabama,SEC,LSU,SEC,W,10.0,0.0,1.0,15.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,10,Baylor,Big 12,TCU,Big 12,L,22.0,62.0,13.0,,25.0,66.0,1.0,1.94,C2_lost_to_unranked
+2016,10,Florida,SEC,Arkansas,SEC,L,10.0,31.0,10.0,,22.0,24.0,2.0,2.692,C2_lost_to_unranked
+2016,10,LSU,SEC,Alabama,SEC,L,0.0,10.0,15.0,1.0,19.0,16.0,-3.0,-3.3,primary_lost_to_ranked_same_conference
+2016,10,Nebraska,Big Ten,Ohio State,Big Ten,L,3.0,62.0,9.0,6.0,21.0,21.0,0.0,-1.414,primary_lost_to_ranked_same_conference
+2016,10,Ohio State,Big Ten,Nebraska,Big Ten,W,62.0,3.0,6.0,9.0,6.0,2.0,-4.0,-6.247,winners_beat_ranked_same_conference
+2016,10,Texas A&M,SEC,Mississippi State,SEC,L,28.0,35.0,7.0,,10.0,28.0,16.0,16.443,C2_lost_to_unranked
+2016,11,Auburn,SEC,Georgia,SEC,L,7.0,13.0,8.0,,18.0,17.0,-1.0,-0.474,C2_lost_to_unranked
+2016,11,Baylor,Big 12,Oklahoma,Big 12,L,24.0,45.0,25.0,9.0,26.0,66.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2016,11,Clemson,ACC,Pittsburgh,ACC,L,42.0,43.0,3.0,,5.0,5.0,0.0,0.112,C2_lost_to_unranked
+2016,11,Michigan,Big Ten,Iowa,Big Ten,L,13.0,14.0,2.0,,4.0,4.0,0.0,0.029,C2_lost_to_unranked
+2016,11,North Carolina,ACC,Duke,ACC,L,27.0,28.0,15.0,,26.0,38.0,0.0,1.106,C2_lost_to_unranked
+2016,11,Oklahoma,Big 12,Baylor,Big 12,W,45.0,24.0,9.0,25.0,8.0,10.0,2.0,-0.462,winners_beat_ranked_same_conference
+2016,11,Texas A&M,SEC,Ole Miss,SEC,L,28.0,29.0,10.0,,23.0,28.0,3.0,3.692,C2_lost_to_unranked
+2016,11,Virginia Tech,ACC,Georgia Tech,ACC,L,20.0,30.0,18.0,,26.0,29.0,0.0,1.354,C2_lost_to_unranked
+2016,11,Washington,Pac-12,USC,Pac-12,L,13.0,26.0,4.0,,7.0,3.0,-4.0,-3.805,C2_lost_to_unranked
+2016,12,Colorado,Pac-12,Washington State,Pac-12,W,38.0,24.0,12.0,20.0,9.0,11.0,2.0,-0.678,winners_beat_ranked_same_conference
+2016,12,Florida,SEC,LSU,SEC,W,16.0,10.0,21.0,16.0,13.0,24.0,11.0,7.676,winners_beat_ranked_same_conference
+2016,12,LSU,SEC,Florida,SEC,L,10.0,16.0,16.0,21.0,25.0,16.0,-9.0,-9.114,primary_lost_to_ranked_same_conference
+2016,12,Louisville,ACC,Houston,American Athletic,L,10.0,36.0,3.0,,11.0,13.0,2.0,2.112,C2_lost_to_unranked
+2016,12,Oklahoma,Big 12,West Virginia,Big 12,W,56.0,28.0,8.0,10.0,7.0,10.0,3.0,0.61,winners_beat_ranked_same_conference
+2016,12,San Diego State,Mountain West,Wyoming,Mountain West,L,33.0,34.0,24.0,,26.0,41.0,0.0,1.851,C2_lost_to_unranked
+2016,12,Troy,Sun Belt,Arkansas State,Sun Belt,L,3.0,35.0,25.0,,26.0,45.0,0.0,1.934,C2_lost_to_unranked
+2016,12,Utah,Pac-12,Oregon,Pac-12,L,28.0,30.0,11.0,,21.0,35.0,5.0,5.774,C2_lost_to_unranked
+2016,12,Washington State,Pac-12,Colorado,Pac-12,L,24.0,38.0,20.0,12.0,23.0,23.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2016,12,West Virginia,Big 12,Oklahoma,Big 12,L,28.0,56.0,10.0,8.0,19.0,20.0,1.0,-0.228,primary_lost_to_ranked_same_conference
+2016,13,Alabama,SEC,Auburn,SEC,W,30.0,12.0,1.0,16.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,13,Auburn,SEC,Alabama,SEC,L,12.0,30.0,16.0,1.0,18.0,17.0,-1.0,-1.114,primary_lost_to_ranked_same_conference
+2016,13,Boise State,Mountain West,Air Force,Mountain West,L,20.0,27.0,20.0,,26.0,14.0,-12.0,-10.48,C2_lost_to_unranked
+2016,13,Colorado,Pac-12,Utah,Pac-12,W,27.0,22.0,9.0,21.0,9.0,11.0,2.0,-0.462,winners_beat_ranked_same_conference
+2016,13,Florida,SEC,Florida State,ACC,L,13.0,31.0,13.0,15.0,15.0,24.0,9.0,8.657,C1_lost_to_ranked_other_conference
+2016,13,Houston,American Athletic,Memphis,American Athletic,L,44.0,48.0,18.0,,26.0,26.0,0.0,1.354,C2_lost_to_unranked
+2016,13,LSU,SEC,Texas A&M,SEC,W,54.0,39.0,25.0,22.0,21.0,16.0,-5.0,-8.612,winners_beat_ranked_same_conference
+2016,13,Louisville,ACC,Kentucky,SEC,L,38.0,41.0,11.0,,16.0,13.0,-3.0,-2.226,C2_lost_to_unranked
+2016,13,Michigan,Big Ten,Ohio State,Big Ten,L,27.0,30.0,3.0,2.0,5.0,4.0,-1.0,-3.529,primary_lost_to_ranked_same_conference
+2016,13,Nebraska,Big Ten,Iowa,Big Ten,L,10.0,40.0,17.0,,23.0,21.0,-2.0,-0.729,C2_lost_to_unranked
+2016,13,Ohio State,Big Ten,Michigan,Big Ten,W,30.0,27.0,2.0,3.0,2.0,2.0,0.0,-1.959,winners_beat_ranked_same_conference
+2016,13,Tennessee,SEC,Vanderbilt,SEC,L,34.0,45.0,24.0,,26.0,25.0,-1.0,0.851,C2_lost_to_unranked
+2016,13,Texas A&M,SEC,LSU,SEC,L,39.0,54.0,22.0,25.0,26.0,28.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2016,13,Utah,Pac-12,Colorado,Pac-12,L,22.0,27.0,21.0,9.0,26.0,35.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2016,13,Washington,Pac-12,Washington State,Pac-12,W,45.0,17.0,6.0,23.0,4.0,3.0,-1.0,-3.247,winners_beat_ranked_same_conference
+2016,13,Washington State,Pac-12,Washington,Pac-12,L,17.0,45.0,23.0,6.0,26.0,23.0,-3.0,-1.814,primary_lost_to_ranked_same_conference
+2016,14,Alabama,SEC,Florida,SEC,W,54.0,16.0,1.0,15.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2016,14,Clemson,ACC,Virginia Tech,ACC,W,42.0,35.0,3.0,19.0,3.0,5.0,2.0,-0.031,winners_beat_ranked_same_conference
+2016,14,Colorado,Pac-12,Washington,Pac-12,L,10.0,41.0,9.0,4.0,11.0,11.0,0.0,-1.414,primary_lost_to_ranked_same_conference
+2016,14,Florida,SEC,Alabama,SEC,L,16.0,54.0,15.0,1.0,20.0,24.0,4.0,3.7,primary_lost_to_ranked_same_conference
+2016,14,Navy,American Athletic,Temple,American Athletic,L,10.0,34.0,20.0,,26.0,42.0,0.0,1.52,C2_lost_to_unranked
+2016,14,Oklahoma,Big 12,Oklahoma State,Big 12,W,38.0,20.0,7.0,11.0,7.0,10.0,3.0,0.681,winners_beat_ranked_same_conference
+2016,14,Oklahoma State,Big 12,Oklahoma,Big 12,L,20.0,38.0,11.0,7.0,13.0,30.0,13.0,11.957,primary_lost_to_ranked_same_conference
+2016,14,Penn State,Big Ten,Wisconsin,Big Ten,W,38.0,31.0,8.0,6.0,5.0,6.0,1.0,-1.39,winners_beat_ranked_same_conference
+2016,14,Virginia Tech,ACC,Clemson,ACC,L,35.0,42.0,19.0,3.0,18.0,29.0,8.0,8.443,primary_lost_to_ranked_same_conference
+2016,14,Washington,Pac-12,Colorado,Pac-12,W,41.0,10.0,4.0,9.0,4.0,3.0,-1.0,-3.103,winners_beat_ranked_same_conference
+2016,14,Wisconsin,Big Ten,Penn State,Big Ten,L,31.0,38.0,6.0,8.0,8.0,8.0,0.0,-1.971,primary_lost_to_ranked_same_conference
+2017,1,Florida,SEC,Michigan,Big Ten,L,17.0,33.0,17.0,11.0,22.0,73.0,4.0,4.926,C1_lost_to_ranked_other_conference
+2017,1,Florida State,ACC,Alabama,SEC,L,7.0,24.0,3.0,1.0,10.0,39.0,16.0,12.485,C1_lost_to_ranked_other_conference
+2017,1,Texas,Big 12,Maryland,Big Ten,L,41.0,51.0,23.0,,26.0,44.0,0.0,1.768,C2_lost_to_unranked
+2017,1,West Virginia,Big 12,Virginia Tech,ACC,L,24.0,31.0,22.0,21.0,26.0,48.0,0.0,2.512,C1_lost_to_ranked_other_conference
+2017,2,Auburn,SEC,Clemson,ACC,L,6.0,14.0,13.0,3.0,15.0,10.0,-5.0,-5.343,C1_lost_to_ranked_other_conference
+2017,2,Notre Dame,FBS Independents,Georgia,SEC,L,19.0,20.0,24.0,15.0,26.0,9.0,-17.0,-13.854,C1_lost_to_ranked_other_conference
+2017,2,Ohio State,Big Ten,Oklahoma,Big 12,L,16.0,31.0,2.0,5.0,8.0,4.0,-4.0,-7.832,C1_lost_to_ranked_other_conference
+2017,2,Stanford,Pac-12,USC,Pac-12,L,24.0,42.0,14.0,6.0,19.0,16.0,-3.0,-3.485,primary_lost_to_ranked_same_conference
+2017,2,USC,Pac-12,Stanford,Pac-12,W,42.0,24.0,6.0,14.0,4.0,13.0,9.0,6.753,winners_beat_ranked_same_conference
+2017,3,Clemson,ACC,Louisville,ACC,W,47.0,21.0,3.0,14.0,2.0,2.0,0.0,-2.031,winners_beat_ranked_same_conference
+2017,3,Florida,SEC,Tennessee,SEC,W,26.0,20.0,24.0,23.0,20.0,73.0,6.0,2.46,winners_beat_ranked_same_conference
+2017,3,Kansas State,Big 12,Vanderbilt,SEC,L,7.0,14.0,18.0,,26.0,56.0,0.0,1.354,C2_lost_to_unranked
+2017,3,LSU,SEC,Mississippi State,SEC,L,7.0,37.0,12.0,,25.0,23.0,-2.0,-1.143,C2_lost_to_unranked
+2017,3,Louisville,ACC,Clemson,ACC,L,21.0,47.0,14.0,3.0,19.0,30.0,7.0,6.515,primary_lost_to_ranked_same_conference
+2017,3,Stanford,Pac-12,San Diego State,Mountain West,L,17.0,20.0,19.0,,26.0,16.0,-10.0,-8.563,C2_lost_to_unranked
+2017,3,Tennessee,SEC,Florida,SEC,L,20.0,26.0,23.0,24.0,26.0,95.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2017,3,UCLA,Pac-12,Memphis,American Athletic,L,45.0,48.0,25.0,,26.0,57.0,0.0,1.934,C2_lost_to_unranked
+2017,4,Florida State,ACC,NC State,ACC,L,21.0,27.0,12.0,,26.0,39.0,0.0,0.857,C2_lost_to_unranked
+2017,4,Georgia,SEC,Mississippi State,SEC,W,31.0,3.0,11.0,17.0,7.0,1.0,-6.0,-8.606,winners_beat_ranked_same_conference
+2017,4,Mississippi State,SEC,Georgia,SEC,L,3.0,31.0,17.0,11.0,24.0,26.0,2.0,2.072,primary_lost_to_ranked_same_conference
+2017,4,Oklahoma State,Big 12,TCU,Big 12,L,31.0,44.0,6.0,16.0,15.0,20.0,5.0,3.029,primary_lost_to_ranked_same_conference
+2017,4,Oregon,Pac-12,Arizona State,Pac-12,L,35.0,37.0,24.0,,26.0,42.0,0.0,1.851,C2_lost_to_unranked
+2017,4,TCU,Big 12,Oklahoma State,Big 12,W,44.0,31.0,16.0,6.0,9.0,14.0,5.0,2.035,winners_beat_ranked_same_conference
+2017,5,Auburn,SEC,Mississippi State,SEC,W,49.0,10.0,13.0,24.0,12.0,10.0,-2.0,-4.75,winners_beat_ranked_same_conference
+2017,5,Clemson,ACC,Virginia Tech,ACC,W,31.0,17.0,2.0,12.0,2.0,2.0,0.0,-1.959,winners_beat_ranked_same_conference
+2017,5,LSU,SEC,Troy,Sun Belt,L,21.0,24.0,25.0,,26.0,23.0,-3.0,-1.066,C2_lost_to_unranked
+2017,5,Mississippi State,SEC,Auburn,SEC,L,10.0,49.0,24.0,13.0,26.0,26.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2017,5,USC,Pac-12,Washington State,Pac-12,L,27.0,30.0,5.0,16.0,14.0,13.0,-1.0,-3.157,primary_lost_to_ranked_same_conference
+2017,5,Virginia Tech,ACC,Clemson,ACC,L,17.0,31.0,12.0,2.0,16.0,21.0,5.0,4.143,primary_lost_to_ranked_same_conference
+2017,5,Washington State,Pac-12,USC,Pac-12,W,30.0,27.0,16.0,5.0,11.0,27.0,15.0,12.035,winners_beat_ranked_same_conference
+2017,6,Florida,SEC,LSU,SEC,L,16.0,17.0,21.0,,26.0,73.0,0.0,1.603,C2_lost_to_unranked
+2017,6,Louisville,ACC,NC State,ACC,L,25.0,39.0,17.0,24.0,26.0,30.0,0.0,0.072,primary_lost_to_ranked_same_conference
+2017,6,Michigan,Big Ten,Michigan State,Big Ten,L,10.0,14.0,7.0,,17.0,17.0,0.0,0.443,C2_lost_to_unranked
+2017,6,NC State,ACC,Louisville,ACC,W,39.0,25.0,24.0,17.0,20.0,25.0,5.0,1.46,winners_beat_ranked_same_conference
+2017,6,Oklahoma,Big 12,Iowa State,Big 12,L,31.0,38.0,3.0,,12.0,8.0,-4.0,-3.888,C2_lost_to_unranked
+2017,6,TCU,Big 12,West Virginia,Big 12,W,31.0,24.0,8.0,23.0,6.0,14.0,8.0,5.61,winners_beat_ranked_same_conference
+2017,6,Utah,Pac-12,Stanford,Pac-12,L,20.0,23.0,20.0,,26.0,52.0,0.0,1.52,C2_lost_to_unranked
+2017,6,West Virginia,Big 12,TCU,Big 12,L,24.0,31.0,23.0,8.0,26.0,48.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2017,7,Auburn,SEC,LSU,SEC,L,23.0,27.0,10.0,,21.0,10.0,-11.0,-10.308,C2_lost_to_unranked
+2017,7,Clemson,ACC,Syracuse,ACC,L,24.0,27.0,2.0,,7.0,2.0,-5.0,-4.971,C2_lost_to_unranked
+2017,7,Navy,American Athletic,Memphis,American Athletic,L,27.0,30.0,25.0,,26.0,49.0,0.0,1.934,C2_lost_to_unranked
+2017,7,San Diego State,Mountain West,Boise State,Mountain West,L,14.0,31.0,19.0,,26.0,33.0,0.0,1.437,C2_lost_to_unranked
+2017,7,Texas Tech,Big 12,West Virginia,Big 12,L,35.0,46.0,24.0,,26.0,60.0,0.0,1.851,C2_lost_to_unranked
+2017,7,Washington,Pac-12,Arizona State,Pac-12,L,7.0,13.0,5.0,,12.0,11.0,-1.0,-0.723,C2_lost_to_unranked
+2017,7,Washington State,Pac-12,California,Pac-12,L,3.0,37.0,8.0,,15.0,27.0,11.0,11.526,C2_lost_to_unranked
+2017,8,Michigan,Big Ten,Penn State,Big Ten,L,13.0,42.0,19.0,2.0,26.0,17.0,-9.0,-8.557,primary_lost_to_ranked_same_conference
+2017,8,Penn State,Big Ten,Michigan,Big Ten,W,42.0,13.0,2.0,19.0,2.0,5.0,3.0,1.041,winners_beat_ranked_same_conference
+2017,8,USC,Pac-12,Notre Dame,FBS Independents,L,14.0,49.0,11.0,13.0,21.0,13.0,-8.0,-8.977,C1_lost_to_ranked_other_conference
+2017,9,Iowa State,Big 12,TCU,Big 12,W,14.0,7.0,25.0,4.0,14.0,35.0,12.0,8.388,winners_beat_ranked_same_conference
+2017,9,Michigan State,Big Ten,Northwestern,Big Ten,L,31.0,39.0,16.0,,24.0,15.0,-9.0,-7.811,C2_lost_to_unranked
+2017,9,NC State,ACC,Notre Dame,FBS Independents,L,14.0,35.0,14.0,9.0,20.0,25.0,5.0,4.974,C1_lost_to_ranked_other_conference
+2017,9,Ohio State,Big Ten,Penn State,Big Ten,W,39.0,38.0,6.0,2.0,3.0,4.0,1.0,-1.247,winners_beat_ranked_same_conference
+2017,9,Oklahoma State,Big 12,West Virginia,Big 12,W,50.0,39.0,11.0,22.0,11.0,20.0,9.0,6.394,winners_beat_ranked_same_conference
+2017,9,Penn State,Big Ten,Ohio State,Big Ten,L,38.0,39.0,2.0,6.0,7.0,5.0,-2.0,-4.714,primary_lost_to_ranked_same_conference
+2017,9,South Florida,American Athletic,Houston,American Athletic,L,24.0,28.0,17.0,,26.0,34.0,0.0,1.271,C2_lost_to_unranked
+2017,9,TCU,Big 12,Iowa State,Big 12,L,7.0,14.0,4.0,25.0,10.0,14.0,4.0,1.657,primary_lost_to_ranked_same_conference
+2017,9,Washington State,Pac-12,Arizona,Pac-12,L,37.0,58.0,15.0,,25.0,27.0,1.0,2.106,C2_lost_to_unranked
+2017,9,West Virginia,Big 12,Oklahoma State,Big 12,L,39.0,50.0,22.0,11.0,26.0,48.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2017,10,Alabama,SEC,LSU,SEC,W,24.0,10.0,1.0,19.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2017,10,Arizona,Pac-12,USC,Pac-12,L,35.0,49.0,23.0,17.0,26.0,53.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2017,10,Clemson,ACC,NC State,ACC,W,38.0,31.0,6.0,20.0,4.0,2.0,-2.0,-4.247,winners_beat_ranked_same_conference
+2017,10,Iowa State,Big 12,West Virginia,Big 12,L,16.0,20.0,14.0,,24.0,35.0,2.0,3.023,C2_lost_to_unranked
+2017,10,LSU,SEC,Alabama,SEC,L,10.0,24.0,19.0,1.0,26.0,23.0,-3.0,-2.557,primary_lost_to_ranked_same_conference
+2017,10,Miami,ACC,Virginia Tech,ACC,W,28.0,10.0,9.0,13.0,7.0,12.0,5.0,2.538,winners_beat_ranked_same_conference
+2017,10,Michigan State,Big Ten,Penn State,Big Ten,W,27.0,24.0,24.0,7.0,13.0,15.0,2.0,-1.54,winners_beat_ranked_same_conference
+2017,10,NC State,ACC,Clemson,ACC,L,31.0,38.0,20.0,6.0,26.0,25.0,-1.0,-0.371,primary_lost_to_ranked_same_conference
+2017,10,Ohio State,Big Ten,Iowa,Big Ten,L,24.0,55.0,3.0,,11.0,4.0,-7.0,-6.888,C2_lost_to_unranked
+2017,10,Oklahoma,Big 12,Oklahoma State,Big 12,W,62.0,52.0,8.0,11.0,5.0,8.0,3.0,0.61,winners_beat_ranked_same_conference
+2017,10,Oklahoma State,Big 12,Oklahoma,Big 12,L,52.0,62.0,11.0,8.0,12.0,20.0,8.0,6.957,primary_lost_to_ranked_same_conference
+2017,10,Penn State,Big Ten,Michigan State,Big Ten,L,24.0,27.0,7.0,24.0,16.0,5.0,-11.0,-12.786,primary_lost_to_ranked_same_conference
+2017,10,Stanford,Pac-12,Washington State,Pac-12,L,21.0,24.0,18.0,25.0,26.0,16.0,-10.0,-9.742,primary_lost_to_ranked_same_conference
+2017,10,USC,Pac-12,Arizona,Pac-12,W,49.0,35.0,17.0,23.0,15.0,13.0,-2.0,-5.037,winners_beat_ranked_same_conference
+2017,10,Virginia Tech,ACC,Miami,ACC,L,10.0,28.0,13.0,9.0,17.0,21.0,4.0,3.329,primary_lost_to_ranked_same_conference
+2017,10,Washington State,Pac-12,Stanford,Pac-12,W,24.0,21.0,25.0,18.0,19.0,27.0,7.0,3.388,winners_beat_ranked_same_conference
+2017,11,Alabama,SEC,Mississippi State,SEC,W,31.0,24.0,1.0,18.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2017,11,Auburn,SEC,Georgia,SEC,W,40.0,17.0,10.0,2.0,6.0,10.0,4.0,1.466,winners_beat_ranked_same_conference
+2017,11,Georgia,SEC,Auburn,SEC,L,17.0,40.0,2.0,10.0,7.0,1.0,-6.0,-8.714,primary_lost_to_ranked_same_conference
+2017,11,Iowa,Big Ten,Wisconsin,Big Ten,L,14.0,38.0,25.0,6.0,26.0,19.0,-7.0,-5.442,primary_lost_to_ranked_same_conference
+2017,11,Iowa State,Big 12,Oklahoma State,Big 12,L,42.0,49.0,24.0,12.0,26.0,35.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2017,11,Michigan State,Big Ten,Ohio State,Big Ten,L,3.0,48.0,13.0,11.0,22.0,15.0,-7.0,-7.671,primary_lost_to_ranked_same_conference
+2017,11,Mississippi State,SEC,Alabama,SEC,L,24.0,31.0,18.0,1.0,17.0,26.0,9.0,9.258,primary_lost_to_ranked_same_conference
+2017,11,Notre Dame,FBS Independents,Miami,ACC,L,8.0,41.0,3.0,7.0,9.0,9.0,0.0,-3.515,C1_lost_to_ranked_other_conference
+2017,11,Ohio State,Big Ten,Michigan State,Big Ten,W,48.0,3.0,11.0,13.0,8.0,4.0,-4.0,-6.606,winners_beat_ranked_same_conference
+2017,11,Oklahoma,Big 12,TCU,Big 12,W,38.0,20.0,5.0,8.0,3.0,8.0,5.0,2.825,winners_beat_ranked_same_conference
+2017,11,Oklahoma State,Big 12,Iowa State,Big 12,W,49.0,42.0,12.0,24.0,10.0,20.0,10.0,7.322,winners_beat_ranked_same_conference
+2017,11,TCU,Big 12,Oklahoma,Big 12,L,20.0,38.0,8.0,5.0,11.0,14.0,3.0,1.4,primary_lost_to_ranked_same_conference
+2017,11,Virginia Tech,ACC,Georgia Tech,ACC,L,22.0,28.0,17.0,,26.0,21.0,-5.0,-3.729,C2_lost_to_unranked
+2017,11,Washington,Pac-12,Stanford,Pac-12,L,22.0,30.0,9.0,,16.0,11.0,-5.0,-4.391,C2_lost_to_unranked
+2017,11,Wisconsin,Big Ten,Iowa,Big Ten,W,38.0,14.0,6.0,25.0,5.0,3.0,-2.0,-4.247,winners_beat_ranked_same_conference
+2017,12,Michigan,Big Ten,Wisconsin,Big Ten,L,10.0,24.0,19.0,5.0,26.0,17.0,-9.0,-8.557,primary_lost_to_ranked_same_conference
+2017,12,NC State,ACC,Wake Forest,ACC,L,24.0,30.0,25.0,,26.0,25.0,-1.0,0.934,C2_lost_to_unranked
+2017,12,Oklahoma State,Big 12,Kansas State,Big 12,L,40.0,45.0,10.0,,18.0,20.0,2.0,2.692,C2_lost_to_unranked
+2017,12,West Virginia,Big 12,Texas,Big 12,L,14.0,28.0,24.0,,26.0,48.0,0.0,1.851,C2_lost_to_unranked
+2017,12,Wisconsin,Big Ten,Michigan,Big Ten,W,24.0,10.0,5.0,19.0,5.0,3.0,-2.0,-4.175,winners_beat_ranked_same_conference
+2017,13,Alabama,SEC,Auburn,SEC,L,14.0,26.0,1.0,6.0,5.0,6.0,1.0,-1.9,primary_lost_to_ranked_same_conference
+2017,13,Auburn,SEC,Alabama,SEC,W,26.0,14.0,6.0,1.0,4.0,10.0,6.0,3.753,winners_beat_ranked_same_conference
+2017,13,Boise State,Mountain West,Fresno State,Mountain West,L,17.0,28.0,25.0,,26.0,24.0,-2.0,-0.066,C2_lost_to_unranked
+2017,13,Miami,ACC,Pittsburgh,ACC,L,14.0,24.0,2.0,,7.0,12.0,5.0,5.029,C2_lost_to_unranked
+2017,13,Mississippi State,SEC,Ole Miss,SEC,L,28.0,31.0,16.0,,24.0,26.0,2.0,3.189,C2_lost_to_unranked
+2017,13,Notre Dame,FBS Independents,Stanford,Pac-12,L,20.0,38.0,9.0,20.0,15.0,9.0,-6.0,-7.612,C1_lost_to_ranked_other_conference
+2017,13,South Florida,American Athletic,UCF,American Athletic,L,42.0,49.0,22.0,13.0,23.0,34.0,3.0,4.001,primary_lost_to_ranked_same_conference
+2017,13,UCF,American Athletic,South Florida,American Athletic,W,49.0,42.0,13.0,22.0,12.0,7.0,-5.0,-7.75,winners_beat_ranked_same_conference
+2017,13,Washington,Pac-12,Washington State,Pac-12,W,41.0,14.0,15.0,14.0,13.0,11.0,-2.0,-4.893,winners_beat_ranked_same_conference
+2017,13,Washington State,Pac-12,Washington,Pac-12,L,14.0,41.0,14.0,15.0,21.0,27.0,5.0,4.515,primary_lost_to_ranked_same_conference
+2017,14,Auburn,SEC,Georgia,SEC,L,7.0,28.0,4.0,6.0,7.0,10.0,3.0,0.657,primary_lost_to_ranked_same_conference
+2017,14,Clemson,ACC,Miami,ACC,W,38.0,3.0,1.0,7.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2017,14,Fresno State,Mountain West,Boise State,Mountain West,L,14.0,17.0,25.0,,26.0,38.0,0.0,1.934,C2_lost_to_unranked
+2017,14,Georgia,SEC,Auburn,SEC,W,28.0,7.0,6.0,4.0,3.0,1.0,-2.0,-4.247,winners_beat_ranked_same_conference
+2017,14,Memphis,American Athletic,UCF,American Athletic,L,55.0,62.0,16.0,12.0,19.0,22.0,3.0,2.886,primary_lost_to_ranked_same_conference
+2017,14,Miami,ACC,Clemson,ACC,L,3.0,38.0,7.0,1.0,11.0,12.0,1.0,-0.786,primary_lost_to_ranked_same_conference
+2017,14,Ohio State,Big Ten,Wisconsin,Big Ten,W,27.0,21.0,8.0,3.0,5.0,4.0,-1.0,-3.39,winners_beat_ranked_same_conference
+2017,14,Oklahoma,Big 12,TCU,Big 12,W,41.0,17.0,2.0,10.0,2.0,8.0,6.0,4.041,winners_beat_ranked_same_conference
+2017,14,Stanford,Pac-12,USC,Pac-12,L,28.0,31.0,14.0,11.0,15.0,16.0,1.0,0.515,primary_lost_to_ranked_same_conference
+2017,14,TCU,Big 12,Oklahoma,Big 12,L,17.0,41.0,10.0,2.0,13.0,14.0,1.0,-0.228,primary_lost_to_ranked_same_conference
+2017,14,UCF,American Athletic,Memphis,American Athletic,W,62.0,55.0,12.0,16.0,10.0,7.0,-3.0,-5.678,winners_beat_ranked_same_conference
+2017,14,USC,Pac-12,Stanford,Pac-12,W,31.0,28.0,11.0,14.0,8.0,13.0,5.0,2.394,winners_beat_ranked_same_conference
+2017,14,Wisconsin,Big Ten,Ohio State,Big Ten,L,21.0,27.0,3.0,8.0,6.0,3.0,-3.0,-5.529,primary_lost_to_ranked_same_conference
+2018,1,Florida State,ACC,Virginia Tech,ACC,L,3.0,24.0,19.0,20.0,26.0,83.0,0.0,0.443,primary_lost_to_ranked_same_conference
+2018,1,Miami,ACC,LSU,SEC,L,17.0,33.0,8.0,25.0,22.0,35.0,4.0,2.071,C1_lost_to_ranked_other_conference
+2018,1,Michigan,Big Ten,Notre Dame,FBS Independents,L,17.0,24.0,14.0,12.0,21.0,6.0,-15.0,-15.026,C1_lost_to_ranked_other_conference
+2018,1,Texas,Big 12,Maryland,Big Ten,L,29.0,34.0,23.0,,26.0,27.0,0.0,1.768,C2_lost_to_unranked
+2018,1,Virginia Tech,ACC,Florida State,ACC,W,24.0,3.0,20.0,19.0,12.0,80.0,14.0,10.747,winners_beat_ranked_same_conference
+2018,1,Washington,Pac-12,Auburn,SEC,L,16.0,21.0,6.0,9.0,9.0,13.0,4.0,1.437,C1_lost_to_ranked_other_conference
+2018,2,Florida,SEC,Kentucky,SEC,L,16.0,27.0,25.0,,26.0,16.0,-10.0,-8.066,C2_lost_to_unranked
+2018,2,Georgia,SEC,South Carolina,SEC,W,41.0,17.0,3.0,24.0,3.0,4.0,1.0,-1.031,winners_beat_ranked_same_conference
+2018,2,Michigan State,Big Ten,Arizona State,Pac-12,L,13.0,16.0,15.0,,25.0,37.0,1.0,2.106,C2_lost_to_unranked
+2018,2,South Carolina,SEC,Georgia,SEC,L,17.0,41.0,24.0,3.0,26.0,31.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2018,2,Stanford,Pac-12,USC,Pac-12,W,17.0,3.0,10.0,17.0,9.0,28.0,17.0,14.466,winners_beat_ranked_same_conference
+2018,2,USC,Pac-12,Stanford,Pac-12,L,3.0,17.0,17.0,10.0,22.0,69.0,4.0,4.072,primary_lost_to_ranked_same_conference
+2018,3,Arizona State,Pac-12,San Diego State,Mountain West,L,21.0,28.0,23.0,,26.0,46.0,0.0,1.768,C2_lost_to_unranked
+2018,3,Auburn,SEC,LSU,SEC,L,21.0,22.0,7.0,12.0,9.0,32.0,17.0,15.214,primary_lost_to_ranked_same_conference
+2018,3,Boise State,Mountain West,Oklahoma State,Big 12,L,21.0,44.0,17.0,24.0,26.0,23.0,-3.0,-2.074,C1_lost_to_ranked_other_conference
+2018,3,LSU,SEC,Auburn,SEC,W,22.0,21.0,12.0,7.0,6.0,9.0,3.0,0.322,winners_beat_ranked_same_conference
+2018,3,TCU,Big 12,Ohio State,Big Ten,L,28.0,40.0,15.0,4.0,17.0,60.0,9.0,9.292,C1_lost_to_ranked_other_conference
+2018,3,USC,Pac-12,Texas,Big 12,L,14.0,37.0,22.0,,26.0,69.0,0.0,1.686,C2_lost_to_unranked
+2018,3,Wisconsin,Big Ten,BYU,FBS Independents,L,21.0,24.0,6.0,,18.0,48.0,8.0,8.36,C2_lost_to_unranked
+2018,4,Alabama,SEC,Texas A&M,SEC,W,45.0,23.0,1.0,22.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2018,4,Boston College,ACC,Purdue,Big Ten,L,13.0,30.0,23.0,,26.0,44.0,0.0,1.768,C2_lost_to_unranked
+2018,4,Mississippi State,SEC,Kentucky,SEC,L,7.0,28.0,14.0,,23.0,15.0,-8.0,-6.977,C2_lost_to_unranked
+2018,4,Oklahoma State,Big 12,Texas Tech,Big 12,L,17.0,41.0,15.0,,26.0,56.0,0.0,1.106,C2_lost_to_unranked
+2018,4,Oregon,Pac-12,Stanford,Pac-12,L,31.0,38.0,20.0,7.0,19.0,41.0,7.0,7.629,primary_lost_to_ranked_same_conference
+2018,4,Stanford,Pac-12,Oregon,Pac-12,W,38.0,31.0,7.0,20.0,7.0,28.0,19.0,16.681,winners_beat_ranked_same_conference
+2018,4,TCU,Big 12,Texas,Big 12,L,16.0,31.0,17.0,,26.0,60.0,0.0,1.271,C2_lost_to_unranked
+2018,4,Texas A&M,SEC,Alabama,SEC,L,23.0,45.0,22.0,1.0,26.0,19.0,-7.0,-5.999,primary_lost_to_ranked_same_conference
+2018,4,Virginia Tech,ACC,Old Dominion,Conference USA,L,35.0,49.0,13.0,,26.0,80.0,0.0,0.94,C2_lost_to_unranked
+2018,5,BYU,FBS Independents,Washington,Pac-12,L,7.0,35.0,20.0,11.0,26.0,63.0,0.0,1.878,C1_lost_to_ranked_other_conference
+2018,5,California,Pac-12,Oregon,Pac-12,L,24.0,42.0,24.0,19.0,26.0,66.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2018,5,Duke,ACC,Virginia Tech,ACC,L,14.0,31.0,22.0,,26.0,49.0,0.0,1.686,C2_lost_to_unranked
+2018,5,Mississippi State,SEC,Florida,SEC,L,6.0,13.0,23.0,,26.0,15.0,-11.0,-9.232,C2_lost_to_unranked
+2018,5,Ohio State,Big Ten,Penn State,Big Ten,W,27.0,26.0,4.0,9.0,3.0,7.0,4.0,1.897,winners_beat_ranked_same_conference
+2018,5,Oregon,Pac-12,California,Pac-12,W,42.0,24.0,19.0,24.0,18.0,41.0,8.0,4.819,winners_beat_ranked_same_conference
+2018,5,Penn State,Big Ten,Ohio State,Big Ten,L,26.0,27.0,9.0,4.0,11.0,10.0,-1.0,-2.414,primary_lost_to_ranked_same_conference
+2018,5,Stanford,Pac-12,Notre Dame,FBS Independents,L,17.0,38.0,7.0,8.0,14.0,28.0,12.0,9.754,C1_lost_to_ranked_other_conference
+2018,5,Texas Tech,Big 12,West Virginia,Big 12,L,34.0,42.0,25.0,12.0,26.0,68.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2018,5,West Virginia,Big 12,Texas Tech,Big 12,W,42.0,34.0,12.0,25.0,9.0,18.0,9.0,6.322,winners_beat_ranked_same_conference
+2018,6,Auburn,SEC,Mississippi State,SEC,L,9.0,23.0,8.0,,21.0,32.0,5.0,5.526,C2_lost_to_unranked
+2018,6,Florida,SEC,LSU,SEC,W,27.0,19.0,22.0,5.0,14.0,16.0,2.0,-1.396,winners_beat_ranked_same_conference
+2018,6,Kentucky,SEC,Texas A&M,SEC,L,14.0,20.0,13.0,,18.0,17.0,-1.0,-0.06,C2_lost_to_unranked
+2018,6,LSU,SEC,Florida,SEC,L,19.0,27.0,5.0,22.0,13.0,9.0,-4.0,-6.157,primary_lost_to_ranked_same_conference
+2018,6,Michigan State,Big Ten,Northwestern,Big Ten,L,19.0,29.0,20.0,,26.0,37.0,0.0,1.52,C2_lost_to_unranked
+2018,6,Oklahoma,Big 12,Texas,Big 12,L,45.0,48.0,7.0,19.0,11.0,5.0,-6.0,-7.786,primary_lost_to_ranked_same_conference
+2018,6,Oklahoma State,Big 12,Iowa State,Big 12,L,42.0,48.0,25.0,,26.0,56.0,0.0,1.934,C2_lost_to_unranked
+2018,6,Stanford,Pac-12,Utah,Pac-12,L,21.0,40.0,14.0,,26.0,28.0,0.0,1.023,C2_lost_to_unranked
+2018,6,Texas,Big 12,Oklahoma,Big 12,W,48.0,45.0,19.0,7.0,9.0,27.0,17.0,13.819,winners_beat_ranked_same_conference
+2018,6,Virginia Tech,ACC,Notre Dame,FBS Independents,L,23.0,45.0,24.0,6.0,26.0,80.0,0.0,3.146,C1_lost_to_ranked_other_conference
+2018,7,Auburn,SEC,Tennessee,SEC,L,24.0,30.0,21.0,,26.0,32.0,0.0,1.603,C2_lost_to_unranked
+2018,7,Colorado,Pac-12,USC,Pac-12,L,20.0,31.0,19.0,,26.0,91.0,0.0,1.437,C2_lost_to_unranked
+2018,7,Georgia,SEC,LSU,SEC,L,16.0,36.0,2.0,13.0,8.0,4.0,-4.0,-6.714,primary_lost_to_ranked_same_conference
+2018,7,LSU,SEC,Georgia,SEC,W,36.0,16.0,13.0,2.0,5.0,9.0,4.0,1.25,winners_beat_ranked_same_conference
+2018,7,Miami,ACC,Virginia,ACC,L,13.0,16.0,16.0,,26.0,35.0,0.0,1.189,C2_lost_to_unranked
+2018,7,Michigan,Big Ten,Wisconsin,Big Ten,W,38.0,13.0,12.0,15.0,6.0,6.0,0.0,-2.678,winners_beat_ranked_same_conference
+2018,7,Oregon,Pac-12,Washington,Pac-12,W,30.0,27.0,17.0,7.0,12.0,41.0,14.0,10.963,winners_beat_ranked_same_conference
+2018,7,Penn State,Big Ten,Michigan State,Big Ten,L,17.0,21.0,8.0,,18.0,10.0,-8.0,-7.474,C2_lost_to_unranked
+2018,7,Washington,Pac-12,Oregon,Pac-12,L,27.0,30.0,7.0,17.0,15.0,13.0,-2.0,-3.786,primary_lost_to_ranked_same_conference
+2018,7,West Virginia,Big 12,Iowa State,Big 12,L,14.0,30.0,6.0,,13.0,18.0,5.0,5.36,C2_lost_to_unranked
+2018,7,Wisconsin,Big Ten,Michigan,Big Ten,L,13.0,38.0,15.0,12.0,23.0,48.0,3.0,2.7,primary_lost_to_ranked_same_conference
+2018,8,Cincinnati,American Athletic,Temple,American Athletic,L,17.0,24.0,20.0,,26.0,25.0,-1.0,0.52,C2_lost_to_unranked
+2018,8,Clemson,ACC,NC State,ACC,W,41.0,7.0,3.0,16.0,2.0,2.0,0.0,-2.031,winners_beat_ranked_same_conference
+2018,8,LSU,SEC,Mississippi State,SEC,W,19.0,3.0,5.0,22.0,4.0,9.0,5.0,2.825,winners_beat_ranked_same_conference
+2018,8,Michigan,Big Ten,Michigan State,Big Ten,W,21.0,7.0,6.0,24.0,5.0,6.0,1.0,-1.247,winners_beat_ranked_same_conference
+2018,8,Michigan State,Big Ten,Michigan,Big Ten,L,7.0,21.0,24.0,6.0,26.0,37.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2018,8,Mississippi State,SEC,LSU,SEC,L,3.0,19.0,22.0,5.0,26.0,15.0,-11.0,-9.999,primary_lost_to_ranked_same_conference
+2018,8,NC State,ACC,Clemson,ACC,L,7.0,41.0,16.0,3.0,22.0,29.0,4.0,3.886,primary_lost_to_ranked_same_conference
+2018,8,Ohio State,Big Ten,Purdue,Big Ten,L,20.0,49.0,2.0,,11.0,7.0,-4.0,-3.971,C2_lost_to_unranked
+2018,8,Oregon,Pac-12,Washington State,Pac-12,L,20.0,34.0,12.0,25.0,19.0,41.0,7.0,6.143,primary_lost_to_ranked_same_conference
+2018,8,Washington State,Pac-12,Oregon,Pac-12,W,34.0,20.0,25.0,12.0,14.0,14.0,0.0,-3.612,winners_beat_ranked_same_conference
+2018,9,App State,Sun Belt,Georgia Southern,Sun Belt,L,14.0,34.0,25.0,,26.0,20.0,-6.0,-4.066,C2_lost_to_unranked
+2018,9,Florida,SEC,Georgia,SEC,L,17.0,36.0,9.0,7.0,13.0,16.0,3.0,1.586,primary_lost_to_ranked_same_conference
+2018,9,Georgia,SEC,Florida,SEC,W,36.0,17.0,7.0,9.0,6.0,4.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2018,9,Iowa,Big Ten,Penn State,Big Ten,L,24.0,30.0,18.0,17.0,19.0,24.0,5.0,5.258,primary_lost_to_ranked_same_conference
+2018,9,NC State,ACC,Syracuse,ACC,L,41.0,51.0,22.0,,26.0,29.0,0.0,1.686,C2_lost_to_unranked
+2018,9,Oregon,Pac-12,Arizona,Pac-12,L,15.0,44.0,19.0,,26.0,41.0,0.0,1.437,C2_lost_to_unranked
+2018,9,Penn State,Big Ten,Iowa,Big Ten,W,30.0,24.0,17.0,18.0,14.0,10.0,-4.0,-7.037,winners_beat_ranked_same_conference
+2018,9,South Florida,American Athletic,Houston,American Athletic,L,36.0,57.0,21.0,,26.0,88.0,0.0,1.603,C2_lost_to_unranked
+2018,9,Stanford,Pac-12,Washington State,Pac-12,L,38.0,41.0,24.0,14.0,26.0,28.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2018,9,Texas,Big 12,Oklahoma State,Big 12,L,35.0,38.0,6.0,,15.0,27.0,11.0,11.36,C2_lost_to_unranked
+2018,9,Texas A&M,SEC,Mississippi State,SEC,L,13.0,28.0,16.0,,25.0,19.0,-6.0,-4.811,C2_lost_to_unranked
+2018,9,Washington,Pac-12,California,Pac-12,L,10.0,12.0,15.0,,26.0,13.0,-13.0,-11.894,C2_lost_to_unranked
+2018,9,Washington State,Pac-12,Stanford,Pac-12,W,41.0,38.0,14.0,24.0,10.0,14.0,4.0,1.179,winners_beat_ranked_same_conference
+2018,9,Wisconsin,Big Ten,Northwestern,Big Ten,L,17.0,31.0,20.0,,26.0,48.0,0.0,1.52,C2_lost_to_unranked
+2018,10,Alabama,SEC,LSU,SEC,W,29.0,0.0,1.0,4.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2018,10,Florida,SEC,Missouri,SEC,L,17.0,38.0,13.0,,19.0,16.0,-3.0,-2.06,C2_lost_to_unranked
+2018,10,Georgia,SEC,Kentucky,SEC,W,34.0,17.0,6.0,11.0,5.0,4.0,-1.0,-3.247,winners_beat_ranked_same_conference
+2018,10,Houston,American Athletic,SMU,American Athletic,L,31.0,45.0,17.0,,26.0,55.0,0.0,1.271,C2_lost_to_unranked
+2018,10,Iowa,Big Ten,Purdue,Big Ten,L,36.0,38.0,19.0,,26.0,24.0,-2.0,-0.563,C2_lost_to_unranked
+2018,10,Kentucky,SEC,Georgia,SEC,L,17.0,34.0,11.0,6.0,12.0,17.0,5.0,3.957,primary_lost_to_ranked_same_conference
+2018,10,LSU,SEC,Alabama,SEC,L,0.0,29.0,4.0,1.0,9.0,9.0,0.0,-2.343,primary_lost_to_ranked_same_conference
+2018,10,Michigan,Big Ten,Penn State,Big Ten,W,42.0,7.0,5.0,14.0,4.0,6.0,2.0,-0.175,winners_beat_ranked_same_conference
+2018,10,Penn State,Big Ten,Michigan,Big Ten,L,7.0,42.0,14.0,5.0,21.0,10.0,-11.0,-11.485,primary_lost_to_ranked_same_conference
+2018,10,Texas,Big 12,West Virginia,Big 12,L,41.0,42.0,15.0,12.0,15.0,27.0,11.0,10.7,primary_lost_to_ranked_same_conference
+2018,10,Texas A&M,SEC,Auburn,SEC,L,24.0,28.0,25.0,,26.0,19.0,-7.0,-5.066,C2_lost_to_unranked
+2018,10,Utah,Pac-12,Arizona State,Pac-12,L,20.0,38.0,16.0,,26.0,21.0,-5.0,-3.811,C2_lost_to_unranked
+2018,10,Virginia,ACC,Pittsburgh,ACC,L,13.0,23.0,23.0,,26.0,52.0,0.0,1.768,C2_lost_to_unranked
+2018,10,West Virginia,Big 12,Texas,Big 12,W,42.0,41.0,12.0,15.0,7.0,18.0,11.0,8.322,winners_beat_ranked_same_conference
+2018,11,Alabama,SEC,Mississippi State,SEC,W,24.0,0.0,1.0,18.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2018,11,Boston College,ACC,Clemson,ACC,L,7.0,27.0,17.0,2.0,22.0,44.0,4.0,4.072,primary_lost_to_ranked_same_conference
+2018,11,Clemson,ACC,Boston College,ACC,W,27.0,7.0,2.0,17.0,2.0,2.0,0.0,-1.959,winners_beat_ranked_same_conference
+2018,11,Fresno State,Mountain West,Boise State,Mountain West,L,17.0,24.0,16.0,,26.0,12.0,-14.0,-12.811,C2_lost_to_unranked
+2018,11,Kentucky,SEC,Tennessee,SEC,L,7.0,24.0,12.0,,20.0,17.0,-3.0,-2.143,C2_lost_to_unranked
+2018,11,Michigan State,Big Ten,Ohio State,Big Ten,L,6.0,26.0,24.0,8.0,26.0,37.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2018,11,Mississippi State,SEC,Alabama,SEC,L,0.0,24.0,18.0,1.0,25.0,15.0,-10.0,-9.742,primary_lost_to_ranked_same_conference
+2018,11,NC State,ACC,Wake Forest,ACC,L,23.0,27.0,22.0,,26.0,29.0,0.0,1.686,C2_lost_to_unranked
+2018,11,Ohio State,Big Ten,Michigan State,Big Ten,W,26.0,6.0,8.0,24.0,9.0,7.0,-2.0,-4.39,winners_beat_ranked_same_conference
+2018,12,Boston College,ACC,Florida State,ACC,L,21.0,22.0,22.0,,26.0,44.0,0.0,1.686,C2_lost_to_unranked
+2018,12,Cincinnati,American Athletic,UCF,American Athletic,L,13.0,38.0,19.0,11.0,26.0,25.0,-1.0,-0.557,primary_lost_to_ranked_same_conference
+2018,12,Iowa State,Big 12,Texas,Big 12,L,10.0,24.0,18.0,13.0,25.0,33.0,1.0,1.258,primary_lost_to_ranked_same_conference
+2018,12,Syracuse,ACC,Notre Dame,FBS Independents,L,3.0,36.0,12.0,3.0,19.0,22.0,3.0,2.34,C1_lost_to_ranked_other_conference
+2018,12,Texas,Big 12,Iowa State,Big 12,W,24.0,10.0,13.0,18.0,11.0,27.0,15.0,12.25,winners_beat_ranked_same_conference
+2018,12,UCF,American Athletic,Cincinnati,American Athletic,W,38.0,13.0,11.0,19.0,8.0,8.0,0.0,-2.606,winners_beat_ranked_same_conference
+2018,12,West Virginia,Big 12,Oklahoma State,Big 12,L,41.0,45.0,7.0,,12.0,18.0,6.0,6.443,C2_lost_to_unranked
+2018,13,Boise State,Mountain West,Utah State,Mountain West,W,33.0,24.0,21.0,14.0,19.0,23.0,4.0,0.676,winners_beat_ranked_same_conference
+2018,13,LSU,SEC,Texas A&M,SEC,L,72.0,74.0,8.0,,12.0,9.0,-3.0,-2.474,C2_lost_to_unranked
+2018,13,Michigan,Big Ten,Ohio State,Big Ten,L,39.0,62.0,4.0,10.0,8.0,6.0,-2.0,-4.343,primary_lost_to_ranked_same_conference
+2018,13,Ohio State,Big Ten,Michigan,Big Ten,W,62.0,39.0,10.0,4.0,6.0,7.0,1.0,-1.534,winners_beat_ranked_same_conference
+2018,13,Oklahoma,Big 12,West Virginia,Big 12,W,59.0,56.0,6.0,12.0,5.0,5.0,0.0,-2.247,winners_beat_ranked_same_conference
+2018,13,Pittsburgh,ACC,Miami,ACC,L,3.0,24.0,24.0,,26.0,38.0,0.0,1.851,C2_lost_to_unranked
+2018,13,Utah State,Mountain West,Boise State,Mountain West,L,24.0,33.0,14.0,21.0,26.0,26.0,0.0,-0.485,primary_lost_to_ranked_same_conference
+2018,13,Washington,Pac-12,Washington State,Pac-12,W,28.0,15.0,16.0,7.0,10.0,13.0,3.0,0.035,winners_beat_ranked_same_conference
+2018,13,Washington State,Pac-12,Washington,Pac-12,L,15.0,28.0,7.0,16.0,12.0,14.0,2.0,0.214,primary_lost_to_ranked_same_conference
+2018,13,West Virginia,Big 12,Oklahoma,Big 12,L,56.0,59.0,12.0,6.0,15.0,18.0,3.0,2.143,primary_lost_to_ranked_same_conference
+2018,14,Alabama,SEC,Georgia,SEC,W,35.0,28.0,1.0,4.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2018,14,Boise State,Mountain West,Fresno State,Mountain West,L,16.0,19.0,19.0,25.0,23.0,23.0,0.0,0.443,primary_lost_to_ranked_same_conference
+2018,14,Fresno State,Mountain West,Boise State,Mountain West,W,19.0,16.0,25.0,19.0,19.0,12.0,-7.0,-10.612,winners_beat_ranked_same_conference
+2018,14,Georgia,SEC,Alabama,SEC,L,28.0,35.0,4.0,1.0,6.0,4.0,-2.0,-4.343,primary_lost_to_ranked_same_conference
+2018,14,Northwestern,Big Ten,Ohio State,Big Ten,L,24.0,45.0,21.0,6.0,26.0,34.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2018,14,Ohio State,Big Ten,Northwestern,Big Ten,W,45.0,24.0,6.0,21.0,5.0,7.0,2.0,-0.247,winners_beat_ranked_same_conference
+2018,14,Oklahoma,Big 12,Texas,Big 12,W,39.0,27.0,5.0,9.0,4.0,5.0,1.0,-1.175,winners_beat_ranked_same_conference
+2018,14,Texas,Big 12,Oklahoma,Big 12,L,27.0,39.0,9.0,5.0,14.0,27.0,12.0,10.586,primary_lost_to_ranked_same_conference
+2018,14,Utah,Pac-12,Washington,Pac-12,L,3.0,10.0,17.0,10.0,20.0,21.0,1.0,1.072,primary_lost_to_ranked_same_conference
+2018,14,Washington,Pac-12,Utah,Pac-12,W,10.0,3.0,10.0,17.0,9.0,13.0,4.0,1.466,winners_beat_ranked_same_conference
+2019,1,Oregon,Pac-12,Auburn,SEC,L,21.0,27.0,11.0,16.0,16.0,12.0,-4.0,-4.977,C1_lost_to_ranked_other_conference
+2019,2,Nebraska,Big Ten,Colorado,Pac-12,L,31.0,34.0,25.0,,26.0,65.0,0.0,1.934,C2_lost_to_unranked
+2019,2,Stanford,Pac-12,USC,Pac-12,L,20.0,45.0,23.0,,26.0,92.0,0.0,1.768,C2_lost_to_unranked
+2019,2,Syracuse,ACC,Maryland,Big Ten,L,20.0,63.0,21.0,,26.0,88.0,0.0,1.603,C2_lost_to_unranked
+2019,2,Texas,Big 12,LSU,SEC,L,38.0,45.0,9.0,6.0,12.0,29.0,14.0,12.388,C1_lost_to_ranked_other_conference
+2019,2,Texas A&M,SEC,Clemson,ACC,L,10.0,24.0,12.0,1.0,16.0,34.0,10.0,9.34,C1_lost_to_ranked_other_conference
+2019,2,Washington,Pac-12,California,Pac-12,L,19.0,20.0,14.0,,23.0,30.0,3.0,4.023,C2_lost_to_unranked
+2019,3,Maryland,Big Ten,Temple,American Athletic,L,17.0,20.0,21.0,,26.0,98.0,0.0,1.603,C2_lost_to_unranked
+2019,3,Michigan State,Big Ten,Arizona State,Pac-12,L,7.0,10.0,18.0,,26.0,37.0,0.0,1.354,C2_lost_to_unranked
+2019,3,USC,Pac-12,BYU,FBS Independents,L,27.0,30.0,24.0,,26.0,27.0,0.0,1.851,C2_lost_to_unranked
+2019,4,Arizona State,Pac-12,Colorado,Pac-12,L,31.0,34.0,24.0,,26.0,40.0,0.0,1.851,C2_lost_to_unranked
+2019,4,Auburn,SEC,Texas A&M,SEC,W,28.0,20.0,8.0,17.0,7.0,14.0,7.0,4.61,winners_beat_ranked_same_conference
+2019,4,Michigan,Big Ten,Wisconsin,Big Ten,L,14.0,35.0,11.0,13.0,20.0,13.0,-7.0,-8.043,primary_lost_to_ranked_same_conference
+2019,4,Notre Dame,FBS Independents,Georgia,SEC,L,17.0,23.0,7.0,3.0,10.0,10.0,0.0,-2.246,C1_lost_to_ranked_other_conference
+2019,4,TCU,Big 12,SMU,American Athletic,L,38.0,41.0,25.0,,26.0,51.0,0.0,1.934,C2_lost_to_unranked
+2019,4,Texas A&M,SEC,Auburn,SEC,L,20.0,28.0,17.0,8.0,23.0,34.0,3.0,3.072,primary_lost_to_ranked_same_conference
+2019,4,UCF,American Athletic,Pittsburgh,ACC,L,34.0,35.0,15.0,,22.0,25.0,3.0,4.106,C2_lost_to_unranked
+2019,4,Utah,Pac-12,USC,Pac-12,L,23.0,30.0,10.0,,19.0,11.0,-8.0,-7.308,C2_lost_to_unranked
+2019,4,Washington State,Pac-12,UCLA,Pac-12,L,63.0,67.0,19.0,,26.0,55.0,0.0,1.437,C2_lost_to_unranked
+2019,4,Wisconsin,Big Ten,Michigan,Big Ten,W,35.0,14.0,13.0,11.0,8.0,5.0,-3.0,-5.75,winners_beat_ranked_same_conference
+2019,5,California,Pac-12,Arizona State,Pac-12,L,17.0,24.0,15.0,,26.0,50.0,0.0,1.106,C2_lost_to_unranked
+2019,5,Kansas State,Big 12,Oklahoma State,Big 12,L,13.0,26.0,24.0,,26.0,32.0,0.0,1.851,C2_lost_to_unranked
+2019,5,USC,Pac-12,Washington,Pac-12,L,14.0,28.0,21.0,17.0,26.0,27.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2019,5,Virginia,ACC,Notre Dame,FBS Independents,L,20.0,35.0,18.0,10.0,23.0,35.0,3.0,4.243,C1_lost_to_ranked_other_conference
+2019,5,Washington,Pac-12,USC,Pac-12,W,28.0,14.0,17.0,21.0,15.0,30.0,11.0,7.963,winners_beat_ranked_same_conference
+2019,6,Auburn,SEC,Florida,SEC,L,13.0,24.0,7.0,10.0,12.0,14.0,2.0,0.214,primary_lost_to_ranked_same_conference
+2019,6,Florida,SEC,Auburn,SEC,W,24.0,13.0,10.0,7.0,7.0,15.0,8.0,5.466,winners_beat_ranked_same_conference
+2019,6,Iowa,Big Ten,Michigan,Big Ten,L,3.0,10.0,14.0,19.0,17.0,20.0,3.0,2.515,primary_lost_to_ranked_same_conference
+2019,6,Michigan,Big Ten,Iowa,Big Ten,W,10.0,3.0,19.0,14.0,16.0,13.0,-3.0,-6.181,winners_beat_ranked_same_conference
+2019,6,Michigan State,Big Ten,Ohio State,Big Ten,L,10.0,34.0,25.0,4.0,26.0,37.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2019,6,Ohio State,Big Ten,Michigan State,Big Ten,W,34.0,10.0,4.0,25.0,3.0,1.0,-2.0,-4.103,winners_beat_ranked_same_conference
+2019,6,Oklahoma State,Big 12,Texas Tech,Big 12,L,35.0,45.0,21.0,,26.0,31.0,0.0,1.603,C2_lost_to_unranked
+2019,6,UCF,American Athletic,Cincinnati,American Athletic,L,24.0,27.0,18.0,,26.0,25.0,-1.0,0.354,C2_lost_to_unranked
+2019,6,Washington,Pac-12,Stanford,Pac-12,L,13.0,23.0,15.0,,26.0,30.0,0.0,1.106,C2_lost_to_unranked
+2019,7,Alabama,SEC,Texas A&M,SEC,W,47.0,28.0,1.0,24.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2019,7,Florida,SEC,LSU,SEC,L,28.0,42.0,7.0,5.0,9.0,15.0,6.0,4.214,primary_lost_to_ranked_same_conference
+2019,7,Georgia,SEC,South Carolina,SEC,L,17.0,20.0,3.0,,10.0,7.0,-3.0,-2.888,C2_lost_to_unranked
+2019,7,Iowa,Big Ten,Penn State,Big Ten,L,12.0,17.0,17.0,10.0,23.0,20.0,-3.0,-2.928,primary_lost_to_ranked_same_conference
+2019,7,LSU,SEC,Florida,SEC,W,42.0,28.0,5.0,7.0,2.0,2.0,0.0,-2.175,winners_beat_ranked_same_conference
+2019,7,Memphis,American Athletic,Temple,American Athletic,L,28.0,30.0,23.0,,26.0,8.0,-18.0,-16.232,C2_lost_to_unranked
+2019,7,Oklahoma,Big 12,Texas,Big 12,W,34.0,27.0,6.0,11.0,5.0,4.0,-1.0,-3.247,winners_beat_ranked_same_conference
+2019,7,Penn State,Big Ten,Iowa,Big Ten,W,17.0,12.0,10.0,17.0,7.0,9.0,2.0,-0.534,winners_beat_ranked_same_conference
+2019,7,Texas,Big 12,Oklahoma,Big 12,L,27.0,34.0,11.0,6.0,15.0,29.0,11.0,9.957,primary_lost_to_ranked_same_conference
+2019,7,Texas A&M,SEC,Alabama,SEC,L,28.0,47.0,24.0,1.0,26.0,34.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2019,7,Virginia,ACC,Miami,ACC,L,9.0,17.0,20.0,,26.0,35.0,0.0,1.52,C2_lost_to_unranked
+2019,7,Wake Forest,ACC,Louisville,ACC,L,59.0,62.0,19.0,,26.0,38.0,0.0,1.437,C2_lost_to_unranked
+2019,8,Arizona State,Pac-12,Utah,Pac-12,L,3.0,21.0,17.0,13.0,24.0,40.0,2.0,2.072,primary_lost_to_ranked_same_conference
+2019,8,Boise State,Mountain West,BYU,FBS Independents,L,25.0,28.0,14.0,,22.0,17.0,-5.0,-3.977,C2_lost_to_unranked
+2019,8,Michigan,Big Ten,Penn State,Big Ten,L,21.0,28.0,16.0,7.0,19.0,13.0,-6.0,-6.114,primary_lost_to_ranked_same_conference
+2019,8,Missouri,SEC,Vanderbilt,SEC,L,14.0,21.0,22.0,,26.0,64.0,0.0,1.686,C2_lost_to_unranked
+2019,8,Oregon,Pac-12,Washington,Pac-12,W,35.0,31.0,12.0,25.0,11.0,12.0,1.0,-1.678,winners_beat_ranked_same_conference
+2019,8,Penn State,Big Ten,Michigan,Big Ten,W,28.0,21.0,7.0,16.0,6.0,9.0,3.0,0.681,winners_beat_ranked_same_conference
+2019,8,Utah,Pac-12,Arizona State,Pac-12,W,21.0,3.0,13.0,17.0,12.0,11.0,-1.0,-3.75,winners_beat_ranked_same_conference
+2019,8,Washington,Pac-12,Oregon,Pac-12,L,31.0,35.0,25.0,12.0,26.0,30.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2019,8,Wisconsin,Big Ten,Illinois,Big Ten,L,23.0,24.0,6.0,,13.0,5.0,-8.0,-7.64,C2_lost_to_unranked
+2019,9,Arizona State,Pac-12,UCLA,Pac-12,L,32.0,42.0,24.0,,26.0,40.0,0.0,1.851,C2_lost_to_unranked
+2019,9,Auburn,SEC,LSU,SEC,L,20.0,23.0,9.0,2.0,11.0,14.0,3.0,1.586,primary_lost_to_ranked_same_conference
+2019,9,Iowa State,Big 12,Oklahoma State,Big 12,L,27.0,34.0,23.0,,26.0,33.0,0.0,1.768,C2_lost_to_unranked
+2019,9,LSU,SEC,Auburn,SEC,W,23.0,20.0,2.0,9.0,1.0,2.0,1.0,-0.959,winners_beat_ranked_same_conference
+2019,9,Notre Dame,FBS Independents,Michigan,Big Ten,L,14.0,45.0,8.0,19.0,16.0,10.0,-6.0,-7.929,C1_lost_to_ranked_other_conference
+2019,9,Ohio State,Big Ten,Wisconsin,Big Ten,W,38.0,7.0,3.0,13.0,3.0,1.0,-2.0,-4.031,winners_beat_ranked_same_conference
+2019,9,Oklahoma,Big 12,Kansas State,Big 12,L,41.0,48.0,5.0,,10.0,4.0,-6.0,-5.723,C2_lost_to_unranked
+2019,9,Texas,Big 12,TCU,Big 12,L,27.0,37.0,15.0,,26.0,29.0,0.0,1.106,C2_lost_to_unranked
+2019,9,Wisconsin,Big Ten,Ohio State,Big Ten,L,7.0,38.0,13.0,3.0,18.0,5.0,-13.0,-13.671,primary_lost_to_ranked_same_conference
+2019,10,App State,Sun Belt,Georgia Southern,Sun Belt,L,21.0,24.0,20.0,,26.0,16.0,-10.0,-8.48,C2_lost_to_unranked
+2019,10,Florida,SEC,Georgia,SEC,L,17.0,24.0,6.0,8.0,10.0,15.0,5.0,3.029,primary_lost_to_ranked_same_conference
+2019,10,Georgia,SEC,Florida,SEC,W,24.0,17.0,8.0,6.0,6.0,7.0,1.0,-1.39,winners_beat_ranked_same_conference
+2019,10,Memphis,American Athletic,SMU,American Athletic,W,54.0,48.0,24.0,15.0,19.0,8.0,-11.0,-14.54,winners_beat_ranked_same_conference
+2019,10,SMU,American Athletic,Memphis,American Athletic,L,48.0,54.0,15.0,24.0,23.0,21.0,-2.0,-2.3,primary_lost_to_ranked_same_conference
+2019,11,Alabama,SEC,LSU,SEC,L,41.0,46.0,2.0,1.0,4.0,6.0,2.0,-0.714,primary_lost_to_ranked_same_conference
+2019,11,Iowa,Big Ten,Wisconsin,Big Ten,L,22.0,24.0,18.0,16.0,23.0,20.0,-3.0,-2.742,primary_lost_to_ranked_same_conference
+2019,11,Kansas State,Big 12,Texas,Big 12,L,24.0,27.0,20.0,,26.0,32.0,0.0,1.52,C2_lost_to_unranked
+2019,11,LSU,SEC,Alabama,SEC,W,46.0,41.0,1.0,2.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2019,11,Minnesota,Big Ten,Penn State,Big Ten,W,31.0,26.0,13.0,5.0,7.0,23.0,16.0,13.25,winners_beat_ranked_same_conference
+2019,11,Penn State,Big Ten,Minnesota,Big Ten,L,26.0,31.0,5.0,13.0,9.0,9.0,0.0,-2.157,primary_lost_to_ranked_same_conference
+2019,11,San Diego State,Mountain West,Nevada,Mountain West,L,13.0,17.0,24.0,,26.0,44.0,0.0,1.851,C2_lost_to_unranked
+2019,11,Wake Forest,ACC,Virginia Tech,ACC,L,17.0,36.0,22.0,,26.0,38.0,0.0,1.686,C2_lost_to_unranked
+2019,11,Wisconsin,Big Ten,Iowa,Big Ten,W,24.0,22.0,16.0,18.0,15.0,5.0,-10.0,-12.965,winners_beat_ranked_same_conference
+2019,12,Auburn,SEC,Georgia,SEC,L,14.0,21.0,13.0,5.0,16.0,14.0,-2.0,-2.671,primary_lost_to_ranked_same_conference
+2019,12,Baylor,Big 12,Oklahoma,Big 12,L,31.0,34.0,12.0,10.0,13.0,18.0,5.0,4.143,primary_lost_to_ranked_same_conference
+2019,12,Georgia,SEC,Auburn,SEC,W,21.0,14.0,5.0,13.0,4.0,7.0,3.0,0.825,winners_beat_ranked_same_conference
+2019,12,Indiana,Big Ten,Penn State,Big Ten,L,27.0,34.0,24.0,9.0,26.0,36.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2019,12,Iowa,Big Ten,Minnesota,Big Ten,W,23.0,19.0,23.0,7.0,19.0,20.0,1.0,-2.468,winners_beat_ranked_same_conference
+2019,12,Minnesota,Big Ten,Iowa,Big Ten,L,19.0,23.0,7.0,23.0,11.0,23.0,12.0,10.214,primary_lost_to_ranked_same_conference
+2019,12,Navy,American Athletic,Notre Dame,FBS Independents,L,20.0,52.0,21.0,16.0,26.0,19.0,-7.0,-4.805,C1_lost_to_ranked_other_conference
+2019,12,Oklahoma,Big 12,Baylor,Big 12,W,34.0,31.0,10.0,12.0,8.0,4.0,-4.0,-6.534,winners_beat_ranked_same_conference
+2019,12,Penn State,Big Ten,Indiana,Big Ten,W,34.0,27.0,9.0,24.0,9.0,9.0,0.0,-2.462,winners_beat_ranked_same_conference
+2019,12,Texas,Big 12,Iowa State,Big 12,L,21.0,23.0,22.0,,26.0,29.0,0.0,1.686,C2_lost_to_unranked
+2019,13,Georgia,SEC,Texas A&M,SEC,W,19.0,13.0,4.0,24.0,4.0,7.0,3.0,0.897,winners_beat_ranked_same_conference
+2019,13,Ohio State,Big Ten,Penn State,Big Ten,W,28.0,17.0,2.0,9.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2019,13,Oregon,Pac-12,Arizona State,Pac-12,L,28.0,31.0,6.0,,14.0,12.0,-2.0,-1.64,C2_lost_to_unranked
+2019,13,Penn State,Big Ten,Ohio State,Big Ten,L,17.0,28.0,9.0,2.0,12.0,9.0,-3.0,-4.414,primary_lost_to_ranked_same_conference
+2019,13,SMU,American Athletic,Navy,American Athletic,L,28.0,35.0,21.0,,26.0,21.0,-5.0,-3.397,C2_lost_to_unranked
+2019,13,Texas A&M,SEC,Georgia,SEC,L,13.0,19.0,24.0,4.0,26.0,34.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2019,14,Alabama,SEC,Auburn,SEC,L,45.0,48.0,5.0,16.0,9.0,6.0,-3.0,-5.157,primary_lost_to_ranked_same_conference
+2019,14,Auburn,SEC,Alabama,SEC,W,48.0,45.0,16.0,5.0,11.0,14.0,3.0,0.035,winners_beat_ranked_same_conference
+2019,14,Cincinnati,American Athletic,Memphis,American Athletic,L,24.0,34.0,18.0,17.0,21.0,22.0,1.0,1.258,primary_lost_to_ranked_same_conference
+2019,14,Memphis,American Athletic,Cincinnati,American Athletic,W,34.0,24.0,17.0,18.0,16.0,8.0,-8.0,-11.037,winners_beat_ranked_same_conference
+2019,14,Michigan,Big Ten,Ohio State,Big Ten,L,27.0,56.0,10.0,2.0,17.0,13.0,-4.0,-5.228,primary_lost_to_ranked_same_conference
+2019,14,Minnesota,Big Ten,Wisconsin,Big Ten,L,17.0,38.0,9.0,13.0,15.0,23.0,8.0,6.586,primary_lost_to_ranked_same_conference
+2019,14,Ohio State,Big Ten,Michigan,Big Ten,W,56.0,27.0,2.0,10.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2019,14,Oklahoma,Big 12,Oklahoma State,Big 12,W,34.0,16.0,7.0,21.0,6.0,4.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2019,14,Oklahoma State,Big 12,Oklahoma,Big 12,L,16.0,34.0,21.0,7.0,26.0,31.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2019,14,Virginia Tech,ACC,Virginia,ACC,L,30.0,39.0,23.0,,26.0,41.0,0.0,1.768,C2_lost_to_unranked
+2019,14,Wisconsin,Big Ten,Minnesota,Big Ten,W,38.0,17.0,13.0,9.0,10.0,5.0,-5.0,-7.75,winners_beat_ranked_same_conference
+2019,15,Baylor,Big 12,Oklahoma,Big 12,L,23.0,30.0,8.0,6.0,8.0,18.0,10.0,8.4,primary_lost_to_ranked_same_conference
+2019,15,Cincinnati,American Athletic,Memphis,American Athletic,L,24.0,29.0,21.0,16.0,23.0,22.0,-1.0,-0.185,primary_lost_to_ranked_same_conference
+2019,15,Clemson,ACC,Virginia,ACC,W,62.0,17.0,3.0,22.0,3.0,3.0,0.0,-2.031,winners_beat_ranked_same_conference
+2019,15,Georgia,SEC,LSU,SEC,L,10.0,37.0,4.0,1.0,5.0,7.0,2.0,-0.343,primary_lost_to_ranked_same_conference
+2019,15,LSU,SEC,Georgia,SEC,W,37.0,10.0,1.0,4.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2019,15,Memphis,American Athletic,Cincinnati,American Athletic,W,29.0,24.0,16.0,21.0,15.0,8.0,-7.0,-9.965,winners_beat_ranked_same_conference
+2019,15,Ohio State,Big Ten,Wisconsin,Big Ten,W,34.0,21.0,2.0,10.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2019,15,Oklahoma,Big 12,Baylor,Big 12,W,30.0,23.0,6.0,8.0,4.0,4.0,0.0,-2.247,winners_beat_ranked_same_conference
+2019,15,Oregon,Pac-12,Utah,Pac-12,W,37.0,15.0,13.0,5.0,7.0,12.0,5.0,2.25,winners_beat_ranked_same_conference
+2019,15,Utah,Pac-12,Oregon,Pac-12,L,15.0,37.0,5.0,13.0,12.0,11.0,-1.0,-3.157,primary_lost_to_ranked_same_conference
+2019,15,Virginia,ACC,Clemson,ACC,L,17.0,62.0,22.0,3.0,26.0,35.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2019,15,Wisconsin,Big Ten,Ohio State,Big Ten,L,21.0,34.0,10.0,2.0,11.0,5.0,-6.0,-7.228,primary_lost_to_ranked_same_conference
+2021,1,Clemson,ACC,Georgia,SEC,L,3.0,10.0,3.0,5.0,6.0,17.0,11.0,7.485,C1_lost_to_ranked_other_conference
+2021,1,Indiana,Big Ten,Iowa,Big Ten,L,6.0,34.0,17.0,18.0,26.0,98.0,0.0,0.072,primary_lost_to_ranked_same_conference
+2021,1,Iowa,Big Ten,Indiana,Big Ten,W,34.0,6.0,18.0,17.0,10.0,14.0,4.0,0.891,winners_beat_ranked_same_conference
+2021,1,LSU,SEC,UCLA,Pac-12,L,27.0,38.0,16.0,,26.0,48.0,0.0,1.189,C2_lost_to_unranked
+2021,1,Louisiana,Sun Belt,Texas,Big 12,L,18.0,38.0,23.0,21.0,26.0,27.0,0.0,2.829,C1_lost_to_ranked_other_conference
+2021,1,Miami,ACC,Alabama,SEC,L,13.0,44.0,14.0,1.0,22.0,47.0,4.0,3.974,C1_lost_to_ranked_other_conference
+2021,1,North Carolina,ACC,Virginia Tech,ACC,L,10.0,17.0,10.0,,24.0,54.0,2.0,2.692,C2_lost_to_unranked
+2021,1,Penn State,Big Ten,Wisconsin,Big Ten,W,16.0,10.0,19.0,12.0,11.0,19.0,8.0,4.819,winners_beat_ranked_same_conference
+2021,1,Washington,Pac-12,Montana,FCS,L,7.0,13.0,20.0,,26.0,97.0,0.0,1.52,C2_lost_to_unranked
+2021,1,Wisconsin,Big Ten,Penn State,Big Ten,L,10.0,16.0,12.0,19.0,18.0,13.0,-5.0,-5.857,primary_lost_to_ranked_same_conference
+2021,2,Iowa State,Big 12,Iowa,Big Ten,L,17.0,27.0,9.0,10.0,14.0,36.0,12.0,10.388,C1_lost_to_ranked_other_conference
+2021,2,Ohio State,Big Ten,Oregon,Pac-12,L,28.0,35.0,3.0,12.0,9.0,4.0,-5.0,-8.515,C1_lost_to_ranked_other_conference
+2021,2,Texas,Big 12,Arkansas,SEC,L,21.0,40.0,15.0,,26.0,61.0,0.0,1.106,C2_lost_to_unranked
+2021,2,USC,Pac-12,Stanford,Pac-12,L,28.0,42.0,14.0,,26.0,89.0,0.0,1.023,C2_lost_to_unranked
+2021,2,Utah,Pac-12,BYU,FBS Independents,L,17.0,26.0,21.0,,26.0,12.0,-14.0,-12.397,C2_lost_to_unranked
+2021,3,Alabama,SEC,Florida,SEC,W,31.0,29.0,1.0,11.0,1.0,3.0,2.0,0.112,winners_beat_ranked_same_conference
+2021,3,Arizona State,Pac-12,BYU,FBS Independents,L,17.0,27.0,19.0,23.0,26.0,46.0,0.0,1.56,C1_lost_to_ranked_other_conference
+2021,3,Auburn,SEC,Penn State,Big Ten,L,20.0,28.0,22.0,10.0,23.0,43.0,3.0,5.512,C1_lost_to_ranked_other_conference
+2021,3,Florida,SEC,Alabama,SEC,L,29.0,31.0,11.0,1.0,11.0,55.0,15.0,13.957,primary_lost_to_ranked_same_conference
+2021,3,Miami,ACC,Michigan State,Big Ten,L,17.0,38.0,24.0,,26.0,47.0,0.0,1.851,C2_lost_to_unranked
+2021,3,UCLA,Pac-12,Fresno State,Mountain West,L,37.0,40.0,13.0,,24.0,34.0,2.0,2.94,C2_lost_to_unranked
+2021,3,Virginia Tech,ACC,West Virginia,Big 12,L,21.0,27.0,15.0,,26.0,69.0,0.0,1.106,C2_lost_to_unranked
+2021,4,Arkansas,SEC,Texas A&M,SEC,W,20.0,10.0,16.0,7.0,8.0,24.0,16.0,13.035,winners_beat_ranked_same_conference
+2021,4,Clemson,ACC,NC State,ACC,L,21.0,27.0,9.0,,25.0,17.0,-8.0,-7.391,C2_lost_to_unranked
+2021,4,Iowa State,Big 12,Baylor,Big 12,L,29.0,31.0,14.0,,26.0,36.0,0.0,1.023,C2_lost_to_unranked
+2021,4,Kansas State,Big 12,Oklahoma State,Big 12,L,20.0,31.0,25.0,,26.0,49.0,0.0,1.934,C2_lost_to_unranked
+2021,4,North Carolina,ACC,Georgia Tech,ACC,L,22.0,45.0,21.0,,26.0,54.0,0.0,1.603,C2_lost_to_unranked
+2021,4,Texas A&M,SEC,Arkansas,SEC,L,10.0,20.0,7.0,16.0,15.0,23.0,8.0,6.214,primary_lost_to_ranked_same_conference
+2021,4,Wisconsin,Big Ten,Notre Dame,FBS Independents,L,13.0,41.0,18.0,12.0,26.0,13.0,-13.0,-11.757,C1_lost_to_ranked_other_conference
+2021,5,Alabama,SEC,Ole Miss,SEC,W,42.0,21.0,1.0,12.0,1.0,3.0,2.0,0.112,winners_beat_ranked_same_conference
+2021,5,Arkansas,SEC,Georgia,SEC,L,0.0,37.0,8.0,2.0,13.0,24.0,11.0,9.4,primary_lost_to_ranked_same_conference
+2021,5,Baylor,Big 12,Oklahoma State,Big 12,L,14.0,24.0,21.0,19.0,26.0,11.0,-15.0,-14.185,primary_lost_to_ranked_same_conference
+2021,5,Florida,SEC,Kentucky,SEC,L,13.0,20.0,10.0,,20.0,55.0,6.0,6.692,C2_lost_to_unranked
+2021,5,Fresno State,Mountain West,Hawai'i,Mountain West,L,24.0,27.0,18.0,,26.0,35.0,0.0,1.354,C2_lost_to_unranked
+2021,5,Georgia,SEC,Arkansas,SEC,W,37.0,0.0,2.0,8.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2021,5,Notre Dame,FBS Independents,Cincinnati,American Athletic,L,13.0,24.0,9.0,7.0,14.0,6.0,-8.0,-9.612,C1_lost_to_ranked_other_conference
+2021,5,Oklahoma State,Big 12,Baylor,Big 12,W,24.0,14.0,19.0,21.0,12.0,7.0,-5.0,-8.181,winners_beat_ranked_same_conference
+2021,5,Ole Miss,SEC,Alabama,SEC,L,21.0,42.0,12.0,1.0,17.0,10.0,-7.0,-7.857,primary_lost_to_ranked_same_conference
+2021,5,Oregon,Pac-12,Stanford,Pac-12,L,24.0,31.0,3.0,,8.0,31.0,18.0,18.112,C2_lost_to_unranked
+2021,5,Texas A&M,SEC,Mississippi State,SEC,L,22.0,26.0,15.0,,26.0,23.0,-3.0,-1.894,C2_lost_to_unranked
+2021,5,UCLA,Pac-12,Arizona State,Pac-12,L,23.0,42.0,20.0,,26.0,34.0,0.0,1.52,C2_lost_to_unranked
+2021,6,Alabama,SEC,Texas A&M,SEC,L,38.0,41.0,1.0,,5.0,3.0,-2.0,-2.054,C2_lost_to_unranked
+2021,6,Arkansas,SEC,Ole Miss,SEC,L,51.0,52.0,13.0,17.0,17.0,24.0,7.0,6.329,primary_lost_to_ranked_same_conference
+2021,6,Auburn,SEC,Georgia,SEC,L,10.0,34.0,18.0,2.0,26.0,43.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2021,6,BYU,FBS Independents,Boise State,Mountain West,L,17.0,26.0,10.0,,19.0,21.0,2.0,2.692,C2_lost_to_unranked
+2021,6,Georgia,SEC,Auburn,SEC,W,34.0,10.0,2.0,18.0,1.0,1.0,0.0,-1.959,winners_beat_ranked_same_conference
+2021,6,Iowa,Big Ten,Penn State,Big Ten,W,23.0,20.0,3.0,4.0,2.0,14.0,12.0,9.969,winners_beat_ranked_same_conference
+2021,6,Oklahoma,Big 12,Texas,Big 12,W,55.0,48.0,6.0,21.0,4.0,16.0,12.0,9.753,winners_beat_ranked_same_conference
+2021,6,Ole Miss,SEC,Arkansas,SEC,W,52.0,51.0,17.0,13.0,13.0,10.0,-3.0,-6.037,winners_beat_ranked_same_conference
+2021,6,Penn State,Big Ten,Iowa,Big Ten,L,20.0,23.0,4.0,3.0,7.0,19.0,12.0,9.657,primary_lost_to_ranked_same_conference
+2021,6,Texas,Big 12,Oklahoma,Big 12,L,48.0,55.0,21.0,6.0,25.0,61.0,1.0,1.815,primary_lost_to_ranked_same_conference
+2021,7,Arizona State,Pac-12,Utah,Pac-12,L,21.0,35.0,18.0,,26.0,46.0,0.0,1.354,C2_lost_to_unranked
+2021,7,Arkansas,SEC,Auburn,SEC,L,23.0,38.0,17.0,,26.0,24.0,-2.0,-0.729,C2_lost_to_unranked
+2021,7,BYU,FBS Independents,Baylor,Big 12,L,24.0,38.0,19.0,,26.0,21.0,-5.0,-3.563,C2_lost_to_unranked
+2021,7,Florida,SEC,LSU,SEC,L,42.0,49.0,20.0,,26.0,55.0,0.0,1.52,C2_lost_to_unranked
+2021,7,Georgia,SEC,Kentucky,SEC,W,30.0,13.0,1.0,11.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2021,7,Iowa,Big Ten,Purdue,Big Ten,L,7.0,24.0,2.0,,11.0,14.0,3.0,3.029,C2_lost_to_unranked
+2021,7,Kentucky,SEC,Georgia,SEC,L,13.0,30.0,11.0,1.0,15.0,29.0,11.0,9.957,primary_lost_to_ranked_same_conference
+2021,7,Oklahoma State,Big 12,Texas,Big 12,W,32.0,24.0,12.0,25.0,8.0,7.0,-1.0,-3.678,winners_beat_ranked_same_conference
+2021,7,Texas,Big 12,Oklahoma State,Big 12,L,24.0,32.0,25.0,12.0,26.0,61.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2021,8,Coastal Carolina,Sun Belt,App State,Sun Belt,L,27.0,30.0,14.0,,24.0,44.0,2.0,3.023,C2_lost_to_unranked
+2021,8,NC State,ACC,Miami,ACC,L,30.0,31.0,18.0,,26.0,18.0,-8.0,-6.646,C2_lost_to_unranked
+2021,8,Oklahoma State,Big 12,Iowa State,Big 12,L,21.0,24.0,8.0,,15.0,7.0,-8.0,-7.474,C2_lost_to_unranked
+2021,8,Penn State,Big Ten,Illinois,Big Ten,L,18.0,20.0,7.0,,20.0,19.0,-1.0,-0.557,C2_lost_to_unranked
+2021,8,Purdue,Big Ten,Wisconsin,Big Ten,L,13.0,30.0,25.0,,26.0,25.0,-1.0,0.934,C2_lost_to_unranked
+2021,9,Auburn,SEC,Ole Miss,SEC,W,31.0,20.0,18.0,10.0,12.0,43.0,14.0,10.891,winners_beat_ranked_same_conference
+2021,9,Iowa,Big Ten,Wisconsin,Big Ten,L,7.0,27.0,9.0,,19.0,14.0,-5.0,-4.391,C2_lost_to_unranked
+2021,9,Iowa State,Big 12,West Virginia,Big 12,L,31.0,38.0,22.0,,26.0,36.0,0.0,1.686,C2_lost_to_unranked
+2021,9,Kentucky,SEC,Mississippi State,SEC,L,17.0,31.0,12.0,,18.0,29.0,8.0,8.857,C2_lost_to_unranked
+2021,9,Michigan,Big Ten,Michigan State,Big Ten,L,33.0,37.0,6.0,8.0,9.0,2.0,-7.0,-8.971,primary_lost_to_ranked_same_conference
+2021,9,Michigan State,Big Ten,Michigan,Big Ten,W,37.0,33.0,8.0,6.0,5.0,8.0,3.0,0.61,winners_beat_ranked_same_conference
+2021,9,Ohio State,Big Ten,Penn State,Big Ten,W,33.0,24.0,5.0,20.0,6.0,4.0,-2.0,-4.175,winners_beat_ranked_same_conference
+2021,9,Ole Miss,SEC,Auburn,SEC,L,20.0,31.0,10.0,18.0,15.0,10.0,-5.0,-6.228,primary_lost_to_ranked_same_conference
+2021,9,Penn State,Big Ten,Ohio State,Big Ten,L,24.0,33.0,20.0,5.0,22.0,19.0,-3.0,-2.371,primary_lost_to_ranked_same_conference
+2021,9,Pittsburgh,ACC,Miami,ACC,L,34.0,38.0,17.0,,26.0,9.0,-17.0,-15.729,C2_lost_to_unranked
+2021,9,SMU,American Athletic,Houston,American Athletic,L,37.0,44.0,19.0,,23.0,42.0,3.0,4.437,C2_lost_to_unranked
+2021,9,San Diego State,Mountain West,Fresno State,Mountain West,L,20.0,30.0,21.0,,26.0,33.0,0.0,1.603,C2_lost_to_unranked
+2021,10,Auburn,SEC,Texas A&M,SEC,L,3.0,20.0,12.0,13.0,16.0,43.0,10.0,9.143,primary_lost_to_ranked_same_conference
+2021,10,Baylor,Big 12,TCU,Big 12,L,28.0,30.0,14.0,,18.0,11.0,-7.0,-5.977,C2_lost_to_unranked
+2021,10,Fresno State,Mountain West,Boise State,Mountain West,L,14.0,40.0,25.0,,26.0,35.0,0.0,1.934,C2_lost_to_unranked
+2021,10,Kentucky,SEC,Tennessee,SEC,L,42.0,45.0,18.0,,26.0,29.0,0.0,1.354,C2_lost_to_unranked
+2021,10,Michigan State,Big Ten,Purdue,Big Ten,L,29.0,40.0,5.0,,8.0,8.0,0.0,0.277,C2_lost_to_unranked
+2021,10,SMU,American Athletic,Memphis,American Athletic,L,25.0,28.0,23.0,,26.0,42.0,0.0,1.768,C2_lost_to_unranked
+2021,10,Texas A&M,SEC,Auburn,SEC,W,20.0,3.0,13.0,12.0,11.0,23.0,12.0,9.25,winners_beat_ranked_same_conference
+2021,10,Wake Forest,ACC,North Carolina,ACC,L,55.0,58.0,10.0,,13.0,15.0,2.0,2.692,C2_lost_to_unranked
+2021,11,Auburn,SEC,Mississippi State,SEC,L,34.0,43.0,16.0,,26.0,43.0,0.0,1.189,C2_lost_to_unranked
+2021,11,Baylor,Big 12,Oklahoma,Big 12,W,27.0,14.0,18.0,4.0,11.0,11.0,0.0,-3.109,winners_beat_ranked_same_conference
+2021,11,Coastal Carolina,Sun Belt,Georgia State,Sun Belt,L,40.0,42.0,22.0,,26.0,44.0,0.0,1.686,C2_lost_to_unranked
+2021,11,Michigan,Big Ten,Penn State,Big Ten,W,21.0,17.0,9.0,23.0,8.0,2.0,-6.0,-8.462,winners_beat_ranked_same_conference
+2021,11,NC State,ACC,Wake Forest,ACC,L,42.0,45.0,21.0,13.0,25.0,18.0,-7.0,-6.185,primary_lost_to_ranked_same_conference
+2021,11,Oklahoma,Big 12,Baylor,Big 12,L,14.0,27.0,4.0,18.0,12.0,16.0,4.0,1.657,primary_lost_to_ranked_same_conference
+2021,11,Ole Miss,SEC,Texas A&M,SEC,W,29.0,19.0,12.0,11.0,10.0,10.0,0.0,-2.678,winners_beat_ranked_same_conference
+2021,11,Penn State,Big Ten,Michigan,Big Ten,L,17.0,21.0,23.0,9.0,26.0,19.0,-7.0,-5.814,primary_lost_to_ranked_same_conference
+2021,11,Texas A&M,SEC,Ole Miss,SEC,L,19.0,29.0,11.0,12.0,16.0,23.0,7.0,5.957,primary_lost_to_ranked_same_conference
+2021,11,Wake Forest,ACC,NC State,ACC,W,45.0,42.0,13.0,21.0,13.0,15.0,2.0,-0.75,winners_beat_ranked_same_conference
+2021,12,Alabama,SEC,Arkansas,SEC,W,42.0,35.0,2.0,21.0,3.0,3.0,0.0,-1.959,winners_beat_ranked_same_conference
+2021,12,Arkansas,SEC,Alabama,SEC,L,35.0,42.0,21.0,2.0,25.0,24.0,-1.0,-0.185,primary_lost_to_ranked_same_conference
+2021,12,Michigan State,Big Ten,Ohio State,Big Ten,L,7.0,56.0,7.0,5.0,12.0,8.0,-4.0,-5.786,primary_lost_to_ranked_same_conference
+2021,12,Ohio State,Big Ten,Michigan State,Big Ten,W,56.0,7.0,5.0,7.0,2.0,4.0,2.0,-0.175,winners_beat_ranked_same_conference
+2021,12,Oregon,Pac-12,Utah,Pac-12,L,7.0,38.0,4.0,24.0,11.0,31.0,15.0,12.657,primary_lost_to_ranked_same_conference
+2021,12,Utah,Pac-12,Oregon,Pac-12,W,38.0,7.0,24.0,4.0,16.0,12.0,-4.0,-7.54,winners_beat_ranked_same_conference
+2021,12,Wake Forest,ACC,Clemson,ACC,L,27.0,48.0,13.0,,21.0,15.0,-6.0,-5.06,C2_lost_to_unranked
+2021,13,Michigan,Big Ten,Ohio State,Big Ten,W,42.0,27.0,6.0,2.0,2.0,2.0,0.0,-2.247,winners_beat_ranked_same_conference
+2021,13,Ohio State,Big Ten,Michigan,Big Ten,L,27.0,42.0,2.0,6.0,7.0,4.0,-3.0,-5.714,primary_lost_to_ranked_same_conference
+2021,13,Oklahoma,Big 12,Oklahoma State,Big 12,L,33.0,37.0,10.0,7.0,13.0,16.0,3.0,1.772,primary_lost_to_ranked_same_conference
+2021,13,Oklahoma State,Big 12,Oklahoma,Big 12,W,37.0,33.0,7.0,10.0,5.0,7.0,2.0,-0.319,winners_beat_ranked_same_conference
+2021,13,Texas A&M,SEC,LSU,SEC,L,24.0,27.0,14.0,,24.0,23.0,-1.0,0.023,C2_lost_to_unranked
+2021,13,UTSA,Conference USA,North Texas,Conference USA,L,23.0,45.0,15.0,,26.0,20.0,-6.0,-4.894,C2_lost_to_unranked
+2021,13,Wisconsin,Big Ten,Minnesota,Big Ten,L,13.0,23.0,18.0,,26.0,13.0,-13.0,-11.646,C2_lost_to_unranked
+2021,14,Alabama,SEC,Georgia,SEC,W,41.0,24.0,4.0,1.0,1.0,3.0,2.0,-0.103,winners_beat_ranked_same_conference
+2021,14,Baylor,Big 12,Oklahoma State,Big 12,W,21.0,16.0,9.0,5.0,6.0,11.0,5.0,2.538,winners_beat_ranked_same_conference
+2021,14,Cincinnati,American Athletic,Houston,American Athletic,W,35.0,20.0,3.0,16.0,4.0,5.0,1.0,-1.031,winners_beat_ranked_same_conference
+2021,14,Georgia,SEC,Alabama,SEC,L,24.0,41.0,1.0,4.0,3.0,1.0,-2.0,-4.9,primary_lost_to_ranked_same_conference
+2021,14,Houston,American Athletic,Cincinnati,American Athletic,L,20.0,35.0,16.0,3.0,21.0,22.0,1.0,0.886,primary_lost_to_ranked_same_conference
+2021,14,Iowa,Big Ten,Michigan,Big Ten,L,3.0,42.0,15.0,2.0,17.0,14.0,-3.0,-3.3,primary_lost_to_ranked_same_conference
+2021,14,Michigan,Big Ten,Iowa,Big Ten,W,42.0,3.0,2.0,15.0,2.0,2.0,0.0,-1.959,winners_beat_ranked_same_conference
+2021,14,Oklahoma State,Big 12,Baylor,Big 12,L,16.0,21.0,5.0,9.0,9.0,7.0,-2.0,-4.157,primary_lost_to_ranked_same_conference
+2021,14,Oregon,Pac-12,Utah,Pac-12,L,10.0,38.0,10.0,14.0,15.0,31.0,11.0,9.772,primary_lost_to_ranked_same_conference
+2021,14,Pittsburgh,ACC,Wake Forest,ACC,W,45.0,21.0,17.0,18.0,13.0,9.0,-4.0,-7.037,winners_beat_ranked_same_conference
+2021,14,San Diego State,Mountain West,Utah State,Mountain West,L,13.0,46.0,19.0,,26.0,33.0,0.0,1.437,C2_lost_to_unranked
+2021,14,Utah,Pac-12,Oregon,Pac-12,W,38.0,10.0,14.0,10.0,10.0,12.0,2.0,-0.821,winners_beat_ranked_same_conference
+2021,14,Wake Forest,ACC,Pittsburgh,ACC,L,21.0,45.0,18.0,17.0,20.0,15.0,-5.0,-4.742,primary_lost_to_ranked_same_conference
+2022,1,Cincinnati,American Athletic,Arkansas,SEC,L,24.0,31.0,23.0,19.0,26.0,33.0,0.0,2.829,C1_lost_to_ranked_other_conference
+2022,1,Notre Dame,FBS Independents,Ohio State,Big Ten,L,10.0,21.0,5.0,2.0,8.0,21.0,13.0,10.12,C1_lost_to_ranked_other_conference
+2022,1,Oregon,Pac-12,Georgia,SEC,L,3.0,49.0,11.0,3.0,26.0,14.0,-12.0,-12.977,C1_lost_to_ranked_other_conference
+2022,1,Utah,Pac-12,Florida,SEC,L,26.0,29.0,7.0,,13.0,10.0,-3.0,-2.557,C2_lost_to_unranked
+2022,2,Baylor,Big 12,BYU,FBS Independents,L,20.0,26.0,9.0,21.0,17.0,40.0,9.0,7.388,C1_lost_to_ranked_other_conference
+2022,2,Florida,SEC,Kentucky,SEC,L,16.0,26.0,12.0,20.0,18.0,41.0,8.0,7.143,primary_lost_to_ranked_same_conference
+2022,2,Houston,American Athletic,Texas Tech,Big 12,L,30.0,33.0,25.0,,26.0,57.0,0.0,1.934,C2_lost_to_unranked
+2022,2,Kentucky,SEC,Florida,SEC,W,26.0,16.0,20.0,12.0,9.0,34.0,17.0,13.747,winners_beat_ranked_same_conference
+2022,2,Notre Dame,FBS Independents,Marshall,Sun Belt,L,21.0,26.0,8.0,,26.0,21.0,-5.0,-4.474,C2_lost_to_unranked
+2022,2,Pittsburgh,ACC,Tennessee,SEC,L,27.0,34.0,17.0,24.0,23.0,38.0,3.0,3.926,C1_lost_to_ranked_other_conference
+2022,2,Texas A&M,SEC,App State,Sun Belt,L,14.0,17.0,6.0,,24.0,68.0,2.0,2.36,C2_lost_to_unranked
+2022,2,Wisconsin,Big Ten,Washington State,Pac-12,L,14.0,17.0,19.0,,26.0,62.0,0.0,1.437,C2_lost_to_unranked
+2022,3,BYU,FBS Independents,Oregon,Pac-12,L,20.0,41.0,12.0,25.0,19.0,60.0,7.0,6.34,C1_lost_to_ranked_other_conference
+2022,3,Miami,ACC,Texas A&M,SEC,L,9.0,17.0,13.0,24.0,25.0,87.0,1.0,0.657,C1_lost_to_ranked_other_conference
+2022,3,Michigan State,Big Ten,Washington,Pac-12,L,28.0,39.0,11.0,,26.0,73.0,0.0,0.774,C2_lost_to_unranked
+2022,4,Arkansas,SEC,Texas A&M,SEC,L,21.0,23.0,10.0,23.0,20.0,50.0,6.0,4.772,primary_lost_to_ranked_same_conference
+2022,4,Clemson,ACC,Wake Forest,ACC,W,51.0,45.0,5.0,21.0,5.0,9.0,4.0,1.825,winners_beat_ranked_same_conference
+2022,4,Florida,SEC,Tennessee,SEC,L,33.0,38.0,20.0,11.0,26.0,41.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2022,4,Miami,ACC,Middle Tennessee,Conference USA,L,31.0,45.0,25.0,,26.0,87.0,0.0,1.934,C2_lost_to_unranked
+2022,4,Oklahoma,Big 12,Kansas State,Big 12,L,34.0,41.0,6.0,,18.0,35.0,8.0,8.36,C2_lost_to_unranked
+2022,4,Tennessee,SEC,Florida,SEC,W,38.0,33.0,11.0,20.0,8.0,6.0,-2.0,-4.606,winners_beat_ranked_same_conference
+2022,4,Texas,Big 12,Texas Tech,Big 12,L,34.0,37.0,22.0,,26.0,11.0,-15.0,-13.314,C2_lost_to_unranked
+2022,4,Texas A&M,SEC,Arkansas,SEC,W,23.0,21.0,23.0,10.0,17.0,68.0,9.0,5.532,winners_beat_ranked_same_conference
+2022,4,Wake Forest,ACC,Clemson,ACC,L,45.0,51.0,21.0,5.0,22.0,31.0,4.0,4.815,primary_lost_to_ranked_same_conference
+2022,5,Alabama,SEC,Arkansas,SEC,W,49.0,26.0,2.0,20.0,1.0,5.0,4.0,2.041,winners_beat_ranked_same_conference
+2022,5,Arkansas,SEC,Alabama,SEC,L,26.0,49.0,20.0,2.0,26.0,50.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2022,5,Baylor,Big 12,Oklahoma State,Big 12,L,25.0,36.0,16.0,9.0,26.0,40.0,0.0,-0.114,primary_lost_to_ranked_same_conference
+2022,5,Clemson,ACC,NC State,ACC,W,30.0,20.0,5.0,10.0,5.0,9.0,4.0,1.825,winners_beat_ranked_same_conference
+2022,5,Florida State,ACC,Wake Forest,ACC,L,21.0,31.0,23.0,22.0,26.0,13.0,-13.0,-11.814,primary_lost_to_ranked_same_conference
+2022,5,Kentucky,SEC,Ole Miss,SEC,L,19.0,22.0,7.0,14.0,13.0,34.0,13.0,11.214,primary_lost_to_ranked_same_conference
+2022,5,Minnesota,Big Ten,Purdue,Big Ten,L,10.0,20.0,21.0,,26.0,37.0,0.0,1.603,C2_lost_to_unranked
+2022,5,NC State,ACC,Clemson,ACC,L,20.0,30.0,10.0,5.0,14.0,32.0,12.0,10.772,primary_lost_to_ranked_same_conference
+2022,5,Oklahoma,Big 12,TCU,Big 12,L,24.0,55.0,18.0,,26.0,35.0,0.0,1.354,C2_lost_to_unranked
+2022,5,Oklahoma State,Big 12,Baylor,Big 12,W,36.0,25.0,9.0,16.0,7.0,42.0,19.0,16.538,winners_beat_ranked_same_conference
+2022,5,Ole Miss,SEC,Kentucky,SEC,W,22.0,19.0,14.0,7.0,9.0,23.0,14.0,11.179,winners_beat_ranked_same_conference
+2022,5,Pittsburgh,ACC,Georgia Tech,ACC,L,21.0,26.0,24.0,,26.0,38.0,0.0,1.851,C2_lost_to_unranked
+2022,5,Texas A&M,SEC,Mississippi State,SEC,L,24.0,42.0,17.0,,26.0,68.0,0.0,1.271,C2_lost_to_unranked
+2022,5,Wake Forest,ACC,Florida State,ACC,W,31.0,21.0,22.0,23.0,15.0,31.0,11.0,7.604,winners_beat_ranked_same_conference
+2022,5,Washington,Pac-12,UCLA,Pac-12,L,32.0,40.0,15.0,,21.0,18.0,-3.0,-1.894,C2_lost_to_unranked
+2022,6,BYU,FBS Independents,Notre Dame,FBS Independents,L,20.0,28.0,16.0,,26.0,60.0,0.0,1.189,C2_lost_to_unranked
+2022,6,Kansas,Big 12,TCU,Big 12,L,31.0,38.0,19.0,17.0,19.0,46.0,7.0,7.443,primary_lost_to_ranked_same_conference
+2022,6,Kentucky,SEC,South Carolina,SEC,L,14.0,24.0,13.0,,22.0,34.0,4.0,4.94,C2_lost_to_unranked
+2022,6,LSU,SEC,Tennessee,SEC,L,13.0,40.0,25.0,8.0,26.0,17.0,-9.0,-7.442,primary_lost_to_ranked_same_conference
+2022,6,TCU,Big 12,Kansas,Big 12,W,38.0,31.0,17.0,19.0,13.0,4.0,-9.0,-12.037,winners_beat_ranked_same_conference
+2022,6,Tennessee,SEC,LSU,SEC,W,40.0,13.0,8.0,25.0,6.0,6.0,0.0,-2.39,winners_beat_ranked_same_conference
+2022,6,UCLA,Pac-12,Utah,Pac-12,W,42.0,32.0,18.0,11.0,11.0,19.0,8.0,4.891,winners_beat_ranked_same_conference
+2022,6,Utah,Pac-12,UCLA,Pac-12,L,32.0,42.0,11.0,18.0,20.0,10.0,-10.0,-11.043,primary_lost_to_ranked_same_conference
+2022,6,Washington,Pac-12,Arizona State,Pac-12,L,38.0,45.0,21.0,,26.0,18.0,-8.0,-6.397,C2_lost_to_unranked
+2022,7,Alabama,SEC,Tennessee,SEC,L,49.0,52.0,3.0,6.0,6.0,5.0,-1.0,-3.529,primary_lost_to_ranked_same_conference
+2022,7,James Madison,Sun Belt,Georgia Southern,Sun Belt,L,38.0,45.0,25.0,,26.0,36.0,0.0,1.934,C2_lost_to_unranked
+2022,7,Kansas,Big 12,Oklahoma,Big 12,L,42.0,52.0,19.0,,26.0,46.0,0.0,1.437,C2_lost_to_unranked
+2022,7,Kentucky,SEC,Mississippi State,SEC,W,27.0,17.0,22.0,16.0,19.0,34.0,7.0,3.604,winners_beat_ranked_same_conference
+2022,7,Michigan,Big Ten,Penn State,Big Ten,W,41.0,17.0,5.0,10.0,4.0,2.0,-2.0,-4.175,winners_beat_ranked_same_conference
+2022,7,Mississippi State,SEC,Kentucky,SEC,L,17.0,27.0,16.0,22.0,24.0,20.0,-4.0,-4.114,primary_lost_to_ranked_same_conference
+2022,7,NC State,ACC,Syracuse,ACC,L,9.0,24.0,15.0,18.0,23.0,32.0,3.0,2.7,primary_lost_to_ranked_same_conference
+2022,7,Oklahoma State,Big 12,TCU,Big 12,L,40.0,43.0,8.0,13.0,11.0,42.0,15.0,13.4,primary_lost_to_ranked_same_conference
+2022,7,Penn State,Big Ten,Michigan,Big Ten,L,17.0,41.0,10.0,5.0,16.0,8.0,-8.0,-9.228,primary_lost_to_ranked_same_conference
+2022,7,Syracuse,ACC,NC State,ACC,W,24.0,9.0,18.0,15.0,14.0,43.0,12.0,8.891,winners_beat_ranked_same_conference
+2022,7,TCU,Big 12,Oklahoma State,Big 12,W,43.0,40.0,13.0,8.0,8.0,4.0,-4.0,-6.75,winners_beat_ranked_same_conference
+2022,7,Tennessee,SEC,Alabama,SEC,W,52.0,49.0,6.0,3.0,3.0,6.0,3.0,0.753,winners_beat_ranked_same_conference
+2022,7,USC,Pac-12,Utah,Pac-12,L,42.0,43.0,7.0,20.0,12.0,12.0,0.0,-1.786,primary_lost_to_ranked_same_conference
+2022,7,Utah,Pac-12,USC,Pac-12,W,43.0,42.0,20.0,7.0,15.0,10.0,-5.0,-8.253,winners_beat_ranked_same_conference
+2022,8,Alabama,SEC,Mississippi State,SEC,W,30.0,6.0,6.0,24.0,6.0,5.0,-1.0,-3.247,winners_beat_ranked_same_conference
+2022,8,Clemson,ACC,Syracuse,ACC,W,27.0,21.0,5.0,14.0,5.0,9.0,4.0,1.825,winners_beat_ranked_same_conference
+2022,8,Kansas State,Big 12,TCU,Big 12,L,28.0,38.0,17.0,8.0,22.0,7.0,-15.0,-14.928,primary_lost_to_ranked_same_conference
+2022,8,Mississippi State,SEC,Alabama,SEC,L,6.0,30.0,24.0,6.0,26.0,20.0,-6.0,-4.628,primary_lost_to_ranked_same_conference
+2022,8,Oklahoma State,Big 12,Texas,Big 12,W,41.0,34.0,11.0,20.0,9.0,42.0,17.0,14.394,winners_beat_ranked_same_conference
+2022,8,Ole Miss,SEC,LSU,SEC,L,20.0,45.0,7.0,,15.0,23.0,8.0,8.443,C2_lost_to_unranked
+2022,8,Oregon,Pac-12,UCLA,Pac-12,W,45.0,30.0,10.0,9.0,8.0,14.0,6.0,3.466,winners_beat_ranked_same_conference
+2022,8,Syracuse,ACC,Clemson,ACC,L,21.0,27.0,14.0,5.0,16.0,43.0,10.0,9.515,primary_lost_to_ranked_same_conference
+2022,8,TCU,Big 12,Kansas State,Big 12,W,38.0,28.0,8.0,17.0,7.0,4.0,-3.0,-5.39,winners_beat_ranked_same_conference
+2022,8,Texas,Big 12,Oklahoma State,Big 12,L,34.0,41.0,20.0,11.0,26.0,11.0,-15.0,-14.371,primary_lost_to_ranked_same_conference
+2022,8,UCLA,Pac-12,Oregon,Pac-12,L,30.0,45.0,9.0,10.0,12.0,19.0,7.0,5.586,primary_lost_to_ranked_same_conference
+2022,9,Cincinnati,American Athletic,UCF,American Athletic,L,21.0,25.0,20.0,,26.0,33.0,0.0,1.52,C2_lost_to_unranked
+2022,9,Kansas State,Big 12,Oklahoma State,Big 12,W,48.0,0.0,22.0,9.0,13.0,7.0,-6.0,-9.396,winners_beat_ranked_same_conference
+2022,9,Kentucky,SEC,Tennessee,SEC,L,6.0,44.0,19.0,3.0,26.0,34.0,0.0,0.443,primary_lost_to_ranked_same_conference
+2022,9,Ohio State,Big Ten,Penn State,Big Ten,W,44.0,31.0,2.0,13.0,2.0,3.0,1.0,-0.959,winners_beat_ranked_same_conference
+2022,9,Oklahoma State,Big 12,Kansas State,Big 12,L,0.0,48.0,9.0,22.0,18.0,42.0,8.0,6.586,primary_lost_to_ranked_same_conference
+2022,9,Penn State,Big Ten,Ohio State,Big Ten,L,31.0,44.0,13.0,2.0,16.0,8.0,-8.0,-8.671,primary_lost_to_ranked_same_conference
+2022,9,South Carolina,SEC,Missouri,SEC,L,10.0,23.0,25.0,,26.0,28.0,0.0,1.934,C2_lost_to_unranked
+2022,9,Syracuse,ACC,Notre Dame,FBS Independents,L,24.0,41.0,16.0,,22.0,43.0,4.0,5.189,C2_lost_to_unranked
+2022,9,Tennessee,SEC,Kentucky,SEC,W,44.0,6.0,3.0,19.0,2.0,6.0,4.0,1.969,winners_beat_ranked_same_conference
+2022,9,Wake Forest,ACC,Louisville,ACC,L,21.0,48.0,10.0,,20.0,31.0,6.0,6.692,C2_lost_to_unranked
+2022,10,Alabama,SEC,LSU,SEC,L,31.0,32.0,6.0,15.0,10.0,5.0,-5.0,-6.971,primary_lost_to_ranked_same_conference
+2022,10,Clemson,ACC,Notre Dame,FBS Independents,L,14.0,35.0,5.0,,12.0,9.0,-3.0,-2.723,C2_lost_to_unranked
+2022,10,Georgia,SEC,Tennessee,SEC,W,27.0,13.0,1.0,2.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2022,10,Illinois,Big Ten,Michigan State,Big Ten,L,15.0,23.0,14.0,,21.0,26.0,5.0,6.023,C2_lost_to_unranked
+2022,10,Kansas State,Big 12,Texas,Big 12,L,27.0,34.0,13.0,,23.0,7.0,-16.0,-15.06,C2_lost_to_unranked
+2022,10,LSU,SEC,Alabama,SEC,W,32.0,31.0,15.0,6.0,7.0,17.0,10.0,7.107,winners_beat_ranked_same_conference
+2022,10,NC State,ACC,Wake Forest,ACC,W,30.0,21.0,21.0,20.0,17.0,32.0,9.0,5.676,winners_beat_ranked_same_conference
+2022,10,Oklahoma State,Big 12,Kansas,Big 12,L,16.0,37.0,18.0,,26.0,42.0,0.0,1.354,C2_lost_to_unranked
+2022,10,Oregon State,Pac-12,Washington,Pac-12,L,21.0,24.0,24.0,,26.0,16.0,-10.0,-8.149,C2_lost_to_unranked
+2022,10,Syracuse,ACC,Pittsburgh,ACC,L,9.0,19.0,22.0,,26.0,43.0,0.0,1.686,C2_lost_to_unranked
+2022,10,Tennessee,SEC,Georgia,SEC,L,13.0,27.0,2.0,1.0,5.0,6.0,1.0,-1.714,primary_lost_to_ranked_same_conference
+2022,10,Wake Forest,ACC,NC State,ACC,L,21.0,30.0,20.0,21.0,26.0,31.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2022,11,Alabama,SEC,Ole Miss,SEC,W,30.0,24.0,10.0,11.0,8.0,5.0,-3.0,-5.534,winners_beat_ranked_same_conference
+2022,11,Illinois,Big Ten,Purdue,Big Ten,L,24.0,31.0,21.0,,26.0,26.0,0.0,1.603,C2_lost_to_unranked
+2022,11,Liberty,FBS Independents,UConn,FBS Independents,L,33.0,36.0,19.0,,26.0,72.0,0.0,1.437,C2_lost_to_unranked
+2022,11,NC State,ACC,Boston College,ACC,L,20.0,21.0,17.0,,26.0,32.0,0.0,1.271,C2_lost_to_unranked
+2022,11,Ole Miss,SEC,Alabama,SEC,L,24.0,30.0,11.0,10.0,14.0,23.0,9.0,7.957,primary_lost_to_ranked_same_conference
+2022,11,Oregon,Pac-12,Washington,Pac-12,L,34.0,37.0,6.0,24.0,12.0,14.0,2.0,0.029,primary_lost_to_ranked_same_conference
+2022,11,TCU,Big 12,Texas,Big 12,W,17.0,10.0,4.0,18.0,4.0,4.0,0.0,-2.103,winners_beat_ranked_same_conference
+2022,11,Texas,Big 12,TCU,Big 12,L,10.0,17.0,18.0,4.0,26.0,11.0,-15.0,-14.742,primary_lost_to_ranked_same_conference
+2022,11,Tulane,American Athletic,UCF,American Athletic,L,31.0,38.0,16.0,22.0,21.0,15.0,-6.0,-6.114,primary_lost_to_ranked_same_conference
+2022,11,UCF,American Athletic,Tulane,American Athletic,W,38.0,31.0,22.0,16.0,17.0,29.0,9.0,5.604,winners_beat_ranked_same_conference
+2022,11,UCLA,Pac-12,Arizona,Pac-12,L,28.0,34.0,9.0,,16.0,19.0,3.0,3.609,C2_lost_to_unranked
+2022,11,Washington,Pac-12,Oregon,Pac-12,W,37.0,34.0,24.0,6.0,15.0,18.0,3.0,-0.54,winners_beat_ranked_same_conference
+2022,12,North Carolina,ACC,Georgia Tech,ACC,L,17.0,21.0,13.0,,18.0,39.0,8.0,8.94,C2_lost_to_unranked
+2022,12,Oklahoma State,Big 12,Oklahoma,Big 12,L,13.0,28.0,24.0,,26.0,42.0,0.0,1.851,C2_lost_to_unranked
+2022,12,Ole Miss,SEC,Arkansas,SEC,L,27.0,42.0,14.0,,20.0,23.0,3.0,4.023,C2_lost_to_unranked
+2022,12,Oregon,Pac-12,Utah,Pac-12,W,20.0,17.0,12.0,10.0,10.0,14.0,4.0,1.322,winners_beat_ranked_same_conference
+2022,12,Tennessee,SEC,South Carolina,SEC,L,38.0,63.0,5.0,,9.0,6.0,-3.0,-2.723,C2_lost_to_unranked
+2022,12,UCF,American Athletic,Navy,American Athletic,L,14.0,17.0,17.0,,25.0,29.0,1.0,2.271,C2_lost_to_unranked
+2022,12,UCLA,Pac-12,USC,Pac-12,L,45.0,48.0,16.0,7.0,17.0,19.0,2.0,1.886,primary_lost_to_ranked_same_conference
+2022,12,USC,Pac-12,UCLA,Pac-12,W,48.0,45.0,7.0,16.0,5.0,12.0,7.0,4.681,winners_beat_ranked_same_conference
+2022,12,Utah,Pac-12,Oregon,Pac-12,L,17.0,20.0,10.0,12.0,14.0,10.0,-4.0,-5.228,primary_lost_to_ranked_same_conference
+2022,13,Cincinnati,American Athletic,Tulane,American Athletic,L,24.0,27.0,21.0,19.0,26.0,33.0,0.0,0.815,primary_lost_to_ranked_same_conference
+2022,13,Clemson,ACC,South Carolina,SEC,L,30.0,31.0,7.0,,10.0,9.0,-1.0,-0.557,C2_lost_to_unranked
+2022,13,Coastal Carolina,Sun Belt,James Madison,Sun Belt,L,7.0,47.0,23.0,,26.0,58.0,0.0,1.768,C2_lost_to_unranked
+2022,13,LSU,SEC,Texas A&M,SEC,L,23.0,38.0,6.0,,11.0,17.0,6.0,6.36,C2_lost_to_unranked
+2022,13,Michigan,Big Ten,Ohio State,Big Ten,W,45.0,23.0,3.0,2.0,2.0,2.0,0.0,-2.031,winners_beat_ranked_same_conference
+2022,13,North Carolina,ACC,NC State,ACC,L,27.0,30.0,18.0,,24.0,39.0,2.0,3.354,C2_lost_to_unranked
+2022,13,Notre Dame,FBS Independents,USC,Pac-12,L,27.0,38.0,13.0,5.0,19.0,21.0,2.0,1.657,C1_lost_to_ranked_other_conference
+2022,13,Ohio State,Big Ten,Michigan,Big Ten,L,23.0,45.0,2.0,3.0,5.0,3.0,-2.0,-4.714,primary_lost_to_ranked_same_conference
+2022,13,Ole Miss,SEC,Mississippi State,SEC,L,22.0,24.0,20.0,,26.0,23.0,-3.0,-1.48,C2_lost_to_unranked
+2022,13,Oregon,Pac-12,Oregon State,Pac-12,L,34.0,38.0,10.0,22.0,15.0,14.0,-1.0,-2.228,primary_lost_to_ranked_same_conference
+2022,13,Oregon State,Pac-12,Oregon,Pac-12,W,38.0,34.0,22.0,10.0,16.0,16.0,0.0,-3.396,winners_beat_ranked_same_conference
+2022,13,Tulane,American Athletic,Cincinnati,American Athletic,W,27.0,24.0,19.0,21.0,18.0,15.0,-3.0,-6.181,winners_beat_ranked_same_conference
+2022,14,Clemson,ACC,North Carolina,ACC,W,39.0,10.0,10.0,24.0,10.0,9.0,-1.0,-3.534,winners_beat_ranked_same_conference
+2022,14,Georgia,SEC,LSU,SEC,W,50.0,30.0,1.0,11.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2022,14,Kansas State,Big 12,TCU,Big 12,W,31.0,28.0,13.0,3.0,11.0,7.0,-4.0,-6.75,winners_beat_ranked_same_conference
+2022,14,LSU,SEC,Georgia,SEC,L,30.0,50.0,11.0,1.0,16.0,17.0,1.0,-0.043,primary_lost_to_ranked_same_conference
+2022,14,North Carolina,ACC,Clemson,ACC,L,10.0,39.0,24.0,10.0,26.0,39.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2022,14,TCU,Big 12,Kansas State,Big 12,L,28.0,31.0,3.0,13.0,3.0,4.0,1.0,-1.529,primary_lost_to_ranked_same_conference
+2022,14,Tulane,American Athletic,UCF,American Athletic,W,45.0,28.0,18.0,22.0,14.0,15.0,1.0,-2.109,winners_beat_ranked_same_conference
+2022,14,UCF,American Athletic,Tulane,American Athletic,L,28.0,45.0,22.0,18.0,26.0,29.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2022,14,USC,Pac-12,Utah,Pac-12,L,24.0,47.0,4.0,12.0,8.0,12.0,4.0,1.657,primary_lost_to_ranked_same_conference
+2022,14,Utah,Pac-12,USC,Pac-12,W,47.0,24.0,12.0,4.0,7.0,10.0,3.0,0.322,winners_beat_ranked_same_conference
+2023,1,Clemson,ACC,Duke,ACC,L,7.0,28.0,9.0,,25.0,24.0,-1.0,-0.391,C2_lost_to_unranked
+2023,1,LSU,SEC,Florida State,ACC,L,24.0,45.0,5.0,8.0,14.0,13.0,-1.0,-3.88,C1_lost_to_ranked_other_conference
+2023,1,TCU,Big 12,Colorado,Pac-12,L,42.0,45.0,17.0,,26.0,56.0,0.0,1.271,C2_lost_to_unranked
+2023,2,Alabama,SEC,Texas,Big 12,L,24.0,34.0,3.0,11.0,10.0,7.0,-3.0,-6.515,C1_lost_to_ranked_other_conference
+2023,2,Texas A&M,SEC,Miami,ACC,L,33.0,48.0,23.0,,26.0,31.0,0.0,1.768,C2_lost_to_unranked
+2023,2,Tulane,American Athletic,Ole Miss,SEC,L,20.0,37.0,24.0,20.0,26.0,27.0,0.0,3.146,C1_lost_to_ranked_other_conference
+2023,2,Wisconsin,Big Ten,Washington State,Pac-12,L,22.0,31.0,19.0,,26.0,44.0,0.0,1.437,C2_lost_to_unranked
+2023,3,Kansas State,Big 12,Missouri,SEC,L,27.0,30.0,15.0,,26.0,17.0,-9.0,-7.894,C2_lost_to_unranked
+2023,3,Tennessee,SEC,Florida,SEC,L,16.0,29.0,11.0,,23.0,28.0,3.0,3.774,C2_lost_to_unranked
+2023,4,Alabama,SEC,Ole Miss,SEC,W,24.0,10.0,13.0,15.0,12.0,7.0,-5.0,-7.75,winners_beat_ranked_same_conference
+2023,4,Colorado,Pac-12,Oregon,Pac-12,L,6.0,42.0,19.0,10.0,26.0,85.0,0.0,0.443,primary_lost_to_ranked_same_conference
+2023,4,Iowa,Big Ten,Penn State,Big Ten,L,0.0,31.0,24.0,7.0,26.0,23.0,-3.0,-1.628,primary_lost_to_ranked_same_conference
+2023,4,Notre Dame,FBS Independents,Ohio State,Big Ten,L,14.0,17.0,9.0,6.0,11.0,14.0,3.0,1.388,C1_lost_to_ranked_other_conference
+2023,4,Ole Miss,SEC,Alabama,SEC,L,10.0,24.0,15.0,13.0,20.0,16.0,-4.0,-4.3,primary_lost_to_ranked_same_conference
+2023,4,Oregon,Pac-12,Colorado,Pac-12,W,42.0,6.0,10.0,19.0,9.0,8.0,-1.0,-3.534,winners_beat_ranked_same_conference
+2023,4,Oregon State,Pac-12,Washington State,Pac-12,L,35.0,38.0,14.0,21.0,19.0,22.0,3.0,2.515,primary_lost_to_ranked_same_conference
+2023,4,Penn State,Big Ten,Iowa,Big Ten,W,31.0,0.0,7.0,24.0,6.0,9.0,3.0,0.681,winners_beat_ranked_same_conference
+2023,4,UCLA,Pac-12,Utah,Pac-12,L,7.0,14.0,22.0,11.0,26.0,46.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2023,4,Utah,Pac-12,UCLA,Pac-12,W,14.0,7.0,11.0,22.0,10.0,32.0,16.0,13.394,winners_beat_ranked_same_conference
+2023,4,Washington State,Pac-12,Oregon State,Pac-12,W,38.0,35.0,21.0,14.0,16.0,66.0,10.0,6.676,winners_beat_ranked_same_conference
+2023,5,Duke,ACC,Notre Dame,FBS Independents,L,14.0,21.0,17.0,11.0,19.0,35.0,7.0,7.926,C1_lost_to_ranked_other_conference
+2023,5,Florida,SEC,Kentucky,SEC,L,14.0,33.0,22.0,,26.0,69.0,0.0,1.686,C2_lost_to_unranked
+2023,5,Kansas,Big 12,Texas,Big 12,L,14.0,40.0,24.0,3.0,26.0,26.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2023,5,LSU,SEC,Ole Miss,SEC,L,49.0,55.0,13.0,20.0,23.0,13.0,-10.0,-10.671,primary_lost_to_ranked_same_conference
+2023,5,Ole Miss,SEC,LSU,SEC,W,55.0,49.0,20.0,13.0,16.0,16.0,0.0,-3.253,winners_beat_ranked_same_conference
+2023,5,Oregon State,Pac-12,Utah,Pac-12,W,21.0,7.0,19.0,10.0,15.0,22.0,7.0,3.819,winners_beat_ranked_same_conference
+2023,5,Texas,Big 12,Kansas,Big 12,W,40.0,14.0,3.0,24.0,3.0,2.0,-1.0,-3.031,winners_beat_ranked_same_conference
+2023,5,Utah,Pac-12,Oregon State,Pac-12,L,7.0,21.0,10.0,19.0,18.0,32.0,8.0,6.772,primary_lost_to_ranked_same_conference
+2023,6,Fresno State,Mountain West,Wyoming,Mountain West,L,19.0,24.0,24.0,,26.0,71.0,0.0,1.851,C2_lost_to_unranked
+2023,6,Georgia,SEC,Kentucky,SEC,W,51.0,13.0,1.0,20.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2023,6,Kentucky,SEC,Georgia,SEC,L,13.0,51.0,20.0,1.0,24.0,43.0,2.0,2.629,primary_lost_to_ranked_same_conference
+2023,6,LSU,SEC,Missouri,SEC,W,49.0,39.0,23.0,21.0,22.0,13.0,-9.0,-12.468,winners_beat_ranked_same_conference
+2023,6,Miami,ACC,Georgia Tech,ACC,L,20.0,23.0,17.0,,25.0,29.0,1.0,2.271,C2_lost_to_unranked
+2023,6,Missouri,SEC,LSU,SEC,L,39.0,49.0,21.0,23.0,26.0,12.0,-14.0,-13.185,primary_lost_to_ranked_same_conference
+2023,6,Notre Dame,FBS Independents,Louisville,ACC,L,20.0,33.0,10.0,25.0,21.0,14.0,-7.0,-8.294,C1_lost_to_ranked_other_conference
+2023,6,Oklahoma,Big 12,Texas,Big 12,W,34.0,30.0,12.0,3.0,5.0,10.0,5.0,2.322,winners_beat_ranked_same_conference
+2023,6,Texas,Big 12,Oklahoma,Big 12,L,30.0,34.0,3.0,12.0,9.0,2.0,-7.0,-9.529,primary_lost_to_ranked_same_conference
+2023,6,Washington State,Pac-12,UCLA,Pac-12,L,17.0,25.0,13.0,,19.0,66.0,7.0,7.94,C2_lost_to_unranked
+2023,7,Kansas,Big 12,Oklahoma State,Big 12,L,32.0,39.0,23.0,,26.0,26.0,0.0,1.768,C2_lost_to_unranked
+2023,7,Kentucky,SEC,Missouri,SEC,L,21.0,38.0,24.0,,26.0,43.0,0.0,1.851,C2_lost_to_unranked
+2023,7,Louisville,ACC,Pittsburgh,ACC,L,21.0,38.0,14.0,,21.0,19.0,-2.0,-0.977,C2_lost_to_unranked
+2023,7,Miami,ACC,North Carolina,ACC,L,31.0,41.0,25.0,12.0,26.0,29.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2023,7,North Carolina,ACC,Miami,ACC,W,41.0,31.0,12.0,25.0,10.0,34.0,16.0,13.322,winners_beat_ranked_same_conference
+2023,7,Oregon,Pac-12,Washington,Pac-12,L,33.0,36.0,8.0,7.0,9.0,8.0,-1.0,-2.6,primary_lost_to_ranked_same_conference
+2023,7,Oregon State,Pac-12,UCLA,Pac-12,W,36.0,24.0,15.0,18.0,12.0,22.0,10.0,7.107,winners_beat_ranked_same_conference
+2023,7,UCLA,Pac-12,Oregon State,Pac-12,L,24.0,36.0,18.0,15.0,25.0,46.0,1.0,1.258,primary_lost_to_ranked_same_conference
+2023,7,USC,Pac-12,Notre Dame,FBS Independents,L,20.0,48.0,10.0,21.0,18.0,38.0,8.0,6.706,C1_lost_to_ranked_other_conference
+2023,7,Washington,Pac-12,Oregon,Pac-12,W,36.0,33.0,7.0,8.0,5.0,4.0,-1.0,-3.319,winners_beat_ranked_same_conference
+2023,7,Washington State,Pac-12,Arizona,Pac-12,L,6.0,44.0,19.0,,26.0,66.0,0.0,1.437,C2_lost_to_unranked
+2023,8,Alabama,SEC,Tennessee,SEC,W,34.0,20.0,11.0,17.0,9.0,7.0,-2.0,-4.606,winners_beat_ranked_same_conference
+2023,8,Duke,ACC,Florida State,ACC,L,20.0,38.0,16.0,4.0,20.0,35.0,6.0,5.886,primary_lost_to_ranked_same_conference
+2023,8,Florida State,ACC,Duke,ACC,W,38.0,20.0,4.0,16.0,4.0,5.0,1.0,-1.103,winners_beat_ranked_same_conference
+2023,8,Iowa,Big Ten,Minnesota,Big Ten,L,10.0,12.0,24.0,,26.0,23.0,-3.0,-1.149,C2_lost_to_unranked
+2023,8,North Carolina,ACC,Virginia,ACC,L,27.0,31.0,10.0,,17.0,34.0,9.0,9.692,C2_lost_to_unranked
+2023,8,Ohio State,Big Ten,Penn State,Big Ten,W,20.0,12.0,3.0,7.0,3.0,3.0,0.0,-2.031,winners_beat_ranked_same_conference
+2023,8,Penn State,Big Ten,Ohio State,Big Ten,L,12.0,20.0,7.0,3.0,10.0,9.0,-1.0,-2.786,primary_lost_to_ranked_same_conference
+2023,8,Tennessee,SEC,Alabama,SEC,L,20.0,34.0,17.0,11.0,21.0,28.0,5.0,5.072,primary_lost_to_ranked_same_conference
+2023,8,USC,Pac-12,Utah,Pac-12,L,32.0,34.0,18.0,14.0,24.0,38.0,2.0,2.258,primary_lost_to_ranked_same_conference
+2023,8,Utah,Pac-12,USC,Pac-12,W,34.0,32.0,14.0,18.0,13.0,32.0,13.0,10.179,winners_beat_ranked_same_conference
+2023,9,Duke,ACC,Louisville,ACC,L,0.0,23.0,20.0,18.0,26.0,35.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2023,9,Louisville,ACC,Duke,ACC,W,23.0,0.0,18.0,20.0,15.0,19.0,4.0,0.891,winners_beat_ranked_same_conference
+2023,9,North Carolina,ACC,Georgia Tech,ACC,L,42.0,46.0,17.0,,26.0,34.0,0.0,1.271,C2_lost_to_unranked
+2023,9,Oklahoma,Big 12,Kansas,Big 12,L,33.0,38.0,6.0,,10.0,10.0,0.0,0.36,C2_lost_to_unranked
+2023,9,Oregon,Pac-12,Utah,Pac-12,W,35.0,6.0,8.0,13.0,6.0,8.0,2.0,-0.39,winners_beat_ranked_same_conference
+2023,9,Oregon State,Pac-12,Arizona,Pac-12,L,24.0,27.0,11.0,,16.0,22.0,6.0,6.774,C2_lost_to_unranked
+2023,9,Utah,Pac-12,Oregon,Pac-12,L,6.0,35.0,13.0,8.0,18.0,32.0,8.0,7.329,primary_lost_to_ranked_same_conference
+2023,10,Air Force,Mountain West,Army,FBS Independents,L,3.0,23.0,17.0,,26.0,50.0,0.0,1.271,C2_lost_to_unranked
+2023,10,Alabama,SEC,LSU,SEC,W,42.0,28.0,8.0,13.0,8.0,7.0,-1.0,-3.39,winners_beat_ranked_same_conference
+2023,10,Georgia,SEC,Missouri,SEC,W,30.0,21.0,1.0,14.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2023,10,Kansas State,Big 12,Texas,Big 12,L,30.0,33.0,25.0,7.0,26.0,17.0,-9.0,-7.442,primary_lost_to_ranked_same_conference
+2023,10,LSU,SEC,Alabama,SEC,L,28.0,42.0,13.0,8.0,18.0,13.0,-5.0,-5.671,primary_lost_to_ranked_same_conference
+2023,10,Missouri,SEC,Georgia,SEC,L,21.0,30.0,14.0,1.0,16.0,12.0,-4.0,-4.485,primary_lost_to_ranked_same_conference
+2023,10,Notre Dame,FBS Independents,Clemson,ACC,L,23.0,31.0,12.0,,22.0,14.0,-8.0,-7.143,C2_lost_to_unranked
+2023,10,Oklahoma,Big 12,Oklahoma State,Big 12,L,24.0,27.0,10.0,,17.0,10.0,-7.0,-6.308,C2_lost_to_unranked
+2023,10,Texas,Big 12,Kansas State,Big 12,W,33.0,30.0,7.0,25.0,7.0,2.0,-5.0,-7.319,winners_beat_ranked_same_conference
+2023,10,UCLA,Pac-12,Arizona,Pac-12,L,10.0,27.0,20.0,,26.0,46.0,0.0,1.52,C2_lost_to_unranked
+2023,10,USC,Pac-12,Washington,Pac-12,L,42.0,52.0,24.0,5.0,26.0,38.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2023,10,Washington,Pac-12,USC,Pac-12,W,52.0,42.0,5.0,24.0,5.0,4.0,-1.0,-3.175,winners_beat_ranked_same_conference
+2023,11,Georgia,SEC,Ole Miss,SEC,W,52.0,17.0,1.0,10.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2023,11,Kansas,Big 12,Texas Tech,Big 12,L,13.0,16.0,19.0,,26.0,26.0,0.0,1.437,C2_lost_to_unranked
+2023,11,Michigan,Big Ten,Penn State,Big Ten,W,24.0,15.0,2.0,9.0,2.0,1.0,-1.0,-2.959,winners_beat_ranked_same_conference
+2023,11,Missouri,SEC,Tennessee,SEC,W,36.0,7.0,16.0,14.0,11.0,12.0,1.0,-1.965,winners_beat_ranked_same_conference
+2023,11,Oklahoma State,Big 12,UCF,Big 12,L,3.0,45.0,15.0,,24.0,37.0,2.0,3.106,C2_lost_to_unranked
+2023,11,Ole Miss,SEC,Georgia,SEC,L,17.0,52.0,10.0,1.0,13.0,16.0,3.0,1.772,primary_lost_to_ranked_same_conference
+2023,11,Penn State,Big Ten,Michigan,Big Ten,L,15.0,24.0,9.0,2.0,12.0,9.0,-3.0,-4.414,primary_lost_to_ranked_same_conference
+2023,11,Tennessee,SEC,Missouri,SEC,L,7.0,36.0,14.0,16.0,21.0,28.0,5.0,4.515,primary_lost_to_ranked_same_conference
+2023,11,Utah,Pac-12,Washington,Pac-12,L,28.0,35.0,13.0,5.0,16.0,32.0,10.0,9.329,primary_lost_to_ranked_same_conference
+2023,11,Washington,Pac-12,Utah,Pac-12,W,35.0,28.0,5.0,13.0,5.0,4.0,-1.0,-3.175,winners_beat_ranked_same_conference
+2023,12,Arizona,Pac-12,Utah,Pac-12,W,42.0,18.0,19.0,16.0,16.0,20.0,4.0,0.819,winners_beat_ranked_same_conference
+2023,12,Georgia,SEC,Tennessee,SEC,W,38.0,10.0,1.0,21.0,1.0,6.0,5.0,3.112,winners_beat_ranked_same_conference
+2023,12,James Madison,Sun Belt,App State,Sun Belt,L,23.0,26.0,18.0,,24.0,15.0,-9.0,-7.646,C2_lost_to_unranked
+2023,12,North Carolina,ACC,Clemson,ACC,L,20.0,31.0,22.0,,26.0,34.0,0.0,1.686,C2_lost_to_unranked
+2023,12,Oregon State,Pac-12,Washington,Pac-12,L,20.0,22.0,10.0,5.0,15.0,22.0,7.0,5.772,primary_lost_to_ranked_same_conference
+2023,12,Tennessee,SEC,Georgia,SEC,L,10.0,38.0,21.0,1.0,25.0,28.0,1.0,1.815,primary_lost_to_ranked_same_conference
+2023,12,Utah,Pac-12,Arizona,Pac-12,L,18.0,42.0,16.0,19.0,26.0,32.0,0.0,-0.114,primary_lost_to_ranked_same_conference
+2023,12,Washington,Pac-12,Oregon State,Pac-12,W,22.0,20.0,5.0,10.0,4.0,4.0,0.0,-2.175,winners_beat_ranked_same_conference
+2023,13,Kansas State,Big 12,Iowa State,Big 12,L,35.0,42.0,19.0,,26.0,17.0,-9.0,-7.563,C2_lost_to_unranked
+2023,13,Louisville,ACC,Kentucky,SEC,L,31.0,38.0,9.0,,15.0,19.0,4.0,4.609,C2_lost_to_unranked
+2023,13,Michigan,Big Ten,Ohio State,Big Ten,W,30.0,24.0,3.0,2.0,2.0,1.0,-1.0,-3.031,winners_beat_ranked_same_conference
+2023,13,Ohio State,Big Ten,Michigan,Big Ten,L,24.0,30.0,2.0,3.0,6.0,3.0,-3.0,-5.714,primary_lost_to_ranked_same_conference
+2023,13,Oregon,Pac-12,Oregon State,Pac-12,W,31.0,7.0,6.0,15.0,5.0,8.0,3.0,0.753,winners_beat_ranked_same_conference
+2023,13,Oregon State,Pac-12,Oregon,Pac-12,L,7.0,31.0,15.0,6.0,21.0,22.0,1.0,0.7,primary_lost_to_ranked_same_conference
+2023,14,Alabama,SEC,Georgia,SEC,W,27.0,24.0,8.0,1.0,5.0,7.0,2.0,-0.39,winners_beat_ranked_same_conference
+2023,14,Florida State,ACC,Louisville,ACC,W,16.0,6.0,4.0,15.0,4.0,5.0,1.0,-1.103,winners_beat_ranked_same_conference
+2023,14,Georgia,SEC,Alabama,SEC,L,24.0,27.0,1.0,8.0,6.0,6.0,0.0,-2.9,primary_lost_to_ranked_same_conference
+2023,14,Iowa,Big Ten,Michigan,Big Ten,L,0.0,26.0,18.0,2.0,20.0,23.0,3.0,3.258,primary_lost_to_ranked_same_conference
+2023,14,Louisville,ACC,Florida State,ACC,L,6.0,16.0,15.0,4.0,16.0,19.0,3.0,2.7,primary_lost_to_ranked_same_conference
+2023,14,Michigan,Big Ten,Iowa,Big Ten,W,26.0,0.0,2.0,18.0,1.0,1.0,0.0,-1.959,winners_beat_ranked_same_conference
+2023,14,Oklahoma State,Big 12,Texas,Big 12,L,21.0,49.0,19.0,7.0,22.0,37.0,4.0,4.443,primary_lost_to_ranked_same_conference
+2023,14,Oregon,Pac-12,Washington,Pac-12,L,31.0,34.0,5.0,3.0,8.0,8.0,0.0,-2.157,primary_lost_to_ranked_same_conference
+2023,14,SMU,American Athletic,Tulane,American Athletic,W,26.0,14.0,25.0,17.0,17.0,21.0,4.0,0.388,winners_beat_ranked_same_conference
+2023,14,Texas,Big 12,Oklahoma State,Big 12,W,49.0,21.0,7.0,19.0,3.0,2.0,-1.0,-3.319,winners_beat_ranked_same_conference
+2023,14,Toledo,Mid-American,Miami (OH),Mid-American,L,14.0,23.0,23.0,,26.0,30.0,0.0,1.768,C2_lost_to_unranked
+2023,14,Tulane,American Athletic,SMU,American Athletic,L,14.0,26.0,17.0,25.0,23.0,27.0,3.0,3.072,primary_lost_to_ranked_same_conference
+2023,14,Washington,Pac-12,Oregon,Pac-12,W,34.0,31.0,3.0,5.0,2.0,4.0,2.0,-0.031,winners_beat_ranked_same_conference
+2024,1,Clemson,ACC,Georgia,SEC,L,3.0,34.0,14.0,1.0,25.0,15.0,-10.0,-10.026,C1_lost_to_ranked_other_conference
+2024,1,LSU,SEC,USC,Big Ten,L,20.0,27.0,13.0,23.0,18.0,21.0,3.0,2.657,C1_lost_to_ranked_other_conference
+2024,1,Texas A&M,SEC,Notre Dame,FBS Independents,L,13.0,23.0,20.0,7.0,26.0,23.0,-3.0,-1.122,C1_lost_to_ranked_other_conference
+2024,2,Georgia Tech,ACC,Syracuse,ACC,L,28.0,31.0,23.0,,26.0,40.0,0.0,1.768,C2_lost_to_unranked
+2024,2,Iowa,Big Ten,Iowa State,Big 12,L,19.0,20.0,21.0,,26.0,30.0,0.0,1.603,C2_lost_to_unranked
+2024,2,Kansas,Big 12,Illinois,Big Ten,L,17.0,23.0,19.0,,26.0,47.0,0.0,1.437,C2_lost_to_unranked
+2024,2,Michigan,Big Ten,Texas,SEC,L,12.0,31.0,10.0,3.0,17.0,34.0,9.0,7.706,C1_lost_to_ranked_other_conference
+2024,2,NC State,ACC,Tennessee,SEC,L,10.0,51.0,24.0,14.0,26.0,72.0,0.0,3.146,C1_lost_to_ranked_other_conference
+2024,2,Notre Dame,FBS Independents,Northern Illinois,Mid-American,L,14.0,16.0,5.0,,18.0,2.0,-16.0,-15.723,C2_lost_to_unranked
+2024,3,Arizona,Big 12,Kansas State,Big 12,L,7.0,31.0,20.0,14.0,26.0,101.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2024,3,Boston College,ACC,Missouri,SEC,L,21.0,27.0,24.0,6.0,26.0,46.0,0.0,3.146,C1_lost_to_ranked_other_conference
+2024,3,Kansas State,Big 12,Arizona,Big 12,W,31.0,7.0,14.0,20.0,13.0,25.0,12.0,9.179,winners_beat_ranked_same_conference
+2024,4,Illinois,Big Ten,Nebraska,Big Ten,W,31.0,24.0,24.0,22.0,19.0,28.0,7.0,3.46,winners_beat_ranked_same_conference
+2024,4,Kansas State,Big 12,BYU,Big 12,L,9.0,38.0,13.0,,23.0,25.0,2.0,2.94,C2_lost_to_unranked
+2024,4,Michigan,Big Ten,USC,Big Ten,W,27.0,24.0,18.0,11.0,12.0,34.0,14.0,10.891,winners_beat_ranked_same_conference
+2024,4,Nebraska,Big Ten,Illinois,Big Ten,L,24.0,31.0,22.0,24.0,26.0,48.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2024,4,Northern Illinois,Mid-American,Buffalo,Mid-American,L,20.0,23.0,23.0,,26.0,66.0,0.0,1.768,C2_lost_to_unranked
+2024,4,Oklahoma,SEC,Tennessee,SEC,L,15.0,25.0,15.0,6.0,21.0,49.0,5.0,4.7,primary_lost_to_ranked_same_conference
+2024,4,Oklahoma State,Big 12,Utah,Big 12,L,19.0,22.0,14.0,12.0,20.0,103.0,6.0,5.515,primary_lost_to_ranked_same_conference
+2024,4,Tennessee,SEC,Oklahoma,SEC,W,25.0,15.0,6.0,15.0,5.0,18.0,13.0,10.753,winners_beat_ranked_same_conference
+2024,4,USC,Big Ten,Michigan,Big Ten,L,24.0,27.0,11.0,18.0,13.0,39.0,13.0,11.957,primary_lost_to_ranked_same_conference
+2024,4,Utah,Big 12,Oklahoma State,Big 12,W,22.0,19.0,12.0,14.0,10.0,73.0,16.0,13.322,winners_beat_ranked_same_conference
+2024,5,Alabama,SEC,Georgia,SEC,W,41.0,34.0,4.0,2.0,1.0,9.0,8.0,5.897,winners_beat_ranked_same_conference
+2024,5,Georgia,SEC,Alabama,SEC,L,34.0,41.0,2.0,4.0,5.0,5.0,0.0,-2.714,primary_lost_to_ranked_same_conference
+2024,5,Illinois,Big Ten,Penn State,Big Ten,L,7.0,21.0,19.0,9.0,24.0,28.0,2.0,2.443,primary_lost_to_ranked_same_conference
+2024,5,Kansas State,Big 12,Oklahoma State,Big 12,W,42.0,20.0,23.0,20.0,20.0,25.0,5.0,1.532,winners_beat_ranked_same_conference
+2024,5,Louisville,ACC,Notre Dame,FBS Independents,L,24.0,31.0,15.0,16.0,22.0,16.0,-6.0,-5.708,C1_lost_to_ranked_other_conference
+2024,5,Oklahoma State,Big 12,Kansas State,Big 12,L,20.0,42.0,20.0,23.0,26.0,103.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2024,5,Ole Miss,SEC,Kentucky,SEC,L,17.0,20.0,6.0,,12.0,13.0,1.0,1.36,C2_lost_to_unranked
+2024,5,Penn State,Big Ten,Illinois,Big Ten,W,21.0,7.0,9.0,19.0,7.0,6.0,-1.0,-3.462,winners_beat_ranked_same_conference
+2024,5,Utah,Big 12,Arizona,Big 12,L,10.0,23.0,10.0,,18.0,73.0,8.0,8.692,C2_lost_to_unranked
+2024,6,Alabama,SEC,Vanderbilt,SEC,L,35.0,40.0,1.0,,7.0,9.0,2.0,1.946,C2_lost_to_unranked
+2024,6,Louisville,ACC,SMU,ACC,L,27.0,34.0,22.0,,26.0,16.0,-10.0,-8.314,C2_lost_to_unranked
+2024,6,Michigan,Big Ten,Washington,Big Ten,L,17.0,27.0,10.0,,24.0,34.0,2.0,2.692,C2_lost_to_unranked
+2024,6,Missouri,SEC,Texas A&M,SEC,L,10.0,41.0,9.0,25.0,21.0,27.0,5.0,3.586,primary_lost_to_ranked_same_conference
+2024,6,Tennessee,SEC,Arkansas,SEC,L,14.0,19.0,4.0,,8.0,18.0,10.0,10.195,C2_lost_to_unranked
+2024,6,Texas A&M,SEC,Missouri,SEC,W,41.0,10.0,25.0,9.0,15.0,23.0,8.0,4.388,winners_beat_ranked_same_conference
+2024,6,UNLV,Mountain West,Syracuse,ACC,L,41.0,44.0,25.0,,26.0,26.0,0.0,1.934,C2_lost_to_unranked
+2024,6,USC,Big Ten,Minnesota,Big Ten,L,17.0,24.0,11.0,,26.0,39.0,0.0,0.774,C2_lost_to_unranked
+2024,7,LSU,SEC,Ole Miss,SEC,W,29.0,26.0,13.0,9.0,8.0,21.0,13.0,10.25,winners_beat_ranked_same_conference
+2024,7,Ohio State,Big Ten,Oregon,Big Ten,L,31.0,32.0,2.0,3.0,4.0,3.0,-1.0,-3.714,primary_lost_to_ranked_same_conference
+2024,7,Oklahoma,SEC,Texas,SEC,L,3.0,34.0,18.0,1.0,26.0,49.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2024,7,Ole Miss,SEC,LSU,SEC,L,26.0,29.0,9.0,13.0,18.0,13.0,-5.0,-6.414,primary_lost_to_ranked_same_conference
+2024,7,Oregon,Big Ten,Ohio State,Big Ten,W,32.0,31.0,3.0,2.0,2.0,1.0,-1.0,-3.031,winners_beat_ranked_same_conference
+2024,7,Texas,SEC,Oklahoma,SEC,W,34.0,3.0,1.0,18.0,1.0,4.0,3.0,1.112,winners_beat_ranked_same_conference
+2024,7,Utah,Big 12,Arizona State,Big 12,L,19.0,27.0,16.0,,26.0,73.0,0.0,1.189,C2_lost_to_unranked
+2024,8,Alabama,SEC,Tennessee,SEC,L,17.0,24.0,7.0,11.0,15.0,9.0,-6.0,-7.786,primary_lost_to_ranked_same_conference
+2024,8,Georgia,SEC,Texas,SEC,W,30.0,15.0,5.0,1.0,2.0,5.0,3.0,0.825,winners_beat_ranked_same_conference
+2024,8,Illinois,Big Ten,Michigan,Big Ten,W,21.0,7.0,22.0,24.0,20.0,28.0,6.0,2.604,winners_beat_ranked_same_conference
+2024,8,Michigan,Big Ten,Illinois,Big Ten,L,7.0,21.0,24.0,22.0,26.0,34.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2024,8,Tennessee,SEC,Alabama,SEC,W,24.0,17.0,11.0,7.0,7.0,18.0,11.0,8.394,winners_beat_ranked_same_conference
+2024,8,Texas,SEC,Georgia,SEC,L,15.0,30.0,1.0,5.0,5.0,4.0,-1.0,-3.9,primary_lost_to_ranked_same_conference
+2024,9,Alabama,SEC,Missouri,SEC,W,34.0,0.0,15.0,21.0,14.0,9.0,-5.0,-7.893,winners_beat_ranked_same_conference
+2024,9,Illinois,Big Ten,Oregon,Big Ten,L,9.0,38.0,20.0,1.0,24.0,28.0,2.0,2.629,primary_lost_to_ranked_same_conference
+2024,9,LSU,SEC,Texas A&M,SEC,L,23.0,38.0,8.0,14.0,16.0,21.0,5.0,3.4,primary_lost_to_ranked_same_conference
+2024,9,Missouri,SEC,Alabama,SEC,L,0.0,34.0,21.0,15.0,25.0,27.0,1.0,1.815,primary_lost_to_ranked_same_conference
+2024,9,Navy,American Athletic,Notre Dame,FBS Independents,L,14.0,51.0,24.0,12.0,26.0,29.0,0.0,3.146,C1_lost_to_ranked_other_conference
+2024,9,Oregon,Big Ten,Illinois,Big Ten,W,38.0,9.0,1.0,20.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2024,9,Texas,SEC,Vanderbilt,SEC,W,27.0,24.0,5.0,25.0,6.0,4.0,-2.0,-4.175,winners_beat_ranked_same_conference
+2024,9,Texas A&M,SEC,LSU,SEC,W,38.0,23.0,14.0,8.0,10.0,23.0,13.0,10.179,winners_beat_ranked_same_conference
+2024,9,Vanderbilt,SEC,Texas,SEC,L,24.0,27.0,25.0,5.0,26.0,51.0,0.0,1.558,primary_lost_to_ranked_same_conference
+2024,10,Clemson,ACC,Louisville,ACC,L,21.0,33.0,11.0,,19.0,15.0,-4.0,-3.226,C2_lost_to_unranked
+2024,10,Illinois,Big Ten,Minnesota,Big Ten,L,17.0,25.0,24.0,,26.0,28.0,0.0,1.851,C2_lost_to_unranked
+2024,10,Iowa State,Big 12,Texas Tech,Big 12,L,22.0,23.0,11.0,,17.0,19.0,2.0,2.774,C2_lost_to_unranked
+2024,10,Kansas State,Big 12,Houston,Big 12,L,19.0,24.0,17.0,,22.0,25.0,3.0,4.271,C2_lost_to_unranked
+2024,10,Ohio State,Big Ten,Penn State,Big Ten,W,20.0,13.0,4.0,3.0,3.0,3.0,0.0,-2.103,winners_beat_ranked_same_conference
+2024,10,Penn State,Big Ten,Ohio State,Big Ten,L,13.0,20.0,3.0,4.0,6.0,6.0,0.0,-2.529,primary_lost_to_ranked_same_conference
+2024,10,Pittsburgh,ACC,SMU,ACC,L,25.0,48.0,18.0,20.0,23.0,50.0,3.0,3.258,primary_lost_to_ranked_same_conference
+2024,10,SMU,ACC,Pittsburgh,ACC,W,48.0,25.0,20.0,18.0,13.0,7.0,-6.0,-9.253,winners_beat_ranked_same_conference
+2024,10,Texas A&M,SEC,South Carolina,SEC,L,20.0,44.0,10.0,,15.0,23.0,8.0,8.692,C2_lost_to_unranked
+2024,11,Alabama,SEC,LSU,SEC,W,42.0,13.0,11.0,14.0,9.0,9.0,0.0,-2.606,winners_beat_ranked_same_conference
+2024,11,Georgia,SEC,Ole Miss,SEC,L,10.0,28.0,2.0,16.0,11.0,5.0,-6.0,-8.714,primary_lost_to_ranked_same_conference
+2024,11,Iowa State,Big 12,Kansas,Big 12,L,36.0,45.0,17.0,,26.0,19.0,-7.0,-5.729,C2_lost_to_unranked
+2024,11,LSU,SEC,Alabama,SEC,L,13.0,42.0,14.0,11.0,21.0,21.0,0.0,-0.485,primary_lost_to_ranked_same_conference
+2024,11,Miami,ACC,Georgia Tech,ACC,L,23.0,28.0,4.0,,12.0,10.0,-2.0,-1.805,C2_lost_to_unranked
+2024,11,Ole Miss,SEC,Georgia,SEC,W,28.0,10.0,16.0,2.0,10.0,13.0,3.0,0.035,winners_beat_ranked_same_conference
+2024,11,Pittsburgh,ACC,Virginia,ACC,L,19.0,24.0,23.0,,26.0,50.0,0.0,1.768,C2_lost_to_unranked
+2024,11,Vanderbilt,SEC,South Carolina,SEC,L,7.0,28.0,24.0,,26.0,51.0,0.0,1.851,C2_lost_to_unranked
+2024,12,BYU,Big 12,Kansas,Big 12,L,13.0,17.0,7.0,,14.0,17.0,3.0,3.443,C2_lost_to_unranked
+2024,12,Georgia,SEC,Tennessee,SEC,W,31.0,17.0,11.0,6.0,8.0,5.0,-3.0,-5.606,winners_beat_ranked_same_conference
+2024,12,Kansas State,Big 12,Arizona State,Big 12,L,14.0,24.0,20.0,,26.0,25.0,-1.0,0.52,C2_lost_to_unranked
+2024,12,LSU,SEC,Florida,SEC,L,16.0,27.0,21.0,,26.0,21.0,-5.0,-3.397,C2_lost_to_unranked
+2024,12,Louisville,ACC,Stanford,ACC,L,35.0,38.0,22.0,,26.0,16.0,-10.0,-8.314,C2_lost_to_unranked
+2024,12,Missouri,SEC,South Carolina,SEC,L,30.0,34.0,24.0,23.0,26.0,27.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2024,12,South Carolina,SEC,Missouri,SEC,W,34.0,30.0,23.0,24.0,19.0,12.0,-7.0,-10.468,winners_beat_ranked_same_conference
+2024,12,Tennessee,SEC,Georgia,SEC,L,17.0,31.0,6.0,11.0,10.0,18.0,8.0,6.029,primary_lost_to_ranked_same_conference
+2024,12,Washington State,Pac-12,New Mexico,Mountain West,L,35.0,38.0,19.0,,25.0,56.0,1.0,2.437,C2_lost_to_unranked
+2024,13,Alabama,SEC,Oklahoma,SEC,L,3.0,24.0,7.0,,13.0,9.0,-4.0,-3.557,C2_lost_to_unranked
+2024,13,Arizona State,Big 12,BYU,Big 12,W,28.0,23.0,21.0,14.0,14.0,14.0,0.0,-3.324,winners_beat_ranked_same_conference
+2024,13,Army,American Athletic,Notre Dame,FBS Independents,L,14.0,49.0,18.0,6.0,25.0,22.0,-3.0,-1.757,C1_lost_to_ranked_other_conference
+2024,13,BYU,Big 12,Arizona State,Big 12,L,23.0,28.0,14.0,21.0,19.0,17.0,-2.0,-2.485,primary_lost_to_ranked_same_conference
+2024,13,Colorado,Big 12,Kansas,Big 12,L,21.0,37.0,16.0,,23.0,20.0,-3.0,-1.811,C2_lost_to_unranked
+2024,13,Indiana,Big Ten,Ohio State,Big Ten,L,15.0,38.0,5.0,2.0,10.0,8.0,-2.0,-4.157,primary_lost_to_ranked_same_conference
+2024,13,Ohio State,Big Ten,Indiana,Big Ten,W,38.0,15.0,2.0,5.0,2.0,3.0,1.0,-0.959,winners_beat_ranked_same_conference
+2024,13,Ole Miss,SEC,Florida,SEC,L,17.0,24.0,9.0,,15.0,13.0,-2.0,-1.391,C2_lost_to_unranked
+2024,13,Texas A&M,SEC,Auburn,SEC,L,41.0,43.0,15.0,,20.0,23.0,3.0,4.106,C2_lost_to_unranked
+2024,13,Washington State,Pac-12,Oregon State,Pac-12,L,38.0,41.0,25.0,,26.0,56.0,0.0,1.934,C2_lost_to_unranked
+2024,14,Clemson,ACC,South Carolina,SEC,L,14.0,17.0,12.0,16.0,18.0,15.0,-3.0,-3.66,C1_lost_to_ranked_other_conference
+2024,14,Miami,ACC,Syracuse,ACC,L,38.0,42.0,8.0,,14.0,10.0,-4.0,-3.474,C2_lost_to_unranked
+2024,14,Ohio State,Big Ten,Michigan,Big Ten,L,10.0,13.0,2.0,,7.0,3.0,-4.0,-3.971,C2_lost_to_unranked
+2024,14,Texas,SEC,Texas A&M,SEC,W,17.0,7.0,3.0,20.0,2.0,4.0,2.0,-0.031,winners_beat_ranked_same_conference
+2024,14,Texas A&M,SEC,Texas,SEC,L,7.0,17.0,20.0,3.0,26.0,23.0,-3.0,-2.371,primary_lost_to_ranked_same_conference
+2024,14,Tulane,American Athletic,Memphis,American Athletic,L,24.0,34.0,18.0,,26.0,31.0,0.0,1.354,C2_lost_to_unranked
+2024,15,Arizona State,Big 12,Iowa State,Big 12,W,45.0,19.0,12.0,16.0,10.0,14.0,4.0,1.322,winners_beat_ranked_same_conference
+2024,15,Boise State,Mountain West,UNLV,Mountain West,W,21.0,7.0,10.0,19.0,8.0,11.0,3.0,0.466,winners_beat_ranked_same_conference
+2024,15,Clemson,ACC,SMU,ACC,W,34.0,31.0,18.0,8.0,13.0,15.0,2.0,-1.109,winners_beat_ranked_same_conference
+2024,15,Georgia,SEC,Texas,SEC,W,22.0,19.0,5.0,2.0,2.0,5.0,3.0,0.825,winners_beat_ranked_same_conference
+2024,15,Iowa State,Big 12,Arizona State,Big 12,L,19.0,45.0,16.0,12.0,18.0,19.0,1.0,0.886,primary_lost_to_ranked_same_conference
+2024,15,Oregon,Big Ten,Penn State,Big Ten,W,45.0,37.0,1.0,3.0,1.0,1.0,0.0,-1.888,winners_beat_ranked_same_conference
+2024,15,Penn State,Big Ten,Oregon,Big Ten,L,37.0,45.0,3.0,1.0,5.0,6.0,1.0,-1.529,primary_lost_to_ranked_same_conference
+2024,15,SMU,ACC,Clemson,ACC,L,31.0,34.0,8.0,18.0,12.0,7.0,-5.0,-6.6,primary_lost_to_ranked_same_conference
+2024,15,Texas,SEC,Georgia,SEC,L,19.0,22.0,2.0,5.0,4.0,4.0,0.0,-2.714,primary_lost_to_ranked_same_conference
+2024,15,UNLV,Mountain West,Boise State,Mountain West,L,7.0,21.0,19.0,10.0,24.0,26.0,2.0,2.443,primary_lost_to_ranked_same_conference
+2025,1,Alabama,SEC,Florida State,ACC,L,17.0,31.0,8.0,,21.0,15.0,-6.0,-5.474,C2_lost_to_unranked
+2025,1,Boise State,Mountain West,South Florida,American Athletic,L,7.0,34.0,25.0,,26.0,38.0,0.0,1.934,C2_lost_to_unranked
+2025,1,Clemson,ACC,LSU,SEC,L,10.0,17.0,4.0,9.0,8.0,48.0,18.0,14.803,C1_lost_to_ranked_other_conference
+2025,1,Notre Dame,FBS Independents,Miami,ACC,L,24.0,27.0,6.0,10.0,9.0,4.0,-5.0,-7.563,C1_lost_to_ranked_other_conference
+2025,1,Texas,SEC,Ohio State,Big Ten,L,7.0,14.0,1.0,3.0,7.0,20.0,13.0,8.851,C1_lost_to_ranked_other_conference
+2025,2,Arizona State,Big 12,Mississippi State,SEC,L,20.0,24.0,12.0,,26.0,36.0,0.0,0.857,C2_lost_to_unranked
+2025,2,Florida,SEC,South Florida,American Athletic,L,16.0,18.0,13.0,,26.0,65.0,0.0,0.94,C2_lost_to_unranked
+2025,2,Michigan,Big Ten,Oklahoma,SEC,L,13.0,24.0,15.0,18.0,23.0,19.0,-4.0,-3.708,C1_lost_to_ranked_other_conference
+2025,2,SMU,ACC,Baylor,Big 12,L,45.0,48.0,17.0,,26.0,27.0,0.0,1.271,C2_lost_to_unranked
+2025,3,Clemson,ACC,Georgia Tech,ACC,L,21.0,24.0,12.0,,26.0,48.0,0.0,0.857,C2_lost_to_unranked
+2025,3,Georgia,SEC,Tennessee,SEC,W,44.0,41.0,6.0,15.0,5.0,5.0,0.0,-2.247,winners_beat_ranked_same_conference
+2025,3,Notre Dame,FBS Independents,Texas A&M,SEC,L,40.0,41.0,8.0,16.0,24.0,4.0,-20.0,-21.929,C1_lost_to_ranked_other_conference
+2025,3,South Carolina,SEC,Vanderbilt,SEC,L,7.0,31.0,11.0,,26.0,67.0,0.0,0.774,C2_lost_to_unranked
+2025,3,South Florida,American Athletic,Miami,ACC,L,12.0,49.0,18.0,5.0,26.0,17.0,-9.0,-7.757,C1_lost_to_ranked_other_conference
+2025,3,Tennessee,SEC,Georgia,SEC,L,41.0,44.0,15.0,6.0,15.0,28.0,11.0,10.7,primary_lost_to_ranked_same_conference
+2025,4,Auburn,SEC,Oklahoma,SEC,L,17.0,24.0,22.0,11.0,26.0,54.0,0.0,1.001,primary_lost_to_ranked_same_conference
+2025,4,Illinois,Big Ten,Indiana,Big Ten,L,10.0,63.0,9.0,19.0,23.0,25.0,2.0,0.586,primary_lost_to_ranked_same_conference
+2025,4,Indiana,Big Ten,Illinois,Big Ten,W,63.0,10.0,19.0,9.0,11.0,1.0,-10.0,-13.181,winners_beat_ranked_same_conference
+2025,4,Oklahoma,SEC,Auburn,SEC,W,24.0,17.0,11.0,22.0,7.0,12.0,5.0,2.394,winners_beat_ranked_same_conference
+2025,4,Texas Tech,Big 12,Utah,Big 12,W,34.0,10.0,17.0,16.0,12.0,3.0,-9.0,-12.037,winners_beat_ranked_same_conference
+2025,4,Utah,Big 12,Texas Tech,Big 12,L,10.0,34.0,16.0,17.0,26.0,9.0,-17.0,-17.114,primary_lost_to_ranked_same_conference
+2025,5,Alabama,SEC,Georgia,SEC,W,24.0,21.0,17.0,5.0,10.0,15.0,5.0,1.963,winners_beat_ranked_same_conference
+2025,5,Florida State,ACC,Virginia,ACC,L,38.0,46.0,8.0,,18.0,60.0,8.0,8.526,C2_lost_to_unranked
+2025,5,Georgia,SEC,Alabama,SEC,L,21.0,24.0,5.0,17.0,12.0,5.0,-7.0,-9.157,primary_lost_to_ranked_same_conference
+2025,5,Illinois,Big Ten,USC,Big Ten,W,34.0,32.0,23.0,21.0,22.0,25.0,3.0,-0.468,winners_beat_ranked_same_conference
+2025,5,LSU,SEC,Ole Miss,SEC,L,19.0,24.0,4.0,13.0,13.0,41.0,13.0,10.657,primary_lost_to_ranked_same_conference
+2025,5,Ole Miss,SEC,LSU,SEC,W,24.0,19.0,13.0,4.0,4.0,11.0,7.0,4.25,winners_beat_ranked_same_conference
+2025,5,Oregon,Big Ten,Penn State,Big Ten,W,30.0,24.0,6.0,3.0,2.0,6.0,4.0,1.753,winners_beat_ranked_same_conference
+2025,5,Penn State,Big Ten,Oregon,Big Ten,L,24.0,30.0,3.0,6.0,7.0,42.0,19.0,16.471,primary_lost_to_ranked_same_conference
+2025,5,TCU,Big 12,Arizona State,Big 12,L,24.0,27.0,24.0,,26.0,34.0,0.0,1.851,C2_lost_to_unranked
+2025,5,USC,Big Ten,Illinois,Big Ten,L,32.0,34.0,21.0,23.0,26.0,14.0,-12.0,-11.185,primary_lost_to_ranked_same_conference
+2025,6,Alabama,SEC,Vanderbilt,SEC,W,30.0,14.0,10.0,16.0,8.0,15.0,7.0,4.466,winners_beat_ranked_same_conference
+2025,6,Florida State,ACC,Miami,ACC,L,22.0,28.0,18.0,3.0,25.0,60.0,1.0,1.258,primary_lost_to_ranked_same_conference
+2025,6,Iowa State,Big 12,Cincinnati,Big 12,L,30.0,38.0,14.0,,22.0,35.0,4.0,5.023,C2_lost_to_unranked
+2025,6,Miami,ACC,Florida State,ACC,W,28.0,22.0,3.0,18.0,2.0,8.0,6.0,3.969,winners_beat_ranked_same_conference
+2025,6,Penn State,Big Ten,UCLA,Big Ten,L,37.0,42.0,7.0,,26.0,42.0,0.0,0.443,C2_lost_to_unranked
+2025,6,Texas,SEC,Florida,SEC,L,21.0,29.0,9.0,,26.0,20.0,-6.0,-5.391,C2_lost_to_unranked
+2025,6,Vanderbilt,SEC,Alabama,SEC,L,14.0,30.0,16.0,10.0,20.0,13.0,-7.0,-7.114,primary_lost_to_ranked_same_conference
+2025,7,Alabama,SEC,Missouri,SEC,W,27.0,24.0,8.0,14.0,6.0,15.0,9.0,6.61,winners_beat_ranked_same_conference
+2025,7,Arizona State,Big 12,Utah,Big 12,L,10.0,42.0,21.0,,26.0,36.0,0.0,1.603,C2_lost_to_unranked
+2025,7,Florida State,ACC,Pittsburgh,ACC,L,31.0,34.0,25.0,,26.0,60.0,0.0,1.934,C2_lost_to_unranked
+2025,7,Illinois,Big Ten,Ohio State,Big Ten,L,16.0,34.0,17.0,1.0,26.0,25.0,-1.0,-0.928,primary_lost_to_ranked_same_conference
+2025,7,Indiana,Big Ten,Oregon,Big Ten,W,30.0,20.0,7.0,3.0,3.0,1.0,-2.0,-4.319,winners_beat_ranked_same_conference
+2025,7,Iowa State,Big 12,Colorado,Big 12,L,17.0,24.0,22.0,,26.0,35.0,0.0,1.686,C2_lost_to_unranked
+2025,7,Michigan,Big Ten,USC,Big Ten,L,13.0,31.0,15.0,,26.0,19.0,-7.0,-5.894,C2_lost_to_unranked
+2025,7,Missouri,SEC,Alabama,SEC,L,24.0,27.0,14.0,8.0,16.0,29.0,10.0,9.515,primary_lost_to_ranked_same_conference
+2025,7,Ohio State,Big Ten,Illinois,Big Ten,W,34.0,16.0,1.0,17.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2025,7,Oklahoma,SEC,Texas,SEC,L,6.0,23.0,6.0,,14.0,12.0,-2.0,-1.64,C2_lost_to_unranked
+2025,7,Oregon,Big Ten,Indiana,Big Ten,L,20.0,30.0,3.0,7.0,8.0,6.0,-2.0,-4.529,primary_lost_to_ranked_same_conference
+2025,8,Alabama,SEC,Tennessee,SEC,W,37.0,20.0,6.0,11.0,4.0,15.0,11.0,8.753,winners_beat_ranked_same_conference
+2025,8,BYU,Big 12,Utah,Big 12,W,24.0,21.0,15.0,23.0,11.0,10.0,-1.0,-3.893,winners_beat_ranked_same_conference
+2025,8,Georgia,SEC,Ole Miss,SEC,W,43.0,35.0,9.0,5.0,5.0,5.0,0.0,-2.462,winners_beat_ranked_same_conference
+2025,8,LSU,SEC,Vanderbilt,SEC,L,24.0,31.0,10.0,17.0,20.0,41.0,6.0,4.772,primary_lost_to_ranked_same_conference
+2025,8,Memphis,American Athletic,UAB,American Athletic,L,24.0,31.0,22.0,,26.0,44.0,0.0,1.686,C2_lost_to_unranked
+2025,8,Miami,ACC,Louisville,ACC,L,21.0,24.0,2.0,,9.0,8.0,-1.0,-0.971,C2_lost_to_unranked
+2025,8,Nebraska,Big Ten,Minnesota,Big Ten,L,6.0,24.0,25.0,,26.0,59.0,0.0,1.934,C2_lost_to_unranked
+2025,8,Ole Miss,SEC,Georgia,SEC,L,35.0,43.0,5.0,9.0,8.0,11.0,3.0,0.843,primary_lost_to_ranked_same_conference
+2025,8,Tennessee,SEC,Alabama,SEC,L,20.0,37.0,11.0,6.0,17.0,28.0,9.0,7.957,primary_lost_to_ranked_same_conference
+2025,8,Texas Tech,Big 12,Arizona State,Big 12,L,22.0,26.0,7.0,,14.0,3.0,-11.0,-10.557,C2_lost_to_unranked
+2025,8,USC,Big Ten,Notre Dame,FBS Independents,L,24.0,34.0,20.0,13.0,26.0,14.0,-12.0,-10.122,C1_lost_to_ranked_other_conference
+2025,8,Utah,Big 12,BYU,Big 12,L,21.0,24.0,23.0,15.0,26.0,9.0,-17.0,-15.814,primary_lost_to_ranked_same_conference
+2025,8,Vanderbilt,SEC,LSU,SEC,W,31.0,24.0,17.0,10.0,10.0,13.0,3.0,-0.037,winners_beat_ranked_same_conference
+2025,9,Arizona State,Big 12,Houston,Big 12,L,16.0,24.0,24.0,,26.0,36.0,0.0,1.851,C2_lost_to_unranked
+2025,9,Illinois,Big Ten,Washington,Big Ten,L,25.0,42.0,23.0,,26.0,25.0,-1.0,0.768,C2_lost_to_unranked
+2025,9,LSU,SEC,Texas A&M,SEC,L,25.0,49.0,20.0,3.0,26.0,41.0,0.0,0.629,primary_lost_to_ranked_same_conference
+2025,9,Missouri,SEC,Vanderbilt,SEC,L,10.0,17.0,15.0,10.0,19.0,29.0,7.0,6.7,primary_lost_to_ranked_same_conference
+2025,9,Oklahoma,SEC,Ole Miss,SEC,L,26.0,34.0,13.0,8.0,18.0,12.0,-6.0,-6.671,primary_lost_to_ranked_same_conference
+2025,9,Ole Miss,SEC,Oklahoma,SEC,W,34.0,26.0,8.0,13.0,7.0,11.0,4.0,1.61,winners_beat_ranked_same_conference
+2025,9,South Florida,American Athletic,Memphis,American Athletic,L,31.0,34.0,18.0,,26.0,17.0,-9.0,-7.646,C2_lost_to_unranked
+2025,9,Texas A&M,SEC,LSU,SEC,W,49.0,25.0,3.0,20.0,3.0,7.0,4.0,1.969,winners_beat_ranked_same_conference
+2025,9,Vanderbilt,SEC,Missouri,SEC,W,17.0,10.0,10.0,15.0,9.0,13.0,4.0,1.466,winners_beat_ranked_same_conference
+2025,10,Cincinnati,Big 12,Utah,Big 12,L,14.0,45.0,17.0,24.0,25.0,53.0,1.0,1.072,primary_lost_to_ranked_same_conference
+2025,10,Georgia Tech,ACC,NC State,ACC,L,36.0,48.0,8.0,,16.0,31.0,10.0,10.526,C2_lost_to_unranked
+2025,10,Houston,Big 12,West Virginia,Big 12,L,35.0,45.0,22.0,,26.0,37.0,0.0,1.686,C2_lost_to_unranked
+2025,10,Miami,ACC,SMU,ACC,L,20.0,26.0,10.0,,18.0,8.0,-10.0,-9.308,C2_lost_to_unranked
+2025,10,Oklahoma,SEC,Tennessee,SEC,W,33.0,27.0,18.0,14.0,11.0,12.0,1.0,-2.109,winners_beat_ranked_same_conference
+2025,10,Tennessee,SEC,Oklahoma,SEC,L,27.0,33.0,14.0,18.0,23.0,28.0,3.0,2.515,primary_lost_to_ranked_same_conference
+2025,10,Texas,SEC,Vanderbilt,SEC,W,34.0,31.0,20.0,9.0,13.0,20.0,7.0,3.747,winners_beat_ranked_same_conference
+2025,10,Utah,Big 12,Cincinnati,Big 12,W,45.0,14.0,24.0,17.0,17.0,9.0,-8.0,-11.54,winners_beat_ranked_same_conference
+2025,10,Vanderbilt,SEC,Texas,SEC,L,31.0,34.0,9.0,20.0,15.0,13.0,-2.0,-3.414,primary_lost_to_ranked_same_conference
+2025,11,BYU,Big 12,Texas Tech,Big 12,L,7.0,29.0,8.0,9.0,12.0,10.0,-2.0,-3.6,primary_lost_to_ranked_same_conference
+2025,11,Louisville,ACC,California,ACC,L,26.0,29.0,14.0,,19.0,30.0,7.0,8.023,C2_lost_to_unranked
+2025,11,Memphis,American Athletic,Tulane,American Athletic,L,32.0,38.0,22.0,,26.0,44.0,0.0,1.686,C2_lost_to_unranked
+2025,11,Missouri,SEC,Texas A&M,SEC,L,17.0,38.0,19.0,3.0,26.0,29.0,0.0,0.443,primary_lost_to_ranked_same_conference
+2025,11,Texas A&M,SEC,Missouri,SEC,W,38.0,17.0,3.0,19.0,3.0,7.0,4.0,1.969,winners_beat_ranked_same_conference
+2025,11,Texas Tech,Big 12,BYU,Big 12,W,29.0,7.0,9.0,8.0,8.0,3.0,-5.0,-7.462,winners_beat_ranked_same_conference
+2025,11,Virginia,ACC,Wake Forest,ACC,L,9.0,16.0,12.0,,20.0,24.0,4.0,4.857,C2_lost_to_unranked
+2025,11,Washington,Big Ten,Wisconsin,Big Ten,L,10.0,13.0,24.0,,26.0,26.0,0.0,1.851,C2_lost_to_unranked
+2025,12,Alabama,SEC,Oklahoma,SEC,L,21.0,23.0,4.0,11.0,10.0,15.0,5.0,2.657,primary_lost_to_ranked_same_conference
+2025,12,Cincinnati,Big 12,Arizona,Big 12,L,24.0,30.0,22.0,,26.0,53.0,0.0,1.686,C2_lost_to_unranked
+2025,12,Georgia,SEC,Texas,SEC,W,35.0,10.0,5.0,10.0,4.0,5.0,1.0,-1.175,winners_beat_ranked_same_conference
+2025,12,Louisville,ACC,Clemson,ACC,L,19.0,20.0,19.0,,26.0,30.0,0.0,1.437,C2_lost_to_unranked
+2025,12,Oklahoma,SEC,Alabama,SEC,W,23.0,21.0,11.0,4.0,8.0,12.0,4.0,1.394,winners_beat_ranked_same_conference
+2025,12,Pittsburgh,ACC,Notre Dame,FBS Independents,L,15.0,37.0,23.0,9.0,26.0,33.0,0.0,2.829,C1_lost_to_ranked_other_conference
+2025,12,South Florida,American Athletic,Navy,American Athletic,L,38.0,41.0,25.0,,26.0,17.0,-9.0,-7.066,C2_lost_to_unranked
+2025,12,Texas,SEC,Georgia,SEC,L,10.0,35.0,10.0,5.0,17.0,20.0,3.0,1.772,primary_lost_to_ranked_same_conference
+2025,13,Georgia Tech,ACC,Pittsburgh,ACC,L,28.0,42.0,15.0,,23.0,31.0,3.0,4.106,C2_lost_to_unranked
+2025,13,Houston,Big 12,TCU,Big 12,L,14.0,17.0,25.0,,26.0,37.0,0.0,1.934,C2_lost_to_unranked
+2025,13,Missouri,SEC,Oklahoma,SEC,L,6.0,17.0,23.0,8.0,26.0,29.0,0.0,1.186,primary_lost_to_ranked_same_conference
+2025,13,Oklahoma,SEC,Missouri,SEC,W,17.0,6.0,8.0,23.0,8.0,12.0,4.0,1.61,winners_beat_ranked_same_conference
+2025,13,Oregon,Big Ten,USC,Big Ten,W,42.0,27.0,6.0,16.0,5.0,6.0,1.0,-1.247,winners_beat_ranked_same_conference
+2025,13,USC,Big Ten,Oregon,Big Ten,L,27.0,42.0,16.0,6.0,19.0,14.0,-5.0,-5.114,primary_lost_to_ranked_same_conference
+2025,14,Georgia Tech,ACC,Georgia,SEC,L,9.0,16.0,23.0,4.0,24.0,31.0,2.0,4.829,C1_lost_to_ranked_other_conference
+2025,14,Miami,ACC,Pittsburgh,ACC,W,38.0,7.0,13.0,24.0,12.0,8.0,-4.0,-6.75,winners_beat_ranked_same_conference
+2025,14,Michigan,Big Ten,Ohio State,Big Ten,L,9.0,27.0,15.0,1.0,18.0,19.0,1.0,0.7,primary_lost_to_ranked_same_conference
+2025,14,Ohio State,Big Ten,Michigan,Big Ten,W,27.0,9.0,1.0,15.0,1.0,2.0,1.0,-0.888,winners_beat_ranked_same_conference
+2025,14,Pittsburgh,ACC,Miami,ACC,L,7.0,38.0,24.0,13.0,26.0,33.0,0.0,1.372,primary_lost_to_ranked_same_conference
+2025,14,SMU,ACC,California,ACC,L,35.0,38.0,25.0,,26.0,27.0,0.0,1.934,C2_lost_to_unranked
+2025,14,Tennessee,SEC,Vanderbilt,SEC,L,24.0,45.0,18.0,12.0,26.0,28.0,0.0,0.258,primary_lost_to_ranked_same_conference
+2025,14,Texas,SEC,Texas A&M,SEC,W,27.0,17.0,16.0,3.0,14.0,20.0,6.0,3.035,winners_beat_ranked_same_conference
+2025,14,Texas A&M,SEC,Texas,SEC,L,17.0,27.0,3.0,16.0,7.0,7.0,0.0,-2.529,primary_lost_to_ranked_same_conference
+2025,14,Vanderbilt,SEC,Tennessee,SEC,W,45.0,24.0,12.0,18.0,13.0,13.0,0.0,-2.678,winners_beat_ranked_same_conference
+2025,15,Alabama,SEC,Georgia,SEC,L,7.0,28.0,10.0,3.0,11.0,15.0,4.0,2.772,primary_lost_to_ranked_same_conference
+2025,15,BYU,Big 12,Texas Tech,Big 12,L,7.0,34.0,11.0,5.0,12.0,10.0,-2.0,-3.043,primary_lost_to_ranked_same_conference
+2025,15,Georgia,SEC,Alabama,SEC,W,28.0,7.0,3.0,10.0,2.0,5.0,3.0,0.969,winners_beat_ranked_same_conference
+2025,15,Indiana,Big Ten,Ohio State,Big Ten,W,13.0,10.0,2.0,1.0,1.0,1.0,0.0,-1.959,winners_beat_ranked_same_conference
+2025,15,North Texas,American Athletic,Tulane,American Athletic,L,21.0,34.0,20.0,21.0,23.0,18.0,-5.0,-4.371,primary_lost_to_ranked_same_conference
+2025,15,Ohio State,Big Ten,Indiana,Big Ten,L,10.0,13.0,1.0,2.0,3.0,2.0,-1.0,-3.9,primary_lost_to_ranked_same_conference
+2025,15,Texas Tech,Big 12,BYU,Big 12,W,34.0,7.0,5.0,11.0,4.0,3.0,-1.0,-3.175,winners_beat_ranked_same_conference
+2025,15,Tulane,American Athletic,North Texas,American Athletic,W,34.0,21.0,21.0,20.0,17.0,22.0,5.0,1.676,winners_beat_ranked_same_conference
+2025,15,Virginia,ACC,Duke,ACC,L,20.0,27.0,16.0,,20.0,24.0,4.0,5.189,C2_lost_to_unranked

@@ -1,0 +1,267 @@
+{
+  "primary_lost_to_ranked_same_conference": {
+    "description": "Lost to a ranked opponent from the same conference",
+    "games": 420,
+    "SEC": {
+      "games": 152,
+      "adjusted_overrating": 0.442364552693348,
+      "ci": [
+        -0.6720133051795392,
+        1.4339748630064644
+      ],
+      "raw_overrating": 1.2039473684210527,
+      "share_still_ranked_next_poll": 0.75,
+      "mean_places_moved": -5.072368421052632
+    },
+    "ACC": {
+      "games": 38,
+      "adjusted_overrating": 0.9601844939757642,
+      "ci": [
+        -0.7694872684040742,
+        2.5209682731975156
+      ],
+      "raw_overrating": 1.0789473684210527,
+      "share_still_ranked_next_poll": 0.6578947368421053,
+      "mean_places_moved": -4.368421052631579
+    },
+    "Big Ten": {
+      "games": 82,
+      "adjusted_overrating": -2.0316398189913603,
+      "ci": [
+        -3.454365397280937,
+        -0.5756684716654433
+      ],
+      "raw_overrating": -1.1951219512195121,
+      "share_still_ranked_next_poll": 0.7804878048780488,
+      "mean_places_moved": -4.439024390243903
+    },
+    "Big 12": {
+      "games": 64,
+      "adjusted_overrating": 0.32575552038982336,
+      "ci": [
+        -1.9578762036332773,
+        2.2738529887316727
+      ],
+      "raw_overrating": 0.875,
+      "share_still_ranked_next_poll": 0.6875,
+      "mean_places_moved": -4.453125
+    },
+    "Other": {
+      "games": 84,
+      "adjusted_overrating": 0.5002343937127967,
+      "ci": [
+        -0.7128076949063685,
+        1.6047266035997518
+      ],
+      "raw_overrating": 0.6428571428571429,
+      "share_still_ranked_next_poll": 0.6666666666666666,
+      "mean_places_moved": -4.833333333333333
+    },
+    "sec_minus_acc": -0.5178199412824163,
+    "sec_minus_acc_ci": [
+      -2.5482334235690884,
+      1.5281522012356825
+    ]
+  },
+  "C1_lost_to_ranked_other_conference": {
+    "description": "Lost to a ranked opponent from another conference",
+    "games": 93,
+    "SEC": {
+      "games": 14,
+      "adjusted_overrating": 1.907972479128519,
+      "ci": [
+        -1.1352807272431023,
+        4.675295823182088
+      ],
+      "raw_overrating": 2.5,
+      "share_still_ranked_next_poll": 0.8571428571428571,
+      "mean_places_moved": -5.214285714285714
+    },
+    "ACC": {
+      "games": 22,
+      "adjusted_overrating": 3.3946902217921124,
+      "ci": [
+        1.0081389096824076,
+        5.6433528954977605
+      ],
+      "raw_overrating": 3.0454545454545454,
+      "share_still_ranked_next_poll": 0.7727272727272727,
+      "mean_places_moved": -5.681818181818182
+    },
+    "Big Ten": {
+      "games": 10,
+      "adjusted_overrating": -5.264840049967412,
+      "ci": [
+        -9.38208191668477,
+        -0.9687698376059095
+      ],
+      "raw_overrating": -4.7,
+      "share_still_ranked_next_poll": 0.7,
+      "mean_places_moved": -6.4
+    },
+    "Big 12": {
+      "games": 8,
+      "adjusted_overrating": 1.6632457772105156,
+      "ci": [
+        -5.616837972517922,
+        9.07504888116446
+      ],
+      "raw_overrating": 2.125,
+      "share_still_ranked_next_poll": 0.875,
+      "mean_places_moved": -6.125
+    },
+    "Other": {
+      "games": 39,
+      "adjusted_overrating": -1.5910862898778384,
+      "ci": [
+        -4.49772962076032,
+        1.400649264951419
+      ],
+      "raw_overrating": -1.2564102564102564,
+      "share_still_ranked_next_poll": 0.6666666666666666,
+      "mean_places_moved": -6.051282051282051
+    },
+    "sec_minus_acc": -1.4867177426635934,
+    "sec_minus_acc_ci": [
+      -5.239976529282146,
+      2.2700716324192842
+    ]
+  },
+  "C2_lost_to_unranked": {
+    "description": "Lost to an unranked opponent",
+    "games": 426,
+    "SEC": {
+      "games": 77,
+      "adjusted_overrating": 0.09218781031966682,
+      "ci": [
+        -1.3224755521321452,
+        1.3703557035658092
+      ],
+      "raw_overrating": -0.922077922077922,
+      "share_still_ranked_next_poll": 0.5454545454545454,
+      "mean_places_moved": -7.402597402597403
+    },
+    "ACC": {
+      "games": 82,
+      "adjusted_overrating": 0.45581108532733805,
+      "ci": [
+        -0.823549190942308,
+        1.5251967053876652
+      ],
+      "raw_overrating": -0.7317073170731707,
+      "share_still_ranked_next_poll": 0.4146341463414634,
+      "mean_places_moved": -6.439024390243903
+    },
+    "Big Ten": {
+      "games": 47,
+      "adjusted_overrating": -1.0286223108059362,
+      "ci": [
+        -2.5804311941947424,
+        0.22414696270611997
+      ],
+      "raw_overrating": -2.0638297872340425,
+      "share_still_ranked_next_poll": 0.425531914893617,
+      "mean_places_moved": -7.51063829787234
+    },
+    "Big 12": {
+      "games": 76,
+      "adjusted_overrating": 0.6105116003705029,
+      "ci": [
+        -0.7512368934605638,
+        1.7909765194101264
+      ],
+      "raw_overrating": -0.6052631578947368,
+      "share_still_ranked_next_poll": 0.3815789473684211,
+      "mean_places_moved": -6.381578947368421
+    },
+    "Other": {
+      "games": 144,
+      "adjusted_overrating": -0.2953375236926072,
+      "ci": [
+        -1.2576345509682623,
+        0.5805721503682274
+      ],
+      "raw_overrating": -1.5902777777777777,
+      "share_still_ranked_next_poll": 0.2986111111111111,
+      "mean_places_moved": -6.472222222222222
+    },
+    "sec_minus_acc": -0.3636232750076712,
+    "sec_minus_acc_ci": [
+      -2.22163237983389,
+      1.457868542611827
+    ]
+  },
+  "winners_beat_ranked_same_conference": {
+    "description": "Beat a ranked opponent from the same conference",
+    "games": 420,
+    "SEC": {
+      "games": 152,
+      "adjusted_overrating": 0.8447818455909717,
+      "ci": [
+        -0.2465822979206779,
+        2.1622333327300147
+      ],
+      "raw_overrating": 3.3552631578947367,
+      "share_still_ranked_next_poll": 1.0,
+      "mean_places_moved": 2.861842105263158
+    },
+    "ACC": {
+      "games": 38,
+      "adjusted_overrating": 0.4113650537250516,
+      "ci": [
+        -1.0547091335340286,
+        2.0240265339387533
+      ],
+      "raw_overrating": 2.9473684210526314,
+      "share_still_ranked_next_poll": 1.0,
+      "mean_places_moved": 2.3947368421052633
+    },
+    "Big Ten": {
+      "games": 82,
+      "adjusted_overrating": -1.9255471807769935,
+      "ci": [
+        -2.954623882224647,
+        -0.8714801563056961
+      ],
+      "raw_overrating": 0.5121951219512195,
+      "share_still_ranked_next_poll": 1.0,
+      "mean_places_moved": 2.207317073170732
+    },
+    "Big 12": {
+      "games": 64,
+      "adjusted_overrating": -0.1384151701747655,
+      "ci": [
+        -2.3860209378818684,
+        2.4922875586933664
+      ],
+      "raw_overrating": 2.484375,
+      "share_still_ranked_next_poll": 1.0,
+      "mean_places_moved": 3.296875
+    },
+    "Other": {
+      "games": 84,
+      "adjusted_overrating": 0.2704134183752249,
+      "ci": [
+        -1.5183748750486477,
+        2.183889834184651
+      ],
+      "raw_overrating": 3.0833333333333335,
+      "share_still_ranked_next_poll": 1.0,
+      "mean_places_moved": 3.0714285714285716
+    },
+    "sec_minus_acc": 0.4334167918659201,
+    "sec_minus_acc_ci": [
+      -1.5568072912113529,
+      2.488805403213489
+    ]
+  },
+  "sec_primary_minus_sec_C1": {
+    "diff": -1.4656079264351711,
+    "ci": [
+      -4.338244459783747,
+      1.9733107396569625
+    ]
+  },
+  "reading": "not supported",
+  "note": "adjusted_overrating: places the poll ranked the team above its final season-only rank right after the game, beyond what is typical for its pre-game rank. Positive = stayed ranked above where its season ended up."
+}
