@@ -17,7 +17,7 @@ A pre-registered study of week-to-week AP poll movement, testing whether SEC tea
 | Season replay checked on training seasons (`results/replay_training.json`) | Done |
 | Revised model (per-voter points, season record) logged and re-checked on training seasons | Done |
 | Holdout (2024–2025) scored once (`results/holdout.json`) | Done: primary model passes |
-| Hypothesis test | Not yet |
+| Hypothesis test (`results/hypothesis.json`) | Done |
 | 2026 counterfactual (`results/counterfactual_2026.json`) | Run; fails a plausibility check (`results/base_rates_poll8.json`) |
 
 ## Reproduce

@@ -1,0 +1,297 @@
+{
+  "zero": {
+    "conference_effect": {
+      "revised": {
+        "coef": {
+          "SEC": 0.09310531646440384,
+          "ACC": -0.02798119889268321,
+          "Big Ten": 0.1176798447819183,
+          "Big 12": 0.09169333376123873
+        },
+        "sec_minus_acc": 0.12108651535708706,
+        "sec_minus_acc_ci": [
+          5.639456286188693e-05,
+          0.24055960873944945
+        ],
+        "unit": "AP points per voter",
+        "reference": "Other (Pac-12, Group of 5, independents)"
+      },
+      "registered": {
+        "coef": {
+          "SEC": 5.861583859044565,
+          "ACC": -1.4339861156690383,
+          "Big Ten": 7.432350616909918,
+          "Big 12": 5.814244301925557
+        },
+        "sec_minus_acc": 7.295569974713603,
+        "sec_minus_acc_ci": [
+          0.607168971476734,
+          14.84516683981942
+        ],
+        "unit": "AP points",
+        "reference": "Other (Pac-12, Group of 5, independents)"
+      }
+    },
+    "preseason_carryover": {
+      "preseason_coef": 0.5174535461268988,
+      "preseason_coef_ci": [
+        0.45357791939918174,
+        0.5798781410960889
+      ],
+      "controls": [
+        "wins_to_date",
+        "losses_to_date",
+        "margin_to_date",
+        "elo_after",
+        "week"
+      ],
+      "extra_carryover_sec": -0.018301625654585204,
+      "extra_carryover_acc": -0.058820070983868385,
+      "sec_minus_acc": 0.040518445329283184,
+      "sec_minus_acc_ci": [
+        -0.15350173933500896,
+        0.23381361613612553
+      ],
+      "team_weeks": 16346,
+      "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
+    }
+  },
+  "floor": {
+    "conference_effect": {
+      "revised": {
+        "coef": {
+          "SEC": 0.10330512077618115,
+          "ACC": -0.02165304866488682,
+          "Big Ten": 0.12398816549070356,
+          "Big 12": 0.09837797116941116
+        },
+        "sec_minus_acc": 0.12495816944106797,
+        "sec_minus_acc_ci": [
+          0.010272676907547474,
+          0.2368616546929478
+        ],
+        "unit": "AP points per voter",
+        "reference": "Other (Pac-12, Group of 5, independents)"
+      },
+      "registered": {
+        "coef": {
+          "SEC": 6.5475391493813255,
+          "ACC": -0.9916827028842385,
+          "Big Ten": 7.863045981848948,
+          "Big 12": 6.257173609745089
+        },
+        "sec_minus_acc": 7.539221852265564,
+        "sec_minus_acc_ci": [
+          1.007182828369453,
+          14.791000050779106
+        ],
+        "unit": "AP points",
+        "reference": "Other (Pac-12, Group of 5, independents)"
+      }
+    },
+    "preseason_carryover": {
+      "preseason_coef": 0.5308441826569811,
+      "preseason_coef_ci": [
+        0.4655010621573802,
+        0.5949639749709098
+      ],
+      "controls": [
+        "wins_to_date",
+        "losses_to_date",
+        "margin_to_date",
+        "elo_after",
+        "week"
+      ],
+      "extra_carryover_sec": -0.021217962056906393,
+      "extra_carryover_acc": -0.05760489170446257,
+      "sec_minus_acc": 0.036386929647556174,
+      "sec_minus_acc_ci": [
+        -0.1638193961803963,
+        0.23772129780641482
+      ],
+      "team_weeks": 16346,
+      "note": "Coefficient = points per voter later in the season per point per voter in the preseason poll, at equal record, margin, Elo and week (polls 5+). Elo carries part of the prior season, so this likely understates carry-over."
+    }
+  },
+  "poll_vs_elo": {
+    "SEC": {
+      "team_weeks": 1174,
+      "mean_gap": 0.19846678023850084,
+      "ci": [
+        -0.7942522200980543,
+        1.2738983720562669
+      ],
+      "elo_top25_ap_unranked": 152,
+      "ap_ranked_outside_elo_top25": 131
+    },
+    "ACC": {
+      "team_weeks": 646,
+      "mean_gap": 1.3823529411764706,
+      "ci": [
+        0.05957001148877747,
+        2.560246128318583
+      ],
+      "elo_top25_ap_unranked": 119,
+      "ap_ranked_outside_elo_top25": 183
+    },
+    "Big Ten": {
+      "team_weeks": 932,
+      "mean_gap": -1.8454935622317596,
+      "ci": [
+        -3.0625164177791464,
+        -0.6327083060395657
+      ],
+      "elo_top25_ap_unranked": 194,
+      "ap_ranked_outside_elo_top25": 102
+    },
+    "Big 12": {
+      "team_weeks": 703,
+      "mean_gap": 0.07112375533428165,
+      "ci": [
+        -1.641234347333155,
+        1.7822166380297824
+      ],
+      "elo_top25_ap_unranked": 147,
+      "ap_ranked_outside_elo_top25": 156
+    },
+    "Other": {
+      "team_weeks": 1432,
+      "mean_gap": 0.018156424581005588,
+      "ci": [
+        -1.0012671916592724,
+        1.1055837646757627
+      ],
+      "elo_top25_ap_unranked": 362,
+      "ap_ranked_outside_elo_top25": 358
+    },
+    "sec_minus_acc": -1.1838861609379698,
+    "sec_minus_acc_ci": [
+      -2.7218251694633557,
+      0.5746642740175973
+    ],
+    "note": "gap = Elo rank - AP rank, capped at 26; positive = poll rates team above Elo",
+    "biggest_snubs": [
+      {
+        "season": 2014,
+        "poll_week": 2,
+        "team": "Oklahoma State",
+        "conference": "Big 12",
+        "elo_rank": 4,
+        "record": "0-1"
+      },
+      {
+        "season": 2021,
+        "poll_week": 5,
+        "team": "Texas",
+        "conference": "Big 12",
+        "elo_rank": 4,
+        "record": "3-1"
+      },
+      {
+        "season": 2025,
+        "poll_week": 7,
+        "team": "Penn State",
+        "conference": "Big Ten",
+        "elo_rank": 4,
+        "record": "3-2"
+      },
+      {
+        "season": 2021,
+        "poll_week": 8,
+        "team": "Iowa State",
+        "conference": "Big 12",
+        "elo_rank": 5,
+        "record": "4-2"
+      },
+      {
+        "season": 2025,
+        "poll_week": 8,
+        "team": "Penn State",
+        "conference": "Big Ten",
+        "elo_rank": 5,
+        "record": "3-3"
+      },
+      {
+        "season": 2021,
+        "poll_week": 11,
+        "team": "Iowa State",
+        "conference": "Big 12",
+        "elo_rank": 5,
+        "record": "6-3"
+      },
+      {
+        "season": 2021,
+        "poll_week": 7,
+        "team": "Iowa State",
+        "conference": "Big 12",
+        "elo_rank": 6,
+        "record": "3-2"
+      },
+      {
+        "season": 2014,
+        "poll_week": 10,
+        "team": "Wisconsin",
+        "conference": "Big Ten",
+        "elo_rank": 6,
+        "record": "5-2"
+      },
+      {
+        "season": 2021,
+        "poll_week": 6,
+        "team": "Iowa State",
+        "conference": "Big 12",
+        "elo_rank": 6,
+        "record": "3-2"
+      },
+      {
+        "season": 2022,
+        "poll_week": 9,
+        "team": "Texas",
+        "conference": "Big 12",
+        "elo_rank": 6,
+        "record": "5-3"
+      },
+      {
+        "season": 2015,
+        "poll_week": 7,
+        "team": "USC",
+        "conference": "Other",
+        "elo_rank": 6,
+        "record": "3-2"
+      },
+      {
+        "season": 2025,
+        "poll_week": 10,
+        "team": "Penn State",
+        "conference": "Big Ten",
+        "elo_rank": 6,
+        "record": "3-4"
+      },
+      {
+        "season": 2022,
+        "poll_week": 10,
+        "team": "Texas",
+        "conference": "Big 12",
+        "elo_rank": 6,
+        "record": "5-3"
+      },
+      {
+        "season": 2021,
+        "poll_week": 12,
+        "team": "Iowa State",
+        "conference": "Big 12",
+        "elo_rank": 6,
+        "record": "6-4"
+      },
+      {
+        "season": 2021,
+        "poll_week": 6,
+        "team": "Clemson",
+        "conference": "ACC",
+        "elo_rank": 7,
+        "record": "3-2"
+      }
+    ]
+  },
+  "note": "Real data 2014-2025 (no 2020); primary unranked rule: zero."
+}
