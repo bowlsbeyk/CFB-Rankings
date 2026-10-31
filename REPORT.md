@@ -54,7 +54,7 @@ Results were to be published whichever way they pointed, every departure from th
 
 ## 2. Audit trail
 
-The work was done on October 23 and October 31, 2026. The plan was committed before any data was pulled; each change to the plan was committed before it was used. Times are UTC and on October 23 unless marked October 31.
+The work was done on October 23 and October 31, 2026. The plan was committed before any data was pulled; each change to the plan was committed before it was used, except two descriptive additions on October 31 that were logged after their numbers had been seen and used in drafts (the last two entries in `DEVIATIONS.md`). Times are UTC and on October 23 unless marked October 31.
 
 | Commit | Time | Event |
 | --- | --- | --- |
@@ -559,7 +559,7 @@ By group, the excess is SEC +0.68, Pac-12 +0.64, Big 12 +0.17, ACC +0.11, Notre 
 - **Against a margin-based ranking** the AP's SEC count is about the same: the excess over the performance top 25 is +0.07 (95% t −0.32 to +0.45). The T5 surplus is relative to won-lost record against schedule, not to margins.
 - **By part of the season**, against the record to date: polls 6–8 +1.42, polls 9–11 +0.52, polls 12+ +0.31, final regular-season poll +0.45. Against the end-of-season record (the T6 yardstick, added after the audit): polls 6–8 +1.12 (95% t +0.14 to +2.11), polls 9–11 +0.55 (95% t −0.33 to +1.43), polls 12+ +0.33 (95% t −0.37 to +1.04), final regular-season poll +0.45 (95% t −0.24 to +1.15). From poll 9 on, every interval includes zero.
 - **Strength versus record.** A logged simulation (the "noise baseline") treats each season's final margin ratings as true strength and replays every game 200 times. A top 25 ordered by true strength holds about 1.46 more SEC teams per poll than a top 25 ordered by simulated record. The audit showed this barely depends on the simulated noise (SEC +1.58 with none), so it measures the built-in gap between ranking by strength and ranking by résumé, not noise. The real AP excess (+0.68) sits below that gap (observed minus baseline −0.78, 95% t −1.62 to +0.07): the AP's SEC count lies between a résumé ranking and a strength ranking.
-- **2026 after week 8** (AP poll 9): Miami (7-0, AP #1) is #1 by strength of record, between #1 and #4 across the 11 settings, #2 by Colley and #2 by margin. Eight of the strength-of-record top 25 are SEC teams, against nine in the AP poll (E_SEC +1; at the same poll four earlier seasons were also +1 and three were higher, so +1 is typical). One season, no test.
+- **2026 after week 8** (AP poll 9): Miami (7-0, AP #1) is #1 by strength of record, #1 in all 9 uncalibrated settings and #3 and #4 under the two calibrations (UCLA #1 there), #2 by Colley and #2 by margin. Eight of the strength-of-record top 25 are SEC teams, against nine in the AP poll (E_SEC +1; at the same poll four earlier seasons were also +1 and three were higher, so +1 is typical). One season, no test.
 
 ![Figure 28. 2026 after week 8: strength-of-record rank (open, with its range across settings) against AP poll 9 rank (filled).](results/figures/fig28_2026_sor.png)
 
@@ -616,7 +616,7 @@ Refuted by the skeptics, and not acted on: the claim that "shared with the other
 
 ## 6. Deviations from the pre-registered plan
 
-Every entry is dated in `DEVIATIONS.md` and was committed before use. The last column states what had been seen when each decision was made.
+Every entry is dated in `DEVIATIONS.md`. All but the last two (descriptive additions and the calibration check, October 31) were committed before use; those two say so. The last column states what had been seen when each decision was made.
 
 | # | Change | Reason | Decided after seeing |
 | --- | --- | --- | --- |
@@ -671,7 +671,7 @@ The study distinguishes five ways the SEC could benefit, or appear to:
 
 The net result is that SEC teams sit about one position above what their current-season results support (H2). The SEC-minus-ACC difference (+0.76) is not distinguishable from zero. The Big 12 shows a similar overrating, and Group of 5 teams are underrated by about the same amount, so this is not unique to the SEC. Part of it may sit in the yardstick rather than the voters (T4, T5).
 
-On Miami in 2026, the one season examined directly: after week 8 Miami (7-0) is #1 by strength of record and between #1 and #4 across 11 settings (§5.12). None of its opponents was in the AP top 25 on game day, so by game-day poll rank its schedule is tied for last with 44 other teams that have not yet faced a ranked opponent (places 94 to 138 of 138); by opponents' 2026 results it ranks 56th. "Played nobody" overstates it. This is descriptive and rests on eight weeks of games.
+On Miami in 2026, the one season examined directly: after week 8 Miami (7-0) is #1 by strength of record and #1 in 9 of 11 settings and #3 and #4 under the two calibrations (§5.12). None of its opponents was in the AP top 25 on game day, so by game-day poll rank its schedule is tied for last with 44 other teams that have not yet faced a ranked opponent (places 94 to 138 of 138); by opponents' 2026 results it ranks 56th. "Played nobody" overstates it. This is descriptive and rests on eight weeks of games.
 
 ### 7.3 On the ACC
 

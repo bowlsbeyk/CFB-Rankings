@@ -103,6 +103,35 @@
       }
     ]
   },
+  "sor_rank_by_setting_2026": {
+    "source": "src/sor_test.py run_season(2026), recomputed in src/post_numbers.py (descriptive)",
+    "Miami": {
+      "top12|x0.75": 1.0,
+      "top12|x1.0": 1.0,
+      "top12|x1.25": 1.0,
+      "top25|x0.75": 1.0,
+      "top25|x1.0": 1.0,
+      "top25|x1.25": 1.0,
+      "rank25|x0.75": 1.0,
+      "rank25|x1.0": 1.0,
+      "rank25|x1.25": 1.0,
+      "top25|x1.0|t4_all": 3.0,
+      "top25|x1.0|t4_power": 4.0
+    },
+    "UCLA": {
+      "top12|x0.75": 3.0,
+      "top12|x1.0": 2.0,
+      "top12|x1.25": 2.0,
+      "top25|x0.75": 3.0,
+      "top25|x1.0": 2.0,
+      "top25|x1.25": 2.0,
+      "rank25|x0.75": 3.0,
+      "rank25|x1.0": 2.0,
+      "rank25|x1.25": 2.0,
+      "top25|x1.0|t4_all": 1.0,
+      "top25|x1.0|t4_power": 1.0
+    }
+  },
   "ucla_2026": {
     "source": "results/sor_2026.csv",
     "record": "7-0",

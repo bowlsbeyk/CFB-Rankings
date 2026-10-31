@@ -356,7 +356,7 @@ The scripts now write `label_part1_robust` and `label_part2_robust`, and list th
 
 ## 2026-10-31 — Descriptive additions for the summary and post (logged after drafting, before publication)
 
-While `SUMMARY.md` and the LinkedIn post were being written and fact-checked, a few descriptive numbers were added to `results/post_numbers.json` (built by `src/post_numbers.py`). They were computed after every result had been seen and were first used in a draft of the summary before this entry was written. They are logged here before publication. None is a test; no logged number changed.
+While `SUMMARY.md` and the LinkedIn post were being written and fact-checked, a few descriptive numbers were added to `results/post_numbers.json` (built by `src/post_numbers.py`). They were computed after every result had been seen and were first used in committed drafts of the summary, README and report (commit `c85095c`) before this entry was written. They are logged here before publication. None is a test; no logged number changed.
 
 - **SEC minus each other power conference in the strength-of-record top 25** (Big Ten, Big 12, Pac-12), computed from `results/sor_weekly.csv` the same way as T5's logged SEC-minus-ACC figure. The ACC row reproduces T5 exactly (+2.27). SEC minus Big Ten is +0.74 (95% t −0.55 to +2.03; 6 of 11 seasons).
 - **The other-power-conference average excess** in T5 (+0.18) and T6 (+0.47), computed per season as E_SEC − D_PWR. These were computed during the audit and are in the entry above; only their addition to `post_numbers.json` is new. This is the logged bloc, the mean over conferences, not a combined count.
@@ -379,4 +379,6 @@ Two rounds of fact-checking (checkers per document, hostile readers, and skeptic
 - **Poll places above the rating (H2), SEC:** +1.11 / −0.21 (CI −0.92 to +0.47) / +1.51. ACC: +0.35 / +2.57 / +3.97.
 - **Pac-12 split (H5 B, uncalibrated):** +5.42 (CI +0.96 to +10.21; 108 team-seasons), about the SEC's size.
 
-**Reading.** Applying the logged robustness rule (a sign must hold in every check): the SEC's own game-day schedule boost holds its sign; every SEC-versus-ACC schedule and poll-place contrast does not, and neither does the SEC's one-place poll gap. These are descriptive and are reported as such.
+**Reading.** Applying the logged robustness rule (a sign must hold in every check): the SEC's own game-day schedule boost holds its sign. The whole-schedule SEC-minus-ACC gap, the per-game SEC-minus-ACC gap in weeks 9+, the SEC-minus-ACC poll-place gap and the SEC's one-place poll gap do not. The per-game SEC-minus-ACC gap in weeks 1–4 and 5–8 stays at or above zero under both calibrations but is not clear in any band under the all-games calibration. These are descriptive and are reported as such.
+
+**Also added:** Miami's and UCLA's 2026 strength-of-record rank in each of the 11 settings (`post_numbers.json`, `sor_rank_by_setting_2026`). Miami is #1 in all 9 uncalibrated settings and #3 and #4 under the two calibrations, where UCLA is #1.

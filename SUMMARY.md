@@ -19,7 +19,7 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
   - The original plan was committed before any data was pulled ([`METHODOLOGY.md`](METHODOLOGY.md)).
   - Later changes were logged with what had been seen at the time ([`DEVIATIONS.md`](DEVIATIONS.md)).
   - The last two tests (T5 and T6) got an independent audit of their code and wording.
-  - Two rounds of fact-checking then checked this summary against the result files, with reviewers told to knock each claim down.
+  - Several rounds of fact-checking then checked this summary against the result files, with reviewers told to knock each claim down.
 - **Caveat:** every result in this summary comes from tests added mid-study, after earlier results had been seen, and both yardsticks replaced the planned Elo yardstick. Most of these tests were logged before they ran. The exceptions are marked below:
   - the whole-schedule check (an outside reviewer ran it first);
   - the margin-based comparison (a design reviewer computed an approximate version first);
@@ -30,8 +30,8 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
 After week 8 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`](results/figures/fig28_2026_sor.png)):
 
 - **Ranking:**
-  - Miami is 7–0, AP #1 and **#1 by strength of record**, and between #1 and #4 across all 11 settings tested.
-  - UCLA, also 7–0, is a close #2 and is #1 by wins and losses alone (Colley).
+  - Miami is 7–0, AP #1 and **#1 by strength of record** in all 9 uncalibrated settings. Under the two calibrations to results against outsiders it is #3 and #4, and UCLA is #1.
+  - UCLA, also 7–0, is a close #2 on the main setting and is #1 by wins and losses alone (Colley).
   - Miami is #2 by wins and losses and #2 by scoring margin.
 - **What is true:** none of Miami's opponents was in the AP top 25 on game day. Counted that way, its schedule is tied for last with 44 other teams that have not faced a ranked opponent yet.
 - **What is not:** counted by how those opponents have actually played in 2026, the schedule ranks **56th of 138**. That is the middle of the pack, not "nobody". It is softer than most power-conference schedules, though: 48th of the 67 SEC, Big Ten, Big 12 and ACC teams.
@@ -52,7 +52,7 @@ One season and eight weeks of games: this part is descriptive, not a test.
     - SEC opponents look **0.66** rank points better on game day than their seasons end up in weeks 1–4, **1.16** in weeks 5–8 and **0.64** from week 9 on.
     - Early minus late is +0.02 (CI −0.48 to +0.53). So it runs all season, as much late as early, and there is no sign it starts with the preseason poll. The pre-set reading of T2 is "no link shown".
   - **Calibrated:** the SEC's own boost keeps its sign when the rating is calibrated to each conference's results against outsiders ([`results/calibration_check.json`](results/calibration_check.json); descriptive, added before publication). Whole schedules: +1.6 (CI −0.8 to +4.3, not clear) or +7.7, depending on the calibration. Per game: positive in every part of the season under both.
-  - **Not SEC-only:** the Pac-12 (2014–2023) gets about as big a whole-schedule boost (+5.4, CI +1.0 to +10.2). The Big 12 (+3.3) and ACC (+2.2) get smaller boosts that are not statistically clear. Big Ten schedules go the other way (−5.2, CI −7.5 to −2.6).
+  - **Not SEC-only:** the Pac-12 (2014–2023) gets about as big a whole-schedule boost (+5.4, CI +1.0 to +10.2). The Big 12 (+3.3) and ACC (+2.15) get smaller boosts that are not statistically clear. Big Ten schedules go the other way (−5.2, CI −7.5 to −2.6).
 - **Early polls list more SEC teams than finish top 25 on results** ([`results/t6_early.json`](results/t6_early.json), [`fig27`](results/figures/fig27_excess_by_stage.png)).
   - **Size:** in AP polls 1–5, the AP top 25 holds **1.65 more SEC teams per poll** than the end-of-regular-season strength-of-record top 25 (95% CI +0.51 to +2.80; 10 of 11 seasons).
   - **Robustness:** it is the most of any conference, and it stays positive in all 14 robustness checks (at least +0.93; +1.2 against a margin-based top 25).
@@ -71,7 +71,7 @@ One season and eight weeks of games: this part is descriptive, not a test.
   - **Over the ACC:** the SEC's lead is clear (+2.27, CI +1.23 to +3.31; 10 of 11 seasons).
   - **Over the Big 12 and Pac-12:** also clear, at +2.06 (CI +1.25 to +2.88) and +1.87 (CI +0.69 to +3.04; 2014–2023).
   - **Over the Big Ten:** not clear (+0.74, CI −0.55 to +2.03). The SEC had more in only 6 of 11 seasons.
-  - **Logging:** only the ACC comparison was logged in advance. The other three are descriptive, computed while writing this summary.
+  - **Logging:** the ACC comparison was logged in advance as a descriptive figure, not a test; the other three were computed while writing this summary.
   - **2026 to date:** 8 of the strength-of-record top 25 are SEC teams.
 - **The results rating does not overrate the SEC** ([`results/t4_referee.json`](results/t4_referee.json)).
   - **Against power-conference opponents from other conferences:** SEC teams match its predictions (−0.2 points a game, CI −3.1 to +2.6; 86 games).
@@ -81,12 +81,12 @@ One season and eight weeks of games: this part is descriptive, not a test.
   - From poll 6 on, the AP lists +0.07 more SEC teams per poll than a top 25 ordered by scoring margin (CI −0.32 to +0.45).
   - Strength of record grades résumés, and a ranking by strength holds more SEC teams by design: about 1.5 per poll more in the study's simulation.
 - **Preseason-ranked SEC teams hold up about as well as is typical for their preseason rank.**
-  - They finish 0.27 places better than typical (CI −2.15 to +1.61; a shortfall in 5 of 11 seasons), so the pre-set "hyped" reading is not met.
+  - They finish 0.27 places better than typical (95% CI from 2.15 places better to 1.61 worse; a shortfall in 5 of 11 seasons), so the pre-set "hyped" reading is not met.
   - The interval cannot rule out a shortfall of up to about 1.6 places.
   - 39% of preseason-ranked SEC teams finish outside the final strength-of-record top 25, against 54% for the ACC and 32% for the Big Ten.
 - **SEC-versus-ACC comparisons of schedules and poll places depend on how the rating is calibrated** ([`results/calibration_check.json`](results/calibration_check.json); descriptive, added before publication).
   - **Uncalibrated:** game by game, SEC opponents look more flattered than ACC opponents in every part of the season: +0.56 (CI +0.06 to +1.14), +1.00 (CI +0.46 to +1.59) and +0.59 (CI +0.22 to +0.95). For whole schedules the gap is +3.5 (CI −0.8 to +8.0), not clear. SEC teams sit about one poll place above the season-only rating (+1.1, CI +0.3 to +1.9), against +0.35 for ACC teams.
-  - **Why it matters:** the rating undervalues SEC teams against all outsiders (+3.3 points a game, below) but not ACC teams (+0.1), and it overrates ACC teams against power-conference outsiders (−3.1, CI −5.4 to −1.0).
+  - **Why it matters:** the rating undervalues SEC teams against all outsiders (+3.3 points a game, above) but not ACC teams (+0.1), and it overrates ACC teams against power-conference outsiders (−3.1, CI −5.4 to −1.0).
   - **Calibrated to those results:** the per-game SEC-minus-ACC gap is no longer clear in any part of the season under the all-games calibration. The whole-schedule gap reverses under both calibrations (−6.9 and −4.6, both clear). The SEC's poll-place gap is −0.2 under one calibration and +1.5 under the other, and ACC teams then sit 2.6 to 4.0 places above the rating.
   - **Reading:** the data cannot say whether SEC schedules are flattered more than ACC schedules. The answer turns on how much of the SEC's success against outsiders is real.
 - **Ranked SEC teams fall out at about the usual rate** (a descriptive breakdown, added after the results were seen; [`fig29`](results/figures/fig29_early_decomposition.png)).
@@ -116,9 +116,9 @@ One season and eight weeks of games: this part is descriptive, not a test.
 
 ## Bottom line
 
-- **Miami's #1 is backed by its results.** "Played nobody" is false: its schedule is mid-pack by results, not empty, though softer than most power-conference schedules.
+- **Miami's résumé is backed by its results.** It is #1 in most settings and top 4 in all. "Played nobody" is false: its schedule is mid-pack by results, not empty, though softer than most power-conference schedules.
 - **Game-day "ranked" opponents oversell SEC schedules, all season long.**
-  - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating.
+  - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating (+1.6, not clear, or +7.7).
   - **Not SEC-only:** the Pac-12 gets about as much.
   - **Versus the ACC:** whether SEC schedules are flattered more than ACC schedules depends on calibrating the rating, so it is not shown.
   - **Recommendation:** judge schedules by results, not by game-day ranks.
@@ -127,7 +127,7 @@ One season and eight weeks of games: this part is descriptive, not a test.
   - **Shared:** the other power conferences show it too, and the SEC's lead over them is not statistically clear.
   - **Mechanism:** those SEC teams then fade at about the usual rate for their ranks. Mainly, there are more of them.
 - **By results alone, the SEC has the most top-25 teams.** Clearly more than the ACC, Big 12 and Pac-12; not clearly more than the Big Ten. Its high rankings are mostly earned.
-  - **Not robust:** the season-long surplus over strength of record and the SEC's one-place poll gap both fail the calibration checks.
+  - **Not robust:** the season-long surplus over strength of record shrinks to +0.08 under one calibration, and its pre-set labels fail the robustness rule. The SEC's one-place poll gap turns negative (−0.2).
 
 ## What this does not show
 
@@ -148,12 +148,12 @@ One season and eight weeks of games: this part is descriptive, not a test.
 
 ## Check it yourself
 
-- **Every number, with its source:** [`results/post_numbers.json`](results/post_numbers.json)
+- **Most numbers, with their sources:** [`results/post_numbers.json`](results/post_numbers.json)
 - **Test definitions:** `DEVIATIONS.md`. The relevant entries are:
   - the hypothesis-test definitions and the season-only rating (poll places);
   - the schedule-inflation test and its H5 sensitivity check;
   - T2, T3, T4, T5 and T6;
-  - the post-audit corrections and the descriptive additions of 2026-10-31.
+  - the post-audit corrections, the descriptive additions and the calibration check of 2026-10-31.
 - **Strength of record for every FBS team:** [`results/sor_weekly.csv`](results/sor_weekly.csv) covers each week from week 5 on, 2014–2025 (no 2020), plus 2026 after week 8.
 - **Rebuild everything:**
   1. `pip install -r requirements.txt`

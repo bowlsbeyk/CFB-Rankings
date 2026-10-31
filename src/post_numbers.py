@@ -12,7 +12,7 @@ import numpy as np
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from sor_test import HIST, shares, tstats  # noqa: E402
+from sor_test import HIST, TABLE, offsets_from_t4, run_season, shares, tstats, variants  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
@@ -79,6 +79,12 @@ def main():
                                       "ap_rank": None if pd.isna(x.ap_rank) else int(x.ap_rank)}
                                      for t, x in top.iterrows()]}
 
+    d26 = run_season(2026, pd.read_csv(TABLE), offsets_from_t4())[0].set_index("team")
+    n["sor_rank_by_setting_2026"] = {
+        "source": "src/sor_test.py run_season(2026), recomputed in src/post_numbers.py (descriptive)",
+        **{t: {nm: float(d26[f"sor_{nm}"].rank(method="average")[t]) for nm, *_ in variants()}
+           for t in ("Miami", "UCLA")},
+    }
     u = sor26.loc["UCLA"]
     n["ucla_2026"] = {"source": "results/sor_2026.csv", "record": u.record, "ap_rank": int(u.ap_rank),
                       "sor_rank": int(u.sor_rank), "sor_rank_range_across_11_settings": [int(u.sor_rank_min), int(u.sor_rank_max)],
