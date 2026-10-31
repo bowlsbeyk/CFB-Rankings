@@ -224,3 +224,11 @@ Kyle's objection: the finding that SEC schedules are tougher by results may itse
   - a raw, model-free head-to-head of SEC against ACC: record and average margin, regular season plus postseason.
 
 Every game used is saved to `results/t4_referee_games.csv`.
+
+## 2026-10-31 — 2026 data re-frozen through week 8 (Kyle's request)
+
+The 2026 season was frozen on 2026-10-23 through week 7 (AP poll 8). Week 8 games and AP poll 9 are now available. The methodology's 2026 analyses cover "all completed weeks", so the 2026 files are re-pulled. **Only the 2026 files change.** The upstream copies of the historical schedule files were checked and are byte-identical to the frozen ones; no historical file is touched, and nothing from 2014–2025 changes.
+
+- **Schedules:** `cfb_schedules_2026.parquet` from sportsdataverse/cfbfastR-data at commit `2f9c0044`. The other 12 files stay at `09f2595e`. The manifest now records the commit for each schedule file.
+- **Polls:** `rankings_2026_regular.json` and `rankings_2026_postseason.json` re-pulled. The regular-season file holds AP polls 1–9. The manifest records the frozen poll week, which `src/fetch_data.py` reads instead of a hard-coded week.
+- **What changes:** every 2026 output (the counterfactual, the over/underrated board, 2026 schedule strength and the 2026 figures) is recomputed through week 8 and poll 9, and the report's 2026 numbers are updated to match. The week-7 versions remain in git history.
