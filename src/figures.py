@@ -838,7 +838,7 @@ def fig_sor_levels():
                     textcoords="offset points", va="center", fontsize=8, color=INK2)
     ax.plot([], [], "o", color=GRAY_DARK, label="teams in the AP top 25")
     ax.plot([], [], "o", mfc=SURFACE, mec=GRAY_DARK, mew=2, label="teams in the strength-of-record top 25")
-    ax.legend(loc="lower right", fontsize=8)
+    ax.legend(loc="center right", fontsize=8)
     ax.set_yticks(range(len(groups)))
     ax.set_yticklabels([labels.get(G, G) for G in groups])
     ax.invert_yaxis()
