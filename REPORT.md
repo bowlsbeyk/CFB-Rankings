@@ -1,6 +1,6 @@
 # Preseason Rank, Schedule Strength and the AP Poll: Does the SEC Benefit from Voter Bias?
 
-**Kyle Bowlsbey** · October 23, 2026
+**Kyle Bowlsbey** · October 23, 2026 · revised October 31, 2026
 Pre-registered plan with logged deviations. The main findings come from follow-up tests added during the analysis (§6). Code, data checksums and every result: this repository.
 
 **About this study.** Kyle is a Miami (ACC) fan, and the claim tested here is one he believed going in. The code and this report were written with Claude Code under his direction. Several analysis choices changed during the work after earlier results had been seen; each is dated in `DEVIATIONS.md` and listed in §6 with what had been seen at the time. An outside review of the first version found that the schedule result (H5) mixed a real effect with a measurement artifact; §5.4 reports the corrected analysis next to the original. Data provided by [CollegeFootballData.com](https://collegefootballdata.com) and [sportsdataverse/cfbfastR-data](https://github.com/sportsdataverse/cfbfastR-data).
@@ -51,7 +51,7 @@ Results were to be published whichever way they pointed, every departure from th
 
 ## 2. Audit trail
 
-All work was done on October 23, 2026. The plan was committed before any data was pulled; each change to the plan was committed before it was used. Times are UTC.
+The work was done on October 23 and October 31, 2026. The plan was committed before any data was pulled; each change to the plan was committed before it was used. Times are UTC and on October 23 unless marked October 31.
 
 | Commit | Time | Event |
 | --- | --- | --- |
@@ -72,12 +72,24 @@ All work was done on October 23, 2026. The plan was committed before any data wa
 | `7a36795` | 20:30 | Raw-data removal logged (CFBD terms) |
 | `ca87285` | 20:34 | Findings rewritten after the H5 sensitivity check |
 | `6fcd9c5` | 20:37 | Single-threaded training logged (cross-machine reproducibility) |
+| `8ae7ee7` | 21:50 | Exploratory 2026 over/underrated board logged before running |
+| `de86193` | 21:53 | T1 and T2 logged before running |
+| `89455a4` | 22:06 | T3 logged before running |
+| `caf918c` | 23:18 | T4 logged before running |
+| `b413b7c` | Oct 31, 17:08 | 2026 re-freeze through week 8 logged before pulling |
+| `790f844` | Oct 31, 17:09 | 2026 data re-frozen through week 8 (AP poll 9); historical files unchanged |
+| `7c54d87` | Oct 31, 17:15 | 2026 outputs recomputed through week 8 |
+| `d608984` | Oct 31, 17:29 | T5 logged before running (code `e03ebb2`) |
+| `18b25fb` | Oct 31, 17:53 | T6 logged before running, blind to T5's results (code `3643a3b`) |
+| `a065488` | Oct 31, 17:54 | T6 run as logged |
+| `3a01c50` | Oct 31, 17:59 | T5 run as logged |
+| `7e55d24` | Oct 31, 19:44 | Corrections from an independent audit of T5 and T6 logged and coded before rerunning (no logged number changes) |
 
 Section 6 lists every deviation and, importantly, which results had been seen when each was decided.
 
 ![Figure 1. Audit trail. Commit times for the plan, data freeze, model training, the one-time holdout and every later analysis.](results/figures/fig01_timeline.png)
 
-*Figure 1. Audit trail. Commit times for the plan, data freeze, model training, the one-time holdout and every later analysis.*
+*Figure 1. Audit trail of the October 23 work: commit times for the plan, data freeze, model training, the one-time holdout and the analyses that followed. The October 31 events are in the table above.*
 
 ---
 
@@ -94,8 +106,8 @@ All 39 raw files were pulled once (2026-10-23 17:18 UTC), saved unmodified, and 
 
 ### 3.2 Scope and construction
 
-- **Seasons:** training 2014–2023 (nine seasons; 2020 excluded for COVID scheduling); holdout 2024–2025; counterfactual 2026 through poll 8 (seven completed weeks).
-- **Unit of analysis:** one row per FBS team per poll transition. Schedule week *w* links AP poll *w* (released before week *w*'s games; week 1 is the preseason poll) to poll *w*+1. That gives 21,626 team-weeks: 16,610 training, 4,050 holdout and 966 for 2026.
+- **Seasons:** training 2014–2023 (nine seasons; 2020 excluded for COVID scheduling); holdout 2024–2025; counterfactual 2026 through poll 9 (eight completed weeks; re-frozen on October 31, the week-7 versions are in git history).
+- **Unit of analysis:** one row per FBS team per poll transition. Schedule week *w* links AP poll *w* (released before week *w*'s games; week 1 is the preseason poll) to poll *w*+1. That gives 21,764 team-weeks: 16,610 training, 4,050 holdout and 1,104 for 2026.
 - **Conferences:** each team is tagged with its conference in that season, so realignment is handled. Five groups are used: SEC, ACC, Big Ten, Big 12, and Other (Pac-12, Group of 5, independents).
 - **Checks:** every AP-ranked school in every season matched a schedule team. Tests confirm no feature uses information from after the poll it predicts (12 tests, all passing).
 
@@ -319,7 +331,7 @@ Once opponent quality is measured by results rather than by poll standing, voter
 
 \*The Other figure is sensitive to ties at zero (teams that faced no ranked opponent); with average ranks it is +1.3. The SEC (+6.7) and ACC (−7.2) figures are not sensitive to this.
 
-The first version of this report called this the clearest effect in the study. An outside review showed that it compares two measures that differ in two ways at once. **Shape:** the poll side scores every unranked opponent as zero, while the rating side gives every opponent credit. **Timing:** the poll side uses each opponent's standing on game day, the rating side its final rating. The timing gap is the effect under test; the shape gap is a measurement artifact. In 2026 to date the original measure gives SEC +2.7 (−3.2, +9.3), ACC −4.9 (−14.9, +4.0), SEC − ACC +7.6 (−3.6, +19.7).
+The first version of this report called this the clearest effect in the study. An outside review showed that it compares two measures that differ in two ways at once. **Shape:** the poll side scores every unranked opponent as zero, while the rating side gives every opponent credit. **Timing:** the poll side uses each opponent's standing on game day, the rating side its final rating. The timing gap is the effect under test; the shape gap is a measurement artifact. In 2026 through week 8 the original measure gives SEC +3.2 (−3.6, +10.1), ACC −10.5 (−21.8, −0.6), SEC − ACC +13.7 (+1.8, +27.2); it carries the same shape artifact.
 
 ![Figure 15. H5: average schedule rank by opponents' poll standing (filled) and by their actual results (open), left; inflation with 95% intervals, right.](results/figures/fig15_schedule_inflation.png)
 
@@ -372,35 +384,35 @@ A strong record overrides preseason rank. At 5-1, teams that started ranked are 
 
 ### 5.6 The 2026 counterfactual
 
-The 2026 preseason poll ranked nine SEC teams and three ACC teams (Miami #7, SMU #19, Louisville #24). Top-25 slots by conference at poll 8, unranked = 0:
+The 2026 preseason poll ranked nine SEC teams and three ACC teams (Miami #7, SMU #19, Louisville #24). Top-25 slots by conference at poll 9 (after week 8), unranked = 0:
 
 | Run | Model | SEC | ACC | Big Ten | Big 12 | Other | Plausibility check |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Real AP poll | — | 9 | 3 | 6 | 5 | 2 | Passes |
-| No swap (sanity) | Rated | 9 | 2 | 8 | 5 | 1 | Fails |
-| Three pairs swapped | Rated | 10 | 2 | 8 | 4 | 1 | Fails |
-| Nine slots swapped | Rated | 6 | 5 | 8 | 5 | 1 | Fails |
-| No swap (sanity) | Revised | 9 | 2 | 9 | 4 | 1 | Fails |
-| Nine slots swapped | Revised | 5 | 7 | 7 | 5 | 1 | Fails |
+| Real AP poll | — | 9 | 3 | 5 | 6 | 2 | Passes |
+| No swap (sanity) | Rated | 11 | 2 | 7 | 4 | 1 | Fails |
+| Three pairs swapped | Rated | 11 | 2 | 8 | 3 | 1 | Fails |
+| Nine slots swapped | Rated | 6 | 6 | 8 | 4 | 1 | Fails |
+| No swap (sanity) | Revised | 10 | 2 | 7 | 5 | 1 | Fails |
+| Nine slots swapped | Revised | 4 | 8 | 7 | 5 | 1 | Fails |
 
-- **Sanity run.** With the rated model and no swap, the simulated poll agrees with the real one well (ρ = 0.92; 21 of 25 teams shared).
-- **Primary three-pair swap.** SMU (5-1) rises from a simulated #23 to #12 with Texas's preseason slot. Texas falls from #24 to unranked. Miami and Georgia change little.
-- **Nine-slot extension.** Larger moves follow: Louisville +13, Virginia +10, Pittsburgh +9; Tennessee −16, Alabama −11, LSU −8.
-- **Plausibility.** Every run fails, including the sanity run. The model leaves 6-1 Wake Forest unranked (real #17) and keeps 3-3 Oklahoma ranked (real: unranked). The nine-slot swaps add further violations: 6-1 Tennessee unranked, and 4-3 Virginia, Louisville and others ranked. The real 2026 poll passes the same check.
+- **Sanity run.** With the rated model and no swap, the simulated poll agrees with the real one reasonably well (ρ = 0.87; 20 of 25 teams shared).
+- **Primary three-pair swap.** SMU (6-1) rises from a simulated #22 to #9 with Texas's preseason slot. Texas falls from #12 to #14. Miami (#2) and Georgia (#6) do not move.
+- **Nine-slot extension.** Larger moves follow: Louisville and SMU +13, Virginia +9, Pittsburgh +8; Alabama −13, Ole Miss −8, Tennessee −6.
+- **Plausibility.** Every run fails, including the sanity run. The model leaves 6-1 Arizona (real #22) and 6-1 Wake Forest (real #14) unranked, and keeps Michigan, Oklahoma and Oregon (4-3) and Texas A&M (4-4) ranked (real: all unranked). The nine-slot swap adds further violations, ranking 4-3 Louisville and Washington, 4-4 Virginia, and 5-3 Pittsburgh and West Virginia. The real 2026 poll passes the same check.
 
 These swap results reflect the model's attachment to starting position more than voter behavior, and are not used as evidence.
 
-![Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs.](results/figures/fig18_counterfactual_slots.png)
+![Figure 18. 2026 top-25 slots by conference at poll 9: the real poll and the rated model's runs.](results/figures/fig18_counterfactual_slots.png)
 
-*Figure 18. 2026 top-25 slots by conference at poll 8: the real poll and the rated model's runs. Not evidence: every run, including the no-swap run, fails the plausibility check.*
+*Figure 18. 2026 top-25 slots by conference at poll 9: the real poll and the rated model's runs. Not evidence: every run, including the no-swap run, fails the plausibility check.*
 
 ![Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap.](results/figures/fig19_counterfactual_teams.png)
 
 *Figure 19. Nine-slot swap, rated model: each paired team's simulated rank without and with the swap. Not evidence: every run, including the no-swap run, fails the plausibility check.*
 
-![Figure 20. 2026 to date: AP rank in poll 8 against the season-only rating after week 7.](results/figures/fig20_2026_poll_vs_rating.png)
+![Figure 20. 2026 to date: AP rank in poll 9 against the season-only rating after week 8.](results/figures/fig20_2026_poll_vs_rating.png)
 
-*Figure 20. 2026 to date: AP rank in poll 8 against the season-only rating after week 7.*
+*Figure 20. 2026 to date: AP rank in poll 9 against the season-only rating after week 8.*
 
 ### 5.7 Exploratory team-level residuals
 
