@@ -232,3 +232,70 @@ The 2026 season was frozen on 2026-10-23 through week 7 (AP poll 8). Week 8 game
 - **Schedules:** `cfb_schedules_2026.parquet` from sportsdataverse/cfbfastR-data at commit `2f9c0044`. The other 12 files stay at `09f2595e`. The manifest now records the commit for each schedule file.
 - **Polls:** `rankings_2026_regular.json` and `rankings_2026_postseason.json` re-pulled. The regular-season file holds AP polls 1–9. The manifest records the frozen poll week, which `src/fetch_data.py` reads instead of a hard-coded week.
 - **What changes:** every 2026 output (the counterfactual, the over/underrated board, 2026 schedule strength and the 2026 figures) is recomputed through week 8 and poll 9, and the report's 2026 numbers are updated to match. The week-7 versions remain in git history.
+
+## 2026-10-31 — T5: is the SEC ranked so high because of its results? (Kyle's request; added after all earlier results)
+
+Kyle rejects the conclusion that the SEC does not benefit from bias "unless we can show with data why the SEC is ranked so high", with ranking-independent data showing its strength of record. This test answers that. The design was drafted, reviewed by three independent reviewers (fairness to both sides, statistics, ranking-independence), merged into 14 changes, and is fixed here before any T5 count is computed. The code that will run is commit `e03ebb2` (`src/sor_test.py`). Results are reported whichever way they point.
+
+**Disclosures.**
+1. T5 was designed after H2 (SEC +1.11 places against the season-only rating) and T1–T4 were seen.
+2. During design review, one reviewer computed approximate excess against the *performance* top 25: SEC about +0.08, ACC about −0.19, SEC minus ACC about +0.27 slots per poll; SEC about +0.36 in polls 6–9 and about −0.10 in polls 10+. The performance check is therefore not blind. It is descriptive only. SOR, Colley, rank points and both baselines are unseen.
+3. Candidate sigmas were computed: SD of errors 16.7, probit 14.1. These are not outcomes.
+4. Expected precision: SEC half-width about 0.4 slots per poll; SEC minus ACC about 0.75; the minimum detectable SEC-minus-ACC difference at 80% power is about 1.0 slot per poll. An inconclusive comparison is not evidence of bias, and not a clean bill either.
+
+**Inputs (ranking-independent).** That season's scores, home/away/neutral site and who played whom, through schedule week w (the week before AP poll w+1), plus each school's FBS/FCS status. All FCS opponents form one pooled team. Two constants are shared by every team and season: the ±28 cap and sigma. No polls, preseason, prior-season results, names or conference labels enter any rating or SOR. Conference is used only to count teams after the rankings are built; the T4-offset check below is the one labelled exception. One game is moved: a kickoff on Sunday at 2 pm ET or later in week 2+ comes after that week's AP poll and counts from the next week. On this data that is only 2016 Georgia at South Carolina (Hurricane Matthew). Week-1 Labor Day games precede the Tuesday poll and are not moved. The rebuilt performance ratings match `season_ratings.csv` to within 1e-13 everywhere except that one week.
+
+**Measures, rebuilt after every week w ≥ 5 that has an AP poll w+1.**
+- **Performance:** the season-only margin rating.
+- **Colley:** the wins-and-losses rating; shares no margin information.
+- **SOR:**
+  - Benchmark = mean performance rating of the 25 best FBS teams that week.
+  - Win chance against each opponent = Φ((benchmark − opponent + home edge × venue)/σ).
+  - SOR = P(benchmark wins at least as many of the team's games as it did), by Poisson-binomial.
+  - **σ = 14.102 points:** a no-intercept probit of home win on the pre-game predicted margin, FBS vs FBS, weeks 4+, 2014–2025, 6,520 games, fixed.
+- **Ranks:** average ranks for ties.
+- **End of regular season:** the last week w with an AP poll w+1. The post-bowl poll is never used.
+
+**Groups.** SEC, ACC, Big Ten, Big 12, Pac-12 (2014–2023 only), Notre Dame (reported on its own, left out of the power average), Other. Membership is by season (Texas and Oklahoma count as SEC from 2024).
+
+**Ties at 25th.** Each of k teams tied for the last m slots counts m/k, so every poll has exactly 25 slots per side.
+
+**Primary.** Per season, polls 6+:
+- E_G = mean over polls of (AP top-25 slots − SOR top-25 slots) for group G.
+- E_SEC.
+- D_PWR = E_SEC − the mean of E for ACC, Big Ten, Big 12 and Pac-12 (when present).
+- D_ACC = E_SEC − E_ACC.
+
+**Inference across the 11 seasons:**
+- 95% interval = mean ± t(0.975, 10)·SD/√11.
+- 90% interval = mean ± t(0.95, 10)·SD/√11.
+- The number of positive seasons.
+- An exact sign-flip test over all 2,048 sign patterns.
+- A seed-0 season bootstrap, as a secondary check only.
+
+**Reading.**
+- **Part 1, the SEC against its own record:**
+  - (a) **OVER-RANKED** if the 95% interval of E_SEC is wholly above 0 and at least 9 of 11 seasons are positive. Labelled **SEC-SPECIFIC** only if D_PWR passes the same rule; otherwise **SHARED WITH THE OTHER POWER CONFERENCES, NOT SEC-SPECIFIC**.
+  - (b) **CONSISTENT WITH RESULTS** if the 90% interval of E_SEC lies wholly within ±0.5 slots per poll. If (a) also holds: over-ranked by less than half a slot per poll.
+  - (c) **UNDER-RANKED** if the 95% interval is wholly below 0 and at most 2 of 11 seasons are positive.
+  - (d) **INCONCLUSIVE** otherwise.
+- **Part 2:** D_ACC is higher, lower or inconclusive by the same 95% plus 9-of-11 rule.
+
+**Robustness gate.** A label is robust only if, for each of E_SEC, D_PWR and D_ACC, the sign (or, for "consistent", a point estimate within ±0.5) holds across all of these:
+- all 9 combinations of σ × (0.75, 1, 1.25) and benchmark (top-12 mean, top-25 mean, 25th team);
+- both T4 offsets: each conference's T4 mean residual added to its teams' performance ratings, (i) all games: SEC +3.35, ACC +0.13, Big Ten +3.49, Big 12 +4.17, Pac-12 +0.80; (ii) against power opponents: SEC −0.22, ACC −3.10, Big Ten +3.05, Big 12 −0.31, Pac-12 +0.65; others 0;
+- rank points (26 − place inside the top 25, ties averaged; each side sums to 325);
+- the Colley top 25;
+- the end-of-regular-season SOR top 25 (foresight: AP at poll w+1 against the final record).
+
+**Descriptive** (no claim language):
+- the performance top 25 (not blind; see disclosure 2);
+- headline levels per group: average teams per poll in the AP top 25, the SOR top 25 and the SOR top 10, per member team, plus the share of AP top-10 slots held by teams also in the SOR top 10;
+- the SEC-minus-ACC SOR top-25 count with a t-interval;
+- week bands (polls 6–8, 9–11, 12+, end of regular season);
+- a team-level gap (SOR rank capped at 26 minus AP rank), with whole-season resampling;
+- a **noise baseline:** per season, final performance ratings are treated as truth and every game is simulated 200 times (seed 0) with that season's margin noise; expected excess = top 25 by true rating minus simulated SOR top 25; observed minus baseline reported with a t-interval.
+
+**2026 (descriptive).** A table of every team in AP poll 9 or the SOR, Colley or performance top 25 after week 8, sorted by SOR rank, with each team's SOR rank range across the 11 variants. The poll-9 E_SEC, E_ACC and D_ACC are shown with their rank among the historical poll-9 values. No test.
+
+**Published:** `results/t5_sor.json`, `results/sor_weekly.csv` (every team-week's SOR, Colley and performance ranks and record; no poll data) and `results/sor_2026.csv`.
