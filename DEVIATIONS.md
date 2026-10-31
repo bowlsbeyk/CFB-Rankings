@@ -299,3 +299,26 @@ Kyle rejects the conclusion that the SEC does not benefit from bias "unless we c
 **2026 (descriptive).** A table of every team in AP poll 9 or the SOR, Colley or performance top 25 after week 8, sorted by SOR rank, with each team's SOR rank range across the 11 variants. The poll-9 E_SEC, E_ACC and D_ACC are shown with their rank among the historical poll-9 values. No test.
 
 **Published:** `results/t5_sor.json`, `results/sor_weekly.csv` (every team-week's SOR, Colley and performance ranks and record; no poll data) and `results/sor_2026.csv`.
+
+## 2026-10-31 — T6: were SEC teams ranked higher early than their season justified? (Kyle's request)
+
+Kyle asked whether SEC teams were ranked higher in the early weeks than they should have been, or whether their preseason rankings hold up less often than other conferences', which would point to hype driving the preseason poll. T1 asked a version of this with the combined rating and mainly the ACC as comparator. T5 starts at poll 6. This test asks it directly, with ranking-independent measures and the T5 framework. It was designed and logged **before any T5 result was seen**: the T5 run finished in the background unread, and its notice was cancelled so this entry stays blind. The code that will run is commit `3643a3b` (`src/early_test.py`). Results are reported whichever way they point.
+
+**Comparison.** For each season 2014–2025 (no 2020): AP polls 1–5 (the preseason poll and the next four) against the **end-of-regular-season** top 25 by results-only measures. These are built exactly as in T5 from that season's games through the last regular-season week with an AP poll after it: strength of record (σ = 14.102, top-25 benchmark), Colley wins-and-losses, and performance. Groups, membership, tie rules and the late-game move are as in T5.
+
+**Primary.** E_G = mean over polls 1–5 of (AP top-25 slots − final-SOR top-25 slots). E_SEC, D_PWR (E_SEC minus the mean of ACC, Big Ten, Big 12, Pac-12 when present) and D_ACC (E_SEC − E_ACC). Statistics as T5: t-intervals over 11 seasons, positive-season count, exact sign-flip test, and a season bootstrap as a secondary check.
+
+**Reading** (T5's rules, early wording):
+- **Ranked higher early than the season justified** if E_SEC's 95% interval is wholly above 0 with at least 9 of 11 seasons positive. SEC-SPECIFIC only if D_PWR passes the same rule; otherwise shared with the other power conferences.
+- **Early rankings consistent with how the season turned out** if E_SEC's 90% interval lies within ±0.5 slots per poll.
+- **Ranked lower early** if the 95% interval is wholly below 0 with at most 2 of 11 seasons positive.
+- **Inconclusive** otherwise.
+- **Part 2:** D_ACC higher, lower or inconclusive by the same rule.
+
+**Robustness gate:** the sign holds across all 9 σ × benchmark cells, both T4 offsets, rank points, the final Colley top 25 and the final performance top 25. The performance check is blind here: the earlier non-blind computation covered polls 6+ only.
+
+**Also reported:**
+- The preseason poll alone (descriptive).
+- **T1 redone with strength of record:** for every preseason-ranked team, final SOR rank (capped at 26) minus preseason rank, adjusted by a straight-line fit across all teams on preseason rank. Per-season mean by group gives A_SEC, D_PWR and D_ACC with the same t-statistics; the "hyped" reading uses the same 95% plus 9-of-11 rule. Also: share of each group's preseason-ranked teams finishing outside the final SOR top 25.
+
+**Caveat stated with the result.** Early polls reflect what voters knew then (returning players, coaching changes). "Not justified by how the season turned out" measures hype in hindsight; it is not proof of intent. Every conference's early picks regress somewhat, which is why the SEC is compared with the other power conferences.
