@@ -16,6 +16,10 @@
     "schedules_ranked": 138,
     "opponents_in_ap_top25_on_game_day": "none",
     "teams_with_no_ap_top25_opponent_yet": 45,
+    "schedule_rank_by_2026_results_among_power_conference_teams": [
+      48,
+      67
+    ],
     "note": "schedule ranks: 1 = toughest; by game-day poll = opponents' AP top-25 points in the poll before each game (0 outside the top 25); by results = opponents' 2026 season-only rating"
   },
   "wake_forest_2026": {
@@ -99,6 +103,17 @@
       }
     ]
   },
+  "ucla_2026": {
+    "source": "results/sor_2026.csv",
+    "record": "7-0",
+    "ap_rank": 7,
+    "sor_rank": 2,
+    "sor_rank_range_across_11_settings": [
+      1,
+      3
+    ],
+    "colley_rank": 1
+  },
   "top25_teams_per_poll_2014_2025": {
     "source": "results/t5_sor.json headline_levels (polls 6 to end of regular season)",
     "SEC": {
@@ -129,6 +144,45 @@
       ],
       "seasons_positive_of_11": 10,
       "sign_flip_p": 0.002
+    }
+  },
+  "sec_minus_each_conference_strength_of_record_top25": {
+    "source": "results/sor_weekly.csv (sor_rank, polls 6 to end of regular season), computed in src/post_numbers.py; descriptive, added after results were seen; the ACC row reproduces results/t5_sor.json",
+    "ACC": {
+      "mean": 2.27,
+      "ci95": [
+        1.23,
+        3.31
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.002
+    },
+    "Big Ten": {
+      "mean": 0.74,
+      "ci95": [
+        -0.55,
+        2.03
+      ],
+      "seasons_positive_of_11": 6,
+      "sign_flip_p": 0.227
+    },
+    "Big 12": {
+      "mean": 2.06,
+      "ci95": [
+        1.25,
+        2.88
+      ],
+      "seasons_positive_of_11": 11,
+      "sign_flip_p": 0.001
+    },
+    "Pac-12": {
+      "mean": 1.87,
+      "ci95": [
+        0.69,
+        3.04
+      ],
+      "seasons_positive_of_11": 8,
+      "sign_flip_p": 0.008
     }
   },
   "sec_vs_outsiders_t4": {
@@ -162,6 +216,40 @@
       "games": 104,
       "sec_wins": 58,
       "acc_wins": 46
+    },
+    "other_conferences_all_games": {
+      "ACC": {
+        "mean": 0.13,
+        "ci95": [
+          -1.7,
+          1.87
+        ],
+        "games": 257
+      },
+      "Big Ten": {
+        "mean": 3.49,
+        "ci95": [
+          1.05,
+          5.97
+        ],
+        "games": 128
+      },
+      "Big 12": {
+        "mean": 4.17,
+        "ci95": [
+          0.59,
+          7.71
+        ],
+        "games": 58
+      },
+      "Pac-12": {
+        "mean": 0.8,
+        "ci95": [
+          -2.98,
+          5.57
+        ],
+        "games": 74
+      }
     }
   },
   "ap_extra_sec_spots_season_long_t5": {
@@ -198,6 +286,29 @@
     "label_part2": "SEC excess HIGHER than ACC",
     "label_part2_robust": false,
     "E_SEC_with_t4_all_games_calibration": 0.08,
+    "with_t4_all_games_calibration": {
+      "E_SEC": 0.08,
+      "D_PWR": -0.04,
+      "D_ACC": -0.56
+    },
+    "with_t4_power_games_calibration": {
+      "E_SEC": 0.76,
+      "D_PWR": 0.63,
+      "D_ACC": -0.2
+    },
+    "other_power_bloc_excess": {
+      "mean": 0.18,
+      "ci95": [
+        0.03,
+        0.32
+      ],
+      "seasons_positive_of_11": 9,
+      "sign_flip_p": 0.017
+    },
+    "strength_vs_record_gap_SEC": {
+      "note": "simulated top 25 ordered by strength minus top 25 ordered by record, SEC slots per poll (the 'noise baseline'); mean over seasons",
+      "mean": 1.46
+    },
     "E_SEC_vs_performance_top25_descriptive": {
       "mean": 0.07,
       "ci95": [
@@ -298,6 +409,21 @@
     "label_part1_robust": false,
     "E_SEC_sign_holds_in_all_checks": true,
     "E_SEC_min_across_checks": 0.93,
+    "E_SEC_vs_final_performance_top25": 1.2,
+    "with_t4_all_games_calibration": {
+      "E_SEC": 0.93,
+      "D_PWR": 0.59,
+      "D_ACC": -0.15
+    },
+    "other_power_bloc_excess": {
+      "mean": 0.47,
+      "ci95": [
+        0.13,
+        0.81
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.006
+    },
     "caveat": "Early polls reflect what voters knew then. 'Not justified by how the season turned out' measures hype in hindsight; it is not proof of intent. Every conference's early picks regress somewhat, which is why the SEC is compared with the other power conferences."
   },
   "early_polls_decomposition_t6": {
@@ -347,7 +473,10 @@
       ],
       "seasons_positive_of_11": 4,
       "sign_flip_p": 0.84
-    }
+    },
+    "SEC_share_missing_final_top25": 0.386,
+    "SEC_share_expected_to_miss": 0.377,
+    "note": "descriptive breakdown added after results were seen (DEVIATIONS.md, audit corrections item 4b)"
   },
   "preseason_ranked_teams_vs_final_record_t6": {
     "source": "results/t6_early.json preseason_shortfall_vs_SOR",
@@ -386,6 +515,20 @@
       "ci95": [
         -1.12,
         5.54
+      ]
+    },
+    "Big_12_game_day": {
+      "mean": 3.3,
+      "ci95": [
+        -0.77,
+        7.83
+      ]
+    },
+    "Big_Ten_game_day": {
+      "mean": -5.17,
+      "ci95": [
+        -7.52,
+        -2.62
       ]
     },
     "SEC_minus_ACC_game_day": {
@@ -427,6 +570,13 @@
           0.37,
           0.93
         ]
+      },
+      "early_minus_late": {
+        "mean": 0.02,
+        "ci95": [
+          -0.48,
+          0.53
+        ]
       }
     },
     "ACC": {
@@ -449,6 +599,13 @@
         "ci95": [
           -0.19,
           0.29
+        ]
+      },
+      "early_minus_late": {
+        "mean": 0.04,
+        "ci95": [
+          -0.34,
+          0.43
         ]
       }
     }
@@ -496,19 +653,21 @@
     "note": "places a team is ranked above where its season ends up, after losing to a ranked same-conference team",
     "SEC": {
       "games": 152,
-      "mean": 0.44,
+      "beyond_typical_for_pre_game_rank": 0.44,
       "ci95": [
         -0.67,
         1.43
-      ]
+      ],
+      "before_adjustment": 1.2
     },
     "ACC": {
       "games": 38,
-      "mean": 0.96,
+      "beyond_typical_for_pre_game_rank": 0.96,
       "ci95": [
         -0.77,
         2.52
-      ]
+      ],
+      "before_adjustment": 1.08
     }
   }
 }

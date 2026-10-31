@@ -5,9 +5,14 @@ can trace any claim to the file and key it came from. Writes results/post_number
 """
 
 import json
+import sys
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from sor_test import HIST, shares, tstats  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 RES = ROOT / "results"
@@ -58,6 +63,9 @@ def main():
         "schedules_ranked": int(len(sched)),
         "opponents_in_ap_top25_on_game_day": "none" if ms.poll_sos == 0 else "some",
         "teams_with_no_ap_top25_opponent_yet": int((sched.poll_sos == 0).sum()),
+        "schedule_rank_by_2026_results_among_power_conference_teams": [
+            int(sched[sched.conf_group != "Other"].rating_sos.rank(ascending=False)["Miami"]),
+            int((sched.conf_group != "Other").sum())],
         "note": "schedule ranks: 1 = toughest; by game-day poll = opponents' AP top-25 points in the poll "
                 "before each game (0 outside the top 25); by results = opponents' 2026 season-only rating",
     }
@@ -70,6 +78,11 @@ def main():
                                       "ap_rank": None if pd.isna(x.ap_rank) else int(x.ap_rank)}
                                      for t, x in top.iterrows()]}
 
+    u = sor26.loc["UCLA"]
+    n["ucla_2026"] = {"source": "results/sor_2026.csv", "record": u.record, "ap_rank": int(u.ap_rank),
+                      "sor_rank": int(u.sor_rank), "sor_rank_range_across_11_settings": [int(u.sor_rank_min), int(u.sor_rank_max)],
+                      "colley_rank": int(u.colley_rank)}
+
     # 2. Why the SEC ranks high: results-only top-25 counts.
     lev = t5["headline_levels"]
     n["top25_teams_per_poll_2014_2025"] = {
@@ -77,6 +90,26 @@ def main():
         **{G: {"strength_of_record_top25": r(lev[G]["sor25"]), "ap_top25": r(lev[G]["ap25"])}
            for G in ("SEC", "Big Ten", "Big 12", "Pac-12", "ACC")},
         "sec_minus_acc_strength_of_record_top25": stat(t5["sec_minus_acc_sor_top25"]),
+    }
+    # SEC minus each other power conference, recomputed from results/sor_weekly.csv the same way as
+    # T5's SEC-minus-ACC figure (which it reproduces). Descriptive, added for the summary.
+    sw = pd.read_csv(RES / "sor_weekly.csv")
+    sw = sw[sw.season.isin(HIST)]
+    diffs = {}
+    for _, ds in sw.groupby("season"):
+        per = {}
+        for _, d in ds.groupby("week"):
+            sl, _ = shares(d.set_index("team").sor_rank)
+            g = d.set_index("team").group
+            for G in ("ACC", "Big Ten", "Big 12", "Pac-12"):
+                if (g == G).any():
+                    per.setdefault(G, []).append(sl[g == "SEC"].sum() - sl[g == G].sum())
+        for G, v in per.items():
+            diffs.setdefault(G, []).append(float(np.mean(v)))
+    n["sec_minus_each_conference_strength_of_record_top25"] = {
+        "source": "results/sor_weekly.csv (sor_rank, polls 6 to end of regular season), computed in src/post_numbers.py; "
+                  "descriptive, added after results were seen; the ACC row reproduces results/t5_sor.json",
+        **{G: stat(tstats(v)) for G, v in diffs.items()},
     }
     n["sec_vs_outsiders_t4"] = {
         "source": "results/t4_referee.json",
@@ -87,6 +120,8 @@ def main():
         "vs_power_opponents": {**boot(t4["SEC"]["vs_power_opponents"], "mean_residual"),
                                "games": t4["SEC"]["vs_power_opponents"]["games"]},
         "head_to_head_sec_vs_acc": {k: t4["head_to_head_SEC_vs_ACC"][k] for k in ("games", "sec_wins", "acc_wins")},
+        "other_conferences_all_games": {G: {**boot(t4[G]["all"], "mean_residual"), "games": t4[G]["all"]["games"]}
+                                        for G in ("ACC", "Big Ten", "Big 12", "Pac-12")},
     }
 
     # 3. The AP vs strength of record, season-long (T5).
@@ -98,6 +133,14 @@ def main():
         "label_part1": t5["label_part1"], "label_part1_robust": g["label_part1_robust"],
         "label_part2": t5["label_part2"], "label_part2_robust": g["label_part2_robust"],
         "E_SEC_with_t4_all_games_calibration": r(g["by_check"]["SOR top25|x1.0|t4_all"]["E_SEC"]),
+        "with_t4_all_games_calibration": {q: r(v) for q, v in g["by_check"]["SOR top25|x1.0|t4_all"].items()},
+        "with_t4_power_games_calibration": {q: r(v) for q, v in g["by_check"]["SOR top25|x1.0|t4_power"].items()},
+        "other_power_bloc_excess": stat(tstats(np.subtract(t5["primary"]["E_SEC"]["per_season"],
+                                                           t5["primary"]["D_PWR"]["per_season"]))),
+        "strength_vs_record_gap_SEC": {
+            "note": "simulated top 25 ordered by strength minus top 25 ordered by record, SEC slots per poll "
+                    "(the 'noise baseline'); mean over seasons",
+            "mean": r(np.mean([v["baseline"]["SEC"] for v in t5["noise_baseline"]["per_season"].values()]))},
         "E_SEC_vs_performance_top25_descriptive": stat(t5["performance_top25_descriptive"]["E_SEC"]),
     }
     bf = t5["week_bands_vs_final_record"]
@@ -117,6 +160,11 @@ def main():
         "label_part1": t6["label_part1"], "label_part1_robust": t6["robustness_gate"]["label_part1_robust"],
         "E_SEC_sign_holds_in_all_checks": t6["robustness_gate"]["summary"]["E_SEC"]["same_sign_everywhere"],
         "E_SEC_min_across_checks": r(t6["robustness_gate"]["summary"]["E_SEC"]["min_slots"]),
+        "E_SEC_vs_final_performance_top25": r(t6["robustness_gate"]["by_check"]["final performance top 25"]["E_SEC"]),
+        "with_t4_all_games_calibration": {q: r(v) for q, v in
+                                          t6["robustness_gate"]["by_check"]["SOR top25|x1.0|t4_all"].items()},
+        "other_power_bloc_excess": stat(tstats(np.subtract(t6["primary"]["E_SEC"]["per_season"],
+                                                           t6["primary"]["D_PWR"]["per_season"]))),
         "caveat": t6["caveat"],
     }
     n["early_polls_decomposition_t6"] = {
@@ -124,6 +172,9 @@ def main():
         "retention_in_final_top25_by_ap_rank": d["retention_by_ap_rank"],
         **{G: {k: r(v) for k, v in d[G].items()} for G in ("SEC", "Big Ten", "Pac-12", "Big 12", "ACC")},
         "SEC_beyond_expected": stat(d["beyond_tests"]["E_SEC"]),
+        "SEC_share_missing_final_top25": r((d["SEC"]["expected"] + d["SEC"]["beyond"]) / d["SEC"]["a"], 3),
+        "SEC_share_expected_to_miss": r(d["SEC"]["expected"] / d["SEC"]["a"], 3),
+        "note": "descriptive breakdown added after results were seen (DEVIATIONS.md, audit corrections item 4b)",
     }
     ps = t6["preseason_shortfall_vs_SOR"]
     n["preseason_ranked_teams_vs_final_record_t6"] = {
@@ -139,6 +190,7 @@ def main():
         "source": "results/h5_sensitivity.json final_poll_corrected B (game-day poll) and D (final poll)",
         "unit": "schedule-rank places of ~130, top-25 rank-point scale on both sides",
         "SEC_game_day": boot(b["SEC"], "mean"), "ACC_game_day": boot(b["ACC"], "mean"),
+        "Big_12_game_day": boot(b["Big 12"], "mean"), "Big_Ten_game_day": boot(b["Big Ten"], "mean"),
         "SEC_minus_ACC_game_day": {"mean": r(b["sec_minus_acc"]), "ci95": [r(v) for v in b["sec_minus_acc_ci"]]},
         "SEC_final_poll": boot(dd["SEC"], "mean"),
     }
@@ -146,7 +198,9 @@ def main():
     n["per_game_opponent_gap_t2"] = {
         "source": "results/preseason_tests.json T2_schedule_boost_by_week",
         "unit": "opponent's game-day AP rank points minus its final results rank points, per game",
-        **{G: {p: boot(t2[G][p]) for p in ("early (weeks 1-4)", "middle (weeks 5-8)", "late (weeks 9+)")}
+        **{G: {**{p: boot(t2[G][p]) for p in ("early (weeks 1-4)", "middle (weeks 5-8)", "late (weeks 9+)")},
+               "early_minus_late": {"mean": r(t2[G]["early_minus_late"]),
+                                    "ci95": [r(v) for v in t2[G]["early_minus_late_ci"]]}}
            for G in ("SEC", "ACC")},
     }
     sr = hyp["season_rating"]["poll_vs_rating"]
@@ -159,10 +213,9 @@ def main():
     n["ranked_loop_t3"] = {
         "source": "results/t3_loop.json primary_lost_to_ranked_same_conference",
         "note": "places a team is ranked above where its season ends up, after losing to a ranked same-conference team",
-        "SEC": {"games": lp["SEC"]["games"], "mean": r(lp["SEC"]["adjusted_overrating"]),
-                "ci95": [r(v) for v in lp["SEC"]["ci"]]},
-        "ACC": {"games": lp["ACC"]["games"], "mean": r(lp["ACC"]["adjusted_overrating"]),
-                "ci95": [r(v) for v in lp["ACC"]["ci"]]},
+        **{G: {"games": lp[G]["games"], "beyond_typical_for_pre_game_rank": r(lp[G]["adjusted_overrating"]),
+               "ci95": [r(v) for v in lp[G]["ci"]], "before_adjustment": r(lp[G]["raw_overrating"])}
+           for G in ("SEC", "ACC")},
     }
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
