@@ -99,10 +99,10 @@ Section 6 lists every deviation and, importantly, which results had been seen wh
 
 | Data | Source | Seasons | Notes |
 | --- | --- | --- | --- |
-| Game results, venue, conference, Elo | [sportsdataverse/cfbfastR-data](https://github.com/sportsdataverse/cfbfastR-data), `schedules/parquet`, commit `09f2595e` | 2014–2026 | Elo used only as a comparison, never as a model input |
+| Game results, venue, conference, Elo | [sportsdataverse/cfbfastR-data](https://github.com/sportsdataverse/cfbfastR-data), `schedules/parquet`, commit `09f2595e` (2026: `2f9c0044`) | 2014–2026 | Elo used only as a comparison, never as a model input |
 | AP Top 25, weekly, with points and first-place votes | [CollegeFootballData.com](https://collegefootballdata.com) API, `/rankings` | 2014–2026 | Regular season and postseason |
 
-All 39 raw files were pulled once (2026-10-23 17:18 UTC), saved unmodified, and checksummed in `data/MANIFEST.json`. They are not committed: CollegeFootballData.com's terms do not allow publishing stored raw API responses. `src/fetch_data.py` rebuilds them byte for byte from the sources and checks every checksum.
+All 39 raw files were pulled on 2026-10-23 (17:18 UTC), saved unmodified, and checksummed in `data/MANIFEST.json`. The three 2026 files were re-pulled once, on 2026-10-31 (17:08 UTC), to add week 8 and AP poll 9; no historical file changed (the upstream historical schedule files were checked and are byte-identical). They are not committed: CollegeFootballData.com's terms do not allow publishing stored raw API responses. `src/fetch_data.py` rebuilds them byte for byte from the sources and checks every checksum.
 
 ### 3.2 Scope and construction
 
@@ -398,7 +398,7 @@ The 2026 preseason poll ranked nine SEC teams and three ACC teams (Miami #7, SMU
 - **Sanity run.** With the rated model and no swap, the simulated poll agrees with the real one reasonably well (ρ = 0.87; 20 of 25 teams shared).
 - **Primary three-pair swap.** SMU (6-1) rises from a simulated #22 to #9 with Texas's preseason slot. Texas falls from #12 to #14. Miami (#2) and Georgia (#6) do not move.
 - **Nine-slot extension.** Larger moves follow: Louisville and SMU +13, Virginia +9, Pittsburgh +8; Alabama −13, Ole Miss −8, Tennessee −6.
-- **Plausibility.** Every run fails, including the sanity run. The model leaves 6-1 Arizona (real #22) and 6-1 Wake Forest (real #14) unranked, and keeps Michigan, Oklahoma and Oregon (4-3) and Texas A&M (4-4) ranked (real: all unranked). The nine-slot swap adds further violations, ranking 4-3 Louisville and Washington, 4-4 Virginia, and 5-3 Pittsburgh and West Virginia. The real 2026 poll passes the same check.
+- **Plausibility** (the rule's base rates come from poll 8 in 2014–2025, §5.5). Every run fails, including the sanity run. The model leaves 6-1 Arizona (real #22) and 6-1 Wake Forest (real #14) unranked, and keeps Michigan, Oklahoma and Oregon (4-3) and Texas A&M (4-4) ranked (real: all unranked). The nine-slot swap adds further violations, ranking 4-3 Louisville and Washington, 4-4 Virginia, and 5-3 Pittsburgh and West Virginia. The real 2026 poll passes the same check.
 
 These swap results reflect the model's attachment to starting position more than voter behavior, and are not used as evidence.
 
@@ -420,7 +420,7 @@ These swap results reflect the model's attachment to starting position more than
 
 ### 5.8 Exploratory: who is over- and underrated in 2026 so far
 
-Not a hypothesis test (logged in `DEVIATIONS.md` before it was run). For teams in the AP top 25 of poll 8 or the season-only top 25 after week 7, two lenses:
+Not a hypothesis test (logged in `DEVIATIONS.md` before it was run; recomputed through week 8 after the October 31 re-freeze). For teams in the AP top 25 of poll 9 or the season-only top 25 after week 8, two lenses:
 - **Results lens:** season-only rank minus AP rank.
 - **Voter lens:** how far voters have moved the team beyond what the name-blind model predicts from its results, summed over the season.
 
@@ -428,21 +428,18 @@ A team is labelled only when both lenses agree and the gap is at least 5 places.
 
 | Verdict | Team (conference, record) | AP rank | Rank by 2026 results |
 | --- | --- | --- | --- |
-| Overrated | SMU (ACC, 5-1) | 23 | 39 |
-| Overrated | Iowa (Big Ten, 5-1) | 15 | 28 |
-| Overrated | Utah (Big 12, 6-0) | 10 | 17 |
-| Overrated | Kentucky (SEC, 6-1) | 12 | 18 |
-| Overrated | Georgia (SEC, 6-1) | 5 | 10 |
-| Overrated | Missouri (SEC, 5-2) | 22 | 27 |
-| Underrated | James Madison (Sun Belt, 7-0) | unranked | 13 |
-| Underrated | LSU (SEC, 5-2) | 18 | 7 |
-| Underrated | Oregon (Big Ten, 4-2) | unranked | 21 |
+| Overrated | SMU (ACC, 6-1) | 19 | 30 |
+| Overrated | Georgia (SEC, 6-1) | 3 | 9 |
+| Overrated | BYU (Big 12, 6-1) | 8 | 14 |
+| Overrated | Florida (SEC, 5-2) | 17 | 23 |
+| Underrated | LSU (SEC, 6-2) | 15 | 6 |
+| Underrated | James Madison (Sun Belt, 7-1) | unranked | 19 |
 
-Three of the six clearly overrated teams are from the SEC, and one of the three underrated. Of the nine SEC teams on the board, seven have schedules that rank tougher by opponents' game-day AP rank than by opponents' 2026 results (for example Missouri 20th vs 58th, Ole Miss 8th vs 38th). This matches the H5 mechanism, but it is one season after seven weeks: ratings are noisy, see only scores, and are not a test.
+Two of the four clearly overrated teams are from the SEC, and one of the two underrated. Of the nine SEC teams on the board, eight have schedules that rank tougher by opponents' game-day AP rank than by opponents' 2026 results (for example Missouri 18.5th vs 57th and Florida 11.5th vs 26.5th; tied ranks are averaged). Georgia is the exception. This matches the H5 mechanism, but it is one season after eight weeks: ratings are noisy, see only scores, and are not a test. Strength of record for 2026 (§5.12) is a separate, résumé-style view of the same games.
 
-![Figure 22. 2026 after week 7: AP rank and rank by this season's results for every team in either top 25.](results/figures/fig22_2026_over_under.png)
+![Figure 22. 2026 after week 8: AP rank and rank by this season's results for every team in either top 25.](results/figures/fig22_2026_over_under.png)
 
-*Figure 22. 2026 after week 7: AP rank (filled) and rank by this season's results (open). Exploratory.*
+*Figure 22. 2026 after week 8: AP rank (filled) and rank by this season's results (open). Exploratory.*
 
 ### 5.9 Two tests of the preseason link (added last)
 
@@ -545,8 +542,12 @@ Every entry is dated in `DEVIATIONS.md` and was committed before use. The last c
 | 16 | T1 and T2: tests of the preseason link (§5.9) | Close the two gaps between the claim and the evidence | All results, including §5.8 |
 | 17 | T3: in-season ranked loop (§5.10) | Test the explanation proposed for T2 | All results, including T1 and T2 |
 | 18 | T4: does the rating overrate the SEC? (§5.11) | Kyle's objection that the results yardstick is biased | All results, including T3 |
+| 19 | 2026 re-frozen through week 8 (AP poll 9); historical files unchanged (2026-10-31) | The methodology's 2026 analyses cover all completed weeks | All results through week 7 |
+| 20 | T5: ranking-independent strength of record against the AP top 25 (§5.12; 2026-10-31) | Kyle asked for results-only evidence of why the SEC is ranked so high | All results, including H2 and T1–T4; the performance-top-25 version was seen during design and is descriptive only |
+| 21 | T6: early polls against the end-of-season record (§5.13; 2026-10-31) | Kyle asked whether SEC teams were ranked higher early than they should have been | All earlier results; logged blind to T5's results |
+| 22 | Corrections after an audit of T5 and T6 (§5.14; 2026-10-31) | Label-level robustness verdict missing, gate units mixed, logged outputs left out, wording | T5 and T6 results; no logged number changes; two descriptive outputs added post hoc |
 
-Deviations 5, 6, 8, 10, 11, 12, 15, 16, 17 and 18 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
+Deviations 5, 6, 8, 10, 11, 12 and 15–22 were made after some results were known. None changed how the holdout was scored. Results under the original specifications are reported alongside wherever they exist, and the original Elo-based results remain in `results/hypothesis.json`.
 
 ---
 
@@ -637,4 +638,7 @@ python run_all.py
 | T1 and T2 (preseason link) | `results/preseason_tests.json` | `src/preseason_tests.py` |
 | T3 (ranked loop), every qualifying game | `results/t3_loop.json`, `results/t3_loop_games.csv` | `src/loop_test.py` |
 | T4 (rating referee), every game | `results/t4_referee.json`, `results/t4_referee_games.csv` | `src/referee_test.py` |
-| Figures 1–25 | `results/figures/*.png` | `src/figures.py` |
+| T5 (strength of record vs the AP top 25); every team-week's strength of record, Colley and performance ranks (no poll data); 2026 table | `results/t5_sor.json`, `results/sor_weekly.csv`, `results/sor_2026.csv` | `src/sor_test.py` |
+| T6 (early polls vs the end-of-season record), with decomposition | `results/t6_early.json` | `src/early_test.py` |
+| Every number in the summary and the LinkedIn post, with its source | `results/post_numbers.json`, `SUMMARY.md` | `src/post_numbers.py` |
+| Figures 1–29 | `results/figures/*.png` | `src/figures.py` |
