@@ -606,10 +606,20 @@ def fig_counterfactual_slots():
     ax.grid(axis="x", visible=False)
     ax.set_ylabel(f"Top-25 slots at poll {last}")
     ax.legend(loc="upper right")
-    ax.set_title("2026 swap (rated model): every model run fails the reality check")
+    checks = [c["plausibility_no_swap"], c["swap3"]["plausibility"], c["swap9"]["plausibility"]]
+    failed = sum(not p["plausible"] for p in checks)
+    ax.set_title("2026 swap (rated model): " + ("every model run fails the reality check" if failed == 3
+                 else f"{failed} of 3 model runs fail the reality check"))
+    p = c["plausibility_no_swap"]
+    issues = ([f"leaves {', '.join(p['strong_left_unranked'])} unranked despite a strong record"]
+              if p["strong_left_unranked"] else []) + \
+             ([f"keeps {', '.join(p['three_plus_losses_ranked'])} ranked with 3+ losses"]
+              if p["three_plus_losses_ranked"] else [])
     save(fig, "fig18_counterfactual_slots.png",
-         "Not evidence: every run, including the no-swap run, fails the plausibility check.\n"
-         "Model runs leave 6-1 Wake Forest unranked and keep 3-3 Oklahoma ranked; the real poll does neither.")
+         ("Not evidence: every run, including the no-swap run, fails the plausibility check.\n" if failed == 3
+          else "Read with care: runs that fail the plausibility check are not evidence.\n")
+         + ("Without any swap the model " + "; and ".join(issues) + "; the real poll does neither."
+            if issues else "The no-swap run passes the plausibility check."))
 
 
 def fig_counterfactual_teams():
@@ -735,7 +745,8 @@ def fig_2026_board():
     ax.plot([], [], "s", color=ACC, label="ACC")
     ax.plot([], [], "s", color=GRAY_MID, label="other")
     ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.06), ncol=5, fontsize=8)
-    ax.set_title("2026 after week 7: AP poll vs this season's results")
+    week = int(pd.read_csv(PROC / "team_weeks.csv", usecols=["season", "week"]).query("season == 2026").week.max())
+    ax.set_title(f"2026 after week {week}: AP poll vs this season's results")
     save(fig, "fig22_2026_over_under.png",
          "Exploratory. Labelled only when the voter-model lens agrees and the gap is 5+ places. "
          "Unranked teams shown at 26 (their true poll spot is 26 or lower).\n"

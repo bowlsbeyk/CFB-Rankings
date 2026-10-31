@@ -10,6 +10,9 @@ Writes data/MANIFEST.json with source URL, pull time, and SHA-256 for every file
 plus the upstream commit hash of cfbfastR-data.
 
 Needs CFBD_API_KEY in the environment. The key is never printed or written to disk.
+
+Usage: python src/pull_data.py                 # full freeze (original, 2026-10-23)
+       python src/pull_data.py --season 2026   # re-freeze one season, keep the rest
 """
 
 import hashlib
@@ -49,7 +52,7 @@ def run(cmd, cwd=None):
                           capture_output=True, text=True).stdout.strip()
 
 
-def pull_schedules():
+def pull_schedules(seasons=SEASONS):
     if CLONE.exists():
         shutil.rmtree(CLONE)
     run(["git", "clone", "--depth", "1", "--filter=blob:none", "--sparse",
@@ -59,7 +62,7 @@ def pull_schedules():
 
     SCHED_DIR.mkdir(parents=True, exist_ok=True)
     files = {}
-    for season in SEASONS:
+    for season in seasons:
         name = f"cfb_schedules_{season}.parquet"
         src = CLONE / "schedules" / "parquet" / name
         if not src.exists():
@@ -93,10 +96,15 @@ def cfbd_get(path):
             time.sleep(2 ** (attempt + 1))
 
 
-def pull_polls():
+def ap_weeks(body):
+    return sorted(w["week"] for w in json.loads(body)
+                  if any(p["poll"] == "AP Top 25" for p in w["polls"]))
+
+
+def pull_polls(seasons=SEASONS):
     POLL_DIR.mkdir(parents=True, exist_ok=True)
     files = {}
-    for season in SEASONS:
+    for season in seasons:
         for season_type in ("regular", "postseason"):
             path = f"/rankings?year={season}&seasonType={season_type}"
             body = cfbd_get(path)
@@ -111,8 +119,30 @@ def pull_polls():
     return files
 
 
+def refresh_season(season, pulled_at):
+    """Re-freeze one season's files in place; every other manifest entry is kept."""
+    manifest = json.loads(MANIFEST.read_text())
+    commit, sched_files = pull_schedules([season])
+    poll_files = pull_polls([season])
+    regular = POLL_DIR / f"rankings_{season}_regular.json"
+    weeks = ap_weeks(regular.read_bytes())
+    poll_files[str(regular.relative_to(ROOT))]["frozen_through_week"] = max(weeks)
+    for rel, meta in {**sched_files, **poll_files}.items():
+        meta["pulled_at_utc"] = pulled_at
+        manifest["files"][rel] = meta
+    manifest["files"] = dict(sorted(manifest["files"].items()))
+    manifest.setdefault("refreshes", []).append(
+        {"season": season, "pulled_at_utc": pulled_at, "cfbfastR_commit": commit,
+         "ap_poll_weeks": weeks})
+    MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n")
+    print(f"Re-froze {season}: schedules @ {commit}, AP polls {weeks[0]}-{weeks[-1]}")
+
+
 def main():
     pulled_at = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    if len(sys.argv) == 3 and sys.argv[1] == "--season":
+        refresh_season(int(sys.argv[2]), pulled_at)
+        return
     commit, sched_files = pull_schedules()
     poll_files = pull_polls()
     manifest = {

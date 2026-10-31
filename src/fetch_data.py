@@ -2,9 +2,9 @@
 
 The raw files are not committed (CollegeFootballData.com terms; DEVIATIONS.md,
 2026-10-23). This script rebuilds them byte for byte:
-  - schedules from sportsdataverse/cfbfastR-data at the pinned commit (no key)
-  - polls from the CFBD API (free key in CFBD_API_KEY); the 2026 regular season
-    is cut back to the weeks that were frozen before checking
+  - schedules from sportsdataverse/cfbfastR-data at each file's pinned commit (no key)
+  - polls from the CFBD API (free key in CFBD_API_KEY); a season still in progress
+    is cut back to the poll weeks that were frozen ("frozen_through_week") before checking
 
 Files already present with the right checksum are left alone, so this needs the
 network (and the key) only for files that are missing. Any mismatch is an error.
@@ -22,8 +22,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 MANIFEST = ROOT / "data" / "MANIFEST.json"
 SCHEDULE_RAW = "https://raw.githubusercontent.com/sportsdataverse/cfbfastR-data/{commit}/schedules/parquet/{name}"
-# Poll weeks included at the freeze for a season still in progress.
-FROZEN_THROUGH_WEEK = {(2026, "regular"): 8}
 
 
 def sha256(data):
@@ -42,7 +40,8 @@ def get(url, headers=None):
             time.sleep(2 ** (attempt + 1))
 
 
-def fetch_schedule(rel, commit):
+def fetch_schedule(rel, meta):
+    commit = meta["source_url"].split("/blob/")[1].split("/")[0]
     return get(SCHEDULE_RAW.format(commit=commit, name=Path(rel).name))
 
 
@@ -52,8 +51,7 @@ def fetch_poll(rel, meta):
         sys.exit(f"{rel} is missing and CFBD_API_KEY is not set. Get a free key at "
                  "https://collegefootballdata.com/key and export it, then re-run.")
     body = get(meta["source_url"], {"Authorization": f"Bearer {key}", "Accept": "application/json"})
-    stem = Path(rel).stem.split("_")  # rankings_<season>_<type>
-    cut = FROZEN_THROUGH_WEEK.get((int(stem[1]), stem[2]))
+    cut = meta.get("frozen_through_week")
     if cut is not None:
         weeks = [w for w in json.loads(body) if w["week"] <= cut]
         body = json.dumps(weeks, separators=(",", ":"), ensure_ascii=False).encode()
@@ -62,14 +60,13 @@ def fetch_poll(rel, meta):
 
 def main():
     manifest = json.loads(MANIFEST.read_text())
-    commit = manifest["sources"]["cfbfastR-data"]["commit"]
     fetched = kept = 0
     for rel, meta in manifest["files"].items():
         path = ROOT / rel
         if path.exists() and sha256(path.read_bytes()) == meta["sha256"]:
             kept += 1
             continue
-        body = fetch_schedule(rel, commit) if "/schedules/" in rel else fetch_poll(rel, meta)
+        body = fetch_schedule(rel, meta) if "/schedules/" in rel else fetch_poll(rel, meta)
         if sha256(body) != meta["sha256"]:
             sys.exit(f"Checksum mismatch for {rel}: the source no longer matches the frozen data.")
         path.parent.mkdir(parents=True, exist_ok=True)
