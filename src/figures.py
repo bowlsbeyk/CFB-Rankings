@@ -823,13 +823,105 @@ def fig_t3():
          "but each one is judged like anyone else's: the loop is not supported.")
 
 
+def fig_sor_levels():
+    t = load("t5_sor.json")["headline_levels"]
+    groups = ["SEC", "Big Ten", "Big 12", "Pac-12", "ACC", "Notre Dame", "Other"]
+    labels = {"Pac-12": "Pac-12 (to 2023)", "Other": "Group of 5 & others"}
+    fig, ax = plt.subplots(figsize=(9, 4.2))
+    for i, G in enumerate(groups):
+        ap, sor = t[G]["ap25"], t[G]["sor25"]
+        color = CONF_COLOR.get(G, GRAY_MID) if G in ("SEC", "ACC") else GRAY_MID
+        ax.plot([sor, ap], [i, i], color=GRID, lw=3, zorder=1)
+        ax.plot(sor, i, "o", ms=10, mfc=SURFACE, mec=color, mew=2, zorder=3)
+        ax.plot(ap, i, "o", ms=10, color=color, mec=SURFACE, mew=1.5, zorder=3)
+        ax.annotate(f"AP {ap:.1f}  |  record {sor:.1f}", (max(ap, sor), i), xytext=(10, 0),
+                    textcoords="offset points", va="center", fontsize=8, color=INK2)
+    ax.plot([], [], "o", color=GRAY_DARK, label="teams in the AP top 25")
+    ax.plot([], [], "o", mfc=SURFACE, mec=GRAY_DARK, mew=2, label="teams in the strength-of-record top 25")
+    ax.legend(loc="lower right", fontsize=8)
+    ax.set_yticks(range(len(groups)))
+    ax.set_yticklabels([labels.get(G, G) for G in groups])
+    ax.invert_yaxis()
+    ax.set_xlim(0, 9)
+    ax.grid(axis="y", visible=False)
+    ax.set_xlabel("Average number of teams per poll (polls 6 to end of regular season)")
+    ax.set_title("Why the SEC is ranked so high: the most top-25 records")
+    save(fig, "fig26_sor_levels.png",
+         "2014-2025. Strength of record uses only that season's scores and opponents: no polls, preseason or names. "
+         "The SEC averages the most teams in both.")
+
+
+def fig_excess_by_stage():
+    t5 = load("t5_sor.json")["week_bands"]
+    t6 = load("t6_early.json")
+    stages = [("Polls 1-5\n(vs final record)", t6["primary"]["E_SEC"]["mean"],
+               t6["primary"]["E_SEC"]["mean"] - t6["primary"]["D_PWR"]["mean"],
+               t6["primary"]["E_SEC"]["mean"] - t6["primary"]["D_ACC"]["mean"])]
+    for b, lab in (("polls 6-8", "Polls 6-8"), ("polls 9-11", "Polls 9-11"), ("polls 12+", "Polls 12+"),
+                   ("end of regular season", "Final regular-\nseason poll")):
+        x = t5[b]
+        stages.append((lab, x["E_SEC"], x["E_SEC"] - x["D_PWR"], x["E_SEC"] - x["D_ACC"]))
+    fig, ax = plt.subplots(figsize=(9, 4))
+    xs = np.arange(len(stages))
+    for k, (name, color) in enumerate((("SEC", SEC), ("Other power conferences (avg)", GRAY_MID), ("ACC", ACC))):
+        ys = [st[1 + k] for st in stages]
+        ax.plot(xs, ys, color=color, marker="o", ms=8, mec=SURFACE, mew=1.5, label=name)
+        if k == 0:
+            for xi, yi in zip(xs, ys):
+                ax.annotate(f"{yi:+.1f}", (xi, yi), xytext=(0, 8), textcoords="offset points",
+                            ha="center", fontsize=8, color=INK2)
+    ax.axhline(0, color=AXIS, lw=1)
+    ax.axvline(0.5, color=GRID, lw=1, ls="-")
+    ax.set_xticks(xs)
+    ax.set_xticklabels([st[0] for st in stages], fontsize=8)
+    ax.set_ylabel("AP top-25 spots beyond\nstrength of record, per poll")
+    ax.legend(loc="upper right", fontsize=8)
+    ax.grid(axis="x", visible=False)
+    ax.set_title("The SEC's extra AP spots are largest early and fade by season's end")
+    save(fig, "fig27_excess_by_stage.png",
+         "2014-2025. Polls 1-5 compared with the end-of-season record (T6); later polls with the record to date (T5). "
+         "Every power conference gets extra spots early;\nthe SEC gets the most. Results-only rankings from few "
+         "games also undercount strong conferences, so part of this is noise, not voters.")
+
+
+def fig_2026_sor():
+    d = pd.read_csv(RES / "sor_2026.csv")
+    d = d[(d.ap_rank <= 25) | (d.sor_rank <= 25)].copy()
+    d = d.sort_values("sor_rank").reset_index(drop=True)
+    week = int(pd.read_csv(PROC / "team_weeks.csv", usecols=["season", "week"]).query("season == 2026").week.max())
+    fig, ax = plt.subplots(figsize=(9, 9.5))
+    for i, row in d.iterrows():
+        ap = row.ap_rank if pd.notna(row.ap_rank) else 26
+        color = SEC if row.group == "SEC" else ACC if row.group == "ACC" else GRAY_MID
+        ax.plot([row.sor_rank_min, min(row.sor_rank_max, 30)], [i, i], color=color, lw=1, alpha=0.5, zorder=1)
+        ax.plot([row.sor_rank, ap], [i, i], color=GRID, lw=3, zorder=0)
+        ax.plot(row.sor_rank, i, "o", ms=9, mfc=SURFACE, mec=color, mew=2, zorder=3)
+        ax.plot(ap, i, "o", ms=8, color=color, mec=SURFACE, mew=1.5, zorder=3)
+    ax.set_yticks(range(len(d)))
+    ax.set_yticklabels([f"{t} ({r})" for t, r in zip(d.team, d.record)], fontsize=8)
+    ax.set_ylim(len(d) - 0.4, -0.6)
+    ax.set_xlim(0, 31)
+    ax.set_xticks([1, 5, 10, 15, 20, 26, 30])
+    ax.set_xticklabels(["1", "5", "10", "15", "20", "unranked", "30+"])
+    ax.grid(axis="y", visible=False)
+    ax.plot([], [], "o", mfc=SURFACE, mec=GRAY_DARK, mew=2, label="strength-of-record rank (line: range across settings)")
+    ax.plot([], [], "o", color=GRAY_DARK, label="AP rank")
+    ax.plot([], [], "s", color=SEC, label="SEC")
+    ax.plot([], [], "s", color=ACC, label="ACC")
+    ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.05), ncol=2, fontsize=8)
+    ax.set_title(f"2026 after week {week}: strength of record vs AP poll {week + 1}")
+    save(fig, "fig28_2026_sor.png",
+         "Strength of record: how likely a typical top-25 team would be to match this record against this schedule, "
+         "from scores only.\nDescriptive: one season, eight weeks.")
+
+
 def main():
     for f in (fig_timeline, fig_data_overview, fig_training_mae, fig_replay_training, fig_climbers,
               fig_holdout, fig_holdout_scatter, fig_rating_validation, fig_elo_carryover,
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
               fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity,
-              fig_2026_board, fig_t1, fig_t2, fig_t3):
+              fig_2026_board, fig_t1, fig_t2, fig_t3, fig_sor_levels, fig_excess_by_stage, fig_2026_sor):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 
