@@ -19,7 +19,8 @@ import pandas as pd
 
 from season_rating import colley
 from sor_test import (BAND, FCS, GROUPS, HIST, POWER_OTHERS, PRIMARY, SIGMA, bench_value,
-                      boot_seasons, group_of, offsets_from_t4, performance_fast, schedule_arrays,
+                      boot_seasons, gate_summary, gate_verdict, group_of, offsets_from_t4,
+                      performance_fast, schedule_arrays,
                       season_games, shares, sor_probs, tstats, variants)
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -71,6 +72,46 @@ def early_excess(season, tw, final, key, ascending, use="slots", polls=EARLY_POL
                 m = m_slot[sel].sum() if use == "slots" else m_pts[sel].sum()
                 acc.setdefault(G, []).append(float(a - m))
     return {G: float(np.mean(v)) for G, v in acc.items()}
+
+
+def decomposition(tw, finals, key, polls=EARLY_POLLS):
+    """Split each group's early excess into (i) the drop expected for teams at those AP ranks,
+    (ii) the drop beyond that, and (iii) unranked teams entering the final top 25.
+    E_G = expected + beyond - entrants. Ranks pooled in buckets of five over all teams and seasons.
+    Descriptive, added after the audit (DEVIATIONS.md 2026-10-31)."""
+    rows = []
+    for s in HIST:
+        final = finals[s]
+        m_slot, _ = shares(final[key])
+        s_tw = tw[tw.season == s].set_index(["week", "team"]).prior_rank
+        for p in polls:
+            ap = pd.Series([s_tw.get((p, t), np.nan) for t in final.index], index=final.index)
+            a_slot, _ = shares(ap)
+            rows.append(pd.DataFrame({"season": s, "poll": p, "group": final.group, "ap_rank": ap,
+                                      "a": a_slot, "m": m_slot}))
+    d = pd.concat(rows)
+    ranked = d[d.ap_rank <= 25].copy()
+    ranked["bucket"] = ((ranked.ap_rank - 1) // 5).astype(int)
+    ranked["drop"] = ranked.a - ranked.m
+    retention = 1 - ranked.groupby("bucket").drop.mean()
+    ranked["expected"] = ranked.bucket.map(1 - retention)
+    ranked["beyond"] = ranked["drop"] - ranked.expected
+    ent = d[~(d.ap_rank <= 25)].groupby(["season", "poll", "group"]).m.sum()
+    rk = ranked.groupby(["season", "poll", "group"])[["a", "expected", "beyond"]].sum()
+    per = rk.join(ent.rename("entrants"), how="outer").fillna(0).groupby(["season", "group"]).mean()
+    out = {"retention_by_ap_rank": {f"{5 * b + 1}-{5 * b + 5}": round(float(v), 3)
+                                    for b, v in retention.items()}}
+    for G in GROUPS:
+        g = per.xs(G, level="group") if G in per.index.get_level_values("group") else None
+        if g is None:
+            continue
+        out[G] = {c: float(g[c].mean()) for c in ("a", "expected", "beyond", "entrants")}
+    beyond = {s: {G: float(per.loc[(s, G), "beyond"]) for G in GROUPS if (s, G) in per.index} for s in HIST}
+    out["beyond_tests"] = {k: tstats(v) for k, v in quantities(beyond).items()}
+    out["note"] = ("a = AP top-25 slots held per early poll; expected = drop out of the final top 25 expected at "
+                   "those AP ranks; beyond = drop beyond that; entrants = unranked teams entering the final top 25. "
+                   "E = expected + beyond - entrants.")
+    return out
 
 
 def quantities(per):
@@ -133,14 +174,11 @@ def main():
     for key, nm in (("colley", "final Colley top 25"), ("performance", "final performance top 25")):
         p = {s: early_excess(s, tw, finals[s], key, False) for s in HIST}
         gate[nm] = {k: float(np.mean(v)) for k, v in quantities(p).items()}
-    robust = {}
-    for k in ("E_SEC", "D_PWR", "D_ACC"):
-        m0 = st[k]["mean"]
-        vals = [g[k] for g in gate.values()]
-        robust[k] = {"same_sign_everywhere": bool(all(np.sign(v) == np.sign(m0) for v in vals)),
-                     "within_band_everywhere": bool(all(abs(v) <= BAND for v in vals)),
-                     "min": float(min(vals)), "max": float(max(vals))}
-    report["robustness_gate"] = {"by_check": gate, "summary": robust}
+    robust = gate_summary(gate, {k: st[k]["mean"] for k in ("E_SEC", "D_PWR", "D_ACC")})
+    report["robustness_gate"] = {"by_check": gate, "summary": robust,
+                                 **gate_verdict(robust, report["label_part1"], report["label_part2"])}
+
+    report["decomposition"] = decomposition(tw, finals, prim)
 
     # Preseason poll alone (descriptive).
     pp = {s: early_excess(s, tw, finals[s], prim, True, polls=(1,)) for s in HIST}
@@ -176,6 +214,13 @@ def main():
         "by_group_n": pr.groupby("group").size().to_dict(),
         **{k: tstats(v) for k, v in a.items()},
     }
+    ps = report["preseason_shortfall_vs_SOR"]
+    ps["reading_hyped"] = ("HYPED: preseason-ranked SEC teams fell further short than typical"
+                           if ps["A_SEC"]["ci95_t"][0] > 0 and ps["A_SEC"]["seasons_positive"] >= 9
+                           else "NOT SHOWN: no evidence preseason-ranked SEC teams fell further short than typical")
+    report["caveat"] = ("Early polls reflect what voters knew then. 'Not justified by how the season turned out' "
+                        "measures hype in hindsight; it is not proof of intent. Every conference's early picks "
+                        "regress somewhat, which is why the SEC is compared with the other power conferences.")
     OUT.write_text(json.dumps(report, indent=2) + "\n")
     print("PART 1:", report["label_part1"])
     print("PART 2:", report["label_part2"])
@@ -184,7 +229,12 @@ def main():
         print(f"  {k}: {x['mean']:+.2f} (95% t {x['ci95_t'][0]:+.2f}, {x['ci95_t'][1]:+.2f}) "
               f"positive {x['seasons_positive']}/11, sign-flip p {x['sign_flip_p']:.3f}")
     print("robust:", json.dumps(robust))
-    ps = report["preseason_shortfall_vs_SOR"]
+    g = report["robustness_gate"]
+    print("label robust (logged rule): part 1", g["label_part1_robust"], "part 2", g["label_part2_robust"])
+    print(ps["reading_hyped"])
+    dc = report["decomposition"]
+    print("decomposition SEC:", {k: round(v, 2) for k, v in dc["SEC"].items()},
+          "beyond-expected SEC", round(dc["beyond_tests"]["E_SEC"]["mean"], 2), dc["beyond_tests"]["E_SEC"]["ci95_t"])
     print("preseason shortfall vs SOR A_SEC:", round(ps["A_SEC"]["mean"], 2), ps["A_SEC"]["ci95_t"],
           "D_PWR:", round(ps["D_PWR"]["mean"], 2), ps["D_PWR"]["ci95_t"])
 

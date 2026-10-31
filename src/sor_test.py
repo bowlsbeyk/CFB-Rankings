@@ -197,7 +197,7 @@ def label_part1(e, dpwr):
     under = e["ci95_t"][1] < 0 and e["seasons_positive"] <= 2
     specific = dpwr["ci95_t"][0] > 0 and dpwr["seasons_positive"] >= 9
     if over and consistent:
-        return "over-ranked by less than half a slot per poll" + ("" if specific else
+        return "over-ranked by less than half a slot per poll" + (" (SEC-specific)" if specific else
                " (shared with the other power conferences, not SEC-specific)")
     if over:
         return "OVER-RANKED, " + ("SEC-SPECIFIC" if specific else
@@ -351,6 +351,31 @@ def noise_baseline(season, games, teams, grp, last_w, rng):
 
 # ----------------------------------------------------------------- main
 
+def gate_summary(gate, primary_means):
+    """Per quantity: does the sign hold in every check, and where does it fail? The band test and
+    min/max use slot-based checks only; rank points are on a different scale (each side sums to 325)."""
+    out = {}
+    for k, m0 in primary_means.items():
+        flips = [c for c, g in gate.items() if np.sign(g[k]) != np.sign(m0)]
+        slots = [g[k] for c, g in gate.items() if c != "rank points"]
+        out[k] = {"same_sign_everywhere": not flips, "sign_flips_under": flips,
+                  "within_band_everywhere": bool(all(abs(v) <= BAND for v in slots)),
+                  "min_slots": float(min(slots)), "max_slots": float(max(slots)),
+                  "rank_points": float(gate["rank points"][k])}
+    return out
+
+
+def gate_verdict(robust, lab1, lab2):
+    """The logged rule: a label is robust only if, for each of E_SEC, D_PWR and D_ACC, the sign (or,
+    for 'consistent', a point estimate within +/-0.5) holds across every check."""
+    test = "within_band_everywhere" if "CONSISTENT" in lab1 else "same_sign_everywhere"
+    ok1 = all(robust[k][test] for k in robust)
+    ok2 = all(robust[k]["same_sign_everywhere"] for k in robust)
+    return {"label_part1_robust": bool(ok1), "label_part2_robust": bool(ok2),
+            "rule": "robust only if E_SEC, D_PWR and D_ACC each keep their sign in every check "
+                    "(DEVIATIONS.md; verdict added 2026-10-31 after the audit, no number changed)"}
+
+
 def main():
     tw = pd.read_csv(TABLE)
     offsets = offsets_from_t4()
@@ -400,14 +425,9 @@ def main():
     qf = quantities(fore)
     gate["end-of-season SOR (foresight)"] = {k: float(np.mean(v)) for k, v in qf.items()}
     report["foresight"] = {k: tstats(v) for k, v in qf.items()}
-    robust = {}
-    for k in ("E_SEC", "D_PWR", "D_ACC"):
-        m0 = prim_stats[k]["mean"]
-        vals = [g[k] for g in gate.values()]
-        robust[k] = {"same_sign_everywhere": bool(all(np.sign(v) == np.sign(m0) for v in vals)),
-                     "within_band_everywhere": bool(all(abs(v) <= BAND for v in vals)),
-                     "min": float(min(vals)), "max": float(max(vals))}
-    report["robustness_gate"] = {"by_check": gate, "summary": robust}
+    robust = gate_summary(gate, {k: prim_stats[k]["mean"] for k in ("E_SEC", "D_PWR", "D_ACC")})
+    report["robustness_gate"] = {"by_check": gate, "summary": robust,
+                                 **gate_verdict(robust, report["label_part1"], report["label_part2"])}
 
     # Descriptive: performance top 25 (not blind; see log).
     p = {s: season_excess(hist[s], "performance", False) for s in HIST}
@@ -462,6 +482,21 @@ def main():
     pe = {s: season_excess(hist[s][hist[s].week == hist[s].week.max()], prim, True) for s in HIST}
     rb["end of regular season"] = {k: float(np.mean(v)) for k, v in quantities(pe).items()}
     report["week_bands"] = rb
+
+    # Same bands against the end-of-regular-season record (T6's yardstick), so every stage of the
+    # season is measured the same way (descriptive; added after the audit, DEVIATIONS.md 2026-10-31).
+    rf = {}
+    for bname, (lo, hi_) in list(bands.items()) + [("end of regular season", (None, None))]:
+        pb = {}
+        for s in HIST:
+            dd = hist[s]
+            final = dd[dd.week == dd.week.max()]
+            sel = dd[dd.week == dd.week.max()] if lo is None else dd[dd.week.between(lo, hi_)]
+            pb[s] = season_excess(sel, prim, True, foresight=final)
+        q = quantities(pb)
+        rf[bname] = {k: tstats(v) for k, v in q.items()}
+        rf[bname]["by_group"] = {G: float(np.mean([pb[s][G] for s in HIST if G in pb[s]])) for G in GROUPS}
+    report["week_bands_vs_final_record"] = rf
 
     # Secondary team-level gap (descriptive; whole-season resampling).
     h_all = pd.concat(hist.values())
@@ -546,6 +581,8 @@ def main():
               f"{x['ci90_t'][0]:+.2f}, {x['ci90_t'][1]:+.2f}) positive {x['seasons_positive']}/11, "
               f"sign-flip p {x['sign_flip_p']:.3f}")
     print("robustness:", json.dumps(robust))
+    g = report["robustness_gate"]
+    print("label robust (logged rule): part 1", g["label_part1_robust"], "part 2", g["label_part2_robust"])
 
 
 if __name__ == "__main__":

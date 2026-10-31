@@ -322,3 +322,34 @@ Kyle asked whether SEC teams were ranked higher in the early weeks than they sho
 - **T1 redone with strength of record:** for every preseason-ranked team, final SOR rank (capped at 26) minus preseason rank, adjusted by a straight-line fit across all teams on preseason rank. Per-season mean by group gives A_SEC, D_PWR and D_ACC with the same t-statistics; the "hyped" reading uses the same 95% plus 9-of-11 rule. Also: share of each group's preseason-ranked teams finishing outside the final SOR top 25.
 
 **Caveat stated with the result.** Early polls reflect what voters knew then (returning players, coaching changes). "Not justified by how the season turned out" measures hype in hindsight; it is not proof of intent. Every conference's early picks regress somewhat, which is why the SEC is compared with the other power conferences.
+
+## 2026-10-31 — Corrections after the T5/T6 audit (no logged number changes)
+
+After T5 and T6 ran, an independent audit checked both scripts against their entries above, hunted for bugs and checked how the results were described. Each finding was then checked by two skeptics asked to refute it. No bug changed a logged number: T6 reruns byte for byte apart from the added fields, and T5's logged numbers are unchanged apart from the added fields. These changes are made before the reruns that use them.
+
+**1. Robustness verdict per label (was missing).** The code wrote a sign check for each quantity but never applied the logged rule ("a label is robust only if, for each of E_SEC, D_PWR and D_ACC, the sign holds across all of these"). The run commits read the gate on E_SEC alone for Part 1. That was wrong. Under the logged rule:
+- **T5 Part 1: not robust.** D_PWR turns negative under the T4 all-games offset (−0.04), and E_SEC falls from +0.68 to +0.08 there.
+- **T5 Part 2: not robust.** D_ACC turns negative under both T4 offsets (−0.56 and −0.20).
+- **T6 Part 1: not robust under the literal rule,** because D_ACC turns negative under the T4 all-games offset (−0.15). E_SEC and D_PWR keep their sign in all 14 checks (E_SEC at least +0.93).
+- **T6 Part 2:** inconclusive, and not robust.
+
+The scripts now write `label_part1_robust` and `label_part2_robust`, and list the checks where each sign flips.
+
+**2. Gate summary units.** The min/max and the ±0.5 band check mixed rank points (each side sums to 325) with slot counts. They now use slot checks only, and rank points are reported on their own.
+
+**3. T6 outputs the logged pieces it left out.** It now writes the "hyped" reading for the preseason shortfall (result: NOT SHOWN) and the caveat the log requires with the result.
+
+**4. Two descriptive additions, post hoc, after results were seen; no claim language.**
+- **(a) T5 week bands measured against the end-of-regular-season record** (T6's yardstick). Every stage of the season is then measured the same way. The logged bands measure against the record to date, which gives polls 6–8 a different yardstick from polls 1–5.
+- **(b) A T6 decomposition of each group's early excess** into three parts: the drop out of the final top 25 expected for teams at those AP ranks (rank buckets of five, pooled over all teams and seasons), the drop beyond that, and unranked teams entering the final top 25.
+
+**5. The "noise baseline" is described accurately from now on.** The audit showed it barely depends on the simulated noise: SEC +1.58 with no noise and +1.52 at the logged SD. What it measures is the built-in gap between a top 25 ordered by strength and a top 25 ordered by record. It is reported as that. The code and the JSON key are unchanged. It is seeded `default_rng([0, season])`, not a single seed 0.
+
+**6. Wording of results, following the audit:**
+- T5's "over-ranked" means relative to strength of record. Against the margin-based performance top 25 (descriptive, not blind) the excess is +0.07 (95% t −0.32 to +0.45). Most of the T5 excess is in polls 6–8.
+- T6's early excess is reported with the logged hindsight caveat and the decomposition.
+- The wide interval on the preseason shortfall is reported as "no evidence of", not as "no shortfall".
+- The captions of Figures 26 and 27 are corrected.
+- A label branch not reached in any run (over-ranked, consistent and SEC-specific all at once) now says "SEC-specific".
+
+**Refuted by the skeptics, so not acted on:** the claim that "shared with the other power conferences" is contradicted by the data. Taken as the logged bloc (the mean of ACC, Big Ten, Big 12 and Pac-12 when present), the other power conferences pass the same over-ranking rule in T5 (+0.18, 95% t +0.03 to +0.32, 9 of 11 seasons) and in T6 (+0.47, 95% t +0.13 to +0.81, 10 of 11 seasons).
