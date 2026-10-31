@@ -519,6 +519,99 @@ Kyle objected that the finding "SEC schedules are tougher by results" may itself
 
 **Result: the objection is refuted.** Against outsiders, SEC teams do slightly better than the rating predicts, not worse. Against power-conference opponents they do almost exactly as predicted. So the rating does not overrate the SEC, and the finding that SEC schedules are tougher by results is not an artifact of how the rating calibrates conference strength. Against power-conference opponents it is the ACC that falls short of its rating, by about three points a game. In raw head-to-head games, with no model, the SEC went 58–46 against the ACC over 2014–2025, winning by 4.1 points on average; in bowls the two split, SEC 4 of 9.
 
+### 5.12 Is the SEC ranked so high because of its results? (T5, added last)
+
+Kyle rejected the conclusion that the SEC does not benefit from bias unless the data could show why the SEC is ranked so high, using evidence that does not depend on rankings. T5 answers that with **strength of record**, a résumé measure built only from that season's scores, venues and schedules: no polls, preseason, prior seasons, names or conference labels. For each team and week it asks how likely a typical top-25 team would be to win at least as many games against the same schedule. The benchmark is the mean performance rating of that week's 25 best teams; win chances use σ = 14.102 points, fixed from 6,520 FBS games. The design was reviewed by three independent reviewers and logged before any count was computed (`DEVIATIONS.md`, 2026-10-31, deviation 20). One disclosure matters: the margin-based performance version had been seen roughly during design, so it is descriptive only.
+
+For every AP poll from poll 6 to the end of the regular season, 2014–2025, each group's AP top-25 slots are compared with its slots in the strength-of-record top 25 built from games through the week before (ties at 25th shared). The primary quantities are the SEC's excess E_SEC (AP slots minus strength-of-record slots, per poll), D_PWR (E_SEC minus the mean of the ACC, Big Ten, Big 12 and, through 2023, Pac-12) and D_ACC (E_SEC minus the ACC's). Intervals are t-intervals over the 11 seasons, with the count of positive seasons and an exact sign-flip test.
+
+**Why the SEC is ranked so high.** With no rankings used at all, the SEC has the most teams in the strength-of-record top 25:
+
+| Group | AP top 25, teams per poll | Strength-of-record top 25 | Strength-of-record top 10 |
+| --- | --- | --- | --- |
+| **SEC** | 6.17 | **5.49** | 2.87 |
+| Big Ten | 4.63 | 4.74 | 2.47 |
+| Big 12 | 3.59 | 3.42 | 1.43 |
+| Pac-12 (to 2023) | 3.84 | 3.20 | 0.91 |
+| **ACC** | 3.33 | **3.22** | 1.30 |
+| Notre Dame | 0.83 | 0.76 | 0.31 |
+| Group of 5 and others | 3.30 | 4.75 | 0.87 |
+
+The SEC has 2.27 more strength-of-record top-25 teams per poll than the ACC (95% t +1.23 to +3.31; 10 of 11 seasons; sign-flip p 0.002).
+
+![Figure 26. Teams per poll in the AP top 25 (filled) and the strength-of-record top 25 (open), by group, 2014–2025.](results/figures/fig26_sor_levels.png)
+
+*Figure 26. Teams per poll in the AP top 25 (filled) and the strength-of-record top 25 (open), polls 6 to the end of the regular season, 2014–2025. By results alone the SEC has the most top-25 teams.*
+
+**The AP lists a few more SEC teams than that.** Primary results:
+
+| Quantity | Mean (slots per poll) | 95% t interval | Seasons positive | Sign-flip p |
+| --- | --- | --- | --- | --- |
+| E_SEC | +0.68 | +0.20 to +1.16 | 9 of 11 | 0.010 |
+| D_PWR | +0.50 | −0.08 to +1.08 | 9 of 11 | 0.088 |
+| D_ACC | +0.57 | +0.16 to +0.97 | 10 of 11 | 0.006 |
+
+By group, the excess is SEC +0.68, Pac-12 +0.64, Big 12 +0.17, ACC +0.11, Notre Dame +0.07 and Big Ten −0.11, with Group of 5 and other teams −1.45. Under the logged reading, Part 1 is **over-ranked relative to strength of record, shared with the other power conferences, not SEC-specific**, and Part 2 is **SEC excess higher than the ACC's**. Taken as a bloc, the other power conferences pass the same over-ranking rule (+0.18, 95% t +0.03 to +0.32, 9 of 11 seasons; computed during the audit).
+
+**Neither label is robust.** The logged gate requires E_SEC, D_PWR and D_ACC each to keep their sign in all 14 checks: 9 combinations of σ and benchmark, two calibrations of the rating against each conference's results with outsiders (T4 offsets), rank points, the Colley top 25 and the end-of-season record. E_SEC keeps its sign everywhere, but calibrated to all games against outsiders it falls from +0.68 to +0.08, D_PWR turns to −0.04 and D_ACC to −0.56. Calibrated to games against power-conference opponents, D_ACC is −0.20. So the season-long SEC surplus, and its size relative to the ACC, depend on how the rating is calibrated. The run commits read the gate on E_SEC alone; the audit (§5.14) corrected that.
+
+**Descriptive results** (no claim language):
+- **Against a margin-based ranking** the AP's SEC count is about the same: the excess over the performance top 25 is +0.07 (95% t −0.32 to +0.45). The T5 surplus is relative to won-lost record against schedule, not to margins.
+- **By part of the season**, against the record to date: polls 6–8 +1.42, polls 9–11 +0.52, polls 12+ +0.31, final regular-season poll +0.45. Against the end-of-season record (the T6 yardstick, added after the audit): polls 6–8 @@B68@@, polls 9–11 @@B911@@, polls 12+ @@B12@@, final regular-season poll @@BEND@@.
+- **Strength versus record.** A logged simulation (the "noise baseline") treats each season's final margin ratings as true strength and replays every game 200 times. A top 25 ordered by true strength holds about 1.46 more SEC teams per poll than a top 25 ordered by simulated record. The audit showed this barely depends on the simulated noise (SEC +1.58 with none), so it measures the built-in gap between ranking by strength and ranking by résumé, not noise. The real AP excess (+0.68) sits below that gap (observed minus baseline −0.78, 95% t −1.62 to +0.07): the AP's SEC count lies between a résumé ranking and a strength ranking.
+- **2026 after week 8** (AP poll 9): Miami (7-0, AP #1) is #1 by strength of record, between #1 and #4 across the 11 settings, #2 by Colley and #2 by margin. Eight of the strength-of-record top 25 are SEC teams, against nine in the AP poll (E_SEC +1, fourth highest of the 12 seasons at the same poll). One season, no test.
+
+![Figure 27. 2026 after week 8: strength-of-record rank (open, with its range across settings) against AP poll 9 rank (filled).](results/figures/fig28_2026_sor.png)
+
+*Figure 27. 2026 after week 8: strength-of-record rank (open; line shows the range across 11 settings) against AP poll 9 rank (filled). Descriptive.*
+
+### 5.13 Were SEC teams ranked higher early than their season justified? (T6, added last)
+
+Kyle asked whether SEC teams were ranked higher in the early weeks than they should have been, or whether their preseason rankings hold up less often than other conferences', which would point to hype. T6 compares AP polls 1–5 (the preseason poll and the next four) with the **end-of-regular-season** top 25 by strength of record, using T5's groups, tie rules and statistics. It was logged before running and blind to T5's results (`DEVIATIONS.md`, 2026-10-31, deviation 21). The logged caveat applies to every result here: early polls reflect what voters knew then, so "not justified by how the season turned out" measures hype in hindsight and is not proof of intent.
+
+| Quantity | Mean (slots per poll) | 95% t interval | Seasons positive | Sign-flip p |
+| --- | --- | --- | --- | --- |
+| E_SEC | **+1.65** | **+0.51 to +2.80** | 10 of 11 | 0.015 |
+| D_PWR | +1.19 | −0.23 to +2.60 | 8 of 11 | 0.094 |
+| D_ACC | +1.04 | −0.48 to +2.55 | 8 of 11 | 0.166 |
+
+By group: SEC +1.65, Pac-12 +0.98, ACC +0.62, Big 12 +0.28, Notre Dame +0.13, Big Ten +0.08, Group of 5 and others −3.56. The preseason poll alone gives E_SEC +1.27 (95% t +0.07 to +2.48). Under the logged reading, Part 1 is **ranked higher early than the season justified, shared with the other power conferences, not SEC-specific**; Part 2 (SEC versus ACC) is **inconclusive**. E_SEC and D_PWR keep their sign in all 14 checks (E_SEC at least +0.93 per poll), but D_ACC turns to −0.15 under the all-games T4 calibration, so under the literal logged rule Part 1 is **not robust**. Taken as a bloc, the other power conferences pass the over-ranking rule (+0.47, 95% t +0.13 to +0.81, 10 of 11 seasons; computed during the audit).
+
+**Ranked SEC teams fall out at the usual rate** (decomposition, added after the audit, descriptive). Each group's early excess splits into the drop out of the final top 25 expected for teams at those AP ranks, the drop beyond that, and unranked teams entering the final top 25. Across all teams, the share of early AP-ranked teams still in the final strength-of-record top 25 is 90% for ranks 1–5, 69% for 6–10, 58% for 11–15, 43% for 16–20 and 35% for 21–25.
+
+| Group | AP top-25 teams per early poll | Expected to drop out | Drop beyond expected | Unranked teams entering |
+| --- | --- | --- | --- | --- |
+| **SEC** | 7.20 | 2.72 | **+0.07** | 1.13 |
+| Big Ten | 4.81 | 1.74 | −0.55 | 1.11 |
+| Pac-12 | 4.53 | 2.04 | +0.16 | 1.22 |
+| Big 12 | 3.55 | 1.56 | +0.22 | 1.49 |
+| **ACC** | 3.53 | 1.49 | +0.26 | 1.13 |
+
+The SEC's drop beyond expected is +0.07 per poll (95% t −0.65 to +0.78; 4 of 11 seasons positive). Its early surplus comes from having the most early-ranked teams, which lose spots at the usual rate, not from each SEC team being more overrated than other teams at the same rank.
+
+**T1 redone with strength of record.** Preseason-ranked SEC teams finish 0.27 ranks better than typical for their preseason rank (A_SEC −0.27, 95% t −2.15 to +1.61; 5 of 11 seasons; sign-flip p 0.74). The logged "hyped" reading is not met: there is no evidence that preseason-ranked SEC teams fell further short than typical. The interval is too wide to rule out a shortfall of up to about 1.6 ranks. The share finishing outside the final strength-of-record top 25 is 38.7% for the SEC (75 team-seasons), 53.8% for the ACC (39), 32.1% for the Big Ten, 56.1% for the Big 12 and 48.8% for the Pac-12.
+
+![Figure 28. SEC, other-power average and ACC: AP top-25 spots beyond the end-of-season strength-of-record top 25, per poll, by stage of the season.](results/figures/fig27_excess_by_stage.png)
+
+*Figure 28. AP top-25 spots per poll beyond the end-of-regular-season strength-of-record top 25, polls 1–5 (T6) and later stages (T5 bands on the same yardstick), 2014–2025. Shading: SEC 95% interval. Measured in hindsight.*
+
+![Figure 29. Early AP top-25 teams per poll who did not finish top 25 on record: expected for teams at those AP ranks and actual, by conference.](results/figures/fig29_early_decomposition.png)
+
+*Figure 29. AP polls 1–5, 2014–2025: early-ranked teams per poll who did not finish in the end-of-season strength-of-record top 25, expected at those AP ranks (gray) and actual. Ranked SEC teams fall out at the usual rate; the SEC has more of them.*
+
+### 5.14 Audit of T5 and T6 (added last)
+
+After T5 and T6 ran, an independent audit checked both scripts against their logged designs, looked for bugs and checked how the results were worded; each finding was then put to two skeptics asked to refute it. No bug changed a logged number. The corrections, logged before the reruns that use them (`DEVIATIONS.md`, 2026-10-31, deviation 22):
+
+1. **Robustness verdict per label.** The code reported a sign check for each quantity but never applied the logged rule to the labels. Under that rule both T5 labels and T6 Part 1 are not robust (§5.12, §5.13). The scripts now write the verdict and list where each sign flips.
+2. **Gate summary units.** Its range and ±0.5 band check mixed rank points with slots; they now use slots only.
+3. **Logged outputs left out.** T6 now writes the logged "hyped" reading (not shown) and the hindsight caveat.
+4. **Two descriptive additions, post hoc:** the T5 bands against the end-of-season record, and the T6 decomposition.
+5. **The "noise baseline"** is described as the gap between ranking by strength and by record, which is what it measures.
+6. **Wording:** "over-ranked" is stated as relative to strength of record; the preseason shortfall is reported as "no evidence of", not "no shortfall"; figure captions were corrected.
+
+Refuted by the skeptics, and not acted on: the claim that "shared with the other power conferences" is contradicted by the data. As a bloc the other power conferences pass the same over-ranking rule in both tests (figures above).
+
 ---
 
 ## 6. Deviations from the pre-registered plan
