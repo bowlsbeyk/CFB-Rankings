@@ -4,6 +4,7 @@ A study of week-to-week AP poll movement, testing whether SEC teams look tougher
 
 - **Plan:** [`METHODOLOGY.md`](METHODOLOGY.md), committed before any data was pulled.
 - **Changes to the plan:** [`DEVIATIONS.md`](DEVIATIONS.md), each dated and committed before use, with what had been seen at the time.
+- **Short version:** [`SUMMARY.md`](SUMMARY.md), one page, every number traced to its source in [`results/post_numbers.json`](results/post_numbers.json).
 
 ## About this study
 
@@ -29,10 +30,14 @@ A study of week-to-week AP poll movement, testing whether SEC teams look tougher
 | H5 sensitivity after outside review (`results/h5_sensitivity.json`) | Done |
 | Report (`REPORT.md`) | Done; revised after outside review |
 | 2026 counterfactual (`results/counterfactual_2026*.json`) | Run; every model fails a plausibility check (`results/base_rates_poll8.json`) |
+| 2026 data re-frozen through week 8 (AP poll 9) | Done |
+| T5: ranking-independent strength of record (`results/t5_sor.json`) | Done |
+| T6: early polls against the season's outcome (`results/t6_early.json`) | Done |
+| Independent audit of T5/T6, corrections logged | Done |
 
 ## Findings
 
-The full write-up, with 25 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
+The full write-up, with 29 figures covering every step from data to counterfactual, is in [`REPORT.md`](REPORT.md). Figures are in [`results/figures/`](results/figures/). In brief, on 2014–2025 AP polls. Registered tests are marked as such; the rest were added during the analysis.
 
 1. **Preseason standing persists for everyone** (registered, as defined in deviation 9). About half of a team's preseason standing still shows up after week five at the same record, margin and strength. It persists no more for the SEC than for the ACC.
 2. **Voters do not score SEC games more generously** (added). For the same result against the same quality of opponent, SEC and ACC teams move alike after wins and after losses.
@@ -44,14 +49,17 @@ The full write-up, with 25 figures covering every step from data to counterfactu
 8. **It is not an in-season voter loop either** (added last, T3). SEC teams that lose to ranked SEC rivals end up ranked about where their seasons finish (+0.44 places, 95% CI −0.67 to +1.43), no differently from ACC teams. The SEC plays four times as many of these games, but each is judged like anyone else's. Every qualifying game is in [`results/t3_loop_games.csv`](results/t3_loop_games.csv).
 9. **The results rating does not overrate the SEC** (added last, T4). Against outsiders, including bowls the rating never saw, SEC teams beat its predictions by 3.4 points a game (95% CI +1.7 to +5.0), and match them against power-conference opponents. So "SEC schedules are tougher by results" is not a quirk of the rating. Raw head-to-head, the SEC went 58–46 against the ACC over 2014–2025.
 10. **The SEC/ACC preseason swap could not be answered reliably.** Every model is stickier than real voters and fails a plausibility check that the real 2026 poll passes.
+11. **By results alone, the SEC has the most top-25 teams** (added last, T5). Strength of record uses only scores and schedules: no polls, preseason or names. The SEC averages 5.5 teams per poll in its top 25, the Big Ten 4.7 and the ACC 3.2 (SEC minus ACC +2.27, 95% CI +1.23 to +3.31). The AP lists 0.68 more SEC teams per poll than that (polls 6+), but this is not robust: calibrated to results against outsiders it is +0.08.
+12. **Early polls list more SEC teams than finish top 25 on results, but ranked SEC teams fall out at the usual rate** (added last, T6). In polls 1–5 the AP holds 1.65 more SEC teams per poll than the end-of-season strength-of-record top 25 (95% CI +0.51 to +2.80), the most of any conference. At the rates seen for every team at those AP ranks, SEC teams drop out of the final top 25 as expected (+0.07 beyond expected, CI −0.65 to +0.78): the SEC simply has the most ranked teams. Measured in hindsight; not proof of intent.
 
 ## 2026 so far: who is over- and underrated (exploratory)
 
-After week 7, comparing each team's AP rank with its rank by this season's results, and checking that voters have also moved it more (or less) than results usually earn. Not a hypothesis test; seven weeks of games make ratings noisy.
+After week 8 (AP poll 9), comparing each team's AP rank with its rank by this season's results, and checking that voters have also moved it more (or less) than results usually earn. Not a hypothesis test; eight weeks of games make ratings noisy.
 
-- **Overrated:** SMU (AP #23, 39th by results), Iowa (#15, 28th), Utah (#10, 17th), Kentucky (#12, 18th), Georgia (#5, 10th), Missouri (#22, 27th).
-- **Underrated:** James Madison (unranked at 7-0, 13th by results), LSU (#18, 7th), Oregon (unranked, 21st).
-- Seven of the nine SEC teams on the board have schedules that look tougher by opponents' AP rank than by opponents' 2026 results.
+- **Overrated:** SMU (AP #19, 30th by results), Georgia (#3, 9th), BYU (#8, 14th), Florida (#17, 23rd).
+- **Underrated:** LSU (#15, 6th), James Madison (unranked at 7-1, 19th).
+- Eight of the nine SEC teams on the board have schedules that look tougher by opponents' AP rank than by opponents' 2026 results.
+- **Miami** (7-0, AP #1) is #1 by strength of record (between #1 and #4 across 11 settings). None of its opponents was in the AP top 25 on game day, but by their 2026 results its schedule ranks 56th of 138, not last. Table: [`results/sor_2026.csv`](results/sor_2026.csv); chart: [`fig28`](results/figures/fig28_2026_sor.png).
 
 Chart: [`results/figures/fig22_2026_over_under.png`](results/figures/fig22_2026_over_under.png). Full table: [`results/rankings_2026.csv`](results/rankings_2026.csv).
 

@@ -189,23 +189,169 @@
     "summary": {
       "E_SEC": {
         "same_sign_everywhere": true,
+        "sign_flips_under": [],
         "within_band_everywhere": false,
-        "min": 0.9272727272727272,
-        "max": 20.181818181818183
+        "min_slots": 0.9272727272727272,
+        "max_slots": 1.7454545454545454,
+        "rank_points": 20.181818181818183
       },
       "D_PWR": {
         "same_sign_everywhere": true,
+        "sign_flips_under": [],
         "within_band_everywhere": false,
-        "min": 0.5878787878787879,
-        "max": 16.606818181818184
+        "min_slots": 0.5878787878787879,
+        "max_slots": 1.3,
+        "rank_points": 16.606818181818184
       },
       "D_ACC": {
         "same_sign_everywhere": false,
+        "sign_flips_under": [
+          "SOR top25|x1.0|t4_all"
+        ],
         "within_band_everywhere": false,
-        "min": -0.14545454545454548,
-        "max": 12.263636363636364
+        "min_slots": -0.14545454545454548,
+        "max_slots": 1.3090909090909089,
+        "rank_points": 12.263636363636364
       }
-    }
+    },
+    "label_part1_robust": false,
+    "label_part2_robust": false,
+    "rule": "robust only if E_SEC, D_PWR and D_ACC each keep their sign in every check (DEVIATIONS.md; verdict added 2026-10-31 after the audit, no number changed)"
+  },
+  "decomposition": {
+    "retention_by_ap_rank": {
+      "1-5": 0.898,
+      "6-10": 0.692,
+      "11-15": 0.58,
+      "16-20": 0.433,
+      "21-25": 0.348
+    },
+    "SEC": {
+      "a": 7.2,
+      "expected": 2.7162493309658133,
+      "beyond": 0.06556885085236837,
+      "entrants": 1.1272727272727272
+    },
+    "ACC": {
+      "a": 3.527272727272728,
+      "expected": 1.488510772302815,
+      "beyond": 0.2569437731517302,
+      "entrants": 1.1272727272727272
+    },
+    "Big Ten": {
+      "a": 4.8090909090909095,
+      "expected": 1.7399062434156631,
+      "beyond": -0.5489971525065724,
+      "entrants": 1.1090909090909091
+    },
+    "Big 12": {
+      "a": 3.5545454545454547,
+      "expected": 1.5569711185307389,
+      "beyond": 0.21575615419653388,
+      "entrants": 1.4909090909090912
+    },
+    "Pac-12": {
+      "a": 4.533333333333334,
+      "expected": 2.040282385902824,
+      "beyond": 0.1597176140971762,
+      "entrants": 1.2222222222222223
+    },
+    "Notre Dame": {
+      "a": 0.8545454545454546,
+      "expected": 0.3279348127709687,
+      "beyond": -0.14611663095278687,
+      "entrants": 0.05454545454545454
+    },
+    "Other": {
+      "a": 1.3454545454545455,
+      "expected": 0.7556512244571447,
+      "beyond": 0.02616695736103715,
+      "entrants": 4.345454545454545
+    },
+    "beyond_tests": {
+      "E_SEC": {
+        "mean": 0.06556885085236837,
+        "ci95_t": [
+          -0.6499011395217714,
+          0.7810388412265082
+        ],
+        "ci90_t": [
+          -0.5164242960000256,
+          0.6475619977047624
+        ],
+        "seasons_positive": 4,
+        "seasons": 11,
+        "sign_flip_p": 0.83984375,
+        "per_season": [
+          -0.8678113153111566,
+          1.1042062837194542,
+          1.2237807718569382,
+          -0.6849883346316225,
+          -0.7513821297712127,
+          -0.6032925382033602,
+          1.391425886923824,
+          1.7811242222286334,
+          -0.6254138464941384,
+          -0.973350605387419,
+          -0.27304103555388864
+        ]
+      },
+      "D_PWR": {
+        "mean": 0.05000303677261926,
+        "ci95_t": [
+          -0.649571208656406,
+          0.7495772822016447
+        ],
+        "ci90_t": [
+          -0.51905984780933,
+          0.6190659213545686
+        ],
+        "seasons_positive": 4,
+        "seasons": 11,
+        "sign_flip_p": 0.8935546875,
+        "per_season": [
+          -0.5082838108152294,
+          1.136913418539569,
+          1.19261934162315,
+          -0.025798669013204045,
+          -1.2552075916255543,
+          -0.44794956867949576,
+          1.3210792148716617,
+          1.3763394978025252,
+          -0.9065800178875393,
+          -1.2874363052934934,
+          -0.045662105023577565
+        ]
+      },
+      "D_ACC": {
+        "mean": -0.1913749222993619,
+        "ci95_t": [
+          -0.9965806370907806,
+          0.6138307924920567
+        ],
+        "ci90_t": [
+          -0.8463628520795222,
+          0.46361300748079837
+        ],
+        "seasons_positive": 5,
+        "seasons": 11,
+        "sign_flip_p": 0.60546875,
+        "per_season": [
+          -0.22604056432301434,
+          1.4713724358789417,
+          1.4134782608695653,
+          -0.5620953809757364,
+          -1.7436073781291173,
+          -0.8662806804958503,
+          1.1829823528846062,
+          0.33494334650856383,
+          -1.690473558177779,
+          0.022147466412778982,
+          -1.4415504457459392
+        ]
+      }
+    },
+    "note": "a = AP top-25 slots held per early poll; expected = drop out of the final top 25 expected at those AP ranks; beyond = drop beyond that; entrants = unranked teams entering the final top 25. E = expected + beyond - entrants."
   },
   "preseason_poll_only": {
     "E_SEC": {
@@ -402,6 +548,8 @@
         1.3706021756021738,
         -7.486307692307691
       ]
-    }
-  }
+    },
+    "reading_hyped": "NOT SHOWN: no evidence preseason-ranked SEC teams fell further short than typical"
+  },
+  "caveat": "Early polls reflect what voters knew then. 'Not justified by how the season turned out' measures hype in hindsight; it is not proof of intent. Every conference's early picks regress somewhat, which is why the SEC is compared with the other power conferences."
 }
