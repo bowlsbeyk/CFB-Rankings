@@ -353,3 +353,16 @@ The scripts now write `label_part1_robust` and `label_part2_robust`, and list th
 - A label branch not reached in any run (over-ranked, consistent and SEC-specific all at once) now says "SEC-specific".
 
 **Refuted by the skeptics, so not acted on:** the claim that "shared with the other power conferences" is contradicted by the data. Taken as the logged bloc (the mean of ACC, Big Ten, Big 12 and Pac-12 when present), the other power conferences pass the same over-ranking rule in T5 (+0.18, 95% t +0.03 to +0.32, 9 of 11 seasons) and in T6 (+0.47, 95% t +0.13 to +0.81, 10 of 11 seasons).
+
+## 2026-10-31 — Descriptive additions for the summary and post (logged after drafting, before publication)
+
+While `SUMMARY.md` and the LinkedIn post were being written and fact-checked, a few descriptive numbers were added to `results/post_numbers.json` (built by `src/post_numbers.py`). They were computed after every result had been seen and were first used in a draft of the summary before this entry was written. They are logged here before publication. None is a test; no logged number changed.
+
+- **SEC minus each other power conference in the strength-of-record top 25** (Big Ten, Big 12, Pac-12), computed from `results/sor_weekly.csv` the same way as T5's logged SEC-minus-ACC figure. The ACC row reproduces T5 exactly (+2.27). SEC minus Big Ten is +0.74 (95% t −0.55 to +2.03; 6 of 11 seasons).
+- **The other-power-conference average excess** in T5 (+0.18) and T6 (+0.47), computed per season as E_SEC − D_PWR. This is the logged bloc, the mean over conferences, not a combined count.
+- **Miami's 2026 schedule rank among power-conference teams** by opponents' 2026 results (48th of 67).
+- **The mean strength-versus-record gap** for the SEC from the T5 "noise baseline" (1.46 slots per poll).
+- **T6 decomposition shares**: the share of SEC early spots that miss the final top 25 (38.6%) and the share expected at those AP ranks (37.7%).
+- **Pass-through values** already in result files: T2 SEC minus ACC per band, H5 variant B for the Big 12 and Big Ten, T4 for the other conferences, T5 and T6 values under each calibration, T3 values before the rank adjustment.
+
+Two rounds of fact-checking (checkers per document, hostile readers, and skeptics asked to refute each issue) reviewed the summary, the README and report changes and the post against the result files. Their fixes changed wording and added caveats. No result was recomputed.

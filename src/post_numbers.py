@@ -135,6 +135,7 @@ def main():
         "E_SEC_with_t4_all_games_calibration": r(g["by_check"]["SOR top25|x1.0|t4_all"]["E_SEC"]),
         "with_t4_all_games_calibration": {q: r(v) for q, v in g["by_check"]["SOR top25|x1.0|t4_all"].items()},
         "with_t4_power_games_calibration": {q: r(v) for q, v in g["by_check"]["SOR top25|x1.0|t4_power"].items()},
+        "excess_by_group_mean": {G: r(v["mean"]) for G, v in t5["primary_by_group"].items()},
         "other_power_bloc_excess": stat(tstats(np.subtract(t5["primary"]["E_SEC"]["per_season"],
                                                            t5["primary"]["D_PWR"]["per_season"]))),
         "strength_vs_record_gap_SEC": {
@@ -202,6 +203,8 @@ def main():
                "early_minus_late": {"mean": r(t2[G]["early_minus_late"]),
                                     "ci95": [r(v) for v in t2[G]["early_minus_late_ci"]]}}
            for G in ("SEC", "ACC")},
+        "SEC_minus_ACC": {p: {"mean": r(t2["sec_minus_acc"][p]["diff"]), "ci95": [r(v) for v in t2["sec_minus_acc"][p]["ci"]]}
+                          for p in ("early (weeks 1-4)", "middle (weeks 5-8)", "late (weeks 9+)")},
     }
     sr = hyp["season_rating"]["poll_vs_rating"]
     n["poll_rank_above_results_rank"] = {
