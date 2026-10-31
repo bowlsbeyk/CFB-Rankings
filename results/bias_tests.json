@@ -386,64 +386,64 @@
   },
   "schedule_inflation_2026_to_date": {
     "SEC": {
-      "mean": 2.6875,
+      "mean": 3.1875,
       "n": 16,
       "team_seasons": 16,
       "ci": [
-        -3.190625,
-        9.314062499999999
+        -3.625,
+        10.125
       ],
-      "mean_poll_sos_rank": 16.6875,
-      "mean_rating_sos_rank": 19.375
+      "mean_poll_sos_rank": 15.5625,
+      "mean_rating_sos_rank": 18.75
     },
     "ACC": {
-      "mean": -4.882352941176471,
+      "mean": -10.470588235294118,
       "n": 17,
       "team_seasons": 17,
       "ci": [
-        -14.882352941176471,
-        4.002941176470586
+        -21.825,
+        -0.6470588235294118
       ],
-      "mean_poll_sos_rank": 62.88235294117647,
-      "mean_rating_sos_rank": 58.0
+      "mean_poll_sos_rank": 63.64705882352941,
+      "mean_rating_sos_rank": 53.1764705882353
     },
     "Big Ten": {
-      "mean": -3.5,
+      "mean": -4.055555555555555,
       "n": 18,
       "team_seasons": 18,
       "ci": [
-        -18.561111111111114,
-        10.84166666666666
+        -17.33888888888889,
+        8.613888888888885
       ],
-      "mean_poll_sos_rank": 45.22222222222222,
-      "mean_rating_sos_rank": 41.72222222222222
+      "mean_poll_sos_rank": 43.611111111111114,
+      "mean_rating_sos_rank": 39.55555555555556
     },
     "Big 12": {
-      "mean": 0.75,
+      "mean": -0.4375,
       "n": 16,
       "team_seasons": 16,
       "ci": [
-        -11.3140625,
-        14.629687499999996
+        -10.4421875,
+        11.064062499999999
       ],
-      "mean_poll_sos_rank": 57.3125,
-      "mean_rating_sos_rank": 58.0625
+      "mean_poll_sos_rank": 53.5625,
+      "mean_rating_sos_rank": 53.125
     },
     "Other": {
-      "mean": 17.845070422535212,
+      "mean": 16.859154929577464,
       "n": 71,
       "team_seasons": 71,
       "ci": [
-        10.717605633802817,
-        24.549647887323943
+        10.47887323943662,
+        23.52112676056338
       ],
-      "mean_poll_sos_rank": 75.32394366197182,
-      "mean_rating_sos_rank": 93.16901408450704
+      "mean_poll_sos_rank": 79.26760563380282,
+      "mean_rating_sos_rank": 96.12676056338029
     },
-    "sec_minus_acc": 7.569852941176471,
+    "sec_minus_acc": 13.658088235294118,
     "sec_minus_acc_ci": [
-      -3.603216911764706,
-      19.665716911764704
+      1.8433823529411768,
+      27.165900735294116
     ],
     "note": "Schedule-strength rank among FBS teams (1 = toughest). inflation = rating rank - poll rank; positive = the poll makes the schedule look tougher than opponents' results do."
   },

@@ -5,11 +5,13 @@
     "plausibility_no_swap": {
       "strong_p4_records": 13,
       "strong_left_unranked": [
-        "Houston",
         "Wake Forest"
       ],
-      "three_plus_losses": 76,
+      "three_plus_losses": 89,
       "three_plus_losses_ranked": [
+        "Michigan",
+        "Mississippi State",
+        "Oregon",
         "Texas A&M",
         "Washington"
       ],
@@ -57,6 +59,12 @@
         "overlap": 20,
         "mean_abs_rank_error": 6.48,
         "within_3": 0.56
+      },
+      "9": {
+        "spearman": 0.8578572961150499,
+        "overlap": 20,
+        "mean_abs_rank_error": 6.26,
+        "within_3": 0.64
       }
     },
     "conference_slots": {
@@ -109,6 +117,13 @@
           "Big Ten": 6,
           "Big 12": 5,
           "Other": 2
+        },
+        "9": {
+          "SEC": 9,
+          "ACC": 3,
+          "Big Ten": 5,
+          "Big 12": 6,
+          "Other": 2
         }
       },
       "no_swap": {
@@ -159,6 +174,13 @@
           "ACC": 2,
           "Big Ten": 9,
           "Big 12": 4,
+          "Other": 1
+        },
+        "9": {
+          "SEC": 10,
+          "ACC": 2,
+          "Big Ten": 7,
+          "Big 12": 5,
           "Other": 1
         }
       }
@@ -236,6 +258,13 @@
               "no_swap": 6.0,
               "swap": 8.0,
               "gain": -2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 3,
+              "no_swap": 5.0,
+              "swap": 7.0,
+              "gain": -2.0
             }
           ]
         },
@@ -296,6 +325,13 @@
               "no_swap": 2.0,
               "swap": 1.0,
               "gain": 1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 1,
+              "no_swap": 2.0,
+              "swap": 1.0,
+              "gain": 1.0
             }
           ]
         },
@@ -305,7 +341,7 @@
           "partner": "SMU",
           "preseason_points_real": 21.492753623188406,
           "preseason_points_swapped": 6.2898550724637685,
-          "final_gain": -2.0,
+          "final_gain": -4.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -356,6 +392,13 @@
               "no_swap": 24.0,
               "swap": 26.0,
               "gain": -2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 11,
+              "no_swap": 12.0,
+              "swap": 16.0,
+              "gain": -4.0
             }
           ]
         },
@@ -365,7 +408,7 @@
           "partner": "Texas",
           "preseason_points_real": 6.2898550724637685,
           "preseason_points_swapped": 21.492753623188406,
-          "final_gain": 15.0,
+          "final_gain": 16.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -416,6 +459,13 @@
               "no_swap": 21.0,
               "swap": 6.0,
               "gain": 15.0
+            },
+            {
+              "poll_week": 9,
+              "real": 19,
+              "no_swap": 19.0,
+              "swap": 3.0,
+              "gain": 16.0
             }
           ]
         },
@@ -425,8 +475,8 @@
           "partner": "Louisville",
           "preseason_points_real": 16.391304347826086,
           "preseason_points_swapped": 2.8115942028985508,
-          "final_gain": -1.0,
-          "beyond_yardstick": false,
+          "final_gain": -3.0,
+          "beyond_yardstick": true,
           "weekly": [
             {
               "poll_week": 2,
@@ -476,6 +526,13 @@
               "no_swap": 25.0,
               "swap": 26.0,
               "gain": -1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 23.0,
+              "swap": 26.0,
+              "gain": -3.0
             }
           ]
         },
@@ -536,6 +593,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         }
@@ -589,16 +653,26 @@
           "Big Ten": 10,
           "Big 12": 4,
           "Other": 1
+        },
+        "9": {
+          "SEC": 10,
+          "ACC": 3,
+          "Big Ten": 7,
+          "Big 12": 4,
+          "Other": 1
         }
       },
       "plausibility": {
         "strong_p4_records": 13,
         "strong_left_unranked": [
-          "Wake Forest"
+          "Arizona"
         ],
-        "three_plus_losses": 76,
+        "three_plus_losses": 89,
         "three_plus_losses_ranked": [
+          "Michigan",
+          "Mississippi State",
           "Oklahoma",
+          "Oregon",
           "Washington"
         ],
         "plausible": false
@@ -701,6 +775,13 @@
               "no_swap": 6.0,
               "swap": 9.0,
               "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 3,
+              "no_swap": 5.0,
+              "swap": 8.0,
+              "gain": -3.0
             }
           ]
         },
@@ -761,6 +842,13 @@
               "no_swap": 2.0,
               "swap": 1.0,
               "gain": 1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 1,
+              "no_swap": 2.0,
+              "swap": 1.0,
+              "gain": 1.0
             }
           ]
         },
@@ -770,7 +858,7 @@
           "partner": "SMU",
           "preseason_points_real": 21.492753623188406,
           "preseason_points_swapped": 6.2898550724637685,
-          "final_gain": 3.0,
+          "final_gain": -14.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -821,6 +909,13 @@
               "no_swap": 24.0,
               "swap": 21.0,
               "gain": 3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 11,
+              "no_swap": 12.0,
+              "swap": 26.0,
+              "gain": -14.0
             }
           ]
         },
@@ -881,6 +976,13 @@
               "no_swap": 21.0,
               "swap": 8.0,
               "gain": 13.0
+            },
+            {
+              "poll_week": 9,
+              "real": 19,
+              "no_swap": 19.0,
+              "swap": 6.0,
+              "gain": 13.0
             }
           ]
         },
@@ -890,8 +992,8 @@
           "partner": "Louisville",
           "preseason_points_real": 16.391304347826086,
           "preseason_points_swapped": 2.8115942028985508,
-          "final_gain": -1.0,
-          "beyond_yardstick": false,
+          "final_gain": -2.0,
+          "beyond_yardstick": true,
           "weekly": [
             {
               "poll_week": 2,
@@ -941,6 +1043,13 @@
               "no_swap": 25.0,
               "swap": 26.0,
               "gain": -1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 23.0,
+              "swap": 25.0,
+              "gain": -2.0
             }
           ]
         },
@@ -950,7 +1059,7 @@
           "partner": "Texas A&M",
           "preseason_points_real": 2.8115942028985508,
           "preseason_points_swapped": 16.391304347826086,
-          "final_gain": 12.0,
+          "final_gain": 15.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1001,6 +1110,13 @@
               "no_swap": 26.0,
               "swap": 14.0,
               "gain": 12.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 11.0,
+              "gain": 15.0
             }
           ]
         },
@@ -1010,7 +1126,7 @@
           "partner": "Clemson",
           "preseason_points_real": 15.971014492753623,
           "preseason_points_swapped": 0.0,
-          "final_gain": -3.0,
+          "final_gain": -6.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1061,6 +1177,13 @@
               "no_swap": 10.0,
               "swap": 13.0,
               "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 12,
+              "no_swap": 20.0,
+              "swap": 26.0,
+              "gain": -6.0
             }
           ]
         },
@@ -1070,7 +1193,7 @@
           "partner": "Ole Miss",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 15.971014492753623,
-          "final_gain": 3.0,
+          "final_gain": 5.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1121,6 +1244,13 @@
               "no_swap": 26.0,
               "swap": 23.0,
               "gain": 3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 21.0,
+              "gain": 5.0
             }
           ]
         },
@@ -1181,6 +1311,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -1190,7 +1327,7 @@
           "partner": "Oklahoma",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 15.173913043478262,
-          "final_gain": 11.0,
+          "final_gain": 14.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1241,6 +1378,13 @@
               "no_swap": 26.0,
               "swap": 15.0,
               "gain": 11.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 12.0,
+              "gain": 14.0
             }
           ]
         },
@@ -1250,7 +1394,7 @@
           "partner": "Duke",
           "preseason_points_real": 14.318840579710145,
           "preseason_points_swapped": 0.0,
-          "final_gain": -2.0,
+          "final_gain": -15.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1301,6 +1445,13 @@
               "no_swap": 16.0,
               "swap": 18.0,
               "gain": -2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 15,
+              "no_swap": 11.0,
+              "swap": 26.0,
+              "gain": -15.0
             }
           ]
         },
@@ -1310,7 +1461,7 @@
           "partner": "LSU",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 14.318840579710145,
-          "final_gain": 7.0,
+          "final_gain": 10.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1361,6 +1512,13 @@
               "no_swap": 26.0,
               "swap": 19.0,
               "gain": 7.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 16.0,
+              "gain": 10.0
             }
           ]
         },
@@ -1370,7 +1528,7 @@
           "partner": "Pittsburgh",
           "preseason_points_real": 13.101449275362318,
           "preseason_points_swapped": 0.0,
-          "final_gain": -9.0,
+          "final_gain": -13.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1421,6 +1579,13 @@
               "no_swap": 17.0,
               "swap": 26.0,
               "gain": -9.0
+            },
+            {
+              "poll_week": 9,
+              "real": 10,
+              "no_swap": 13.0,
+              "swap": 26.0,
+              "gain": -13.0
             }
           ]
         },
@@ -1430,7 +1595,7 @@
           "partner": "Alabama",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 13.101449275362318,
-          "final_gain": 4.0,
+          "final_gain": 7.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1481,6 +1646,13 @@
               "no_swap": 26.0,
               "swap": 22.0,
               "gain": 4.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 19.0,
+              "gain": 7.0
             }
           ]
         },
@@ -1490,7 +1662,7 @@
           "partner": "NC State",
           "preseason_points_real": 5.7101449275362315,
           "preseason_points_swapped": 0.0,
-          "final_gain": -17.0,
+          "final_gain": -10.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -1541,6 +1713,13 @@
               "no_swap": 9.0,
               "swap": 26.0,
               "gain": -17.0
+            },
+            {
+              "poll_week": 9,
+              "real": 16,
+              "no_swap": 16.0,
+              "swap": 26.0,
+              "gain": -10.0
             }
           ]
         },
@@ -1550,8 +1729,8 @@
           "partner": "Tennessee",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 5.7101449275362315,
-          "final_gain": 0.0,
-          "beyond_yardstick": false,
+          "final_gain": 2.0,
+          "beyond_yardstick": true,
           "weekly": [
             {
               "poll_week": 2,
@@ -1601,6 +1780,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 24.0,
+              "gain": 2.0
             }
           ]
         },
@@ -1610,8 +1796,8 @@
           "partner": "Georgia Tech",
           "preseason_points_real": 1.6956521739130435,
           "preseason_points_swapped": 0.0,
-          "final_gain": -3.0,
-          "beyond_yardstick": true,
+          "final_gain": -1.0,
+          "beyond_yardstick": false,
           "weekly": [
             {
               "poll_week": 2,
@@ -1661,6 +1847,13 @@
               "no_swap": 22.0,
               "swap": 25.0,
               "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 23,
+              "no_swap": 21.0,
+              "swap": 22.0,
+              "gain": -1.0
             }
           ]
         },
@@ -1721,6 +1914,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         }
@@ -1774,18 +1974,29 @@
           "Big Ten": 7,
           "Big 12": 5,
           "Other": 1
+        },
+        "9": {
+          "SEC": 4,
+          "ACC": 8,
+          "Big Ten": 7,
+          "Big 12": 5,
+          "Other": 1
         }
       },
       "plausibility": {
         "strong_p4_records": 13,
         "strong_left_unranked": [
-          "Kentucky",
-          "Tennessee",
+          "Arizona",
           "Wake Forest"
         ],
-        "three_plus_losses": 76,
+        "three_plus_losses": 89,
         "three_plus_losses_ranked": [
+          "Clemson",
           "Louisville",
+          "NC State",
+          "Oregon",
+          "Pittsburgh",
+          "Texas A&M",
           "Virginia",
           "Washington",
           "West Virginia"
@@ -1800,11 +2011,14 @@
     "plausibility_no_swap": {
       "strong_p4_records": 13,
       "strong_left_unranked": [
-        "Houston",
+        "Arizona",
         "Wake Forest"
       ],
-      "three_plus_losses": 76,
+      "three_plus_losses": 89,
       "three_plus_losses_ranked": [
+        "Michigan",
+        "Oklahoma",
+        "Oregon",
         "Texas A&M",
         "Washington"
       ],
@@ -1852,6 +2066,12 @@
         "overlap": 20,
         "mean_abs_rank_error": 11.08,
         "within_3": 0.64
+      },
+      "9": {
+        "spearman": 0.8512032218146685,
+        "overlap": 20,
+        "mean_abs_rank_error": 11.34,
+        "within_3": 0.52
       }
     },
     "conference_slots": {
@@ -1904,6 +2124,13 @@
           "Big Ten": 6,
           "Big 12": 5,
           "Other": 2
+        },
+        "9": {
+          "SEC": 9,
+          "ACC": 3,
+          "Big Ten": 5,
+          "Big 12": 6,
+          "Other": 2
         }
       },
       "no_swap": {
@@ -1955,6 +2182,13 @@
           "Big Ten": 9,
           "Big 12": 4,
           "Other": 1
+        },
+        "9": {
+          "SEC": 11,
+          "ACC": 2,
+          "Big Ten": 7,
+          "Big 12": 4,
+          "Other": 1
         }
       }
     },
@@ -1980,7 +2214,7 @@
           "partner": "Miami",
           "preseason_points_real": 21.92753623188406,
           "preseason_points_swapped": 19.985507246376812,
-          "final_gain": -3.0,
+          "final_gain": -2.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2031,6 +2265,13 @@
               "no_swap": 7.0,
               "swap": 10.0,
               "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 3,
+              "no_swap": 5.0,
+              "swap": 7.0,
+              "gain": -2.0
             }
           ]
         },
@@ -2087,6 +2328,13 @@
             },
             {
               "poll_week": 8,
+              "real": 1,
+              "no_swap": 2.0,
+              "swap": 1.0,
+              "gain": 1.0
+            },
+            {
+              "poll_week": 9,
               "real": 1,
               "no_swap": 2.0,
               "swap": 1.0,
@@ -2150,6 +2398,13 @@
               "real": 19,
               "no_swap": 23.0,
               "swap": 26.0,
+              "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 11,
+              "no_swap": 12.0,
+              "swap": 15.0,
               "gain": -3.0
             }
           ]
@@ -2211,6 +2466,13 @@
               "no_swap": 21.0,
               "swap": 7.0,
               "gain": 14.0
+            },
+            {
+              "poll_week": 9,
+              "real": 19,
+              "no_swap": 20.0,
+              "swap": 6.0,
+              "gain": 14.0
             }
           ]
         },
@@ -2220,7 +2482,7 @@
           "partner": "Louisville",
           "preseason_points_real": 16.391304347826086,
           "preseason_points_swapped": 2.8115942028985508,
-          "final_gain": -2.0,
+          "final_gain": -5.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2271,6 +2533,13 @@
               "no_swap": 24.0,
               "swap": 26.0,
               "gain": -2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 21.0,
+              "swap": 26.0,
+              "gain": -5.0
             }
           ]
         },
@@ -2280,8 +2549,8 @@
           "partner": "Texas A&M",
           "preseason_points_real": 2.8115942028985508,
           "preseason_points_swapped": 16.391304347826086,
-          "final_gain": 1.0,
-          "beyond_yardstick": true,
+          "final_gain": 0.0,
+          "beyond_yardstick": false,
           "weekly": [
             {
               "poll_week": 2,
@@ -2331,6 +2600,13 @@
               "no_swap": 26.0,
               "swap": 25.0,
               "gain": 1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         }
@@ -2384,17 +2660,25 @@
           "Big Ten": 9,
           "Big 12": 4,
           "Other": 1
+        },
+        "9": {
+          "SEC": 10,
+          "ACC": 2,
+          "Big Ten": 7,
+          "Big 12": 5,
+          "Other": 1
         }
       },
       "plausibility": {
         "strong_p4_records": 13,
         "strong_left_unranked": [
+          "Arizona",
           "Wake Forest"
         ],
-        "three_plus_losses": 76,
+        "three_plus_losses": 89,
         "three_plus_losses_ranked": [
-          "Louisville",
           "Oklahoma",
+          "Oregon",
           "Washington"
         ],
         "plausible": false
@@ -2446,7 +2730,7 @@
           "partner": "Miami",
           "preseason_points_real": 21.92753623188406,
           "preseason_points_swapped": 19.985507246376812,
-          "final_gain": -6.0,
+          "final_gain": -5.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2497,6 +2781,13 @@
               "no_swap": 7.0,
               "swap": 13.0,
               "gain": -6.0
+            },
+            {
+              "poll_week": 9,
+              "real": 3,
+              "no_swap": 5.0,
+              "swap": 10.0,
+              "gain": -5.0
             }
           ]
         },
@@ -2557,6 +2848,13 @@
               "no_swap": 2.0,
               "swap": 1.0,
               "gain": 1.0
+            },
+            {
+              "poll_week": 9,
+              "real": 1,
+              "no_swap": 2.0,
+              "swap": 1.0,
+              "gain": 1.0
             }
           ]
         },
@@ -2566,7 +2864,7 @@
           "partner": "SMU",
           "preseason_points_real": 21.492753623188406,
           "preseason_points_swapped": 6.2898550724637685,
-          "final_gain": -3.0,
+          "final_gain": -14.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2617,6 +2915,13 @@
               "no_swap": 23.0,
               "swap": 26.0,
               "gain": -3.0
+            },
+            {
+              "poll_week": 9,
+              "real": 11,
+              "no_swap": 12.0,
+              "swap": 26.0,
+              "gain": -14.0
             }
           ]
         },
@@ -2626,7 +2931,7 @@
           "partner": "Texas",
           "preseason_points_real": 6.2898550724637685,
           "preseason_points_swapped": 21.492753623188406,
-          "final_gain": 11.0,
+          "final_gain": 14.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2677,6 +2982,13 @@
               "no_swap": 21.0,
               "swap": 10.0,
               "gain": 11.0
+            },
+            {
+              "poll_week": 9,
+              "real": 19,
+              "no_swap": 20.0,
+              "swap": 6.0,
+              "gain": 14.0
             }
           ]
         },
@@ -2686,7 +2998,7 @@
           "partner": "Louisville",
           "preseason_points_real": 16.391304347826086,
           "preseason_points_swapped": 2.8115942028985508,
-          "final_gain": -2.0,
+          "final_gain": -5.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2737,6 +3049,13 @@
               "no_swap": 24.0,
               "swap": 26.0,
               "gain": -2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 21.0,
+              "swap": 26.0,
+              "gain": -5.0
             }
           ]
         },
@@ -2746,8 +3065,8 @@
           "partner": "Texas A&M",
           "preseason_points_real": 2.8115942028985508,
           "preseason_points_swapped": 16.391304347826086,
-          "final_gain": 2.0,
-          "beyond_yardstick": true,
+          "final_gain": 0.0,
+          "beyond_yardstick": false,
           "weekly": [
             {
               "poll_week": 2,
@@ -2797,6 +3116,13 @@
               "no_swap": 26.0,
               "swap": 24.0,
               "gain": 2.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -2806,7 +3132,7 @@
           "partner": "Clemson",
           "preseason_points_real": 15.971014492753623,
           "preseason_points_swapped": 0.0,
-          "final_gain": -12.0,
+          "final_gain": -7.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -2857,6 +3183,13 @@
               "no_swap": 10.0,
               "swap": 22.0,
               "gain": -12.0
+            },
+            {
+              "poll_week": 9,
+              "real": 12,
+              "no_swap": 18.0,
+              "swap": 25.0,
+              "gain": -7.0
             }
           ]
         },
@@ -2917,6 +3250,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -2926,8 +3266,8 @@
           "partner": "Virginia",
           "preseason_points_real": 15.173913043478262,
           "preseason_points_swapped": 0.0,
-          "final_gain": 0.0,
-          "beyond_yardstick": false,
+          "final_gain": -1.0,
+          "beyond_yardstick": true,
           "weekly": [
             {
               "poll_week": 2,
@@ -2977,6 +3317,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 25.0,
+              "swap": 26.0,
+              "gain": -1.0
             }
           ]
         },
@@ -2986,7 +3333,7 @@
           "partner": "Oklahoma",
           "preseason_points_real": 0.0,
           "preseason_points_swapped": 15.173913043478262,
-          "final_gain": 7.0,
+          "final_gain": 5.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -3037,6 +3384,13 @@
               "no_swap": 26.0,
               "swap": 19.0,
               "gain": 7.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 21.0,
+              "gain": 5.0
             }
           ]
         },
@@ -3046,7 +3400,7 @@
           "partner": "Duke",
           "preseason_points_real": 14.318840579710145,
           "preseason_points_swapped": 0.0,
-          "final_gain": -11.0,
+          "final_gain": -3.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -3097,6 +3451,13 @@
               "no_swap": 15.0,
               "swap": 26.0,
               "gain": -11.0
+            },
+            {
+              "poll_week": 9,
+              "real": 15,
+              "no_swap": 11.0,
+              "swap": 14.0,
+              "gain": -3.0
             }
           ]
         },
@@ -3157,6 +3518,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -3166,7 +3534,7 @@
           "partner": "Pittsburgh",
           "preseason_points_real": 13.101449275362318,
           "preseason_points_swapped": 0.0,
-          "final_gain": -7.0,
+          "final_gain": -12.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -3217,6 +3585,13 @@
               "no_swap": 19.0,
               "swap": 26.0,
               "gain": -7.0
+            },
+            {
+              "poll_week": 9,
+              "real": 10,
+              "no_swap": 14.0,
+              "swap": 26.0,
+              "gain": -12.0
             }
           ]
         },
@@ -3277,6 +3652,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -3286,7 +3668,7 @@
           "partner": "NC State",
           "preseason_points_real": 5.7101449275362315,
           "preseason_points_swapped": 0.0,
-          "final_gain": -17.0,
+          "final_gain": -9.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -3337,6 +3719,13 @@
               "no_swap": 9.0,
               "swap": 26.0,
               "gain": -17.0
+            },
+            {
+              "poll_week": 9,
+              "real": 16,
+              "no_swap": 17.0,
+              "swap": 26.0,
+              "gain": -9.0
             }
           ]
         },
@@ -3397,6 +3786,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         },
@@ -3406,7 +3802,7 @@
           "partner": "Georgia Tech",
           "preseason_points_real": 1.6956521739130435,
           "preseason_points_swapped": 0.0,
-          "final_gain": 4.0,
+          "final_gain": 2.0,
           "beyond_yardstick": true,
           "weekly": [
             {
@@ -3457,6 +3853,13 @@
               "no_swap": 20.0,
               "swap": 16.0,
               "gain": 4.0
+            },
+            {
+              "poll_week": 9,
+              "real": 23,
+              "no_swap": 19.0,
+              "swap": 17.0,
+              "gain": 2.0
             }
           ]
         },
@@ -3517,6 +3920,13 @@
               "no_swap": 26.0,
               "swap": 26.0,
               "gain": 0.0
+            },
+            {
+              "poll_week": 9,
+              "real": 26,
+              "no_swap": 26.0,
+              "swap": 26.0,
+              "gain": 0.0
             }
           ]
         }
@@ -3570,20 +3980,24 @@
           "Big Ten": 6,
           "Big 12": 7,
           "Other": 4
+        },
+        "9": {
+          "SEC": 5,
+          "ACC": 4,
+          "Big Ten": 5,
+          "Big 12": 6,
+          "Other": 5
         }
       },
       "plausibility": {
         "strong_p4_records": 13,
         "strong_left_unranked": [
           "Kentucky",
-          "Tennessee"
+          "Northwestern"
         ],
-        "three_plus_losses": 76,
+        "three_plus_losses": 89,
         "three_plus_losses_ranked": [
-          "Louisville",
-          "Penn State",
-          "Virginia",
-          "West Virginia"
+          "Virginia"
         ],
         "plausible": false
       }
