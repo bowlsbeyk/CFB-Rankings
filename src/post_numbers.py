@@ -30,7 +30,8 @@ def r(x, n=2):
 def stat(block, n=2):
     out = {"mean": r(block["mean"], n), "ci95": [r(v, n) for v in block["ci95_t"]]}
     if "seasons_positive" in block:
-        out["seasons_positive_of_11"] = int(block["seasons_positive"])
+        out["seasons_positive"] = int(block["seasons_positive"])
+        out["seasons"] = int(block.get("seasons", len(block.get("per_season", [])) or 11))
     if "sign_flip_p" in block:
         out["sign_flip_p"] = r(block["sign_flip_p"], 3)
     return out
@@ -219,6 +220,20 @@ def main():
         **{G: {"games": lp[G]["games"], "beyond_typical_for_pre_game_rank": r(lp[G]["adjusted_overrating"]),
                "ci95": [r(v) for v in lp[G]["ci"]], "before_adjustment": r(lp[G]["raw_overrating"])}
            for G in ("SEC", "ACC")},
+    }
+    cal = load("calibration_check.json")
+    n["calibration_check_schedules_and_poll_places"] = {
+        "source": "results/calibration_check.json (descriptive, added before publication; DEVIATIONS.md 2026-10-31)",
+        **{v: {"SEC_game_day_schedule_places": cal[v]["h5_variant_B_schedule_places"]["SEC"],
+               "ACC_game_day_schedule_places": cal[v]["h5_variant_B_schedule_places"]["ACC"],
+               "SEC_minus_ACC_game_day_schedule_places": cal[v]["h5_variant_B_schedule_places"]["SEC_minus_ACC"],
+               "SEC_per_game": cal[v]["t2_per_game_rank_points"]["SEC"],
+               "SEC_minus_ACC_per_game": cal[v]["t2_per_game_rank_points"]["SEC_minus_ACC"],
+               "SEC_poll_places_above_rating": cal[v]["poll_places_above_season_rating"]["SEC"],
+               "ACC_poll_places_above_rating": cal[v]["poll_places_above_season_rating"]["ACC"]}
+           for v in ("uncalibrated", "t4_all", "t4_power")},
+        "pac12_game_day_schedule_places_2014_2023": cal["h5_variant_B_with_pac12_split"]["Pac-12"],
+        "ACC_vs_power_opponents_t4": boot(t4["ACC"]["vs_power_opponents"], "mean_residual"),
     }
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")

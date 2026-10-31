@@ -1,0 +1,462 @@
+{
+  "note": "Descriptive check added before publication, after all results were seen. The same code as H5 variant B, T2 and H2 (season-only rating), rerun on the results rating calibrated with T4 offsets. 'uncalibrated' reproduces the published numbers.",
+  "offsets": {
+    "t4_all": {
+      "SEC": 3.348042553191489,
+      "ACC": 0.12828793774319067,
+      "Big Ten": 3.4890625,
+      "Big 12": 4.174827586206896,
+      "Pac-12": 0.8025675675675674
+    },
+    "t4_power": {
+      "SEC": -0.21581395348837196,
+      "ACC": -3.095109489051095,
+      "Big Ten": 3.051428571428571,
+      "Big 12": -0.3082758620689655,
+      "Pac-12": 0.6462162162162162
+    }
+  },
+  "uncalibrated": {
+    "h5_variant_B_schedule_places": {
+      "SEC": {
+        "mean": 5.69,
+        "ci95": [
+          2.89,
+          8.92
+        ]
+      },
+      "ACC": {
+        "mean": 2.15,
+        "ci95": [
+          -1.12,
+          5.54
+        ]
+      },
+      "Big Ten": {
+        "mean": -5.17,
+        "ci95": [
+          -7.52,
+          -2.62
+        ]
+      },
+      "Big 12": {
+        "mean": 3.3,
+        "ci95": [
+          -0.77,
+          7.83
+        ]
+      },
+      "Other": {
+        "mean": -0.99,
+        "ci95": [
+          -2.38,
+          0.45
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": 3.54,
+        "ci95": [
+          -0.77,
+          7.96
+        ]
+      }
+    },
+    "t2_per_game_rank_points": {
+      "SEC_minus_ACC": {
+        "early (weeks 1-4)": {
+          "mean": 0.56,
+          "ci95": [
+            0.06,
+            1.14
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 1.0,
+          "ci95": [
+            0.46,
+            1.59
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": 0.59,
+          "ci95": [
+            0.22,
+            0.95
+          ]
+        }
+      },
+      "SEC": {
+        "early (weeks 1-4)": {
+          "mean": 0.66,
+          "ci95": [
+            0.24,
+            1.13
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 1.16,
+          "ci95": [
+            0.7,
+            1.62
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": 0.64,
+          "ci95": [
+            0.37,
+            0.93
+          ]
+        }
+      }
+    },
+    "poll_places_above_season_rating": {
+      "SEC": {
+        "mean": 1.11,
+        "ci95": [
+          0.34,
+          1.88
+        ]
+      },
+      "ACC": {
+        "mean": 0.35,
+        "ci95": [
+          -0.53,
+          1.16
+        ]
+      },
+      "Big Ten": {
+        "mean": -0.87,
+        "ci95": [
+          -1.75,
+          0.01
+        ]
+      },
+      "Big 12": {
+        "mean": 1.15,
+        "ci95": [
+          -0.19,
+          2.5
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": 0.76,
+        "ci95": [
+          -0.43,
+          1.93
+        ]
+      }
+    }
+  },
+  "t4_all": {
+    "h5_variant_B_schedule_places": {
+      "SEC": {
+        "mean": 1.59,
+        "ci95": [
+          -0.77,
+          4.34
+        ]
+      },
+      "ACC": {
+        "mean": 8.49,
+        "ci95": [
+          5.3,
+          11.79
+        ]
+      },
+      "Big Ten": {
+        "mean": -8.88,
+        "ci95": [
+          -11.16,
+          -6.55
+        ]
+      },
+      "Big 12": {
+        "mean": -4.42,
+        "ci95": [
+          -8.13,
+          -0.33
+        ]
+      },
+      "Other": {
+        "mean": 0.46,
+        "ci95": [
+          -1.02,
+          1.88
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": -6.9,
+        "ci95": [
+          -10.99,
+          -2.92
+        ]
+      }
+    },
+    "t2_per_game_rank_points": {
+      "SEC_minus_ACC": {
+        "early (weeks 1-4)": {
+          "mean": 0.27,
+          "ci95": [
+            -0.25,
+            0.86
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 0.0,
+          "ci95": [
+            -0.54,
+            0.61
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": -0.33,
+          "ci95": [
+            -0.66,
+            0.01
+          ]
+        }
+      },
+      "SEC": {
+        "early (weeks 1-4)": {
+          "mean": 0.5,
+          "ci95": [
+            0.07,
+            0.98
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 0.63,
+          "ci95": [
+            0.16,
+            1.11
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": 0.19,
+          "ci95": [
+            -0.07,
+            0.48
+          ]
+        }
+      }
+    },
+    "poll_places_above_season_rating": {
+      "SEC": {
+        "mean": -0.21,
+        "ci95": [
+          -0.92,
+          0.47
+        ]
+      },
+      "ACC": {
+        "mean": 2.57,
+        "ci95": [
+          1.74,
+          3.38
+        ]
+      },
+      "Big Ten": {
+        "mean": -2.06,
+        "ci95": [
+          -2.86,
+          -1.32
+        ]
+      },
+      "Big 12": {
+        "mean": -1.1,
+        "ci95": [
+          -2.28,
+          0.05
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": -2.79,
+        "ci95": [
+          -3.84,
+          -1.81
+        ]
+      }
+    }
+  },
+  "t4_power": {
+    "h5_variant_B_schedule_places": {
+      "SEC": {
+        "mean": 7.66,
+        "ci95": [
+          4.73,
+          10.81
+        ]
+      },
+      "ACC": {
+        "mean": 12.26,
+        "ci95": [
+          9.08,
+          15.59
+        ]
+      },
+      "Big Ten": {
+        "mean": -12.36,
+        "ci95": [
+          -14.6,
+          -9.97
+        ]
+      },
+      "Big 12": {
+        "mean": 4.72,
+        "ci95": [
+          0.79,
+          9.46
+        ]
+      },
+      "Other": {
+        "mean": -2.12,
+        "ci95": [
+          -3.53,
+          -0.66
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": -4.6,
+        "ci95": [
+          -8.75,
+          -0.38
+        ]
+      }
+    },
+    "t2_per_game_rank_points": {
+      "SEC_minus_ACC": {
+        "early (weeks 1-4)": {
+          "mean": 0.48,
+          "ci95": [
+            0.01,
+            1.07
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 0.49,
+          "ci95": [
+            -0.08,
+            1.09
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": 0.11,
+          "ci95": [
+            -0.24,
+            0.49
+          ]
+        }
+      },
+      "SEC": {
+        "early (weeks 1-4)": {
+          "mean": 0.78,
+          "ci95": [
+            0.36,
+            1.25
+          ]
+        },
+        "middle (weeks 5-8)": {
+          "mean": 1.32,
+          "ci95": [
+            0.87,
+            1.81
+          ]
+        },
+        "late (weeks 9+)": {
+          "mean": 0.87,
+          "ci95": [
+            0.58,
+            1.18
+          ]
+        }
+      }
+    },
+    "poll_places_above_season_rating": {
+      "SEC": {
+        "mean": 1.51,
+        "ci95": [
+          0.74,
+          2.3
+        ]
+      },
+      "ACC": {
+        "mean": 3.97,
+        "ci95": [
+          3.05,
+          4.83
+        ]
+      },
+      "Big Ten": {
+        "mean": -3.53,
+        "ci95": [
+          -4.37,
+          -2.73
+        ]
+      },
+      "Big 12": {
+        "mean": 1.7,
+        "ci95": [
+          0.29,
+          3.04
+        ]
+      },
+      "SEC_minus_ACC": {
+        "mean": -2.46,
+        "ci95": [
+          -3.56,
+          -1.28
+        ]
+      }
+    }
+  },
+  "h5_variant_B_with_pac12_split": {
+    "SEC": {
+      "mean": 5.69,
+      "ci95": [
+        2.89,
+        8.92
+      ],
+      "team_seasons": 158
+    },
+    "ACC": {
+      "mean": 2.15,
+      "ci95": [
+        -1.12,
+        5.54
+      ],
+      "team_seasons": 160
+    },
+    "Big Ten": {
+      "mean": -5.17,
+      "ci95": [
+        -7.52,
+        -2.62
+      ],
+      "team_seasons": 162
+    },
+    "Big 12": {
+      "mean": 3.3,
+      "ci95": [
+        -0.77,
+        7.83
+      ],
+      "team_seasons": 126
+    },
+    "Pac-12": {
+      "mean": 5.42,
+      "ci95": [
+        0.96,
+        10.21
+      ],
+      "team_seasons": 108
+    },
+    "Other": {
+      "mean": -1.94,
+      "ci95": [
+        -3.51,
+        -0.45
+      ],
+      "team_seasons": 724
+    }
+  }
+}

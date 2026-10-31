@@ -3,7 +3,7 @@
 A study of week-to-week AP poll movement, testing whether SEC teams look tougher mainly because they start the season ranked. Pre-registered plan with logged deviations; the main findings come from follow-up tests added during the analysis.
 
 - **Plan:** [`METHODOLOGY.md`](METHODOLOGY.md), committed before any data was pulled.
-- **Changes to the plan:** [`DEVIATIONS.md`](DEVIATIONS.md), each dated and committed before use, with what had been seen at the time.
+- **Changes to the plan:** [`DEVIATIONS.md`](DEVIATIONS.md), each dated, with what had been seen at the time. Most were committed before use; the entries that were not say so.
 - **Short version:** [`SUMMARY.md`](SUMMARY.md), a short summary; most of its numbers are collected with their sources in [`results/post_numbers.json`](results/post_numbers.json).
 
 ## About this study

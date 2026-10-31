@@ -359,10 +359,24 @@ The scripts now write `label_part1_robust` and `label_part2_robust`, and list th
 While `SUMMARY.md` and the LinkedIn post were being written and fact-checked, a few descriptive numbers were added to `results/post_numbers.json` (built by `src/post_numbers.py`). They were computed after every result had been seen and were first used in a draft of the summary before this entry was written. They are logged here before publication. None is a test; no logged number changed.
 
 - **SEC minus each other power conference in the strength-of-record top 25** (Big Ten, Big 12, Pac-12), computed from `results/sor_weekly.csv` the same way as T5's logged SEC-minus-ACC figure. The ACC row reproduces T5 exactly (+2.27). SEC minus Big Ten is +0.74 (95% t −0.55 to +2.03; 6 of 11 seasons).
-- **The other-power-conference average excess** in T5 (+0.18) and T6 (+0.47), computed per season as E_SEC − D_PWR. This is the logged bloc, the mean over conferences, not a combined count.
+- **The other-power-conference average excess** in T5 (+0.18) and T6 (+0.47), computed per season as E_SEC − D_PWR. These were computed during the audit and are in the entry above; only their addition to `post_numbers.json` is new. This is the logged bloc, the mean over conferences, not a combined count.
 - **Miami's 2026 schedule rank among power-conference teams** by opponents' 2026 results (48th of 67).
 - **The mean strength-versus-record gap** for the SEC from the T5 "noise baseline" (1.46 slots per poll).
 - **T6 decomposition shares**: the share of SEC early spots that miss the final top 25 (38.6%) and the share expected at those AP ranks (37.7%).
 - **Pass-through values** already in result files: T2 SEC minus ACC per band, H5 variant B for the Big 12 and Big Ten, T4 for the other conferences, T5 and T6 values under each calibration, T3 values before the rank adjustment.
 
 Two rounds of fact-checking (checkers per document, hostile readers, and skeptics asked to refute each issue) reviewed the summary, the README and report changes and the post against the result files. Their fixes changed wording and added caveats. No result was recomputed.
+
+## 2026-10-31 — Calibration check of the schedule and poll-place results (descriptive, added before publication)
+
+**Why.** The final fact-check of the post found a double standard. T5 and T6 were checked against two calibrations of the results rating, each conference shifted by its average T4 residual against outsiders (all games, or power-conference opponents only). The schedule results (H5 variant B, T2) and the poll-place gap (H2 on the season-only rating) rest on the same rating but were never checked that way. A fact-checker reran them with the calibrations before this entry was written, so the numbers had been seen. `src/calibration_check.py` now does it reproducibly and writes `results/calibration_check.json`. The code of each test is unchanged; only the rating's performance half is shifted, then the 50/50 combined rating and its rank are rebuilt as in `src/season_rating.py`. Uncalibrated, it reproduces the published numbers exactly. It also splits the Pac-12 (2014–2023) out of "Other" in H5 variant B.
+
+**What it shows** (SEC first; uncalibrated / all-games calibration / power-games calibration):
+- **Whole-schedule game-day boost (H5 B), SEC:** +5.69 / +1.59 (95% CI −0.77 to +4.34) / +7.66. The sign holds; it is not clear under the all-games calibration.
+- **SEC minus ACC (H5 B):** +3.54 (not clear) / −6.90 (CI −10.99 to −2.92) / −4.60 (CI −8.75 to −0.38). Reverses under both calibrations.
+- **Per game (T2), SEC:** positive in every band under every calibration; clear in every band except weeks 9+ under the all-games calibration.
+- **Per game (T2), SEC minus ACC:** clear in every band uncalibrated; not clear in any band under the all-games calibration (+0.27, 0.00, −0.33); clear only in weeks 1–4 under the power-games calibration.
+- **Poll places above the rating (H2), SEC:** +1.11 / −0.21 (CI −0.92 to +0.47) / +1.51. ACC: +0.35 / +2.57 / +3.97.
+- **Pac-12 split (H5 B, uncalibrated):** +5.42 (CI +0.96 to +10.21; 108 team-seasons), about the SEC's size.
+
+**Reading.** Applying the logged robustness rule (a sign must hold in every check): the SEC's own game-day schedule boost holds its sign; every SEC-versus-ACC schedule and poll-place contrast does not, and neither does the SEC's one-place poll gap. These are descriptive and are reported as such.

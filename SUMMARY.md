@@ -22,8 +22,8 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
   - Two rounds of fact-checking then checked this summary against the result files, with reviewers told to knock each claim down.
 - **Caveat:** every result in this summary comes from tests added mid-study, after earlier results had been seen, and both yardsticks replaced the planned Elo yardstick. Most of these tests were logged before they ran. The exceptions are marked below:
   - the whole-schedule check (an outside reviewer ran it first);
-  - the margin-based comparison (the audit computed it first);
-  - the descriptive comparisons added while writing this summary (logged afterwards, before publication).
+  - the margin-based comparison (a design reviewer computed an approximate version first);
+  - the descriptive comparisons and the calibration check added while writing this summary (logged afterwards, before publication).
 
 ## Hypothesis 1: Miami "played nobody". **Not supported by results.**
 
@@ -43,33 +43,26 @@ One season and eight weeks of games: this part is descriptive, not a test.
 
 **What holds up (supports Kyle):**
 
-- **Game-day rankings flatter SEC schedules all season, and more than ACC schedules game by game.**
-  - **Game by game** ([`results/preseason_tests.json`](results/preseason_tests.json), test T2):
-    - SEC opponents look **0.66** rank points better on game day than their seasons end up in weeks 1–4, **1.16** in weeks 5–8 and **0.64** from week 9 on.
-    - ACC opponents look about 0.1 better.
-    - SEC minus ACC is clear in every part of the season: +0.56 (CI +0.06 to +1.14), +1.00 (CI +0.46 to +1.59) and +0.59 (CI +0.22 to +0.95).
-    - Early minus late for the SEC is +0.02 (CI −0.48 to +0.53), so there is no sign of a preseason effect that wears off. The pre-set reading of T2 is "no link shown" to preseason ranks.
+- **Game-day rankings flatter SEC schedules, all season.**
   - **Whole schedules** ([`results/h5_sensitivity.json`](results/h5_sensitivity.json)):
     - Ranked by opponents' AP rank on game day, SEC schedules look about **5.7 places tougher** (of ~130) than they do ranked by those opponents' final results (95% CI +2.9 to +8.9).
-    - Only the Big 12 (+3.3, CI −0.8 to +7.8) and ACC (+2.2, CI −1.1 to +5.5) also get boosts, smaller and not statistically clear.
-    - Big Ten schedules go the other way: they look less tough on game day than by results (−5.2, CI −7.5 to −2.6).
-    - SEC minus ACC is +3.5 (CI −0.8 to +8.0), not clear on this coarser measure.
-    - With the final poll in place of the game-day poll, the SEC gap is +1.1 (CI −0.4 to +2.4).
-  - **Provenance:** an outside reviewer ran the whole-schedule check before it was logged.
-  - **Not recalibrated:** neither schedule check was rerun with the calibrations to results against outsiders. The rating undervalues SEC teams against outsiders but not ACC teams (below), so part of the SEC-minus-ACC gap could be the rating rather than the voters.
+    - With the final poll in place of the game-day poll, the gap is +1.1 (CI −0.4 to +2.4).
+    - An outside reviewer ran this check before it was logged.
+  - **Game by game** ([`results/preseason_tests.json`](results/preseason_tests.json), test T2):
+    - SEC opponents look **0.66** rank points better on game day than their seasons end up in weeks 1–4, **1.16** in weeks 5–8 and **0.64** from week 9 on.
+    - Early minus late is +0.02 (CI −0.48 to +0.53). So it runs all season, as much late as early, and there is no sign it starts with the preseason poll. The pre-set reading of T2 is "no link shown".
+  - **Calibrated:** the SEC's own boost keeps its sign when the rating is calibrated to each conference's results against outsiders ([`results/calibration_check.json`](results/calibration_check.json); descriptive, added before publication). Whole schedules: +1.6 (CI −0.8 to +4.3, not clear) or +7.7, depending on the calibration. Per game: positive in every part of the season under both.
+  - **Not SEC-only:** the Pac-12 (2014–2023) gets about as big a whole-schedule boost (+5.4, CI +1.0 to +10.2). The Big 12 (+3.3) and ACC (+2.2) get smaller boosts that are not statistically clear. Big Ten schedules go the other way (−5.2, CI −7.5 to −2.6).
 - **Early polls list more SEC teams than finish top 25 on results** ([`results/t6_early.json`](results/t6_early.json), [`fig27`](results/figures/fig27_excess_by_stage.png)).
   - **Size:** in AP polls 1–5, the AP top 25 holds **1.65 more SEC teams per poll** than the end-of-regular-season strength-of-record top 25 (95% CI +0.51 to +2.80; 10 of 11 seasons).
   - **Robustness:** it is the most of any conference, and it stays positive in all 14 robustness checks (at least +0.93; +1.2 against a margin-based top 25).
-  - **Shared:** the other power conferences are also listed early above their results: Pac-12 +0.98, ACC +0.62, Big 12 +0.28, Big Ten +0.08, an average of +0.47 per conference (CI +0.13 to +0.81).
+  - **Shared:** on average, the other power conferences are also listed early above their results: Pac-12 +0.98, ACC +0.62, Big 12 +0.28, Big Ten +0.08, an average of +0.47 per conference (CI +0.13 to +0.81). None of the four is clear on its own.
   - **Not clearly SEC-specific:** the SEC's lead over that average (+1.19, CI −0.23 to +2.60) and over the ACC (+1.04, CI −0.48 to +2.55) is not statistically clear. The pre-set reading is therefore "shared with the other power conferences, not SEC-specific". Under the literal robustness rule it is not robust, because the SEC-minus-ACC gap turns slightly negative (−0.15) under one calibration.
   - **Hindsight:** the yardstick is hindsight. Early polls reflect what voters knew then; this is not proof of intent.
 - **The SEC has the most early-ranked teams that later fade.**
   - In polls 1–5 the SEC holds 7.2 top-25 spots per poll, and 2.8 of them miss the final top 25 by record.
   - That volume likely adds to the "ranked" opponents on SEC schedules early in the season. This link was not tested directly.
 - **The power conferences' extra AP spots come mostly at the expense of Group of 5 teams.** From poll 6 on, the AP lists 3.3 Group of 5 and other teams per poll; strength of record has 4.8 (descriptive; [`fig26`](results/figures/fig26_sor_levels.png)).
-- **SEC teams sit about one poll place above the season-only rating** (+1.1 places, 95% CI +0.3 to +1.9; [`results/hypothesis.json`](results/hypothesis.json)).
-  - The Big 12 is similar (+1.2), and SEC minus ACC is not clear (+0.76, CI −0.43 to +1.93).
-  - This was not rerun with the calibrations to results against outsiders.
 
 **What does not hold up:**
 
@@ -84,16 +77,21 @@ One season and eight weeks of games: this part is descriptive, not a test.
   - **Against power-conference opponents from other conferences:** SEC teams match its predictions (−0.2 points a game, CI −3.1 to +2.6; 86 games).
   - **Against all outside opponents:** SEC teams beat it by 3.3 points a game (CI +1.7 to +5.0). So do the Big Ten (+3.5) and Big 12 (+4.2), so if anything the rating undervalues those three conferences against outsiders. The ACC (+0.1) and Pac-12 (+0.8) show no such gap.
   - **Head to head:** the SEC went 58–46 against the ACC.
-- **Against a margin-based top 25, the AP's SEC count is about right** (descriptive; the audit computed it before it was logged).
+- **Against a margin-based top 25, the AP's SEC count is about right** (descriptive; a design reviewer computed an approximate version before it was logged).
   - From poll 6 on, the AP lists +0.07 more SEC teams per poll than a top 25 ordered by scoring margin (CI −0.32 to +0.45).
   - Strength of record grades résumés, and a ranking by strength holds more SEC teams by design: about 1.5 per poll more in the study's simulation.
 - **Preseason-ranked SEC teams hold up about as well as is typical for their preseason rank.**
   - They finish 0.27 places better than typical (CI −2.15 to +1.61; a shortfall in 5 of 11 seasons), so the pre-set "hyped" reading is not met.
   - The interval cannot rule out a shortfall of up to about 1.6 places.
   - 39% of preseason-ranked SEC teams finish outside the final strength-of-record top 25, against 54% for the ACC and 32% for the Big Ten.
+- **SEC-versus-ACC comparisons of schedules and poll places depend on how the rating is calibrated** ([`results/calibration_check.json`](results/calibration_check.json); descriptive, added before publication).
+  - **Uncalibrated:** game by game, SEC opponents look more flattered than ACC opponents in every part of the season: +0.56 (CI +0.06 to +1.14), +1.00 (CI +0.46 to +1.59) and +0.59 (CI +0.22 to +0.95). For whole schedules the gap is +3.5 (CI −0.8 to +8.0), not clear. SEC teams sit about one poll place above the season-only rating (+1.1, CI +0.3 to +1.9), against +0.35 for ACC teams.
+  - **Why it matters:** the rating undervalues SEC teams against all outsiders (+3.3 points a game, below) but not ACC teams (+0.1), and it overrates ACC teams against power-conference outsiders (−3.1, CI −5.4 to −1.0).
+  - **Calibrated to those results:** the per-game SEC-minus-ACC gap is no longer clear in any part of the season under the all-games calibration. The whole-schedule gap reverses under both calibrations (−6.9 and −4.6, both clear). The SEC's poll-place gap is −0.2 under one calibration and +1.5 under the other, and ACC teams then sit 2.6 to 4.0 places above the rating.
+  - **Reading:** the data cannot say whether SEC schedules are flattered more than ACC schedules. The answer turns on how much of the SEC's success against outsiders is real.
 - **Ranked SEC teams fall out at about the usual rate** (a descriptive breakdown, added after the results were seen; [`fig29`](results/figures/fig29_early_decomposition.png)).
   - Of the SEC's 7.2 early spots, 2.7 would be expected to miss the final top 25 at the rates seen for every team at those AP ranks. 2.8 do: **+0.07 beyond expected** (CI −0.65 to +0.78).
-  - There is no evidence that each ranked SEC team is more overrated, but the interval cannot rule out a modest effect either way. The early surplus is mainly volume.
+  - There is no evidence that each ranked SEC team is more overrated. But the interval allows up to 0.8 extra fading SEC teams per poll, about half the early surplus. The best estimate is that the surplus is mainly volume.
 - **No sign that SEC teams get extra credit for "good losses"** ([`results/t3_loop.json`](results/t3_loop.json)).
   - After losing to a ranked SEC rival, SEC teams sit 1.20 places above where their seasons finish in the next poll.
   - That is only +0.44 places beyond what is typical for teams from all conferences after the same kind of loss from the same pre-game rank (CI −0.67 to +1.43; 152 games).
@@ -120,22 +118,21 @@ One season and eight weeks of games: this part is descriptive, not a test.
 
 - **Miami's #1 is backed by its results.** "Played nobody" is false: its schedule is mid-pack by results, not empty, though softer than most power-conference schedules.
 - **Game-day "ranked" opponents oversell SEC schedules, all season long.**
-  - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look.
-  - **Game by game:** clearly more than for ACC opponents in every part of the season.
-  - **Whole-schedule comparison:** the SEC-versus-ACC gap is not statistically clear on that coarser measure.
+  - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating.
+  - **Not SEC-only:** the Pac-12 gets about as much.
+  - **Versus the ACC:** whether SEC schedules are flattered more than ACC schedules depends on calibrating the rating, so it is not shown.
   - **Recommendation:** judge schedules by results, not by game-day ranks.
 - **Early polls hold the most extra SEC teams.**
   - **Size:** 1.65 per poll more than finish in the top 25 by record, the most of any conference.
   - **Shared:** the other power conferences show it too, and the SEC's lead over them is not statistically clear.
   - **Mechanism:** those SEC teams then fade at about the usual rate for their ranks. Mainly, there are more of them.
 - **By results alone, the SEC has the most top-25 teams.** Clearly more than the ACC, Big 12 and Pac-12; not clearly more than the Big Ten. Its high rankings are mostly earned.
-  - **During the season:** SEC teams sit about one poll place above the season-only rating, about what the Big 12 gets.
-  - **Not robust:** the season-long surplus over strength of record fails the robustness rule.
+  - **Not robust:** the season-long surplus over strength of record and the SEC's one-place poll gap both fail the calibration checks.
 
 ## What this does not show
 
 - **Not proof of intent.** Early polls reflect what voters knew then. "Not justified by how the season turned out" is hindsight.
-- **Voters or the rating?** Where the SEC looks flattered against the ACC, these data cannot fully separate voters overrating SEC teams from the rating underrating them. The rating undervalues SEC, Big Ten and Big 12 teams against outsiders, but not ACC teams.
+- **Voters or the rating?** Where the SEC looks flattered against the ACC, these data cannot separate voters overrating SEC teams from the rating underrating them. Calibrating the rating to results against outsiders erases or reverses those contrasts.
 - **One family of yardsticks.** The two main strength-of-record tests (T5 and T6) were each checked 14 ways:
   - 9 settings;
   - two calibrations to results against outsiders;
