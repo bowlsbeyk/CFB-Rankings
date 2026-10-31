@@ -845,43 +845,77 @@ def fig_sor_levels():
     ax.set_xlim(0, 9)
     ax.grid(axis="y", visible=False)
     ax.set_xlabel("Average number of teams per poll (polls 6 to end of regular season)")
-    ax.set_title("Why the SEC is ranked so high: the most top-25 records")
+    ax.set_title("By results alone the SEC has the most top-25 teams; the AP lists slightly more")
+    g = load("t5_sor.json")["robustness_gate"]["by_check"]["SOR top25|x1.0|t4_all"]["E_SEC"]
     save(fig, "fig26_sor_levels.png",
          "2014-2025. Strength of record uses only that season's scores and opponents: no polls, preseason or names. "
-         "The SEC averages the most teams in both.")
+         f"The SEC averages the most teams in both.\nThe SEC's AP surplus over its record is not robust: with the "
+         f"T4 calibration it is {g:+.2f} per poll.")
 
 
 def fig_excess_by_stage():
-    t5 = load("t5_sor.json")["week_bands"]
-    t6 = load("t6_early.json")
-    stages = [("Polls 1-5\n(vs final record)", t6["primary"]["E_SEC"]["mean"],
-               t6["primary"]["E_SEC"]["mean"] - t6["primary"]["D_PWR"]["mean"],
-               t6["primary"]["E_SEC"]["mean"] - t6["primary"]["D_ACC"]["mean"])]
-    for b, lab in (("polls 6-8", "Polls 6-8"), ("polls 9-11", "Polls 9-11"), ("polls 12+", "Polls 12+"),
-                   ("end of regular season", "Final regular-\nseason poll")):
-        x = t5[b]
-        stages.append((lab, x["E_SEC"], x["E_SEC"] - x["D_PWR"], x["E_SEC"] - x["D_ACC"]))
-    fig, ax = plt.subplots(figsize=(9, 4))
+    t5 = load("t5_sor.json")["week_bands_vs_final_record"]
+    t6 = load("t6_early.json")["primary"]
+    stages = [("Polls 1-5", t6)] + [(lab, t5[b]) for b, lab in (
+        ("polls 6-8", "Polls 6-8"), ("polls 9-11", "Polls 9-11"), ("polls 12+", "Polls 12+"),
+        ("end of regular season", "Final regular-\nseason poll"))]
+    sec = [st["E_SEC"]["mean"] for _, st in stages]
+    lo = [st["E_SEC"]["ci95_t"][0] for _, st in stages]
+    hi = [st["E_SEC"]["ci95_t"][1] for _, st in stages]
+    pwr = [st["E_SEC"]["mean"] - st["D_PWR"]["mean"] for _, st in stages]
+    acc = [st["E_SEC"]["mean"] - st["D_ACC"]["mean"] for _, st in stages]
+    fig, ax = plt.subplots(figsize=(9, 4.2))
     xs = np.arange(len(stages))
-    for k, (name, color) in enumerate((("SEC", SEC), ("Other power conferences (avg)", GRAY_MID), ("ACC", ACC))):
-        ys = [st[1 + k] for st in stages]
+    ax.fill_between(xs, lo, hi, color=SEC, alpha=0.12, lw=0, label="SEC 95% interval (11 seasons)")
+    for ys, name, color in ((sec, "SEC", SEC), (pwr, "Other power conferences (average)", GRAY_MID),
+                            (acc, "ACC", ACC)):
         ax.plot(xs, ys, color=color, marker="o", ms=8, mec=SURFACE, mew=1.5, label=name)
-        if k == 0:
-            for xi, yi in zip(xs, ys):
-                ax.annotate(f"{yi:+.1f}", (xi, yi), xytext=(0, 8), textcoords="offset points",
-                            ha="center", fontsize=8, color=INK2)
+    for xi, yi in zip(xs, sec):
+        ax.annotate(f"{yi:+.1f}", (xi, yi), xytext=(0, 9), textcoords="offset points",
+                    ha="center", fontsize=8, color=INK2)
     ax.axhline(0, color=AXIS, lw=1)
-    ax.axvline(0.5, color=GRID, lw=1, ls="-")
     ax.set_xticks(xs)
     ax.set_xticklabels([st[0] for st in stages], fontsize=8)
-    ax.set_ylabel("AP top-25 spots beyond\nstrength of record, per poll")
+    ax.set_ylabel("AP top-25 spots beyond the\nend-of-season record, per poll")
     ax.legend(loc="upper right", fontsize=8)
     ax.grid(axis="x", visible=False)
-    ax.set_title("The SEC's extra AP spots are largest early and fade by season's end")
+    ax.set_title(f"Against the end-of-season record, the SEC's extra AP spots shrink from "
+                 f"{sec[0]:+.1f} early to {sec[-1]:+.1f} by the final poll")
     save(fig, "fig27_excess_by_stage.png",
-         "2014-2025. Polls 1-5 compared with the end-of-season record (T6); later polls with the record to date (T5). "
-         "Every power conference gets extra spots early;\nthe SEC gets the most. Results-only rankings from few "
-         "games also undercount strong conferences, so part of this is noise, not voters.")
+         "2014-2025. AP top-25 spots per poll minus end-of-regular-season strength-of-record top-25 spots. "
+         "Measured in hindsight; not proof of intent.\nEarly picks at every rank fall back somewhat, and the SEC "
+         "has the most early-ranked teams (Figure 29).")
+
+
+def fig_early_decomposition():
+    d = load("t6_early.json")["decomposition"]
+    groups = ["SEC", "Big Ten", "Pac-12", "Big 12", "ACC"]
+    labels = {"Pac-12": "Pac-12 (to 2023)"}
+    fig, ax = plt.subplots(figsize=(9, 4))
+    y = np.arange(len(groups))
+    exp = [d[G]["expected"] for G in groups]
+    act = [d[G]["expected"] + d[G]["beyond"] for G in groups]
+    ax.barh(y - 0.19, exp, height=0.36, color=GRAY_LIGHT, label="expected for teams at those AP ranks")
+    for i, G in enumerate(groups):
+        color = SEC if G == "SEC" else ACC if G == "ACC" else GRAY_MID
+        ax.barh(y[i] + 0.19, act[i], height=0.36, color=color, label="actual (SEC blue, ACC orange)" if i == 0 else None)
+        ax.annotate(f"{act[i]:.1f} of {d[G]['a']:.1f} ranked  (expected {exp[i]:.1f})", (max(act[i], exp[i]), y[i]),
+                    xytext=(8, 0), textcoords="offset points", va="center", fontsize=8, color=INK2)
+    ax.set_yticks(y)
+    ax.set_yticklabels([labels.get(G, G) for G in groups])
+    ax.invert_yaxis()
+    ax.set_xlim(0, 4.6)
+    ax.grid(axis="y", visible=False)
+    ax.set_xlabel("Early AP top-25 teams per poll who did not finish top 25 on record")
+    ax.legend(loc="lower right", fontsize=8)
+    b = d["beyond_tests"]["E_SEC"]
+    ax.set_title("Ranked SEC teams fall out of the top 25 at the usual rate; the SEC just has more of them")
+    r = d["retention_by_ap_rank"]
+    save(fig, "fig29_early_decomposition.png",
+         f"AP polls 1-5, 2014-2025, against the end-of-regular-season strength-of-record top 25. Expected uses every "
+         f"team's rate at that AP rank ({r['1-5']:.0%} of ranks 1-5 stay, {r['21-25']:.0%} of 21-25).\nSEC beyond "
+         f"expected: {b['mean']:+.2f} per poll (95% t {b['ci95_t'][0]:+.2f} to {b['ci95_t'][1]:+.2f}, "
+         f"{b['seasons_positive']} of 11 seasons positive).")
 
 
 def fig_2026_sor():
@@ -921,7 +955,8 @@ def main():
               fig_poll_vs_strength, fig_poll_vs_strength_counts, fig_carryover, fig_conference_effect,
               fig_rewards, fig_schedule_inflation, fig_head_start, fig_base_rates,
               fig_counterfactual_slots, fig_counterfactual_teams, fig_2026_now, fig_h5_sensitivity,
-              fig_2026_board, fig_t1, fig_t2, fig_t3, fig_sor_levels, fig_excess_by_stage, fig_2026_sor):
+              fig_2026_board, fig_t1, fig_t2, fig_t3, fig_sor_levels, fig_excess_by_stage, fig_2026_sor,
+              fig_early_decomposition):
         f()
     print(f"Wrote {len(list(FIG.glob('*.png')))} figures to {FIG.relative_to(ROOT)}")
 

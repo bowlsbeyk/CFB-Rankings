@@ -37,6 +37,7 @@ STEPS = [
     ["src/referee_test.py"],
     ["src/sor_test.py"],
     ["src/early_test.py"],
+    ["src/post_numbers.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
     ["src/figures.py"],
