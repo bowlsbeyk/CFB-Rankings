@@ -57,6 +57,7 @@ def main():
         "schedule_rank_by_opponents_2026_results": int(ms.rating_rank),
         "schedules_ranked": int(len(sched)),
         "opponents_in_ap_top25_on_game_day": "none" if ms.poll_sos == 0 else "some",
+        "teams_with_no_ap_top25_opponent_yet": int((sched.poll_sos == 0).sum()),
         "note": "schedule ranks: 1 = toughest; by game-day poll = opponents' AP top-25 points in the poll "
                 "before each game (0 outside the top 25); by results = opponents' 2026 season-only rating",
     }

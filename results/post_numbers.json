@@ -1,0 +1,514 @@
+{
+  "miami_2026": {
+    "source": "results/sor_2026.csv, results/schedule_strength_2026.csv",
+    "after_week": 8,
+    "record": "7-0",
+    "ap_rank": 1,
+    "sor_rank": 1,
+    "sor_rank_range_across_11_settings": [
+      1,
+      4
+    ],
+    "colley_rank": 2,
+    "performance_rank": 2,
+    "schedule_rank_by_opponents_game_day_poll": 94,
+    "schedule_rank_by_opponents_2026_results": 56,
+    "schedules_ranked": 138,
+    "opponents_in_ap_top25_on_game_day": "none",
+    "teams_with_no_ap_top25_opponent_yet": 45,
+    "note": "schedule ranks: 1 = toughest; by game-day poll = opponents' AP top-25 points in the poll before each game (0 outside the top 25); by results = opponents' 2026 season-only rating"
+  },
+  "wake_forest_2026": {
+    "source": "results/sor_2026.csv",
+    "record": "6-1",
+    "ap_rank": 14,
+    "sor_rank": 9
+  },
+  "sor_top10_2026": {
+    "source": "results/sor_2026.csv",
+    "teams": [
+      {
+        "team": "Miami",
+        "group": "ACC",
+        "record": "7-0",
+        "sor_rank": 1,
+        "ap_rank": 1
+      },
+      {
+        "team": "UCLA",
+        "group": "Big Ten",
+        "record": "7-0",
+        "sor_rank": 2,
+        "ap_rank": 7
+      },
+      {
+        "team": "Kentucky",
+        "group": "SEC",
+        "record": "7-1",
+        "sor_rank": 3,
+        "ap_rank": 9
+      },
+      {
+        "team": "Indiana",
+        "group": "Big Ten",
+        "record": "7-1",
+        "sor_rank": 4,
+        "ap_rank": 4
+      },
+      {
+        "team": "Utah",
+        "group": "Big 12",
+        "record": "7-0",
+        "sor_rank": 5,
+        "ap_rank": 6
+      },
+      {
+        "team": "Ohio State",
+        "group": "Big Ten",
+        "record": "6-1",
+        "sor_rank": 6,
+        "ap_rank": 2
+      },
+      {
+        "team": "BYU",
+        "group": "Big 12",
+        "record": "6-1",
+        "sor_rank": 7,
+        "ap_rank": 8
+      },
+      {
+        "team": "Notre Dame",
+        "group": "Notre Dame",
+        "record": "6-1",
+        "sor_rank": 8,
+        "ap_rank": 5
+      },
+      {
+        "team": "Wake Forest",
+        "group": "ACC",
+        "record": "6-1",
+        "sor_rank": 9,
+        "ap_rank": 14
+      },
+      {
+        "team": "Alabama",
+        "group": "SEC",
+        "record": "6-2",
+        "sor_rank": 10,
+        "ap_rank": 10
+      }
+    ]
+  },
+  "top25_teams_per_poll_2014_2025": {
+    "source": "results/t5_sor.json headline_levels (polls 6 to end of regular season)",
+    "SEC": {
+      "strength_of_record_top25": 5.49,
+      "ap_top25": 6.17
+    },
+    "Big Ten": {
+      "strength_of_record_top25": 4.74,
+      "ap_top25": 4.63
+    },
+    "Big 12": {
+      "strength_of_record_top25": 3.42,
+      "ap_top25": 3.59
+    },
+    "Pac-12": {
+      "strength_of_record_top25": 3.2,
+      "ap_top25": 3.84
+    },
+    "ACC": {
+      "strength_of_record_top25": 3.22,
+      "ap_top25": 3.33
+    },
+    "sec_minus_acc_strength_of_record_top25": {
+      "mean": 2.27,
+      "ci95": [
+        1.23,
+        3.31
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.002
+    }
+  },
+  "sec_vs_outsiders_t4": {
+    "source": "results/t4_referee.json",
+    "note": "actual margin (capped at 28) minus margin predicted by the results rating, points per game",
+    "all_games": {
+      "mean": 3.35,
+      "ci95": [
+        1.68,
+        4.97
+      ],
+      "games": 235
+    },
+    "postseason_only": {
+      "mean": 1.74,
+      "ci95": [
+        -2.46,
+        6.53
+      ],
+      "games": 34
+    },
+    "vs_power_opponents": {
+      "mean": -0.22,
+      "ci95": [
+        -3.07,
+        2.58
+      ],
+      "games": 86
+    },
+    "head_to_head_sec_vs_acc": {
+      "games": 104,
+      "sec_wins": 58,
+      "acc_wins": 46
+    }
+  },
+  "ap_extra_sec_spots_season_long_t5": {
+    "source": "results/t5_sor.json primary, robustness_gate",
+    "E_SEC": {
+      "mean": 0.68,
+      "ci95": [
+        0.2,
+        1.16
+      ],
+      "seasons_positive_of_11": 9,
+      "sign_flip_p": 0.01
+    },
+    "D_PWR": {
+      "mean": 0.5,
+      "ci95": [
+        -0.08,
+        1.08
+      ],
+      "seasons_positive_of_11": 9,
+      "sign_flip_p": 0.088
+    },
+    "D_ACC": {
+      "mean": 0.57,
+      "ci95": [
+        0.16,
+        0.97
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.006
+    },
+    "label_part1": "OVER-RANKED, SHARED WITH THE OTHER POWER CONFERENCES, NOT SEC-SPECIFIC",
+    "label_part1_robust": false,
+    "label_part2": "SEC excess HIGHER than ACC",
+    "label_part2_robust": false,
+    "E_SEC_with_t4_all_games_calibration": 0.08,
+    "E_SEC_vs_performance_top25_descriptive": {
+      "mean": 0.07,
+      "ci95": [
+        -0.32,
+        0.45
+      ],
+      "seasons_positive_of_11": 8,
+      "sign_flip_p": 0.699
+    }
+  },
+  "sec_extra_spots_by_stage_vs_end_of_season_record": {
+    "source": "results/t6_early.json primary (polls 1-5); results/t5_sor.json week_bands_vs_final_record",
+    "polls 1-5": {
+      "mean": 1.65,
+      "ci95": [
+        0.51,
+        2.8
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.015
+    },
+    "polls 6-8": {
+      "mean": 1.12,
+      "ci95": [
+        0.14,
+        2.11
+      ],
+      "seasons_positive_of_11": 8,
+      "sign_flip_p": 0.033
+    },
+    "polls 9-11": {
+      "mean": 0.55,
+      "ci95": [
+        -0.33,
+        1.43
+      ],
+      "seasons_positive_of_11": 7,
+      "sign_flip_p": 0.23
+    },
+    "polls 12+": {
+      "mean": 0.33,
+      "ci95": [
+        -0.37,
+        1.04
+      ],
+      "seasons_positive_of_11": 6,
+      "sign_flip_p": 0.338
+    },
+    "end of regular season": {
+      "mean": 0.45,
+      "ci95": [
+        -0.24,
+        1.15
+      ],
+      "seasons_positive_of_11": 4,
+      "sign_flip_p": 0.312
+    }
+  },
+  "early_polls_t6": {
+    "source": "results/t6_early.json",
+    "E_SEC": {
+      "mean": 1.65,
+      "ci95": [
+        0.51,
+        2.8
+      ],
+      "seasons_positive_of_11": 10,
+      "sign_flip_p": 0.015
+    },
+    "D_PWR": {
+      "mean": 1.19,
+      "ci95": [
+        -0.23,
+        2.6
+      ],
+      "seasons_positive_of_11": 8,
+      "sign_flip_p": 0.094
+    },
+    "D_ACC": {
+      "mean": 1.04,
+      "ci95": [
+        -0.48,
+        2.55
+      ],
+      "seasons_positive_of_11": 8,
+      "sign_flip_p": 0.166
+    },
+    "by_group_mean": {
+      "SEC": 1.65,
+      "ACC": 0.62,
+      "Big Ten": 0.08,
+      "Big 12": 0.28,
+      "Pac-12": 0.98,
+      "Notre Dame": 0.13,
+      "Other": -3.56
+    },
+    "label_part1": "RANKED HIGHER EARLY THAN THE SEASON JUSTIFIED, SHARED WITH THE OTHER POWER CONFERENCES, NOT SEC-SPECIFIC",
+    "label_part1_robust": false,
+    "E_SEC_sign_holds_in_all_checks": true,
+    "E_SEC_min_across_checks": 0.93,
+    "caveat": "Early polls reflect what voters knew then. 'Not justified by how the season turned out' measures hype in hindsight; it is not proof of intent. Every conference's early picks regress somewhat, which is why the SEC is compared with the other power conferences."
+  },
+  "early_polls_decomposition_t6": {
+    "source": "results/t6_early.json decomposition",
+    "retention_in_final_top25_by_ap_rank": {
+      "1-5": 0.898,
+      "6-10": 0.692,
+      "11-15": 0.58,
+      "16-20": 0.433,
+      "21-25": 0.348
+    },
+    "SEC": {
+      "a": 7.2,
+      "expected": 2.72,
+      "beyond": 0.07,
+      "entrants": 1.13
+    },
+    "Big Ten": {
+      "a": 4.81,
+      "expected": 1.74,
+      "beyond": -0.55,
+      "entrants": 1.11
+    },
+    "Pac-12": {
+      "a": 4.53,
+      "expected": 2.04,
+      "beyond": 0.16,
+      "entrants": 1.22
+    },
+    "Big 12": {
+      "a": 3.55,
+      "expected": 1.56,
+      "beyond": 0.22,
+      "entrants": 1.49
+    },
+    "ACC": {
+      "a": 3.53,
+      "expected": 1.49,
+      "beyond": 0.26,
+      "entrants": 1.13
+    },
+    "SEC_beyond_expected": {
+      "mean": 0.07,
+      "ci95": [
+        -0.65,
+        0.78
+      ],
+      "seasons_positive_of_11": 4,
+      "sign_flip_p": 0.84
+    }
+  },
+  "preseason_ranked_teams_vs_final_record_t6": {
+    "source": "results/t6_early.json preseason_shortfall_vs_SOR",
+    "A_SEC_ranks": {
+      "mean": -0.27,
+      "ci95": [
+        -2.15,
+        1.61
+      ],
+      "seasons_positive_of_11": 5,
+      "sign_flip_p": 0.74
+    },
+    "reading": "NOT SHOWN: no evidence preseason-ranked SEC teams fell further short than typical",
+    "share_finishing_outside_final_top25": {
+      "ACC": 0.538,
+      "Big 12": 0.561,
+      "Big Ten": 0.321,
+      "Notre Dame": 0.3,
+      "Other": 0.571,
+      "Pac-12": 0.488,
+      "SEC": 0.387
+    }
+  },
+  "schedule_look_game_day_vs_final_results": {
+    "source": "results/h5_sensitivity.json final_poll_corrected B (game-day poll) and D (final poll)",
+    "unit": "schedule-rank places of ~130, top-25 rank-point scale on both sides",
+    "SEC_game_day": {
+      "mean": 5.69,
+      "ci95": [
+        2.89,
+        8.92
+      ]
+    },
+    "ACC_game_day": {
+      "mean": 2.15,
+      "ci95": [
+        -1.12,
+        5.54
+      ]
+    },
+    "SEC_minus_ACC_game_day": {
+      "mean": 3.54,
+      "ci95": [
+        -0.77,
+        7.96
+      ]
+    },
+    "SEC_final_poll": {
+      "mean": 1.1,
+      "ci95": [
+        -0.35,
+        2.4
+      ]
+    }
+  },
+  "per_game_opponent_gap_t2": {
+    "source": "results/preseason_tests.json T2_schedule_boost_by_week",
+    "unit": "opponent's game-day AP rank points minus its final results rank points, per game",
+    "SEC": {
+      "early (weeks 1-4)": {
+        "mean": 0.66,
+        "ci95": [
+          0.24,
+          1.13
+        ]
+      },
+      "middle (weeks 5-8)": {
+        "mean": 1.16,
+        "ci95": [
+          0.7,
+          1.62
+        ]
+      },
+      "late (weeks 9+)": {
+        "mean": 0.64,
+        "ci95": [
+          0.37,
+          0.93
+        ]
+      }
+    },
+    "ACC": {
+      "early (weeks 1-4)": {
+        "mean": 0.1,
+        "ci95": [
+          -0.2,
+          0.39
+        ]
+      },
+      "middle (weeks 5-8)": {
+        "mean": 0.16,
+        "ci95": [
+          -0.21,
+          0.52
+        ]
+      },
+      "late (weeks 9+)": {
+        "mean": 0.06,
+        "ci95": [
+          -0.19,
+          0.29
+        ]
+      }
+    }
+  },
+  "poll_rank_above_results_rank": {
+    "source": "results/hypothesis.json season_rating.poll_vs_rating (polls 6+, places)",
+    "SEC": {
+      "mean": 1.11,
+      "ci95": [
+        0.34,
+        1.88
+      ]
+    },
+    "Big 12": {
+      "mean": 1.15,
+      "ci95": [
+        -0.19,
+        2.5
+      ]
+    },
+    "ACC": {
+      "mean": 0.35,
+      "ci95": [
+        -0.53,
+        1.16
+      ]
+    },
+    "Big Ten": {
+      "mean": -0.87,
+      "ci95": [
+        -1.75,
+        0.01
+      ]
+    },
+    "SEC_minus_ACC": {
+      "mean": 0.76,
+      "ci95": [
+        -0.43,
+        1.93
+      ]
+    }
+  },
+  "ranked_loop_t3": {
+    "source": "results/t3_loop.json primary_lost_to_ranked_same_conference",
+    "note": "places a team is ranked above where its season ends up, after losing to a ranked same-conference team",
+    "SEC": {
+      "games": 152,
+      "mean": 0.44,
+      "ci95": [
+        -0.67,
+        1.43
+      ]
+    },
+    "ACC": {
+      "games": 38,
+      "mean": 0.96,
+      "ci95": [
+        -0.77,
+        2.52
+      ]
+    }
+  }
+}

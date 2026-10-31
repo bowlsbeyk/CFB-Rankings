@@ -21,7 +21,7 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
 After week 8 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`](results/figures/fig28_2026_sor.png)):
 
 - Miami is 7–0 and **#1 by strength of record**. It ranks between #1 and #4 across all 11 settings tested. It is #2 by wins and losses alone (Colley) and #2 by scoring margin.
-- **What is true:** none of Miami's opponents was in the AP top 25 on game day. Counted that way, its schedule ranks 94th of 138.
+- **What is true:** none of Miami's opponents was in the AP top 25 on game day. Counted that way, its schedule is tied for last with 44 other teams that have not faced a ranked opponent yet.
 - **What is not:** counted by how those opponents have actually played in 2026, the schedule ranks **56th of 138**. That is the middle of the pack, not "nobody".
 - **Example:** Miami won 33–20 at Wake Forest in week 3. Wake Forest was unranked then. It is now 6–1, AP #14 and #9 by strength of record, and its only loss is to Miami.
 
