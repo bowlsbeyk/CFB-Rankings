@@ -47,7 +47,7 @@ def frame(title, subtitle):
 
 
 def note(fig, text):
-    fig.text(0.06, 0.085, textwrap.fill(text, 92), fontsize=8.5, color=INK2, va="bottom", linespacing=1.3)
+    fig.text(0.06, 0.085, textwrap.fill(text, 88), fontsize=8.5, color=INK2, va="bottom", linespacing=1.3)
 
 
 def save(fig, name):
@@ -58,38 +58,42 @@ def save(fig, name):
 
 
 def miami(n):
+    import pandas as pd
     m = n["miami_2026"]
     total = m["schedules_ranked"]
-    tied_from = total - m["teams_with_no_ap_top25_opponent_yet"] + 1
-    fig = frame("Miami 'played nobody'? Depends how you count.",
-                f"Miami's 2026 schedule strength after week {m['after_week']}, ranked among {total} FBS teams "
-                f"(1 = toughest). Miami is {m['record']}, #{m['sor_rank']} by strength of record and top "
-                f"{m['sor_rank_range_across_11_settings'][1]} in every setting.")
-    ax = fig.add_axes([0.06, 0.24, 0.88, 0.5])
-    rows = [("By opponents' AP rank\non game day", None), ("By how opponents have\nactually played in 2026", None)]
-    ax.set_xlim(0.5, total + 0.5)
-    ax.set_ylim(-0.4, 1.9)
-    ax.invert_xaxis()
-    for y in (0, 1):
-        ax.plot([1, total], [y, y], color=GRID, lw=6, solid_capstyle="round", zorder=1)
-    ax.plot([tied_from, total], [1, 1], color=SECOND, lw=6, solid_capstyle="round", zorder=2)
-    ax.text(total, 1.5, "By opponents' AP rank on game day", ha="left", va="bottom", fontsize=11.5,
-            fontweight="bold", color=INK)
-    ax.text(total, 0.5, "By how opponents have actually played in 2026", ha="left", va="bottom", fontsize=11.5,
-            fontweight="bold", color=INK)
-    ax.text((tied_from + total) / 2, 1.13, f"Tied for last with {m['teams_with_no_ap_top25_opponent_yet'] - 1} other "
-            "teams (no ranked opponent yet)", ha="left", va="bottom", fontsize=9.5, color=INK2)
+    d = pd.read_csv(RES / "sor_2026.csv").set_index("team")
+
+    def leader(col):
+        t = d[col].idxmin()
+        return f"{t}, {d.loc[t, 'record']}"
+
+    fig = frame("Miami on performance alone: #1 or #2 on every measure",
+                f"2026 after week {m['after_week']}. Every ranking uses only this season's scores and schedules "
+                "(no polls, no preseason, no names) and adjusts for who each team has played.")
+    rows = [
+        ("Strength of record", "How hard would 7-0 against this exact schedule be?", int(m["sor_rank"]),
+         f"#1 in 9 of 11 versions; never worse than #{m['sor_rank_range_across_11_settings'][1]}"),
+        ("Wins and losses, schedule-adjusted", "Colley ranking", int(m["colley_rank"]), f"#1: {leader('colley_rank')}"),
+        ("Scoring margin, schedule-adjusted", "Margin capped at 28 points", int(m["performance_rank"]),
+         f"#1: {leader('perf_rank')}"),
+    ]
+    top = 0.655
+    for i, (name, sub, rank, note_) in enumerate(rows):
+        y = top - i * 0.125
+        fig.text(0.06, y, f"#{rank}", fontsize=34, fontweight="bold", color=HIGHLIGHT, va="center")
+        fig.text(0.27, y + 0.025, name, fontsize=13, fontweight="bold", color=INK, va="center")
+        fig.text(0.27, y - 0.012, sub, fontsize=9.5, color=INK2, va="center")
+        fig.text(0.27, y - 0.042, note_, fontsize=9.5, color=INK2, va="center")
+    fig.add_artist(plt.Line2D([0.06, 0.94], [0.315, 0.315], color=GRID, lw=1))
     r = m["schedule_rank_by_opponents_2026_results"]
-    ax.scatter([r], [0], s=180, color=HIGHLIGHT, edgecolor=SURFACE, linewidth=2, zorder=3)
-    ax.text(r, 0.13, f"{r}th of {total}: mid-pack", ha="center", va="bottom", fontsize=9.5, color=INK2)
-    ax.set_yticks([])
-    ax.set_xticks([1, 35, 69, 104, total])
-    ax.set_xticklabels([f"{total}\neasiest", "104", "69", "35", "1\ntoughest"][::-1], fontsize=9)
-    ax.spines["left"].set_visible(False)
-    ax.tick_params(axis="y", length=0)
-    pw = m["schedule_rank_by_2026_results_among_power_conference_teams"]
-    note(fig, f"Softer than most power-conference schedules ({pw[0]}th of {pw[1]}), but not \"nobody\". "
-         "Results-only rating: scores and schedules, no polls.")
+    fig.text(0.06, 0.29, "The schedule, for context", fontsize=11, fontweight="bold", color=INK, va="top")
+    fig.text(0.06, 0.255, textwrap.fill(
+        f"By how its opponents have actually played, Miami's schedule is {r}th of {total}: middle of the pack, "
+        f"not \"nobody\". The rankings above already account for it. A softer schedule makes 7-0 easier, so "
+        "it counts against Miami. Miami is #1 despite it, not because of it.", 82),
+        fontsize=8.8, color=INK2, va="top", linespacing=1.35)
+    note(fig, f"Counted by opponents' AP rank on game day instead, Miami has faced no ranked team, like "
+         f"{m['teams_with_no_ap_top25_opponent_yet'] - 1} other teams.")
     save(fig, "01_miami_schedule.png")
 
 
