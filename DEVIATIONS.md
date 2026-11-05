@@ -382,3 +382,37 @@ Two rounds of fact-checking (checkers per document, hostile readers, and skeptic
 **Reading.** Applying the logged robustness rule (a sign must hold in every check): the SEC's own game-day schedule boost holds its sign. The whole-schedule SEC-minus-ACC gap, the per-game SEC-minus-ACC gap in weeks 9+, the SEC-minus-ACC poll-place gap and the SEC's one-place poll gap do not. The per-game SEC-minus-ACC gap in weeks 1–4 and 5–8 stays at or above zero under both calibrations but is not clear in any band under the all-games calibration. These are descriptive and are reported as such.
 
 **Also added:** Miami's and UCLA's 2026 strength-of-record rank in each of the 11 settings (`post_numbers.json`, `sor_rank_by_setting_2026`). Miami is #1 in all 9 uncalibrated settings and #3 and #4 under the two calibrations, where UCLA is #1.
+
+## 2026-11-05 — T7 (the playoff committee) and T8 (same résumé, different conference) (Kyle's request; logged before any code or result)
+
+**Why.** Kyle's view, shared by commentators (e.g. an OutKick column of 2026-11-05 on the committee's first 2026 ranking): perception of a team rests on its record **plus** two extra features, the conference name and its current ranking, and the committee's "wins over ranked teams" rule makes that circular. Every earlier test used the AP poll. T7 tests the committee itself; T8 tests the conference-name effect directly by holding the résumé fixed. Both were proposed after every earlier result had been seen.
+
+**What has been looked at before this entry.** Only data plumbing: the frozen raw poll files (`data/raw/polls/rankings_*_regular.json`) already contain the "Playoff Committee Rankings" for 2014–2025 (six rankings a season, seven in 2014, each a top 25). Committee week labels match AP week labels (team overlap is highest at the same label), so committee ranking *c* reflects games through schedule week *c* − 1, the same timing as AP poll *c*. No committee ranking has been compared with any rating. No new data is pulled; 2026 has no committee ranking in the frozen files and is not used.
+
+**Shared machinery.** The T5 engine, unchanged (`src/sor_test.py run_season`): strength of record after each schedule week from that season's games only, its 11 settings, Colley and the performance rating. Groups, seasons (2014–2025, no 2020), t-statistics, sign-flip test and the 9-of-11 rule are T5's.
+
+### T7 — the committee against results (`src/committee_test.py`)
+
+- **Data:** every committee ranking, 2014–2025. Committee ranking *c* is matched to strength of record after schedule week *c* − 1. Teams outside the committee's 25 are unranked.
+- **Primary quantities** (exactly T5's, with the committee in place of the AP): per ranking, each group's committee top-25 slots minus its strength-of-record top-25 slots; mean over the season's rankings; then E_SEC, D_PWR (SEC minus the mean of ACC, Big Ten, Big 12 and Pac-12 when present) and D_ACC across the 11 seasons.
+- **Labels and reading:** T5's `label_part1` and `label_part2`, unchanged.
+- **Robustness gate:** T5's 14 checks (9 settings; the two T4 calibrations; rank points; Colley top 25; end-of-regular-season strength of record), with T5's rule: a label is robust only if E_SEC, D_PWR and D_ACC each keep their sign in every check.
+- **Secondary (same reading rule):** committee minus AP in the same week: per ranking, each group's committee slots minus its AP slots in AP poll *c*. Is the committee more (or less) SEC-heavy than the AP voters? Reported as C_SEC, C_PWR, C_ACC.
+- **Descriptive:** the same quantities restricted to committee places 6–16 (the playoff bubble): slots in places 6–16 of the committee minus places 6–16 of strength of record.
+
+### T8 — same résumé, different conference (`src/matched_test.py`)
+
+- **Design.** In every AP poll from poll 6 on (the T5 weeks), each SEC team that is in the strength-of-record top 30 that week is matched with the team from the other power conferences (ACC, Big Ten, Big 12, Pac-12 when present) that has **the same number of losses** and the nearest strength-of-record rank, within **3 places**. Ties for nearest are averaged. Matching uses only results; no poll data.
+- **Outcome.** Rank points in the AP poll released after that week (26 − rank inside the top 25, 0 outside): SEC team minus its match. Positive = the SEC team is ranked higher than a non-SEC team with the same losses and nearly the same strength of record. Unit: poll places.
+- **Primary quantity.** M_SEC: per season, the mean over all matched pairs; then across the 11 seasons with T5's statistics.
+- **Reading.**
+  - **SEC NAME PREMIUM SHOWN** if the 95% t-interval is above zero and at least 9 of 11 seasons are positive.
+  - **NO PREMIUM BEYOND ONE PLACE** if the 90% t-interval lies within ±1 place.
+  - **SEC PENALTY SHOWN** if the 95% interval is below zero and at most 2 of 11 seasons are positive.
+  - Otherwise **INCONCLUSIVE**.
+- **Balance check (reported with the result).** Mean strength-of-record rank gap within pairs, and the share of SEC team-weeks that found a match.
+- **Robustness (premium counts as robust only if M_SEC keeps its sign in every check):** match window ±2 and ±5 places; matching on Colley rank instead of strength of record; strength of record under each T4 calibration (the crux found on 2026-10-31); outcome as AP rank capped at 26 instead of rank points.
+- **Secondary (same reading rule):** (a) match against ACC teams only (M_ACC); (b) the committee in place of the AP, in committee weeks (M_CFP); (c) the bubble: pairs where the SEC team's strength-of-record rank is 6–16 (M_BUBBLE).
+- **Not done:** no further variants after results are seen. Any later addition will be logged as post hoc.
+
+**Reporting.** Both tests are reported whichever way they come out, with equal prominence, in `SUMMARY.md`, `README.md` and `REPORT.md`.
