@@ -241,6 +241,36 @@ def main():
         "pac12_game_day_schedule_places_2014_2023": cal["h5_variant_B_with_pac12_split"]["Pac-12"],
         "ACC_vs_power_opponents_t4": boot(t4["ACC"]["vs_power_opponents"], "mean_residual"),
     }
+    t7, t8, t8p = load("t7_committee.json"), load("t8_matched.json"), load("t8_posthoc.json")
+    n["committee_vs_results_t7"] = {
+        "source": "results/t7_committee.json (logged 2026-11-05 before any code)",
+        "E_SEC": stat(t7["primary"]["E_SEC"]), "D_PWR": stat(t7["primary"]["D_PWR"]), "D_ACC": stat(t7["primary"]["D_ACC"]),
+        "label_part1": t7["label_part1"], "label_part2": t7["label_part2"],
+        "committee_minus_ap_same_week_SEC": stat(t7["committee_minus_ap"]["C_SEC"]),
+        "committee_slots_per_ranking": {G: r(v) for G, v in t7["committee_slots_per_ranking"].items()},
+    }
+    pm = lambda x: {"mean": r(x["mean"]), "ci95": [r(v) for v in x["ci95_t"]],
+                    "seasons_positive": int(x["seasons_positive"]), "seasons": int(x["seasons"]),
+                    **({"pairs": int(x["pairs"])} if "pairs" in x else {})}
+    n["same_resume_different_conference_t8"] = {
+        "source": "results/t8_matched.json (logged 2026-11-05 before any code); post hoc checks results/t8_posthoc.json",
+        "unit": "AP poll places; SEC team minus a team from another power conference with the same losses and "
+                "strength of record within 3 places",
+        "M_SEC": pm(t8["primary_M_SEC"]), "reading": t8["reading"],
+        "share_matched": r(t8["primary_M_SEC"]["share_matched"]),
+        "robust": t8["robustness"]["robust"],
+        "checks": {k: r(v["mean"]) for k, v in t8["robustness"]["by_check"].items()},
+        "M_ACC_vs_ACC_only": pm(t8["secondary_M_ACC"]),
+        "M_CFP_committee": pm(t8["secondary_M_CFP_committee"]),
+        "M_BUBBLE": pm(t8["secondary_M_BUBBLE_sor_6_16"]),
+        "posthoc_margin_held_fixed": pm(t8p["1_margin_held_fixed"]),
+        "posthoc_regression_intercept": {"mean": r(t8p["2_regression_adjusted"]["intercept_premium"]),
+                                         "ci95": [r(v) for v in t8p["2_regression_adjusted"]["intercept_ci95_season_bootstrap"]]},
+        "posthoc_placebo_by_focal_conference": {G: pm(v) for G, v in t8p["3_placebo_focal_conference"].items()},
+        "posthoc_sec_preseason_ranked_higher": pm(t8p["4_descriptive"]["sec_preseason_ranked_higher"]),
+        "posthoc_sec_preseason_not_higher": pm(t8p["4_descriptive"]["sec_preseason_not_higher"]),
+        "posthoc_by_stage": {k: pm(v) for k, v in t8p["4_descriptive"]["by_stage"].items()},
+    }
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
 

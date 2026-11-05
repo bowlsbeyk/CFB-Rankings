@@ -614,6 +614,18 @@ Refuted by the skeptics, and not acted on: the claim that "shared with the other
 
 ---
 
+### 5.15 Same résumé, different conference (T8) and the playoff committee (T7) (added 2026-11-05)
+
+Both were logged in `DEVIATIONS.md` and their code committed before they ran. They answer Kyle's point that perception rests on a team's record **plus** its conference name and its current ranking.
+
+**T8.** In every AP poll from poll 6 on, each SEC team in the strength-of-record top 30 is matched with the team from the other power conferences with the same number of losses and the nearest strength-of-record rank, within 3 places. Outcome: AP rank points, SEC team minus match. M_SEC = **+2.50** places (95% t +1.24 to +3.76; 10 of 11 seasons; sign-flip p 0.003; 605 pairs, 83% of SEC team-weeks matched; mean strength-of-record gap +0.46 places). Logged reading: **SEC NAME PREMIUM SHOWN**, robust in every logged check (window ±2: +2.43; ±5: +2.57; Colley match: +2.44; T4 all-games calibration: +1.90; power-games calibration: +2.65; capped AP rank: +2.50). Secondary: against ACC teams only +3.25 (11 of 11); the committee in place of the AP +1.77 (95% t +0.83 to +2.71; 9 of 11); the bubble (SEC strength-of-record rank 6–16) +2.73 (+0.89 to +4.57).
+
+**Post hoc checks** (logged after the result, before they ran): with schedule-adjusted margin rank held within 10 places as well, +2.01 (95% t +0.93 to +3.10; 9 of 11). Regression of the pair difference on the pairs' strength-of-record and margin gaps: intercept +2.29 (season-bootstrap 95% +1.23 to +3.24). Placebo with each power conference as the focal group: Big Ten +0.03, Big 12 −0.99, Pac-12 +1.15 (all not clear), ACC **−2.67** (95% t −4.18 to −1.16; 1 of 11 seasons positive). Descriptive: +4.29 (11 of 11) when the SEC team was ranked higher in the preseason AP poll than its match, +0.39 when it was not; +3.70 in polls 6–8, +2.46 in polls 9–11, +1.53 from poll 12.
+
+**T7.** With the committee in place of the AP in T5's count test, E_SEC is +0.42 (95% t −0.12 to +0.96; 8 of 11), D_PWR +0.03, D_ACC −0.05: INCONCLUSIVE. The committee lists 0.18 more SEC teams than the AP in the same week (95% t +0.00 to +0.35; 9 of 11).
+
+**Reading.** The count tests (T5, T6, T7) ask how many SEC teams are in the top 25; T8 asks where they are placed against equal résumés. The AP and the committee hold about the number of SEC teams that results support but place each about two places higher than the same résumé from another power conference, and ACC teams about two and a half places lower. The premium tracks the preseason poll and fades without disappearing. It is not explained by scoring margin or by the calibration question that decided the schedule contrasts. What these data cannot rule out is that preseason rankings carry real information that a season's results have not yet shown, although with the same record and margin the premium is still present in the final regular-season polls.
+
 ## 6. Deviations from the pre-registered plan
 
 Every entry is dated in `DEVIATIONS.md`. All but the last two (descriptive additions and the calibration check, October 31) were committed before use; those two say so. The last column states what had been seen when each decision was made.
