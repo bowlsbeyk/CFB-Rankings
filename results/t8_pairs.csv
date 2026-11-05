@@ -1,0 +1,606 @@
+season,week,team,matched,diff,rank_gap,match,losses,sec_rank
+2014,5,Alabama,True,23.0,1.0,Arizona,0,10.0
+2014,5,Auburn,True,1.0,0.0,Oklahoma;UCLA,0,2.0
+2014,5,Georgia,True,13.0,3.0,NC State,1,23.0
+2014,5,LSU,True,11.0,-2.0,Louisville,1,21.0
+2014,5,Mississippi State,True,1.5,0.0,Florida State;Georgia Tech,0,7.0
+2014,5,Ole Miss,True,15.0,-1.0,Georgia Tech,0,9.0
+2014,5,Texas A&M,True,-2.0,-1.0,Oklahoma,0,4.0
+2014,6,Alabama,True,13.0,2.0,Arizona State,1,14.0
+2014,6,Auburn,True,20.0,3.0,Georgia Tech,0,1.0
+2014,6,Florida,True,-6.0,1.0,Arizona State,1,15.0
+2014,6,Georgia,True,7.5,0.0,Ohio State;Rutgers,1,22.0
+2014,6,Mississippi State,True,19.0,2.0,Georgia Tech,0,2.0
+2014,6,Ole Miss,True,19.0,1.0,Georgia Tech,0,3.0
+2014,6,Texas A&M,True,-3.0,1.0,Oklahoma,1,10.0
+2014,7,Alabama,True,4.0,1.0,Oklahoma,1,7.0
+2014,7,Georgia,True,7.5,0.0,Georgia Tech;Oregon,1,12.0
+2014,7,LSU,True,0.0,1.0,UCLA,2,17.0
+2014,7,Mississippi State,True,1.0,3.0,Florida State,0,1.0
+2014,7,Ole Miss,True,-1.0,2.0,Florida State,0,2.0
+2014,7,Texas A&M,True,5.0,3.0,UCLA,2,15.0
+2014,8,Alabama,True,2.0,3.0,Oregon,1,5.0
+2014,8,Georgia,True,-3.0,2.0,Oregon,1,6.0
+2014,8,LSU,True,-7.0,2.0,Oklahoma,2,21.0
+2014,8,Mississippi State,True,1.0,1.0,Florida State,0,2.0
+2014,8,Ole Miss,True,-1.0,2.0,Florida State,0,1.0
+2014,9,Georgia,True,-4.0,1.0,Oregon,1,7.0
+2014,10,Alabama,True,1.0,2.0,Oregon,1,4.0
+2014,10,Georgia,True,9.0,1.0,Georgia Tech,2,23.0
+2014,10,Mississippi State,True,1.0,2.0,Florida State,0,1.0
+2014,10,Missouri,True,-3.0,0.0,Minnesota;Utah,2,30.0
+2014,10,Texas A&M,True,-2.0,3.0,West Virginia,3,25.0
+2014,11,Alabama,True,-1.0,1.0,Oregon,1,3.0
+2014,11,Florida,True,-0.5,0.0,USC;Utah,3,30.0
+2014,11,Georgia,True,-1.0,0.0,Arizona;Kansas State,2,19.0
+2014,11,Mississippi State,True,1.0,1.0,Florida State,0,1.0
+2014,11,Ole Miss,True,4.0,1.0,UCLA,2,8.0
+2014,12,Alabama,True,1.0,2.0,Oregon,1,2.0
+2014,12,Georgia,True,6.0,2.0,Arizona,2,11.0
+2014,12,Mississippi State,True,-1.0,1.0,Oregon,1,3.0
+2014,12,Missouri,True,-2.5,0.0,Kansas State;Nebraska,2,19.0
+2014,12,Ole Miss,True,3.0,-1.0,UCLA,2,8.0
+2014,13,Alabama,True,1.0,2.0,Oregon,1,2.0
+2014,13,Georgia,True,4.0,1.0,Arizona,2,11.0
+2014,13,LSU,True,0.0,3.0,Utah,4,24.0
+2014,13,Mississippi State,True,-1.0,1.0,Oregon,1,3.0
+2014,13,Missouri,True,-5.5,0.0,Arizona;Kansas State,2,13.0
+2014,14,Alabama,True,2.0,1.0,Oregon,1,2.0
+2014,14,Georgia,True,4.0,3.0,Clemson,3,16.0
+2014,14,Mississippi State,True,-2.0,3.0,Arizona,2,5.0
+2014,14,Missouri,True,-2.0,-1.0,Georgia Tech,2,11.0
+2014,14,Ole Miss,True,3.0,3.0,UCLA,3,9.0
+2014,15,Alabama,True,2.0,1.0,Oregon,1,2.0
+2014,15,Georgia,True,-3.0,-1.0,Georgia Tech,3,15.0
+2014,15,Missouri,True,-5.0,0.0,Arizona;Georgia Tech,3,12.0
+2014,15,Ole Miss,True,5.0,1.0,UCLA,3,8.0
+2015,5,Alabama,True,10.0,2.0,Michigan,1,21.0
+2015,5,Florida,True,2.5,0.0,Iowa;Utah,0,4.0
+2015,5,Georgia,True,7.0,0.0,Indiana;West Virginia,1,27.0
+2015,5,LSU,True,-1.0,1.0,Clemson,0,7.0
+2015,5,Ole Miss,True,2.0,-1.0,Stanford,1,19.0
+2015,5,Texas A&M,True,13.0,-1.0,Iowa,0,6.0
+2015,6,Alabama,True,13.0,-1.0,California,1,19.0
+2015,6,Florida,True,-4.0,0.0,Clemson;TCU,0,4.0
+2015,6,LSU,True,5.0,1.0,Florida State,0,10.0
+2015,6,Ole Miss,True,6.0,0.0,California;Stanford,1,20.0
+2015,6,Texas A&M,True,2.0,0.0,Clemson;Iowa,0,6.0
+2015,7,Georgia,True,0.0,1.0,UCLA,2,30.0
+2015,7,LSU,True,4.0,0.0,Clemson;Iowa,0,4.0
+2015,7,Mississippi State,True,-5.5,0.0,Michigan;UCLA,2,29.0
+2015,7,Ole Miss,True,-9.0,1.0,Michigan,2,26.0
+2015,7,Texas A&M,True,3.5,0.0,California;Oklahoma,1,19.0
+2015,8,Alabama,True,6.0,1.0,Utah,1,9.0
+2015,8,Florida,True,-3.0,1.0,Stanford,1,13.0
+2015,8,LSU,True,-1.0,-1.0,Clemson,0,3.0
+2015,8,Mississippi State,True,-1.0,-1.0,UCLA,2,29.0
+2015,8,Ole Miss,True,7.0,0.0,California;Northwestern,2,22.0
+2015,8,Texas A&M,True,-1.0,0.0,California;UCLA,2,26.0
+2015,9,Alabama,True,6.0,2.0,Utah,1,10.0
+2015,9,Florida,True,2.0,1.0,Utah,1,11.0
+2015,9,LSU,True,2.0,-1.0,Michigan State,0,3.0
+2015,9,Mississippi State,True,0.0,0.0,Penn State;UCLA,2,30.0
+2015,9,Ole Miss,True,7.0,3.0,Northwestern,2,18.0
+2015,9,Texas A&M,True,1.0,1.0,Pittsburgh,2,24.0
+2015,10,Alabama,True,7.0,2.0,Utah,1,6.0
+2015,10,Florida,True,-0.5,0.0,Michigan State;Stanford,1,10.0
+2015,10,LSU,True,1.0,1.0,Utah,1,7.0
+2015,10,Mississippi State,True,-1.0,0.0,Michigan;Wisconsin,2,24.0
+2015,10,Ole Miss,True,0.0,0.0,Pittsburgh;USC,3,29.0
+2015,11,Florida,True,0.0,0.0,Michigan State;Oklahoma,1,9.0
+2015,11,LSU,True,1.0,1.0,Utah,2,13.0
+2015,11,Mississippi State,True,-3.0,-2.0,Oregon,3,30.0
+2015,11,Ole Miss,True,-2.0,-1.0,Oregon,3,29.0
+2015,12,Alabama,True,3.5,0.0,Michigan State;Oklahoma,1,4.0
+2015,12,Florida,True,-1.5,0.0,Ohio State;Oklahoma State,1,8.0
+2015,12,Georgia,True,-5.0,0.0,UCLA;Washington State,3,30.0
+2015,12,LSU,True,0.0,1.0,Utah,3,22.0
+2015,12,Mississippi State,True,-1.0,1.0,UCLA,3,27.0
+2015,12,Ole Miss,True,5.0,0.0,Pittsburgh;UCLA,3,26.0
+2015,12,Texas A&M,True,-4.0,-1.0,UCLA,3,29.0
+2015,13,Alabama,True,3.0,1.0,Michigan State,1,3.0
+2015,13,Florida,True,-6.0,1.0,Baylor,2,15.0
+2015,13,Georgia,True,-5.0,-1.0,Utah,3,26.0
+2015,13,LSU,True,-8.0,1.0,Oregon,3,19.0
+2015,13,Ole Miss,True,-1.0,2.0,Oregon,3,18.0
+2015,14,Alabama,True,1.5,0.0,Michigan State;Oklahoma,1,3.0
+2015,14,Florida,True,-4.0,3.0,Oregon,3,16.0
+2015,14,Georgia,True,-8.0,-1.0,Baylor,3,27.0
+2015,14,LSU,True,-7.0,1.0,Oregon,3,18.0
+2015,14,Ole Miss,True,-1.0,2.0,Oregon,3,17.0
+2016,5,Alabama,True,6.0,0.0,Miami;Michigan,0,5.0
+2016,5,Arkansas,True,10.0,1.0,Wake Forest,1,22.0
+2016,5,Florida,True,7.0,0.0,Arizona State;Utah,1,27.0
+2016,5,Tennessee,True,-5.0,1.0,Michigan,0,3.0
+2016,5,Texas A&M,True,-5.0,-1.0,Clemson,0,2.0
+2016,6,Alabama,True,3.0,1.0,Michigan,0,3.0
+2016,6,Arkansas,True,4.0,-1.0,Colorado,2,29.0
+2016,6,Florida,True,8.0,-2.0,Maryland,1,27.0
+2016,6,Texas A&M,True,-3.0,-1.0,Clemson,0,2.0
+2016,7,Alabama,True,3.0,-1.0,Clemson,0,2.0
+2016,7,Arkansas,True,-7.0,1.0,Wisconsin,2,16.0
+2016,7,Tennessee,True,-5.0,1.0,Florida State,2,11.0
+2016,7,Texas A&M,True,-3.0,1.0,Michigan,0,3.0
+2016,8,Alabama,True,2.0,1.0,Clemson,0,1.0
+2016,8,Arkansas,True,0.0,-2.0,Stanford,3,27.0
+2016,8,Auburn,True,1.0,-3.0,Oklahoma,2,24.0
+2016,8,LSU,True,7.0,2.0,Washington State,2,26.0
+2016,8,Tennessee,True,-7.0,3.0,Wisconsin,2,11.0
+2016,9,Alabama,True,1.5,0.0,Clemson;Michigan,0,2.0
+2016,9,Arkansas,True,0.0,-1.0,USC,3,27.0
+2016,9,Auburn,True,5.0,1.0,Utah,2,15.0
+2016,9,Tennessee,True,0.0,2.0,Stanford,3,19.0
+2016,9,Texas A&M,True,-1.0,2.0,Ohio State,1,4.0
+2016,10,Alabama,True,2.0,1.0,Clemson,0,1.0
+2016,10,Arkansas,True,0.0,-2.0,Stanford,3,21.0
+2016,10,Auburn,True,13.0,2.0,Nebraska,2,13.0
+2016,10,Tennessee,True,0.0,1.0,USC,3,25.0
+2016,10,Texas A&M,True,6.0,-1.0,Colorado,2,11.0
+2016,11,Texas A&M,True,-6.0,-3.0,Florida State,3,21.0
+2016,12,Auburn,True,7.5,0.0,Utah;Virginia Tech,3,27.0
+2016,12,Florida,True,6.0,-1.0,West Virginia,2,19.0
+2016,12,Tennessee,True,-1.0,3.0,Washington State,3,22.0
+2016,12,Texas A&M,True,1.0,1.0,Washington State,3,24.0
+2016,13,Auburn,True,6.0,3.0,Pittsburgh,4,25.0
+2016,13,Florida,True,4.0,1.0,Virginia Tech,3,20.0
+2016,13,LSU,True,3.0,2.0,Pittsburgh,4,26.0
+2016,14,LSU,True,7.0,2.0,Washington State,4,25.0
+2016,14,Tennessee,True,-4.0,-1.0,Pittsburgh,4,30.0
+2017,5,Alabama,True,2.0,-1.0,Oklahoma,0,5.0
+2017,5,Auburn,True,9.5,0.0,Louisville;Texas Tech,1,24.0
+2017,5,Florida,True,-4.0,1.0,Louisville,1,22.0
+2017,5,Georgia,True,3.0,1.0,TCU,0,1.0
+2017,6,Alabama,True,3.5,0.0,Penn State;TCU,0,4.0
+2017,6,Auburn,True,4.0,-1.0,Oklahoma State,1,21.0
+2017,6,Georgia,True,-2.0,1.0,Clemson,0,1.0
+2017,6,Kentucky,True,-11.0,-2.0,Virginia Tech,1,26.0
+2017,7,Alabama,True,2.0,0.0,Penn State;TCU,0,3.0
+2017,7,Georgia,True,1.0,1.0,TCU,0,1.0
+2017,7,Kentucky,True,0.0,1.0,Virginia,1,24.0
+2017,7,Mississippi State,True,0.0,-3.0,Iowa,2,29.0
+2017,8,Alabama,True,4.0,0.0,Miami;Penn State,0,4.0
+2017,8,Auburn,True,6.0,3.0,Iowa State,2,25.0
+2017,8,Georgia,True,1.0,1.0,TCU,0,1.0
+2017,8,LSU,True,3.0,-3.0,Michigan,2,24.0
+2017,8,Mississippi State,True,0.0,-2.0,Michigan,2,23.0
+2017,9,Alabama,True,3.0,-2.0,Wisconsin,0,5.0
+2017,9,Auburn,True,4.0,-1.0,NC State,2,22.0
+2017,9,Georgia,True,7.0,1.0,Miami,0,1.0
+2017,9,Kentucky,True,-8.0,-2.0,Stanford,2,30.0
+2017,9,LSU,True,6.0,1.0,Washington State,2,24.0
+2017,9,Mississippi State,True,-1.0,0.0,Iowa State;Michigan,2,18.0
+2017,10,Alabama,True,5.0,-2.0,Wisconsin,0,6.0
+2017,10,Auburn,True,7.0,1.0,Virginia Tech,2,20.0
+2017,10,Georgia,True,5.0,1.0,Miami,0,1.0
+2017,10,LSU,True,-2.0,-2.0,Iowa State,3,28.0
+2017,10,Mississippi State,True,-1.0,2.0,Virginia Tech,2,19.0
+2017,11,Alabama,True,2.5,0.0,Miami;Wisconsin,0,2.0
+2017,11,Auburn,True,7.0,-1.0,Penn State,2,10.0
+2017,11,Georgia,True,-4.0,-1.0,Oklahoma,1,6.0
+2017,11,LSU,True,4.5,0.0,NC State;Virginia Tech,3,23.0
+2017,11,Mississippi State,True,8.0,-1.0,NC State,3,21.0
+2017,12,Alabama,True,4.0,-1.0,Wisconsin,0,3.0
+2017,12,Auburn,True,5.5,0.0,Penn State;USC,2,10.0
+2017,12,Georgia,True,-4.0,-1.0,Oklahoma,1,6.0
+2017,12,LSU,True,0.0,0.0,Oklahoma State;Stanford,3,22.0
+2017,12,Mississippi State,True,6.0,0.0,Michigan;Oklahoma State,3,19.0
+2017,13,Alabama,True,2.0,1.0,Miami,1,6.0
+2017,13,Auburn,True,4.0,1.0,Ohio State,2,8.0
+2017,13,Georgia,True,-4.0,-1.0,Oklahoma,1,4.0
+2017,13,LSU,True,5.0,-1.0,Virginia Tech,3,22.0
+2017,13,Mississippi State,True,2.0,1.0,Louisville,4,29.0
+2017,14,Alabama,True,2.0,-3.0,Wisconsin,1,7.0
+2017,14,Auburn,True,11.0,2.0,Michigan State,3,10.0
+2017,14,Georgia,True,-1.5,0.0,Clemson;Oklahoma,1,2.0
+2017,14,LSU,True,6.0,-2.0,Virginia Tech,3,22.0
+2017,14,Mississippi State,True,2.0,-1.0,Louisville,4,30.0
+2018,5,Alabama,True,7.0,0.0,Oklahoma;West Virginia,0,8.0
+2018,5,Auburn,True,12.0,1.0,Michigan State,1,17.0
+2018,5,Florida,True,-0.5,0.0,Indiana;Miami,1,21.0
+2018,5,Georgia,True,2.0,1.0,Clemson,0,5.0
+2018,5,Kentucky,True,-10.0,-1.0,Ohio State,0,3.0
+2018,5,LSU,True,-2.0,1.0,Ohio State,0,1.0
+2018,5,Missouri,True,-7.0,-2.0,Texas,1,28.0
+2018,6,Alabama,True,5.0,1.0,West Virginia,0,5.0
+2018,6,Florida,True,-5.0,1.0,Texas,1,10.0
+2018,6,Georgia,True,2.0,-1.0,Clemson,0,4.0
+2018,6,Kentucky,True,-9.0,3.0,Texas,1,8.0
+2018,6,Ole Miss,True,0.0,1.0,Stanford,2,29.0
+2018,7,Alabama,True,2.0,-1.0,Clemson,0,4.0
+2018,7,Florida,True,-4.0,2.0,Texas,1,6.0
+2018,7,Georgia,True,-1.0,1.0,Texas,1,7.0
+2018,7,Kentucky,True,-8.0,-1.0,Michigan,1,10.0
+2018,7,LSU,True,2.0,3.0,Texas,1,5.0
+2018,7,Ole Miss,True,-2.0,-1.0,Michigan State,2,23.0
+2018,8,Alabama,True,1.0,-1.0,Clemson,0,3.0
+2018,8,Florida,True,-1.0,0.0,Michigan;Ohio State,1,7.0
+2018,8,Georgia,True,-2.0,-1.0,Michigan,1,6.0
+2018,8,Kentucky,True,-1.0,1.0,Ohio State,1,8.0
+2018,8,LSU,True,1.0,1.0,Michigan,1,4.0
+2018,9,Alabama,True,1.0,-2.0,Clemson,0,3.0
+2018,9,Georgia,True,-1.0,2.0,Michigan,1,5.0
+2018,9,Kentucky,True,-6.0,1.0,Michigan,1,6.0
+2018,9,LSU,True,1.0,3.0,Michigan,1,4.0
+2018,10,Alabama,True,1.0,2.0,Clemson,0,1.0
+2018,10,Florida,True,2.0,2.0,Penn State,3,18.0
+2018,10,Georgia,True,-1.0,1.0,Michigan,1,4.0
+2018,10,Mississippi State,True,8.0,1.0,Iowa,3,29.0
+2018,10,South Carolina,True,-4.0,0.0,Iowa State;Penn State,3,22.0
+2018,11,Alabama,True,1.0,2.0,Clemson,0,1.0
+2018,11,Florida,True,1.0,2.0,Penn State,3,14.0
+2018,11,Georgia,True,-1.0,1.0,Michigan,1,4.0
+2018,11,Kentucky,True,-4.0,1.0,Penn State,3,15.0
+2018,11,Missouri,True,0.0,1.0,Michigan State,4,23.0
+2018,11,Texas A&M,True,0.0,-1.0,Michigan State,4,25.0
+2018,12,Alabama,True,1.0,2.0,Clemson,0,1.0
+2018,12,Florida,True,0.0,0.0,Penn State;Texas,3,14.0
+2018,12,Georgia,True,-1.0,1.0,Michigan,1,4.0
+2018,12,Kentucky,True,-2.0,1.0,Penn State,3,11.0
+2018,12,Mississippi State,True,2.0,1.0,Pittsburgh,4,28.0
+2018,12,Missouri,True,-6.0,3.0,Northwestern,4,20.0
+2018,12,Texas A&M,True,-6.0,1.0,Northwestern,4,22.0
+2018,13,Alabama,True,1.0,2.0,Clemson,0,1.0
+2018,13,Florida,True,3.0,1.0,Penn State,3,11.0
+2018,13,Georgia,True,2.0,1.0,Ohio State,1,4.0
+2018,13,Kentucky,True,-2.0,2.0,Penn State,3,10.0
+2018,13,LSU,True,2.0,3.0,Penn State,3,9.0
+2018,14,Alabama,True,1.0,1.0,Clemson,0,1.0
+2018,14,Florida,True,-1.0,1.0,Washington,3,11.0
+2018,14,Kentucky,True,-7.0,2.0,Washington,3,10.0
+2018,14,LSU,True,-2.0,3.0,Washington,3,9.0
+2018,14,Mississippi State,True,-4.0,1.0,Texas,4,23.0
+2018,14,South Carolina,True,0.0,2.0,Northwestern,5,30.0
+2019,5,Alabama,True,1.0,-1.0,Clemson,0,5.0
+2019,5,Auburn,True,-3.0,1.0,Ohio State,0,1.0
+2019,5,Florida,True,8.0,0.0,Iowa;Wake Forest,0,10.0
+2019,5,Georgia,True,19.0,1.0,Wake Forest,0,7.0
+2019,5,LSU,True,7.0,0.0,Clemson;Wake Forest,0,6.0
+2019,6,Alabama,True,1.0,-1.0,Clemson,0,6.0
+2019,6,Florida,True,-4.5,0.0,Clemson;Ohio State,0,3.0
+2019,6,Georgia,True,7.0,-1.0,Penn State,0,10.0
+2019,6,LSU,True,-3.0,1.0,Clemson,0,4.0
+2019,7,Alabama,True,3.0,-1.0,Ohio State,0,2.0
+2019,7,Auburn,True,5.0,3.0,Michigan,1,13.0
+2019,7,Florida,True,7.0,2.0,Michigan,1,14.0
+2019,7,Georgia,True,3.0,-2.0,Utah,1,25.0
+2019,7,LSU,True,5.0,1.0,Penn State,0,3.0
+2019,7,Missouri,True,4.0,-1.0,Wake Forest,1,29.0
+2019,8,Alabama,True,3.5,0.0,Clemson;Oklahoma,0,6.0
+2019,8,Auburn,True,2.0,2.0,Oregon,1,12.0
+2019,8,Georgia,True,15.0,-2.0,Wake Forest,1,24.0
+2019,8,LSU,True,6.5,0.0,Baylor;Ohio State,0,2.0
+2019,9,Alabama,True,2.0,-1.0,Clemson,0,7.0
+2019,9,Florida,True,1.0,2.0,Oregon,1,10.0
+2019,9,Georgia,True,15.0,-3.0,Wake Forest,1,28.0
+2019,9,LSU,True,3.0,0.0,Ohio State;Penn State,0,2.0
+2019,10,Alabama,True,5.5,0.0,Baylor;Clemson,0,5.0
+2019,10,Florida,True,4.0,1.0,Michigan,2,14.0
+2019,10,Georgia,True,3.0,-2.0,Oklahoma,1,18.0
+2019,10,LSU,True,3.0,0.0,Ohio State;Penn State,0,2.0
+2019,11,Alabama,True,4.0,-1.0,Utah,1,11.0
+2019,11,Florida,True,3.0,2.0,Michigan,2,15.0
+2019,11,Georgia,True,5.0,-3.0,Oklahoma,1,16.0
+2019,11,LSU,True,1.0,1.0,Ohio State,0,1.0
+2019,12,Alabama,True,2.5,0.0,Oklahoma;Utah,1,10.0
+2019,12,Auburn,True,3.0,2.0,Iowa,3,20.0
+2019,12,Florida,True,2.0,3.0,Michigan,2,12.0
+2019,12,Georgia,True,9.0,1.0,Baylor,1,6.0
+2019,12,LSU,True,1.0,1.0,Ohio State,0,1.0
+2019,12,Texas A&M,True,2.0,1.0,Indiana,3,28.0
+2019,13,Alabama,True,1.0,1.0,Utah,1,10.0
+2019,13,Auburn,True,3.0,3.0,Iowa,3,20.0
+2019,13,Florida,True,5.0,1.0,Wisconsin,2,15.0
+2019,13,Georgia,True,7.0,1.0,Baylor,1,4.0
+2019,13,LSU,True,1.0,1.0,Ohio State,0,1.0
+2019,13,Texas A&M,True,0.0,2.0,Iowa State,4,30.0
+2019,14,Auburn,True,6.0,2.0,Michigan,3,13.0
+2019,14,Florida,True,3.0,-2.0,Wisconsin,2,11.0
+2019,14,Georgia,True,2.0,1.0,Oklahoma,1,4.0
+2019,14,LSU,True,1.0,1.0,Ohio State,0,1.0
+2019,15,Alabama,True,3.0,1.0,Utah,2,16.0
+2019,15,Auburn,True,8.0,2.0,Michigan,3,13.0
+2019,15,Florida,True,4.5,0.0,Baylor;Penn State,2,8.0
+2019,15,Georgia,True,8.0,1.0,Penn State,2,6.0
+2019,15,LSU,True,1.0,1.0,Ohio State,0,1.0
+2021,5,Alabama,True,8.0,2.0,Michigan,0,1.0
+2021,5,Arkansas,True,13.0,1.0,Texas Tech,1,16.0
+2021,5,Auburn,True,6.0,0.0,Arizona State;Oregon State,1,30.0
+2021,5,Georgia,True,7.0,1.0,Michigan,0,2.0
+2021,5,Kentucky,True,-8.5,0.0,Michigan;Oklahoma,0,4.0
+2021,5,Ole Miss,True,9.0,0.0,Maryland;Oregon State,1,28.0
+2021,6,Alabama,True,2.0,1.0,Penn State,1,13.0
+2021,6,Georgia,True,7.0,1.0,Michigan,0,1.0
+2021,6,Kentucky,True,0.0,0.0,Michigan State;Oklahoma State,0,6.0
+2021,6,Ole Miss,True,-6.0,-1.0,Penn State,1,15.0
+2021,7,Georgia,True,5.0,1.0,Michigan,0,1.0
+2021,7,Kentucky,True,-4.0,3.0,Iowa,1,10.0
+2021,7,Ole Miss,True,-1.0,2.0,Iowa,1,11.0
+2021,8,Arkansas,True,0.0,-1.0,Clemson,3,30.0
+2021,8,Auburn,True,8.0,3.0,Virginia,2,19.0
+2021,8,Georgia,True,5.0,1.0,Michigan,0,1.0
+2021,8,Kentucky,True,3.0,1.0,Oklahoma State,1,12.0
+2021,8,Texas A&M,True,9.0,0.0,Minnesota;Penn State,2,26.0
+2021,9,Alabama,True,6.0,1.0,Michigan,1,7.0
+2021,9,Georgia,True,4.0,1.0,Michigan State,0,1.0
+2021,9,Kentucky,True,1.0,1.0,Iowa,2,18.0
+2021,9,Texas A&M,True,13.0,2.0,Pittsburgh,2,28.0
+2021,10,Alabama,True,5.0,1.0,Michigan State,1,5.0
+2021,10,Arkansas,True,-3.0,2.0,Penn State,3,25.0
+2021,10,Auburn,True,7.0,0.0,Purdue;Wisconsin,3,18.0
+2021,10,Georgia,True,3.0,2.0,Oklahoma,0,1.0
+2021,10,Ole Miss,True,7.0,2.0,Iowa,2,13.0
+2021,11,Alabama,True,7.0,0.0,Ohio State;Wake Forest,1,8.0
+2021,11,Arkansas,True,1.5,0.0,Clemson;Wisconsin,3,19.0
+2021,11,Ole Miss,True,8.0,3.0,Iowa,2,12.0
+2021,11,Texas A&M,True,9.0,-1.0,NC State,3,28.0
+2021,12,Alabama,True,1.5,0.0,Ohio State;Oklahoma State,1,7.0
+2021,12,Arkansas,True,1.0,3.0,Penn State,4,26.0
+2021,12,Kentucky,True,-10.0,-3.0,Utah,3,30.0
+2021,12,Ole Miss,True,6.5,0.0,Iowa;Michigan State,2,11.0
+2021,12,Texas A&M,True,2.0,-1.0,Utah,3,28.0
+2021,13,Alabama,True,-2.0,-1.0,Michigan,1,4.0
+2021,13,Arkansas,True,3.0,-3.0,Purdue,4,26.0
+2021,13,Kentucky,True,-11.0,-2.0,Utah,3,27.0
+2021,13,Ole Miss,True,-1.0,-1.0,Ohio State,2,9.0
+2021,14,Alabama,True,1.0,2.0,Michigan,1,1.0
+2021,14,Arkansas,True,4.0,-3.0,Purdue,4,26.0
+2021,14,Georgia,True,-1.0,-1.0,Michigan,1,4.0
+2021,14,Kentucky,True,-7.0,-2.0,NC State,3,27.0
+2021,14,Ole Miss,True,-1.0,-1.0,Ohio State,2,8.0
+2022,5,Alabama,True,18.0,1.0,Kansas,0,1.0
+2022,5,Georgia,True,11.5,0.0,Penn State;TCU,0,5.0
+2022,5,Kentucky,True,13.0,0.0,Duke;Maryland,1,29.0
+2022,5,LSU,True,-11.0,-1.0,NC State,1,22.0
+2022,5,Mississippi State,True,-11.0,1.0,Oregon,1,18.0
+2022,5,Ole Miss,True,-4.5,0.0,Ohio State;USC,0,8.0
+2022,5,Tennessee,True,14.0,-2.0,Syracuse,0,15.0
+2022,6,Alabama,True,10.0,1.0,TCU,0,1.0
+2022,6,Georgia,True,4.5,0.0,Clemson;USC,0,4.0
+2022,6,Mississippi State,True,10.0,2.0,North Carolina,1,23.0
+2022,6,Ole Miss,True,-2.5,0.0,Michigan;Oklahoma State,0,11.0
+2022,6,Tennessee,True,3.0,0.0,UCLA;USC,0,6.0
+2022,7,Alabama,True,6.0,2.0,USC,1,9.0
+2022,7,Georgia,True,3.0,1.0,Michigan,0,4.0
+2022,7,LSU,True,0.0,2.0,Oregon State,2,26.0
+2022,7,Ole Miss,True,4.5,0.0,Syracuse;UCLA,0,7.0
+2022,7,Tennessee,True,2.0,-1.0,Clemson,0,3.0
+2022,8,Alabama,True,3.0,3.0,Oklahoma State,1,5.0
+2022,8,Georgia,True,4.5,0.0,Michigan;TCU,0,4.0
+2022,8,LSU,True,4.0,-1.0,Kansas State,2,21.0
+2022,8,Ole Miss,True,-3.0,1.0,UCLA,1,14.0
+2022,8,Tennessee,True,4.0,-1.0,TCU,0,3.0
+2022,9,Alabama,True,2.0,1.0,Oregon,1,7.0
+2022,9,Georgia,True,3.5,0.0,Clemson;Michigan,0,5.0
+2022,9,LSU,True,1.5,0.0,NC State;Utah,2,20.0
+2022,9,Ole Miss,True,-1.5,0.0,UCLA;USC,1,10.0
+2022,9,Tennessee,True,2.5,0.0,Ohio State;TCU,0,2.0
+2022,10,Georgia,True,2.0,0.0,Ohio State;TCU,0,2.0
+2022,10,LSU,True,7.0,3.0,Penn State,2,12.0
+2022,10,Ole Miss,True,4.0,-3.0,North Carolina,1,13.0
+2022,10,Tennessee,True,7.0,1.0,Clemson,1,5.0
+2022,11,Alabama,True,3.0,3.0,Penn State,2,8.0
+2022,11,Georgia,True,2.0,0.0,Ohio State;TCU,0,2.0
+2022,11,LSU,True,5.0,2.0,Penn State,2,9.0
+2022,11,Ole Miss,True,-2.0,-1.0,Oregon,2,17.0
+2022,11,Tennessee,True,4.0,2.0,Clemson,1,4.0
+2022,12,Alabama,True,3.0,2.0,Penn State,2,8.0
+2022,12,Georgia,True,2.0,0.0,Ohio State;TCU,0,2.0
+2022,12,LSU,True,5.0,1.0,Penn State,2,9.0
+2022,12,Ole Miss,True,2.0,1.0,Oregon State,3,25.0
+2022,12,Tennessee,True,2.0,3.0,Penn State,2,7.0
+2022,13,Alabama,True,2.0,1.0,Penn State,2,7.0
+2022,13,Georgia,True,1.5,0.0,Michigan;TCU,0,2.0
+2022,13,LSU,True,2.0,-2.0,Kansas State,3,11.0
+2022,13,Tennessee,True,1.0,2.0,Penn State,2,6.0
+2022,14,Alabama,True,3.0,1.0,USC,2,7.0
+2022,14,Georgia,True,1.0,1.0,Michigan,0,1.0
+2022,14,LSU,True,5.0,3.0,Texas,4,12.0
+2022,14,Ole Miss,True,0.0,1.0,North Carolina,4,29.0
+2022,14,Tennessee,True,2.0,3.0,USC,2,5.0
+2023,5,Alabama,True,15.0,2.0,West Virginia,1,15.0
+2023,5,Georgia,True,13.0,-1.0,North Carolina,0,14.0
+2023,5,Kentucky,True,6.0,-1.0,Maryland,0,23.0
+2023,5,Missouri,True,-12.5,0.0,Florida State;Oklahoma,0,5.0
+2023,5,Ole Miss,True,10.0,-3.0,West Virginia,1,20.0
+2023,5,Texas A&M,True,-8.0,3.0,Utah,1,21.0
+2023,6,Alabama,True,-2.0,-2.0,Texas,1,8.0
+2023,6,Georgia,True,8.5,0.0,North Carolina;Washington,0,10.0
+2023,6,Missouri,True,0.0,0.0,BYU;Maryland,1,30.0
+2023,6,Ole Miss,True,6.0,3.0,Washington State,1,13.0
+2023,7,Alabama,True,13.0,1.0,Iowa,1,8.0
+2023,7,Georgia,True,6.0,-3.0,Penn State,0,13.0
+2023,7,Missouri,True,-11.0,1.0,Oregon,1,16.0
+2023,7,Ole Miss,True,-5.0,-1.0,Texas,1,12.0
+2023,7,Tennessee,True,-1.0,-1.0,Duke,1,26.0
+2023,8,Alabama,True,-2.0,1.0,Texas,1,7.0
+2023,8,Missouri,True,-3.0,-1.0,Utah,1,11.0
+2023,8,Ole Miss,True,-2.0,0.0,Texas;Utah,1,9.0
+2023,8,Tennessee,True,2.0,0.0,Duke;Oklahoma State,2,29.0
+2023,9,Alabama,True,-1.0,2.0,Texas,1,6.0
+2023,9,LSU,True,5.0,2.0,Utah,2,18.0
+2023,9,Missouri,True,-3.5,0.0,Louisville;Oregon,1,14.0
+2023,9,Ole Miss,True,-4.0,-1.0,Texas,1,9.0
+2023,9,Tennessee,True,7.0,0.0,Iowa;Oklahoma State,2,25.0
+2023,10,Alabama,True,-1.0,1.0,Texas,1,5.0
+2023,10,Georgia,True,1.0,-1.0,Michigan,0,8.0
+2023,10,Missouri,True,1.0,2.0,Oklahoma,2,14.0
+2023,10,Ole Miss,True,-1.0,2.0,Penn State,1,9.0
+2023,10,Tennessee,True,-2.0,1.0,Oregon State,2,22.0
+2023,11,Alabama,True,-1.0,-1.0,Texas,1,7.0
+2023,11,Georgia,True,1.0,-1.0,Michigan,0,5.0
+2023,11,LSU,True,1.0,3.0,Utah,3,18.0
+2023,11,Missouri,True,2.0,0.0,Oklahoma;Penn State,2,14.0
+2023,11,Ole Miss,True,-1.0,2.0,Penn State,2,11.0
+2023,11,Tennessee,True,5.0,1.0,Kansas,3,27.0
+2023,12,Alabama,True,-1.0,-1.0,Texas,1,7.0
+2023,12,Georgia,True,4.0,-1.0,Florida State,0,5.0
+2023,12,LSU,True,6.0,0.0,Kansas State;Oklahoma State,3,20.0
+2023,12,Missouri,True,2.0,0.0,Oklahoma;Penn State,2,13.0
+2023,12,Ole Miss,True,-1.0,1.0,Penn State,2,11.0
+2023,12,Tennessee,True,1.0,-1.0,Utah,4,30.0
+2023,13,Alabama,True,-2.0,0.0,Oregon;Texas,1,7.0
+2023,13,Georgia,True,3.0,-1.0,Florida State,0,4.0
+2023,13,Missouri,True,1.0,1.0,Penn State,2,11.0
+2023,13,Ole Miss,True,-1.0,2.0,Penn State,2,10.0
+2023,14,Alabama,True,2.0,1.0,Ohio State,1,4.0
+2023,14,Georgia,True,-3.0,-1.0,Texas,1,7.0
+2023,14,LSU,True,7.0,2.0,Iowa,3,15.0
+2023,14,Missouri,True,0.0,0.0,Oregon;Penn State,2,11.0
+2023,14,Ole Miss,True,-1.0,1.0,Penn State,2,9.0
+2024,5,Alabama,True,20.5,0.0,BYU;Rutgers,0,2.0
+2024,5,LSU,True,13.0,0.0,Boston College;Colorado,1,25.0
+2024,5,Missouri,True,5.5,0.0,Ohio State;Pittsburgh,0,13.0
+2024,5,Oklahoma,True,7.0,1.0,Texas Tech,1,30.0
+2024,5,Tennessee,True,10.5,0.0,Duke;Ohio State,0,11.0
+2024,5,Texas,True,24.0,1.0,Duke,0,9.0
+2024,5,Texas A&M,True,1.0,1.0,Boston College,1,26.0
+2024,6,Alabama,True,19.0,1.0,Rutgers,1,11.0
+2024,6,Georgia,True,21.0,3.0,Rutgers,1,9.0
+2024,6,LSU,True,13.0,0.0,Duke;Nebraska,1,30.0
+2024,6,Missouri,True,5.0,0.0,Colorado;Virginia,1,27.0
+2024,6,Oklahoma,True,8.0,2.0,Virginia,1,24.0
+2024,6,Ole Miss,True,17.0,-3.0,Texas Tech,1,22.0
+2024,6,Texas,True,17.0,-2.0,Indiana,0,10.0
+2024,6,Texas A&M,True,7.0,0.0,Kansas State;Rutgers,1,13.0
+2024,7,Alabama,True,10.0,3.0,Kansas State,1,8.0
+2024,7,Georgia,True,12.0,2.0,Kansas State,1,9.0
+2024,7,LSU,True,-4.0,1.0,Ohio State,1,13.0
+2024,7,Missouri,True,5.0,0.0,Arizona State;Illinois,1,24.0
+2024,7,Tennessee,True,15.0,0.0,Duke;Syracuse,1,27.0
+2024,7,Texas,True,19.0,-1.0,Pittsburgh,0,7.0
+2024,7,Texas A&M,True,3.0,-1.0,Kansas State,1,12.0
+2024,8,LSU,True,8.0,1.0,Kansas State,1,9.0
+2024,8,Missouri,True,-12.0,-2.0,Clemson,1,24.0
+2024,8,Tennessee,True,15.0,1.0,SMU,1,15.0
+2024,8,Texas,True,15.0,-2.0,Illinois,1,19.0
+2024,8,Texas A&M,True,2.0,-1.0,Kansas State,1,11.0
+2024,9,Georgia,True,15.0,1.0,Kansas State,1,7.0
+2024,9,Missouri,True,-2.0,1.0,Colorado,2,23.0
+2024,9,Ole Miss,True,5.5,0.0,Colorado;Syracuse,2,27.0
+2024,9,Texas,True,14.0,-2.0,SMU,1,16.0
+2024,9,Texas A&M,True,0.5,0.0,Kansas State;Ohio State,1,10.0
+2024,10,Georgia,True,1.0,1.0,Ohio State,1,4.0
+2024,10,LSU,True,8.0,3.0,Kansas State,2,16.0
+2024,10,Missouri,True,0.0,2.0,Syracuse,2,24.0
+2024,10,Ole Miss,True,6.0,-1.0,Kansas State,2,20.0
+2024,10,South Carolina,True,-1.0,-3.0,Louisville,3,25.0
+2024,10,Tennessee,True,6.0,-2.0,SMU,1,12.0
+2024,10,Texas,True,8.0,-3.0,SMU,1,13.0
+2024,10,Vanderbilt,True,2.0,3.0,Iowa,3,30.0
+2024,11,LSU,True,1.0,3.0,Louisville,3,19.0
+2024,11,Missouri,True,2.0,1.0,Pittsburgh,2,23.0
+2024,11,Ole Miss,True,10.0,2.0,Kansas State,2,15.0
+2024,11,South Carolina,True,-1.0,2.0,Louisville,3,20.0
+2024,11,Tennessee,True,8.0,-2.0,SMU,1,13.0
+2024,11,Texas,True,11.0,-1.0,SMU,1,12.0
+2024,11,Texas A&M,True,5.0,3.0,Kansas State,2,14.0
+2024,12,Missouri,True,0.0,-1.0,Kansas State,3,24.0
+2024,12,Ole Miss,True,8.0,3.0,Clemson,2,14.0
+2024,12,Tennessee,True,7.0,1.0,Clemson,2,16.0
+2024,12,Texas,True,11.0,-1.0,BYU,1,8.0
+2024,13,Missouri,True,-2.0,-1.0,Illinois,3,24.0
+2024,13,Ole Miss,True,11.0,2.0,Kansas State,3,20.0
+2024,13,Tennessee,True,7.0,-1.0,Arizona State,2,13.0
+2024,13,Texas,True,5.0,-1.0,Miami,1,6.0
+2024,14,Alabama,True,10.0,2.0,Illinois,3,16.0
+2024,14,Georgia,True,2.0,3.0,Ohio State,2,5.0
+2024,14,LSU,True,0.0,2.0,Louisville,4,22.0
+2024,14,Missouri,True,1.0,-1.0,Syracuse,3,20.0
+2024,14,Ole Miss,True,5.5,0.0,Clemson;Syracuse,3,21.0
+2024,14,Tennessee,True,8.0,-1.0,Miami,2,12.0
+2024,14,Texas,True,1.0,1.0,Penn State,1,3.0
+2024,14,Texas A&M,True,0.0,-1.0,Louisville,4,25.0
+2024,15,Alabama,True,2.0,1.0,Clemson,3,16.0
+2024,15,Georgia,True,3.0,3.0,Penn State,2,2.0
+2024,15,LSU,True,0.0,1.0,Louisville,4,23.0
+2024,15,Missouri,True,-5.0,-2.0,Iowa State,3,22.0
+2024,15,Ole Miss,True,2.0,-1.0,Iowa State,3,21.0
+2024,15,South Carolina,True,-1.0,2.0,Clemson,3,15.0
+2024,15,Tennessee,True,8.0,-1.0,Miami,2,13.0
+2024,15,Texas,True,1.5,0.0,Ohio State;Penn State,2,6.0
+2024,15,Texas A&M,True,0.0,-2.0,Louisville,4,26.0
+2025,5,Alabama,True,10.0,-2.0,Michigan,1,21.0
+2025,5,Georgia,True,6.0,2.0,Florida State,1,29.0
+2025,5,LSU,True,7.0,-3.0,Michigan,1,22.0
+2025,5,Mississippi State,True,-8.0,1.0,Florida State,1,30.0
+2025,5,Missouri,True,7.0,1.0,Houston,0,16.0
+2025,5,Oklahoma,True,8.0,0.0,BYU;Miami,0,5.0
+2025,5,Ole Miss,True,1.5,0.0,Indiana;Miami,0,3.0
+2025,5,Tennessee,True,11.0,-2.0,USC,1,28.0
+2025,5,Texas A&M,True,2.0,1.0,Indiana,0,1.0
+2025,5,Vanderbilt,True,-2.0,0.0,Georgia Tech;Texas Tech,0,9.0
+2025,6,Georgia,True,16.0,1.0,Louisville,1,26.0
+2025,6,LSU,True,4.0,-1.0,Michigan,1,17.0
+2025,6,Missouri,True,-11.0,-2.0,Oregon,0,14.0
+2025,6,Oklahoma,True,-1.0,0.0,Ohio State;Texas Tech,0,6.0
+2025,6,Ole Miss,True,5.0,-1.0,Texas Tech,0,5.0
+2025,6,Texas A&M,True,-3.0,1.0,Miami,0,1.0
+2025,6,Vanderbilt,True,-1.0,1.0,Virginia,1,18.0
+2025,7,Georgia,True,17.0,3.0,Washington,1,12.0
+2025,7,LSU,True,16.0,1.0,Washington,1,14.0
+2025,7,Oklahoma,True,4.0,-1.0,Virginia,1,22.0
+2025,7,Ole Miss,True,8.5,0.0,BYU;Georgia Tech,0,7.0
+2025,7,Tennessee,True,13.0,1.0,Cincinnati,1,23.0
+2025,7,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,7,Vanderbilt,True,3.5,0.0,Utah;Virginia,1,20.0
+2025,8,Alabama,True,5.0,1.0,Miami,1,6.0
+2025,8,Georgia,True,6.5,0.0,Miami;Texas Tech,1,8.0
+2025,8,LSU,True,6.0,1.0,USC,2,26.0
+2025,8,Missouri,True,3.5,0.0,Cincinnati;Virginia,1,22.0
+2025,8,Oklahoma,True,-7.0,1.0,Oregon,1,13.0
+2025,8,Ole Miss,True,4.5,0.0,Louisville;Oregon,1,12.0
+2025,8,Texas,True,4.0,1.0,Washington,2,29.0
+2025,8,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,8,Vanderbilt,True,-4.0,-2.0,Oregon,1,16.0
+2025,9,Alabama,True,6.0,3.0,Miami,1,6.0
+2025,9,Georgia,True,5.0,1.0,Miami,1,8.0
+2025,9,Oklahoma,True,5.0,1.0,USC,2,29.0
+2025,9,Ole Miss,True,3.0,2.0,Miami,1,7.0
+2025,9,Tennessee,True,10.0,-1.0,Utah,2,26.0
+2025,9,Texas,True,3.5,0.0,Michigan;Washington,2,21.0
+2025,9,Texas A&M,True,7.0,1.0,BYU,0,1.0
+2025,9,Vanderbilt,True,0.5,0.0,Oregon;Texas Tech,1,12.0
+2025,10,Alabama,True,5.0,3.0,Texas Tech,1,5.0
+2025,10,Georgia,True,4.0,1.0,Texas Tech,1,7.0
+2025,10,Missouri,True,6.0,-1.0,Cincinnati,2,29.0
+2025,10,Oklahoma,True,7.5,0.0,USC;Utah,2,18.0
+2025,10,Ole Miss,True,2.0,2.0,Texas Tech,1,6.0
+2025,10,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,10,Vanderbilt,True,5.0,-1.0,USC,2,20.0
+2025,11,Alabama,True,6.0,0.0,BYU;Texas Tech,1,5.0
+2025,11,Georgia,True,3.0,-1.0,Texas Tech,1,7.0
+2025,11,Oklahoma,True,5.5,0.0,Michigan;Utah,2,17.0
+2025,11,Ole Miss,True,1.0,1.0,Oregon,1,8.0
+2025,11,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,11,Vanderbilt,True,3.0,1.0,Miami,2,13.0
+2025,12,Alabama,True,6.0,3.0,USC,2,9.0
+2025,12,Georgia,True,4.5,0.0,BYU;Texas Tech,1,5.0
+2025,12,Missouri,True,3.0,2.0,Washington,3,28.0
+2025,12,Oklahoma,True,8.0,1.0,USC,2,11.0
+2025,12,Ole Miss,True,1.0,0.0,Oregon;Texas Tech,1,7.0
+2025,12,Tennessee,True,6.0,1.0,Washington,3,29.0
+2025,12,Texas,True,9.0,3.0,Illinois,3,19.0
+2025,12,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,12,Vanderbilt,True,6.0,-2.0,Michigan,2,18.0
+2025,13,Alabama,True,5.0,3.0,Michigan,2,9.0
+2025,13,Georgia,True,2.0,0.0,Oregon;Texas Tech,1,6.0
+2025,13,Oklahoma,True,7.0,2.0,Michigan,2,10.0
+2025,13,Ole Miss,True,1.0,-1.0,Texas Tech,1,8.0
+2025,13,Tennessee,True,8.0,1.0,Washington,3,26.0
+2025,13,Texas,True,3.0,2.0,USC,3,17.0
+2025,13,Texas A&M,True,-1.0,1.0,Indiana,0,1.0
+2025,13,Vanderbilt,True,2.0,-2.0,Utah,2,16.0
+2025,14,Alabama,True,2.0,3.0,Miami,2,9.0
+2025,14,Georgia,True,1.5,0.0,Oregon;Texas Tech,1,6.0
+2025,14,Missouri,True,1.0,1.0,Washington,4,30.0
+2025,14,Oklahoma,True,4.0,2.0,Miami,2,10.0
+2025,14,Ole Miss,True,-1.0,-1.0,Texas Tech,1,8.0
+2025,14,Texas A&M,True,0.5,0.0,BYU;Oregon,1,4.0
+2025,14,Vanderbilt,True,0.5,0.0,Miami;Utah,2,13.0
+2025,15,Georgia,True,2.5,0.0,Oregon;Texas Tech,1,5.0
+2025,15,Missouri,True,1.0,0.0,Iowa;Washington,4,30.0
+2025,15,Oklahoma,True,3.0,0.0,BYU;Miami,2,9.0
+2025,15,Ole Miss,True,-2.0,-2.0,Texas Tech,1,8.0
+2025,15,Texas,True,2.0,3.0,USC,3,16.0
+2025,15,Texas A&M,True,-3.0,0.0,Ohio State;Oregon,1,3.0
+2025,15,Vanderbilt,True,2.0,1.0,Utah,2,13.0

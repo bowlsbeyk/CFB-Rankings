@@ -1,0 +1,196 @@
+{
+  "primary_M_SEC": {
+    "mean": 2.501092992834479,
+    "ci95_t": [
+      1.244889111833125,
+      3.757296873835833
+    ],
+    "ci90_t": [
+      1.4792443344304358,
+      3.522941651238522
+    ],
+    "seasons_positive": 10,
+    "seasons": 11,
+    "sign_flip_p": 0.0029296875,
+    "per_season": [
+      2.8,
+      0.6944444444444444,
+      1.736842105263158,
+      2.1875,
+      -0.7053571428571429,
+      4.019230769230769,
+      2.6,
+      3.09,
+      1.17,
+      6.395833333333333,
+      3.523529411764706
+    ],
+    "seasons_with_pairs": 11,
+    "pairs": 605,
+    "sec_team_weeks": 732,
+    "share_matched": 0.8265027322404371,
+    "mean_rank_gap_match_minus_sec": 0.46115702479338844
+  },
+  "reading": "SEC NAME PREMIUM SHOWN",
+  "unit": "AP poll places (rank points); positive = SEC team ranked higher than its match",
+  "robustness": {
+    "by_check": {
+      "window +/-2": {
+        "mean": 2.4334971159203347,
+        "ci95_t": [
+          1.2146084978068643,
+          3.652385734033805
+        ],
+        "seasons_positive": 10,
+        "pairs": 528
+      },
+      "window +/-5": {
+        "mean": 2.572605057674519,
+        "ci95_t": [
+          1.3627940864057755,
+          3.782416028943263
+        ],
+        "seasons_positive": 10,
+        "pairs": 667
+      },
+      "match on Colley rank": {
+        "mean": 2.4392088681322748,
+        "ci95_t": [
+          1.0094917843551037,
+          3.868925951909446
+        ],
+        "seasons_positive": 10,
+        "pairs": 625
+      },
+      "SOR, T4 all-games calibration": {
+        "mean": 1.9004963572292177,
+        "ci95_t": [
+          0.6073977602011293,
+          3.193594954257306
+        ],
+        "seasons_positive": 10,
+        "pairs": 655
+      },
+      "SOR, T4 power-games calibration": {
+        "mean": 2.6493904342462535,
+        "ci95_t": [
+          1.3252262898958038,
+          3.973554578596703
+        ],
+        "seasons_positive": 11,
+        "pairs": 602
+      },
+      "outcome: AP rank capped at 26": {
+        "mean": 2.501092992834479,
+        "ci95_t": [
+          1.244889111833125,
+          3.757296873835833
+        ],
+        "seasons_positive": 10,
+        "pairs": 605
+      }
+    },
+    "sign_flips_under": [],
+    "robust": true,
+    "rule": "the premium reading is robust only if M_SEC keeps its sign in every check"
+  },
+  "secondary_M_ACC": {
+    "mean": 3.2502177412605224,
+    "ci95_t": [
+      1.6456126391031887,
+      4.854822843417856
+    ],
+    "ci90_t": [
+      1.9449649907271187,
+      4.555470491793926
+    ],
+    "seasons_positive": 11,
+    "seasons": 11,
+    "sign_flip_p": 0.0009765625,
+    "per_season": [
+      5.980769230769231,
+      0.3125,
+      0.7,
+      1.8970588235294117,
+      0.4375,
+      4.409090909090909,
+      6.0,
+      3.732142857142857,
+      2.1666666666666665,
+      7.041666666666667,
+      3.075
+    ],
+    "seasons_with_pairs": 11,
+    "pairs": 276,
+    "sec_team_weeks": 732,
+    "share_matched": 0.3770491803278688,
+    "mean_rank_gap_match_minus_sec": 0.2391304347826087,
+    "reading": "SEC NAME PREMIUM SHOWN"
+  },
+  "secondary_M_CFP_committee": {
+    "mean": 1.7701679168815472,
+    "ci95_t": [
+      0.8297877254194796,
+      2.7105481083436147
+    ],
+    "ci90_t": [
+      1.005223426924017,
+      2.5351124068390773
+    ],
+    "seasons_positive": 9,
+    "seasons": 11,
+    "sign_flip_p": 0.0068359375,
+    "per_season": [
+      -0.5166666666666667,
+      0.3125,
+      3.025,
+      3.2419354838709675,
+      -0.3939393939393939,
+      2.282608695652174,
+      2.0185185185185186,
+      2.5714285714285716,
+      1.4838709677419355,
+      3.4125,
+      2.034090909090909
+    ],
+    "seasons_with_pairs": 11,
+    "pairs": 339,
+    "sec_team_weeks": 431,
+    "share_matched": 0.7865429234338747,
+    "mean_rank_gap_match_minus_sec": 0.5693215339233039,
+    "reading": "SEC NAME PREMIUM SHOWN"
+  },
+  "secondary_M_BUBBLE_sor_6_16": {
+    "mean": 2.7295814060148835,
+    "ci95_t": [
+      0.8902093370215789,
+      4.568953475008188
+    ],
+    "ci90_t": [
+      1.2333594077924062,
+      4.225803404237361
+    ],
+    "seasons_positive": 10,
+    "seasons": 11,
+    "sign_flip_p": 0.005859375,
+    "per_season": [
+      3.022727272727273,
+      1.6875,
+      0.8333333333333334,
+      3.1666666666666665,
+      -2.1,
+      5.019230769230769,
+      2.7333333333333334,
+      2.857142857142857,
+      0.967741935483871,
+      8.916666666666666,
+      2.9210526315789473
+    ],
+    "seasons_with_pairs": 11,
+    "pairs": 240,
+    "sec_team_weeks": 291,
+    "share_matched": 0.8247422680412371,
+    "mean_rank_gap_match_minus_sec": 0.625,
+    "reading": "SEC NAME PREMIUM SHOWN"
+  }
+}

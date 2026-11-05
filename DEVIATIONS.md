@@ -416,3 +416,14 @@ Two rounds of fact-checking (checkers per document, hostile readers, and skeptic
 - **Not done:** no further variants after results are seen. Any later addition will be logged as post hoc.
 
 **Reporting.** Both tests are reported whichever way they come out, with equal prominence, in `SUMMARY.md`, `README.md` and `REPORT.md`.
+
+## 2026-11-05 — Post hoc checks of T8 (added after T7 and T8 results were seen; logged before they are run)
+
+**Seen so far.** T7: committee top-25 counts against strength of record are inconclusive (E_SEC +0.42, 95% t −0.12 to +0.96), and the committee lists slightly more SEC teams than the AP in the same week (C_SEC +0.18, 95% t +0.00 to +0.35). T8: SEC NAME PREMIUM SHOWN, M_SEC +2.50 places (95% t +1.24 to +3.76; 10 of 11 seasons), robust to every logged check, including both T4 calibrations.
+
+**Why more checks.** T8 matches on losses and strength of record, a résumé measure. It does not hold scoring margin fixed, and pairs differ slightly in strength of record (match on average 0.46 places worse). A premium could therefore be voters rewarding stronger performance, not the conference name. These checks try to knock the result down. They are post hoc, `src/matched_posthoc.py`, and are reported as such whatever they show.
+
+1. **Margin held fixed too.** Same match, adding a requirement that the pair's schedule-adjusted margin (performance) ranks be within 10 places.
+2. **Regression adjustment.** Within all primary pairs, regress the AP difference on the pair's strength-of-record gap and performance-rank gap; report the intercept (the premium at zero gap on both).
+3. **Placebo: every power conference as the focal group.** Repeat T8 with the Big Ten, Big 12, ACC and Pac-12 each matched against the other power conferences (the SEC included). If they all show a premium, the matching is biased, not the SEC treated differently.
+4. **Where it comes from (descriptive).** Split primary pairs by whether the SEC team was ranked higher in the preseason AP poll than its match; and report the premium by stage (polls 6–8, 9–11, 12+).
