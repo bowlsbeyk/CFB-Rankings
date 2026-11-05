@@ -47,7 +47,8 @@ def pairs(allw, focal="SEC", perf_window=None):
             rows.append({"season": s, "week": int(w), "diff": float(t.pts - b.pts.mean()),
                          "sor_gap": float((b[PRIM_RANK] - t[PRIM_RANK]).mean()),
                          "perf_gap": float((b.perf_rank - t.perf_rank).mean()),
-                         "preseason_higher": bool(pre_t < pre_m)})
+                         "preseason_higher": bool(pre_t < pre_m),
+                         "pre_focal": float(pre_t), "pre_match": float(pre_m)})
     return pd.DataFrame(rows)
 
 

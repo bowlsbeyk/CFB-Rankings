@@ -21,7 +21,17 @@ def main():
         out[g] = {"share_started_higher": float(p.preseason_higher.mean()),
                   "pairs": int(len(p)),
                   "premium_if_started_higher": brief(season_stat(p[p.preseason_higher])),
-                  "premium_if_not": brief(season_stat(p[~p.preseason_higher]))}
+                  "premium_if_not": brief(season_stat(p[~p.preseason_higher])),
+                  "three_way": {
+                      "started_higher": brief(season_stat(p[p.pre_focal < p.pre_match])),
+                      "started_level": brief(season_stat(p[p.pre_focal == p.pre_match])),
+                      "started_lower": brief(season_stat(p[p.pre_focal > p.pre_match]))},
+                  "share_level": float((p.pre_focal == p.pre_match).mean()),
+                  "share_lower": float((p.pre_focal > p.pre_match).mean())}
+        t = out[g]["three_way"]
+        print(f"   three-way: higher {t['started_higher']['mean']:+.2f} | level {t['started_level']['mean']:+.2f} "
+              f"(n={t['started_level']['pairs']}) | lower {t['started_lower']['mean']:+.2f} "
+              f"(n={t['started_lower']['pairs']}); shares level {out[g]['share_level']:.0%}, lower {out[g]['share_lower']:.0%}")
         a, b, c = out[g]["share_started_higher"], out[g]["premium_if_started_higher"], out[g]["premium_if_not"]
         print(f"{g:8s} started higher {a:5.0%} | premium if higher {b['mean']:+.2f} "
               f"({b['ci95_t'][0]:+.2f} to {b['ci95_t'][1]:+.2f}) | if not {c['mean']:+.2f} "
