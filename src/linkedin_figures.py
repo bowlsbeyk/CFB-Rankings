@@ -190,12 +190,45 @@ def schedules(n):
     save(fig, "04_schedule_boost.png")
 
 
+def same_resume(n):
+    t = n["same_resume_different_conference_t8"]
+    pl = t["posthoc_placebo_by_focal_conference"]
+    rows = [("SEC", pl["SEC"]), ("Pac-12*", pl["Pac-12"]), ("Big Ten", pl["Big Ten"]),
+            ("Big 12", pl["Big 12"]), ("ACC", pl["ACC"])]
+    fig = frame("Same résumé, different conference: the SEC team is ranked higher",
+                "AP poll places a team sits above a team from another power conference with the same number "
+                "of losses and nearly the same strength of record. Polls 6+, 2014–2025, 95% intervals.")
+    ax = fig.add_axes([0.16, 0.27, 0.78, 0.44])
+    y = list(range(len(rows)))[::-1]
+    for yy, (g, v) in zip(y, rows):
+        col = HIGHLIGHT if g == "SEC" else (SECOND if g == "ACC" else OTHER)
+        ax.plot(v["ci95"], [yy, yy], color=col, lw=2, alpha=0.6, solid_capstyle="round")
+        ax.scatter([v["mean"]], [yy], s=140, color=col, edgecolor=SURFACE, linewidth=2, zorder=3)
+        ax.text(max(v["ci95"][1], 0) + 0.25, yy, f"{v['mean']:+.1f}", va="center", fontsize=10, color=INK)
+    ax.axvline(0, color=INK2, lw=1)
+    ax.set_yticks(y)
+    ax.set_yticklabels([g for g, _ in rows], fontsize=11)
+    ax.set_xlim(-5, 5.5)
+    ax.set_xlabel("← ranked lower than the same résumé     ranked higher →", fontsize=9)
+    ax.xaxis.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    m = t["posthoc_margin_held_fixed"]["mean"]
+    hi, lo = t["posthoc_sec_preseason_ranked_higher"]["mean"], t["posthoc_sec_preseason_not_higher"]["mean"]
+    note(fig, f"*Pac-12 2014–2023. SEC premium holds with scoring margin matched too (+{m:.1f}) and under both "
+         f"rating calibrations. It comes from the preseason poll: +{hi:.1f} when the SEC team started ranked "
+         f"higher, +{lo:.1f} when it did not. Committee rankings: +{t['M_CFP_committee']['mean']:.1f}.")
+    save(fig, "05_same_resume.png")
+
+
 def main():
     n = json.loads((RES / "post_numbers.json").read_text())
     miami(n)
     levels(n)
     stages(n)
     schedules(n)
+    same_resume(n)
 
 
 if __name__ == "__main__":
