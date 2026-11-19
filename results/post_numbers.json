@@ -146,24 +146,24 @@
   "top25_teams_per_poll_2014_2025": {
     "source": "results/t5_sor.json headline_levels (polls 6 to end of regular season)",
     "SEC": {
-      "strength_of_record_top25": 5.49,
-      "ap_top25": 6.17
+      "strength_of_record_top25": 5.486,
+      "ap_top25": 6.166
     },
     "Big Ten": {
-      "strength_of_record_top25": 4.74,
-      "ap_top25": 4.63
+      "strength_of_record_top25": 4.742,
+      "ap_top25": 4.632
     },
     "Big 12": {
-      "strength_of_record_top25": 3.42,
-      "ap_top25": 3.59
+      "strength_of_record_top25": 3.421,
+      "ap_top25": 3.589
     },
     "Pac-12": {
-      "strength_of_record_top25": 3.2,
-      "ap_top25": 3.84
+      "strength_of_record_top25": 3.203,
+      "ap_top25": 3.843
     },
     "ACC": {
-      "strength_of_record_top25": 3.22,
-      "ap_top25": 3.33
+      "strength_of_record_top25": 3.219,
+      "ap_top25": 3.332
     },
     "sec_minus_acc_strength_of_record_top25": {
       "mean": 2.27,
@@ -322,25 +322,25 @@
     "label_part1_robust": false,
     "label_part2": "SEC excess HIGHER than ACC",
     "label_part2_robust": false,
-    "E_SEC_with_t4_all_games_calibration": 0.08,
+    "E_SEC_with_t4_all_games_calibration": 0.084,
     "with_t4_all_games_calibration": {
-      "E_SEC": 0.08,
-      "D_PWR": -0.04,
-      "D_ACC": -0.56
+      "E_SEC": 0.084,
+      "D_PWR": -0.044,
+      "D_ACC": -0.561
     },
     "with_t4_power_games_calibration": {
-      "E_SEC": 0.76,
-      "D_PWR": 0.63,
-      "D_ACC": -0.2
+      "E_SEC": 0.759,
+      "D_PWR": 0.631,
+      "D_ACC": -0.196
     },
     "excess_by_group_mean": {
       "SEC": 0.68,
-      "ACC": 0.11,
+      "ACC": 0.113,
       "Big Ten": -0.11,
-      "Big 12": 0.17,
+      "Big 12": 0.168,
       "Pac-12": 0.64,
       "Notre Dame": 0.07,
-      "Other": -1.45
+      "Other": -1.445
     },
     "other_power_bloc_excess": {
       "mean": 0.18,
@@ -354,7 +354,7 @@
     },
     "strength_vs_record_gap_SEC": {
       "note": "simulated top 25 ordered by strength minus top 25 ordered by record, SEC slots per poll (the 'noise baseline'); mean over seasons",
-      "mean": 1.46
+      "mean": 1.456
     },
     "E_SEC_vs_performance_top25_descriptive": {
       "mean": 0.07,
@@ -453,23 +453,23 @@
       "sign_flip_p": 0.166
     },
     "by_group_mean": {
-      "SEC": 1.65,
-      "ACC": 0.62,
-      "Big Ten": 0.08,
-      "Big 12": 0.28,
-      "Pac-12": 0.98,
-      "Notre Dame": 0.13,
-      "Other": -3.56
+      "SEC": 1.655,
+      "ACC": 0.618,
+      "Big Ten": 0.082,
+      "Big 12": 0.282,
+      "Pac-12": 0.978,
+      "Notre Dame": 0.127,
+      "Other": -3.564
     },
     "label_part1": "RANKED HIGHER EARLY THAN THE SEASON JUSTIFIED, SHARED WITH THE OTHER POWER CONFERENCES, NOT SEC-SPECIFIC",
     "label_part1_robust": false,
     "E_SEC_sign_holds_in_all_checks": true,
-    "E_SEC_min_across_checks": 0.93,
+    "E_SEC_min_across_checks": 0.927,
     "E_SEC_vs_final_performance_top25": 1.2,
     "with_t4_all_games_calibration": {
-      "E_SEC": 0.93,
-      "D_PWR": 0.59,
-      "D_ACC": -0.15
+      "E_SEC": 0.927,
+      "D_PWR": 0.588,
+      "D_ACC": -0.145
     },
     "other_power_bloc_excess": {
       "mean": 0.47,
@@ -494,33 +494,33 @@
     },
     "SEC": {
       "a": 7.2,
-      "expected": 2.72,
-      "beyond": 0.07,
-      "entrants": 1.13
+      "expected": 2.716,
+      "beyond": 0.066,
+      "entrants": 1.127
     },
     "Big Ten": {
-      "a": 4.81,
+      "a": 4.809,
       "expected": 1.74,
-      "beyond": -0.55,
-      "entrants": 1.11
+      "beyond": -0.549,
+      "entrants": 1.109
     },
     "Pac-12": {
-      "a": 4.53,
+      "a": 4.533,
       "expected": 2.04,
       "beyond": 0.16,
-      "entrants": 1.22
+      "entrants": 1.222
     },
     "Big 12": {
-      "a": 3.55,
-      "expected": 1.56,
-      "beyond": 0.22,
-      "entrants": 1.49
+      "a": 3.555,
+      "expected": 1.557,
+      "beyond": 0.216,
+      "entrants": 1.491
     },
     "ACC": {
-      "a": 3.53,
-      "expected": 1.49,
-      "beyond": 0.26,
-      "entrants": 1.13
+      "a": 3.527,
+      "expected": 1.489,
+      "beyond": 0.257,
+      "entrants": 1.127
     },
     "SEC_beyond_expected": {
       "mean": 0.07,
@@ -591,10 +591,10 @@
       ]
     },
     "SEC_minus_ACC_game_day": {
-      "mean": 3.54,
+      "mean": 3.543,
       "ci95": [
-        -0.77,
-        7.96
+        -0.774,
+        7.957
       ]
     },
     "SEC_final_poll": {
@@ -631,10 +631,10 @@
         ]
       },
       "early_minus_late": {
-        "mean": 0.02,
+        "mean": 0.018,
         "ci95": [
-          -0.48,
-          0.53
+          -0.484,
+          0.532
         ]
       }
     },
@@ -661,10 +661,10 @@
         ]
       },
       "early_minus_late": {
-        "mean": 0.04,
+        "mean": 0.043,
         "ci95": [
-          -0.34,
-          0.43
+          -0.341,
+          0.425
         ]
       }
     },
@@ -673,21 +673,21 @@
         "mean": 0.56,
         "ci95": [
           0.06,
-          1.14
+          1.138
         ]
       },
       "middle (weeks 5-8)": {
-        "mean": 1.0,
+        "mean": 0.999,
         "ci95": [
-          0.46,
-          1.59
+          0.462,
+          1.585
         ]
       },
       "late (weeks 9+)": {
-        "mean": 0.59,
+        "mean": 0.585,
         "ci95": [
-          0.22,
-          0.95
+          0.224,
+          0.945
         ]
       }
     }
@@ -723,10 +723,10 @@
       ]
     },
     "SEC_minus_ACC": {
-      "mean": 0.76,
+      "mean": 0.755,
       "ci95": [
-        -0.43,
-        1.93
+        -0.426,
+        1.928
       ]
     }
   },
@@ -735,21 +735,21 @@
     "note": "places a team is ranked above where its season ends up, after losing to a ranked same-conference team",
     "SEC": {
       "games": 152,
-      "beyond_typical_for_pre_game_rank": 0.44,
+      "beyond_typical_for_pre_game_rank": 0.442,
       "ci95": [
-        -0.67,
-        1.43
+        -0.672,
+        1.434
       ],
-      "before_adjustment": 1.2
+      "before_adjustment": 1.204
     },
     "ACC": {
       "games": 38,
       "beyond_typical_for_pre_game_rank": 0.96,
       "ci95": [
-        -0.77,
-        2.52
+        -0.769,
+        2.521
       ],
-      "before_adjustment": 1.08
+      "before_adjustment": 1.079
     }
   },
   "calibration_check_schedules_and_poll_places": {
@@ -1064,44 +1064,44 @@
       "sign_flip_p": 0.063
     },
     "committee_slots_per_ranking": {
-      "SEC": 6.09,
-      "ACC": 3.52,
-      "Big Ten": 4.71,
-      "Big 12": 3.77,
-      "Pac-12": 3.3,
-      "Notre Dame": 0.83,
-      "Other": 2.77
+      "SEC": 6.091,
+      "ACC": 3.515,
+      "Big Ten": 4.712,
+      "Big 12": 3.773,
+      "Pac-12": 3.303,
+      "Notre Dame": 0.833,
+      "Other": 2.773
     }
   },
   "same_resume_different_conference_t8": {
     "source": "results/t8_matched.json (logged 2026-11-05 before any code); post hoc checks results/t8_posthoc.json",
     "unit": "AP poll places; SEC team minus a team from another power conference with the same losses and strength of record within 3 places",
     "M_SEC": {
-      "mean": 2.5,
+      "mean": 2.501,
       "ci95": [
-        1.24,
-        3.76
+        1.245,
+        3.757
       ],
       "seasons_positive": 10,
       "seasons": 11,
       "pairs": 605
     },
     "reading": "SEC NAME PREMIUM SHOWN",
-    "share_matched": 0.83,
+    "share_matched": 0.827,
     "robust": true,
     "checks": {
-      "window +/-2": 2.43,
-      "window +/-5": 2.57,
-      "match on Colley rank": 2.44,
+      "window +/-2": 2.433,
+      "window +/-5": 2.573,
+      "match on Colley rank": 2.439,
       "SOR, T4 all-games calibration": 1.9,
-      "SOR, T4 power-games calibration": 2.65,
-      "outcome: AP rank capped at 26": 2.5
+      "SOR, T4 power-games calibration": 2.649,
+      "outcome: AP rank capped at 26": 2.501
     },
     "M_ACC_vs_ACC_only": {
       "mean": 3.25,
       "ci95": [
-        1.65,
-        4.85
+        1.646,
+        4.855
       ],
       "seasons_positive": 11,
       "seasons": 11,
@@ -1111,7 +1111,7 @@
       "mean": 1.77,
       "ci95": [
         0.83,
-        2.71
+        2.711
       ],
       "seasons_positive": 9,
       "seasons": 11,
@@ -1121,55 +1121,55 @@
       "mean": 2.73,
       "ci95": [
         0.89,
-        4.57
+        4.569
       ],
       "seasons_positive": 10,
       "seasons": 11,
       "pairs": 240
     },
     "posthoc_margin_held_fixed": {
-      "mean": 2.01,
+      "mean": 2.014,
       "ci95": [
-        0.93,
-        3.1
+        0.925,
+        3.104
       ],
       "seasons_positive": 9,
       "seasons": 11,
       "pairs": 492
     },
     "posthoc_regression_intercept": {
-      "mean": 2.29,
+      "mean": 2.294,
       "ci95": [
-        1.23,
-        3.24
+        1.227,
+        3.244
       ]
     },
     "posthoc_placebo_by_focal_conference": {
       "SEC": {
-        "mean": 2.5,
+        "mean": 2.501,
         "ci95": [
-          1.24,
-          3.76
+          1.245,
+          3.757
         ],
         "seasons_positive": 10,
         "seasons": 11,
         "pairs": 605
       },
       "ACC": {
-        "mean": -2.67,
+        "mean": -2.669,
         "ci95": [
-          -4.18,
-          -1.16
+          -4.181,
+          -1.158
         ],
         "seasons_positive": 1,
         "seasons": 11,
         "pairs": 403
       },
       "Big Ten": {
-        "mean": 0.03,
+        "mean": 0.027,
         "ci95": [
-          -0.81,
-          0.86
+          -0.809,
+          0.862
         ],
         "seasons_positive": 4,
         "seasons": 11,
@@ -1178,18 +1178,18 @@
       "Big 12": {
         "mean": -0.99,
         "ci95": [
-          -2.53,
-          0.55
+          -2.533,
+          0.552
         ],
         "seasons_positive": 4,
         "seasons": 11,
         "pairs": 395
       },
       "Pac-12": {
-        "mean": 1.15,
+        "mean": 1.149,
         "ci95": [
-          -0.83,
-          3.12
+          -0.825,
+          3.123
         ],
         "seasons_positive": 7,
         "seasons": 9,
@@ -1197,10 +1197,10 @@
       }
     },
     "posthoc_sec_preseason_ranked_higher": {
-      "mean": 4.29,
+      "mean": 4.286,
       "ci95": [
-        3.28,
-        5.3
+        3.276,
+        5.296
       ],
       "seasons_positive": 11,
       "seasons": 11,
@@ -1209,8 +1209,8 @@
     "posthoc_sec_preseason_not_higher": {
       "mean": 0.39,
       "ci95": [
-        -0.62,
-        1.4
+        -0.623,
+        1.403
       ],
       "seasons_positive": 8,
       "seasons": 11,
@@ -1218,30 +1218,30 @@
     },
     "posthoc_by_stage": {
       "polls 6-8": {
-        "mean": 3.7,
+        "mean": 3.702,
         "ci95": [
-          1.44,
-          5.96
+          1.443,
+          5.961
         ],
         "seasons_positive": 10,
         "seasons": 11,
         "pairs": 185
       },
       "polls 9-11": {
-        "mean": 2.46,
+        "mean": 2.461,
         "ci95": [
           1.03,
-          3.89
+          3.892
         ],
         "seasons_positive": 8,
         "seasons": 11,
         "pairs": 169
       },
       "polls 12+": {
-        "mean": 1.53,
+        "mean": 1.528,
         "ci95": [
           0.29,
-          2.77
+          2.766
         ],
         "seasons_positive": 9,
         "seasons": 11,
@@ -1255,30 +1255,30 @@
     "SEC": {
       "share_started_ahead": 0.545,
       "started_higher": {
-        "mean": 4.29,
+        "mean": 4.286,
         "ci95": [
-          3.28,
-          5.3
+          3.276,
+          5.296
         ],
         "seasons_positive": 11,
         "seasons": 11,
         "pairs": 330
       },
       "started_level": {
-        "mean": 3.05,
+        "mean": 3.049,
         "ci95": [
           0.86,
-          5.24
+          5.238
         ],
         "seasons_positive": 9,
         "seasons": 11,
         "pairs": 61
       },
       "started_lower": {
-        "mean": -0.51,
+        "mean": -0.512,
         "ci95": [
-          -1.63,
-          0.61
+          -1.629,
+          0.606
         ],
         "seasons_positive": 3,
         "seasons": 11,
@@ -1288,30 +1288,30 @@
     "ACC": {
       "share_started_ahead": 0.318,
       "started_higher": {
-        "mean": 1.13,
+        "mean": 1.128,
         "ci95": [
-          -0.38,
-          2.63
+          -0.378,
+          2.634
         ],
         "seasons_positive": 9,
         "seasons": 11,
         "pairs": 128
       },
       "started_level": {
-        "mean": -1.66,
+        "mean": -1.656,
         "ci95": [
           -3.36,
-          0.05
+          0.047
         ],
         "seasons_positive": 3,
         "seasons": 11,
         "pairs": 71
       },
       "started_lower": {
-        "mean": -6.07,
+        "mean": -6.071,
         "ci95": [
-          -7.46,
-          -4.69
+          -7.457,
+          -4.686
         ],
         "seasons_positive": 0,
         "seasons": 11,
@@ -1321,30 +1321,30 @@
     "Big Ten": {
       "share_started_ahead": 0.471,
       "started_higher": {
-        "mean": 2.97,
+        "mean": 2.973,
         "ci95": [
-          1.49,
-          4.45
+          1.491,
+          4.454
         ],
         "seasons_positive": 11,
         "seasons": 11,
         "pairs": 250
       },
       "started_level": {
-        "mean": -1.75,
+        "mean": -1.748,
         "ci95": [
-          -3.82,
-          0.33
+          -3.822,
+          0.326
         ],
         "seasons_positive": 3,
         "seasons": 11,
         "pairs": 77
       },
       "started_lower": {
-        "mean": -4.12,
+        "mean": -4.118,
         "ci95": [
-          -5.79,
-          -2.45
+          -5.789,
+          -2.448
         ],
         "seasons_positive": 0,
         "seasons": 11,
@@ -1354,19 +1354,19 @@
     "Big 12": {
       "share_started_ahead": 0.284,
       "started_higher": {
-        "mean": 2.43,
+        "mean": 2.428,
         "ci95": [
-          1.08,
-          3.77
+          1.085,
+          3.771
         ],
         "seasons_positive": 9,
         "seasons": 11,
         "pairs": 112
       },
       "started_level": {
-        "mean": 0.49,
+        "mean": 0.487,
         "ci95": [
-          -2.07,
+          -2.066,
           3.04
         ],
         "seasons_positive": 6,
@@ -1374,10 +1374,10 @@
         "pairs": 62
       },
       "started_lower": {
-        "mean": -3.73,
+        "mean": -3.731,
         "ci95": [
-          -5.35,
-          -2.11
+          -5.352,
+          -2.109
         ],
         "seasons_positive": 2,
         "seasons": 11,
@@ -1387,30 +1387,30 @@
     "Pac-12": {
       "share_started_ahead": 0.466,
       "started_higher": {
-        "mean": 3.51,
+        "mean": 3.514,
         "ci95": [
           1.7,
-          5.33
+          5.327
         ],
         "seasons_positive": 8,
         "seasons": 9,
         "pairs": 152
       },
       "started_level": {
-        "mean": 0.15,
+        "mean": 0.148,
         "ci95": [
           -3.29,
-          3.59
+          3.586
         ],
         "seasons_positive": 5,
         "seasons": 9,
         "pairs": 44
       },
       "started_lower": {
-        "mean": -1.9,
+        "mean": -1.896,
         "ci95": [
-          -3.29,
-          -0.51
+          -3.286,
+          -0.507
         ],
         "seasons_positive": 1,
         "seasons": 9,
@@ -1424,64 +1424,64 @@
       "spearman_mean": 0.976,
       "spearman_min": 0.964,
       "SEC_minus_other_power_lean": {
-        "mean": 2.8,
+        "mean": 2.804,
         "ci95": [
-          0.19,
-          5.42
+          0.185,
+          5.422
         ],
         "seasons_positive": 9,
         "seasons": 11
       },
       "reading": "OURS IS HARSHER ON THE SEC",
       "SEC_minus_ACC_lean": {
-        "mean": 3.68,
+        "mean": 3.682,
         "ci95": [
-          -0.02,
-          7.39
+          -0.024,
+          7.387
         ],
         "seasons_positive": 8,
         "seasons": 11
       },
       "lean_by_group": {
-        "ACC": 0.64,
-        "Big 12": 3.28,
-        "Big Ten": 1.29,
+        "ACC": 0.638,
+        "Big 12": 3.281,
+        "Big Ten": 1.287,
         "Notre Dame": 1.1,
-        "Other": -5.31,
-        "Pac-12": 1.03,
-        "SEC": 4.32
+        "Other": -5.313,
+        "Pac-12": 1.027,
+        "SEC": 4.319
       }
     },
     "our_margin_vs_SP+": {
       "spearman_mean": 0.949,
       "spearman_min": 0.925,
       "SEC_minus_other_power_lean": {
-        "mean": 5.69,
+        "mean": 5.691,
         "ci95": [
           3.29,
-          8.09
+          8.092
         ],
         "seasons_positive": 11,
         "seasons": 11
       },
       "reading": "OURS IS HARSHER ON THE SEC",
       "SEC_minus_ACC_lean": {
-        "mean": 7.31,
+        "mean": 7.309,
         "ci95": [
           3.21,
-          11.41
+          11.408
         ],
         "seasons_positive": 10,
         "seasons": 11
       },
       "lean_by_group": {
-        "ACC": 0.69,
-        "Big 12": 4.02,
-        "Big Ten": 2.53,
-        "Notre Dame": -1.41,
-        "Other": -4.29,
-        "Pac-12": 2.47,
-        "SEC": 8.0
+        "ACC": 0.688,
+        "Big 12": 4.019,
+        "Big Ten": 2.527,
+        "Notre Dame": -1.409,
+        "Other": -4.286,
+        "Pac-12": 2.466,
+        "SEC": 7.997
       }
     },
     "note": "lean = our rank minus external rank among the external top 40; positive = ours ranks the group worse"
@@ -1489,23 +1489,23 @@
   "epa_yardstick_t10": {
     "source": "results/t10_epa.json (logged 2026-11-19 before data were pulled)",
     "M_SEC_EPA_held_fixed": {
-      "mean": 1.88,
+      "mean": 1.877,
       "ci95": [
-        0.5,
-        3.25
+        0.502,
+        3.252
       ],
       "seasons_positive": 8,
       "seasons": 11,
       "pairs": 431,
       "reading": "INCONCLUSIVE",
-      "share_of_t8_pairs_kept": 0.71
+      "share_of_t8_pairs_kept": 0.712
     },
-    "t8_pairs_mean_epa_gap_match_minus_sec": 4.42,
+    "t8_pairs_mean_epa_gap_match_minus_sec": 4.421,
     "match_on_EPA_instead": {
-      "mean": 2.87,
+      "mean": 2.871,
       "ci95": [
-        1.33,
-        4.42
+        1.326,
+        4.415
       ],
       "seasons_positive": 11,
       "seasons": 11,
@@ -1514,10 +1514,10 @@
     },
     "placebo_EPA_held_fixed": {
       "SEC": {
-        "mean": 1.88,
+        "mean": 1.877,
         "ci95": [
-          0.5,
-          3.25
+          0.502,
+          3.252
         ],
         "seasons_positive": 8,
         "seasons": 11,
@@ -1525,10 +1525,10 @@
         "reading": "INCONCLUSIVE"
       },
       "ACC": {
-        "mean": -2.15,
+        "mean": -2.147,
         "ci95": [
-          -3.59,
-          -0.7
+          -3.594,
+          -0.699
         ],
         "seasons_positive": 2,
         "seasons": 11,
@@ -1536,10 +1536,10 @@
         "reading": "SEC PENALTY SHOWN"
       },
       "Big Ten": {
-        "mean": 0.43,
+        "mean": 0.432,
         "ci95": [
-          -0.74,
-          1.6
+          -0.741,
+          1.605
         ],
         "seasons_positive": 6,
         "seasons": 11,
@@ -1547,10 +1547,10 @@
         "reading": "INCONCLUSIVE"
       },
       "Big 12": {
-        "mean": -1.14,
+        "mean": -1.141,
         "ci95": [
-          -2.9,
-          0.62
+          -2.899,
+          0.618
         ],
         "seasons_positive": 3,
         "seasons": 11,
@@ -1558,10 +1558,10 @@
         "reading": "INCONCLUSIVE"
       },
       "Pac-12": {
-        "mean": 1.62,
+        "mean": 1.616,
         "ci95": [
-          -0.82,
-          4.05
+          -0.822,
+          4.055
         ],
         "seasons_positive": 7,
         "seasons": 9,
@@ -1571,28 +1571,28 @@
     },
     "AP_minus_EPA_top25_slots": {
       "E_SEC": {
-        "mean": -0.45,
+        "mean": -0.445,
         "ci95": [
-          -0.94,
-          0.04
+          -0.935,
+          0.045
         ],
         "seasons_positive": 5,
         "seasons": 11
       },
       "D_PWR": {
-        "mean": -0.53,
+        "mean": -0.529,
         "ci95": [
-          -1.17,
-          0.11
+          -1.169,
+          0.112
         ],
         "seasons_positive": 3,
         "seasons": 11
       },
       "D_ACC": {
-        "mean": -0.57,
+        "mean": -0.566,
         "ci95": [
-          -1.5,
-          0.37
+          -1.498,
+          0.365
         ],
         "seasons_positive": 3,
         "seasons": 11
@@ -1603,10 +1603,10 @@
     "source": "results/t8_espn_matched.json (post hoc; DEVIATIONS.md 2026-11-19)",
     "unit": "final AP poll places, focal minus same-losses match with ESPN final SOR within 3",
     "SEC": {
-      "mean": 0.22,
+      "mean": 0.224,
       "ci95": [
         -1.69,
-        2.14
+        2.138
       ],
       "seasons_positive": 6,
       "seasons": 11,
@@ -1614,10 +1614,10 @@
       "reading": "INCONCLUSIVE"
     },
     "ACC": {
-      "mean": 1.9,
+      "mean": 1.898,
       "ci95": [
-        -0.56,
-        4.36
+        -0.562,
+        4.358
       ],
       "seasons_positive": 7,
       "seasons": 11,
@@ -1625,10 +1625,10 @@
       "reading": "INCONCLUSIVE"
     },
     "Big Ten": {
-      "mean": -0.57,
+      "mean": -0.565,
       "ci95": [
-        -1.9,
-        0.77
+        -1.897,
+        0.766
       ],
       "seasons_positive": 4,
       "seasons": 11,
@@ -1636,10 +1636,10 @@
       "reading": "INCONCLUSIVE"
     },
     "Big 12": {
-      "mean": -0.03,
+      "mean": -0.027,
       "ci95": [
-        -1.85,
-        1.79
+        -1.846,
+        1.793
       ],
       "seasons_positive": 5,
       "seasons": 11,
@@ -1647,10 +1647,10 @@
       "reading": "INCONCLUSIVE"
     },
     "Pac-12": {
-      "mean": 0.38,
+      "mean": 0.376,
       "ci95": [
-        -1.17,
-        1.92
+        -1.171,
+        1.924
       ],
       "seasons_positive": 6,
       "seasons": 9,

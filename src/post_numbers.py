@@ -23,7 +23,7 @@ def load(name):
     return json.loads((RES / name).read_text())
 
 
-def r(x, n=2):
+def r(x, n=3):
     return round(float(x), n)
 
 
