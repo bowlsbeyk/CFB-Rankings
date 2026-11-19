@@ -626,6 +626,18 @@ Both were logged in `DEVIATIONS.md` and their code committed before they ran. Th
 
 **Reading.** The count tests (T5, T6, T7) ask how many SEC teams are in the top 25; T8 asks where they are placed against equal résumés. The AP and the committee hold about the number of SEC teams that results support but place each about two places higher than the same résumé from another power conference, and ACC teams about two and a half places lower. The premium tracks the preseason poll and fades without disappearing. It is not explained by scoring margin or by the calibration question that decided the schedule contrasts. What these data cannot rule out is that preseason rankings carry real information that a season's results have not yet shown, although with the same record and margin the premium is still present in the final regular-season polls.
 
+### 5.16 The head start, independent yardsticks and EPA (added 2026-11-05 and 2026-11-19)
+
+**Head start (post hoc, descriptive).** T8's pairs split by preseason AP position. Share of pairs in which the focal team started ahead: SEC 55%, Pac-12 47%, Big Ten 47%, ACC 32%, Big 12 28%. Premium when started ahead / level / behind: SEC +4.3 / +3.0 / -0.5; Big Ten +3.0 / -1.8 / -4.1; ACC +1.1 / -1.7 / -6.1. Every conference keeps a head start; the SEC has the most head starts, is the only conference that gains from a level start, and nearly erases deficits.
+
+**T9 (logged before the data were pulled).** Mean Spearman correlation, 2014–2025: our strength of record with ESPN's 0.976 (minimum 0.964); our margin rating with SP+ 0.949. SEC-minus-other-power lean (our rank minus external rank, external top 40): +2.80 (95% t +0.19 to +5.42; 9 of 11) against ESPN; +5.69 (95% t +3.29 to +8.09; 11 of 11) against SP+. Logged reading: OURS IS HARSHER ON THE SEC (both). External historical values are post-bowl; ours regular season.
+
+**T10 (logged before the data were pulled).** Opponent-adjusted net EPA per play, rebuilt weekly from that season's games. In T8's pairs the SEC team is 4.42 EPA-rank places better than its match. M_SEC_EPA (T8 pairs with EPA ranks within 10; 71% of pairs kept): +1.88 (95% t +0.50 to +3.25; 8 of 11), INCONCLUSIVE under the logged rule. Matching on EPA instead: +2.87 (95% t +1.33 to +4.42; 11 of 11), premium shown. Placebo with EPA held fixed: ACC -2.15 (95% t -3.59 to -0.70; 2 of 11) (penalty shown); Big Ten +0.43; Big 12 -1.14; Pac-12 +1.62.
+
+**Season's end on ESPN's yardstick (post hoc).** Final AP poll after the bowls, matched on ESPN's final strength of record (same losses, within 3): SEC +0.22 (95% t -1.69 to +2.14; 6 of 11); ACC +1.90 (95% t -0.56 to +4.36; 7 of 11); no conference clear; 57 SEC pairs.
+
+**Reading.** The in-season same-résumé SEC premium and ACC penalty hold under every check of our own yardsticks. Two independent pieces of evidence say part of the SEC premium may be earned: SEC teams with equal records are more efficient per play, and ESPN's and SP+'s rankings rate SEC teams higher than our results-only ratings do. With efficiency held fixed the SEC premium shrinks to about two places and fails the pre-set 9-of-11 rule; the ACC penalty does not. By season's end, judged on ESPN's résumé ranking, neither is detectable, though that test cannot separate the change of yardstick from the season-long fade.
+
 ## 6. Deviations from the pre-registered plan
 
 Every entry is dated in `DEVIATIONS.md`. All but the last two (descriptive additions and the calibration check, October 31) were committed before use; those two say so. The last column states what had been seen when each decision was made.
