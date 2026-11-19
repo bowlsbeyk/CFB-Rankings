@@ -1,0 +1,277 @@
+{
+  "coverage": {
+    "2014": {
+      "games_with_epa": 812,
+      "games": 829
+    },
+    "2015": {
+      "games_with_epa": 822,
+      "games": 829
+    },
+    "2016": {
+      "games_with_epa": 816,
+      "games": 832
+    },
+    "2017": {
+      "games_with_epa": 829,
+      "games": 834
+    },
+    "2018": {
+      "games_with_epa": 842,
+      "games": 845
+    },
+    "2019": {
+      "games_with_epa": 846,
+      "games": 847
+    },
+    "2021": {
+      "games_with_epa": 849,
+      "games": 849
+    },
+    "2022": {
+      "games_with_epa": 854,
+      "games": 854
+    },
+    "2023": {
+      "games_with_epa": 868,
+      "games": 868
+    },
+    "2024": {
+      "games_with_epa": 870,
+      "games": 873
+    },
+    "2025": {
+      "games_with_epa": 888,
+      "games": 888
+    }
+  },
+  "t8_primary_reproduced": {
+    "mean": 2.501092992834479,
+    "ci95_t": [
+      1.244889111833125,
+      3.757296873835833
+    ],
+    "ci90_t": [
+      1.4792443344304358,
+      3.522941651238522
+    ],
+    "seasons_positive": 10,
+    "seasons": 11,
+    "sign_flip_p": 0.0029296875,
+    "pairs": 605,
+    "mean_epa_gap_match_minus_focal": 4.421487603305785,
+    "mean_sor_gap_match_minus_focal": 0.46115702479338844
+  },
+  "primary_M_SEC_EPA": {
+    "mean": 1.8766544061998607,
+    "ci95_t": [
+      0.5015356536305844,
+      3.251773158769137
+    ],
+    "ci90_t": [
+      0.7580754289250391,
+      2.995233383474682
+    ],
+    "seasons_positive": 8,
+    "seasons": 11,
+    "sign_flip_p": 0.0146484375,
+    "pairs": 431,
+    "mean_epa_gap_match_minus_focal": -0.27726218097447797,
+    "mean_sor_gap_match_minus_focal": 0.4037122969837587,
+    "reading": "INCONCLUSIVE",
+    "share_of_t8_pairs_kept": 0.7123966942148761
+  },
+  "secondary_match_on_EPA_instead": {
+    "mean": 2.8706963260561027,
+    "ci95_t": [
+      1.326079377745379,
+      4.415313274366826
+    ],
+    "ci90_t": [
+      1.6142404431772002,
+      4.127152208935005
+    ],
+    "seasons_positive": 11,
+    "seasons": 11,
+    "sign_flip_p": 0.0009765625,
+    "pairs": 568,
+    "mean_epa_gap_match_minus_focal": 0.3221830985915493,
+    "mean_sor_gap_match_minus_focal": 4.887323943661972,
+    "reading": "SEC NAME PREMIUM SHOWN"
+  },
+  "secondary_placebo_EPA_held_fixed": {
+    "SEC": {
+      "mean": 1.8766544061998607,
+      "ci95_t": [
+        0.5015356536305844,
+        3.251773158769137
+      ],
+      "ci90_t": [
+        0.7580754289250391,
+        2.995233383474682
+      ],
+      "seasons_positive": 8,
+      "seasons": 11,
+      "sign_flip_p": 0.0146484375,
+      "pairs": 431,
+      "mean_epa_gap_match_minus_focal": -0.27726218097447797,
+      "mean_sor_gap_match_minus_focal": 0.4037122969837587,
+      "reading": "INCONCLUSIVE"
+    },
+    "ACC": {
+      "mean": -2.146956595841165,
+      "ci95_t": [
+        -3.5944974879223293,
+        -0.6994157037600011
+      ],
+      "ci90_t": [
+        -3.3244467635829213,
+        -0.9694664280994092
+      ],
+      "seasons_positive": 2,
+      "seasons": 11,
+      "sign_flip_p": 0.00390625,
+      "pairs": 267,
+      "mean_epa_gap_match_minus_focal": -1.2453183520599251,
+      "mean_sor_gap_match_minus_focal": -0.18726591760299627,
+      "reading": "SEC PENALTY SHOWN"
+    },
+    "Big Ten": {
+      "mean": 0.43193022599733993,
+      "ci95_t": [
+        -0.7407423677682892,
+        1.604602819762969
+      ],
+      "ci90_t": [
+        -0.5219705975946116,
+        1.3858310495892914
+      ],
+      "seasons_positive": 6,
+      "seasons": 11,
+      "sign_flip_p": 0.416015625,
+      "pairs": 374,
+      "mean_epa_gap_match_minus_focal": 1.4705882352941178,
+      "mean_sor_gap_match_minus_focal": -0.06149732620320856,
+      "reading": "INCONCLUSIVE"
+    },
+    "Big 12": {
+      "mean": -1.1405987754418447,
+      "ci95_t": [
+        -2.8989678720270726,
+        0.6177703211433831
+      ],
+      "ci90_t": [
+        -2.570929575640039,
+        0.28973202475634996
+      ],
+      "seasons_positive": 3,
+      "seasons": 11,
+      "sign_flip_p": 0.181640625,
+      "pairs": 284,
+      "mean_epa_gap_match_minus_focal": -0.5246478873239436,
+      "mean_sor_gap_match_minus_focal": -0.14788732394366197,
+      "reading": "INCONCLUSIVE"
+    },
+    "Pac-12": {
+      "mean": 1.6164632401887762,
+      "ci95_t": [
+        -0.8217984536362255,
+        4.054724934013778
+      ],
+      "ci90_t": [
+        -0.34973650703657433,
+        3.5826629874141265
+      ],
+      "seasons_positive": 7,
+      "seasons": 9,
+      "sign_flip_p": 0.1640625,
+      "pairs": 205,
+      "mean_epa_gap_match_minus_focal": 0.05853658536585366,
+      "mean_sor_gap_match_minus_focal": -0.25853658536585367,
+      "reading": "INCONCLUSIVE"
+    }
+  },
+  "descriptive_EPA_top25_vs_AP": {
+    "E_SEC": {
+      "mean": -0.44545454545454555,
+      "ci95_t": [
+        -0.9354913620549711,
+        0.04458227114587998
+      ],
+      "ci90_t": [
+        -0.844070941395447,
+        -0.04683814951364401
+      ],
+      "seasons_positive": 5,
+      "seasons": 11,
+      "sign_flip_p": 0.0791015625,
+      "per_season": [
+        -1.3636363636363635,
+        -1.3,
+        0.1,
+        0.3,
+        0.1,
+        -0.22727272727272727,
+        -1.8,
+        -0.4,
+        0.1,
+        -0.5909090909090909,
+        0.18181818181818182
+      ]
+    },
+    "D_PWR": {
+      "mean": -0.5285123966942148,
+      "ci95_t": [
+        -1.1689675113139235,
+        0.11194271792549404
+      ],
+      "ci90_t": [
+        -1.0494853132246738,
+        -0.0075394801637558295
+      ],
+      "seasons_positive": 3,
+      "seasons": 11,
+      "sign_flip_p": 0.1064453125,
+      "per_season": [
+        -1.8636363636363635,
+        -1.85,
+        -0.17499999999999996,
+        0.7749999999999999,
+        -0.475,
+        -0.39772727272727276,
+        -1.85,
+        -0.12500000000000006,
+        0.375,
+        -0.6818181818181819,
+        0.4545454545454546
+      ]
+    },
+    "D_ACC": {
+      "mean": -0.5661157024793388,
+      "ci95_t": [
+        -1.4976349960257058,
+        0.36540359106702813
+      ],
+      "ci90_t": [
+        -1.32385236830549,
+        0.19162096334681222
+      ],
+      "seasons_positive": 3,
+      "seasons": 11,
+      "sign_flip_p": 0.2060546875,
+      "per_season": [
+        -0.36363636363636354,
+        -0.8,
+        1.0,
+        1.5,
+        -0.5,
+        -1.0454545454545454,
+        -3.0,
+        -2.0,
+        1.3,
+        -1.2272727272727273,
+        -1.0909090909090908
+      ]
+    }
+  }
+}

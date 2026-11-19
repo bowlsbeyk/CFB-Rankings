@@ -461,3 +461,9 @@ Same procedure as the 2026-10-31 re-freeze: only the 2026 schedule and poll file
 - **Secondary (same reading):** (a) matching on EPA instead of strength of record: same losses and EPA rank within 5; (b) the placebo of the T8 post hoc check with EPA held fixed: each power conference as the focal group.
 - **Descriptive:** EPA top-25 slots per poll by group against AP top-25 slots, polls 6+, as in T5.
 - No further variants after results are seen; any later addition will be logged as post hoc.
+
+## 2026-11-19 — Post hoc check after T9 and T10 (logged after their results, before this runs)
+
+**Seen.** T9: our yardsticks agree closely with ESPN's strength of record (mean Spearman 0.98) and SP+ (0.95), but rank SEC teams worse than they do (SEC-minus-other-power lean +2.80 ranks against ESPN, +5.69 against SP+; reading OURS IS HARSHER ON THE SEC). T10: with EPA held fixed too, M_SEC_EPA is +1.88 (95% t +0.50 to +3.25; 8 of 11 seasons): INCONCLUSIVE under the logged rule; matched on EPA instead, +2.87 (11 of 11): premium shown.
+
+**Why.** If our strength of record is harsher on SEC teams than ESPN's, T8 could pair SEC teams with non-SEC teams that ESPN would rank lower, and the AP premium could be the AP agreeing with ESPN. **Check** (`src/espn_matched.py`, post hoc): T8's design at season's end, the only point where ESPN's strength of record is available: each SEC team in ESPN's strength-of-record top 30 matched with the other-power team with the same number of losses and the nearest ESPN strength-of-record rank within 3; outcome rank points in the final AP poll (after the bowls, the same timing as ESPN's final values); per-season mean, T5 statistics, T8's reading rule. Losses are counted over the full season including bowls, from the same final data. Also the placebo with each power conference as the focal group. One poll per season, so the pairs are few and the test is weak; it is reported whatever it shows.
