@@ -1,0 +1,9 @@
+check,value,lo,hi,seasons_positive,seasons
+Main test (logged in advance),2.5,1.24,3.76,10.0,11.0
+Scoring margin also matched,2.01,0.93,3.1,9.0,11.0
+Calibrated: all outside games,1.9,,,,
+Calibrated: power-conference games,2.65,,,,
+Playoff committee instead of AP,1.77,0.83,2.71,9.0,11.0
+Matched on EPA per play instead,2.87,1.33,4.42,11.0,11.0
+EPA per play also matched (logged),1.88,0.5,3.25,8.0,11.0
+"Season's end, on ESPN's résumé rank",0.22,-1.69,2.14,6.0,11.0

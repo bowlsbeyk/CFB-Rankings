@@ -46,6 +46,7 @@ STEPS = [
     ["src/epa_test.py"],
     ["src/espn_matched.py"],
     ["src/post_numbers.py"],
+    ["src/page_data.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],
     ["src/figures.py"],
