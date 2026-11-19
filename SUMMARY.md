@@ -11,7 +11,7 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
 
 ## How it was tested
 
-- **Seasons:** AP polls for 2014–2025, leaving out 2020 (11 seasons), plus a descriptive look at 2026 through week 8.
+- **Seasons:** AP polls for 2014–2025, leaving out 2020 (11 seasons), plus a descriptive look at 2026 through week 11.
 - **Yardsticks:** built only from that season's scores and schedules. They use no polls, no preseason information and no team names.
   - **Strength of record** ranks teams: how likely a typical top-25 team would be to post this record or better against this schedule. It grades résumés, not raw strength.
   - **A season-only rating** (schedule-adjusted scoring margins and wins and losses) is used for schedules, poll places and the "good loss" check.
@@ -27,17 +27,17 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
 
 ## Hypothesis 1: Miami "played nobody". **Not supported by results.**
 
-After week 8 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`](results/figures/fig28_2026_sor.png)):
+After week 11 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`](results/figures/fig28_2026_sor.png)). The data were re-frozen on 2026-11-19; the week-8 version of this section is in git history.
 
 - **Ranking:**
-  - Miami is 7–0, AP #1 and **#1 by strength of record** in all 9 uncalibrated settings. Under the two calibrations to results against outsiders it is #3 and #4, and UCLA is #1.
-  - UCLA, also 7–0, is a close #2 on the main setting and is #1 by wins and losses alone (Colley).
-  - Miami is #2 by wins and losses and #2 by scoring margin.
-- **What is true:** none of Miami's opponents was in the AP top 25 on game day. Counted that way, its schedule is tied for last with 44 other teams that have not faced a ranked opponent yet.
-- **What is not:** counted by how those opponents have actually played in 2026, the schedule ranks **56th of 138**. That is the middle of the pack, not "nobody". It is softer than most power-conference schedules, though: 48th of the 67 SEC, Big Ten, Big 12 and ACC teams.
-- **Best win:** Miami won 33–20 at Wake Forest in week 3. Wake Forest was unranked then. It is now 6–1, AP #14 and #9 by strength of record, and its only loss is to Miami.
+  - Miami is 9–1 (its loss: 31–24 at Notre Dame in week 10), AP #5 and **#3 by strength of record**, between #2 and #5 across all 11 settings.
+  - Ahead of it by strength of record: Utah (10–0) and UCLA (10–0).
+  - Miami is #5 by wins and losses and #4 by scoring margin.
+- **Schedule by results:** counted by how its opponents have actually played in 2026, Miami's schedule is **22nd toughest of 138**.
+- **Schedule by game-day poll:** counted by opponents' AP rank on game day, it is 59th. The game-day poll undersells Miami's schedule by 37 places.
+- **Best win:** 33–20 at Wake Forest in week 3. Wake Forest was unranked then. It is now 9–1, AP #10 and #8 by strength of record, and its only loss is to Miami.
 
-One season and eight weeks of games: this part is descriptive, not a test.
+One season and eleven weeks of games: this part is descriptive, not a test.
 
 ## Hypothesis 2: rankings make SEC schedules look hard. **Supported where teams are placed; not in how many are ranked.**
 
@@ -154,7 +154,7 @@ This test came last. It was logged, and its code committed, before it ran ([`res
 ## Bottom line
 
 - **Same résumé, the SEC team is ranked higher.** An SEC team is ranked about 2.5 places above a non-SEC power-conference team with the same losses and strength of record, and 3.3 places above an ACC team. That holds for the same scoring margin, under both calibrations, and in the committee's rankings. No other conference gets a premium; the ACC gets a penalty. The premium is carried by the preseason poll and fades through the season without disappearing.
-- **Miami's résumé is backed by its results.** It is #1 in most settings and top 4 in all. "Played nobody" is false: its schedule is mid-pack by results, not empty, though softer than most power-conference schedules.
+- **Miami's résumé is backed by its results.** After week 11 it is #3 by strength of record and top 5 in every setting. "Played nobody" is false: by results its schedule is 22nd toughest of 138, while game-day rankings put it 59th.
 - **Game-day "ranked" opponents oversell SEC schedules, all season long.**
   - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating (+1.6, not clear, or +7.7).
   - **Not SEC-only:** the Pac-12 gets about as much.
@@ -183,7 +183,7 @@ This test came last. It was logged, and its code committed, before it ran ([`res
 - **Many tests.** Many tests were run over the study, so read single intervals with that in mind. The sturdiest findings hold in most seasons and survive the checks:
   - the early-poll surplus (10 of 11 seasons, positive in all 14 checks);
   - the SEC's results-only lead over the ACC (10 of 11 seasons).
-- **2026 is descriptive.** Eight weeks of games; no test.
+- **2026 is descriptive.** Eleven weeks of games; no test.
 
 ## Check it yourself
 
@@ -194,7 +194,7 @@ This test came last. It was logged, and its code committed, before it ran ([`res
   - T2, T3, T4, T5 and T6;
   - the post-audit corrections, the descriptive additions and the calibration check of 2026-10-31;
   - T7 and T8, and the post hoc checks of T8, of 2026-11-05.
-- **Strength of record for every FBS team:** [`results/sor_weekly.csv`](results/sor_weekly.csv) covers each week from week 5 on, 2014–2025 (no 2020), plus 2026 after week 8.
+- **Strength of record for every FBS team:** [`results/sor_weekly.csv`](results/sor_weekly.csv) covers each week from week 5 on, 2014–2025 (no 2020), plus 2026 after week 11.
 - **Rebuild everything:**
   1. `pip install -r requirements.txt`
   2. Set a free `CFBD_API_KEY`.

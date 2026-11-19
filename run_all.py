@@ -41,6 +41,7 @@ STEPS = [
     ["src/committee_test.py"],
     ["src/matched_test.py"],
     ["src/matched_posthoc.py"],
+    ["src/start_check.py"],
     ["src/post_numbers.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "floor"],

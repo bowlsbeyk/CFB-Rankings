@@ -30,7 +30,7 @@ A study of week-to-week AP poll movement, testing whether SEC teams look tougher
 | H5 sensitivity after outside review (`results/h5_sensitivity.json`) | Done |
 | Report (`REPORT.md`) | Done; revised after outside review |
 | 2026 counterfactual (`results/counterfactual_2026*.json`) | Run; every model fails a plausibility check (`results/base_rates_poll8.json`) |
-| 2026 data re-frozen through week 8 (AP poll 9) | Done |
+| 2026 data re-frozen through week 11 (AP poll 12), 2026-11-19 | Done |
 | T5: ranking-independent strength of record (`results/t5_sor.json`) | Done |
 | T6: early polls against the season's outcome (`results/t6_early.json`) | Done |
 | Independent audit of T5/T6, corrections logged | Done |
@@ -56,12 +56,12 @@ The full write-up, with 29 figures covering every step from data to counterfactu
 
 ## 2026 so far: who is over- and underrated (exploratory)
 
-After week 8 (AP poll 9), comparing each team's AP rank with its rank by the season-only rating (this season's schedule-adjusted margins and wins and losses; "by results" below means this rating, not the strength of record used for Miami), and checking that voters have also moved it more (or less) than results usually earn. Not a hypothesis test; eight weeks of games make ratings noisy.
+After week 11 (AP poll 12), comparing each team's AP rank with its rank by the season-only rating (this season's schedule-adjusted margins and wins and losses; "by results" below means this rating, not the strength of record used for Miami), and checking that voters have also moved it more (or less) than results usually earn. Not a hypothesis test.
 
-- **Overrated:** SMU (AP #19, 30th by results), Georgia (#3, 9th), BYU (#8, 14th), Florida (#17, 23rd).
-- **Underrated:** LSU (#15, 6th), James Madison (unranked at 7-1, 19th).
-- Eight of the nine SEC teams on the board have schedules that look tougher by opponents' AP rank than by opponents' 2026 results.
-- **Miami** (7-0, AP #1) is #1 by strength of record (#1 in 9 of 11 settings; #3 and #4 under the two calibrations, where UCLA is #1). None of its opponents was in the AP top 25 on game day, but by their 2026 results its schedule ranks 56th of 138, not last. Table: [`results/sor_2026.csv`](results/sor_2026.csv); chart: [`fig28`](results/figures/fig28_2026_sor.png).
+- **Overrated:** Iowa (AP #13, 18th by results), Kentucky (#17, 23rd).
+- **Underrated:** Ohio State (#16, 11th), LSU (unranked at 6-4, 16th).
+- Six of the eight SEC teams on the board have schedules that look tougher by opponents' AP rank than by opponents' 2026 results.
+- **Miami** (9-1, AP #5) is #3 by strength of record (between #2 and #5 across all 11 settings), #5 by wins and losses and #4 by scoring margin. By opponents' 2026 results its schedule is 22nd toughest of 138; by opponents' game-day AP rank it is 59th. Table: [`results/sor_2026.csv`](results/sor_2026.csv); chart: [`fig28`](results/figures/fig28_2026_sor.png).
 
 Chart: [`results/figures/fig22_2026_over_under.png`](results/figures/fig22_2026_over_under.png). Full table: [`results/rankings_2026.csv`](results/rankings_2026.csv).
 

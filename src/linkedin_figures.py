@@ -67,15 +67,20 @@ def miami(n):
         t = d[col].idxmin()
         return f"{t}, {d.loc[t, 'record']}"
 
-    fig = frame("Miami on performance alone: #1 or #2 on every measure",
+    def ordinal(k):
+        k = int(k)
+        return f"{k}{'th' if 10 <= k % 100 <= 20 else {1: 'st', 2: 'nd', 3: 'rd'}.get(k % 10, 'th')}"
+
+    ranks = [int(m["sor_rank"]), int(m["colley_rank"]), int(m["performance_rank"])]
+    lo, hi = m["sor_rank_range_across_11_settings"]
+    fig = frame(f"Miami on performance alone: top {max(ranks)} on every measure",
                 f"2026 after week {m['after_week']}. Every ranking uses only this season's scores and schedules "
                 "(no polls, no preseason, no names) and adjusts for who each team has played.")
     rows = [
-        ("Strength of record", "How hard would 7-0 against this exact schedule be?", int(m["sor_rank"]),
-         f"#1 in 9 of 11 versions; never worse than #{m['sor_rank_range_across_11_settings'][1]}"),
-        ("Wins and losses, schedule-adjusted", "Colley ranking", int(m["colley_rank"]), f"#1: {leader('colley_rank')}"),
-        ("Scoring margin, schedule-adjusted", "Margin capped at 28 points", int(m["performance_rank"]),
-         f"#1: {leader('perf_rank')}"),
+        ("Strength of record", f"How hard would {m['record']} against this exact schedule be?", ranks[0],
+         f"Between #{lo} and #{hi} across all 11 versions; #1: {leader('sor_rank')}"),
+        ("Wins and losses, schedule-adjusted", "Colley ranking", ranks[1], f"#1: {leader('colley_rank')}"),
+        ("Scoring margin, schedule-adjusted", "Margin capped at 28 points", ranks[2], f"#1: {leader('perf_rank')}"),
     ]
     top = 0.655
     for i, (name, sub, rank, note_) in enumerate(rows):
@@ -86,14 +91,20 @@ def miami(n):
         fig.text(0.27, y - 0.042, note_, fontsize=9.5, color=INK2, va="center")
     fig.add_artist(plt.Line2D([0.06, 0.94], [0.315, 0.315], color=GRID, lw=1))
     r = m["schedule_rank_by_opponents_2026_results"]
+    pw = m["schedule_rank_by_2026_results_among_power_conference_teams"]
     fig.text(0.06, 0.29, "The schedule, for context", fontsize=11, fontweight="bold", color=INK, va="top")
     fig.text(0.06, 0.255, textwrap.fill(
-        f"By how its opponents have actually played, Miami's schedule is {r}th of {total}: middle of the pack, "
-        f"not \"nobody\". The rankings above already account for it. A softer schedule makes 7-0 easier, so "
-        "it counts against Miami. Miami is #1 despite it, not because of it.", 82),
+        f"By how its opponents have actually played, Miami's schedule is {ordinal(r)} toughest of {total} "
+        f"({ordinal(pw[0])} of {pw[1]} power-conference teams). The rankings above already account for it: "
+        "a tougher schedule makes the same record more impressive, a softer one less.", 82),
         fontsize=8.8, color=INK2, va="top", linespacing=1.35)
-    note(fig, f"Counted by opponents' AP rank on game day instead, Miami has faced no ranked team, like "
-         f"{m['teams_with_no_ap_top25_opponent_yet'] - 1} other teams.")
+    if m["opponents_in_ap_top25_on_game_day"] == "none":
+        tail = (f"Counted by opponents' AP rank on game day instead, Miami has faced no ranked team, like "
+                f"{m['teams_with_no_ap_top25_opponent_yet'] - 1} other teams.")
+    else:
+        tail = (f"Counted by opponents' AP rank on game day instead, its schedule is "
+                f"{ordinal(m['schedule_rank_by_opponents_game_day_poll'])} of {total}.")
+    note(fig, tail)
     save(fig, "01_miami_schedule.png")
 
 
