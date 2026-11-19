@@ -11,6 +11,189 @@
     }
   },
   "files": {
+    "data/raw/advanced/fpi_2014.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2014",
+      "sha256": "c832d207d3b159e0e17f5331f95d4dfcf358c86e2dc3d808de8b23ea785ccecd",
+      "bytes": 39854
+    },
+    "data/raw/advanced/fpi_2015.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2015",
+      "sha256": "a436bb75a8992928f74fe68fc74eb279ccbe9da7c0ca5fbad3e1a5645609cecb",
+      "bytes": 39851
+    },
+    "data/raw/advanced/fpi_2016.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2016",
+      "sha256": "9f94711259731fa769c8922da43a2d0813e49fb15aceb17fd25414ea72dab93d",
+      "bytes": 39857
+    },
+    "data/raw/advanced/fpi_2017.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2017",
+      "sha256": "36a9d3598b5db2c773eec83876d835608a635e290a7e95517b341ba249e73ab5",
+      "bytes": 40489
+    },
+    "data/raw/advanced/fpi_2018.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2018",
+      "sha256": "559586aeab86a5f0632ee051e2a1d523887fff271466a18285a0163d986c7273",
+      "bytes": 40508
+    },
+    "data/raw/advanced/fpi_2019.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2019",
+      "sha256": "1a149d3f51429669c477124f864d4177a5a6c4d955c4c3e960b08093e8506490",
+      "bytes": 40474
+    },
+    "data/raw/advanced/fpi_2021.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2021",
+      "sha256": "b818fdb7bd875933f9e74b381973d311d4bdc8a91ee4f797d5243a97a9130e7a",
+      "bytes": 40492
+    },
+    "data/raw/advanced/fpi_2022.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2022",
+      "sha256": "69a3fcf56848137108159419b283fa70063117c84f64edb1318866e988370eb8",
+      "bytes": 40797
+    },
+    "data/raw/advanced/fpi_2023.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2023",
+      "sha256": "4ffc0a2751a8cfc5afe6ad7f520fe5794c638abfa5d7a66d48b8b0f66dbf3359",
+      "bytes": 41455
+    },
+    "data/raw/advanced/fpi_2024.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2024",
+      "sha256": "1e14aee0a5d096652eb9b99d4b76046da68e3e8580874c367c30b178ee2d0ba9",
+      "bytes": 41722
+    },
+    "data/raw/advanced/fpi_2025.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2025",
+      "sha256": "a5356289835fb15e9e115c54927d73530f45cc7c32a070ea075637bd5c7ae220",
+      "bytes": 42410
+    },
+    "data/raw/advanced/fpi_2026.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/fpi?year=2026",
+      "snapshot": "2026-11-19",
+      "sha256": "a5eca9cde1c3c8720123b5f3693e5450305626029cb1b67ec70bd3671fd9ecc2",
+      "bytes": 42750
+    },
+    "data/raw/advanced/ppa_games_2014.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2014&seasonType=regular",
+      "sha256": "cf61771e01caff30e1351e93a9effe5561febced011891d53e576bed58e74a0d",
+      "bytes": 539187
+    },
+    "data/raw/advanced/ppa_games_2015.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2015&seasonType=regular",
+      "sha256": "1dbd9675d6ee94376009c3c43f9b662870a1d8f9a957beafd1d11e338e0ed36f",
+      "bytes": 547927
+    },
+    "data/raw/advanced/ppa_games_2016.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2016&seasonType=regular",
+      "sha256": "f556bc927a89ca03310a86978f22074564d268c10a46ab64cb6d171f00c96924",
+      "bytes": 541477
+    },
+    "data/raw/advanced/ppa_games_2017.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2017&seasonType=regular",
+      "sha256": "34df1906fc9daa495120210c29097334cb6330cf9d2f980fc560967d04eca6e4",
+      "bytes": 555671
+    },
+    "data/raw/advanced/ppa_games_2018.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2018&seasonType=regular",
+      "sha256": "96833e0dcb8ba2055f152a3956931ea1e8f992f08f2b75eba3f240dfc12ad84b",
+      "bytes": 559886
+    },
+    "data/raw/advanced/ppa_games_2019.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2019&seasonType=regular",
+      "sha256": "44bc2da47fbe5be761e7734337aae1fb953efb8e9c04cfc7e0b67ec22a9258a2",
+      "bytes": 562252
+    },
+    "data/raw/advanced/ppa_games_2021.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2021&seasonType=regular",
+      "sha256": "7cab45bff8db756478f414bc86e6370f4b69b25d182f84458d4be672c788951f",
+      "bytes": 561883
+    },
+    "data/raw/advanced/ppa_games_2022.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2022&seasonType=regular",
+      "sha256": "f6cf79a15e58e5ef0d787bf73c024039ed98becb37b3a8efe03a4c1a5b6451b3",
+      "bytes": 564700
+    },
+    "data/raw/advanced/ppa_games_2023.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2023&seasonType=regular",
+      "sha256": "83d535212a04d788cf75885f465b2cbc6829da2bef5373155612f4d62cd41d10",
+      "bytes": 575438
+    },
+    "data/raw/advanced/ppa_games_2024.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2024&seasonType=regular",
+      "sha256": "c5d9814bc151cf619801b7d13b9cffeb95c20ae603f9893ed1109487d06886fa",
+      "bytes": 575620
+    },
+    "data/raw/advanced/ppa_games_2025.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2025&seasonType=regular",
+      "sha256": "b7d2bf13c21c77b04d47a3a29f52c11eb345af4070e05cb1afb87ffa2cc989fc",
+      "bytes": 587132
+    },
+    "data/raw/advanced/ppa_games_2026.json": {
+      "source_url": "https://api.collegefootballdata.com/ppa/games?year=2026&seasonType=regular",
+      "frozen_through_week": 11,
+      "sha256": "d4b007207e2a764b189d8a6d9d1f9b2775fb5a9e66292c2ab9d1b7a6c80a1100",
+      "bytes": 491422
+    },
+    "data/raw/advanced/sp_2014.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2014",
+      "sha256": "73c33db1bbbadd53d5f11e41373cc26682f54d3993c487d6e132c2ad3108655c",
+      "bytes": 69511
+    },
+    "data/raw/advanced/sp_2015.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2015",
+      "sha256": "ecf41537dd65d55a42d902db7a09da2189bab90f8a12e2c44ddaf95b425f9080",
+      "bytes": 69549
+    },
+    "data/raw/advanced/sp_2016.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2016",
+      "sha256": "86c4f28532208f1727c7b60e65c73072aba921a8c88b1dd45b62a659ea0925d4",
+      "bytes": 69455
+    },
+    "data/raw/advanced/sp_2017.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2017",
+      "sha256": "26dc63206965aa1255e9f6e2fae73eb70b9f2b3db770ab9e348f38516f4f1f23",
+      "bytes": 69602
+    },
+    "data/raw/advanced/sp_2018.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2018",
+      "sha256": "ad4f834dea4bff5369024134b2d9d8cd6da434e66f7cf0e66046947d8d7bfdd9",
+      "bytes": 70540
+    },
+    "data/raw/advanced/sp_2019.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2019",
+      "sha256": "2599901e470dc06865c1b592c9d45e10c1ec3997e5c1ea326af0dff5d84e462a",
+      "bytes": 67982
+    },
+    "data/raw/advanced/sp_2021.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2021",
+      "sha256": "383a4b29a1df8e5121f7714a45b88c7e960c90ec04940e6b881e551ce44efbb4",
+      "bytes": 68059
+    },
+    "data/raw/advanced/sp_2022.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2022",
+      "sha256": "e55feeb91c1648bb5b8faff4316b92cdfa7d64166037cb51b6582873893c3125",
+      "bytes": 68534
+    },
+    "data/raw/advanced/sp_2023.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2023",
+      "sha256": "fac89420083c368800024518d0991564c272771d84834f24d42e10cd6e131a5b",
+      "bytes": 69597
+    },
+    "data/raw/advanced/sp_2024.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2024",
+      "sha256": "e3d5d85d85aee7b36e094a58e5e67ce902ff56d4b42bfc44dad20be4e803c909",
+      "bytes": 70118
+    },
+    "data/raw/advanced/sp_2025.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2025",
+      "sha256": "5162eac2389fa8e741c0ae8daeb213405b671498284e3a8b43d43fa7a7583430",
+      "bytes": 71174
+    },
+    "data/raw/advanced/sp_2026.json": {
+      "source_url": "https://api.collegefootballdata.com/ratings/sp?year=2026",
+      "snapshot": "2026-11-19",
+      "sha256": "485ee8e3d2b1e2771cec5d215f562fceeaa11ad25b5be3723d6d90e19050c81e",
+      "bytes": 72262
+    },
     "data/raw/polls/rankings_2014_postseason.json": {
       "source_url": "https://api.collegefootballdata.com/rankings?year=2014&seasonType=postseason",
       "sha256": "5be43be3efbf4185370bf3387e83b49e8209f82372cf33e058cc2373c822ea44",

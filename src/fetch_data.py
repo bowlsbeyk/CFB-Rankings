@@ -3,8 +3,9 @@
 The raw files are not committed (CollegeFootballData.com terms; DEVIATIONS.md,
 2026-10-23). This script rebuilds them byte for byte:
   - schedules from sportsdataverse/cfbfastR-data at each file's pinned commit (no key)
-  - polls from the CFBD API (free key in CFBD_API_KEY); a season still in progress
-    is cut back to the poll weeks that were frozen ("frozen_through_week") before checking
+  - polls, ESPN FPI, SP+ and per-game EPA from the CFBD API (free key in CFBD_API_KEY); a season
+    still in progress is cut back to the weeks that were frozen ("frozen_through_week") before
+    checking; in-season FPI/SP+ snapshots that the source has overwritten are skipped with a warning
 
 Files already present with the right checksum are left alone, so this needs the
 network (and the key) only for files that are missing. Any mismatch is an error.
@@ -68,6 +69,11 @@ def main():
             continue
         body = fetch_schedule(rel, meta) if "/schedules/" in rel else fetch_poll(rel, meta)
         if sha256(body) != meta["sha256"]:
+            if meta.get("snapshot"):
+                # In-season FPI/SP+ snapshot (DEVIATIONS.md, 2026-11-19): the source overwrites it.
+                print(f"WARNING: {rel} is a {meta['snapshot']} snapshot the source has since changed; "
+                      "skipped (T9 leaves out 2026).")
+                continue
             sys.exit(f"Checksum mismatch for {rel}: the source no longer matches the frozen data.")
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_bytes(body)
