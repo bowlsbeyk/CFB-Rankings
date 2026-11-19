@@ -482,3 +482,12 @@ Three independent reviewers checked the new results before publication.
 2. **Continuous preseason adjustment.** Per season, regress the AP difference on the preseason AP gap (unranked = 26), for each focal conference; report the intercept across seasons and the pooled slope.
 3. **Season's end on our own yardstick.** T8's pairs in each season's last regular-season week only.
 4. **By the match's conference.** T8's SEC pairs split by the conference of the match (pairs whose tied matches span conferences are dropped).
+
+## 2026-11-19 — Era split: before and since NIL (Kyle's question; post hoc, descriptive; logged before it runs)
+
+**Question.** Since name, image and likeness rules took effect (July 2021), has the SEC become weaker on the field while the polls kept treating it as before, so that the recent premium is a reputation carried over from the 2010s?
+
+**Check** (`src/era_check.py`, results/era_check.json). Eras: 2014–2019 (6 seasons) and 2021–2025 (5 seasons); 2020 is excluded as everywhere else. For each quantity, the per-season values, the mean in each era and the difference (recent minus early) with a Welch t-interval. With 6 and 5 seasons these comparisons have little power; they are descriptive.
+
+- **On the field (results only):** SEC teams in the strength-of-record top 25 per poll (polls 6+), and SEC minus each other power conference; SEC games against power-conference opponents from other conferences (regular season and postseason): win share and the mean margin residual against the results rating (T4's games); national champions by conference, read from the schedule data's championship game.
+- **In the polls:** SEC teams in the AP top 25 per poll (polls 6+) and in the preseason poll; the T5 surplus E_SEC and the T6 early-poll surplus per season; the T8 same-record premium per season, and the same allowing for how the season ended (the verification check's per-season intercepts).
