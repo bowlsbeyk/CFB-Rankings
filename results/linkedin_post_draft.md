@@ -15,7 +15,7 @@ What I found:
 • NIL and the transfer portal changed how teams recruit and keep players, so old reputations should count for less. In the polls they don't: the premium was +1.8 spots in 2014–19 and +3.4 since 2021, while the SEC's bowl and playoff record fell from 41–28 to 30–34. The Big Ten won the last three titles.
 • "Ranked wins" are partly an echo. SEC teams have 31 wins over teams ranked on game day this year, 29 against SEC rivals. 13 of those opponents aren't top 25 by record today.
 
-What keeps me honest: part of the gap is voters being right (about 1.9 spots after allowing for how the season ended). ESPN and SP+ rate SEC teams higher than my ratings do. The NIL-era changes aren't statistically clear yet. And this was about the seventh test I ran for an SEC effect, the first with a clear result.
+What keeps me honest: part of the gap is voters being right. Allowing for how the season ended, about 1.9 of the 2.5 spots remain. ESPN and SP+ rate SEC teams higher than my ratings do. The NIL-era changes aren't statistically clear yet. And this was about the seventh test I ran for an SEC effect, the first with a clear result.
 
 So is the SEC just better? It's good. But a tough schedule doesn't earn extra spots; your record against it should. Same record, SEC teams still get about two more spots midseason, and near the playoff cut line that matters.
 
