@@ -48,6 +48,7 @@ STEPS = [
     ["src/verification_checks.py"],
     ["src/era_check.py"],
     ["src/ranked_wins_2026.py"],
+    ["src/postseason_check.py"],
     ["src/post_numbers.py"],
     ["src/page_data.py"],
     ["src/team_bias.py", "--spec", "revised", "--model", "gbt", "--treatment", "zero"],

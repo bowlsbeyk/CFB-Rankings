@@ -327,6 +327,61 @@
       "frozen_through_week": 12,
       "pulled_at_utc": "2026-11-19T13:29:58+00:00"
     },
+    "data/raw/postseason/games_2014_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2014&seasonType=postseason",
+      "sha256": "cafd4842f0f6a46c2a15549f2c4d9a0ac013dd32429e6467d31e42984e8b71c1",
+      "bytes": 35537
+    },
+    "data/raw/postseason/games_2015_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2015&seasonType=postseason",
+      "sha256": "715604bc50267748dca3f3e2d41a0fc0167e805b1029a9fa29d5ddcdbfad4fb8",
+      "bytes": 37869
+    },
+    "data/raw/postseason/games_2016_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2016&seasonType=postseason",
+      "sha256": "857fbff5acf9defbb1b04225ac15dd3150cdf448e74c1991fbeaa62a0b088609",
+      "bytes": 39187
+    },
+    "data/raw/postseason/games_2017_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2017&seasonType=postseason",
+      "sha256": "b619d6a79dff7d1c82d3cf9594096e782655154d350c3b32b8c389087f43bb61",
+      "bytes": 38714
+    },
+    "data/raw/postseason/games_2018_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2018&seasonType=postseason",
+      "sha256": "e59d4e939162cf7c7fab94854033e4bc1b5bd3c4469bcea336e490f72e3e0810",
+      "bytes": 37889
+    },
+    "data/raw/postseason/games_2019_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2019&seasonType=postseason",
+      "sha256": "d240eac53a2fcb3795d9d7f18724eb990062d8dc0d412282d5b550eedca03f35",
+      "bytes": 39005
+    },
+    "data/raw/postseason/games_2021_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2021&seasonType=postseason",
+      "sha256": "076c3e3242edfa687640793cc9fa869b4421bf18192302072a0f8782376f14dd",
+      "bytes": 37177
+    },
+    "data/raw/postseason/games_2022_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2022&seasonType=postseason",
+      "sha256": "3d3d8d62a31fc05ce354231d2079d8af6a370bc9af323c422474a0428e112614",
+      "bytes": 39376
+    },
+    "data/raw/postseason/games_2023_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2023&seasonType=postseason",
+      "sha256": "0688a4d832df777e5f05a796a52ba38c0538d0ca1b3adca02531b5299a0b6785",
+      "bytes": 111684
+    },
+    "data/raw/postseason/games_2024_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2024&seasonType=postseason",
+      "sha256": "5a1f5aa13037479ac0f7d1e390561e736f7b04c69a3252565381ec1ffb71c9a9",
+      "bytes": 45972
+    },
+    "data/raw/postseason/games_2025_postseason.json": {
+      "source_url": "https://api.collegefootballdata.com/games?year=2025&seasonType=postseason",
+      "sha256": "bef0eccc86f7b7fbf0ff7a4140eb447f1fd2eb34892ef10a3727c7d4456616a4",
+      "bytes": 71090
+    },
     "data/raw/schedules/cfb_schedules_2014.parquet": {
       "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2014.parquet",
       "sha256": "375fd3add14e66bdb7e83bb158fc6637c1f90c8938cac477f65a8b7348018aba",

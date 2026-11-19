@@ -1,0 +1,735 @@
+{
+  "note": "descriptive; FBS-vs-FBS postseason games; conference by each season's membership; no rating uses these",
+  "2014-2019": {
+    "SEC": {
+      "all_postseason": {
+        "games": 69,
+        "wins": 41,
+        "losses": 28,
+        "win_share": 0.594
+      },
+      "vs_other_power_conferences": {
+        "games": 59,
+        "wins": 36,
+        "losses": 23,
+        "win_share": 0.61
+      },
+      "playoff": {
+        "games": 13,
+        "wins": 9,
+        "losses": 4,
+        "win_share": 0.692
+      },
+      "non_playoff_bowls": {
+        "games": 56,
+        "wins": 32,
+        "losses": 24,
+        "win_share": 0.571
+      }
+    },
+    "Big Ten": {
+      "all_postseason": {
+        "games": 57,
+        "wins": 30,
+        "losses": 27,
+        "win_share": 0.526
+      },
+      "vs_other_power_conferences": {
+        "games": 52,
+        "wins": 26,
+        "losses": 26,
+        "win_share": 0.5
+      },
+      "playoff": {
+        "games": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_share": 0.4
+      },
+      "non_playoff_bowls": {
+        "games": 52,
+        "wins": 28,
+        "losses": 24,
+        "win_share": 0.538
+      }
+    },
+    "Big 12": {
+      "all_postseason": {
+        "games": 41,
+        "wins": 19,
+        "losses": 22,
+        "win_share": 0.463
+      },
+      "vs_other_power_conferences": {
+        "games": 36,
+        "wins": 17,
+        "losses": 19,
+        "win_share": 0.472
+      },
+      "playoff": {
+        "games": 4,
+        "wins": 0,
+        "losses": 4,
+        "win_share": 0.0
+      },
+      "non_playoff_bowls": {
+        "games": 37,
+        "wins": 19,
+        "losses": 18,
+        "win_share": 0.514
+      }
+    },
+    "ACC": {
+      "all_postseason": {
+        "games": 65,
+        "wins": 31,
+        "losses": 34,
+        "win_share": 0.477
+      },
+      "vs_other_power_conferences": {
+        "games": 47,
+        "wins": 20,
+        "losses": 27,
+        "win_share": 0.426
+      },
+      "playoff": {
+        "games": 10,
+        "wins": 6,
+        "losses": 4,
+        "win_share": 0.6
+      },
+      "non_playoff_bowls": {
+        "games": 55,
+        "wins": 25,
+        "losses": 30,
+        "win_share": 0.455
+      }
+    },
+    "Pac-12": {
+      "all_postseason": {
+        "games": 48,
+        "wins": 23,
+        "losses": 25,
+        "win_share": 0.479
+      },
+      "vs_other_power_conferences": {
+        "games": 38,
+        "wins": 17,
+        "losses": 21,
+        "win_share": 0.447
+      },
+      "playoff": {
+        "games": 3,
+        "wins": 1,
+        "losses": 2,
+        "win_share": 0.333
+      },
+      "non_playoff_bowls": {
+        "games": 45,
+        "wins": 22,
+        "losses": 23,
+        "win_share": 0.489
+      }
+    },
+    "Notre Dame": {
+      "all_postseason": {
+        "games": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_share": 0.6
+      },
+      "vs_other_power_conferences": {
+        "games": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_share": 0.6
+      },
+      "playoff": {
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_share": 0.0
+      },
+      "non_playoff_bowls": {
+        "games": 4,
+        "wins": 3,
+        "losses": 1,
+        "win_share": 0.75
+      }
+    },
+    "Other": {
+      "all_postseason": {
+        "games": 195,
+        "wins": 93,
+        "losses": 102,
+        "win_share": 0.477
+      },
+      "vs_other_power_conferences": {
+        "games": 41,
+        "wins": 16,
+        "losses": 25,
+        "win_share": 0.39
+      },
+      "playoff": {
+        "games": 0,
+        "wins": 0,
+        "losses": 0,
+        "win_share": null
+      },
+      "non_playoff_bowls": {
+        "games": 195,
+        "wins": 93,
+        "losses": 102,
+        "win_share": 0.477
+      }
+    }
+  },
+  "2021-2025": {
+    "SEC": {
+      "all_postseason": {
+        "games": 64,
+        "wins": 30,
+        "losses": 34,
+        "win_share": 0.469
+      },
+      "vs_other_power_conferences": {
+        "games": 49,
+        "wins": 24,
+        "losses": 25,
+        "win_share": 0.49
+      },
+      "playoff": {
+        "games": 20,
+        "wins": 10,
+        "losses": 10,
+        "win_share": 0.5
+      },
+      "non_playoff_bowls": {
+        "games": 44,
+        "wins": 20,
+        "losses": 24,
+        "win_share": 0.455
+      }
+    },
+    "Big Ten": {
+      "all_postseason": {
+        "games": 62,
+        "wins": 39,
+        "losses": 23,
+        "win_share": 0.629
+      },
+      "vs_other_power_conferences": {
+        "games": 49,
+        "wins": 30,
+        "losses": 19,
+        "win_share": 0.612
+      },
+      "playoff": {
+        "games": 21,
+        "wins": 13,
+        "losses": 8,
+        "win_share": 0.619
+      },
+      "non_playoff_bowls": {
+        "games": 41,
+        "wins": 26,
+        "losses": 15,
+        "win_share": 0.634
+      }
+    },
+    "Big 12": {
+      "all_postseason": {
+        "games": 42,
+        "wins": 20,
+        "losses": 22,
+        "win_share": 0.476
+      },
+      "vs_other_power_conferences": {
+        "games": 33,
+        "wins": 16,
+        "losses": 17,
+        "win_share": 0.485
+      },
+      "playoff": {
+        "games": 5,
+        "wins": 1,
+        "losses": 4,
+        "win_share": 0.2
+      },
+      "non_playoff_bowls": {
+        "games": 37,
+        "wins": 19,
+        "losses": 18,
+        "win_share": 0.514
+      }
+    },
+    "ACC": {
+      "all_postseason": {
+        "games": 53,
+        "wins": 23,
+        "losses": 30,
+        "win_share": 0.434
+      },
+      "vs_other_power_conferences": {
+        "games": 37,
+        "wins": 15,
+        "losses": 22,
+        "win_share": 0.405
+      },
+      "playoff": {
+        "games": 6,
+        "wins": 3,
+        "losses": 3,
+        "win_share": 0.5
+      },
+      "non_playoff_bowls": {
+        "games": 47,
+        "wins": 20,
+        "losses": 27,
+        "win_share": 0.426
+      }
+    },
+    "Pac-12": {
+      "all_postseason": {
+        "games": 21,
+        "wins": 8,
+        "losses": 13,
+        "win_share": 0.381
+      },
+      "vs_other_power_conferences": {
+        "games": 14,
+        "wins": 6,
+        "losses": 8,
+        "win_share": 0.429
+      },
+      "playoff": {
+        "games": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_share": 0.5
+      },
+      "non_playoff_bowls": {
+        "games": 19,
+        "wins": 7,
+        "losses": 12,
+        "win_share": 0.368
+      }
+    },
+    "Notre Dame": {
+      "all_postseason": {
+        "games": 7,
+        "wins": 5,
+        "losses": 2,
+        "win_share": 0.714
+      },
+      "vs_other_power_conferences": {
+        "games": 7,
+        "wins": 5,
+        "losses": 2,
+        "win_share": 0.714
+      },
+      "playoff": {
+        "games": 4,
+        "wins": 3,
+        "losses": 1,
+        "win_share": 0.75
+      },
+      "non_playoff_bowls": {
+        "games": 3,
+        "wins": 2,
+        "losses": 1,
+        "win_share": 0.667
+      }
+    },
+    "Other": {
+      "all_postseason": {
+        "games": 179,
+        "wins": 89,
+        "losses": 90,
+        "win_share": 0.497
+      },
+      "vs_other_power_conferences": {
+        "games": 41,
+        "wins": 20,
+        "losses": 21,
+        "win_share": 0.488
+      },
+      "playoff": {
+        "games": 4,
+        "wins": 0,
+        "losses": 4,
+        "win_share": 0.0
+      },
+      "non_playoff_bowls": {
+        "games": 175,
+        "wins": 89,
+        "losses": 86,
+        "win_share": 0.509
+      }
+    }
+  },
+  "all": {
+    "SEC": {
+      "all_postseason": {
+        "games": 133,
+        "wins": 71,
+        "losses": 62,
+        "win_share": 0.534
+      },
+      "vs_other_power_conferences": {
+        "games": 108,
+        "wins": 60,
+        "losses": 48,
+        "win_share": 0.556
+      },
+      "playoff": {
+        "games": 33,
+        "wins": 19,
+        "losses": 14,
+        "win_share": 0.576
+      },
+      "non_playoff_bowls": {
+        "games": 100,
+        "wins": 52,
+        "losses": 48,
+        "win_share": 0.52
+      }
+    },
+    "Big Ten": {
+      "all_postseason": {
+        "games": 119,
+        "wins": 69,
+        "losses": 50,
+        "win_share": 0.58
+      },
+      "vs_other_power_conferences": {
+        "games": 101,
+        "wins": 56,
+        "losses": 45,
+        "win_share": 0.554
+      },
+      "playoff": {
+        "games": 26,
+        "wins": 15,
+        "losses": 11,
+        "win_share": 0.577
+      },
+      "non_playoff_bowls": {
+        "games": 93,
+        "wins": 54,
+        "losses": 39,
+        "win_share": 0.581
+      }
+    },
+    "Big 12": {
+      "all_postseason": {
+        "games": 83,
+        "wins": 39,
+        "losses": 44,
+        "win_share": 0.47
+      },
+      "vs_other_power_conferences": {
+        "games": 69,
+        "wins": 33,
+        "losses": 36,
+        "win_share": 0.478
+      },
+      "playoff": {
+        "games": 9,
+        "wins": 1,
+        "losses": 8,
+        "win_share": 0.111
+      },
+      "non_playoff_bowls": {
+        "games": 74,
+        "wins": 38,
+        "losses": 36,
+        "win_share": 0.514
+      }
+    },
+    "ACC": {
+      "all_postseason": {
+        "games": 118,
+        "wins": 54,
+        "losses": 64,
+        "win_share": 0.458
+      },
+      "vs_other_power_conferences": {
+        "games": 84,
+        "wins": 35,
+        "losses": 49,
+        "win_share": 0.417
+      },
+      "playoff": {
+        "games": 16,
+        "wins": 9,
+        "losses": 7,
+        "win_share": 0.562
+      },
+      "non_playoff_bowls": {
+        "games": 102,
+        "wins": 45,
+        "losses": 57,
+        "win_share": 0.441
+      }
+    },
+    "Pac-12": {
+      "all_postseason": {
+        "games": 69,
+        "wins": 31,
+        "losses": 38,
+        "win_share": 0.449
+      },
+      "vs_other_power_conferences": {
+        "games": 52,
+        "wins": 23,
+        "losses": 29,
+        "win_share": 0.442
+      },
+      "playoff": {
+        "games": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_share": 0.4
+      },
+      "non_playoff_bowls": {
+        "games": 64,
+        "wins": 29,
+        "losses": 35,
+        "win_share": 0.453
+      }
+    },
+    "Notre Dame": {
+      "all_postseason": {
+        "games": 12,
+        "wins": 8,
+        "losses": 4,
+        "win_share": 0.667
+      },
+      "vs_other_power_conferences": {
+        "games": 12,
+        "wins": 8,
+        "losses": 4,
+        "win_share": 0.667
+      },
+      "playoff": {
+        "games": 5,
+        "wins": 3,
+        "losses": 2,
+        "win_share": 0.6
+      },
+      "non_playoff_bowls": {
+        "games": 7,
+        "wins": 5,
+        "losses": 2,
+        "win_share": 0.714
+      }
+    },
+    "Other": {
+      "all_postseason": {
+        "games": 374,
+        "wins": 182,
+        "losses": 192,
+        "win_share": 0.487
+      },
+      "vs_other_power_conferences": {
+        "games": 82,
+        "wins": 36,
+        "losses": 46,
+        "win_share": 0.439
+      },
+      "playoff": {
+        "games": 4,
+        "wins": 0,
+        "losses": 4,
+        "win_share": 0.0
+      },
+      "non_playoff_bowls": {
+        "games": 370,
+        "wins": 182,
+        "losses": 188,
+        "win_share": 0.492
+      }
+    }
+  },
+  "national_champions": {
+    "2014": {
+      "champion": "Ohio State",
+      "group": "Big Ten"
+    },
+    "2015": {
+      "champion": "Alabama",
+      "group": "SEC"
+    },
+    "2016": {
+      "champion": "Clemson",
+      "group": "ACC"
+    },
+    "2017": {
+      "champion": "Alabama",
+      "group": "SEC"
+    },
+    "2018": {
+      "champion": "Clemson",
+      "group": "ACC"
+    },
+    "2019": {
+      "champion": "LSU",
+      "group": "SEC"
+    },
+    "2021": {
+      "champion": "Georgia",
+      "group": "SEC"
+    },
+    "2022": {
+      "champion": "Georgia",
+      "group": "SEC"
+    },
+    "2023": {
+      "champion": "Michigan",
+      "group": "Big Ten"
+    },
+    "2024": {
+      "champion": "Ohio State",
+      "group": "Big Ten"
+    },
+    "2025": {
+      "champion": "Indiana",
+      "group": "Big Ten"
+    }
+  },
+  "SEC_by_season": {
+    "2014": {
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "win_share": 0.583,
+      "playoff": {
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_share": 0.0
+      }
+    },
+    "2015": {
+      "games": 11,
+      "wins": 9,
+      "losses": 2,
+      "win_share": 0.818,
+      "playoff": {
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "win_share": 1.0
+      }
+    },
+    "2016": {
+      "games": 13,
+      "wins": 6,
+      "losses": 7,
+      "win_share": 0.462,
+      "playoff": {
+        "games": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_share": 0.5
+      }
+    },
+    "2017": {
+      "games": 11,
+      "wins": 5,
+      "losses": 6,
+      "win_share": 0.455,
+      "playoff": {
+        "games": 4,
+        "wins": 3,
+        "losses": 1,
+        "win_share": 0.75
+      }
+    },
+    "2018": {
+      "games": 12,
+      "wins": 6,
+      "losses": 6,
+      "win_share": 0.5,
+      "playoff": {
+        "games": 2,
+        "wins": 1,
+        "losses": 1,
+        "win_share": 0.5
+      }
+    },
+    "2019": {
+      "games": 10,
+      "wins": 8,
+      "losses": 2,
+      "win_share": 0.8,
+      "playoff": {
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "win_share": 1.0
+      }
+    },
+    "2021": {
+      "games": 14,
+      "wins": 6,
+      "losses": 8,
+      "win_share": 0.429,
+      "playoff": {
+        "games": 4,
+        "wins": 3,
+        "losses": 1,
+        "win_share": 0.75
+      }
+    },
+    "2022": {
+      "games": 12,
+      "wins": 7,
+      "losses": 5,
+      "win_share": 0.583,
+      "playoff": {
+        "games": 2,
+        "wins": 2,
+        "losses": 0,
+        "win_share": 1.0
+      }
+    },
+    "2023": {
+      "games": 9,
+      "wins": 5,
+      "losses": 4,
+      "win_share": 0.556,
+      "playoff": {
+        "games": 1,
+        "wins": 0,
+        "losses": 1,
+        "win_share": 0.0
+      }
+    },
+    "2024": {
+      "games": 15,
+      "wins": 8,
+      "losses": 7,
+      "win_share": 0.533,
+      "playoff": {
+        "games": 5,
+        "wins": 2,
+        "losses": 3,
+        "win_share": 0.4
+      }
+    },
+    "2025": {
+      "games": 14,
+      "wins": 4,
+      "losses": 10,
+      "win_share": 0.286,
+      "playoff": {
+        "games": 8,
+        "wins": 3,
+        "losses": 5,
+        "win_share": 0.375
+      }
+    }
+  }
+}
