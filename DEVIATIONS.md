@@ -437,3 +437,27 @@ Two rounds of fact-checking (checkers per document, hostile readers, and skeptic
 ## 2026-11-19 — 2026 data re-frozen through the latest completed week (Kyle's request)
 
 Same procedure as the 2026-10-31 re-freeze: only the 2026 schedule and poll files are re-pulled (`python src/pull_data.py --season 2026`), and the manifest records the new commit and frozen poll week. No historical file changes, so every 2014–2025 result must rebuild unchanged; `run_all.py` is rerun in full to confirm that. Every 2026 output (strength of record, the over/underrated board, schedule strength, the 2026 figures and the 2026 numbers in `post_numbers.json`) is recomputed. The week-8 versions remain in git history. The frozen raw files now also contain whatever Playoff Committee rankings have been released for 2026; they are descriptive only, and T7 and T8 stay 2014–2025 as logged.
+
+## 2026-11-19 — T9 (cross-check against ESPN and SP+) and T10 (EPA as a third yardstick) (Kyle's request; logged before any data is pulled)
+
+**Why.** The strongest objection to every result here is "your rating is home-made". T9 checks our yardsticks against independent published ones. T10 adds a play-by-play efficiency yardstick and asks whether the same-résumé SEC premium (T8) survives when efficiency is held fixed too, i.e. whether SEC teams are ranked higher because they play better per snap than their record shows.
+
+**Already seen before this entry.** One probe of the CollegeFootballData.com endpoints on 2026-11-19: `/ratings/fpi` (ESPN FPI with ESPN's strength-of-record, schedule and FPI ranks) and `/ratings/sp` (SP+) return one end-of-season value per team (a week parameter is ignored); `/ppa/games` returns per-game offensive and defensive EPA per play for every FBS team. For 2026 the probe showed ESPN's strength of record has Miami #3 and ESPN's schedule rank 27th, and SP+ has Miami #3. No historical value has been looked at.
+
+**New raw data** (not committed; downloaded and checksummed like the polls, `src/pull_advanced.py`, listed in `data/MANIFEST.json`): `/ratings/fpi`, `/ratings/sp` and `/ppa/games` (regular season) for 2014–2025 and 2026. The 2026 EPA file is cut to weeks ≤ 11. The 2026 FPI and SP+ files are a snapshot of 2026-11-19 that the source will overwrite; they are marked as snapshots, `src/fetch_data.py` warns instead of failing if a later download no longer matches, and T9 then skips 2026.
+
+### T9 — our yardsticks against ESPN and SP+ (`src/external_check.py`; descriptive, a validity check, not a bias test)
+
+- **Pairs of measures.** Our end-of-regular-season strength of record vs ESPN's strength of record; our end-of-regular-season margin (performance) rating vs SP+. Timing caveat: ESPN's and SP+'s historical values are final, after bowls and the playoff; ours stop at the regular season. For 2026 both are as of the snapshot.
+- **Agreement.** Per season, Spearman rank correlation among FBS teams in both; mean over 2014–2025.
+- **Conference lean.** Per season, among teams in the external top 40, the mean of (our rank − external rank) by group; SEC lean minus the other power conferences' mean, and SEC lean minus ACC lean, tested across the 11 seasons with T5's statistics. Positive = our yardstick ranks SEC teams *worse* than the external one does.
+- **Reading.** If the 90% interval of the SEC-minus-other-power lean lies within ±2 ranks: "our yardstick treats the SEC as ESPN (or SP+) does". If the 95% interval is above zero with ≥ 9 of 11 seasons positive: "ours is harsher on the SEC"; below zero with ≤ 2 positive: "ours is kinder to the SEC". Otherwise inconclusive.
+- **2026 (descriptive):** ESPN strength-of-record and SP+ ranks for the AP top 25 beside ours.
+
+### T10 — EPA per play as a third results-only yardstick (`src/epa_test.py`)
+
+- **Rating.** After each schedule week, from that season's regular-season games so far only: for each game one row, net EPA per play (offense EPA per play minus defense EPA per play allowed) from the home team's side, or the FBS team's side against FCS opponents (FCS pooled as one team); least squares `net = r_home − r_away + h·home` with one zero-net pseudo-game per team against an average opponent (as for the margin rating). Games without EPA data are left out of this rating only. FBS teams are ranked by r.
+- **Primary: T8 with efficiency held fixed too (M_SEC_EPA).** T8's pairs (same losses, strength of record within 3 places, SEC team in the strength-of-record top 30) restricted to pairs whose EPA ranks are within 10 places. Outcome, statistics and reading are T8's (SEC NAME PREMIUM SHOWN / NO PREMIUM BEYOND ONE PLACE / SEC PENALTY SHOWN / INCONCLUSIVE). Also reported: the mean EPA-rank gap within pairs and the share of T8 pairs kept.
+- **Secondary (same reading):** (a) matching on EPA instead of strength of record: same losses and EPA rank within 5; (b) the placebo of the T8 post hoc check with EPA held fixed: each power conference as the focal group.
+- **Descriptive:** EPA top-25 slots per poll by group against AP top-25 slots, polls 6+, as in T5.
+- No further variants after results are seen; any later addition will be logged as post hoc.
