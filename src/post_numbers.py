@@ -318,6 +318,25 @@ def main():
         "leave_one_season_out_range": loo,
         "sec_team_seasons_in_pairs": int(t8p_pairs.groupby(["season", "team"]).ngroups),
     }
+    era = load("era_check.json")
+    n["era_before_and_since_nil"] = {
+        "source": "results/era_check.json (post hoc, descriptive; DEVIATIONS.md 2026-11-19)",
+        **{k: {kk: era[k][kk] for kk in ("early_2014_2019", "recent_2021_2025", "recent_minus_early", "ci95_welch")}
+           for k in ("field_SEC_strength_of_record_top25_per_poll", "field_SEC_vs_power_outsiders_win_share",
+                     "polls_SEC_AP_top25_per_poll", "polls_T5_AP_minus_SOR_SEC", "polls_T8_same_record_premium_SEC")},
+        "polls_T8_allowing_for_how_season_ended_SEC": {kk: era["polls_T8_allowing_for_how_season_ended"]["SEC"][kk]
+            for kk in ("early_2014_2019", "recent_2021_2025", "recent_minus_early", "ci95_welch")},
+        "field_SEC_vs_power_outsiders_games": era["field_SEC_vs_power_outsiders_games"],
+    }
+    ps = load("postseason_by_conference.json")
+    n["postseason_by_conference"] = {
+        "source": "results/postseason_by_conference.json (descriptive; no rating uses these games)",
+        **{e: ps[e] for e in ("2014-2019", "2021-2025")},
+        "national_champions": ps["national_champions"],
+        "SEC_2025": ps["SEC_by_season"]["2025"],
+    }
+    rw = load("ranked_wins_2026.json")
+    n["ranked_wins_2026"] = {"source": "results/ranked_wins_2026.json (descriptive)", **rw}
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
 

@@ -145,6 +145,34 @@ Three independent reviewers checked these results before publication. One rebuil
 - **Sample.** The 605 pairs come from 92 SEC team-seasons. Dropping any one season leaves +2.1 to +2.8.
 - **Many tests.** T8 was about the seventh design aimed at an SEC-specific effect, and the first to find one. Each was logged before it ran, but which became the headline was chosen after seeing the others. Its p-value (0.003) survives a rough correction for about 20 test families only borderline.
 
+### Before and since NIL, the postseason, and 2026's "ranked wins" (added 2026-11-19; descriptive)
+
+**Postseason records** ([`results/postseason_by_conference.json`](results/postseason_by_conference.json), [`chart`](results/figures/linkedin/09_postseason.png)). Bowl and playoff games against FBS opponents. They were pulled separately, because the frozen schedule files hold only the 2023–2025 postseasons. No rating in this study uses them.
+
+  | | 2014–2019 | 2021–2025 (since NIL) |
+  |---|---|---|
+  | SEC, all | 41–28 (59%) | 30–34 (47%) |
+  | SEC vs other power conferences | 36–23 (61%) | 24–25 (49%) |
+  | SEC in the playoff | 9–4 (69%) | 10–10 (50%) |
+  | Big Ten, all | 30–27 (53%) | 39–23 (63%) |
+  | Big Ten in the playoff | 2–3 (40%) | 13–8 (62%) |
+  | ACC, all | 31–34 (48%) | 23–30 (43%) |
+
+- **Champions:** SEC in 2015, 2017, 2019, 2021 and 2022; Big Ten in 2014, 2023, 2024 and 2025; ACC (Clemson) in 2016 and 2018.
+- **2025:** the SEC went 4–10 in the postseason.
+- **Caveat:** bowls carry opt-outs and motivation effects, so read this as one more signal, not a clean test.
+
+**Polls before and since NIL** ([`results/era_check.json`](results/era_check.json); 6 and 5 seasons, so none of these changes is statistically clear):
+- **Same-record premium:** +1.8 → **+3.4** places (+1.2 → +2.7 allowing for how the season ended).
+- **On the regular-season field, no decline:** 5.2 → 5.9 SEC teams per poll in the results top 25 (the SEC grew from 14 to 16 teams in 2024). Regular-season win share against power-conference outsiders went 44% → 60%, over only 30 and 25 games.
+- **Why the regular season can hide it:** SEC teams mostly play each other, so their results largely cancel within the conference. The postseason is where they meet everyone else.
+
+**2026 "ranked wins"** ([`results/ranked_wins_2026.csv`](results/ranked_wins_2026.csv), through week 11):
+- **Volume:** SEC teams have played 71 games against opponents ranked on game day (Big Ten 45, Big 12 41, ACC 28).
+- **Wins:** they won 31, and **13** of those wins came against teams now outside the strength-of-record top 25.
+- **Examples:** Texas A&M was AP #9 on game day and is now 79th by strength of record; Mississippi State (#16–24) is now 73rd; Missouri (#13–25) is now 31st.
+- **Not SEC-only:** all 5 of the ACC's ranked wins also came against teams now outside the results top 25. The SEC just has far more of them.
+
 ### The earlier tests
 
 **What holds up (supports Kyle):**

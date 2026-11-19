@@ -346,6 +346,43 @@ def external(n):
     save(fig, "08_vs_espn_spplus.png")
 
 
+def postseason(n):
+    ps, era = n["postseason_by_conference"], n["era_before_and_since_nil"]
+    groups = ["SEC", "Big Ten", "Big 12", "ACC"]
+    fig = frame("Since NIL, the SEC's postseason edge is gone. Its poll credit didn't shrink.",
+                "Bowl and playoff win share by conference, FBS opponents only: 2014–2019 against 2021–2025, the "
+                "seasons since NIL rules took effect. No rating in this study uses these games.")
+    ax = fig.add_axes([0.16, 0.25, 0.78, 0.44])
+    y = list(range(len(groups)))[::-1]
+    h = 0.34
+    for yy, g in zip(y, groups):
+        a, b = ps["2014-2019"][g]["all_postseason"], ps["2021-2025"][g]["all_postseason"]
+        ax.barh(yy + h / 2 + 0.02, a["win_share"] * 100, height=h, color=OTHER)
+        ax.barh(yy - h / 2 - 0.02, b["win_share"] * 100, height=h, color=HIGHLIGHT if g == "SEC" else SECOND if g == "Big Ten" else "#8fb6e6")
+        ax.text(a["win_share"] * 100 + 1, yy + h / 2 + 0.02, f"{a['win_share']:.0%}  ({a['wins']}–{a['losses']})",
+                va="center", fontsize=9, color=INK2)
+        ax.text(b["win_share"] * 100 + 1, yy - h / 2 - 0.02, f"{b['win_share']:.0%}  ({b['wins']}–{b['losses']})",
+                va="center", fontsize=9, color=INK)
+    ax.axvline(50, color=INK2, lw=1, ls=(0, (3, 3)), zorder=0)
+    ax.set_yticks(y)
+    ax.set_yticklabels(groups, fontsize=11)
+    ax.set_xlim(0, 88)
+    ax.set_xticks([0, 25, 50, 75])
+    ax.set_xticklabels(["0%", "25%", "50%", "75%"], fontsize=9)
+    ax.xaxis.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    fig.text(0.16, 0.705, "Top bar: 2014–2019   Bottom bar: 2021–2025", fontsize=8.5, color=INK2)
+    t8 = era["polls_T8_same_record_premium_SEC"]
+    ch = ps["national_champions"]
+    big10 = [s for s, c in ch.items() if c["group"] == "Big Ten" and int(s) >= 2021]
+    note(fig, f"Meanwhile the AP's same-record premium for SEC teams went from +{t8['early_2014_2019']:.1f} to "
+         f"+{t8['recent_2021_2025']:.1f} places (not statistically clear over so few seasons). Last three champions: "
+         f"Big Ten ({', '.join(big10)}). Bowls carry opt-outs; read as one more signal, not a clean test.")
+    save(fig, "09_postseason.png")
+
+
 def main():
     n = json.loads((RES / "post_numbers.json").read_text())
     miami(n)
@@ -356,6 +393,7 @@ def main():
     head_start(n)
     robustness(n)
     external(n)
+    postseason(n)
 
 
 if __name__ == "__main__":
