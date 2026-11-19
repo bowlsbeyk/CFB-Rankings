@@ -271,6 +271,37 @@ def main():
         "posthoc_sec_preseason_not_higher": pm(t8p["4_descriptive"]["sec_preseason_not_higher"]),
         "posthoc_by_stage": {k: pm(v) for k, v in t8p["4_descriptive"]["by_stage"].items()},
     }
+    sc = load("t8_start_check.json")
+    n["head_start_by_conference"] = {
+        "source": "results/t8_start_check.json (post hoc, descriptive; DEVIATIONS.md 2026-11-05)",
+        "unit": "AP places above a same-résumé match from another power conference, by preseason AP position",
+        **{G: {"share_started_ahead": r(sc[G]["share_started_higher"], 3),
+               **{k: pm(v) for k, v in sc[G]["three_way"].items()}} for G in ("SEC", "ACC", "Big Ten", "Big 12", "Pac-12")}}
+    t9 = load("t9_external.json")
+    n["external_cross_check_t9"] = {
+        "source": "results/t9_external.json (logged 2026-11-19 before data were pulled)",
+        **{k: {"spearman_mean": r(t9[k]["spearman_mean"], 3), "spearman_min": r(t9[k]["spearman_min"], 3),
+               "SEC_minus_other_power_lean": pm(t9[k]["SEC_minus_other_power_lean"]), "reading": t9[k]["reading"],
+               "SEC_minus_ACC_lean": pm(t9[k]["SEC_minus_ACC_lean"]),
+               "lean_by_group": {G: r(v) for G, v in t9[k]["lean_by_group_mean"].items()}}
+           for k in ("our_SOR_vs_ESPN_SOR", "our_margin_vs_SP+")},
+        "note": "lean = our rank minus external rank among the external top 40; positive = ours ranks the group worse",
+    }
+    t10 = load("t10_epa.json")
+    n["epa_yardstick_t10"] = {
+        "source": "results/t10_epa.json (logged 2026-11-19 before data were pulled)",
+        "M_SEC_EPA_held_fixed": {**pm(t10["primary_M_SEC_EPA"]), "reading": t10["primary_M_SEC_EPA"]["reading"],
+                                 "share_of_t8_pairs_kept": r(t10["primary_M_SEC_EPA"]["share_of_t8_pairs_kept"])},
+        "t8_pairs_mean_epa_gap_match_minus_sec": r(t10["t8_primary_reproduced"]["mean_epa_gap_match_minus_focal"]),
+        "match_on_EPA_instead": {**pm(t10["secondary_match_on_EPA_instead"]), "reading": t10["secondary_match_on_EPA_instead"]["reading"]},
+        "placebo_EPA_held_fixed": {G: {**pm(v), "reading": v["reading"]} for G, v in t10["secondary_placebo_EPA_held_fixed"].items()},
+        "AP_minus_EPA_top25_slots": {k: pm(v) for k, v in t10["descriptive_EPA_top25_vs_AP"].items()},
+    }
+    em = load("t8_espn_matched.json")
+    n["season_end_matched_on_espn_sor"] = {
+        "source": "results/t8_espn_matched.json (post hoc; DEVIATIONS.md 2026-11-19)",
+        "unit": "final AP poll places, focal minus same-losses match with ESPN final SOR within 3",
+        **{G: {**pm(em[G]), "reading": em[G]["reading"]} for G in ("SEC", "ACC", "Big Ten", "Big 12", "Pac-12")}}
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
 

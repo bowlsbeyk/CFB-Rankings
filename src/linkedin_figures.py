@@ -233,6 +233,109 @@ def same_resume(n):
     save(fig, "05_same_resume.png")
 
 
+def head_start(n):
+    h = n["head_start_by_conference"]
+    groups = ["SEC", "Pac-12", "Big Ten", "Big 12", "ACC"]
+    cols = [("started_higher", "Started ahead", HIGHLIGHT), ("started_level", "Started level", OTHER),
+            ("started_lower", "Started behind", SECOND)]
+    fig = frame("The preseason seat sticks, and the SEC holds more of them",
+                "AP places above a team from another power conference with the same losses and nearly the "
+                "same strength of record, split by who was ranked higher in the preseason poll. 2014–2025, 95% intervals.")
+    ax = fig.add_axes([0.16, 0.24, 0.78, 0.44])
+    y = list(range(len(groups)))[::-1]
+    off = {"started_higher": 0.22, "started_level": 0.0, "started_lower": -0.22}
+    for key, lab, col in cols:
+        for yy, g in zip(y, groups):
+            v = h[g][key]
+            ax.plot(v["ci95"], [yy + off[key]] * 2, color=col, lw=1.6, alpha=0.5)
+            ax.scatter([v["mean"]], [yy + off[key]], s=70, color=col, edgecolor=SURFACE, linewidth=1.5, zorder=3,
+                       label=lab if g == "SEC" else None)
+    for yy, g in zip(y, groups):
+        ax.text(9.6, yy, f"{h[g]['share_started_ahead']:.0%}", va="center", ha="right", fontsize=10, color=INK)
+    ax.text(9.6, len(groups) - 0.55, "how often\nit started\nahead", va="bottom", ha="right", fontsize=7.5, color=INK2)
+    ax.axvline(0, color=INK2, lw=1)
+    ax.set_yticks(y)
+    ax.set_yticklabels(groups, fontsize=11)
+    ax.set_xlim(-9, 10)
+    ax.xaxis.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    ax.legend(loc="lower left", frameon=False, fontsize=8.5, ncol=3, bbox_to_anchor=(0.0, 1.01))
+    note(fig, "Post hoc and descriptive. 'Started ahead' = ranked above its same-résumé match in the preseason AP "
+         "poll. SEC teams that start level gain +3.0; SEC teams that start behind nearly catch up (−0.5); "
+         "ACC teams that start behind stay 6.1 places down. Pac-12 2014–2023.")
+    save(fig, "06_head_start.png")
+
+
+def robustness(n):
+    t8, t10, em = (n["same_resume_different_conference_t8"], n["epa_yardstick_t10"],
+                   n["season_end_matched_on_espn_sor"])
+    rows = [("Main test (logged in advance)", t8["M_SEC"]),
+            ("Scoring margin also matched", t8["posthoc_margin_held_fixed"]),
+            ("Calibrated: all outside games", {"mean": t8["checks"]["SOR, T4 all-games calibration"], "ci95": None}),
+            ("Calibrated: power-conference games", {"mean": t8["checks"]["SOR, T4 power-games calibration"], "ci95": None}),
+            ("Playoff committee instead of AP", t8["M_CFP_committee"]),
+            ("Matched on EPA per play instead", t10["match_on_EPA_instead"]),
+            ("EPA per play also matched (logged)", t10["M_SEC_EPA_held_fixed"]),
+            ("Season's end, on ESPN's résumé rank", em["SEC"])]
+    fig = frame("How sturdy is the SEC's same-résumé premium?",
+                "AP places an SEC team sits above a team from another power conference with the same résumé, "
+                "under every check run. 2014–2025, 95% intervals where computed.")
+    ax = fig.add_axes([0.45, 0.26, 0.49, 0.46])
+    y = list(range(len(rows)))[::-1]
+    for yy, (lab, v) in zip(y, rows):
+        col = HIGHLIGHT if v.get("ci95") is None or v["ci95"][0] > 0 else OTHER
+        if v.get("ci95"):
+            ax.plot(v["ci95"], [yy, yy], color=col, lw=2, alpha=0.55)
+        ax.scatter([v["mean"]], [yy], s=110, color=col, edgecolor=SURFACE, linewidth=2, zorder=3)
+        ax.text(5.6, yy, f"{v['mean']:+.1f}", va="center", ha="right", fontsize=10, color=INK)
+    ax.axvline(0, color=INK2, lw=1)
+    ax.set_yticks(y)
+    ax.set_yticklabels([lab for lab, _ in rows], fontsize=8.5)
+    ax.set_xlim(-2.5, 5.8)
+    ax.xaxis.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    note(fig, "Blue: interval above zero (calibration checks report the estimate only). The premium holds in-season "
+         "under every check of our ratings; with per-play efficiency also matched it shrinks to +1.9 (8 of 11 seasons, "
+         "short of the pre-set 9). By season's end, measured on ESPN's résumé ranking, it is not detectable.")
+    save(fig, "07_premium_robustness.png")
+
+
+def external(n):
+    e = n["external_cross_check_t9"]
+    groups = ["SEC", "Big 12", "Big Ten", "Pac-12", "ACC"]
+    fig = frame("Our ratings agree with ESPN and SP+, but are tougher on the SEC",
+                "Average rank difference, ours minus theirs, for teams in the external top 40, 2014–2025. "
+                "Positive = our results-only ratings rank the conference's teams lower.")
+    ax = fig.add_axes([0.16, 0.25, 0.78, 0.46])
+    y = list(range(len(groups)))[::-1]
+    h = 0.34
+    a = [e["our_SOR_vs_ESPN_SOR"]["lean_by_group"][g] for g in groups]
+    b = [e["our_margin_vs_SP+"]["lean_by_group"][g] for g in groups]
+    ax.barh([v + h / 2 + 0.02 for v in y], a, height=h, color=HIGHLIGHT, label="Our strength of record vs ESPN's")
+    ax.barh([v - h / 2 - 0.02 for v in y], b, height=h, color=OTHER, label="Our margin rating vs SP+")
+    for yy, x1, x2 in zip(y, a, b):
+        ax.text(x1 + 0.15, yy + h / 2 + 0.02, f"{x1:+.1f}", va="center", fontsize=9.5, color=INK)
+        ax.text(x2 + 0.15, yy - h / 2 - 0.02, f"{x2:+.1f}", va="center", fontsize=9.5, color=INK2)
+    ax.axvline(0, color=INK2, lw=1)
+    ax.set_yticks(y)
+    ax.set_yticklabels(groups, fontsize=11)
+    ax.set_xlim(-1, 9.5)
+    ax.xaxis.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.spines["left"].set_visible(False)
+    ax.legend(loc="lower right", frameon=False, fontsize=8.5)
+    r1, r2 = e["our_SOR_vs_ESPN_SOR"]["spearman_mean"], e["our_margin_vs_SP+"]["spearman_mean"]
+    note(fig, f"Overall agreement is high (rank correlation {r1:.2f} with ESPN's strength of record, {r2:.2f} with SP+). "
+         "Theirs are final values after bowls; ours end with the regular season. Either ours undervalues SEC teams "
+         "or theirs credits them with something results alone do not show.")
+    save(fig, "08_vs_espn_spplus.png")
+
+
 def main():
     n = json.loads((RES / "post_numbers.json").read_text())
     miami(n)
@@ -240,6 +343,9 @@ def main():
     stages(n)
     schedules(n)
     same_resume(n)
+    head_start(n)
+    robustness(n)
+    external(n)
 
 
 if __name__ == "__main__":

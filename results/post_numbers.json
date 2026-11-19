@@ -1248,5 +1248,414 @@
         "pairs": 251
       }
     }
+  },
+  "head_start_by_conference": {
+    "source": "results/t8_start_check.json (post hoc, descriptive; DEVIATIONS.md 2026-11-05)",
+    "unit": "AP places above a same-r\u00e9sum\u00e9 match from another power conference, by preseason AP position",
+    "SEC": {
+      "share_started_ahead": 0.545,
+      "started_higher": {
+        "mean": 4.29,
+        "ci95": [
+          3.28,
+          5.3
+        ],
+        "seasons_positive": 11,
+        "seasons": 11,
+        "pairs": 330
+      },
+      "started_level": {
+        "mean": 3.05,
+        "ci95": [
+          0.86,
+          5.24
+        ],
+        "seasons_positive": 9,
+        "seasons": 11,
+        "pairs": 61
+      },
+      "started_lower": {
+        "mean": -0.51,
+        "ci95": [
+          -1.63,
+          0.61
+        ],
+        "seasons_positive": 3,
+        "seasons": 11,
+        "pairs": 214
+      }
+    },
+    "ACC": {
+      "share_started_ahead": 0.318,
+      "started_higher": {
+        "mean": 1.13,
+        "ci95": [
+          -0.38,
+          2.63
+        ],
+        "seasons_positive": 9,
+        "seasons": 11,
+        "pairs": 128
+      },
+      "started_level": {
+        "mean": -1.66,
+        "ci95": [
+          -3.36,
+          0.05
+        ],
+        "seasons_positive": 3,
+        "seasons": 11,
+        "pairs": 71
+      },
+      "started_lower": {
+        "mean": -6.07,
+        "ci95": [
+          -7.46,
+          -4.69
+        ],
+        "seasons_positive": 0,
+        "seasons": 11,
+        "pairs": 204
+      }
+    },
+    "Big Ten": {
+      "share_started_ahead": 0.471,
+      "started_higher": {
+        "mean": 2.97,
+        "ci95": [
+          1.49,
+          4.45
+        ],
+        "seasons_positive": 11,
+        "seasons": 11,
+        "pairs": 250
+      },
+      "started_level": {
+        "mean": -1.75,
+        "ci95": [
+          -3.82,
+          0.33
+        ],
+        "seasons_positive": 3,
+        "seasons": 11,
+        "pairs": 77
+      },
+      "started_lower": {
+        "mean": -4.12,
+        "ci95": [
+          -5.79,
+          -2.45
+        ],
+        "seasons_positive": 0,
+        "seasons": 11,
+        "pairs": 204
+      }
+    },
+    "Big 12": {
+      "share_started_ahead": 0.284,
+      "started_higher": {
+        "mean": 2.43,
+        "ci95": [
+          1.08,
+          3.77
+        ],
+        "seasons_positive": 9,
+        "seasons": 11,
+        "pairs": 112
+      },
+      "started_level": {
+        "mean": 0.49,
+        "ci95": [
+          -2.07,
+          3.04
+        ],
+        "seasons_positive": 6,
+        "seasons": 11,
+        "pairs": 62
+      },
+      "started_lower": {
+        "mean": -3.73,
+        "ci95": [
+          -5.35,
+          -2.11
+        ],
+        "seasons_positive": 2,
+        "seasons": 11,
+        "pairs": 221
+      }
+    },
+    "Pac-12": {
+      "share_started_ahead": 0.466,
+      "started_higher": {
+        "mean": 3.51,
+        "ci95": [
+          1.7,
+          5.33
+        ],
+        "seasons_positive": 8,
+        "seasons": 9,
+        "pairs": 152
+      },
+      "started_level": {
+        "mean": 0.15,
+        "ci95": [
+          -3.29,
+          3.59
+        ],
+        "seasons_positive": 5,
+        "seasons": 9,
+        "pairs": 44
+      },
+      "started_lower": {
+        "mean": -1.9,
+        "ci95": [
+          -3.29,
+          -0.51
+        ],
+        "seasons_positive": 1,
+        "seasons": 9,
+        "pairs": 130
+      }
+    }
+  },
+  "external_cross_check_t9": {
+    "source": "results/t9_external.json (logged 2026-11-19 before data were pulled)",
+    "our_SOR_vs_ESPN_SOR": {
+      "spearman_mean": 0.976,
+      "spearman_min": 0.964,
+      "SEC_minus_other_power_lean": {
+        "mean": 2.8,
+        "ci95": [
+          0.19,
+          5.42
+        ],
+        "seasons_positive": 9,
+        "seasons": 11
+      },
+      "reading": "OURS IS HARSHER ON THE SEC",
+      "SEC_minus_ACC_lean": {
+        "mean": 3.68,
+        "ci95": [
+          -0.02,
+          7.39
+        ],
+        "seasons_positive": 8,
+        "seasons": 11
+      },
+      "lean_by_group": {
+        "ACC": 0.64,
+        "Big 12": 3.28,
+        "Big Ten": 1.29,
+        "Notre Dame": 1.1,
+        "Other": -5.31,
+        "Pac-12": 1.03,
+        "SEC": 4.32
+      }
+    },
+    "our_margin_vs_SP+": {
+      "spearman_mean": 0.949,
+      "spearman_min": 0.925,
+      "SEC_minus_other_power_lean": {
+        "mean": 5.69,
+        "ci95": [
+          3.29,
+          8.09
+        ],
+        "seasons_positive": 11,
+        "seasons": 11
+      },
+      "reading": "OURS IS HARSHER ON THE SEC",
+      "SEC_minus_ACC_lean": {
+        "mean": 7.31,
+        "ci95": [
+          3.21,
+          11.41
+        ],
+        "seasons_positive": 10,
+        "seasons": 11
+      },
+      "lean_by_group": {
+        "ACC": 0.69,
+        "Big 12": 4.02,
+        "Big Ten": 2.53,
+        "Notre Dame": -1.41,
+        "Other": -4.29,
+        "Pac-12": 2.47,
+        "SEC": 8.0
+      }
+    },
+    "note": "lean = our rank minus external rank among the external top 40; positive = ours ranks the group worse"
+  },
+  "epa_yardstick_t10": {
+    "source": "results/t10_epa.json (logged 2026-11-19 before data were pulled)",
+    "M_SEC_EPA_held_fixed": {
+      "mean": 1.88,
+      "ci95": [
+        0.5,
+        3.25
+      ],
+      "seasons_positive": 8,
+      "seasons": 11,
+      "pairs": 431,
+      "reading": "INCONCLUSIVE",
+      "share_of_t8_pairs_kept": 0.71
+    },
+    "t8_pairs_mean_epa_gap_match_minus_sec": 4.42,
+    "match_on_EPA_instead": {
+      "mean": 2.87,
+      "ci95": [
+        1.33,
+        4.42
+      ],
+      "seasons_positive": 11,
+      "seasons": 11,
+      "pairs": 568,
+      "reading": "SEC NAME PREMIUM SHOWN"
+    },
+    "placebo_EPA_held_fixed": {
+      "SEC": {
+        "mean": 1.88,
+        "ci95": [
+          0.5,
+          3.25
+        ],
+        "seasons_positive": 8,
+        "seasons": 11,
+        "pairs": 431,
+        "reading": "INCONCLUSIVE"
+      },
+      "ACC": {
+        "mean": -2.15,
+        "ci95": [
+          -3.59,
+          -0.7
+        ],
+        "seasons_positive": 2,
+        "seasons": 11,
+        "pairs": 267,
+        "reading": "SEC PENALTY SHOWN"
+      },
+      "Big Ten": {
+        "mean": 0.43,
+        "ci95": [
+          -0.74,
+          1.6
+        ],
+        "seasons_positive": 6,
+        "seasons": 11,
+        "pairs": 374,
+        "reading": "INCONCLUSIVE"
+      },
+      "Big 12": {
+        "mean": -1.14,
+        "ci95": [
+          -2.9,
+          0.62
+        ],
+        "seasons_positive": 3,
+        "seasons": 11,
+        "pairs": 284,
+        "reading": "INCONCLUSIVE"
+      },
+      "Pac-12": {
+        "mean": 1.62,
+        "ci95": [
+          -0.82,
+          4.05
+        ],
+        "seasons_positive": 7,
+        "seasons": 9,
+        "pairs": 205,
+        "reading": "INCONCLUSIVE"
+      }
+    },
+    "AP_minus_EPA_top25_slots": {
+      "E_SEC": {
+        "mean": -0.45,
+        "ci95": [
+          -0.94,
+          0.04
+        ],
+        "seasons_positive": 5,
+        "seasons": 11
+      },
+      "D_PWR": {
+        "mean": -0.53,
+        "ci95": [
+          -1.17,
+          0.11
+        ],
+        "seasons_positive": 3,
+        "seasons": 11
+      },
+      "D_ACC": {
+        "mean": -0.57,
+        "ci95": [
+          -1.5,
+          0.37
+        ],
+        "seasons_positive": 3,
+        "seasons": 11
+      }
+    }
+  },
+  "season_end_matched_on_espn_sor": {
+    "source": "results/t8_espn_matched.json (post hoc; DEVIATIONS.md 2026-11-19)",
+    "unit": "final AP poll places, focal minus same-losses match with ESPN final SOR within 3",
+    "SEC": {
+      "mean": 0.22,
+      "ci95": [
+        -1.69,
+        2.14
+      ],
+      "seasons_positive": 6,
+      "seasons": 11,
+      "pairs": 57,
+      "reading": "INCONCLUSIVE"
+    },
+    "ACC": {
+      "mean": 1.9,
+      "ci95": [
+        -0.56,
+        4.36
+      ],
+      "seasons_positive": 7,
+      "seasons": 11,
+      "pairs": 35,
+      "reading": "INCONCLUSIVE"
+    },
+    "Big Ten": {
+      "mean": -0.57,
+      "ci95": [
+        -1.9,
+        0.77
+      ],
+      "seasons_positive": 4,
+      "seasons": 11,
+      "pairs": 42,
+      "reading": "INCONCLUSIVE"
+    },
+    "Big 12": {
+      "mean": -0.03,
+      "ci95": [
+        -1.85,
+        1.79
+      ],
+      "seasons_positive": 5,
+      "seasons": 11,
+      "pairs": 35,
+      "reading": "INCONCLUSIVE"
+    },
+    "Pac-12": {
+      "mean": 0.38,
+      "ci95": [
+        -1.17,
+        1.92
+      ],
+      "seasons_positive": 6,
+      "seasons": 9,
+      "pairs": 34,
+      "reading": "INCONCLUSIVE"
+    }
   }
 }
