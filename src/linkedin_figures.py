@@ -1,4 +1,5 @@
-"""Four square images for the LinkedIn post, drawn from results/post_numbers.json.
+"""Eight square images for the LinkedIn post (01_miami_schedule.png ... 08_vs_espn_spplus.png), drawn from
+results/post_numbers.json.
 
 Writes results/figures/linkedin/01_miami_schedule.png ... 04_schedule_boost.png (1200 x 1200).
 Every value is read from a result file; nothing is computed here.
@@ -35,14 +36,14 @@ plt.rcParams.update({
 })
 
 
-def frame(title, subtitle):
+def frame(title, subtitle, foot=None):
     fig = plt.figure(figsize=(6, 6), dpi=200)
     t = textwrap.fill(title, 40)
     st = textwrap.fill(subtitle, 76)
     fig.text(0.06, 0.95, t, fontsize=16, fontweight="bold", color=INK, va="top", linespacing=1.15)
     y = 0.95 - 0.052 * (t.count("\n") + 1) - 0.012
     fig.text(0.06, y, st, fontsize=9.5, color=INK2, va="top", linespacing=1.3)
-    fig.text(0.06, 0.03, textwrap.fill(FOOT, 110), fontsize=6.5, color=MUTED, va="bottom")
+    fig.text(0.06, 0.03, textwrap.fill(foot or FOOT, 110), fontsize=6.5, color=MUTED, va="bottom")
     return fig
 
 
@@ -75,7 +76,9 @@ def miami(n):
     lo, hi = m["sor_rank_range_across_11_settings"]
     fig = frame(f"Miami on performance alone: top {max(ranks)} on every measure",
                 f"2026 after week {m['after_week']}. Every ranking uses only this season's scores and schedules "
-                "(no polls, no preseason, no names) and adjusts for who each team has played.")
+                "(no polls, no preseason, no names) and adjusts for who each team has played.",
+                foot=f"Data: CollegeFootballData.com, cfbfastR. 2026 through week {m['after_week']}. "
+                     "Code and every number: github.com/bowlsbeyk/CFB-Rankings")
     rows = [
         ("Strength of record", f"How hard would {m['record']} against this exact schedule be?", ranks[0],
          f"Between #{lo} and #{hi} across all 11 versions; #1: {leader('sor_rank')}"),
@@ -195,9 +198,9 @@ def schedules(n):
     ax.tick_params(axis="y", length=0)
     ax.spines["left"].set_visible(False)
     lo, hi = c["t4_all"]["SEC_game_day_schedule_places"]["mean"], c["t4_power"]["SEC_game_day_schedule_places"]["mean"]
-    note(fig, f"*Pac-12 2014–2023. The SEC's boost holds all season and stays positive when the rating is "
-             f"recalibrated ({lo:+.1f} to {hi:+.1f}); whether it beats the ACC's depends on that calibration.",
-             )
+    note(fig, f"*Pac-12 2014–2023. The SEC's boost holds all season and keeps its sign when the rating is "
+             f"recalibrated ({lo:+.1f}, not statistically clear, to {hi:+.1f}); whether it beats the ACC's depends on that "
+             "calibration.")
     save(fig, "04_schedule_boost.png")
 
 
@@ -206,7 +209,7 @@ def same_resume(n):
     pl = t["posthoc_placebo_by_focal_conference"]
     rows = [("SEC", pl["SEC"]), ("Pac-12*", pl["Pac-12"]), ("Big Ten", pl["Big Ten"]),
             ("Big 12", pl["Big 12"]), ("ACC", pl["ACC"])]
-    fig = frame("Same résumé, different conference: the SEC team is ranked higher",
+    fig = frame("Same record so far, different conference: who gets ranked higher",
                 "AP poll places a team sits above a team from another power conference with the same number "
                 "of losses and nearly the same strength of record. Polls 6+, 2014–2025, 95% intervals.")
     ax = fig.add_axes([0.16, 0.27, 0.78, 0.44])
@@ -227,9 +230,11 @@ def same_resume(n):
     ax.spines["left"].set_visible(False)
     m = t["posthoc_margin_held_fixed"]["mean"]
     hi, lo = t["posthoc_sec_preseason_ranked_higher"]["mean"], t["posthoc_sec_preseason_not_higher"]["mean"]
-    note(fig, f"*Pac-12 2014–2023. SEC premium holds with scoring margin matched too (+{m:.1f}) and under both "
-         f"rating calibrations. It comes from the preseason poll: +{hi:.1f} when the SEC team started ranked "
-         f"higher, +{lo:.1f} when it did not. Committee rankings: +{t['M_CFP_committee']['mean']:.1f}.")
+    v = n["verification_checks_t8"]
+    note(fig, f"*Pac-12 2014–2023. Main test logged in advance; the other conferences' rows are a post hoc placebo. "
+         f"With scoring margin matched too: +{m:.1f}. Part is voters anticipating real quality: allowing for how the "
+         f"season ended, SEC +{v['SEC']['allowing_for_how_season_ended']['mean']:.1f}, ACC "
+         f"{v['ACC']['allowing_for_how_season_ended']['mean']:.1f}. Committee rankings: +{t['M_CFP_committee']['mean']:.1f}.")
     save(fig, "05_same_resume.png")
 
 
@@ -238,7 +243,7 @@ def head_start(n):
     groups = ["SEC", "Pac-12", "Big Ten", "Big 12", "ACC"]
     cols = [("started_higher", "Started ahead", HIGHLIGHT), ("started_level", "Started level", OTHER),
             ("started_lower", "Started behind", SECOND)]
-    fig = frame("The preseason seat sticks, and the SEC holds more of them",
+    fig = frame("Preseason head starts stick, and the SEC gets the most of them",
                 "AP places above a team from another power conference with the same losses and nearly the "
                 "same strength of record, split by who was ranked higher in the preseason poll. 2014–2025, 95% intervals.")
     ax = fig.add_axes([0.16, 0.24, 0.78, 0.44])
@@ -262,9 +267,11 @@ def head_start(n):
     ax.tick_params(axis="y", length=0)
     ax.spines["left"].set_visible(False)
     ax.legend(loc="lower left", frameon=False, fontsize=8.5, ncol=3, bbox_to_anchor=(0.0, 1.01))
-    note(fig, "Post hoc and descriptive. 'Started ahead' = ranked above its same-résumé match in the preseason AP "
-         "poll. SEC teams that start level gain +3.0; SEC teams that start behind nearly catch up (−0.5); "
-         "ACC teams that start behind stay 6.1 places down. Pac-12 2014–2023.")
+    v = n["verification_checks_t8"]
+    note(fig, "Post hoc and descriptive; small groups, no test of differences. Preseason calls were largely borne out "
+         "on the field, so a head start is partly earned. Holding the preseason gap fixed, the SEC still sits "
+         f"+{v['SEC']['preseason_gap_held_fixed']['mean']:.1f} places higher and the ACC "
+         f"{v['ACC']['preseason_gap_held_fixed']['mean']:.1f}. Pac-12 2014–2023.")
     save(fig, "06_head_start.png")
 
 
@@ -272,20 +279,23 @@ def robustness(n):
     t8, t10, em = (n["same_resume_different_conference_t8"], n["epa_yardstick_t10"],
                    n["season_end_matched_on_espn_sor"])
     rows = [("Main test (logged in advance)", t8["M_SEC"]),
-            ("Scoring margin also matched", t8["posthoc_margin_held_fixed"]),
+            ("Scoring margin also matched (post hoc)", t8["posthoc_margin_held_fixed"]),
             ("Calibrated: all outside games", {"mean": t8["checks"]["SOR, T4 all-games calibration"], "ci95": None}),
             ("Calibrated: power-conference games", {"mean": t8["checks"]["SOR, T4 power-games calibration"], "ci95": None}),
             ("Playoff committee instead of AP", t8["M_CFP_committee"]),
             ("Matched on EPA per play instead", t10["match_on_EPA_instead"]),
             ("EPA per play also matched (logged)", t10["M_SEC_EPA_held_fixed"]),
-            ("Season's end, on ESPN's résumé rank", em["SEC"])]
-    fig = frame("How sturdy is the SEC's same-résumé premium?",
-                "AP places an SEC team sits above a team from another power conference with the same résumé, "
-                "under every check run. 2014–2025, 95% intervals where computed.")
-    ax = fig.add_axes([0.45, 0.26, 0.49, 0.46])
+            ("Allowing for how the season ended (post hoc)", n["verification_checks_t8"]["SEC"]["allowing_for_how_season_ended"]),
+            ("Preseason gap held fixed (post hoc)", n["verification_checks_t8"]["SEC"]["preseason_gap_held_fixed"]),
+            ("Last regular-season poll, ours (post hoc)", n["verification_checks_t8"]["SEC"]["last_regular_season_week_our_yardstick"]),
+            ("Final poll, on ESPN's résumé rank (post hoc)", em["SEC"])]
+    fig = frame("How sturdy is the SEC premium?",
+                "AP places an SEC team sits above a team from another power conference with the same record so far, "
+                "under the main checks. 2014–2025, 95% intervals where computed.")
+    ax = fig.add_axes([0.47, 0.25, 0.47, 0.49])
     y = list(range(len(rows)))[::-1]
     for yy, (lab, v) in zip(y, rows):
-        col = HIGHLIGHT if v.get("ci95") is None or v["ci95"][0] > 0 else OTHER
+        col = HIGHLIGHT if (v.get("ci95") is None or v["ci95"][0] > 0) and v.get("reading") != "INCONCLUSIVE" else OTHER
         if v.get("ci95"):
             ax.plot(v["ci95"], [yy, yy], color=col, lw=2, alpha=0.55)
         ax.scatter([v["mean"]], [yy], s=110, color=col, edgecolor=SURFACE, linewidth=2, zorder=3)
@@ -298,9 +308,9 @@ def robustness(n):
     ax.set_axisbelow(True)
     ax.tick_params(axis="y", length=0)
     ax.spines["left"].set_visible(False)
-    note(fig, "Blue: interval above zero (calibration checks report the estimate only). The premium holds in-season "
-         "under every check of our ratings; with per-play efficiency also matched it shrinks to +1.9 (8 of 11 seasons, "
-         "short of the pre-set 9). By season's end, measured on ESPN's résumé ranking, it is not detectable.")
+    note(fig, "Blue: interval above zero (calibrations report the estimate only). In-season it stays near +2 under "
+         "every check; with EPA also matched it is +1.9 but positive in only 8 of 11 seasons (9 pre-set): "
+         "inconclusive. In the last polls of the season there are too few pairs to tell, on ESPN's yardstick or ours.")
     save(fig, "07_premium_robustness.png")
 
 

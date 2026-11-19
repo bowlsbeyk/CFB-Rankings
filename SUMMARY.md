@@ -39,9 +39,9 @@ After week 11 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`]
 
 One season and eleven weeks of games: this part is descriptive, not a test.
 
-## Hypothesis 2: rankings make SEC schedules look hard. **Supported in-season where teams are placed; partly explained by efficiency; not visible at season's end on ESPN's yardstick.**
+## Hypothesis 2: rankings make SEC schedules look hard. **Partly supported: during the season, SEC teams are ranked about two places above teams with the same record so far, and ACC teams about one and a half to two and a half below. Part of the gap is voters anticipating real quality.**
 
-### The direct test: same résumé, different conference (T8, added 2026-11-05)
+### The direct test: same record so far, different conference (T8, added 2026-11-05)
 
 It was logged, and its code committed, before it ran ([`results/t8_matched.json`](results/t8_matched.json)).
 
@@ -89,9 +89,9 @@ Each same-résumé pair is split by which team was ranked higher in the **presea
   | Big 12 | 28% | +2.4 (CI +1.1 to +3.8) | +0.5 (CI -2.1 to +3.0) | -3.7 (CI -5.4 to -2.1) |
   | ACC | 32% | +1.1 (CI -0.4 to +2.6) | -1.7 (CI -3.4 to +0.0) | -6.1 (CI -7.5 to -4.7) |
 
-- **Preseason head starts stick.** In every conference except the ACC (+1.1, CI −0.4 to +2.6), teams that started ahead of their same-résumé match stay clearly ahead in-season; outside the SEC, teams that started behind stay clearly behind. Much of this split simply shows that preseason rank persists for everyone.
+- **Preseason head starts stick (but see the review below: they were largely borne out).** In every conference except the ACC (+1.1, CI −0.4 to +2.6), teams that started ahead of their same-résumé match stay clearly ahead in-season; outside the SEC, teams that started behind stay clearly behind. Much of this split simply shows that preseason rank persists for everyone.
 - **The SEC starts ahead most often** (55% of its pairs, against 32% for the ACC and 28% for the Big 12).
-- **The SEC keeps it best.** It is the only conference with a clear gain from a level start (+3.0; Big 12 +0.5 and Pac-12 +0.1 are not clear; only 61 SEC pairs), and its teams that start behind nearly catch up. ACC teams that start behind stay about 6 places down.
+- **The SEC also does well from a level or a behind start** (+3.0 level, the only clear gain; −0.5 behind), but these are small groups (61 level SEC pairs, almost all both unranked in the preseason) with no test of the differences. The continuous adjustment below is the better guide: the SEC sits higher at the same head start rather than keeping it better. ACC teams that start behind stay about 6 places down.
 - Added after the T8 result was seen; the split was refined once more after a first look. Both changes were logged before each run.
 
 ### Independent yardsticks (T9 and T10, logged 2026-11-19 before the historical data were pulled; one probe had shown 2026 values)
@@ -109,13 +109,41 @@ Each same-résumé pair is split by which team was ranked higher in the **presea
 - **The ACC penalty survives with EPA held fixed:** -2.1 (CI -3.6 to -0.7).
 - **Counts:** by EPA, the SEC has slightly *more* top-25 teams than the AP lists (−0.45 per poll, CI −0.94 to +0.04, not clear; the other power conferences show the same, −0.53).
 
-**At season's end, on ESPN's yardstick (post hoc; [`results/t8_espn_matched.json`](results/t8_espn_matched.json)).** In the final AP poll after the bowls, an SEC team is ranked +0.2 (CI -1.7 to +2.1) places above a team with the same losses and nearly the same ESPN strength of record. No conference shows a clear premium or penalty (ACC +1.9 (CI -0.6 to +4.4)). One poll a season makes this test weak (57 SEC pairs). It can't separate the change of yardstick from the season-long fade.
+**At season's end, on ESPN's yardstick (post hoc; [`results/t8_espn_matched.json`](results/t8_espn_matched.json)).** In the final AP poll after the bowls, an SEC team is ranked +0.2 (CI -1.7 to +2.1) places above a team with the same losses and nearly the same ESPN strength of record. No conference shows a clear premium or penalty (ACC +1.9 (CI -0.6 to +4.4)). One poll a season makes this test weak (57 SEC pairs). On our own yardstick the last regular-season poll gives a similar +0.8 (see below), so this reflects timing and sample size, not ESPN.
 
 **Putting it together** ([`chart`](results/figures/linkedin/07_premium_robustness.png)):
-- During the season, the polls place SEC teams about two to two and a half places above equal résumés from other power conferences, and ACC teams about two to three below. The SEC premium is clear under every check of our record- and margin-based ratings; with per-play efficiency (EPA) also matched it is +1.9 and inconclusive under the pre-set rule.
-- Part of the SEC premium may be earned. SEC teams with the same record play somewhat better per snap, and ESPN's and SP+'s rankings rate SEC teams higher than ours do.
+- During the season, the polls place SEC teams about two to two and a half places above teams from other power conferences with the same record so far, and ACC teams about one and a half to two and a half below. The SEC premium is clear under every check of our record- and margin-based ratings; with per-play efficiency (EPA) also matched it is +1.9 and inconclusive under the pre-set rule.
+- Part of the SEC premium may be earned. SEC teams with the same record rate better per snap, go on to finish their seasons ahead of their matches, and are rated higher by ESPN and SP+ than by our ratings.
 - The ACC penalty (a post hoc placebo) also shows with EPA held fixed (−2.1, CI −3.6 to −0.7); it was not run under the other checks.
-- By season's end, judged on ESPN's résumé ranking, neither shows.
+- In the last polls of the season there are too few pairs to tell, on ESPN's yardstick or ours.
+
+### What survives independent review (2026-11-19; post hoc, [`results/t8_verification.json`](results/t8_verification.json))
+
+Three independent reviewers checked these results before publication. One rebuilt T8 from the raw files with its own code and matched every number. The other two fact-checked every claim and attacked the method. Their points, each reproduced in the repository:
+
+- **Part of the gap is voters anticipating real quality.** The SEC teams in these pairs went on to finish the regular season 2.0 strength-of-record places ahead of their matches on average, and the ACC teams 3.6 places behind. Allowing for that, the current résumé gap and the margin gap:
+  - **SEC:** +1.9 (CI +0.9 to +2.9; 10 of 11 seasons).
+  - **ACC:** -1.5 (CI -2.9 to -0.1; 2 of 11 seasons).
+  - **Big Ten:** -0.9 (CI -1.6 to -0.1; 3 of 11 seasons). Big Ten teams also tend to finish ahead of their matches, but get no extra credit for it.
+  - This uses hindsight, so read it as a bound on how much could be forecasting, not as a test.
+- **The preseason poll explains some, not most.** Holding the preseason AP gap fixed (unranked = 26):
+  - **SEC:** +1.8 (CI +1.1 to +2.5; 10 of 11 seasons).
+  - **ACC:** -1.7 (CI -2.9 to -0.4; 1 of 11 seasons).
+  - Each preseason place a team led its match by is worth about a quarter to a third of a place in-season, for every conference (SEC 0.25, the smallest). So the SEC doesn't "keep its head start better"; it sits higher at the same head start.
+  - Preseason calls were largely borne out on the field, so a head start is partly earned.
+- **It differs by opponent.** Split by the match's conference:
+
+  | SEC against | Places | Seasons positive |
+  |---|---|---|
+  | ACC | +3.6 (CI +2.2 to +5.1) | 11 of 11 |
+  | Big Ten | +3.3 (CI +1.7 to +4.9) | 10 of 11 |
+  | Big 12 | +2.0 (CI -0.9 to +5.0) | 8 of 11 |
+  | Pac-12 | -0.1 (CI -1.8 to +1.6) | 4 of 9 |
+
+- **Conference or brand?** In the reviewer's breakdown, the premium also follows big programs outside the SEC (Ohio State, Oregon) and skips some SEC teams (Kentucky, Missouri). These data can't separate the SEC name from brand programs, which the SEC has the most of.
+- **Season's end.** In the last regular-season poll, on our own yardstick, the SEC premium is +0.8 (CI -0.9 to +2.4; 7 of 11 seasons), about the same as on ESPN's (+0.2). With so few pairs, neither can tell whether it is gone. That is a matter of timing and sample size, not of ESPN versus us.
+- **Sample.** The 605 pairs come from 92 SEC team-seasons. Dropping any one season leaves +2.1 to +2.8.
+- **Many tests.** T8 was about the seventh design aimed at an SEC-specific effect, and the first to find one. Each was logged before it ran, but which became the headline was chosen after seeing the others. Its p-value (0.003) survives a rough correction for about 20 test families only borderline.
 
 ### The earlier tests
 
@@ -194,7 +222,7 @@ Each same-résumé pair is split by which team was ranked higher in the **presea
 
 ## Bottom line
 
-- **Same résumé, the SEC team is ranked higher during the season.** About 2.5 places above a non-SEC power-conference team with the same losses and strength of record, and 3.3 above an ACC team. That holds with scoring margin matched, under both calibrations, and in the committee's rankings. The ACC is the only conference with a penalty. The premium rides on the preseason poll: everyone keeps a head start, and the SEC gets more head starts and keeps them better. Part may be earned: with per-play efficiency also matched it shrinks to +1.9 (inconclusive under the pre-set reading rule: positive in 8 of 11 seasons, 9 required), and ESPN's and SP+'s rankings rate SEC teams higher than ours. By season's end, on ESPN's résumé ranking, it is not detectable.
+- **Same record so far, the SEC team is ranked higher during the season.** About 2.5 places above a team from another power conference with the same losses and strength of record so far, largest against ACC (+3.6) and Big Ten (+3.3) teams, about none against Pac-12 teams. Part of that is voters anticipating real quality, since those SEC teams tend to finish their seasons ahead of their matches. Allowing for how the season ended, about **+1.9** remains; holding the preseason gap fixed, **+1.8**. ACC teams sit about 1.5 to 2.7 places below. The gap shrinks through the season, and in the last polls there are too few pairs to tell. ESPN's and SP+'s rankings rate SEC teams higher than ours, so some of the remaining gap may be our yardstick.
 - **Miami's résumé is backed by its results.** After week 11 it is #3 by strength of record and top 5 in every setting. "Played nobody" is false: by results its schedule is 22nd toughest of 138, while game-day rankings put it 59th.
 - **Game-day "ranked" opponents oversell SEC schedules, all season long.**
   - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating (+1.6, not clear, or +7.7).

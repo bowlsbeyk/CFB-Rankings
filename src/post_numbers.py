@@ -302,6 +302,22 @@ def main():
         "source": "results/t8_espn_matched.json (post hoc; DEVIATIONS.md 2026-11-19)",
         "unit": "final AP poll places, focal minus same-losses match with ESPN final SOR within 3",
         **{G: {**pm(em[G]), "reading": em[G]["reading"]} for G in ("SEC", "ACC", "Big Ten", "Big 12", "Pac-12")}}
+    vc = load("t8_verification.json")
+    t8p_pairs = pd.read_csv(RES / "t8_pairs.csv")
+    by_s = t8p_pairs.groupby("season")["diff"].mean()
+    loo = [r(min(by_s.drop(x).mean() for x in by_s.index)), r(max(by_s.drop(x).mean() for x in by_s.index))]
+    n["verification_checks_t8"] = {
+        "source": "results/t8_verification.json (post hoc, prompted by independent review; DEVIATIONS.md 2026-11-19)",
+        **{G: {"allowing_for_how_season_ended": pm(vc[G]["1_allowing_for_how_season_ended"]),
+               "preseason_gap_held_fixed": pm(vc[G]["2_preseason_gap_held_fixed"]),
+               "preseason_slope_per_place": r(vc[G]["2_preseason_gap_held_fixed"]["pooled_slope_per_preseason_place"]),
+               "last_regular_season_week_our_yardstick": pm(vc[G]["3_last_regular_season_week_only"]),
+               "mean_final_sor_gap_match_minus_focal": r(vc[G]["mean_final_sor_gap_match_minus_focal"])}
+           for G in ("SEC", "ACC", "Big Ten", "Big 12", "Pac-12")},
+        "SEC_by_match_conference": {m: pm(v) for m, v in vc["4_SEC_by_match_conference"].items()},
+        "leave_one_season_out_range": loo,
+        "sec_team_seasons_in_pairs": int(t8p_pairs.groupby(["season", "team"]).ngroups),
+    }
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
 
