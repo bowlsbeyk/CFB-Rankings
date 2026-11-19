@@ -1336,58 +1336,58 @@
     }
   },
   "2026": {
-    "week": 8,
-    "ap_poll": 9,
-    "E_SEC": 1.0,
-    "E_ACC": 0.0,
-    "D_ACC": 1.0,
+    "week": 11,
+    "ap_poll": 12,
+    "E_SEC": -1.0,
+    "E_ACC": 1.0,
+    "D_ACC": -2.0,
     "rank_among_historical_same_poll (1 = highest, out of n+1)": {
-      "E_SEC": 4,
-      "E_ACC": 3,
-      "D_ACC": 5,
+      "E_SEC": 10,
+      "E_ACC": 2,
+      "D_ACC": 11,
       "n_historical": 11
     },
     "counts": {
       "SEC": {
-        "ap_slots": 9.0,
+        "ap_slots": 7.0,
         "m_slots": 8.0,
-        "ap_pts": 118.0,
-        "m_pts": 85.0,
+        "ap_pts": 92.0,
+        "m_pts": 95.0,
         "members": 16
       },
       "ACC": {
         "ap_slots": 3.0,
-        "m_slots": 3.0,
-        "ap_pts": 44.0,
-        "m_pts": 46.0,
+        "m_slots": 2.0,
+        "ap_pts": 42.0,
+        "m_pts": 41.0,
         "members": 17
       },
       "Big Ten": {
-        "ap_slots": 5.0,
-        "m_slots": 5.0,
-        "ap_pts": 71.5,
-        "m_pts": 77.0,
+        "ap_slots": 6.0,
+        "m_slots": 6.0,
+        "ap_pts": 85.0,
+        "m_pts": 79.0,
         "members": 18
       },
       "Big 12": {
-        "ap_slots": 6.0,
-        "m_slots": 5.0,
-        "ap_pts": 65.0,
-        "m_pts": 72.0,
+        "ap_slots": 5.0,
+        "m_slots": 4.0,
+        "ap_pts": 66.0,
+        "m_pts": 59.0,
         "members": 16
       },
       "Notre Dame": {
         "ap_slots": 1.0,
         "m_slots": 1.0,
-        "ap_pts": 21.0,
-        "m_pts": 18.0,
+        "ap_pts": 23.0,
+        "m_pts": 21.0,
         "members": 1
       },
       "Other": {
-        "ap_slots": 1.0,
-        "m_slots": 3.0,
-        "ap_pts": 5.5,
-        "m_pts": 27.0,
+        "ap_slots": 3.0,
+        "m_slots": 4.0,
+        "ap_pts": 17.0,
+        "m_pts": 30.0,
         "members": 70
       }
     }
