@@ -39,15 +39,24 @@ def main():
     pd.DataFrame(rows).to_csv(OUT / "head_start.csv", index=False)
 
     rob = [row("Main test (logged in advance)", t8["M_SEC"]),
-           row("Scoring margin also matched", t8["posthoc_margin_held_fixed"]),
+           row("Scoring margin also matched (post hoc)", t8["posthoc_margin_held_fixed"]),
            {"label": "Calibrated: all outside games", "value": t8["checks"]["SOR, T4 all-games calibration"]},
            {"label": "Calibrated: power-conference games", "value": t8["checks"]["SOR, T4 power-games calibration"]},
            row("Playoff committee instead of AP", t8["M_CFP_committee"]),
            row("Matched on EPA per play instead", t10["match_on_EPA_instead"]),
            row("EPA per play also matched (logged)", t10["M_SEC_EPA_held_fixed"]),
-           row("Season's end, on ESPN's résumé rank", em["SEC"])]
+           row("Allowing for how the season ended (post hoc)", n["verification_checks_t8"]["SEC"]["allowing_for_how_season_ended"]),
+           row("Preseason gap held fixed (post hoc)", n["verification_checks_t8"]["SEC"]["preseason_gap_held_fixed"]),
+           row("Last regular-season poll, ours (post hoc)", n["verification_checks_t8"]["SEC"]["last_regular_season_week_our_yardstick"]),
+           row("Final poll, on ESPN's résumé rank (post hoc)", em["SEC"])]
     pd.DataFrame(rob).rename(columns={"label": "check"}).to_csv(OUT / "premium_robustness.csv", index=False)
 
+    v = n["verification_checks_t8"]
+    pd.DataFrame([row(m, v["SEC_by_match_conference"][m]) for m in ("ACC", "Big Ten", "Big 12", "Pac-12")]) \
+        .rename(columns={"label": "opponent_conference"}).to_csv(OUT / "sec_by_opponent.csv", index=False)
+    pd.DataFrame([{"conference": g, **{k: v[g][k]["mean"] for k in ("allowing_for_how_season_ended", "preseason_gap_held_fixed")},
+                   "main_test": t8["posthoc_placebo_by_focal_conference"][g]["mean"]} for g in POWER]) \
+        .to_csv(OUT / "adjusted_by_conference.csv", index=False)
     st = t8["posthoc_by_stage"]
     pd.DataFrame([row(k.replace("polls", "Polls"), st[k]) for k in ("polls 6-8", "polls 9-11", "polls 12+")]) \
         .rename(columns={"label": "stage"}).to_csv(OUT / "premium_by_stage.csv", index=False)

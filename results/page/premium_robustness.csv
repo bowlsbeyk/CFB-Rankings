@@ -1,9 +1,12 @@
 check,value,lo,hi,seasons_positive,seasons
 Main test (logged in advance),2.501,1.245,3.757,10.0,11.0
-Scoring margin also matched,2.014,0.925,3.104,9.0,11.0
+Scoring margin also matched (post hoc),2.014,0.925,3.104,9.0,11.0
 Calibrated: all outside games,1.9,,,,
 Calibrated: power-conference games,2.649,,,,
 Playoff committee instead of AP,1.77,0.83,2.711,9.0,11.0
 Matched on EPA per play instead,2.871,1.326,4.415,11.0,11.0
 EPA per play also matched (logged),1.877,0.502,3.252,8.0,11.0
-"Season's end, on ESPN's résumé rank",0.224,-1.69,2.138,6.0,11.0
+Allowing for how the season ended (post hoc),1.878,0.867,2.888,10.0,11.0
+Preseason gap held fixed (post hoc),1.818,1.118,2.517,10.0,11.0
+"Last regular-season poll, ours (post hoc)",0.776,-0.893,2.445,7.0,11.0
+"Final poll, on ESPN's résumé rank (post hoc)",0.224,-1.69,2.138,6.0,11.0
