@@ -19,7 +19,7 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
   - The original plan was committed before any data was pulled ([`METHODOLOGY.md`](METHODOLOGY.md)).
   - Later changes were logged with what had been seen at the time ([`DEVIATIONS.md`](DEVIATIONS.md)).
   - The last two tests (T5 and T6) got an independent audit of their code and wording.
-  - Several rounds of fact-checking then checked this summary against the result files, with reviewers told to knock each claim down. The T7 and T8 sections, added on 2026-11-05, came after those rounds; their checks are the pre-set robustness checks and the post hoc checks listed there.
+  - Several rounds of fact-checking then checked this summary against the result files, with reviewers told to knock each claim down. The T7–T10 sections, added on 2026-11-05 and 2026-11-19, came after those rounds; they were checked separately (see the verification note in the README).
 - **Caveat:** every result in this summary comes from tests added mid-study, after earlier results had been seen, and both yardsticks replaced the planned Elo yardstick. Most of these tests were logged before they ran. The exceptions are marked below:
   - the whole-schedule check (an outside reviewer ran it first);
   - the margin-based comparison (a design reviewer computed an approximate version first);
@@ -39,7 +39,7 @@ After week 11 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`]
 
 One season and eleven weeks of games: this part is descriptive, not a test.
 
-## Hypothesis 2: rankings make SEC schedules look hard. **Supported where teams are placed; not in how many are ranked.**
+## Hypothesis 2: rankings make SEC schedules look hard. **Supported in-season where teams are placed; partly explained by efficiency; not visible at season's end on ESPN's yardstick.**
 
 ### The direct test: same résumé, different conference (T8, added 2026-11-05)
 
@@ -70,11 +70,51 @@ This test came last. It was logged, and its code committed, before it ran ([`res
 - **Where it comes from: the preseason poll.**
   - **SEC team ranked higher in the preseason than its match:** **+4.3 places** (CI +3.3 to +5.3; every one of the 11 seasons).
   - **SEC team not ranked higher in the preseason:** +0.4 (CI −0.6 to +1.4), no clear premium.
-  - **By stage of the season:** the premium is +3.7 in polls 6–8, +2.5 in polls 9–11 and +1.5 from poll 12 on. It shrinks but is still clear at the end.
+  - **By stage of the season:** the premium is +3.7 in polls 6–8, +2.5 in polls 9–11 and +1.5 from poll 12 on. It shrinks but is still clear in the last regular-season polls.
 
 **Why the earlier tests missed it.** They counted *how many* SEC teams were in the top 25. T8 asks *where* they are placed against teams with the same record. The AP top 25 holds about the right number of SEC teams, but puts each one about 2.5 places higher than a non-SEC team with the same résumé. That is the "perception beyond results" Kyle described, and it starts with the preseason poll.
 
 **The committee, counted the earlier way (T7; [`results/t7_committee.json`](results/t7_committee.json)).** Counted by top-25 spots, the committee's SEC total is not clearly above strength of record (+0.42 per ranking, CI −0.12 to +0.96). It lists slightly more SEC teams than the AP that same week (+0.18, CI +0.00 to +0.35).
+
+### The head start, conference by conference (post hoc, descriptive; [`results/t8_start_check.json`](results/t8_start_check.json))
+
+Each same-résumé pair is split by which team was ranked higher in the **preseason** AP poll ([`chart`](results/figures/linkedin/06_head_start.png)):
+
+  | Conference | How often it started ahead | Started ahead | Started level | Started behind |
+  |---|---|---|---|---|
+  | SEC | 55% | +4.3 (CI +3.3 to +5.3) | +3.0 (CI +0.9 to +5.2) | -0.5 (CI -1.6 to +0.6) |
+  | Pac-12 | 47% | +3.5 (CI +1.7 to +5.3) | +0.1 (CI -3.3 to +3.6) | -1.9 (CI -3.3 to -0.5) |
+  | Big Ten | 47% | +3.0 (CI +1.5 to +4.5) | -1.8 (CI -3.8 to +0.3) | -4.1 (CI -5.8 to -2.5) |
+  | Big 12 | 28% | +2.4 (CI +1.1 to +3.8) | +0.5 (CI -2.1 to +3.0) | -3.7 (CI -5.3 to -2.1) |
+  | ACC | 32% | +1.1 (CI -0.4 to +2.6) | -1.7 (CI -3.4 to +0.1) | -6.1 (CI -7.5 to -4.7) |
+
+- **Everyone keeps a preseason head start.** Teams from every conference that started ahead of their same-résumé match stay ahead in-season. Teams that started behind stay behind.
+- **The SEC starts ahead most often** (55% of its pairs, against 32% for the ACC and 28% for the Big 12).
+- **The SEC keeps it best.** It is the only conference that gains from a level start, and its teams that start behind nearly catch up. ACC teams that start behind stay about 6 places down.
+- Added after the T8 result was seen; the split was refined once more after a first look. Both changes were logged before each run.
+
+### Independent yardsticks (T9 and T10, logged 2026-11-19 before the data were pulled)
+
+**Our ratings against ESPN and SP+ (T9; [`results/t9_external.json`](results/t9_external.json), [`chart`](results/figures/linkedin/08_vs_espn_spplus.png)).**
+- **Overall agreement is high:** rank correlation 0.98 between our strength of record and ESPN's, 0.95 between our margin rating and SP+ (2014–2025).
+- **But ours are tougher on the SEC.** Among each external top 40, our strength of record ranks SEC teams 2.8 places lower, relative to the other power conferences, than ESPN's does (CI +0.2 to +5.4). Our margin rating ranks them 5.7 places lower than SP+ (CI +3.3 to +8.1). Logged reading: **OURS IS HARSHER ON THE SEC.**
+- **Timing caveat:** ESPN's and SP+'s historical values are final, after the bowls; ours end with the regular season.
+- **What it means:** either our results-only ratings undervalue SEC teams, or ESPN's and SP+'s credit them with something results alone don't show. These data can't say which. We could not load ESPN's method pages to check how they rate opponents, so we make no claim about their internals.
+
+**EPA per play as a third yardstick (T10; [`results/t10_epa.json`](results/t10_epa.json)).**
+- **SEC teams play better per snap than their records show.** In the T8 pairs, the SEC team is on average 4.4 places better than its match by opponent-adjusted EPA per play.
+- **Holding EPA fixed too** (logged primary): the premium shrinks to **+1.9 (CI +0.5 to +3.2)**, positive in 8 of 11 seasons, one short of the pre-set 9. Logged reading: **INCONCLUSIVE**.
+- **Matching on EPA instead of record:** +2.9 (CI +1.3 to +4.4), 11 of 11 seasons: premium shown.
+- **The ACC penalty survives with EPA held fixed:** -2.1 (CI -3.6 to -0.7).
+- **Counts:** by EPA, the SEC has slightly *more* top-25 teams than the AP lists (-0.45 per poll).
+
+**At season's end, on ESPN's yardstick (post hoc; [`results/t8_espn_matched.json`](results/t8_espn_matched.json)).** In the final AP poll after the bowls, an SEC team is ranked +0.2 (CI -1.7 to +2.1) places above a team with the same losses and nearly the same ESPN strength of record. No conference shows a clear premium or penalty (ACC +1.9 (CI -0.6 to +4.4)). One poll a season makes this test weak (57 SEC pairs). It can't separate the change of yardstick from the season-long fade.
+
+**Putting it together** ([`chart`](results/figures/linkedin/07_premium_robustness.png)):
+- During the season, the polls place SEC teams about two places above equal résumés from other power conferences, and ACC teams about two below. That holds under every check of our own ratings.
+- Part of the SEC premium may be earned. SEC teams with the same record play somewhat better per snap, and ESPN's and SP+'s rankings rate SEC teams higher than ours do.
+- The ACC penalty holds in-season under every check, including EPA.
+- By season's end, judged on ESPN's résumé ranking, neither shows.
 
 ### The earlier tests
 
@@ -153,7 +193,7 @@ This test came last. It was logged, and its code committed, before it ran ([`res
 
 ## Bottom line
 
-- **Same résumé, the SEC team is ranked higher.** An SEC team is ranked about 2.5 places above a non-SEC power-conference team with the same losses and strength of record, and 3.3 places above an ACC team. That holds for the same scoring margin, under both calibrations, and in the committee's rankings. No other conference gets a premium; the ACC gets a penalty. The premium is carried by the preseason poll and fades through the season without disappearing.
+- **Same résumé, the SEC team is ranked higher during the season.** About 2.5 places above a non-SEC power-conference team with the same losses and strength of record, and 3.3 above an ACC team. That holds with scoring margin matched, under both calibrations, and in the committee's rankings. The ACC is the only conference with a penalty. The premium rides on the preseason poll: everyone keeps a head start, and the SEC gets more head starts and keeps them better. Part may be earned: with per-play efficiency also matched it shrinks to +1.9 (not robust under the pre-set rule), and ESPN's and SP+'s rankings rate SEC teams higher than ours. By season's end, on ESPN's résumé ranking, it is not detectable.
 - **Miami's résumé is backed by its results.** After week 11 it is #3 by strength of record and top 5 in every setting. "Played nobody" is false: by results its schedule is 22nd toughest of 138, while game-day rankings put it 59th.
 - **Game-day "ranked" opponents oversell SEC schedules, all season long.**
   - **Whole schedules:** about 6 places less tough by opponents' final results than game-day ranks make them look. The sign holds under both calibrations of the rating (+1.6, not clear, or +7.7).
@@ -170,8 +210,8 @@ This test came last. It was logged, and its code committed, before it ran ([`res
 ## What this does not show
 
 - **Not proof of intent.** Early polls reflect what voters knew then. "Not justified by how the season turned out" is hindsight.
-- **Voters or the rating?** For the schedule comparisons, these data cannot separate voters overrating SEC teams from the rating underrating them; calibrating the rating erases or reverses those contrasts. The same-résumé premium (T8) is different: it survives both calibrations.
-- **Preseason knowledge.** The premium sits with SEC teams that were ranked higher in the preseason. Voters may know something in August that results have not shown yet. But with the same record and margin, it lasts through the final poll, and preseason-ranked SEC teams finish about where typical for their preseason rank.
+- **Voters or the rating?** For the schedule comparisons, these data cannot separate voters overrating SEC teams from the rating underrating them; calibrating the rating erases or reverses those contrasts. The same-résumé premium (T8) survives both calibrations, but not every doubt: ESPN's and SP+'s rankings rate SEC teams higher than ours, and with per-play efficiency held fixed the premium shrinks to +1.9 and misses the pre-set robustness rule.
+- **Preseason knowledge.** The premium sits with SEC teams that were ranked higher in the preseason. Voters may know something in August that results have not shown yet. But with the same record and margin, it lasts into the last regular-season polls (+1.5 from poll 12 on), and preseason-ranked SEC teams finish about where typical for their preseason rank. In the final poll after the bowls, matched on ESPN's résumé ranking, it is no longer detectable.
 - **One family of yardsticks.** The two main strength-of-record tests (T5 and T6) were each checked 14 ways:
   - 9 settings;
   - two calibrations to results against outsiders;
@@ -193,7 +233,8 @@ This test came last. It was logged, and its code committed, before it ran ([`res
   - the schedule-inflation test and its H5 sensitivity check;
   - T2, T3, T4, T5 and T6;
   - the post-audit corrections, the descriptive additions and the calibration check of 2026-10-31;
-  - T7 and T8, and the post hoc checks of T8, of 2026-11-05.
+  - T7 and T8, and the post hoc checks of T8, of 2026-11-05;
+  - the 2026 re-freeze, T9, T10 and the post hoc ESPN check of 2026-11-19.
 - **Strength of record for every FBS team:** [`results/sor_weekly.csv`](results/sor_weekly.csv) covers each week from week 5 on, 2014–2025 (no 2020), plus 2026 after week 11.
 - **Rebuild everything:**
   1. `pip install -r requirements.txt`
