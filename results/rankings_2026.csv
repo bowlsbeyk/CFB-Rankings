@@ -1,28 +1,28 @@
 team,conference,record,ap_rank,results_rank,voter_lens_places,schedule_rank_by_poll,schedule_rank_by_results,results_lens_places,verdict
-Miami,ACC,7-0,1.0,1.0,-0.7,116.0,60.5,0.0,
-Ohio State,Big Ten,6-1,2.0,5.0,-2.8,4.0,17.5,3.0,
-Georgia,SEC,6-1,3.0,9.0,5.4,48.0,38.5,6.0,overrated
-Indiana,Big Ten,7-1,4.0,7.0,1.1,50.0,29.0,3.0,
-Notre Dame,FBS Independents,6-1,5.0,2.0,1.0,55.0,57.0,-3.0,
-Utah,Big 12,7-0,6.0,10.0,3.8,70.0,71.5,4.0,
-UCLA,Big Ten,7-0,7.0,3.0,2.7,67.5,88.0,-4.0,
-BYU,Big 12,6-1,8.0,14.0,4.8,35.0,24.0,6.0,overrated
-Kentucky,SEC,7-1,9.0,12.0,4.0,13.0,19.0,3.0,
-Alabama,SEC,6-2,10.0,4.0,0.7,15.0,25.0,-6.0,
-Texas,SEC,5-2,11.0,8.0,-0.9,3.0,12.0,-3.0,
-Ole Miss,SEC,5-2,12.0,13.0,6.5,7.0,14.0,1.0,
-Texas Tech,Big 12,6-1,13.0,16.0,-4.3,87.0,71.5,3.0,
-Wake Forest,ACC,6-1,14.0,11.0,3.0,27.0,33.0,-3.0,
-LSU,SEC,6-2,15.0,6.0,-5.5,31.0,36.5,-9.0,underrated
-Tennessee,SEC,6-2,16.0,20.0,-0.1,16.0,21.5,4.0,
-Florida,SEC,5-2,17.0,23.0,10.8,11.5,26.5,6.0,overrated
-Houston,Big 12,6-2,18.0,15.0,-2.8,25.0,36.5,-3.0,
-SMU,ACC,6-1,19.0,30.0,1.0,89.0,116.5,11.0,overrated
-Northwestern,Big Ten,6-1,20.0,18.0,-1.0,44.0,50.0,-2.0,
-Boise State,Pac-12,6-1,20.0,21.0,-4.6,35.0,116.5,1.0,
-Arizona,Big 12,6-1,22.0,17.0,1.0,72.0,67.5,-5.0,
-Missouri,SEC,5-2,23.0,27.0,1.2,18.5,57.0,4.0,
-Oklahoma State,Big 12,5-2,24.0,25.0,3.2,33.0,71.5,1.0,
-Wisconsin,Big Ten,5-2,25.0,22.0,-5.5,2.0,6.5,-3.0,
-James Madison,Sun Belt,7-1,,19.0,-5.9,116.0,116.5,-7.0,underrated
-Nebraska,Big Ten,5-2,,24.0,-5.7,52.0,50.0,-2.0,
+Georgia,SEC,9-1,1.0,1.0,6.9,28.5,41.0,0.0,
+Utah,Big 12,10-0,2.0,6.0,5.6,41.0,61.0,4.0,
+Notre Dame,FBS Independents,9-1,3.0,4.0,-0.4,28.5,35.5,1.0,
+UCLA,Big Ten,10-0,4.0,7.0,3.7,81.5,86.5,3.0,
+Miami,ACC,9-1,5.0,3.0,-1.9,59.5,32.0,-2.0,
+Indiana,Big Ten,9-1,6.0,10.0,-2.9,42.5,63.5,4.0,
+Alabama,SEC,8-2,7.0,2.0,0.0,11.5,11.0,-5.0,
+Texas,SEC,8-2,8.0,5.0,0.0,7.0,19.0,-3.0,
+Tennessee,SEC,8-2,9.0,8.0,-0.1,8.0,22.0,-1.0,
+Wake Forest,ACC,9-1,10.0,9.0,3.2,44.0,44.5,-1.0,
+Texas Tech,Big 12,9-1,11.0,12.0,-5.7,90.5,89.5,1.0,
+BYU,Big 12,8-2,12.0,13.0,3.6,22.5,24.0,1.0,
+Iowa,Big Ten,8-2,13.0,18.0,10.6,46.0,79.0,5.0,overrated
+Oregon,Big Ten,7-3,14.0,15.0,-6.9,35.0,19.0,1.0,
+Boise State,Pac-12,9-1,15.0,14.0,-4.2,54.0,86.5,-1.0,
+Ohio State,Big Ten,7-3,16.0,11.0,-7.0,14.0,5.5,-5.0,underrated
+Kentucky,SEC,7-3,17.0,23.0,13.1,11.5,19.0,6.0,overrated
+USC,Big Ten,7-3,18.0,20.0,-5.0,18.0,30.0,2.0,
+Arizona,Big 12,7-3,19.0,21.0,8.1,21.0,24.0,2.0,
+Houston,Big 12,7-3,20.0,22.0,-0.5,38.0,38.5,2.0,
+Louisville,ACC,7-3,21.0,19.0,12.3,48.5,50.5,-2.0,
+Liberty,Conference USA,9-1,22.0,25.0,-0.3,119.5,121.5,3.0,
+Florida,SEC,6-4,23.0,26.0,10.7,1.5,8.5,3.0,
+Memphis,American Athletic,8-2,24.0,27.0,0.5,119.5,84.5,3.0,
+Ole Miss,SEC,6-4,25.0,17.0,6.1,4.0,3.5,-8.0,
+LSU,SEC,6-4,,16.0,-10.3,6.0,10.0,-10.0,underrated
+Duke,ACC,7-3,,24.0,-3.1,62.0,58.0,-2.0,
