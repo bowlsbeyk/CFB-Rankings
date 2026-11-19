@@ -2,9 +2,9 @@ Every fall I hear the "S-E-C! S-E-C!" chants. Every week I scroll past the same 
 
 So is it true? Is the SEC just better, and do its teams deserve higher rankings because of their schedules? I didn't want another hot take, so I got the data.
 
-How I got it: every FBS game and weekly AP poll from 2014 to 2025 (skipping 2020), plus 2026 so far, from CollegeFootballData.com and cfbfastR. Plus ESPN's ratings, SP+, play-by-play efficiency and every bowl and playoff result.
+How I got it: every FBS game and weekly AP poll from 2014 to 2025 (skipping 2020), plus 2026 so far, from CollegeFootballData.com and cfbfastR. Plus ESPN's ratings, SP+, play-by-play data and bowl results.
 
-What I did: I ranked every team each week on results alone: no polls, no preseason, no team names. Then I paired SEC teams with teams from other power conferences that had the same losses and nearly the same strength of record, and checked who the AP ranked higher. Same test for every conference. I logged each test before running it, and three independent reviewers checked the main one.
+What I did: using Python and Claude Code, I ranked every team each week on results alone: no polls, no preseason, no team names. These are plain formulas you can check, not an AI judging teams. Then I paired SEC teams with teams from other power conferences that had the same losses and nearly the same strength of record, and checked who the AP ranked higher. Same test for every conference. I logged each test before running it; three independent reviewers checked the main one.
 
 Two terms matter. Strength of schedule: how good your opponents were. Strength of record: how hard your record would be for a top-25 team against that schedule. Florida: 3rd-toughest schedule by results, 6–4, record ranks 23rd. Utah: 46th schedule, 10–0, record ranks 1st.
 
@@ -17,7 +17,7 @@ What I found:
 
 What keeps me honest: part of the gap is voters being right (about 1.9 spots after allowing for how the season ended). ESPN and SP+ rate SEC teams higher than my ratings do. The NIL-era changes aren't statistically clear yet. And this was about the seventh test I ran for an SEC effect, the first with a clear result.
 
-So is the SEC just better? It's good. But a tough schedule doesn't earn extra spots; your record against it should. With the same record, SEC teams still get about two spots more during the season. Near the playoff cut line, that matters.
+So is the SEC just better? It's good. But a tough schedule doesn't earn extra spots; your record against it should. Same record, SEC teams still get about two more spots midseason, and near the playoff cut line that matters.
 
 And Miami? Through week 11 it's 9–1 with the 3rd-best strength of record. That's not playing nobody.
 
