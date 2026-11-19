@@ -173,6 +173,8 @@ Three independent reviewers checked these results before publication. One rebuil
 
 ### Before and since NIL, the postseason, and 2026's "ranked wins" (added 2026-11-19; descriptive)
 
+**Why NIL is the dividing line.** Since July 2021 players can be paid for their name, image and likeness, and the transfer portal lets them change schools. That changed the relationship between schools and players, and how teams recruit and keep talent. If talent can move every year, a reputation built over the previous decade should count for less, so a poll premium that held or grew since 2021 is worth checking against what teams did on the field. (2020 is left out of every comparison: COVID-shortened, with uneven schedules.)
+
 **Postseason records** ([`results/postseason_by_conference.json`](results/postseason_by_conference.json), [`chart`](results/figures/linkedin/09_postseason.png)). Bowl and playoff games against FBS opponents. They were pulled separately, because the frozen schedule files hold only the 2023–2025 postseasons. No rating in this study uses them.
 
   | | 2014–2019 | 2021–2025 (since NIL) |
