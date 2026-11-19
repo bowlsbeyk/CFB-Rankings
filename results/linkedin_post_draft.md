@@ -1,4 +1,4 @@
-Every fall I hear the "S-E-C! S-E-C!" chants. Every week I scroll past the same debates: the SEC is just better, its schedules are tougher, everyone else should wait their turn. I feel a lot of the same ways about the SEC that fans everywhere else do. And as a Miami fan, when people say we "played nobody," that lands on me too.
+Every fall I hear the "S-E-C! S-E-C!" chants. Every week I scroll past the same debates: the SEC is just better, its schedules are tougher. I feel a lot of the same ways about the SEC that fans everywhere else do. And as a Miami fan, when people say we "played nobody," that lands on me too.
 
 So is it true? Is the SEC just better, and do its teams deserve higher rankings because of their schedules? I didn't want another hot take, so I got the data.
 
