@@ -383,6 +383,40 @@ def postseason(n):
     save(fig, "09_postseason.png")
 
 
+def sor_vs_sos(n):
+    import pandas as pd
+    wk = pd.read_csv(RES / "sor_weekly.csv")
+    last = int(wk[wk.season == 2026].week.max())
+    w = wk[(wk.season == 2026) & (wk.week == last)].set_index("team")
+    sc = pd.read_csv(RES / "schedule_strength_2026.csv").set_index("team")
+    d = w.join(sc[["rating_rank"]], how="inner")
+    d = d[d.sor_rank <= 25]
+    fig = frame("Strength of schedule is not strength of record",
+                f"2026 after week {last}: the 25 best records, by strength of record (how hard each record would be "
+                "for a top-25 team against that exact schedule), against schedule rank by opponents' results.",
+                foot=f"Data: CollegeFootballData.com, cfbfastR. 2026 through week {last}. "
+                     "Code and every number: github.com/bowlsbeyk/CFB-Rankings")
+    ax = fig.add_axes([0.13, 0.27, 0.81, 0.42])
+    for t, r in d.iterrows():
+        col = HIGHLIGHT if r.group == "SEC" else (SECOND if t == "Miami" else OTHER)
+        ax.scatter(r.rating_rank, r.sor_rank, s=55, color=col, edgecolor=SURFACE, linewidth=1.2, zorder=3)
+    for t in ("Texas", "Florida", "Ole Miss", "Alabama", "Georgia", "Miami", "Utah", "UCLA"):
+        if t in d.index:
+            r = d.loc[t]
+            ax.annotate(f"{t} {int(r.wins)}-{int(r.losses)}", (r.rating_rank, r.sor_rank), xytext=(6, -2),
+                        textcoords="offset points", fontsize=8.5, color=INK)
+    ax.set_xlim(0, 140)
+    ax.set_ylim(26.5, 0)
+    ax.set_xlabel("Schedule rank by opponents' results (1 = toughest)", fontsize=9)
+    ax.set_ylabel("Strength-of-record rank (1 = best)", fontsize=9)
+    ax.grid(True, color=GRID, lw=0.8)
+    ax.set_axisbelow(True)
+    fig.text(0.13, 0.705, "Blue: SEC   Orange: Miami   Grey: everyone else", fontsize=8.5, color=INK2)
+    note(fig, "A tough schedule only helps if you win. Florida and Ole Miss have two of the three toughest schedules "
+         "but middling records; Utah and UCLA are 10-0 against softer schedules and rank 1st and 2nd. Descriptive.")
+    save(fig, "10_sor_vs_sos.png")
+
+
 def main():
     n = json.loads((RES / "post_numbers.json").read_text())
     miami(n)
@@ -394,6 +428,7 @@ def main():
     robustness(n)
     external(n)
     postseason(n)
+    sor_vs_sos(n)
 
 
 if __name__ == "__main__":

@@ -25,6 +25,32 @@ Kyle Bowlsbey, a Miami fan, went in believing two things:
   - the margin-based comparison (a design reviewer computed an approximate version first);
   - the descriptive comparisons and the calibration check added while writing this summary (logged afterwards, before publication).
 
+## Strength of record vs strength of schedule
+
+These two get mixed up constantly, and the difference drives everything in this study.
+
+- **Strength of schedule** asks how good your opponents were. It says nothing about whether you beat them.
+- **Strength of record** asks how hard it would be for a typical top-25 team to post your record against your exact schedule. It already includes the schedule: a tougher schedule makes the same record more impressive, a softer one less.
+- **Why record wins:** teams barely control their schedule, but they control the results. Playing eight ranked teams and losing four is not a better résumé than playing two and winning both, unless the record against that schedule says so.
+- **"Ranked" is not a measure of opponents.** Here opponents are judged by how they have actually played this season, not by their poll rank on game day.
+
+2026 after week 11 ([`results/sor_weekly.csv`](results/sor_weekly.csv), [`results/schedule_strength_2026.csv`](results/schedule_strength_2026.csv); ranks among 138 FBS teams, 1 = toughest schedule or best record):
+
+  | Team | Record | Schedule rank (by opponents' results) | Strength-of-record rank |
+  |---|---|---|---|
+  | Texas | 8-2 | 1 | **6** |
+  | Florida | 6-4 | 3 | **23** |
+  | Ole Miss | 6-4 | 2 | **21** |
+  | Alabama | 8-2 | 5 | **7** |
+  | Georgia | 9-1 | 21 | **4** |
+  | Miami | 9-1 | 22 | **3** |
+  | Utah | 10-0 | 46 | **1** |
+  | UCLA | 10-0 | 56 | **2** |
+
+- **Tough schedule, middling record:** Florida and Ole Miss have two of the three toughest schedules but rank only 23rd and 21st on record.
+- **Tough schedule, strong record:** Texas has the toughest schedule and is 8–2, so it ranks 6th.
+- **Softer schedule, perfect record:** Utah and UCLA are 10–0 against the 46th and 56th schedules and rank 1st and 2nd.
+
 ## Hypothesis 1: Miami "played nobody". **Not supported by results.**
 
 After week 11 of 2026 ([`results/sor_2026.csv`](results/sor_2026.csv), [`fig28`](results/figures/fig28_2026_sor.png)). The data were re-frozen on 2026-11-19; the week-8 version of this section is in git history.

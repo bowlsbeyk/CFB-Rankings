@@ -337,6 +337,16 @@ def main():
     }
     rw = load("ranked_wins_2026.json")
     n["ranked_wins_2026"] = {"source": "results/ranked_wins_2026.json (descriptive)", **rw}
+    wk = sw_all = pd.read_csv(RES / "sor_weekly.csv")
+    last26 = int(wk[wk.season == 2026].week.max())
+    w26 = wk[(wk.season == 2026) & (wk.week == last26)].set_index("team")
+    n["sor_vs_sos_examples_2026"] = {
+        "source": "results/sor_weekly.csv (2026, last frozen week) and results/schedule_strength_2026.csv",
+        "after_week": last26,
+        **{t: {"record": f"{int(w26.wins[t])}-{int(w26.losses[t])}", "strength_of_record_rank": int(w26.sor_rank[t]),
+               "schedule_rank_by_results": int(sched.rating_rank[t]), "schedule_rank_by_gameday_poll": int(sched.poll_rank[t])}
+           for t in ("Texas", "Florida", "Ole Miss", "Alabama", "Georgia", "Miami", "Utah", "UCLA")},
+    }
     OUT.write_text(json.dumps(n, indent=2) + "\n")
     print(f"Wrote {OUT.relative_to(ROOT)} ({len(n)} blocks)")
 

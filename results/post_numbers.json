@@ -2410,5 +2410,57 @@
       "ranked_losses_opponent_now_sor_top25": 32,
       "share_of_ranked_opponents_now_outside_sor_top25": 0.296
     }
+  },
+  "sor_vs_sos_examples_2026": {
+    "source": "results/sor_weekly.csv (2026, last frozen week) and results/schedule_strength_2026.csv",
+    "after_week": 11,
+    "Texas": {
+      "record": "8-2",
+      "strength_of_record_rank": 6,
+      "schedule_rank_by_results": 1,
+      "schedule_rank_by_gameday_poll": 5
+    },
+    "Florida": {
+      "record": "6-4",
+      "strength_of_record_rank": 23,
+      "schedule_rank_by_results": 3,
+      "schedule_rank_by_gameday_poll": 1
+    },
+    "Ole Miss": {
+      "record": "6-4",
+      "strength_of_record_rank": 21,
+      "schedule_rank_by_results": 2,
+      "schedule_rank_by_gameday_poll": 4
+    },
+    "Alabama": {
+      "record": "8-2",
+      "strength_of_record_rank": 7,
+      "schedule_rank_by_results": 5,
+      "schedule_rank_by_gameday_poll": 12
+    },
+    "Georgia": {
+      "record": "9-1",
+      "strength_of_record_rank": 4,
+      "schedule_rank_by_results": 21,
+      "schedule_rank_by_gameday_poll": 29
+    },
+    "Miami": {
+      "record": "9-1",
+      "strength_of_record_rank": 3,
+      "schedule_rank_by_results": 22,
+      "schedule_rank_by_gameday_poll": 59
+    },
+    "Utah": {
+      "record": "10-0",
+      "strength_of_record_rank": 1,
+      "schedule_rank_by_results": 46,
+      "schedule_rank_by_gameday_poll": 40
+    },
+    "UCLA": {
+      "record": "10-0",
+      "strength_of_record_rank": 2,
+      "schedule_rank_by_results": 56,
+      "schedule_rank_by_gameday_poll": 81
+    }
   }
 }
