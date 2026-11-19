@@ -1,4 +1,5 @@
-"""Tables for the shareable data page, all read from results/post_numbers.json.
+"""Tables for the shareable data page, read from results/post_numbers.json (and, for the 2026
+schedule-vs-record chart, results/sor_weekly.csv and results/schedule_strength_2026.csv).
 
 Writes results/page/*.csv. Nothing is computed here beyond reshaping.
 """
@@ -81,6 +82,40 @@ def main():
         {"measure": "Schedule, by opponents' game-day AP rank", "rank": m["schedule_rank_by_opponents_game_day_poll"]},
     ]).assign(after_week=m["after_week"], record=m["record"], out_of=m["schedules_ranked"]) \
         .to_csv(OUT / "miami_2026.csv", index=False)
+
+    # Strength of schedule vs strength of record, 2026: the strength-of-record top 25 (as chart 10).
+    wk = pd.read_csv(RES / "sor_weekly.csv")
+    last = int(wk[wk.season == 2026].week.max())
+    w = wk[(wk.season == 2026) & (wk.week == last)].set_index("team")
+    sc = pd.read_csv(RES / "schedule_strength_2026.csv").set_index("team")
+    d = w.join(sc[["rating_rank", "poll_rank"]], how="inner")
+    d = d[d.sor_rank <= 25].sort_values("sor_rank").reset_index()
+    pd.DataFrame({"team": d.team, "conference": d.group, "record": d.wins.astype(int).astype(str) + "-" + d.losses.astype(int).astype(str),
+                  "strength_of_record_rank": d.sor_rank.astype(int), "schedule_rank_by_results": d.rating_rank.astype(int),
+                  "schedule_rank_by_gameday_poll": d.poll_rank.astype(int), "after_week": last}) \
+        .to_csv(OUT / "sor_vs_sos_2026.csv", index=False)
+
+    # Before and since NIL.
+    era = n["era_before_and_since_nil"]
+    pd.DataFrame([{"measure": lab, "before_nil_2014_2019": era[k]["early_2014_2019"], "since_nil_2021_2025": era[k]["recent_2021_2025"],
+                   "change": era[k]["recent_minus_early"], "change_lo": era[k]["ci95_welch"][0], "change_hi": era[k]["ci95_welch"][1]}
+                  for k, lab in (("polls_T8_same_record_premium_SEC", "Same-record premium"),
+                                 ("polls_T8_allowing_for_how_season_ended_SEC", "Allowing for how the season ended"))]) \
+        .to_csv(OUT / "nil_era_premium.csv", index=False)
+    ps = n["postseason_by_conference"]
+    pd.DataFrame([{"conference": g, **{f"{k}_{e.replace('-', '_')}": ps[e][g]["all_postseason"][k]
+                                       for e in ("2014-2019", "2021-2025") for k in ("wins", "losses", "win_share")}}
+                  for g in ["SEC", "Big Ten", "Big 12", "ACC"]]).to_csv(OUT / "postseason_by_era.csv", index=False)
+    pd.DataFrame([{"season": int(s), "champion": c["champion"], "conference": c["group"]}
+                  for s, c in ps["national_champions"].items()]).to_csv(OUT / "national_champions.csv", index=False)
+
+    # 2026 ranked wins.
+    rw = n["ranked_wins_2026"]
+    pd.DataFrame([{"conference": g, "games_vs_gameday_ranked": rw[g]["games_vs_gameday_ranked"], "ranked_wins": rw[g]["ranked_wins"],
+                   "wins_opponent_still_top25": rw[g]["ranked_wins_opponent_now_sor_top25"],
+                   "wins_opponent_now_outside_top25": rw[g]["ranked_wins"] - rw[g]["ranked_wins_opponent_now_sor_top25"],
+                   "after_week": rw["after_week"]} for g in ["SEC", "Big Ten", "Big 12", "ACC"]]) \
+        .to_csv(OUT / "ranked_wins_2026_by_conference.csv", index=False)
     print(f"Wrote {len(list(OUT.glob('*.csv')))} tables to {OUT.relative_to(ROOT)}")
 
 

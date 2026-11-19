@@ -1,28 +1,27 @@
-I'm a Miami fan. Everyone's mad at the SEC, so I tested it: 11 seasons of AP polls against ratings built only from scores and schedules (no polls, preseason or team names).
+Every fall I hear the "S-E-C! S-E-C!" chants. Every week I scroll past the same debates: the SEC is just better, its schedules are tougher, everyone else should wait their turn. I feel a lot of the same ways about the SEC that fans everywhere else do. And as a Miami fan, when people say we "played nobody," that lands on me too.
+
+So is it true? Is the SEC just better, and do its teams deserve higher rankings because of their schedules? I didn't want another hot take, so I got the data.
+
+How I got it: every FBS game and weekly AP poll from 2014 to 2025 (skipping 2020), plus 2026 so far, from CollegeFootballData.com and cfbfastR. Plus ESPN's ratings, SP+, play-by-play efficiency and every bowl and playoff result.
+
+What I did: I ranked every team each week on results alone: no polls, no preseason, no team names. Then I paired SEC teams with teams from other power conferences that had the same losses and nearly the same strength of record, and checked who the AP ranked higher. Same test for every conference. I logged each test before running it, and three independent reviewers checked the main one.
 
 Two terms matter. Strength of schedule: how good your opponents were. Strength of record: how hard your record would be for a top-25 team against that schedule. Florida: 3rd-toughest schedule by results, 6–4, record ranks 23rd. Utah: 46th schedule, 10–0, record ranks 1st.
 
-Why NIL matters: since 2021, players can be paid for their name, image and likeness, and the transfer portal lets them move. That changed the relationship between schools and players, and how teams recruit and keep talent. If talent can move every year, last decade's reputation should count for less.
+What I found:
+• The SEC is good. By results alone it puts the most teams in the top 25, about 5.5 a week.
+• But with the same record, the AP ranks an SEC team about 2.5 spots higher. An ACC team: about 2.7 lower.
+• Part of it is the preseason poll. Head starts carry over, and SEC teams start ahead most often.
+• NIL and the transfer portal changed how teams recruit and keep players, so old reputations should count for less. In the polls they don't: the premium was +1.8 spots in 2014–19 and +3.4 since 2021, while the SEC's bowl and playoff record fell from 41–28 to 30–34. The Big Ten won the last three titles.
+• "Ranked wins" are partly an echo. SEC teams have 31 wins over teams ranked on game day this year, 29 against SEC rivals. 13 of those opponents aren't top 25 by record today.
 
-What the data says:
-• Same record, different conference. When an SEC team and a team from another power conference have the same losses and nearly the same strength of record, the AP ranks the SEC team about 2.5 spots higher. An ACC team: about 2.7 lower. The playoff committee does it too.
-• Part of it is the preseason poll. Head starts carry over (least clearly for the ACC), and SEC teams start ahead most often.
-• Since NIL, that poll premium hasn't shrunk: about +1.8 spots in 2014–19, +3.4 since 2021.
-• The SEC's postseason edge has: 41–28 (59%) in bowls and the playoff in 2014–19, 30–34 (47%) since 2021. The Big Ten went 39–23 and won the last three titles.
-• "Ranked wins" pad SEC schedules. This season SEC teams won 31 games against teams ranked on game day, 29 of them SEC rivals. 13 of those opponents aren't top 25 by results today (true of all five ACC ranked wins too; the SEC just has more). Texas A&M was #9 when it lost to Kentucky. It's 79th by strength of record now.
+What keeps me honest: part of the gap is voters being right (about 1.9 spots after allowing for how the season ended). ESPN and SP+ rate SEC teams higher than my ratings do. The NIL-era changes aren't statistically clear yet. And this was about the seventh test I ran for an SEC effect, the first with a clear result.
 
-What keeps me honest:
-• Part of the poll gap is voters being right. Allowing for how the season ended, it's about 1.9 spots up for the SEC and 1.5 down for the ACC.
-• The SEC still has the most top-25 teams by regular-season results, but it mostly plays itself, so that says little about a decline.
-• ESPN and SP+ rate SEC teams higher than my ratings do.
-• The before/after-NIL changes aren't statistically clear over five seasons, and bowls carry opt-outs.
-• This was about the seventh test I ran for an SEC effect, and the first clear, robust one. I picked the headline after seeing them all; three independent reviewers checked the main test.
+So is the SEC just better? It's good. But a tough schedule doesn't earn extra spots; your record against it should. With the same record, SEC teams still get about two spots more during the season. Near the playoff cut line, that matters.
 
-Bottom line: judge teams by strength of record, not the logo, the preseason poll or "ranked" wins. During the season, with the same record, SEC teams rank about two spots higher and ACC teams about two lower. By the final poll the data are too thin to tell. Near the cut line, two spots matter.
+And Miami? Through week 11 it's 9–1 with the 3rd-best strength of record. That's not playing nobody.
 
-And Miami? Through week 11 it's #3 by strength of record, with the 22nd-toughest schedule by results (59th by game-day rankings).
-
-Data, code, every number:
+Data, charts and code:
 https://github.com/bowlsbeyk/CFB-Rankings/blob/ccr-10345fd3-h4cky8/SUMMARY.md
 
-#CollegeFootball #DataAnalytics
+#CollegeFootball #CFB
