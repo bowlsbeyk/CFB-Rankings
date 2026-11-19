@@ -47,7 +47,7 @@ It was logged, and its code committed, before it ran ([`results/t8_matched.json`
 
 - **Design.** In every AP poll from poll 6 on, each SEC team in the strength-of-record top 30 is paired with a team from another power conference that has **the same number of losses** and nearly the same strength of record (within 3 places). The test asks which of the two the AP voters rank higher.
 - **Result: SEC NAME PREMIUM SHOWN.** The SEC team is ranked **2.5 places higher** (95% CI +1.2 to +3.8; higher in 10 of 11 seasons). The 605 pairs come from 92 SEC team-seasons, so the interval is computed across seasons, not pairs. Dropping any one season leaves +2.1 to +2.8, every interval above zero.
-- **Not clear against every conference:** the SEC is ranked clearly higher than same-résumé ACC (+3.3), Big Ten (+2.5) and Big 12 (+2.7) teams, but not Pac-12 teams (+1.0, CI includes zero).
+- **Not clear against every conference:** split by the match's conference, the SEC team is ranked clearly higher than same-record ACC (+3.6) and Big Ten (+3.3) teams, but not clearly higher than Big 12 (+2.0) or Pac-12 (−0.1) teams (see the review section below).
 - **Robust to every real pre-set check:** a tighter or looser match (±2 or ±5 places), matching on wins and losses alone, and both calibrations of the rating to results against outsiders (+1.9 and +2.6). (A sixth logged check, AP rank in place of rank points, turned out to be algebraically the same as the main test and cannot fail, so it is not counted.)
 - **Against ACC teams with the same résumé:** the SEC team is ranked **3.3 places higher** (CI +1.6 to +4.9; 11 of 11 seasons).
 - **The playoff committee does it too:** +1.8 places (CI +0.8 to +2.7; 9 of 11 seasons).
@@ -168,7 +168,7 @@ Three independent reviewers checked these results before publication. One rebuil
 - **Why the regular season can hide it:** SEC teams mostly play each other, so their results largely cancel within the conference. The postseason is where they meet everyone else.
 
 **2026 "ranked wins"** ([`results/ranked_wins_2026.csv`](results/ranked_wins_2026.csv), through week 11):
-- **Volume:** SEC teams have played 71 games against opponents ranked on game day (Big Ten 45, Big 12 41, ACC 28).
+- **Volume:** SEC teams have faced an opponent ranked on game day 71 times (68 of them SEC rivals, so some games count twice, once for each SEC team) (Big Ten 45, Big 12 41, ACC 28).
 - **Wins:** they won 31, and **13** of those wins came against teams now outside the strength-of-record top 25.
 - **Examples:** Texas A&M was AP #9 on game day and is now 79th by strength of record; Mississippi State (#16–24) is now 73rd; Missouri (#13–25) is now 31st.
 - **Not SEC-only:** all 5 of the ACC's ranked wins also came against teams now outside the results top 25. The SEC just has far more of them.

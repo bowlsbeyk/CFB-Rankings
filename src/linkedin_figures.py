@@ -349,7 +349,7 @@ def external(n):
 def postseason(n):
     ps, era = n["postseason_by_conference"], n["era_before_and_since_nil"]
     groups = ["SEC", "Big Ten", "Big 12", "ACC"]
-    fig = frame("Since NIL, the SEC's postseason edge is gone. Its poll credit didn't shrink.",
+    fig = frame("SEC since NIL: postseason edge faded, poll credit held",
                 "Bowl and playoff win share by conference, FBS opponents only: 2014–2019 against 2021–2025, the "
                 "seasons since NIL rules took effect. No rating in this study uses these games.")
     ax = fig.add_axes([0.16, 0.25, 0.78, 0.44])
