@@ -33,6 +33,7 @@ def season_table(s):
                              (x.away_team, x.away_conference, x.away_points, x.home_points)):
             rows.append((t, c, int(pf < pa)))
     d = pd.DataFrame(rows, columns=["team", "conference", "loss"])
+    d["conference"] = d.conference.fillna("FCS")
     conf = d.groupby("team").conference.agg(lambda v: v.mode().iat[0])
     losses = d.groupby("team").loss.sum()
     fpi = json.loads((RAW / "advanced" / f"fpi_{s}.json").read_text())

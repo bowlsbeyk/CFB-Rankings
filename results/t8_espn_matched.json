@@ -1,0 +1,83 @@
+{
+  "note": "post hoc; final AP poll and ESPN final strength of record; DEVIATIONS.md 2026-11-19",
+  "SEC": {
+    "mean": 0.2235930735930736,
+    "ci95_t": [
+      -1.69039076489612,
+      2.137576912082267
+    ],
+    "ci90_t": [
+      -1.3333212514989494,
+      1.7805073986850966
+    ],
+    "seasons_positive": 6,
+    "seasons": 11,
+    "sign_flip_p": 0.8056640625,
+    "pairs": 57,
+    "reading": "INCONCLUSIVE"
+  },
+  "ACC": {
+    "mean": 1.898160173160173,
+    "ci95_t": [
+      -0.561521793025954,
+      4.3578421393463
+    ],
+    "ci90_t": [
+      -0.10264778107444994,
+      3.898968127394796
+    ],
+    "seasons_positive": 7,
+    "seasons": 11,
+    "sign_flip_p": 0.119140625,
+    "pairs": 35,
+    "reading": "INCONCLUSIVE"
+  },
+  "Big Ten": {
+    "mean": -0.5651515151515151,
+    "ci95_t": [
+      -1.896638370656559,
+      0.766335340353529
+    ],
+    "ci90_t": [
+      -1.648238486587946,
+      0.5179354562849158
+    ],
+    "seasons_positive": 4,
+    "seasons": 11,
+    "sign_flip_p": 0.369140625,
+    "pairs": 42,
+    "reading": "INCONCLUSIVE"
+  },
+  "Big 12": {
+    "mean": -0.026515151515151502,
+    "ci95_t": [
+      -1.8457085112065952,
+      1.792678208176292
+    ],
+    "ci90_t": [
+      -1.5063229455305893,
+      1.4532926425002861
+    ],
+    "seasons_positive": 5,
+    "seasons": 11,
+    "sign_flip_p": 1.0,
+    "pairs": 35,
+    "reading": "INCONCLUSIVE"
+  },
+  "Pac-12": {
+    "mean": 0.37605820105820104,
+    "ci95_t": [
+      -1.1714947830890263,
+      1.9236111852054283
+    ],
+    "ci90_t": [
+      -0.8718793332737893,
+      1.6239957353901913
+    ],
+    "seasons_positive": 6,
+    "seasons": 9,
+    "sign_flip_p": 0.5859375,
+    "pairs": 34,
+    "reading": "INCONCLUSIVE"
+  }
+}
