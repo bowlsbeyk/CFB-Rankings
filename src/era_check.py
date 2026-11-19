@@ -59,7 +59,8 @@ def main():
     rep["field_SEC_minus_conference_SOR_top25"] = {G: compare(v) for G, v in diff.items() if len(v) >= 8}
 
     g = pd.read_csv(RES / "t4_referee_games.csv")
-    vp = g[(g.conference == "SEC") & (g.opp_power)]
+    # Regular season only: the frozen schedule data hold postseason games for 2023-2025 only.
+    vp = g[(g.conference == "SEC") & (g.opp_power) & (g.season_type == "regular")]
     rep["field_SEC_vs_power_outsiders_win_share"] = compare(vp.groupby("season").won.mean().to_dict())
     rep["field_SEC_vs_power_outsiders_residual"] = compare(vp.groupby("season").residual.mean().to_dict())
     rep["field_SEC_vs_power_outsiders_games"] = {"early": int(vp[vp.season <= 2019].shape[0]),
@@ -68,13 +69,16 @@ def main():
     champs = {}
     for s in HIST:
         sc = pd.read_parquet(RAW / "schedules" / f"cfb_schedules_{s}.parquet")
-        f = sc[(sc.season_type == "postseason") & sc.notes.fillna("").str.contains("National Championship", case=False)]
+        post = sc[(sc.season_type == "postseason") & sc.completed].sort_values("start_date")
+        f = post[post.notes.fillna("").str.contains("National Championship", case=False)]
+        f = f if len(f) else post.tail(1)  # older files leave the title game's note empty: it is the last game
         if len(f):
             x = f.iloc[0]
             win, conf = ((x.home_team, x.home_conference) if x.home_points > x.away_points
                          else (x.away_team, x.away_conference))
             champs[str(s)] = {"champion": win, "conference": conf}
     rep["national_champions"] = champs
+    rep["national_champions_note"] = "the frozen schedule data hold postseason games for 2023-2025 only"
 
     # In the polls.
     tw = pd.read_csv(ROOT / "data" / "processed" / "team_weeks.csv", usecols=["season", "week", "team", "conf_group", "next_rank"])
