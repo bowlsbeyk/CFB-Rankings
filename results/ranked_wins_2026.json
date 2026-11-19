@@ -1,0 +1,52 @@
+{
+  "after_week": 11,
+  "note": "descriptive; FBS vs FBS regular-season games; strength-of-record rank after the last frozen week",
+  "ACC": {
+    "games_vs_gameday_ranked": 28,
+    "ranked_wins": 5,
+    "ranked_wins_opponent_now_sor_top25": 0,
+    "ranked_losses": 23,
+    "ranked_losses_opponent_now_sor_top25": 17,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.393
+  },
+  "Big 12": {
+    "games_vs_gameday_ranked": 41,
+    "ranked_wins": 13,
+    "ranked_wins_opponent_now_sor_top25": 8,
+    "ranked_losses": 28,
+    "ranked_losses_opponent_now_sor_top25": 23,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.244
+  },
+  "Big Ten": {
+    "games_vs_gameday_ranked": 45,
+    "ranked_wins": 14,
+    "ranked_wins_opponent_now_sor_top25": 9,
+    "ranked_losses": 31,
+    "ranked_losses_opponent_now_sor_top25": 29,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.156
+  },
+  "Notre Dame": {
+    "games_vs_gameday_ranked": 2,
+    "ranked_wins": 1,
+    "ranked_wins_opponent_now_sor_top25": 1,
+    "ranked_losses": 1,
+    "ranked_losses_opponent_now_sor_top25": 1,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.0
+  },
+  "Other": {
+    "games_vs_gameday_ranked": 46,
+    "ranked_wins": 1,
+    "ranked_wins_opponent_now_sor_top25": 0,
+    "ranked_losses": 45,
+    "ranked_losses_opponent_now_sor_top25": 31,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.326
+  },
+  "SEC": {
+    "games_vs_gameday_ranked": 71,
+    "ranked_wins": 31,
+    "ranked_wins_opponent_now_sor_top25": 18,
+    "ranked_losses": 40,
+    "ranked_losses_opponent_now_sor_top25": 32,
+    "share_of_ranked_opponents_now_outside_sor_top25": 0.296
+  }
+}

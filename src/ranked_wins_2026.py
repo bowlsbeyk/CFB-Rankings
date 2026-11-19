@@ -20,8 +20,10 @@ RES = ROOT / "results"
 
 
 def main():
-    sor = pd.read_csv(RES / "sor_2026.csv").set_index("team")
     last = int(json.loads((RES / "post_numbers.json").read_text())["miami_2026"]["after_week"])
+    wk = pd.read_csv(RES / "sor_weekly.csv")
+    sor = wk[(wk.season == 2026) & (wk.week == last)].set_index("team")  # every FBS team
+    ap_now = pd.read_csv(RES / "sor_2026.csv").set_index("team").ap_rank
     polls = {}
     for w in json.loads((RAW / "polls" / "rankings_2026_regular.json").read_text()):
         for p in w["polls"]:
@@ -36,7 +38,7 @@ def main():
                                         (x.away_team, x.away_conference, x.home_team, x.away_points, x.home_points)):
             rows.append({"week": x.week, "team": team, "group": group_of(conf, team, 2026), "opponent": opp,
                          "won": pf > pa, "opp_gameday_ap": polls.get(x.week, {}).get(opp),
-                         "opp_sor_now": sor.sor_rank.get(opp), "opp_ap_now": sor.ap_rank.get(opp)})
+                         "opp_sor_now": sor.sor_rank.get(opp), "opp_ap_now": ap_now.get(opp)})
     d = pd.DataFrame(rows)
     d.to_csv(RES / "ranked_wins_2026.csv", index=False)
     ranked = d[d.opp_gameday_ap.notna()]
