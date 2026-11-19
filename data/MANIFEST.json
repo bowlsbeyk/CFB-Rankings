@@ -135,14 +135,14 @@
       "source_url": "https://api.collegefootballdata.com/rankings?year=2026&seasonType=postseason",
       "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
       "bytes": 2,
-      "pulled_at_utc": "2026-10-31T17:08:33+00:00"
+      "pulled_at_utc": "2026-11-19T13:29:58+00:00"
     },
     "data/raw/polls/rankings_2026_regular.json": {
       "source_url": "https://api.collegefootballdata.com/rankings?year=2026&seasonType=regular",
-      "sha256": "56bfca0715fda24330059dbb63177644455c3311ae6847856a9af8922c9897c2",
-      "bytes": 121111,
-      "frozen_through_week": 9,
-      "pulled_at_utc": "2026-10-31T17:08:33+00:00"
+      "sha256": "fb53d70e5ec629e2a5041d1ca42865b891bc2f8a112d3ea599488cc7b44ad155",
+      "bytes": 168826,
+      "frozen_through_week": 12,
+      "pulled_at_utc": "2026-11-19T13:29:58+00:00"
     },
     "data/raw/schedules/cfb_schedules_2014.parquet": {
       "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/09f2595e1b23d485691577611d0d1f9cccbb4331/schedules/parquet/cfb_schedules_2014.parquet",
@@ -205,10 +205,10 @@
       "bytes": 174631
     },
     "data/raw/schedules/cfb_schedules_2026.parquet": {
-      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/2f9c0044f039eb882d72615ac72981341bac27e4/schedules/parquet/cfb_schedules_2026.parquet",
-      "sha256": "548c9b15dff1ca063ee6d831d74e7fdb6e8bc4d161b5bcea595510d916fa47ba",
-      "bytes": 59111,
-      "pulled_at_utc": "2026-10-31T17:08:33+00:00"
+      "source_url": "https://github.com/sportsdataverse/cfbfastR-data/blob/3fac35652473b024b66172c338e2ce646b63bb6e/schedules/parquet/cfb_schedules_2026.parquet",
+      "sha256": "218f4c8288aa645f7cf8e7dfc678edf15fc17f257f7d5ab95e8239d9ae745813",
+      "bytes": 66051,
+      "pulled_at_utc": "2026-11-19T13:29:58+00:00"
     }
   },
   "refreshes": [
@@ -226,6 +226,25 @@
         7,
         8,
         9
+      ]
+    },
+    {
+      "season": 2026,
+      "pulled_at_utc": "2026-11-19T13:29:58+00:00",
+      "cfbfastR_commit": "3fac35652473b024b66172c338e2ce646b63bb6e",
+      "ap_poll_weeks": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
       ]
     }
   ]
